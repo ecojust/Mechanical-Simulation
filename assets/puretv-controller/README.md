@@ -1,0 +1,21 @@
+# pureTV 手柄基础素材
+
+素材来自手柄最新版「装配检查」场景。每个 .blend 文件提供一个可追加的 Collection，内部零件可独立选中。各 Collection 使用同一套装配坐标，1 Blender 单位对应 1 mm。
+
+| 路径 | 内容 |
+| --- | --- |
+| buttons/ | 上下左右、ABXY 和长条确认键，共九组按键。含键帽、插销、弹簧、套筒及开关模型 |
+| baseplates/ | 方向键与 ABXY 的共用底板、旋锁安装位、中央过线孔和四颗 M2 螺钉 |
+| housing/ | 上盖与底壳，按合壳位置放置 |
+| electronics/ | ESP32、沿长轴压条及固定件，以及九对导线的路径模型 |
+| [manifest.json](manifest.json) | 文件 SHA-256、字节大小、零件名称和装配矩阵 |
+
+在 Blender 新建空白毫米场景（单位系统设为 Metric，Unit Scale 设为 0.001，长度选 Millimeters），选择 **File → Append**，进入某个素材文件的 **Collection**，追加名称以 pureTV 开头的集合。追加所有集合可恢复装配，追加某一组可独立验证。需要将单个零件移动到原点时，在自己的工作副本中调整位置。
+
+已在 Blender 5.2.2 的空白场景中追加全部 15 组集合，共 190 个对象，并核对各对象的装配矩阵。左右底板各有一个连通网格，边界边和非流形边均为 0。
+
+这些是可编辑的仿真基础素材。电子件、弹簧、焊脚和导线用于检查相邻零件的空间、行程和可达性。开关触发行程、弹簧刚度、打印公差及导线排布仍需根据实物校验。
+
+## 模型出处
+
+方向键帽轮廓、ABXY 键面和部分上盖造型参考或改编自 Taohid Animation 的 [PS5 Controller](https://sketchfab.com/3d-models/ps5-controller-b7bb9c5102a04cb0b1966c6d02bad7d6)，原模型使用 [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)。本项目调整了尺寸与键区布局，并加入插销、弹簧、开关固定和布线结构。素材中的原模型改编部分保留该署名和许可。
