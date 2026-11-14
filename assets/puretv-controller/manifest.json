@@ -5173,8 +5173,8 @@
     },
     {
       "file": "electronics/harness.blend",
-      "sha256": "058a9bd78341a91b52eb4a3e8d2d88ecc3fbe4e4df2206d8230eb5a2f9d309f1",
-      "bytes": 68948,
+      "sha256": "dd1bad29b6697aaa51c6cef62e17597b46dc2d717cfc394146f3d1458e7a4e48",
+      "bytes": 71822,
       "objects": [
         {
           "source": "确认 · GPIO.003",
@@ -5715,8 +5715,69 @@
               1.0
             ]
           ]
+        },
+        {
+          "source": "公共接地 · GND 引线",
+          "exported": "公共接地 · GND 引线.002",
+          "world_matrix": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        },
+        {
+          "source": "公共接地 · GND 汇流排",
+          "exported": "公共接地 · GND 汇流排.002",
+          "world_matrix": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
         }
-      ]
+      ],
+      "source_file": "pureTV-PS5-harness-routed.blend"
     }
   ]
 }

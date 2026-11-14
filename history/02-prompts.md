@@ -824,3 +824,11 @@ downloads文件夹已经下载了 ps5-controller
 ## 248
 
 这些零件的实际验证很麻烦，我建立了一个仓库 [https://github.com/ecojust/Mechanical-Simulation](https://github.com/ecojust/Mechanical-Simulation)；你把这些零件作为基础单元，放到素材里；然后把当前这个设计手柄的思路写进agents.md,并且所有的prompot历史用history文件夹存起来，这样后续工工作可以继续
+
+## 249
+
+接下来你继续优化这个手柄的结构
+
+## 250
+
+模型没有导入blender的编辑器中，用mcp
