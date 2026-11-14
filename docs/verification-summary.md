@@ -22,7 +22,7 @@
 
 公开附件已重新下载并独立核对SHA-256。实际包大小：DMG **8,299,260字节（8.30 MB）**，ZIP **8,224,321字节（8.22 MB）**；DMG较v0.2.0 Electron版减少93.3%。[下载v0.4.1](https://github.com/ecojust/Mechanical-Simulation/releases/tag/v0.4.1)，仅macOS 13及以上Apple Silicon，ad-hoc签名、未公证。
 
-长期保存的[Mac验收日志摘录与附件校验](puretv-macos-release-verification.json)记录实际流水线、九键结果和公开文件哈希；它不是完整逐操作报告。完整原生MCP报告在该流水线的`puretv-macos-mcp-verification-0.4.1` artifact中保留30天，浏览器逐操作记录另见上文。
+长期保存的[Mac验收日志摘录与附件校验](puretv-macos-release-verification.json)记录实际流水线、九键结果和公开文件哈希；它不是完整逐操作报告。[完整原生MCP报告](releases/v0.4.1/puretv-macos-mcp-verification.json)现已从该成功流水线原样归档，附[来源提交与文件哈希](releases/v0.4.1/provenance.json)：`nativeDesktop=true`、108次操作、九键通过。报告不是导出的工程本体，不能单凭它复算其中的工程哈希。原Actions artifact保留30天，仓库副本长期保留；浏览器逐操作记录另见上文。
 
 弹簧为名义线性模型，显示/网格行程使用轴向仿射变形；钢丝真实截面保持、触发力、摩擦、疲劳及打印偏差尚未实测。软垫锁装需约50.5–51%压缩，只核剩余几何厚度，未认证材料允许应变或装配力。离散姿态不构成连续碰撞或制造合格证明，线材弯曲半径也未实测。
 

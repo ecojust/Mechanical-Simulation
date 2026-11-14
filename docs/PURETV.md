@@ -68,7 +68,7 @@ npm run mcp:drive-puretv -- --require-evidence
 
 成功执行后会生成 `docs/puretv-mcp-verification.json` 与 `public/models/puretv-verified-assembly.json`。记录中的 `nativeDesktop` 区分打包 WKWebView 与开发浏览器通路；Chromium 开发验证不能代替 macOS 打包应用复验。协议、单步工具调用和开发通路见 [MCP 使用说明](MCP.md)。本版执行结果见 [交付检查记录](verification-summary.md)；应使用与当前构建和装配一致的记录。
 
-v0.4.1已在实际macOS arm64打包应用中完成同一九键试验，源证据匹配、接触点灯和回弹断电均通过；见[Mac验收记录](puretv-macos-release-verification.json)及[发布流水线](https://github.com/ecojust/Mechanical-Simulation/actions/runs/43596336457)。
+v0.4.1已在实际macOS arm64打包应用中完成同一九键试验，源证据匹配、接触点灯和回弹断电均通过；见[完整Mac MCP记录](releases/v0.4.1/puretv-macos-mcp-verification.json)、[来源与哈希](releases/v0.4.1/provenance.json)、[附件校验](puretv-macos-release-verification.json)及[发布流水线](https://github.com/ecojust/Mechanical-Simulation/actions/runs/43596336457)。
 
 ## 修改模型后怎样理解验证结果
 

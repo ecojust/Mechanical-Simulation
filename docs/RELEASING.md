@@ -60,3 +60,15 @@ APP 位于 `src-tauri/target/aarch64-apple-darwin/release/bundle/macos/`；发�
 ## v0.4 原手柄素材更新
 
 本版修改了原手柄源几何：八个上定位环并入键帽，确认开关补两个独立金属焊脚，源对象数变为183。旧工程中的仓库模型引用会使用安装版本随包的素材，不能据此重现旧版几何；缺失的旧定位环节点会显示错误，不会自动删除工程成员。需要精确保留旧模型时使用对应旧版应用与源文件。新设计可从「pureTV 九键试验」或当前原始素材重新建立，旧工程不能继承新装配的尺寸通过结论。用户上传的自包含 GLB/STL 不受这次仓库素材更新影响。
+
+## 长期保存实际 Mac 验收报告
+
+发布成功后，可手动运行 [Archive packaged macOS verification](../.github/workflows/archive-macos-verification.yml)，输入版本标签及对应成功发布流水线ID，例如：
+
+```sh
+gh workflow run archive-macos-verification.yml --ref master -f release_tag=v0.4.1 -f run_id=43596336457
+```
+
+此工作流核对仓库、发布工作流、成功状态、标签提交、校准哈希和原生九键结果，从原artifact读取报告并按原始字节保存至`docs/releases/<tag>/`，附来源与SHA-256。已有记录内容不同时拒绝覆盖；只向master提交归档文档，不修改已发布标签或安装包。若master并发前进导致push失败，可重跑。完整逐操作报告不是工程导出，无法单凭报告复算其工程哈希。
+
+v0.4.1的[完整原生记录](releases/v0.4.1/puretv-macos-mcp-verification.json)与[来源](releases/v0.4.1/provenance.json)已归档，可在原Actions附件过期后继续查看。
