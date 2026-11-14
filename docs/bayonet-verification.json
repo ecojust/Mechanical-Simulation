@@ -1,0 +1,512 @@
+{
+  "version": 1,
+  "generatedAt": "2026-11-14T10:10:21.229Z",
+  "scope": "Parameterized two-lug bayonet only; does not certify the old pureTV controller meshes.",
+  "units": {
+    "length": "mm",
+    "rotation": "degrees"
+  },
+  "geometrySha256": "f7693d566dbd4e31b10c7daa5e67112421ff2932c4689056676f2452a0504914",
+  "nominal": {
+    "stemDiameter": 9,
+    "holeDiameter": 9.6,
+    "lugWidth": 2.6,
+    "lugHeight": 2,
+    "lugRootRadius": 4.1,
+    "lugOuterRadius": 8,
+    "lugCenterY": -8,
+    "slotBottom": -4.3,
+    "slotTop": -1.7,
+    "entryHalfAngle": 20,
+    "slotEndAngle": 65,
+    "lockAngle": 45,
+    "tolerance": 0.1,
+    "angularSegment": 5
+  },
+  "poses": {
+    "entryOffset": 19,
+    "withdrawnOffset": 22,
+    "seatedOffset": 5,
+    "lockAngle": 45
+  },
+  "fixture": {
+    "pin": {
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "visible": true,
+      "params": {
+        "tolerance": 0.1
+      },
+      "id": "bayonet-pin",
+      "name": "公件 · 双耳旋锁销",
+      "kind": "bayonet-pin",
+      "position": [
+        0,
+        32,
+        0
+      ],
+      "size": [
+        16,
+        24,
+        16
+      ],
+      "fixed": false,
+      "color": "#6288a8"
+    },
+    "socket": {
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "visible": true,
+      "params": {
+        "tolerance": 0.1,
+        "holeDiameter": 9.6
+      },
+      "id": "bayonet-socket",
+      "name": "母件 · L 槽旋锁座",
+      "kind": "bayonet-socket",
+      "position": [
+        0,
+        13,
+        0
+      ],
+      "size": [
+        24,
+        18,
+        24
+      ],
+      "fixed": true,
+      "color": "#c69961"
+    }
+  },
+  "methods": {
+    "geometry": "Shared faceted convex solids (166 socket prisms, 4 pin solids); rendering and collision use the same vertices.",
+    "collision": "Full separating-axis theorem with face normals and edge cross products; no bayonet-pair collision exemption.",
+    "path": "All intermediate poses sampled with maximum estimated vertex travel <=0.25 mm; finite sampling is not a continuous-collision proof.",
+    "tolerance": "Each dimensional ±0.1 mm tolerance is combined on full widths and halved for one-sided fit. Faceted bore uses its inscribed apothem for conservative radial clearance; clipped lug corners also bound entry/channel-end tangential clearance."
+  },
+  "results": {
+    "passed": 9,
+    "total": 9,
+    "allPassed": true,
+    "minWorstCaseOneSidedClearanceMm": 0.1954314635929176,
+    "checks": [
+      {
+        "name": "沿入口轴向插到底",
+        "expectedAllowed": true,
+        "allowed": true,
+        "passed": true,
+        "elapsedMilliseconds": 31.68,
+        "from": {
+          "position": [
+            0,
+            32,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        "to": {
+          "position": [
+            0,
+            18,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        "issues": []
+      },
+      {
+        "name": "到底后正向旋转45°",
+        "expectedAllowed": true,
+        "allowed": true,
+        "passed": true,
+        "elapsedMilliseconds": 74.06,
+        "from": {
+          "position": [
+            0,
+            18,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        "to": {
+          "position": [
+            0,
+            18,
+            0
+          ],
+          "rotation": [
+            0,
+            45,
+            0
+          ]
+        },
+        "issues": []
+      },
+      {
+        "name": "锁住后上拔1mm必须受阻",
+        "expectedAllowed": false,
+        "allowed": false,
+        "passed": true,
+        "elapsedMilliseconds": 4.443,
+        "from": {
+          "position": [
+            0,
+            18,
+            0
+          ],
+          "rotation": [
+            0,
+            45,
+            0
+          ]
+        },
+        "to": {
+          "position": [
+            0,
+            19,
+            0
+          ],
+          "rotation": [
+            0,
+            45,
+            0
+          ]
+        },
+        "issues": [
+          {
+            "id": "blocked-bayonet-pin-bayonet-socket",
+            "severity": "error",
+            "title": "移动受阻：实体干涉",
+            "detail": "母件 · L 槽旋锁座 阻挡操作路径（路径 50%，采样 ≤0.25 mm）。",
+            "partIds": [
+              "bayonet-pin",
+              "bayonet-socket"
+            ],
+            "category": "geometry"
+          }
+        ]
+      },
+      {
+        "name": "反向旋回入口0°",
+        "expectedAllowed": true,
+        "allowed": true,
+        "passed": true,
+        "elapsedMilliseconds": 23.682,
+        "from": {
+          "position": [
+            0,
+            18,
+            0
+          ],
+          "rotation": [
+            0,
+            45,
+            0
+          ]
+        },
+        "to": {
+          "position": [
+            0,
+            18,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        "issues": []
+      },
+      {
+        "name": "对齐入口后完全退出（轴尖离孔口1mm）",
+        "expectedAllowed": true,
+        "allowed": true,
+        "passed": true,
+        "elapsedMilliseconds": 12.268,
+        "from": {
+          "position": [
+            0,
+            18,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        "to": {
+          "position": [
+            0,
+            35,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        "issues": []
+      },
+      {
+        "name": "未插到底不能旋转45°",
+        "expectedAllowed": false,
+        "allowed": false,
+        "passed": true,
+        "elapsedMilliseconds": 1.798,
+        "from": {
+          "position": [
+            0,
+            25,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        "to": {
+          "position": [
+            0,
+            25,
+            0
+          ],
+          "rotation": [
+            0,
+            45,
+            0
+          ]
+        },
+        "issues": [
+          {
+            "id": "blocked-bayonet-pin-bayonet-socket",
+            "severity": "error",
+            "title": "移动受阻：实体干涉",
+            "detail": "母件 · L 槽旋锁座 阻挡操作路径（路径 10%，采样 ≤0.25 mm）。",
+            "partIds": [
+              "bayonet-pin",
+              "bayonet-socket"
+            ],
+            "category": "geometry"
+          }
+        ]
+      },
+      {
+        "name": "错开45°不能轴向插入",
+        "expectedAllowed": false,
+        "allowed": false,
+        "passed": true,
+        "elapsedMilliseconds": 1.441,
+        "from": {
+          "position": [
+            0,
+            32,
+            0
+          ],
+          "rotation": [
+            0,
+            45,
+            0
+          ]
+        },
+        "to": {
+          "position": [
+            0,
+            18,
+            0
+          ],
+          "rotation": [
+            0,
+            45,
+            0
+          ]
+        },
+        "issues": [
+          {
+            "id": "blocked-bayonet-pin-bayonet-socket",
+            "severity": "error",
+            "title": "移动受阻：实体干涉",
+            "detail": "母件 · L 槽旋锁座 阻挡操作路径（路径 9%，采样 ≤0.25 mm）。",
+            "partIds": [
+              "bayonet-pin",
+              "bayonet-socket"
+            ],
+            "category": "geometry"
+          }
+        ]
+      },
+      {
+        "name": "到底后不能反向旋到-45°",
+        "expectedAllowed": false,
+        "allowed": false,
+        "passed": true,
+        "elapsedMilliseconds": 3.28,
+        "from": {
+          "position": [
+            0,
+            18,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        "to": {
+          "position": [
+            0,
+            18,
+            0
+          ],
+          "rotation": [
+            0,
+            -45,
+            0
+          ]
+        },
+        "issues": [
+          {
+            "id": "blocked-bayonet-pin-bayonet-socket",
+            "severity": "error",
+            "title": "移动受阻：实体干涉",
+            "detail": "母件 · L 槽旋锁座 阻挡操作路径（路径 10%，采样 ≤0.25 mm）。",
+            "partIds": [
+              "bayonet-pin",
+              "bayonet-socket"
+            ],
+            "category": "geometry"
+          }
+        ]
+      },
+      {
+        "name": "超过槽末端不能旋到70°",
+        "expectedAllowed": false,
+        "allowed": false,
+        "passed": true,
+        "elapsedMilliseconds": 1.863,
+        "from": {
+          "position": [
+            0,
+            18,
+            0
+          ],
+          "rotation": [
+            0,
+            45,
+            0
+          ]
+        },
+        "to": {
+          "position": [
+            0,
+            18,
+            0
+          ],
+          "rotation": [
+            0,
+            70,
+            0
+          ]
+        },
+        "issues": [
+          {
+            "id": "blocked-bayonet-pin-bayonet-socket",
+            "severity": "error",
+            "title": "移动受阻：实体干涉",
+            "detail": "母件 · L 槽旋锁座 阻挡操作路径（路径 17%，采样 ≤0.25 mm）。",
+            "partIds": [
+              "bayonet-pin",
+              "bayonet-socket"
+            ],
+            "category": "geometry"
+          }
+        ]
+      }
+    ],
+    "lockedValidation": {
+      "issues": [
+        {
+          "id": "bayonet-fit-bayonet-socket-bayonet-pin",
+          "severity": "pass",
+          "title": "旋锁已进入保持区",
+          "detail": "公件 · 双耳旋锁销 → 母件 · L 槽旋锁座；相对转角 45.00°；轴孔最坏单侧余隙 0.195 mm，槽高最坏单侧余隙 0.200 mm，入口/槽端保守余隙 0.257 mm。名义45°保持姿态；上拔由槽顶实体阻挡，不含弹性防松。",
+          "partIds": [
+            "bayonet-socket",
+            "bayonet-pin"
+          ],
+          "category": "fit"
+        },
+        {
+          "id": "geometry-pass",
+          "severity": "pass",
+          "title": "参数化实体无干涉",
+          "detail": "已检查工作台与参数化刚体；圆形异轴接触为保守近似，资产与独立弹簧详见提示。",
+          "partIds": [],
+          "category": "geometry"
+        }
+      ],
+      "collisionPairs": [],
+      "minClearance": 0.1954314635929176
+    },
+    "performanceCheck": {
+      "name": "完整默认装配中的插入路径",
+      "expectedAllowed": true,
+      "allowed": true,
+      "passed": true,
+      "elapsedMilliseconds": 18.844,
+      "from": {
+        "position": [
+          -18,
+          32,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ]
+      },
+      "to": {
+        "position": [
+          -18,
+          18,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ]
+      },
+      "issues": []
+    }
+  },
+  "limitations": [
+    "45° is a nominal axial-retention position. A few degrees of rotational clearance remain; no friction detent or elastic anti-loosening latch is simulated.",
+    "Check printer/material shrinkage, actual force, wear and repeated insertion on a physical sample before manufacture.",
+    "No finite element stress, friction contact, deformation, surface roughness or fatigue analysis.",
+    "Sampled path checks cannot guarantee detection of arbitrary sub-0.25 mm obstacles."
+  ]
+}

@@ -1,0 +1,581 @@
+{
+  "generatedAt": "2026-11-14T10:06:01.117Z",
+  "command": "npx vite-node scripts/verify-demo.ts",
+  "scope": "Default parameterized tenon / mortise / spring-button / DC lamp demo only. This does not validate the original pureTV controller geometry.",
+  "overallPassed": true,
+  "units": {
+    "length": "mm",
+    "angle": "degree",
+    "stiffness": "N/mm",
+    "damping": "N·s/m",
+    "mass": "kg",
+    "force": "N",
+    "current": "A",
+    "voltage": "V"
+  },
+  "methods": {
+    "geometry": "Compound solid boxes, Euler XYZ rotation, separating-axis test; touching faces are contact, not penetration.",
+    "movement": "Discrete path samples at at most 0.25 mm estimated maximum vertex travel. This is not continuous collision detection.",
+    "clearance": "Worst-case single-side fit clearance after both components’ ± dimensional tolerances and lateral offset.",
+    "dynamics": "Implicit Euler, dt=1/240 s, linear spring and damper, hard axial travel limits. 1 s applied press force followed by 4 s release.",
+    "circuit": "Modified nodal analysis of ideal DC sources/wires/switches and resistive loads."
+  },
+  "limitations": [
+    "Nominal spring, switch, tolerance and load parameters have not been calibrated against hardware.",
+    "No gravity-driven rigid-body motion, finite elements, friction, deformable contact, spring-coil contact, lateral buckling or fatigue.",
+    "Motion sampling may miss features smaller than the sampling interval. Round off-axis contacts use conservative polygon proxies.",
+    "Imported Blender assets receive bounding-box prechecks only; nested boxes do not prove an actual solid collision.",
+    "Wire diameter, insulation clearance, bend radius, routing interference and solder geometry are not checked.",
+    "Lamp is a resistive load; LED nonlinearity, source internal resistance, thermal effects and resistor power limits are not modeled.",
+    "Numerical checks are assembly/function prechecks and are not a manufacturing certification."
+  ],
+  "project": {
+    "version": 1,
+    "name": "榫卯与按压机构",
+    "parts": [
+      {
+        "id": "demo-base",
+        "name": "01 · 精密安装底板",
+        "kind": "base",
+        "position": [
+          0,
+          2,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "size": [
+          86,
+          4,
+          64
+        ],
+        "color": "#465e70",
+        "fixed": true,
+        "visible": true,
+        "params": {
+          "tolerance": 0.1
+        }
+      },
+      {
+        "id": "demo-mortise",
+        "name": "02 · 方孔榫卯座",
+        "kind": "mortise",
+        "position": [
+          -18,
+          13,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "size": [
+          24,
+          18,
+          24
+        ],
+        "color": "#c69961",
+        "fixed": false,
+        "visible": true,
+        "params": {
+          "innerWidth": 12.4,
+          "innerDepth": 12.4,
+          "tolerance": 0.1
+        }
+      },
+      {
+        "id": "demo-tenon",
+        "name": "03 · 方榫插接件",
+        "kind": "tenon",
+        "position": [
+          -18,
+          35,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "size": [
+          12,
+          26,
+          12
+        ],
+        "color": "#6288a8",
+        "fixed": false,
+        "visible": true,
+        "params": {
+          "tolerance": 0.1
+        }
+      },
+      {
+        "id": "demo-button",
+        "name": "04 · 弹簧按压开关",
+        "kind": "button",
+        "position": [
+          18,
+          14,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "size": [
+          16,
+          20,
+          16
+        ],
+        "color": "#5c82a3",
+        "fixed": false,
+        "visible": true,
+        "params": {
+          "stiffness": 0.8,
+          "damping": 1.2,
+          "mass": 0.03,
+          "travel": 1,
+          "trigger": 0.6,
+          "compression": 0
+        }
+      },
+      {
+        "id": "demo-battery",
+        "name": "05 · 5V 直流电源",
+        "kind": "battery",
+        "position": [
+          -25,
+          10,
+          22
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "size": [
+          20,
+          12,
+          13
+        ],
+        "color": "#58788f",
+        "fixed": false,
+        "visible": true,
+        "params": {
+          "voltage": 5
+        }
+      },
+      {
+        "id": "demo-lamp",
+        "name": "06 · 指示灯",
+        "kind": "lamp",
+        "position": [
+          25,
+          12,
+          22
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "size": [
+          10,
+          16,
+          10
+        ],
+        "color": "#d4aa55",
+        "fixed": false,
+        "visible": true,
+        "params": {
+          "resistance": 100
+        }
+      }
+    ],
+    "wires": [
+      {
+        "id": "demo-wire-1",
+        "from": {
+          "partId": "demo-battery",
+          "terminal": 0
+        },
+        "to": {
+          "partId": "demo-button",
+          "terminal": 0
+        },
+        "color": "#c97b63"
+      },
+      {
+        "id": "demo-wire-2",
+        "from": {
+          "partId": "demo-button",
+          "terminal": 1
+        },
+        "to": {
+          "partId": "demo-lamp",
+          "terminal": 0
+        },
+        "color": "#c97b63"
+      },
+      {
+        "id": "demo-wire-3",
+        "from": {
+          "partId": "demo-lamp",
+          "terminal": 1
+        },
+        "to": {
+          "partId": "demo-battery",
+          "terminal": 1
+        },
+        "color": "#4f6c82"
+      }
+    ]
+  },
+  "checks": [
+    {
+      "id": "static-assembly",
+      "passed": true,
+      "expected": "No solid interference or invalid dimensions in the default parameterized assembly."
+    },
+    {
+      "id": "tolerance-clearance",
+      "passed": true,
+      "expected": "Worst-case single-side clearance = (12.4 - 0.1 - 12 - 0.1) / 2 = 0.1 mm."
+    },
+    {
+      "id": "insert-tenon",
+      "passed": true,
+      "expected": "Tenon center moves from Y=35 mm to Y=23 mm through the mortise void."
+    },
+    {
+      "id": "reject-through-wall",
+      "passed": true,
+      "expected": "The complete lateral path intersects the mortise wall and must be rejected."
+    },
+    {
+      "id": "reject-rotation",
+      "passed": true,
+      "expected": "A 45 degree turn of the inserted square tenon must be rejected."
+    },
+    {
+      "id": "open-circuit",
+      "passed": true,
+      "expected": "Released switch: zero current and lamp off."
+    },
+    {
+      "id": "closed-circuit",
+      "passed": true,
+      "expected": "Closed switch: 5 V / 100 ohm = 0.05 A and lamp powered."
+    },
+    {
+      "id": "press-trigger",
+      "passed": true,
+      "expected": "Press exceeds the 0.6 mm trigger while respecting the 1 mm travel stop."
+    },
+    {
+      "id": "release-return",
+      "passed": true,
+      "expected": "After four seconds released: residual travel <0.01 mm, speed <0.01 mm/s, lamp off."
+    }
+  ],
+  "staticValidation": {
+    "issues": [
+      {
+        "id": "fit-demo-mortise-demo-tenon",
+        "severity": "pass",
+        "title": "孔口对齐",
+        "detail": "03 · 方榫插接件 → 02 · 方孔榫卯座；最不利单侧余隙 0.100 mm，插入深度 0.00 mm；尺寸公差合计 ±0.20 mm",
+        "partIds": [
+          "demo-mortise",
+          "demo-tenon"
+        ],
+        "category": "fit"
+      },
+      {
+        "id": "geometry-pass",
+        "severity": "pass",
+        "title": "参数化实体无干涉",
+        "detail": "已检查工作台与参数化刚体；圆形异轴接触为保守近似，资产与独立弹簧详见提示。",
+        "partIds": [],
+        "category": "geometry"
+      }
+    ],
+    "collisionPairs": [],
+    "minClearance": 0.10000000000000017
+  },
+  "motion": {
+    "insertion": {
+      "from": [
+        -18,
+        35,
+        0
+      ],
+      "to": [
+        -18,
+        23,
+        0
+      ],
+      "result": {
+        "allowed": true,
+        "issues": []
+      }
+    },
+    "lateral": {
+      "from": [
+        -18,
+        23,
+        0
+      ],
+      "to": [
+        30,
+        23,
+        0
+      ],
+      "result": {
+        "allowed": false,
+        "issues": [
+          {
+            "id": "blocked-demo-tenon-demo-mortise",
+            "severity": "error",
+            "title": "移动受阻：实体干涉",
+            "detail": "02 · 方孔榫卯座 阻挡操作路径（路径 1%，采样 ≤0.25 mm）。",
+            "partIds": [
+              "demo-tenon",
+              "demo-mortise"
+            ],
+            "category": "geometry"
+          }
+        ]
+      }
+    },
+    "rotation": {
+      "from": [
+        0,
+        0,
+        0
+      ],
+      "to": [
+        0,
+        45,
+        0
+      ],
+      "result": {
+        "allowed": false,
+        "issues": [
+          {
+            "id": "blocked-demo-tenon-demo-mortise",
+            "severity": "error",
+            "title": "移动受阻：实体干涉",
+            "detail": "02 · 方孔榫卯座 阻挡操作路径（路径 6%，采样 ≤0.25 mm）。",
+            "partIds": [
+              "demo-tenon",
+              "demo-mortise"
+            ],
+            "category": "geometry"
+          }
+        ]
+      }
+    }
+  },
+  "insertedValidation": {
+    "issues": [
+      {
+        "id": "fit-demo-mortise-demo-tenon",
+        "severity": "pass",
+        "title": "插入配合",
+        "detail": "03 · 方榫插接件 → 02 · 方孔榫卯座；最不利单侧余隙 0.100 mm，插入深度 12.00 mm；尺寸公差合计 ±0.20 mm",
+        "partIds": [
+          "demo-mortise",
+          "demo-tenon"
+        ],
+        "category": "fit"
+      },
+      {
+        "id": "geometry-pass",
+        "severity": "pass",
+        "title": "参数化实体无干涉",
+        "detail": "已检查工作台与参数化刚体；圆形异轴接触为保守近似，资产与独立弹簧详见提示。",
+        "partIds": [],
+        "category": "geometry"
+      }
+    ],
+    "collisionPairs": [],
+    "minClearance": 0.10000000000000017
+  },
+  "circuit": {
+    "released": {
+      "poweredLampIds": [],
+      "current": 0,
+      "voltage": 5,
+      "shortCircuit": false,
+      "issues": [
+        {
+          "id": "open-demo-battery",
+          "severity": "warning",
+          "title": "回路断开 / 无负载电流",
+          "detail": "检查负载两端、回路线与开关状态。",
+          "partIds": [
+            "demo-battery"
+          ],
+          "category": "circuit"
+        }
+      ]
+    },
+    "pressed": {
+      "poweredLampIds": [
+        "demo-lamp"
+      ],
+      "current": 0.05,
+      "voltage": 5,
+      "shortCircuit": false,
+      "issues": [
+        {
+          "id": "circuit-demo-battery",
+          "severity": "pass",
+          "title": "直流回路导通",
+          "detail": "总电源支路电流 50.00 mA；灯按阻性负载求解。",
+          "partIds": [
+            "demo-battery"
+          ],
+          "category": "circuit"
+        }
+      ]
+    },
+    "afterReturn": {
+      "poweredLampIds": [],
+      "current": 0,
+      "voltage": 5,
+      "shortCircuit": false,
+      "issues": [
+        {
+          "id": "open-demo-battery",
+          "severity": "warning",
+          "title": "回路断开 / 无负载电流",
+          "detail": "检查负载两端、回路线与开关状态。",
+          "partIds": [
+            "demo-battery"
+          ],
+          "category": "circuit"
+        }
+      ]
+    }
+  },
+  "pressCycle": {
+    "durationSeconds": 5,
+    "pressDurationSeconds": 1,
+    "dtSeconds": 0.004166666666666667,
+    "parameters": {
+      "stiffness": 0.8,
+      "damping": 1.2,
+      "mass": 0.03,
+      "travel": 1
+    },
+    "triggerMm": 0.6,
+    "appliedPressForceN": 0.8800000000000001,
+    "maximumCompressionMm": 1,
+    "firstTriggerSeconds": 0.008333333333333333,
+    "firstReleasedSeconds": 1.0083333333333333,
+    "finalState": {
+      "displacement": 0,
+      "velocity": 0,
+      "force": 0
+    },
+    "samples": [
+      {
+        "timeSeconds": 0.004166666666666667,
+        "appliedForceN": 0.8800000000000001,
+        "displacementMm": 0.31250000000000006,
+        "velocityMmPerS": 75.00000000000001,
+        "restoringForceN": 0.25000000000000006,
+        "switchClosed": false,
+        "lampPowered": false,
+        "currentA": 0
+      },
+      {
+        "timeSeconds": 0.05,
+        "appliedForceN": 0.8800000000000001,
+        "displacementMm": 1,
+        "velocityMmPerS": 0,
+        "restoringForceN": 0.8,
+        "switchClosed": true,
+        "lampPowered": true,
+        "currentA": 0.05
+      },
+      {
+        "timeSeconds": 0.1,
+        "appliedForceN": 0.8800000000000001,
+        "displacementMm": 1,
+        "velocityMmPerS": 0,
+        "restoringForceN": 0.8,
+        "switchClosed": true,
+        "lampPowered": true,
+        "currentA": 0.05
+      },
+      {
+        "timeSeconds": 0.5,
+        "appliedForceN": 0.8800000000000001,
+        "displacementMm": 1,
+        "velocityMmPerS": 0,
+        "restoringForceN": 0.8,
+        "switchClosed": true,
+        "lampPowered": true,
+        "currentA": 0.05
+      },
+      {
+        "timeSeconds": 1,
+        "appliedForceN": 0.8800000000000001,
+        "displacementMm": 1,
+        "velocityMmPerS": 0,
+        "restoringForceN": 0.8,
+        "switchClosed": true,
+        "lampPowered": true,
+        "currentA": 0.05
+      },
+      {
+        "timeSeconds": 1.05,
+        "appliedForceN": 0,
+        "displacementMm": 0,
+        "velocityMmPerS": 0,
+        "restoringForceN": 0,
+        "switchClosed": false,
+        "lampPowered": false,
+        "currentA": 0
+      },
+      {
+        "timeSeconds": 1.1,
+        "appliedForceN": 0,
+        "displacementMm": 0,
+        "velocityMmPerS": 0,
+        "restoringForceN": 0,
+        "switchClosed": false,
+        "lampPowered": false,
+        "currentA": 0
+      },
+      {
+        "timeSeconds": 2,
+        "appliedForceN": 0,
+        "displacementMm": 0,
+        "velocityMmPerS": 0,
+        "restoringForceN": 0,
+        "switchClosed": false,
+        "lampPowered": false,
+        "currentA": 0
+      },
+      {
+        "timeSeconds": 5,
+        "appliedForceN": 0,
+        "displacementMm": 0,
+        "velocityMmPerS": 0,
+        "restoringForceN": 0,
+        "switchClosed": false,
+        "lampPowered": false,
+        "currentA": 0
+      }
+    ]
+  }
+}

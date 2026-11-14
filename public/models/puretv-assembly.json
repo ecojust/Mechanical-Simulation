@@ -1,0 +1,397 @@
+{
+  "version": 1,
+  "name": "pureTV 原始手柄装配",
+  "wires": [],
+  "parts": [
+    {
+      "id": "puretv-buttons-left",
+      "name": "方向键 · 左",
+      "kind": "asset",
+      "position": [
+        -51.228842,
+        45.809441,
+        -22
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        12.311832,
+        23.777056,
+        11.560001
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/buttons-left.glb"
+      }
+    },
+    {
+      "id": "puretv-buttons-right",
+      "name": "方向键 · 右",
+      "kind": "asset",
+      "position": [
+        -32.75567,
+        46.67482,
+        -22
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        12.280859,
+        25.507816,
+        11.560001
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/buttons-right.glb"
+      }
+    },
+    {
+      "id": "puretv-buttons-down",
+      "name": "方向键 · 下",
+      "kind": "asset",
+      "position": [
+        -42,
+        46.227316,
+        -12.765555
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        11.559998,
+        24.61281,
+        12.300619
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/buttons-down.glb"
+      }
+    },
+    {
+      "id": "puretv-buttons-up",
+      "name": "方向键 · 上",
+      "kind": "asset",
+      "position": [
+        -42,
+        46.371288,
+        -31.246942
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        11.559998,
+        24.900761,
+        12.275633
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/buttons-up.glb"
+      }
+    },
+    {
+      "id": "puretv-buttons-a",
+      "name": "A 键 · 插销回弹总成",
+      "kind": "asset",
+      "position": [
+        41.001287,
+        48.673693,
+        -9.5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        13.337421,
+        21.350449,
+        13.338711
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/buttons-a.glb"
+      }
+    },
+    {
+      "id": "puretv-buttons-b",
+      "name": "B 键 · 插销回弹总成",
+      "kind": "asset",
+      "position": [
+        52.501287,
+        48.197085,
+        -21
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        13.337421,
+        20.397232,
+        13.338711
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/buttons-b.glb"
+      }
+    },
+    {
+      "id": "puretv-buttons-x",
+      "name": "X 键 · 插销回弹总成",
+      "kind": "asset",
+      "position": [
+        29.501287,
+        49.293295,
+        -21
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        13.337421,
+        22.589653,
+        13.338711
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/buttons-x.glb"
+      }
+    },
+    {
+      "id": "puretv-buttons-y",
+      "name": "Y 键 · 插销回弹总成",
+      "kind": "asset",
+      "position": [
+        41.001287,
+        48.830625,
+        -32.500001
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        13.337421,
+        21.664314,
+        13.338713
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/buttons-y.glb"
+      }
+    },
+    {
+      "id": "puretv-buttons-confirm",
+      "name": "确认键 · 旋锁总成",
+      "kind": "asset",
+      "position": [
+        0.000001,
+        47.445758,
+        -5.499999
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        14.784471,
+        15.508849,
+        15.683141
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/buttons-confirm.glb"
+      }
+    },
+    {
+      "id": "puretv-baseplates-dpad",
+      "name": "方向键 · 四键底座",
+      "kind": "asset",
+      "position": [
+        -42.000001,
+        33.719909,
+        -22.000001
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        34.417471,
+        5.761999,
+        34.417471
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/baseplates-dpad.glb"
+      }
+    },
+    {
+      "id": "puretv-baseplates-abxy",
+      "name": "ABXY · 四键底座",
+      "kind": "asset",
+      "position": [
+        40.999999,
+        37.373689,
+        -20.999999
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        38.161409,
+        6.60956,
+        38.161409
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/baseplates-abxy.glb"
+      }
+    },
+    {
+      "id": "puretv-housing-top",
+      "name": "手柄 · 上盖",
+      "kind": "asset",
+      "position": [
+        0,
+        40.05126,
+        0.499605
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        147.992371,
+        37.181545,
+        98.996342
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/housing-top.glb"
+      }
+    },
+    {
+      "id": "puretv-housing-bottom",
+      "name": "手柄 · 底壳",
+      "kind": "asset",
+      "position": [
+        0,
+        24.520454,
+        0.5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        148,
+        49.040909,
+        99
+      ],
+      "color": "#92a9b6",
+      "fixed": true,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/housing-bottom.glb"
+      }
+    },
+    {
+      "id": "puretv-electronics-esp32-mount",
+      "name": "ESP32 · 固定总成",
+      "kind": "asset",
+      "position": [
+        0,
+        33.140909,
+        -8.5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        75,
+        10.999999,
+        27.9
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/electronics-esp32-mount.glb"
+      }
+    },
+    {
+      "id": "puretv-electronics-harness",
+      "name": "手柄 · 九组线束",
+      "kind": "asset",
+      "position": [
+        0.673815,
+        36.846515,
+        -14.101357
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        108.696636,
+        10.945657,
+        34.159393
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/electronics-harness.glb"
+      }
+    }
+  ]
+}

@@ -1,0 +1,249 @@
+{
+  "schemaVersion": 1,
+  "units": "mm",
+  "sourceCoordinateSystem": "Y-up, XYZ degrees",
+  "blenderCoordinateSystem": "Z-up; mapping (x,y,z) → (x,-z,y)",
+  "source": {
+    "file": "geometry.json",
+    "sha256": "f7693d566dbd4e31b10c7daa5e67112421ff2932c4689056676f2452a0504914"
+  },
+  "nominal": {
+    "stemDiameter": 9,
+    "holeDiameter": 9.6,
+    "lugWidth": 2.6,
+    "lugHeight": 2,
+    "lugRootRadius": 4.1,
+    "lugOuterRadius": 8,
+    "lugCenterY": -8,
+    "slotBottom": -4.3,
+    "slotTop": -1.7,
+    "entryHalfAngle": 20,
+    "slotEndAngle": 65,
+    "lockAngle": 45,
+    "tolerance": 0.1,
+    "angularSegment": 5
+  },
+  "poses": {
+    "entry": {
+      "pin": [
+        0,
+        32,
+        0
+      ],
+      "socket": [
+        0,
+        13,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    "seated": {
+      "pin": [
+        0,
+        18,
+        0
+      ],
+      "socket": [
+        0,
+        13,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    "locked": {
+      "pin": [
+        0,
+        18,
+        0
+      ],
+      "socket": [
+        0,
+        13,
+        0
+      ],
+      "rotation": [
+        0,
+        45,
+        0
+      ]
+    }
+  },
+  "blenderVersion": "4.3.2",
+  "assembly": {
+    "file": "bayonet-assembly.blend",
+    "sha256": "830b09d129ad0d872dc5774e0d30429ca776ad5998ee034d88d0f68c573194e4",
+    "bytes": 133777
+  },
+  "parts": [
+    {
+      "id": "bayonet-socket",
+      "kind": "bayonet-socket",
+      "file": "bayonet-socket.stl",
+      "sourceSolids": 166,
+      "nominalSizeYUpMm": [
+        24,
+        18,
+        24
+      ],
+      "parameters": {
+        "tolerance": 0.1,
+        "holeDiameter": 9.6
+      },
+      "positionYUpMm": [
+        0,
+        13,
+        0
+      ],
+      "rotationXYZDegrees": [
+        0,
+        0,
+        0
+      ],
+      "mesh": {
+        "vertices": 520,
+        "triangles": 1040,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "connectedComponents": 1,
+        "volumeMm3": 5463.050187932325,
+        "localBoundsBlenderZUp": {
+          "min": [
+            -12.0,
+            -12.0,
+            -9.0
+          ],
+          "max": [
+            12.0,
+            12.0,
+            9.0
+          ]
+        }
+      },
+      "stl": {
+        "groundingTranslationZMm": 9.0,
+        "bytes": 52084,
+        "sha256": "36a8a0987192ce9fb3ea8af0383e1d40e3e4914004d1364a66d069ced7859fb9",
+        "roundtrip": {
+          "triangles": 1040,
+          "nonManifoldEdges": 0,
+          "degenerateTriangles": 0,
+          "volumeMm3": 5463.05028094873,
+          "sizeZUpMm": [
+            24.0,
+            24.0,
+            18.0
+          ],
+          "maxBoundsDifferenceMm": 0.0,
+          "passed": true
+        }
+      }
+    },
+    {
+      "id": "bayonet-pin",
+      "kind": "bayonet-pin",
+      "file": "bayonet-pin.stl",
+      "sourceSolids": 4,
+      "nominalSizeYUpMm": [
+        16,
+        24,
+        16
+      ],
+      "parameters": {
+        "tolerance": 0.1
+      },
+      "positionYUpMm": [
+        0,
+        32,
+        0
+      ],
+      "rotationXYZDegrees": [
+        0,
+        0,
+        0
+      ],
+      "mesh": {
+        "vertices": 220,
+        "triangles": 436,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "connectedComponents": 1,
+        "volumeMm3": 1812.7971328367905,
+        "localBoundsBlenderZUp": {
+          "min": [
+            -8.0,
+            -8.0,
+            -12.0
+          ],
+          "max": [
+            8.0,
+            8.0,
+            12.0
+          ]
+        }
+      },
+      "stl": {
+        "groundingTranslationZMm": 12.0,
+        "bytes": 21884,
+        "sha256": "62a42aee43cb335b5ae1f3386484cbdc039fcd1ee10202f6dc3105165745e974",
+        "roundtrip": {
+          "triangles": 436,
+          "nonManifoldEdges": 0,
+          "degenerateTriangles": 0,
+          "volumeMm3": 1812.7970952515798,
+          "sizeZUpMm": [
+            16.0,
+            16.0,
+            24.0
+          ],
+          "maxBoundsDifferenceMm": 0.0,
+          "passed": true
+        }
+      }
+    }
+  ],
+  "surfaceIntersectionChecks": [
+    {
+      "name": "entry",
+      "surfaceIntersectionPairs": 0,
+      "expectIntersection": false,
+      "passed": true
+    },
+    {
+      "name": "seated",
+      "surfaceIntersectionPairs": 0,
+      "expectIntersection": false,
+      "passed": true
+    },
+    {
+      "name": "locked45",
+      "surfaceIntersectionPairs": 0,
+      "expectIntersection": false,
+      "passed": true
+    },
+    {
+      "name": "locked-pull-1mm",
+      "surfaceIntersectionPairs": 84,
+      "expectIntersection": true,
+      "passed": true
+    },
+    {
+      "name": "rotate-before-seated",
+      "surfaceIntersectionPairs": 80,
+      "expectIntersection": true,
+      "passed": true
+    }
+  ],
+  "limitations": [
+    "Nominal geometry only; physical print tolerance, friction, spring force and wear require measurement.",
+    "STL has implicit millimetre units and each part is separately grounded; use the Blender file for shared assembly coordinates.",
+    "BVH checks test surface intersections at specified poses, not continuous swept contact or self-intersection certification."
+  ]
+}
