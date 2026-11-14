@@ -13,7 +13,17 @@
 
 组合按钮回归使用键帽、弹簧、基座及固定开关：源开关故意保留旧压缩值与很小的行程阈值，仍必须等撞针接触声明触发区域才点灯；脱离后断电。检查真实渲染的活动件位置、弹簧压缩及固定件不动，并验证轴向显示长度与自由长度一致、任意旋转下弹簧固定端不漂移。组合旋锁回归覆盖路径阻挡、45°锁定、禁止直接拔出、逆旋与退出，及非零姿态编辑不能绕开运动校验。
 
-发布流水线还会在macOS启动实际打包APP，经MCP检查WKWebView/WebGL、上传STL、PBR、原始子件、组合按钮的接触点灯/回弹断电和旋锁全路径。校验DMG/ZIP中的arm64架构、签名、包内容及SHA-256后才公开Release。执行结果与下载见 [Actions](https://github.com/ecojust/Mechanical-Simulation/actions/workflows/release.yml) 和 [Releases](https://github.com/ecojust/Mechanical-Simulation/releases)。
+2026-11-14，[发布流水线 43588610970](https://github.com/ecojust/Mechanical-Simulation/actions/runs/43588610970) 全部通过：在macOS启动实际打包APP，经MCP检查WKWebView/WebGL、上传STL、PBR、原始子件分组、组合按钮的接触点灯/回弹断电和旋锁全路径，渲染器未报告错误。DMG/ZIP的arm64架构、ad-hoc签名、包内容及SHA-256检查通过；打包程序与官方MCP SDK的17工具、38次鉴权调用、大模型上传和分页导出互通通过。
+
+[v0.3.0 已公开发布](https://github.com/ecojust/Mechanical-Simulation/releases/tag/v0.3.0)，并重新下载公开附件核对SHA-256：
+
+| 包 | 实际字节数 | 十进制 MB |
+| --- | ---: | ---: |
+| Tauri v0.3.0 DMG | 7,719,980 | 7.72 |
+| Tauri v0.3.0 ZIP | 7,644,753 | 7.64 |
+| Electron v0.2.0 DMG（对照） | 123,059,862 | 123.06 |
+
+DMG相较上一版减少93.7%。安装要求为macOS 13及以上、Apple Silicon；本版未做Apple Developer ID签名或公证。
 
 这些结果覆盖声明的参数化代理和指定测试机构，不证明任意源网格接触、摩擦、材料变形或制造精度；见 [组合功能机构](MECHANISMS.md)、[组件定义](COMPONENTS.md)、[MCP](MCP.md) 与 [验证边界](VALIDATION.md)。
 
