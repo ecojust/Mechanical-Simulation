@@ -1,5 +1,22 @@
 # 客户端交付检查记录
 
+## v0.3.0 Tauri、组件上传与组合机构
+
+迁移到 Tauri 2 / WKWebView，最低 macOS 13，仅发布 Apple Silicon。删除 Electron 和捆绑 Node；MCP stdio 模式复用同一原生可执行文件。
+
+本地验证覆盖：
+
+- 180 项单元测试：严格GLB/STL输入、类型/代理/尺寸、PBR、子件分组、几何运动、回弹、电路、撞针接触、机制与MCP命令。
+- 11 组浏览器操作：上传/参数配置、IndexedDB恢复、工程导出、颜色/PBR、189原始子件、公母分组、实际Three对象联动、真实接触点灯、弹簧回弹、旋锁入槽与拒绝拔出。
+- TypeScript与生产构建、15组源GLB重载、方榫9项/旋锁9项数值验证。
+- Rust MCP 6项测试、macOS ARM64跨编检查；官方MCP SDK验证17工具、38次鉴权调用、超过16 MiB上传和分页导出完整恢复。
+
+组合按钮回归使用键帽、弹簧、基座及固定开关：源开关故意保留旧压缩值与很小的行程阈值，仍必须等撞针接触声明触发区域才点灯；脱离后断电。检查真实渲染的活动件位置、弹簧压缩及固定件不动，并验证轴向显示长度与自由长度一致、任意旋转下弹簧固定端不漂移。组合旋锁回归覆盖路径阻挡、45°锁定、禁止直接拔出、逆旋与退出，及非零姿态编辑不能绕开运动校验。
+
+发布流水线还会在macOS启动实际打包APP，经MCP检查WKWebView/WebGL、上传STL、PBR、原始子件、组合按钮的接触点灯/回弹断电和旋锁全路径。校验DMG/ZIP中的arm64架构、签名、包内容及SHA-256后才公开Release。执行结果与下载见 [Actions](https://github.com/ecojust/Mechanical-Simulation/actions/workflows/release.yml) 和 [Releases](https://github.com/ecojust/Mechanical-Simulation/releases)。
+
+这些结果覆盖声明的参数化代理和指定测试机构，不证明任意源网格接触、摩擦、材料变形或制造精度；见 [组合功能机构](MECHANISMS.md)、[组件定义](COMPONENTS.md)、[MCP](MCP.md) 与 [验证边界](VALIDATION.md)。
+
 ## v0.2.0 旋锁与 macOS arm64
 
 同步上游 `dcded14` 的 0.56 mm 线束与公共接地点模型，保留原机械改动；当前素材清单为 15 个集合、189 个对象。

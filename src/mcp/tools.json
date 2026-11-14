@@ -1,0 +1,1120 @@
+[
+  {
+    "name": "get_runtime_status",
+    "description": "Read runtime health of the actual desktop WebView, model catalog and renderer; no arbitrary code execution.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {},
+      "additionalProperties": false
+    },
+    "annotations": {
+      "readOnlyHint": true,
+      "openWorldHint": false,
+      "destructiveHint": false
+    }
+  },
+  {
+    "name": "list_component_types",
+    "description": "List functional component types, required interaction parameters, units and validation requirements.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {},
+      "additionalProperties": false
+    },
+    "annotations": {
+      "readOnlyHint": true,
+      "openWorldHint": false,
+      "destructiveHint": false
+    }
+  },
+  {
+    "name": "list_components",
+    "description": "List built-in, repository and uploaded component definitions. Model bytes are omitted.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {},
+      "additionalProperties": false
+    },
+    "annotations": {
+      "readOnlyHint": true,
+      "openWorldHint": false,
+      "destructiveHint": false
+    }
+  },
+  {
+    "name": "get_project",
+    "description": "Read the active desktop project and its revision. Model bytes are omitted; use export_project for portable content.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {},
+      "additionalProperties": false
+    },
+    "annotations": {
+      "readOnlyHint": true,
+      "openWorldHint": false,
+      "destructiveHint": false
+    }
+  },
+  {
+    "name": "import_component",
+    "description": "Import a GLB/STL component with embedded base64 model, declared functional kind, dimensions and interaction parameters. Unconfigured components remain unverified. No filesystem paths or remote URLs are accepted.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "expectedRevision": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "component": {
+          "type": "object",
+          "properties": {
+            "version": {
+              "const": 1
+            },
+            "id": {
+              "type": "string"
+            },
+            "name": {
+              "type": "string"
+            },
+            "kind": {
+              "type": "string",
+              "description": "A kind returned by list_component_types."
+            },
+            "size": {
+              "type": "array",
+              "items": {
+                "type": "number"
+              },
+              "minItems": 3,
+              "maxItems": 3
+            },
+            "color": {
+              "type": "string",
+              "pattern": "^#[a-fA-F0-9]{6}$"
+            },
+            "params": {
+              "type": "object",
+              "additionalProperties": {
+                "type": "number"
+              }
+            },
+            "interaction": {
+              "type": "object",
+              "properties": {
+                "version": {
+                  "const": 1
+                },
+                "status": {
+                  "enum": [
+                    "configured",
+                    "unconfigured"
+                  ]
+                },
+                "axis": {
+                  "type": "array",
+                  "items": {
+                    "type": "number"
+                  },
+                  "minItems": 3,
+                  "maxItems": 3
+                },
+                "anchor": {
+                  "type": "array",
+                  "items": {
+                    "type": "number"
+                  },
+                  "minItems": 3,
+                  "maxItems": 3
+                },
+                "proxySize": {
+                  "type": "array",
+                  "items": {
+                    "type": "number"
+                  },
+                  "minItems": 3,
+                  "maxItems": 3
+                },
+                "mateFamily": {
+                  "type": "string"
+                },
+                "insertionDepth": {
+                  "type": "number"
+                },
+                "minClearance": {
+                  "type": "number"
+                },
+                "lockAngle": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "version",
+                "status",
+                "axis",
+                "anchor",
+                "proxySize"
+              ],
+              "additionalProperties": false,
+              "description": "Declare local insertion axis, datum anchor and collision proxy in mm. Functional fields depend on list_component_types; missing values remain unverified."
+            },
+            "model": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "format": {
+                  "enum": [
+                    "glb",
+                    "stl"
+                  ]
+                },
+                "data": {
+                  "type": "string",
+                  "description": "Canonical base64, at most 12 MiB decoded; GLB must contain no external resources."
+                },
+                "sha256": {
+                  "type": "string",
+                  "pattern": "^[a-f0-9]{64}$"
+                },
+                "bytes": {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 12582912
+                },
+                "size": {
+                  "type": "array",
+                  "items": {
+                    "type": "number"
+                  },
+                  "minItems": 3,
+                  "maxItems": 3
+                },
+                "center": {
+                  "type": "array",
+                  "items": {
+                    "type": "number"
+                  },
+                  "minItems": 3,
+                  "maxItems": 3
+                }
+              },
+              "required": [
+                "id",
+                "name",
+                "format",
+                "data",
+                "sha256",
+                "bytes",
+                "size",
+                "center"
+              ],
+              "additionalProperties": false
+            },
+            "material": {
+              "type": "object",
+              "properties": {
+                "metalness": {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 1
+                },
+                "roughness": {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 1
+                },
+                "useSourceColor": {
+                  "type": "boolean"
+                }
+              },
+              "required": [
+                "metalness",
+                "roughness"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "required": [
+            "version",
+            "id",
+            "name",
+            "kind",
+            "size",
+            "color",
+            "params",
+            "interaction",
+            "model"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "expectedRevision",
+        "component"
+      ],
+      "additionalProperties": false
+    },
+    "annotations": {
+      "readOnlyHint": false,
+      "destructiveHint": false,
+      "openWorldHint": false
+    }
+  },
+  {
+    "name": "add_part",
+    "description": "Instantiate a built-in kind or an uploaded componentId in the active assembly. Dimensions are in mm, angles in degrees. New collisions are rejected.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "expectedRevision": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "kind": {
+          "type": "string"
+        },
+        "componentId": {
+          "type": "string"
+        },
+        "position": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          },
+          "minItems": 3,
+          "maxItems": 3
+        }
+      },
+      "required": [
+        "expectedRevision",
+        "position"
+      ],
+      "additionalProperties": false
+    },
+    "annotations": {
+      "readOnlyHint": false,
+      "destructiveHint": false,
+      "openWorldHint": false
+    }
+  },
+  {
+    "name": "add_repository_parts",
+    "description": "Add separate original repository mesh nodes with their mating group relationships to the active assembly. Omit nodeNames to add the complete source collection. Complex meshes remain proxy previews and return validation issues; source node names do not prove physical parameters.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "assetId": {
+          "type": "string"
+        },
+        "nodeNames": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "offset": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          },
+          "minItems": 3,
+          "maxItems": 3
+        },
+        "expectedRevision": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "required": [
+        "assetId",
+        "expectedRevision"
+      ],
+      "additionalProperties": false
+    },
+    "annotations": {
+      "readOnlyHint": false,
+      "destructiveHint": false,
+      "openWorldHint": false
+    }
+  },
+  {
+    "name": "configure_part",
+    "description": "Change a part's functional kind, parameters or interaction profile. Missing required parameters remain explicitly unverified. Does not bypass geometry or fixed-part movement checks.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "expectedRevision": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "partId": {
+          "type": "string"
+        },
+        "kind": {
+          "type": "string"
+        },
+        "params": {
+          "type": "object"
+        },
+        "interaction": {
+          "type": "object",
+          "properties": {
+            "version": {
+              "const": 1
+            },
+            "status": {
+              "enum": [
+                "configured",
+                "unconfigured"
+              ]
+            },
+            "axis": {
+              "type": "array",
+              "items": {
+                "type": "number"
+              },
+              "minItems": 3,
+              "maxItems": 3
+            },
+            "anchor": {
+              "type": "array",
+              "items": {
+                "type": "number"
+              },
+              "minItems": 3,
+              "maxItems": 3
+            },
+            "proxySize": {
+              "type": "array",
+              "items": {
+                "type": "number"
+              },
+              "minItems": 3,
+              "maxItems": 3
+            },
+            "mateFamily": {
+              "type": "string"
+            },
+            "insertionDepth": {
+              "type": "number"
+            },
+            "minClearance": {
+              "type": "number"
+            },
+            "lockAngle": {
+              "type": "number"
+            }
+          },
+          "required": [
+            "version",
+            "status",
+            "axis",
+            "anchor",
+            "proxySize"
+          ],
+          "additionalProperties": false,
+          "description": "Declare local insertion axis, datum anchor and collision proxy in mm. Functional fields depend on list_component_types; missing values remain unverified."
+        },
+        "name": {
+          "type": "string",
+          "maxLength": 200
+        },
+        "fixed": {
+          "type": "boolean"
+        },
+        "color": {
+          "type": "string",
+          "pattern": "^#[a-fA-F0-9]{6}$"
+        },
+        "material": {
+          "type": "object",
+          "properties": {
+            "metalness": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            },
+            "roughness": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            },
+            "useSourceColor": {
+              "type": "boolean"
+            }
+          },
+          "required": [
+            "metalness",
+            "roughness"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "expectedRevision",
+        "partId"
+      ],
+      "additionalProperties": false
+    },
+    "annotations": {
+      "readOnlyHint": false,
+      "destructiveHint": true,
+      "openWorldHint": false
+    }
+  },
+  {
+    "name": "transform_part",
+    "description": "Move/rotate a part through the same sampled collision and fit checks as the desktop controls. A blocked path leaves the active project unchanged.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "expectedRevision": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "partId": {
+          "type": "string"
+        },
+        "position": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          },
+          "minItems": 3,
+          "maxItems": 3
+        },
+        "rotation": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          },
+          "minItems": 3,
+          "maxItems": 3
+        }
+      },
+      "required": [
+        "expectedRevision",
+        "partId"
+      ],
+      "additionalProperties": false
+    },
+    "annotations": {
+      "readOnlyHint": false,
+      "destructiveHint": false,
+      "openWorldHint": false
+    }
+  },
+  {
+    "name": "connect_wire",
+    "description": "Connect two electrical terminals in the active assembly and return the resulting circuit checks.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "expectedRevision": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "from": {
+          "type": "object",
+          "properties": {
+            "partId": {
+              "type": "string"
+            },
+            "terminal": {
+              "enum": [
+                0,
+                1
+              ]
+            }
+          },
+          "required": [
+            "partId",
+            "terminal"
+          ],
+          "additionalProperties": false
+        },
+        "to": {
+          "type": "object",
+          "properties": {
+            "partId": {
+              "type": "string"
+            },
+            "terminal": {
+              "enum": [
+                0,
+                1
+              ]
+            }
+          },
+          "required": [
+            "partId",
+            "terminal"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "expectedRevision",
+        "from",
+        "to"
+      ],
+      "additionalProperties": false
+    },
+    "annotations": {
+      "readOnlyHint": false,
+      "destructiveHint": false,
+      "openWorldHint": false
+    }
+  },
+  {
+    "name": "remove_part",
+    "description": "Remove a part and its attached wires from the active project. The desktop undo history retains the previous state.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "expectedRevision": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "partId": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "expectedRevision",
+        "partId"
+      ],
+      "additionalProperties": false
+    },
+    "annotations": {
+      "readOnlyHint": false,
+      "destructiveHint": true,
+      "openWorldHint": false
+    }
+  },
+  {
+    "name": "validate_project",
+    "description": "Validate geometry, compound mechanical behavior, striker/switch contacts and electrical connectivity using the active desktop simulation state. pressedIds may manually close standalone buttons only; compound switches require actual calibrated contact.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "pressedIds": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "uniqueItems": true
+        }
+      },
+      "additionalProperties": false
+    },
+    "annotations": {
+      "readOnlyHint": true,
+      "openWorldHint": false,
+      "destructiveHint": false
+    }
+  },
+  {
+    "name": "export_project",
+    "description": "Export portable JSON with embedded model bytes. Large projects return chunk instructions; request chunkIndex and expectedRevision, concatenate data strings in order and JSON.parse. No filesystem paths.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "chunkIndex": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "expectedRevision": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "additionalProperties": false
+    },
+    "annotations": {
+      "readOnlyHint": true,
+      "openWorldHint": false,
+      "destructiveHint": false
+    }
+  },
+  {
+    "name": "configure_mechanism",
+    "description": "Create or replace a functional press/mating assembly definition on the current project. New definitions use zero pose. Existing frame/pose changes require transform_mechanism; posed mating assemblies permit only name/status edits until returned to zero pose. Incomplete parameters remain unverified.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "expectedRevision": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "mechanism": {
+          "type": "object",
+          "properties": {
+            "version": {
+              "const": 1
+            },
+            "id": {
+              "type": "string"
+            },
+            "name": {
+              "type": "string"
+            },
+            "kind": {
+              "enum": [
+                "press",
+                "mating"
+              ]
+            },
+            "status": {
+              "enum": [
+                "configured",
+                "unconfigured"
+              ]
+            },
+            "partIds": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "uniqueItems": true
+            },
+            "movingPartIds": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "uniqueItems": true
+            },
+            "springPartIds": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "uniqueItems": true
+            },
+            "switchPartId": {
+              "type": "string",
+              "description": "Optional fixed member used as the mechanism electrical switch; cannot also be moving or a spring."
+            },
+            "frame": {
+              "type": "object",
+              "properties": {
+                "position": {
+                  "type": "array",
+                  "items": {
+                    "type": "number"
+                  },
+                  "minItems": 3,
+                  "maxItems": 3
+                },
+                "rotation": {
+                  "type": "array",
+                  "items": {
+                    "type": "number"
+                  },
+                  "minItems": 3,
+                  "maxItems": 3
+                }
+              },
+              "required": [
+                "position",
+                "rotation"
+              ],
+              "additionalProperties": false
+            },
+            "axis": {
+              "type": "array",
+              "items": {
+                "type": "number"
+              },
+              "minItems": 3,
+              "maxItems": 3
+            },
+            "pose": {
+              "type": "object",
+              "properties": {
+                "offset": {
+                  "type": "number"
+                },
+                "angle": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "offset",
+                "angle"
+              ],
+              "additionalProperties": false
+            },
+            "params": {
+              "type": "object",
+              "additionalProperties": {
+                "type": "number"
+              },
+              "properties": {
+                "mass": {
+                  "type": "number",
+                  "description": "Moving subgroup mass, kg"
+                },
+                "stiffness": {
+                  "type": "number",
+                  "description": "Press spring stiffness, N/mm"
+                },
+                "damping": {
+                  "type": "number",
+                  "description": "Press damping, N·s/m"
+                },
+                "travel": {
+                  "type": "number",
+                  "description": "Maximum press travel, mm"
+                },
+                "trigger": {
+                  "type": "number",
+                  "description": "Nominal press travel marker, mm; electrical closure requires calibrated striker/switch contact geometry."
+                },
+                "freeLength": {
+                  "type": "number",
+                  "description": "Spring free length, mm"
+                },
+                "solidLength": {
+                  "type": "number",
+                  "description": "Spring fully compressed length, mm"
+                },
+                "insertionDepth": {
+                  "type": "number",
+                  "description": "Mating insertion depth, mm"
+                },
+                "minClearance": {
+                  "type": "number",
+                  "description": "Minimum one-sided mating clearance, mm"
+                },
+                "lockAngle": {
+                  "type": "number",
+                  "description": "Supported bayonet lock angle, degrees"
+                }
+              }
+            },
+            "movingProxy": {
+              "type": "object",
+              "properties": {
+                "kind": {
+                  "enum": [
+                    "base",
+                    "tenon",
+                    "mortise",
+                    "pin",
+                    "sleeve",
+                    "bayonet-pin",
+                    "bayonet-socket"
+                  ]
+                },
+                "position": {
+                  "type": "array",
+                  "items": {
+                    "type": "number"
+                  },
+                  "minItems": 3,
+                  "maxItems": 3
+                },
+                "rotation": {
+                  "type": "array",
+                  "items": {
+                    "type": "number"
+                  },
+                  "minItems": 3,
+                  "maxItems": 3
+                },
+                "size": {
+                  "type": "array",
+                  "items": {
+                    "type": "number"
+                  },
+                  "minItems": 3,
+                  "maxItems": 3
+                },
+                "params": {
+                  "type": "object",
+                  "additionalProperties": {
+                    "type": "number"
+                  }
+                }
+              },
+              "required": [
+                "kind",
+                "position",
+                "rotation",
+                "size",
+                "params"
+              ],
+              "additionalProperties": false,
+              "description": "Declared collision/fit proxy in the mechanism local frame; does not infer mesh contact geometry."
+            },
+            "fixedProxy": {
+              "type": "object",
+              "properties": {
+                "kind": {
+                  "enum": [
+                    "base",
+                    "tenon",
+                    "mortise",
+                    "pin",
+                    "sleeve",
+                    "bayonet-pin",
+                    "bayonet-socket"
+                  ]
+                },
+                "position": {
+                  "type": "array",
+                  "items": {
+                    "type": "number"
+                  },
+                  "minItems": 3,
+                  "maxItems": 3
+                },
+                "rotation": {
+                  "type": "array",
+                  "items": {
+                    "type": "number"
+                  },
+                  "minItems": 3,
+                  "maxItems": 3
+                },
+                "size": {
+                  "type": "array",
+                  "items": {
+                    "type": "number"
+                  },
+                  "minItems": 3,
+                  "maxItems": 3
+                },
+                "params": {
+                  "type": "object",
+                  "additionalProperties": {
+                    "type": "number"
+                  }
+                }
+              },
+              "required": [
+                "kind",
+                "position",
+                "rotation",
+                "size",
+                "params"
+              ],
+              "additionalProperties": false,
+              "description": "Declared collision/fit proxy in the mechanism local frame; does not infer mesh contact geometry."
+            },
+            "contact": {
+              "type": "object",
+              "properties": {
+                "strikerPartId": {
+                  "type": "string",
+                  "description": "An existing moving member; its local striker point follows its actual rendered pose."
+                },
+                "strikerPoint": {
+                  "type": "array",
+                  "items": {
+                    "type": "number"
+                  },
+                  "minItems": 3,
+                  "maxItems": 3
+                },
+                "switchPoint": {
+                  "type": "array",
+                  "items": {
+                    "type": "number"
+                  },
+                  "minItems": 3,
+                  "maxItems": 3
+                },
+                "switchNormal": {
+                  "type": "array",
+                  "items": {
+                    "type": "number"
+                  },
+                  "minItems": 3,
+                  "maxItems": 3
+                },
+                "radius": {
+                  "type": "number",
+                  "exclusiveMinimum": 0,
+                  "maximum": 100000
+                },
+                "maxOvertravel": {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 100000
+                }
+              },
+              "required": [
+                "strikerPartId",
+                "strikerPoint",
+                "switchPoint",
+                "switchNormal",
+                "radius",
+                "maxOvertravel"
+              ],
+              "additionalProperties": false,
+              "description": "Required for configured press mechanisms with a switchPartId: local points in each part normalized coordinates (mm), local switch unit normal, lateral contact radius and allowed axial overtravel. Actual world contact closes the circuit; travel alone does not."
+            }
+          },
+          "required": [
+            "version",
+            "id",
+            "name",
+            "kind",
+            "status",
+            "partIds",
+            "movingPartIds",
+            "springPartIds",
+            "frame",
+            "axis",
+            "pose",
+            "params",
+            "movingProxy",
+            "fixedProxy"
+          ],
+          "additionalProperties": false,
+          "description": "Functional assembly using existing part IDs. Press params: mass, stiffness, damping, travel, freeLength, solidLength. A configured switch requires explicit striker/switch contact geometry; legacy trigger is optional and does not close the circuit. Member roles and proxy envelopes must be explicitly declared; incomplete definitions stay unverified."
+        }
+      },
+      "required": [
+        "expectedRevision",
+        "mechanism"
+      ],
+      "additionalProperties": false
+    },
+    "annotations": {
+      "readOnlyHint": false,
+      "destructiveHint": true,
+      "openWorldHint": false
+    }
+  },
+  {
+    "name": "delete_mechanism",
+    "description": "Remove a functional assembly definition while retaining its constituent parts.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "expectedRevision": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "mechanismId": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "expectedRevision",
+        "mechanismId"
+      ],
+      "additionalProperties": false
+    },
+    "annotations": {
+      "readOnlyHint": false,
+      "destructiveHint": true,
+      "openWorldHint": false
+    }
+  },
+  {
+    "name": "transform_mechanism",
+    "description": "Apply checked relative motion to the moving subgroup (distance mm / angle degrees), or an absolute rigid frame transform to the whole mechanism. Never moves individual members independently.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "expectedRevision": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "mechanismId": {
+          "type": "string"
+        },
+        "distance": {
+          "type": "number"
+        },
+        "angle": {
+          "type": "number"
+        },
+        "frame": {
+          "type": "object",
+          "properties": {
+            "position": {
+              "type": "array",
+              "items": {
+                "type": "number"
+              },
+              "minItems": 3,
+              "maxItems": 3
+            },
+            "rotation": {
+              "type": "array",
+              "items": {
+                "type": "number"
+              },
+              "minItems": 3,
+              "maxItems": 3
+            }
+          },
+          "required": [
+            "position",
+            "rotation"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "expectedRevision",
+        "mechanismId"
+      ],
+      "additionalProperties": false
+    },
+    "annotations": {
+      "readOnlyHint": false,
+      "destructiveHint": false,
+      "openWorldHint": false
+    }
+  },
+  {
+    "name": "press_mechanism",
+    "description": "Advance the actual workbench press mechanism simulation while held or released. Returns spring state, member poses, calibrated striker/switch contact and resulting circuit state. Electrical closure requires physical point contact; rest geometry is unchanged.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "expectedRevision": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "mechanismId": {
+          "type": "string"
+        },
+        "held": {
+          "type": "boolean"
+        },
+        "duration": {
+          "type": "number",
+          "minimum": 0.001,
+          "maximum": 5
+        }
+      },
+      "required": [
+        "expectedRevision",
+        "mechanismId",
+        "held",
+        "duration"
+      ],
+      "additionalProperties": false
+    },
+    "annotations": {
+      "readOnlyHint": false,
+      "destructiveHint": false,
+      "openWorldHint": false
+    }
+  }
+]

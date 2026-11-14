@@ -1,4 +1,13 @@
+import {
+  MAX_PROJECT_JSON_BYTES,
+  MAX_PROJECT_MODEL_BYTES,
+  validateUploadedModel,
+  validatePartMaterial,
+  validateInteractionProfile,
+  validComponentId,
+} from "./componentRegistry";
 import type { Part, PartKind, Project, Vec3 } from "./types";
+import { validateMechanismDefinition } from "./mechanisms";
 import {
   BAYONET_PIN_SIZE,
   BAYONET_SOCKET_SIZE,
@@ -211,7 +220,8 @@ export function bayonetDemoProject(): Project {
 }
 /** Validate untrusted JSON before it reaches the renderer, physics, or asset loader. */
 export function parseProject(text: string): Project {
-  if (text.length > 5_000_000) throw Error("项目文件不能超过 5 MB。");
+  if (text.length > MAX_PROJECT_JSON_BYTES)
+    throw Error("项目文件不能超过 96 MiB。");
   const raw: unknown = JSON.parse(text);
   const record = (value: unknown): value is Record<string, unknown> =>
     value !== null && typeof value === "object" && !Array.isArray(value);
@@ -250,6 +260,25 @@ export function parseProject(text: string): Project {
     throw Error(
       "不是有效的 v1 装配项目，或超出 500 个零件 / 2000 根导线限制。",
     );
+  const models =
+    raw.models === undefined
+      ? undefined
+      : (() => {
+          if (!Array.isArray(raw.models) || raw.models.length > 100)
+            throw Error("工程最多包含100个自定义模型。");
+          const ids = new Set<string>();
+          let bytes = 0;
+          return raw.models.map((value) => {
+            const model = validateUploadedModel(value);
+            if (ids.has(model.id)) throw Error("模型标识重复。");
+            ids.add(model.id);
+            bytes += model.bytes;
+            if (bytes > MAX_PROJECT_MODEL_BYTES)
+              throw Error("工程模型合计不能超过64 MiB。");
+            return model;
+          });
+        })();
+  const modelIds = new Set(models?.map((model) => model.id));
   const positive = new Set([
     "mass",
     "stiffness",
@@ -272,6 +301,7 @@ export function parseProject(text: string): Project {
   ]);
   const ids = new Set<string>();
   const electricalIds = new Set<string>();
+  const assemblyGroups = new Map<string, string>();
   const parts: Part[] = [];
   for (const value of raw.parts) {
     if (
@@ -321,7 +351,43 @@ export function parseProject(text: string): Project {
       }
       params[key] = val;
     }
-    if (value.kind === "asset" && typeof params.assetUrl !== "string")
+    let model: Part["model"];
+    if (value.model !== undefined) {
+      if (
+        !record(value.model) ||
+        !validComponentId(value.model.id) ||
+        !modelIds.has(value.model.id)
+      )
+        throw Error("自定义模型引用不存在。");
+      model = { id: value.model.id };
+    }
+    const interaction =
+      value.interaction === undefined
+        ? undefined
+        : validateInteractionProfile(value.interaction);
+    if ((model || (params.assetUrl && value.kind !== "asset")) && !interaction)
+      throw Error("具有功能类型的模型必须包含明确的交互定义（可标记待配置）。");
+    if (value.componentId !== undefined && !validComponentId(value.componentId))
+      throw Error("组件来源标识无效。");
+    let assemblyGroup: Part["assemblyGroup"];
+    if (value.assemblyGroup !== undefined) {
+      const group = value.assemblyGroup;
+      if (
+        !record(group) ||
+        !identifier(group.id) ||
+        !name(group.name) ||
+        !group.name.trim()
+      )
+        throw Error("装配分组须包含有效的唯一标识和名称。");
+      if (
+        assemblyGroups.has(group.id) &&
+        assemblyGroups.get(group.id) !== group.name
+      )
+        throw Error("同一装配分组标识不能对应不同名称。");
+      assemblyGroups.set(group.id, group.name);
+      assemblyGroup = { id: group.id, name: group.name };
+    }
+    if (value.kind === "asset" && !model && typeof params.assetUrl !== "string")
       throw Error("原始资产缺少客户端模型路径。");
     ids.add(value.id);
     if (
@@ -338,11 +404,43 @@ export function parseProject(text: string): Project {
       rotation: value.rotation,
       size: value.size,
       color: value.color,
+      ...(value.material !== undefined
+        ? { material: validatePartMaterial(value.material) }
+        : {}),
       fixed: value.fixed,
       visible: value.visible,
       params,
+      ...(model ? { model } : {}),
+      ...(interaction ? { interaction } : {}),
+      ...(assemblyGroup ? { assemblyGroup } : {}),
+      ...(value.componentId
+        ? { componentId: value.componentId as string }
+        : {}),
     });
   }
+  const mechanisms =
+    raw.mechanisms === undefined
+      ? undefined
+      : (() => {
+          if (!Array.isArray(raw.mechanisms) || raw.mechanisms.length > 100)
+            throw Error("工程最多包含 100 个功能组件。");
+          const mechanismIds = new Set<string>(),
+            memberIds = new Set<string>();
+          return raw.mechanisms.map((value) => {
+            const mechanism = validateMechanismDefinition(value, parts);
+            if (mechanismIds.has(mechanism.id))
+              throw Error("功能组件标识重复。");
+            mechanismIds.add(mechanism.id);
+            for (const id of mechanism.partIds) {
+              if (memberIds.has(id))
+                throw Error("同一子零件不能同时属于多个功能组件。");
+              memberIds.add(id);
+            }
+            if (mechanism.kind === "press" && mechanism.switchPartId)
+              electricalIds.add(mechanism.switchPartId);
+            return mechanism;
+          });
+        })();
   const wireIds = new Set<string>();
   const wires: Project["wires"] = [];
   for (const value of raw.wires) {
@@ -372,5 +470,12 @@ export function parseProject(text: string): Project {
       color: value.color,
     });
   }
-  return { version: 1, name: raw.name, parts, wires };
+  return {
+    version: 1,
+    name: raw.name,
+    parts,
+    wires,
+    ...(models ? { models } : {}),
+    ...(mechanisms ? { mechanisms } : {}),
+  };
 }

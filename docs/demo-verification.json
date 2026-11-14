@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-14T10:06:01.117Z",
+  "generatedAt": "2026-11-14T10:34:54.787Z",
   "command": "npx vite-node scripts/verify-demo.ts",
   "scope": "Default parameterized tenon / mortise / spring-button / DC lamp demo only. This does not validate the original pureTV controller geometry.",
   "overallPassed": true,
@@ -289,7 +289,7 @@
         "id": "fit-demo-mortise-demo-tenon",
         "severity": "pass",
         "title": "孔口对齐",
-        "detail": "03 · 方榫插接件 → 02 · 方孔榫卯座；最不利单侧余隙 0.100 mm，插入深度 0.00 mm；尺寸公差合计 ±0.20 mm",
+        "detail": "03 · 方榫插接件 → 02 · 方孔榫卯座；最不利单侧余隙 0.100 mm，插入深度 0.00 mm；要求单侧余隙 ≥0.000 mm；尺寸公差合计 ±0.20 mm",
         "partIds": [
           "demo-mortise",
           "demo-tenon"
@@ -388,7 +388,7 @@
         "id": "fit-demo-mortise-demo-tenon",
         "severity": "pass",
         "title": "插入配合",
-        "detail": "03 · 方榫插接件 → 02 · 方孔榫卯座；最不利单侧余隙 0.100 mm，插入深度 12.00 mm；尺寸公差合计 ±0.20 mm",
+        "detail": "03 · 方榫插接件 → 02 · 方孔榫卯座；最不利单侧余隙 0.100 mm，插入深度 12.00 mm；要求单侧余隙 ≥0.000 mm；尺寸公差合计 ±0.20 mm",
         "partIds": [
           "demo-mortise",
           "demo-tenon"

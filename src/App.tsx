@@ -12,8 +12,6 @@ import {
   Cable,
   Grid3X3,
   Scan,
-  Eye,
-  EyeOff,
   LockKeyhole,
   UnlockKeyhole,
   Copy,
@@ -35,7 +33,6 @@ import {
   X,
   SlidersHorizontal,
   Zap,
-  Lightbulb,
   CircleHelp,
   Maximize,
   FolderOpen,
@@ -47,6 +44,45 @@ import {
   CircleDot,
 } from "lucide-react";
 import Viewport from "./components/Viewport";
+import ComponentImportDialog from "./components/ComponentImportDialog";
+import ComponentInspector from "./components/ComponentInspector";
+import RepositoryBrowser from "./components/RepositoryBrowser";
+import AssemblyTree from "./components/AssemblyTree";
+import MechanismEditor from "./components/MechanismEditor";
+import MechanismControls from "./components/MechanismControls";
+import type { MechanismTransformRequest } from "./components/MechanismControls";
+import {
+  mechanismScene,
+  mechanismIssues,
+  validateMechanismProject,
+  stepMechanisms,
+  moveMechanism,
+  transformMechanismFrame,
+  partMechanism,
+  validateMechanismUpdate,
+} from "./mechanisms";
+import { createRepositoryParts } from "./repository";
+import {
+  componentTypeLabel,
+  componentPartIssues,
+  createPartFromComponent,
+  MAX_PROJECT_JSON_BYTES,
+} from "./componentRegistry";
+import {
+  loadSavedProject,
+  saveProject,
+  loadUserComponents,
+  saveUserComponents,
+} from "./storage";
+import { dispatchWorkbenchCommand } from "./mcp/workbench";
+import type { WorkbenchRequest } from "./mcp/workbench";
+import {
+  registerDesktopBridge,
+  getMcpStatus,
+  setMcpEnabled,
+  isDesktop,
+} from "./mcp/bridge";
+import type { McpStatus } from "./mcp/bridge";
 import {
   definitions,
   bayonetDemoProject,
@@ -54,16 +90,14 @@ import {
   newId,
   parseProject,
 } from "./catalog";
-import {
-  validateAssembly,
-  validateMotion,
-  solveCircuit,
-  stepSpring,
-} from "./engine/physics";
+import { validateMotion, solveCircuit, stepSpring } from "./engine/physics";
 import { Euler, Matrix4, Quaternion, Vector3 } from "three";
 import { BAYONET_POSES } from "./engine/bayonet";
 import type {
   AssetEntry,
+  AssetNode,
+  Mechanism,
+  ComponentDefinition,
   Category,
   Issue,
   Part,
@@ -83,28 +117,31 @@ function initialProject() {
   }
   return bayonetDemoProject();
 }
-function download(name: string, data: unknown) {
-  const url = URL.createObjectURL(
-    new Blob([JSON.stringify(data, null, 2)], { type: "application/json" }),
-  );
-  const a = document.createElement("a");
-  a.href = url;
-  a.download = name;
-  a.click();
-  setTimeout(() => URL.revokeObjectURL(url), 1000);
+async function download(name: string, data: unknown): Promise<boolean> {
+  try {
+    const content = JSON.stringify(data, null, 2);
+    if (isDesktop()) {
+      const { invoke } = await import("@tauri-apps/api/core");
+      return await invoke<boolean>("save_export", { filename: name, content });
+    }
+    const url = URL.createObjectURL(
+      new Blob([content], { type: "application/json" }),
+    );
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = name;
+    a.click();
+    setTimeout(() => URL.revokeObjectURL(url), 1000);
+    return true;
+  } catch (error) {
+    window.dispatchEvent(
+      new CustomEvent("workbench-notification", {
+        detail: `保存失败：${(error as Error).message}`,
+      }),
+    );
+    return false;
+  }
 }
-const kindIcon = (kind: PartKind) =>
-  kind === "battery"
-    ? Zap
-    : kind === "lamp"
-      ? Lightbulb
-      : kind === "button"
-        ? CircleDot
-        : kind === "spring"
-          ? RotateCcw
-          : kind === "asset"
-            ? Layers3
-            : Box;
 const n = (v: number) => Number(v.toFixed(3));
 function NumberField({
   value,
@@ -171,7 +208,31 @@ function MiniPart({ kind, color }: { kind: PartKind; color: string }) {
   );
 }
 export default function App() {
-  const [project, setProject] = useState<Project>(initialProject);
+  const [project, setProjectState] = useState<Project>(initialProject);
+  const projectRef = useRef(project);
+  const revisionRef = useRef(0);
+  const setProject = useCallback((next: Project) => {
+    projectRef.current = next;
+    revisionRef.current += 1;
+    setProjectState(next);
+  }, []);
+  const [userComponents, setUserComponents] = useState<ComponentDefinition[]>(
+    [],
+  );
+  const userComponentsRef = useRef(userComponents);
+  userComponentsRef.current = userComponents;
+  const [storageReady, setStorageReady] = useState(false);
+  const readyRef = useRef(false);
+  const [libraryReady, setLibraryReady] = useState(false);
+  const libraryReadyRef = useRef(false);
+  const [saveError, setSaveError] = useState("");
+  const [importOpen, setImportOpen] = useState(false);
+  const [editingComponent, setEditingComponent] = useState<
+    ComponentDefinition | undefined
+  >();
+  const [mcpOpen, setMcpOpen] = useState(false);
+  const [mcpStatus, setMcpStatus] = useState<McpStatus | null>(null);
+  const rendererErrors = useRef<string[]>([]);
   const [selectedId, setSelectedId] = useState<string | null>(
     () =>
       project.parts.find((p) => p.kind === "bayonet-pin" || p.kind === "tenon")
@@ -179,6 +240,27 @@ export default function App() {
       project.parts[0]?.id ??
       null,
   );
+  const [selectedMechanismId, setSelectedMechanismId] = useState<string | null>(
+    null,
+  );
+  const [mechanismEditorOpen, setMechanismEditorOpen] = useState(false);
+  const [editingMechanism, setEditingMechanism] = useState<
+    Mechanism | undefined
+  >();
+  const [mechanismStates, setMechanismStates] = useState<
+    Record<string, SpringState>
+  >({});
+  const mechanismSimulationRef = useRef<Record<string, SpringState>>({});
+  const [heldMechanismId, setHeldMechanismId] = useState<string | null>(null);
+  const heldMechanismRef = useRef<string | null>(null);
+  heldMechanismRef.current = heldMechanismId;
+  const selectedMechanism = project.mechanisms?.find(
+    (m) => m.id === selectedMechanismId,
+  );
+  const selectPart = useCallback((id: string | null) => {
+    setSelectedMechanismId(null);
+    setSelectedId(id);
+  }, []);
   const [undo, setUndo] = useState<Project[]>([]);
   const [redo, setRedo] = useState<Project[]>([]);
   const [tool, setTool] = useState<"select" | "move" | "rotate" | "wire">(
@@ -228,6 +310,9 @@ export default function App() {
     setSpringStates({});
     setElapsed(0);
     simulationRef.current = {};
+    mechanismSimulationRef.current = {};
+    setMechanismStates({});
+    setHeldMechanismId(null);
     simulationTimeRef.current = 0;
   }, []);
   useEffect(() => {
@@ -237,13 +322,84 @@ export default function App() {
     }
   }, [toast]);
   useEffect(() => {
-    try {
-      localStorage.setItem(STORAGE, JSON.stringify(project));
-    } catch {
-      notify("本地存储空间不足，请导出项目保存。");
-    }
+    let active = true;
+    if (!readyRef.current)
+      loadSavedProject()
+        .then((saved) => {
+          if (!active) return;
+          readyRef.current = true;
+          if (saved) {
+            setProject(saved);
+            setSelectedId(
+              saved.parts.find(
+                (p) => p.kind === "bayonet-pin" || p.kind === "tenon",
+              )?.id ??
+                saved.parts[0]?.id ??
+                null,
+            );
+          }
+          setStorageReady(true);
+          readyRef.current = true;
+        })
+        .catch((error) => {
+          if (active) {
+            readyRef.current = true;
+            setSaveError(error.message);
+            notify(error.message);
+          }
+        });
+    if (!libraryReadyRef.current)
+      loadUserComponents()
+        .then((list) => {
+          if (active) {
+            userComponentsRef.current = list;
+            setUserComponents(list);
+            setLibraryReady(true);
+            libraryReadyRef.current = true;
+          }
+        })
+        .catch((error) => {
+          if (active) notify(error.message);
+        });
+    return () => {
+      active = false;
+    };
+  }, [setProject, notify]);
+  useEffect(() => {
+    if (!storageReady) return;
+    const timer = setTimeout(() => {
+      saveProject(project)
+        .then(() => setSaveError(""))
+        .catch((error) => {
+          setSaveError(error.message);
+          notify(error.message);
+        });
+    }, 100);
+    return () => clearTimeout(timer);
+  }, [project, storageReady, notify]);
+  useEffect(() => {
     setReport(null);
-  }, [project, notify]);
+  }, [project]);
+  useEffect(() => {
+    if (!libraryReady) return;
+    saveUserComponents(userComponents).catch((error) => notify(error.message));
+  }, [userComponents, libraryReady, notify]);
+  useEffect(() => {
+    const notification = (event: Event) =>
+      notify((event as CustomEvent<string>).detail);
+    const error = (event: ErrorEvent) => {
+      rendererErrors.current = [
+        ...rendererErrors.current.slice(-9),
+        event.message,
+      ];
+    };
+    window.addEventListener("workbench-notification", notification);
+    window.addEventListener("error", error);
+    return () => {
+      window.removeEventListener("workbench-notification", notification);
+      window.removeEventListener("error", error);
+    };
+  }, [notify]);
   useEffect(() => {
     let cancelled = false;
     fetch("./models/catalog.json")
@@ -265,13 +421,222 @@ export default function App() {
   }, []);
   const commit = useCallback(
     (next: Project) => {
-      setUndo((prev) => [...prev.slice(-59), project]);
+      if (!readyRef.current) {
+        notify("本地工程正在恢复，请稍后操作。");
+        return;
+      }
+      if (next.parts.length > 500 || next.wires.length > 2000) {
+        notify("单个工程最多500个零件和2000根导线，请拆成多个工程。");
+        return;
+      }
+      setUndo((prev) => [...prev.slice(-59), projectRef.current]);
       setRedo([]);
       setProject(next);
       resetSimulation();
     },
-    [project, resetSimulation],
+    [resetSimulation, setProject, notify],
   );
+  const assetsRef = useRef(assets);
+  assetsRef.current = assets;
+  const assetHealth = useRef<Promise<string> | null>(null);
+  const handlerRef = useRef<(request: WorkbenchRequest) => Promise<unknown>>(
+    async () => {
+      throw Error("工作台正在初始化");
+    },
+  );
+  handlerRef.current = async (request) => {
+    if (!readyRef.current && request.method !== "get_runtime_status")
+      throw Error("工作台尚未恢复完成，请稍后重试。");
+    const originalRevision = revisionRef.current;
+    const canvas = document.querySelector<HTMLCanvasElement>("canvas");
+    if (
+      request.method === "get_runtime_status" &&
+      !assetHealth.current &&
+      assetsRef.current[0]
+    )
+      assetHealth.current = fetch(assetsRef.current[0].url)
+        .then((r) => {
+          if (!r.ok) throw Error("素材加载失败");
+          return r.arrayBuffer();
+        })
+        .then((b) => new TextDecoder().decode(b.slice(0, 4)))
+        .catch(() => "");
+    const modelMagic =
+      request.method === "get_runtime_status"
+        ? await (assetHealth.current ?? Promise.resolve(""))
+        : undefined;
+    const runtime = {
+      ready: readyRef.current && libraryReadyRef.current,
+      modelMagic,
+      glbAssetAvailable: modelMagic === "glTF",
+      isolated: !("require" in window) && !("process" in window),
+      webgl: Boolean(canvas?.getContext("webgl2")),
+      canvasSize: [canvas?.width ?? 0, canvas?.height ?? 0],
+      catalogCount: assetsRef.current.length,
+      documentTitle: document.title,
+      rendererErrors: rendererErrors.current,
+      desktop: isDesktop(),
+      mechanismStates: mechanismSimulationRef.current,
+      mechanismContacts: mechanismScene(
+        projectRef.current,
+        mechanismSimulationRef.current,
+      ).contacts,
+      renderedPositions: JSON.parse(
+        document
+          .querySelector('[data-testid="viewport"]')
+          ?.getAttribute("data-rendered-positions") ?? "{}",
+      ),
+      loadedAssetCount: Number(
+        document
+          .querySelector('[data-testid="viewport"]')
+          ?.getAttribute("data-loaded-assets") ?? 0,
+      ),
+      deformedPartCount: Number(
+        document
+          .querySelector('[data-testid="viewport"]')
+          ?.getAttribute("data-deformed-parts") ?? 0,
+      ),
+    };
+    const outcome = await dispatchWorkbenchCommand(
+      projectRef.current,
+      request,
+      {
+        revision: originalRevision,
+        components: userComponentsRef.current,
+        assets: assetsRef.current,
+        runtime,
+        mechanismStates: mechanismSimulationRef.current,
+      },
+    );
+    if (
+      (outcome.project || outcome.component || outcome.mechanismStates) &&
+      revisionRef.current !== originalRevision
+    )
+      throw Error(
+        `项目已变化：当前revision=${revisionRef.current}，请重新获取后重试。`,
+      );
+    if (outcome.project) {
+      const before = projectRef.current;
+      setUndo((prev) => [...prev.slice(-59), before]);
+      setRedo([]);
+      setProject(outcome.project);
+      resetSimulation();
+    }
+    if (outcome.component) {
+      if (!libraryReadyRef.current) throw Error("组件库未成功恢复，无法导入。");
+      const list = [...userComponentsRef.current, outcome.component];
+      userComponentsRef.current = list;
+      setUserComponents(list);
+      revisionRef.current += 1;
+    }
+    if (outcome.mechanismStates) {
+      mechanismSimulationRef.current = outcome.mechanismStates;
+      setMechanismStates(outcome.mechanismStates);
+      if (outcome.actuation) {
+        setSelectedMechanismId(outcome.actuation.mechanismId);
+        setHeldMechanismId(
+          outcome.actuation.held ? outcome.actuation.mechanismId : null,
+        );
+      }
+      if (
+        request.method === "press_mechanism" &&
+        typeof request.args?.duration === "number"
+      ) {
+        simulationTimeRef.current += request.args.duration;
+        setElapsed(simulationTimeRef.current);
+      }
+      setRunning(true);
+      setExploded(false);
+      revisionRef.current += 1;
+    }
+    if (outcome.project || outcome.component || outcome.mechanismStates)
+      notify(`MCP 已执行 ${request.method}`);
+    return outcome.result;
+  };
+  useEffect(() => {
+    let closed = false;
+    let unlisten: (() => void) | undefined;
+    registerDesktopBridge((request) => handlerRef.current(request))
+      .then((stop) => {
+        if (closed) stop();
+        else unlisten = stop;
+      })
+      .catch((error) => notify(`MCP 连接失败：${error.message}`));
+    return () => {
+      closed = true;
+      unlisten?.();
+    };
+  }, [notify]);
+  async function openMcp() {
+    setMcpOpen(true);
+    try {
+      setMcpStatus(await getMcpStatus());
+    } catch (error) {
+      notify((error as Error).message);
+    }
+  }
+  function addCustomComponent(def: ComponentDefinition) {
+    const edge = Math.max(
+      0,
+      ...projectRef.current.parts.map((p) => p.position[0] + p.size[0] / 2),
+    );
+    const part = createPartFromComponent(def, [
+      edge + def.size[0] / 2 + 8,
+      def.size[1] / 2,
+      0,
+    ]);
+    const existing = projectRef.current.models?.find(
+      (m) => m.id === def.model.id,
+    );
+    if (existing && existing.sha256 !== def.model.sha256) {
+      notify("模型ID冲突，请重新导入该组件。");
+      return;
+    }
+    const next = {
+      ...projectRef.current,
+      parts: [...projectRef.current.parts, part],
+      models: existing
+        ? projectRef.current.models
+        : [...(projectRef.current.models ?? []), def.model],
+    };
+    try {
+      commit(parseProject(JSON.stringify(next)));
+      setSelectedId(part.id);
+      setResetKey((k) => k + 1);
+    } catch (error) {
+      notify((error as Error).message);
+    }
+  }
+  async function saveCustomComponent(def: ComponentDefinition) {
+    if (!libraryReady) {
+      notify("组件库未成功恢复，暂不能覆盖保存；请先检查本地存储。");
+      return;
+    }
+    const snapshot = userComponentsRef.current;
+    const list = [...snapshot.filter((c) => c.id !== def.id), def];
+    try {
+      await saveUserComponents(list);
+      if (userComponentsRef.current !== snapshot) {
+        await saveUserComponents(userComponentsRef.current);
+        notify("组件库刚刚被其他操作更新，请再次保存当前定义。");
+        return;
+      }
+      userComponentsRef.current = list;
+      setUserComponents(list);
+      revisionRef.current += 1;
+      setImportOpen(false);
+      setCategory("custom");
+      setEditingComponent(undefined);
+      if (!editingComponent) addCustomComponent(def);
+      notify(
+        def.interaction.status === "configured"
+          ? "组件类型和交互参数已保存。"
+          : "组件已保存为预览，请补齐交互参数后验证。",
+      );
+    } catch (error) {
+      notify((error as Error).message);
+    }
+  }
   const undoAction = useCallback(() => {
     if (!undo.length) return;
     setRedo((p) => [...p, project]);
@@ -286,12 +651,16 @@ export default function App() {
     setRedo((p) => p.slice(0, -1));
     resetSimulation();
   }, [redo, project, resetSimulation]);
-  const exportProject = useCallback(() => {
-    download(`${project.name}.mechanical.json`, project);
-    notify("项目已导出，包含全部装配位置、物理参数与导线。");
+  const exportProject = useCallback(async () => {
+    if (await download(`${project.name}.mechanical.json`, project))
+      notify("项目已导出，包含模型、类型、交互参数与导线。");
   }, [project, notify]);
   const removeSelected = useCallback(() => {
     if (!selected) return;
+    if (partMechanism(project, selected.id)) {
+      notify("请先编辑功能组件移除该成员，或解除组件，再删除零件。");
+      return;
+    }
     commit({
       ...project,
       parts: project.parts.filter((p) => p.id !== selected.id),
@@ -303,6 +672,7 @@ export default function App() {
   }, [selected, project, commit]);
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
+      if (!readyRef.current) return;
       const target = e.target as HTMLElement;
       if (["INPUT", "SELECT", "TEXTAREA"].includes(target.tagName)) return;
       if ((e.ctrlKey || e.metaKey) && e.key === "s") {
@@ -325,7 +695,10 @@ export default function App() {
     return () => window.removeEventListener("keydown", onKey);
   }, [exportProject, undoAction, redoAction, removeSelected]);
   useEffect(() => {
-    const release = () => setHeldId(null);
+    const release = () => {
+      setHeldId(null);
+      setHeldMechanismId(null);
+    };
     window.addEventListener("pointerup", release);
     window.addEventListener("blur", release);
     return () => {
@@ -340,13 +713,17 @@ export default function App() {
       lastPaint = 0;
     const states: Record<string, SpringState> = { ...simulationRef.current };
     project.parts
-      .filter((p) => p.kind === "spring" || p.kind === "button")
+      .filter(
+        (p) =>
+          (p.kind === "spring" || p.kind === "button") &&
+          !partMechanism(project, p.id),
+      )
       .forEach((p) => {
         states[p.id] ??= { displacement: 0, velocity: 0, force: 0 };
       });
     let time = simulationTimeRef.current;
     const tick = (now: number) => {
-      const dt = Math.min((now - previous) / 1000, 0.04);
+      const dt = Math.max(0.000001, Math.min((now - previous) / 1000, 0.04));
       previous = now;
       time += dt;
       for (const p of project.parts) {
@@ -364,10 +741,28 @@ export default function App() {
               : 0,
         });
       }
+      const stepped = stepMechanisms(
+        project,
+        mechanismSimulationRef.current,
+        dt,
+        heldMechanismRef.current ? [heldMechanismRef.current] : [],
+      );
+      mechanismSimulationRef.current = stepped.states;
+      if (stepped.issues.some((issue) => issue.severity === "error")) {
+        setRunning(false);
+        setHeldMechanismId(null);
+        notify(
+          stepped.issues.find((issue) => issue.severity === "error")!.detail,
+        );
+        setMechanismStates({ ...stepped.states });
+        return;
+      }
       simulationRef.current = states;
       simulationTimeRef.current = time;
       if (now - lastPaint > 30) {
         setSpringStates({ ...states });
+        if (project.mechanisms?.length)
+          setMechanismStates({ ...mechanismSimulationRef.current });
         setElapsed(time);
         lastPaint = now;
       }
@@ -378,9 +773,19 @@ export default function App() {
   }, [running, project]);
   const heldRef = useRef(heldId);
   heldRef.current = heldId;
+  const functionalScene = useMemo(
+    () => mechanismScene(project, mechanismStates),
+    [project, mechanismStates],
+  );
+  const contactOwner =
+    selectedMechanism ??
+    (selected ? partMechanism(project, selected.id) : undefined);
+  const selectedContact = contactOwner
+    ? functionalScene.contacts[contactOwner.id]
+    : undefined;
   const renderedParts = useMemo(
     () =>
-      project.parts.map((p) =>
+      functionalScene.renderParts.map((p) =>
         springStates[p.id]
           ? {
               ...p,
@@ -391,27 +796,32 @@ export default function App() {
             }
           : p,
       ),
-    [project.parts, springStates],
+    [functionalScene.renderParts, springStates],
   );
   const pressedIds = useMemo(
-    () =>
-      renderedParts
-        .filter(
-          (p) =>
-            p.kind === "button" &&
-            Number(p.params.compression ?? 0) >=
-              Number(p.params.trigger ?? 0.6),
-        )
-        .map((p) => p.id),
-    [renderedParts],
+    () => [
+      ...new Set([
+        ...functionalScene.pressedIds,
+        ...renderedParts
+          .filter(
+            (p) =>
+              p.kind === "button" &&
+              !partMechanism(project, p.id) &&
+              Number(p.params.compression ?? 0) >=
+                Number(p.params.trigger ?? 0.6),
+          )
+          .map((p) => p.id),
+      ]),
+    ],
+    [renderedParts, functionalScene.pressedIds, project],
   );
   const validation = useMemo(
-    () => validateAssembly(project.parts),
-    [project.parts],
+    () => validateMechanismProject(project, mechanismStates),
+    [project, mechanismStates],
   );
   const circuit = useMemo(
-    () => solveCircuit(project.parts, project.wires, pressedIds),
-    [project.parts, project.wires, pressedIds],
+    () => solveCircuit(functionalScene.circuitParts, project.wires, pressedIds),
+    [functionalScene.circuitParts, project.wires, pressedIds],
   );
   const liveIssues = useMemo(
     () => [
@@ -438,6 +848,18 @@ export default function App() {
   const warnings = issues.filter((i) => i.severity === "warning").length;
   const collisionIds = validation.collisionPairs.flat();
   function updatePart(next: Part) {
+    if (
+      !["battery", "button", "lamp", "resistor"].includes(next.kind) &&
+      !project.mechanisms?.some(
+        (m) => m.kind === "press" && m.switchPartId === next.id,
+      ) &&
+      project.wires.some(
+        (w) => w.from.partId === next.id || w.to.partId === next.id,
+      )
+    ) {
+      notify("请先移除该零件的电气连线，再改为非电气类型。");
+      return;
+    }
     commit({
       ...project,
       parts: project.parts.map((p) => (p.id === next.id ? next : p)),
@@ -446,6 +868,12 @@ export default function App() {
   function transform(id: string, position: Vec3, rotation: Vec3) {
     const part = project.parts.find((p) => p.id === id);
     if (!part) return;
+    const owner = partMechanism(project, id);
+    if (owner) {
+      setSelectedMechanismId(owner.id);
+      notify("请使用功能组件的整体定位或活动组控制，成员相对关系会一起保持。");
+      return;
+    }
     if (exploded) {
       notify("请先退出爆炸视图，再进行装配操作。");
       return;
@@ -455,7 +883,11 @@ export default function App() {
       position: position.map(n) as Vec3,
       rotation: rotation.map(n) as Vec3,
     };
-    const check = validateMotion(project.parts, id, next);
+    const check = validateMotion(
+      mechanismScene(project).physicsParts,
+      id,
+      next,
+    );
     if (!check.allowed) {
       notify(
         check.issues.find((i) => i.severity === "error")?.detail ??
@@ -492,26 +924,33 @@ export default function App() {
     setSelectedId(part.id);
     notify(`已添加${part.name}，可通过右侧面板精确定位。`);
   }
-  function addAsset(asset: AssetEntry) {
+  function addRepositoryNodes(asset: AssetEntry, nodes: AssetNode[]) {
+    if (!nodes.length) return;
+    const current = projectRef.current;
     const edge = Math.max(
       0,
-      ...project.parts.map((p) => p.position[0] + p.size[0] / 2),
+      ...current.parts.map((p) => p.position[0] + p.size[0] / 2),
     );
-    const part: Part = {
-      id: newId(),
-      name: asset.name,
-      kind: "asset",
-      position: [edge + asset.size[0] / 2 + 8, asset.size[1] / 2, 0],
-      rotation: [0, 0, 0],
-      size: asset.size,
-      color: "#92a9b6",
-      fixed: false,
-      visible: true,
-      params: { assetUrl: asset.url },
-    };
-    commit({ ...project, parts: [...project.parts, part] });
-    setSelectedId(part.id);
-    notify("已载入原始素材显示副本。复杂网格需进一步进行实体几何验证。");
+    const minimum = [0, 1, 2].map((axis) =>
+      Math.min(...nodes.map((node) => node.center[axis] - node.size[axis] / 2)),
+    ) as Vec3;
+    const maximum = [0, 1, 2].map((axis) =>
+      Math.max(...nodes.map((node) => node.center[axis] + node.size[axis] / 2)),
+    ) as Vec3;
+    const offset: Vec3 = [
+      edge + 8 - minimum[0],
+      -minimum[1],
+      -(minimum[2] + maximum[2]) / 2,
+    ];
+    const parts = createRepositoryParts(asset, nodes, offset);
+    commit({ ...current, parts: [...current.parts, ...parts] });
+    setSelectedId(parts[0].id);
+    setResetKey((key) => key + 1);
+    notify(
+      parts.length > 1
+        ? `已添加 ${parts.length} 个独立子零件，保留组内相对位置。`
+        : `已添加独立零件：${parts[0].name}`,
+    );
   }
   function loadBayonetDemo() {
     const p = bayonetDemoProject();
@@ -528,9 +967,10 @@ export default function App() {
   function bayonetAction(
     action: "entry" | "insert" | "lock" | "unlock" | "withdraw",
   ) {
-    if (!selected || selected.kind !== "bayonet-pin") return;
+    if (!selected || selected.kind !== "bayonet-pin" || selected.interaction)
+      return;
     const sockets = project.parts
-      .filter((p) => p.kind === "bayonet-socket")
+      .filter((p) => p.kind === "bayonet-socket" && !p.interaction)
       .sort(
         (a, b) =>
           new Vector3(...a.position).distanceToSquared(
@@ -589,13 +1029,19 @@ export default function App() {
       setSelectedId(p.parts[0]?.id ?? null);
       setLeftTab("assembly");
       setResetKey((k) => k + 1);
-      notify("已按原始坐标恢复手柄装配。可使用爆炸视图或选择总成后拆分。");
+      notify(
+        "已按原始坐标载入全部独立子零件；公母配合件按关系分组，可分别选择与编辑。",
+      );
     } catch (err) {
       notify((err as Error).message);
     }
   }
   function splitAsset() {
     if (!selected) return;
+    if (partMechanism(project, selected.id)) {
+      notify("请先解除该功能组件，再拆分其成员。");
+      return;
+    }
     const asset = assets.find((a) => a.url === selected.params.assetUrl);
     if (!asset?.nodes?.length) {
       notify("此素材尚无分件目录。");
@@ -611,18 +1057,33 @@ export default function App() {
       ),
       new Vector3(...scale),
     );
-    const parts: Part[] = asset.nodes.map((node) => {
+    const sourceParts = createRepositoryParts(asset, asset.nodes);
+    const parts: Part[] = sourceParts.map((part, index) => {
+      const node = asset.nodes![index];
       const position = new Vector3(...node.center)
         .sub(new Vector3(...asset.center))
         .applyMatrix4(matrix)
         .toArray() as Vec3;
       return {
-        ...selected,
-        id: newId(),
-        name: node.name,
+        ...part,
         position,
+        rotation: [...selected.rotation],
         size: node.size.map((v, i) => Math.max(v * scale[i], 0.001)) as Vec3,
-        params: { assetUrl: asset.url, assetNode: node.name },
+        visible: selected.visible,
+        fixed: selected.fixed,
+        ...(selected.material
+          ? { material: { ...selected.material }, color: selected.color }
+          : {}),
+        ...(part.interaction
+          ? {
+              interaction: {
+                ...part.interaction,
+                proxySize: part.interaction.proxySize.map(
+                  (v, i) => v * scale[i],
+                ) as Vec3,
+              },
+            }
+          : {}),
       };
     });
     commit({
@@ -676,6 +1137,81 @@ export default function App() {
     }
     updatePart({ ...selected, params });
   }
+  function composeMechanism(initial?: Mechanism) {
+    if (!initial && project.parts.length < 2) {
+      notify("先添加至少两个子零件，再组合成功能组件。");
+      return;
+    }
+    setEditingMechanism(initial);
+    setMechanismEditorOpen(true);
+  }
+  function saveMechanism(mechanism: Mechanism) {
+    const current = projectRef.current;
+    mechanism = validateMechanismUpdate(current, mechanism);
+    const next = parseProject(
+      JSON.stringify({
+        ...current,
+        mechanisms: [
+          ...(current.mechanisms ?? []).filter((m) => m.id !== mechanism.id),
+          mechanism,
+        ],
+      }),
+    );
+    commit(next);
+    setSelectedMechanismId(mechanism.id);
+    setSelectedId(null);
+    setLeftTab("assembly");
+    setMechanismEditorOpen(false);
+    setEditingMechanism(undefined);
+    notify(
+      mechanism.status === "configured"
+        ? "功能组件已创建，可按压或使用轴向配合控制。"
+        : "功能组件已保存为预览，请补齐参数后仿真。",
+    );
+  }
+  function detachMechanism(id: string) {
+    const member = project.mechanisms?.find((m) => m.id === id)?.switchPartId;
+    if (
+      member &&
+      project.wires.some(
+        (w) => w.from.partId === member || w.to.partId === member,
+      ) &&
+      !["button", "battery", "lamp", "resistor"].includes(
+        project.parts.find((p) => p.id === member)!.kind,
+      )
+    ) {
+      notify("先移除该组件开关的导线，再解除功能绑定。");
+      return;
+    }
+    commit({
+      ...project,
+      mechanisms: (project.mechanisms ?? []).filter((m) => m.id !== id),
+    });
+    setSelectedMechanismId(null);
+    notify("已解除功能组件，原子零件和外观仍保留。");
+  }
+  function transformCompound(request: MechanismTransformRequest) {
+    if (exploded) {
+      notify("请先退出爆炸视图。");
+      return;
+    }
+    const current = projectRef.current;
+    const result =
+      request.kind === "frame"
+        ? transformMechanismFrame(current, request.mechanismId, request.frame)
+        : moveMechanism(current, request.mechanismId, {
+            distance: request.distance,
+            angle: request.angle,
+          });
+    if (!result.allowed) {
+      const message =
+        result.issues.find((i) => i.severity === "error")?.detail ??
+        "组件动作被拒绝。";
+      notify(message);
+      throw Error(message);
+    }
+    commit(result.project);
+  }
   function addWire() {
     if (!wireFrom || !wireTo) {
       notify("请先选择导线的两个接线端子。");
@@ -727,8 +1263,12 @@ export default function App() {
   }
   function verify() {
     const all = [...liveIssues];
+    const triggeredSwitches = new Set<string>();
     for (const p of project.parts.filter(
-      (p) => p.kind === "spring" || p.kind === "button",
+      (p) =>
+        (p.kind === "spring" || p.kind === "button") &&
+        !partMechanism(project, p.id) &&
+        !componentPartIssues(p).some((i) => i.severity === "error"),
     )) {
       let state = { displacement: 0, velocity: 0, force: 0 };
       let peak = 0;
@@ -750,6 +1290,7 @@ export default function App() {
         Math.abs(state.displacement) < 0.01 &&
         Math.abs(state.velocity) < 0.01 &&
         (p.kind !== "button" || peak >= Number(p.params.trigger ?? 0.6));
+      if (p.kind === "button" && passed) triggeredSwitches.add(p.id);
       all.push({
         id: `cycle-${p.id}`,
         category: "physics",
@@ -759,11 +1300,71 @@ export default function App() {
         partIds: [p.id],
       });
     }
-    const switches = project.parts
-      .filter((p) => p.kind === "button")
-      .map((p) => p.id);
+    for (const mechanism of project.mechanisms ?? []) {
+      if (
+        mechanism.kind !== "press" ||
+        mechanism.status !== "configured" ||
+        mechanismIssues(project).some(
+          (i) =>
+            i.severity === "error" &&
+            i.partIds.some((id) => mechanism.partIds.includes(id)),
+        )
+      )
+        continue;
+      let states: Record<string, SpringState> = {};
+      let peak = 0;
+      let didTrigger = !mechanism.switchPartId;
+      let blocked = false;
+      for (let i = 0; i < 600; i++) {
+        const trial = stepMechanisms(
+          project,
+          states,
+          1 / 120,
+          i < 120 ? [mechanism.id] : [],
+        );
+        states = trial.states;
+        if (
+          mechanism.switchPartId &&
+          mechanismScene(project, states).pressedIds.includes(
+            mechanism.switchPartId,
+          )
+        )
+          didTrigger = true;
+        peak = Math.max(peak, states[mechanism.id]?.displacement ?? 0);
+        if (trial.issues.some((i) => i.severity === "error")) {
+          blocked = true;
+          break;
+        }
+      }
+      const final = states[mechanism.id] ?? {
+        displacement: 0,
+        velocity: 0,
+        force: 0,
+      };
+      const passed =
+        !blocked &&
+        peak > 0 &&
+        didTrigger &&
+        Math.abs(final.displacement) < 0.01 &&
+        Math.abs(final.velocity) < 0.01;
+      if (passed && mechanism.switchPartId)
+        triggeredSwitches.add(mechanism.switchPartId);
+      all.push({
+        id: `mechanism-cycle-${mechanism.id}`,
+        category: "physics",
+        severity: passed ? "pass" : "error",
+        title: `${mechanism.name} · 组件按压与回弹`,
+        detail: `活动子件随声明轴运动；最大压缩 ${peak.toFixed(3)} mm，释放后残余 ${final.displacement.toFixed(4)} mm。${mechanism.switchPartId ? (didTrigger ? "撞针已触及目标并触发开关。" : "撞针未到达有效触发点。") : ""}${blocked ? "行程中发生代理干涉。" : "仍需实物校正刚度、阻尼及接触。"}`,
+        partIds: mechanism.partIds,
+      });
+    }
+    const switches = [...triggeredSwitches];
     if (switches.length) {
-      const closed = solveCircuit(project.parts, project.wires, switches);
+      const closed = solveCircuit(
+        functionalScene.circuitParts,
+        project.wires,
+        switches,
+      );
       all.push(
         ...closed.issues
           .filter((i) => i.severity === "error")
@@ -794,7 +1395,7 @@ export default function App() {
     setNav("仿真验证");
     notify("验证完成，查看下方逐项结果；报告包含模型精度限制。");
   }
-  const electrical = project.parts.filter((p) =>
+  const electrical = functionalScene.circuitParts.filter((p) =>
     ["battery", "button", "lamp", "resistor"].includes(p.kind),
   );
   const terminalLabel = (p: Part, t: number) =>
@@ -839,6 +1440,14 @@ export default function App() {
           ))}
         </nav>
         <div className="top-actions">
+          <button
+            className="mcp-header-button"
+            onClick={() => void openMcp()}
+            title="MCP 接入配置"
+          >
+            <Link2 size={15} />
+            MCP
+          </button>
           <button
             className="icon-button"
             title="操作说明"
@@ -919,7 +1528,8 @@ export default function App() {
           const file = e.target.files?.[0];
           if (!file) return;
           try {
-            if (file.size > 5e6) throw Error("项目文件不能超过 5 MB。");
+            if (file.size > MAX_PROJECT_JSON_BYTES)
+              throw Error("含模型项目文件不能超过 96 MiB。");
             const p = parseProject(await file.text());
             commit(p);
             setSelectedId(p.parts[0]?.id ?? null);
@@ -948,8 +1558,25 @@ export default function App() {
               装配树 <small>{project.parts.length}</small>
             </button>
           </div>
+          <button
+            className="compose-mechanism-button"
+            onClick={() => composeMechanism()}
+          >
+            <Link2 size={14} />
+            组成功能组件<small>按压 / 榫卯</small>
+          </button>
           {leftTab === "library" ? (
             <>
+              <button
+                className="upload-component-button"
+                onClick={() => {
+                  setEditingComponent(undefined);
+                  setImportOpen(true);
+                }}
+              >
+                <Upload size={15} />
+                上传自定义组件<small>GLB / STL</small>
+              </button>
               <div className="library-search">
                 <Search size={15} />
                 <input
@@ -966,6 +1593,7 @@ export default function App() {
                     ["mechanical", "机械"],
                     ["electrical", "电气"],
                     ["repository", "原始素材"],
+                    ["custom", "我的组件"],
                   ] as [Category, string][]
                 ).map(([id, label]) => (
                   <button
@@ -982,15 +1610,19 @@ export default function App() {
                   <span>
                     {category === "repository"
                       ? "PURETV 手柄素材"
-                      : "参数化标准件"}
+                      : category === "custom"
+                        ? "我的组件与功能定义"
+                        : "参数化标准件"}
                   </span>
                   <span>
                     {category === "repository"
                       ? assets.length
-                      : filtered.length}
+                      : category === "custom"
+                        ? userComponents.length
+                        : filtered.length}
                   </span>
                 </div>
-                {category !== "repository" && (
+                {category !== "repository" && category !== "custom" && (
                   <button
                     className="bayonet-demo-button"
                     onClick={loadBayonetDemo}
@@ -1004,6 +1636,7 @@ export default function App() {
                 )}
                 <div className="parts-grid">
                   {category !== "repository" &&
+                    category !== "custom" &&
                     filtered.map((d) => (
                       <button
                         key={d.kind}
@@ -1018,55 +1651,95 @@ export default function App() {
                           </span>
                         </div>
                         <strong>{d.name}</strong>
+                        <em className="component-kind-label">
+                          {componentTypeLabel(d.kind)}
+                        </em>
                         <span>{d.subtitle}</span>
                       </button>
                     ))}
                 </div>
-                {category === "repository" && (
-                  <>
-                    <button
-                      className="original-assembly-button"
-                      onClick={loadOriginal}
-                    >
-                      <Layers3 size={15} />
-                      <span>
-                        打开原手柄装配<small>保留各总成的原始装配坐标</small>
-                      </span>
-                      <ChevronRight size={14} />
-                    </button>
-                    <p className="library-note">
-                      来自仓库的 Blender
-                      分件素材。保留原始文件，使用轻量副本浏览装配。
-                    </p>
-                    {assetError && <p className="hint amber">{assetError}</p>}
-                    {assets
-                      .filter((a) =>
-                        a.name.toLowerCase().includes(search.toLowerCase()),
-                      )
-                      .map((a) => (
-                        <button
-                          className="asset-card"
-                          key={a.id}
-                          onClick={() => addAsset(a)}
-                        >
-                          <div>
-                            <Layers3 size={23} />
-                          </div>
-                          <span>
-                            <strong>{a.name}</strong>
-                            <small>
-                              {a.objects} 个对象 ·{" "}
-                              {a.size.map((v) => v.toFixed(1)).join(" × ")} mm
-                            </small>
-                          </span>
-                          <Plus size={15} />
+                {category === "custom" && (
+                  <div className="custom-library">
+                    {userComponents.length === 0 ? (
+                      <div className="empty-custom">
+                        <Upload size={28} />
+                        <strong>定义你的第一个组件</strong>
+                        <p>
+                          上传模型、选择功能类型，并提供该类型要求的交互参数。
+                        </p>
+                        <button onClick={() => setImportOpen(true)}>
+                          上传 GLB / STL
                         </button>
-                      ))}
-                    <p className="attribution">
-                      部分手柄造型改编自 Taohid Animation 的 PS5 Controller · CC
-                      BY 4.0。详见素材说明。
-                    </p>
-                  </>
+                      </div>
+                    ) : (
+                      userComponents
+                        .filter((c) => c.name.includes(search))
+                        .map((c) => (
+                          <div className="custom-component-card" key={c.id}>
+                            <button
+                              className="custom-component-add"
+                              onClick={() => addCustomComponent(c)}
+                            >
+                              <Box size={22} />
+                              <span>
+                                <strong>{c.name}</strong>
+                                <small>{componentTypeLabel(c.kind)}</small>
+                                <em
+                                  className={
+                                    c.interaction.status === "configured"
+                                      ? "configured"
+                                      : "unconfigured"
+                                  }
+                                >
+                                  {c.interaction.status === "configured"
+                                    ? "代理参数已配置"
+                                    : "仅预览 · 参数待补全"}
+                                </em>
+                              </span>
+                              <Plus size={15} />
+                            </button>
+                            <div className="custom-card-footer">
+                              <small>
+                                {c.model.format.toUpperCase()} ·{" "}
+                                {(c.model.bytes / 1024).toFixed(0)} KB
+                              </small>
+                              <button
+                                title="编辑组件定义"
+                                onClick={() => {
+                                  setEditingComponent(c);
+                                  setImportOpen(true);
+                                }}
+                              >
+                                <Settings2 size={13} />
+                                编辑定义
+                              </button>
+                              <button
+                                title="移除库中组件"
+                                onClick={() => {
+                                  const list = userComponentsRef.current.filter(
+                                    (x) => x.id !== c.id,
+                                  );
+                                  userComponentsRef.current = list;
+                                  setUserComponents(list);
+                                  revisionRef.current += 1;
+                                }}
+                              >
+                                <Trash2 size={13} />
+                              </button>
+                            </div>
+                          </div>
+                        ))
+                    )}
+                  </div>
+                )}
+                {category === "repository" && (
+                  <RepositoryBrowser
+                    assets={assets}
+                    search={search}
+                    onAdd={addRepositoryNodes}
+                    onLoadOriginal={loadOriginal}
+                    error={assetError}
+                  />
                 )}
               </div>
               <div className="library-footer">
@@ -1083,43 +1756,23 @@ export default function App() {
                 <Layers3 size={15} />
                 <strong>{project.name}</strong>
               </div>
-              <div className="tree-list">
-                {project.parts.map((p) => {
-                  const Icon = kindIcon(p.kind);
-                  return (
-                    <div
-                      key={p.id}
-                      className={`tree-row ${selectedId === p.id ? "selected" : ""}`}
-                    >
-                      <button
-                        className="tree-select"
-                        onClick={() => setSelectedId(p.id)}
-                      >
-                        <Icon size={15} style={{ color: p.color }} />
-                        <span>{p.name}</span>
-                      </button>
-                      <button
-                        title={p.fixed ? "解锁零件" : "固定零件"}
-                        onClick={() => updatePart({ ...p, fixed: !p.fixed })}
-                      >
-                        {p.fixed ? (
-                          <LockKeyhole size={13} />
-                        ) : (
-                          <UnlockKeyhole size={13} />
-                        )}
-                      </button>
-                      <button
-                        title={p.visible ? "隐藏零件" : "显示零件"}
-                        onClick={() =>
-                          updatePart({ ...p, visible: !p.visible })
-                        }
-                      >
-                        {p.visible ? <Eye size={14} /> : <EyeOff size={14} />}
-                      </button>
-                    </div>
-                  );
-                })}
-              </div>
+              <AssemblyTree
+                parts={project.parts}
+                selectedId={selectedId}
+                onSelect={selectPart}
+                mechanisms={project.mechanisms}
+                selectedMechanismId={selectedMechanismId}
+                onSelectMechanism={(id) => {
+                  setSelectedMechanismId(id);
+                  setSelectedId(null);
+                }}
+                onEditMechanism={(id) =>
+                  composeMechanism(
+                    project.mechanisms!.find((m) => m.id === id)!,
+                  )
+                }
+                onUpdate={updatePart}
+              />
               <div className="library-footer">
                 <Layers3 size={14} /> {project.parts.length} 个零件 ·{" "}
                 {project.wires.length} 根导线
@@ -1210,10 +1863,25 @@ export default function App() {
           </div>
           <div className="viewport-wrap">
             <Viewport
+              models={project.models}
               parts={renderedParts}
               wires={project.wires}
               selectedId={selectedId}
-              onSelect={setSelectedId}
+              onSelect={selectPart}
+              deformations={functionalScene.deformations}
+              trackedPartIds={project.mechanisms?.flatMap((m) => m.partIds)}
+              contactMarkers={
+                selectedContact && contactOwner
+                  ? [
+                      {
+                        id: contactOwner.id,
+                        striker: selectedContact.strikerWorld,
+                        target: selectedContact.switchWorld,
+                        contact: selectedContact.pressed,
+                      },
+                    ]
+                  : []
+              }
               onTransform={transform}
               tool={tool}
               view={view}
@@ -1432,7 +2100,29 @@ export default function App() {
             <strong>零件属性</strong>
             <Settings2 size={15} />
           </div>
-          {selected ? (
+          {selectedMechanism ? (
+            <MechanismControls
+              mechanism={selectedMechanism}
+              parts={project.parts}
+              issues={mechanismIssues(project).filter((i) =>
+                i.partIds.some((id) => selectedMechanism.partIds.includes(id)),
+              )}
+              running={running}
+              contact={functionalScene.contacts[selectedMechanism.id]}
+              held={heldMechanismId === selectedMechanism.id}
+              displacement={
+                mechanismStates[selectedMechanism.id]?.displacement ?? 0
+              }
+              force={mechanismStates[selectedMechanism.id]?.force ?? 0}
+              onEdit={composeMechanism}
+              onRemove={detachMechanism}
+              onHeld={(held) => {
+                if (running)
+                  setHeldMechanismId(held ? selectedMechanism.id : null);
+              }}
+              onTransform={transformCompound}
+            />
+          ) : selected ? (
             <>
               <div className="selected-part">
                 <div className="selected-part-icon">
@@ -1455,7 +2145,11 @@ export default function App() {
                     }
                   />
                   <span>
-                    {selected.kind === "asset" ? "BLENDER 素材" : "参数化实体"}
+                    {selected.params.assetUrl
+                      ? "BLENDER 子零件"
+                      : selected.model
+                        ? "上传组件"
+                        : "参数化实体"}
                     <i />
                     mm
                   </span>
@@ -1481,37 +2175,57 @@ export default function App() {
               <div className="properties-scroll">
                 {panelTab === "properties" ? (
                   <>
-                    {selected.kind.startsWith("bayonet-") && (
-                      <div className="property-section bayonet-guide">
-                        <div className="property-title">
-                          <span>公母旋锁配合</span>
-                          <small>两耳卡口 · 45°</small>
-                        </div>
-                        <p className="hint">
-                          入口对准后沿轴向插入，再旋转45°。锁定后上拔会受槽肩阻挡，逆旋解锁才能退出。公母尺寸按已验证规格提供，公件零位外接宽深为16
-                          mm，双耳角的实际旋转扫掠直径约16.21 mm。
-                        </p>
-                        {selected.kind === "bayonet-pin" && (
-                          <div className="bayonet-actions">
-                            <button onClick={() => bayonetAction("entry")}>
-                              对准入口
-                            </button>
-                            <button onClick={() => bayonetAction("insert")}>
-                              插入槽底
-                            </button>
-                            <button onClick={() => bayonetAction("lock")}>
-                              旋转锁定 45°
-                            </button>
-                            <button onClick={() => bayonetAction("unlock")}>
-                              逆旋解锁
-                            </button>
-                            <button onClick={() => bayonetAction("withdraw")}>
-                              退出插销
-                            </button>
-                          </div>
-                        )}
-                      </div>
+                    {partMechanism(project, selected.id) && (
+                      <button
+                        className="mechanism-member-note"
+                        onClick={() => {
+                          setSelectedMechanismId(
+                            partMechanism(project, selected.id)!.id,
+                          );
+                          setSelectedId(null);
+                        }}
+                      >
+                        <Link2 size={13} />
+                        <span>
+                          功能由「{partMechanism(project, selected.id)!.name}
+                          」控制<small>打开组件控制；单件外观仍可编辑</small>
+                        </span>
+                        <ChevronRight size={14} />
+                      </button>
                     )}
+                    <ComponentInspector part={selected} onApply={updatePart} />
+                    {selected.kind.startsWith("bayonet-") &&
+                      !selected.interaction && (
+                        <div className="property-section bayonet-guide">
+                          <div className="property-title">
+                            <span>公母旋锁配合</span>
+                            <small>两耳卡口 · 45°</small>
+                          </div>
+                          <p className="hint">
+                            入口对准后沿轴向插入，再旋转45°。锁定后上拔会受槽肩阻挡，逆旋解锁才能退出。公母尺寸按已验证规格提供，公件零位外接宽深为16
+                            mm，双耳角的实际旋转扫掠直径约16.21 mm。
+                          </p>
+                          {selected.kind === "bayonet-pin" && (
+                            <div className="bayonet-actions">
+                              <button onClick={() => bayonetAction("entry")}>
+                                对准入口
+                              </button>
+                              <button onClick={() => bayonetAction("insert")}>
+                                插入槽底
+                              </button>
+                              <button onClick={() => bayonetAction("lock")}>
+                                旋转锁定 45°
+                              </button>
+                              <button onClick={() => bayonetAction("unlock")}>
+                                逆旋解锁
+                              </button>
+                              <button onClick={() => bayonetAction("withdraw")}>
+                                退出插销
+                              </button>
+                            </div>
+                          )}
+                        </div>
+                      )}
                     <div className="property-section">
                       <div className="property-title">
                         <span>位置</span>
@@ -1726,10 +2440,12 @@ export default function App() {
                           </label>
                         ))}
                       </div>
-                      {selected.kind === "asset" && (
+                      {Boolean(selected.params.assetUrl) && (
                         <>
                           <p className="hint amber">
-                            原始素材使用包围盒预检。榫槽与薄壁需回到原网格进一步检查。
+                            {selected.kind === "asset"
+                              ? "原始素材使用包围盒预检。榫槽与薄壁需回到原网格进一步检查。"
+                              : "保留源网格显示；交互验证依据功能代理。复杂槽形和薄壁仍需回到原网格复核。"}
                           </p>
                           {!selected.params.assetNode && (
                             <button
@@ -1902,7 +2618,10 @@ export default function App() {
                     </div>
                     <div className="property-section">
                       <div className="property-title">
-                        <span>显示</span>
+                        <span>PBR 材质与显示</span>
+                        <small>
+                          {selected.material ? "自定义外观" : "默认材质"}
+                        </small>
                       </div>
                       <label className="inline-setting">
                         零件颜色
@@ -1911,10 +2630,94 @@ export default function App() {
                           aria-label="零件颜色"
                           value={selected.color}
                           onChange={(e) =>
-                            updatePart({ ...selected, color: e.target.value })
+                            updatePart({
+                              ...selected,
+                              color: e.target.value,
+                              material: {
+                                metalness: selected.material?.metalness ?? 0.15,
+                                roughness: selected.material?.roughness ?? 0.5,
+                                useSourceColor: false,
+                              },
+                            })
                           }
                         />
                       </label>
+                      <label className="inline-setting pbr-value">
+                        金属度
+                        <NumberField
+                          label="材质金属度"
+                          value={selected.material?.metalness ?? 0.15}
+                          min={0}
+                          max={1}
+                          step={0.05}
+                          onChange={(metalness) =>
+                            updatePart({
+                              ...selected,
+                              material: {
+                                roughness: selected.material?.roughness ?? 0.5,
+                                useSourceColor:
+                                  selected.material?.useSourceColor ??
+                                  Boolean(
+                                    selected.params.assetUrl || selected.model,
+                                  ),
+                                metalness,
+                              },
+                            })
+                          }
+                        />
+                      </label>
+                      <label className="inline-setting pbr-value">
+                        粗糙度
+                        <NumberField
+                          label="材质粗糙度"
+                          value={selected.material?.roughness ?? 0.5}
+                          min={0}
+                          max={1}
+                          step={0.05}
+                          onChange={(roughness) =>
+                            updatePart({
+                              ...selected,
+                              material: {
+                                metalness: selected.material?.metalness ?? 0.15,
+                                useSourceColor:
+                                  selected.material?.useSourceColor ??
+                                  Boolean(
+                                    selected.params.assetUrl || selected.model,
+                                  ),
+                                roughness,
+                              },
+                            })
+                          }
+                        />
+                      </label>
+                      {Boolean(selected.params.assetUrl || selected.model) && (
+                        <label className="inline-setting">
+                          保留模型原色
+                          <input
+                            aria-label="保留模型原色"
+                            type="checkbox"
+                            checked={
+                              !selected.material ||
+                              selected.material.useSourceColor === true
+                            }
+                            onChange={(e) =>
+                              updatePart({
+                                ...selected,
+                                material: {
+                                  metalness:
+                                    selected.material?.metalness ?? 0.15,
+                                  roughness:
+                                    selected.material?.roughness ?? 0.5,
+                                  useSourceColor: e.target.checked,
+                                },
+                              })
+                            }
+                          />
+                        </label>
+                      )}
+                      <p className="hint">
+                        PBR 控制外观反射。质量、弹性与电气特性由功能参数决定。
+                      </p>
                       <label className="inline-setting">
                         显示零件
                         <button
@@ -2053,7 +2856,11 @@ export default function App() {
       <footer className="statusbar">
         <span>
           <span className="green-dot" />
-          工作空间就绪
+          {saveError
+            ? "本地保存异常"
+            : storageReady
+              ? "本地工程已恢复"
+              : "正在恢复本地工程"}
         </span>
         <i />
         <span>{project.parts.length} 个零件</span>
@@ -2066,6 +2873,11 @@ export default function App() {
           使用指南 <ChevronRight size={12} />
         </button>
       </footer>
+      {!storageReady && !saveError && (
+        <div className="restoring-workspace" aria-label="正在恢复本地工程">
+          正在恢复工程与组件库…
+        </div>
+      )}
       {toast && (
         <div className="toast" role="status">
           <CircleDot size={17} />
@@ -2073,6 +2885,118 @@ export default function App() {
           <button onClick={() => setToast("")}>
             <X size={15} />
           </button>
+        </div>
+      )}
+      <MechanismEditor
+        open={mechanismEditorOpen}
+        project={project}
+        initial={editingMechanism}
+        initialPartIds={
+          selected?.assemblyGroup
+            ? project.parts
+                .filter(
+                  (p) => p.assemblyGroup?.id === selected.assemblyGroup!.id,
+                )
+                .map((p) => p.id)
+            : undefined
+        }
+        onClose={() => {
+          setMechanismEditorOpen(false);
+          setEditingMechanism(undefined);
+        }}
+        onSave={saveMechanism}
+      />
+      <ComponentImportDialog
+        open={importOpen}
+        initial={editingComponent}
+        onClose={() => {
+          setImportOpen(false);
+          setEditingComponent(undefined);
+        }}
+        onSave={saveCustomComponent}
+      />
+      {mcpOpen && (
+        <div className="modal-backdrop" onClick={() => setMcpOpen(false)}>
+          <div
+            className="help-modal mcp-modal"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button className="modal-close" onClick={() => setMcpOpen(false)}>
+              <X size={20} />
+            </button>
+            <span className="eyebrow">MODEL CONTEXT PROTOCOL</span>
+            <h2>将工作台连接到 AI 工具</h2>
+            <p>
+              MCP
+              与当前界面共享同一个工程，移动、旋转和参数配置沿用相同的验证规则。
+            </p>
+            {mcpStatus ? (
+              <>
+                <div className="mcp-state">
+                  <span className="green-dot" />
+                  {mcpStatus.active
+                    ? "本机 MCP 服务已启动"
+                    : "MCP 服务尚未启动"}
+                  <small>仅监听本机，不对局域网开放</small>
+                  <button
+                    onClick={async () => {
+                      try {
+                        await setMcpEnabled(!mcpStatus.active);
+                        setMcpStatus(await getMcpStatus());
+                      } catch (error) {
+                        notify((error as Error).message);
+                      }
+                    }}
+                  >
+                    {mcpStatus.active ? "关闭服务" : "开启服务"}
+                  </button>
+                </div>
+                <label className="mcp-config-label">
+                  复制到 MCP 客户端配置
+                  <textarea
+                    aria-label="MCP 客户端配置"
+                    readOnly
+                    value={JSON.stringify(mcpStatus.config, null, 2)}
+                    rows={9}
+                  />
+                </label>
+                <button
+                  className="primary"
+                  onClick={async () => {
+                    try {
+                      await navigator.clipboard.writeText(
+                        JSON.stringify(mcpStatus.config, null, 2),
+                      );
+                      notify("MCP 配置已复制。");
+                    } catch {
+                      notify("请选中配置文本手动复制。");
+                    }
+                  }}
+                >
+                  <Copy size={14} />
+                  复制配置
+                </button>
+                <p className="hint">
+                  连接时保持桌面应用打开。客户端先读取 get_project 的
+                  revision，再提交更改；碰撞或版本冲突会拒绝操作。
+                </p>
+              </>
+            ) : (
+              <div className="model-note">
+                <CircleHelp size={18} />
+                <p>
+                  浏览器版可完成装配与上传。MCP 由 Tauri 桌面客户端提供，请打开
+                  macOS 应用后在此复制配置。
+                </p>
+              </div>
+            )}
+            <div className="mcp-capabilities">
+              <span>查询类型与必填参数</span>
+              <span>上传 / 配置组件</span>
+              <span>移动 / 旋转 / 接线</span>
+              <span>验证 / 导出当前工程</span>
+            </div>
+          </div>
         </div>
       )}
       {help && (
@@ -2088,7 +3012,7 @@ export default function App() {
               <li>
                 <strong>构建装配</strong>
                 <span>
-                  点击左侧零件添加，或从「原始素材」载入现有手柄。装配树支持选择、隐藏与固定。
+                  点击左侧零件添加，或从「原始素材」选择独立子件和公母配合组。装配树支持逐件选择、隐藏、固定和PBR外观编辑。
                 </span>
               </li>
               <li>

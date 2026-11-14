@@ -1,0 +1,116 @@
+.assembly-tree-group {
+  margin: 5px 7px;
+  border: 1px solid #e4ebef;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.assembly-tree-group-toggle {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  width: 100%;
+  text-align: left;
+  padding: 9px 7px;
+  background: #f3f7f9;
+  color: #7894a3;
+}
+.assembly-tree-group-toggle > svg {
+  flex-shrink: 0;
+}
+.assembly-tree-group-toggle strong {
+  min-width: 0;
+  flex: 1;
+  font-size: 9px;
+  font-weight: 500;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.assembly-tree-group-toggle small {
+  font-size: 8px;
+  color: #96aab5;
+}
+.assembly-tree-group-parts {
+  padding: 3px 0;
+}
+.assembly-tree-group-parts > .tree-row {
+  margin-left: 4px;
+  margin-right: 4px;
+  min-height: 34px;
+}
+.assembly-tree-group-parts .tree-select span {
+  font-size: 9px;
+}
+.assembly-tree-group-toggle:focus-visible {
+  outline: 2px solid #8db5c7;
+  outline-offset: -2px;
+}
+
+.assembly-tree-mechanism {
+  margin: 7px;
+  border: 1px solid #cbdfe6;
+  border-radius: 5px;
+  overflow: hidden;
+  background: #fcfdfe;
+}
+.assembly-tree-mechanism.selected-mechanism {
+  border-color: #80aebf;
+  box-shadow: 0 0 0 1px #80aebf25;
+}
+.mechanism-tree-heading {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  padding: 4px;
+  background: #edf5f7;
+  color: #64899b;
+}
+.mechanism-tree-heading > button {
+  flex-shrink: 0;
+}
+.mechanism-tree-toggle,
+.mechanism-tree-edit {
+  padding: 5px;
+}
+.mechanism-tree-heading .mechanism-tree-select {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 7px;
+  flex: 1;
+  min-width: 0;
+  text-align: left;
+  padding: 5px 2px;
+}
+.mechanism-tree-select > svg {
+  flex-shrink: 0;
+}
+.mechanism-tree-select > span {
+  min-width: 0;
+  flex: 1;
+}
+.mechanism-tree-select strong {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 1.6;
+  color: #4e7588;
+}
+.mechanism-tree-select small {
+  display: block;
+  margin-top: 3px;
+  font-size: 8px;
+  line-height: 1.6;
+  color: #89a4b1;
+}
+.assembly-tree-mechanism.selected-mechanism .mechanism-tree-heading {
+  background: #e3f0f4;
+}
+.mechanism-tree-heading button:focus-visible {
+  outline: 2px solid #8db5c7;
+  outline-offset: -2px;
+  border-radius: 3px;
+}

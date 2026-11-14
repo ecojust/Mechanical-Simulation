@@ -11,10 +11,20 @@ import {
 } from "./geometry";
 import { validateMotion } from "../engine/physics";
 import { bayonetSolids } from "../engine/bayonet";
-import type { Part, Vec3, Wire } from "../types";
+import type { Part, UploadedModel, Vec3, Wire } from "../types";
+import { loadImportedModelScene } from "../modelImport";
+import { applyPartMaterial } from "../materials";
+import { applyVisualDeformation } from "../visualDeformation";
+import type { VisualDeformations } from "../visualDeformation";
+import { ContactMarkerLayer } from "../contactMarkers";
+import type { ContactMarker } from "../contactMarkers";
 
 export interface ViewportProps {
   parts: Part[];
+  models?: UploadedModel[];
+  deformations?: VisualDeformations;
+  trackedPartIds?: string[];
+  contactMarkers?: ContactMarker[];
   wires: Wire[];
   selectedId: string | null;
   onSelect: (id: string | null) => void;
@@ -32,6 +42,7 @@ export interface ViewportProps {
 }
 interface Entry {
   object: THREE.Group;
+  deformation: THREE.Group;
   signature: string;
   loaded: boolean;
 }
@@ -121,22 +132,33 @@ function appearance(object: THREE.Object3D, xray: boolean, collision: boolean) {
         material.userData.baseColor = material.color.clone();
       if (collision) material.color.set("#dd6658");
       else material.color.copy(material.userData.baseColor);
-      material.transparent = xray;
-      material.opacity = xray ? 0.34 : 1;
-      material.depthWrite = !xray;
+      material.transparent = xray || Boolean(material.userData.baseTransparent);
+      material.opacity = xray ? 0.34 : (material.userData.baseOpacity ?? 1);
+      material.depthWrite = xray
+        ? false
+        : (material.userData.baseDepthWrite ?? true);
     }
   });
 }
-function signature(part: Part) {
+function signature(part: Part, model?: UploadedModel) {
   const params = { ...part.params };
   delete params.compression;
-  return JSON.stringify([part.kind, part.size, part.color, params]);
+  return JSON.stringify([
+    part.kind,
+    part.size,
+    part.color,
+    part.material,
+    params,
+    part.model,
+    model?.sha256,
+  ]);
 }
 function worldTerminal(part: Part, terminal: number, model: THREE.Object3D) {
   return model.localToWorld(terminalLocal(part, terminal));
 }
 
 export default function Viewport(props: ViewportProps) {
+  const viewportRef = useRef<HTMLDivElement>(null);
   const hostRef = useRef<HTMLDivElement>(null);
   const latest = useRef(props);
   latest.current = props;
@@ -239,6 +261,8 @@ export default function Viewport(props: ViewportProps) {
     transform.setSize(0.8);
     scene.add(transform.getHelper());
     const models = new Map<string, Entry>();
+    const contactLayer = new ContactMarkerLayer();
+    scene.add(contactLayer.group);
     let alive = true;
     let frame = 0;
     let previousTime = performance.now();
@@ -273,10 +297,9 @@ export default function Viewport(props: ViewportProps) {
       );
       const selectionSignature = JSON.stringify([
         selected?.id,
-        selected?.position,
-        selected?.rotation,
         selected?.size,
-        p.exploded,
+        selected?.kind,
+        selected ? Boolean(p.deformations?.[selected.id]) : false,
       ]);
       if (selectionSignature !== rt.selectionSignature) {
         disposeObject(selection);
@@ -300,7 +323,10 @@ export default function Viewport(props: ViewportProps) {
               }),
             );
             edge.renderOrder = 5;
-            selection.add(edge);
+            const frame = new THREE.Group();
+            frame.name = "deformedSelectionFrame";
+            frame.add(edge);
+            selection.add(frame);
             const measuredWidth =
               selected.kind === "bayonet-pin"
                 ? Math.max(
@@ -334,13 +360,23 @@ export default function Viewport(props: ViewportProps) {
                 ),
               );
             const label = labelSprite(
-              `${selected.kind === "bayonet-pin" ? "包络 Ø " : selected.kind === "bayonet-socket" ? "外径 Ø " : ""}${measuredWidth.toFixed(selected.kind === "bayonet-pin" ? 2 : 1)} mm`,
+              `${p.deformations?.[selected.id] ? "初始 " : ""}${selected.kind === "bayonet-pin" ? "包络 Ø " : selected.kind === "bayonet-socket" ? "外径 Ø " : ""}${measuredWidth.toFixed(selected.kind === "bayonet-pin" ? 2 : 1)} mm`,
               "#3a6473",
               "#edf4f6",
             );
             label.position.set(0, h / 2 + 8, d / 2 + 1);
             selection.add(label);
           }
+        }
+      }
+      if (selected) {
+        const model = models.get(selected.id)?.object;
+        if (model) {
+          selection.position.copy(model.position);
+          selection.rotation.copy(model.rotation);
+          const frame = selection.getObjectByName("deformedSelectionFrame");
+          if (frame)
+            applyVisualDeformation(frame, p.deformations?.[selected.id]);
         }
       }
       if (!rt.dragging) {
@@ -369,7 +405,10 @@ export default function Viewport(props: ViewportProps) {
           models.delete(id);
         }
       p.parts.forEach((part, index) => {
-        const sig = signature(part);
+        const uploadedModel = part.model
+          ? p.models?.find((model) => model.id === part.model!.id)
+          : undefined;
+        const sig = signature(part, uploadedModel);
         let entry = models.get(part.id);
         if (!entry || entry.signature !== sig) {
           if (entry) {
@@ -379,19 +418,40 @@ export default function Viewport(props: ViewportProps) {
           }
           const object = new THREE.Group();
           object.userData.partId = part.id;
-          const visual = createPartVisual(part);
-          object.add(visual);
-          entry = { object, signature: sig, loaded: part.kind !== "asset" };
+          const deformation = new THREE.Group();
+          deformation.name = "partVisualDeformation";
+          object.add(deformation);
+          const hasSourceModel = Boolean(part.model || part.params.assetUrl);
+          const visual = createPartVisual(
+            hasSourceModel ? { ...part, kind: "asset" } : part,
+          );
+          applyPartMaterial(visual, part, { cloneMaterials: false });
+          deformation.add(visual);
+          entry = {
+            object,
+            deformation,
+            signature: sig,
+            loaded: !hasSourceModel,
+          };
           models.set(part.id, entry);
           scene.add(object);
-          if (part.kind === "asset" && part.params.assetUrl) {
+          if (hasSourceModel) {
             const currentEntry = entry;
-            loadAssetScene(String(part.params.assetUrl))
+            setLoadedAssets((previous) =>
+              previous.filter((id) => id !== part.id),
+            );
+            const pending = part.model
+              ? uploadedModel
+                ? loadImportedModelScene(uploadedModel)
+                : Promise.reject(new Error("项目缺少上传模型数据"))
+              : loadAssetScene(String(part.params.assetUrl));
+            pending
               .then((sourceScene) => {
                 if (!alive || models.get(part.id) !== currentEntry) return;
-                const source = part.params.assetNode
-                  ? sourceScene.getObjectByName(String(part.params.assetNode))
-                  : sourceScene;
+                const source =
+                  !part.model && part.params.assetNode
+                    ? sourceScene.getObjectByName(String(part.params.assetNode))
+                    : sourceScene;
                 if (!source) {
                   setAssetError(`模型节点不存在：${part.name}`);
                   return;
@@ -413,11 +473,37 @@ export default function Viewport(props: ViewportProps) {
                   if (child instanceof THREE.Mesh) {
                     child.castShadow = true;
                     child.receiveShadow = true;
+                    if (uploadedModel?.format === "stl") {
+                      for (const material of Array.isArray(child.material)
+                        ? child.material
+                        : [child.material]) {
+                        if (material instanceof THREE.MeshStandardMaterial)
+                          material.color.set(part.color);
+                      }
+                    }
                   }
                 });
-                object.remove(visual);
+                applyPartMaterial(loaded, part, { cloneMaterials: false });
+                deformation.remove(visual);
                 disposeObject(visual);
-                object.add(wrapper);
+                deformation.add(wrapper);
+                // The type owns these electrical contact proxies, independently of the visual mesh.
+                if (
+                  ["battery", "lamp", "button", "resistor"].includes(part.kind)
+                ) {
+                  for (const terminal of [0, 1]) {
+                    const contact = new THREE.Mesh(
+                      new THREE.SphereGeometry(0.8, 10, 8),
+                      new THREE.MeshStandardMaterial({
+                        color: terminal === 0 ? "#dc7055" : "#526877",
+                      }),
+                    );
+                    contact.position.copy(terminalLocal(part, terminal));
+                    contact.userData.terminal = terminal;
+                    contact.userData.editorOverlay = true;
+                    deformation.add(contact);
+                  }
+                }
                 currentEntry.loaded = true;
                 setLoadedAssets((previous) => [
                   ...new Set([...previous, part.id]),
@@ -429,7 +515,7 @@ export default function Viewport(props: ViewportProps) {
                 );
               })
               .catch(() => {
-                if (alive)
+                if (alive && models.get(part.id) === currentEntry)
                   setAssetError(`无法载入 ${part.name}，当前显示尺寸包围盒`);
               });
           }
@@ -437,8 +523,42 @@ export default function Viewport(props: ViewportProps) {
         }
         if (!(rt.dragging && transform.object === entry.object))
           partTransform(entry.object, part, index, p.exploded);
+        applyVisualDeformation(entry.deformation, p.deformations?.[part.id]);
         appearance(entry.object, p.xray, p.collisionIds.includes(part.id));
       });
+      contactLayer.update(p.exploded ? [] : (p.contactMarkers ?? []));
+      viewportRef.current?.setAttribute(
+        "data-contact-markers",
+        JSON.stringify(contactLayer.poses()),
+      );
+      // Read committed Three transforms, rather than echoing input props, for mechanism diagnostics.
+      const tracked = [...new Set(p.trackedPartIds ?? [])].flatMap((id) => {
+        const object = models.get(id)?.object;
+        return object ? [{ id, object }] : [];
+      });
+      viewportRef.current?.setAttribute(
+        "data-rendered-positions",
+        JSON.stringify(
+          Object.fromEntries(
+            tracked.map(({ id, object }) => [id, object.position.toArray()]),
+          ),
+        ),
+      );
+      viewportRef.current?.setAttribute(
+        "data-rendered-rotations",
+        JSON.stringify(
+          Object.fromEntries(
+            tracked.map(({ id, object }) => [
+              id,
+              [
+                object.rotation.x / radians,
+                object.rotation.y / radians,
+                object.rotation.z / radians,
+              ],
+            ]),
+          ),
+        ),
+      );
       grid.visible = p.showGrid;
       origin.visible = p.showGrid;
       updateSelection();
@@ -452,6 +572,7 @@ export default function Viewport(props: ViewportProps) {
           part.visible,
         ]),
         p.exploded,
+        p.deformations,
         p.poweredLampIds,
       ]);
       if (wireSignature !== rt.wireSignature) {
@@ -461,8 +582,8 @@ export default function Viewport(props: ViewportProps) {
         p.wires.forEach((wire) => {
           const from = p.parts.find((part) => part.id === wire.from.partId),
             to = p.parts.find((part) => part.id === wire.to.partId);
-          const fromModel = from && models.get(from.id)?.object,
-            toModel = to && models.get(to.id)?.object;
+          const fromModel = from && models.get(from.id)?.deformation,
+            toModel = to && models.get(to.id)?.deformation;
           if (
             !from ||
             !to ||
@@ -678,17 +799,57 @@ export default function Viewport(props: ViewportProps) {
           1 - Math.exp(-dt * 24),
         );
         entry.object.userData.compression = value;
-        const coil = entry.object.getObjectByName("spring");
+        const hasSourceModel = Boolean(part.model || part.params.assetUrl);
+        const externallyDeformed = Boolean(p.deformations?.[part.id]);
+        const coil = hasSourceModel
+          ? undefined
+          : entry.object.getObjectByName("spring");
         if (coil) {
           const height = Number(coil.userData.height);
-          coil.scale.y = Math.max(0.15, (height - value) / height);
+          const internalCompression = externallyDeformed ? 0 : value;
+          coil.scale.y = Math.max(
+            0.15,
+            (height - internalCompression) / height,
+          );
           coil.position.y =
-            (part.kind === "button" ? -part.size[1] * 0.02 : 0) - value / 2;
+            (part.kind === "button" ? -part.size[1] * 0.02 : 0) -
+            internalCompression / 2;
         }
-        const actuator = entry.object.getObjectByName("actuator");
-        if (actuator) actuator.position.y = -value;
-        const bulb = entry.object.getObjectByName("bulb") as
-          THREE.Mesh | undefined;
+        const actuator = hasSourceModel
+          ? undefined
+          : entry.object.getObjectByName("actuator");
+        if (actuator) actuator.position.y = externallyDeformed ? 0 : -value;
+        if (hasSourceModel && part.kind === "lamp" && entry.loaded) {
+          const powered = p.poweredLampIds.includes(part.id);
+          entry.object.traverse((child) => {
+            if (
+              !(child instanceof THREE.Mesh) ||
+              child.userData.terminal !== undefined
+            )
+              return;
+            for (const material of Array.isArray(child.material)
+              ? child.material
+              : [child.material]) {
+              if (!(material instanceof THREE.MeshStandardMaterial)) continue;
+              if (!material.userData.baseEmissive) {
+                material.userData.baseEmissive = material.emissive.clone();
+                material.userData.baseEmissiveIntensity =
+                  material.emissiveIntensity;
+              }
+              material.emissive.copy(
+                powered
+                  ? new THREE.Color("#ffdf8a")
+                  : material.userData.baseEmissive,
+              );
+              material.emissiveIntensity = powered
+                ? 1.6
+                : material.userData.baseEmissiveIntensity;
+            }
+          });
+        }
+        const bulb = (
+          !hasSourceModel ? entry.object.getObjectByName("bulb") : undefined
+        ) as THREE.Mesh | undefined;
         if (bulb) {
           const material = bulb.material as THREE.MeshStandardMaterial;
           const powered = p.poweredLampIds.includes(part.id);
@@ -725,6 +886,10 @@ export default function Viewport(props: ViewportProps) {
     runtimeRef.current?.sync();
   }, [
     props.parts,
+    props.models,
+    props.deformations,
+    props.trackedPartIds,
+    props.contactMarkers,
     props.wires,
     props.selectedId,
     props.tool,
@@ -740,6 +905,7 @@ export default function Viewport(props: ViewportProps) {
   }, [props.view, props.resetKey]);
   return (
     <div
+      ref={viewportRef}
       style={{
         position: "relative",
         width: "100%",
@@ -748,10 +914,18 @@ export default function Viewport(props: ViewportProps) {
         overflow: "hidden",
       }}
       data-testid="viewport"
+      data-rendered-positions="{}"
+      data-rendered-rotations="{}"
+      data-contact-markers="{}"
       data-loaded-assets={
         props.parts.filter((part) => loadedAssets.includes(part.id)).length
       }
       data-powered-lamps={props.poweredLampIds.length}
+      data-deformed-parts={
+        Object.values(props.deformations ?? {}).filter(
+          (value) => Math.abs(value.ratio - 1) > 0.0001,
+        ).length
+      }
     >
       <div ref={hostRef} style={{ position: "absolute", inset: 0 }} />
       {webglError && (
@@ -766,6 +940,46 @@ export default function Viewport(props: ViewportProps) {
           }}
         >
           无法初始化三维视图。请启用硬件加速或使用支持 WebGL 的浏览器。
+        </div>
+      )}
+      {Boolean(props.contactMarkers?.length) && !props.exploded && (
+        <div
+          aria-label="机械接触点标记"
+          style={{
+            position: "absolute",
+            left: 12,
+            bottom: 12,
+            padding: "6px 9px",
+            borderRadius: 5,
+            background: "rgba(255,255,255,.92)",
+            color: "#506c79",
+            fontSize: 11,
+            pointerEvents: "none",
+          }}
+        >
+          <span
+            style={{
+              color: props.contactMarkers?.some((marker) => marker.contact)
+                ? "#20a66b"
+                : "#d58a31",
+            }}
+          >
+            ● 撞针端点
+          </span>
+          {" · "}
+          <span
+            style={{
+              color: props.contactMarkers?.some((marker) => marker.contact)
+                ? "#20a66b"
+                : "#248dcd",
+            }}
+          >
+            ◌ 固定触发点
+          </span>
+          {" · "}
+          {props.contactMarkers?.some((marker) => marker.contact)
+            ? "接触"
+            : "分离"}
         </div>
       )}
       {(motionHint || props.exploded || assetError) && (

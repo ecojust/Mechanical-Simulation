@@ -1,7 +1,5 @@
 import { test, expect } from "@playwright/test";
 
-const STORAGE = "mechanical-studio-project-v1";
-
 test("公母旋锁可沿入口装入、旋转锁定，锁定后不能上拔，反旋可拆出", async ({
   page,
 }, testInfo) => {
@@ -11,10 +9,26 @@ test("公母旋锁可沿入口装入、旋转锁定，锁定后不能上拔，�
   await page.goto("/");
   await page.getByRole("button", { name: /^旋锁装配示例/ }).click();
   await expect(page.getByTestId("viewport-canvas")).toBeVisible();
-  const project = await page.evaluate(
-    (key) => JSON.parse(localStorage.getItem(key)!),
-    STORAGE,
-  );
+  await page
+    .getByRole("button", { name: /装配树/ })
+    .first()
+    .click();
+  const selectedId = await page
+    .locator(".tree-row.selected")
+    .getAttribute("data-part-id");
+  await expect
+    .poll(async () =>
+      page.evaluate(async (id) => {
+        const storage = await import("/src/storage.ts");
+        const project = await storage.loadSavedProject();
+        return project?.parts.some((p) => p.id === id);
+      }, selectedId),
+    )
+    .toBe(true);
+  const project = await page.evaluate(async () => {
+    const storage = await import("/src/storage.ts");
+    return (await storage.loadSavedProject())!;
+  });
   const pin = project.parts.find(
     (p: { kind: string }) => p.kind === "bayonet-pin",
   );
@@ -74,10 +88,20 @@ test("公母旋锁可沿入口装入、旋转锁定，锁定后不能上拔，�
   await expect(rotation).toHaveValue("0");
   await page.getByRole("button", { name: "退出插销", exact: true }).click();
   await expect(y).toHaveValue(String(withdrawn));
-  const saved = await page.evaluate(
-    (key) => JSON.parse(localStorage.getItem(key)!),
-    STORAGE,
-  );
+  await expect
+    .poll(async () =>
+      page.evaluate(async (id) => {
+        const storage = await import("/src/storage.ts");
+        return (await storage.loadSavedProject())?.parts.find(
+          (p) => p.id === id,
+        )?.position[1];
+      }, pin.id),
+    )
+    .toBe(withdrawn);
+  const saved = await page.evaluate(async () => {
+    const storage = await import("/src/storage.ts");
+    return (await storage.loadSavedProject())!;
+  });
   const finalPin = saved.parts.find((p: { id: string }) => p.id === pin.id);
   expect(finalPin.position[1]).toBe(withdrawn);
   expect(finalPin.rotation[1]).toBe(0);

@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
     inputs:
       tag:
-        description: 'Existing version tag to release, for example v0.2.0'
+        description: 'Existing version tag to release, for example v0.3.0'
         required: true
         type: string
 
@@ -23,24 +23,31 @@ jobs:
     name: Validate and build macOS arm64
     # macos-15 is the standard Apple Silicon runner; macos-15-intel is x64.
     runs-on: macos-15
-    timeout-minutes: 40
+    timeout-minutes: 50
     outputs:
       tag: ${{ steps.version.outputs.tag }}
       version: ${{ steps.version.outputs.version }}
     steps:
       - name: Checkout version tag
-        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
         with:
           ref: ${{ inputs.tag || github.ref }}
           fetch-depth: 0
           persist-credentials: false
 
       - name: Set up Node.js
-        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6
         with:
           node-version: '22'
           architecture: arm64
           cache: npm
+
+      - name: Set up native Rust toolchain
+        run: |
+          rustup toolchain install stable --profile minimal
+          rustup default stable
+          rustup target add aarch64-apple-darwin
+          rustc --version
 
       - name: Verify architecture and release version
         id: version
@@ -58,6 +65,9 @@ jobs:
           if (!/^v\d+\.\d+\.\d+$/.test(tag) || tag !== `v${pkg.version}`) {
             throw Error('Release tag must be vX.Y.Z and match package.json');
           }
+          const tauri = JSON.parse(fs.readFileSync('src-tauri/tauri.conf.json', 'utf8'));
+          const cargo = fs.readFileSync('src-tauri/Cargo.toml', 'utf8');
+          if (tauri.version !== pkg.version || !cargo.includes(`version = "${pkg.version}"`)) throw Error('Native and frontend versions differ');
           if (lock.version !== pkg.version || lock.packages[''].version !== pkg.version) {
             throw Error('package-lock.json version differs from package.json');
           }
@@ -74,14 +84,18 @@ jobs:
           npm run verify:demo
           npm run verify:bayonet
           npm run assets:verify
+          cargo test --locked --manifest-path src-tauri/Cargo.toml --no-default-features
 
       - name: Build Apple Silicon DMG and ZIP
-        env:
-          CSC_IDENTITY_AUTO_DISCOVERY: 'false'
         run: npm run release:mac
 
       - name: Verify native architectures, signature, and archive contents
         run: npm run release:mac:verify
+
+      - name: Verify packaged MCP against the official protocol client
+        env:
+          MCP_TEST_BINARY: src-tauri/target/aarch64-apple-darwin/release/bundle/macos/Mechanical Studio.app/Contents/MacOS/mechanical-studio
+        run: npm run mcp:test-protocol
 
       - name: Start packaged application and check the workbench
         run: npm run release:mac:smoke
@@ -132,8 +146,12 @@ jobs:
         run: |
           set -euo pipefail
           cat > notes.md <<'NOTES'
-          Mechanical Studio for Apple Silicon (M-series Macs), macOS 12 or later.
+          Mechanical Studio for Apple Silicon (M-series Macs), macOS 13 or later.
 
+          - Lightweight Tauri 2 desktop application using the system WKWebView; no bundled Chromium or Node.js.
+          - Typed components, self-contained GLB/STL uploads, required mechanical interaction parameters, and MCP access.
+          - 189 independently editable source parts, mating groups, and per-part PBR color, metalness and roughness.
+          - Compound spring/button and mating mechanisms with coordinated members, press/rebound and checked insertion/rotation.
           - 3D assembly, dimensional checks, mating paths, spring/button and DC circuit verification.
           - Insert-and-turn bayonet pair with a checked 45° locking and reverse removal path.
           - Original pureTV assets, editable assembly projects, and validation reports.

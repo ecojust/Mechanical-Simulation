@@ -1,3 +1,5 @@
+import { Euler, Quaternion, Vector3 } from "three";
+import { componentPartIssues } from "../componentRegistry";
 import {
   bayonetSolids,
   bayonetParameterIssues,
@@ -181,7 +183,33 @@ function bayonetConvex(p: Part): Convex[] {
     radius: shape.radius,
   }));
 }
+/** A user-declared proxy is placed by its anchor and axis, independent of display geometry. */
+function functionalPart(p: Part): Part {
+  const profile = p.interaction;
+  if (!profile) return p;
+  const orientation = new Quaternion().setFromEuler(
+    new Euler(...(p.rotation.map((v) => v * RAD) as Vec3)),
+  );
+  const position = new Vector3(...profile.anchor)
+    .applyQuaternion(orientation)
+    .add(new Vector3(...p.position));
+  const proxyOrientation = orientation.multiply(
+    new Quaternion().setFromUnitVectors(
+      new Vector3(0, 1, 0),
+      new Vector3(...profile.axis),
+    ),
+  );
+  const euler = new Euler().setFromQuaternion(proxyOrientation, "XYZ");
+  return {
+    ...p,
+    position: position.toArray() as Vec3,
+    rotation: [euler.x / RAD, euler.y / RAD, euler.z / RAD],
+    size: [...profile.proxySize],
+    interaction: { ...profile, axis: [0, 1, 0], anchor: [0, 0, 0] },
+  };
+}
 function solids(p: Part): Convex[] {
+  p = functionalPart(p);
   if (p.kind === "bayonet-pin" || p.kind === "bayonet-socket")
     return bayonetConvex(p);
   const [w, h, d] = p.size;
@@ -214,6 +242,10 @@ function solids(p: Part): Convex[] {
 }
 /** Bayonet parts use their real shared vertices; other kinds keep existing conservative envelopes. */
 function floorHeight(p: Part, knownSolids?: Convex[]): number {
+  if (p.interaction)
+    return Math.min(
+      ...(knownSolids ?? solids(p)).flatMap((s) => s.vertices.map((v) => v[1])),
+    );
   if (p.kind !== "bayonet-pin" && p.kind !== "bayonet-socket")
     return Math.min(...box(p).vertices.map((v) => v[1]));
   let lowest = Infinity;
@@ -277,6 +309,8 @@ function separatingGap(a: Convex, b: Convex): number {
   return largest;
 }
 function cylindricalFitClearance(a: Part, b: Part): number | null {
+  a = functionalPart(a);
+  b = functionalPart(b);
   const peg = a.kind === "pin" ? a : b.kind === "pin" ? b : null;
   const socket = a.kind === "sleeve" ? a : b.kind === "sleeve" ? b : null;
   if (!peg || !socket) return null;
@@ -320,8 +354,45 @@ function fitIssues(parts: Part[]): {
   issues: Issue[];
   clearance: number | null;
 } {
+  parts = parts.map(functionalPart);
   const issues: Issue[] = [];
   let clearance: number | null = null;
+  const paired = (a: Part, b: Part) => {
+    if (
+      (a.interaction || b.interaction) &&
+      a.interaction?.mateFamily !== b.interaction?.mateFamily
+    ) {
+      issues.push(
+        issue(
+          `family-${a.id}-${b.id}`,
+          "error",
+          "配合族不匹配",
+          `${a.name} 与 ${b.name} 的配合族不同，不能作为已配套公母件验证。`,
+          [a.id, b.id],
+          "fit",
+        ),
+      );
+      return false;
+    }
+    return true;
+  };
+  const depthIssue = (a: Part, b: Part, depth: number) => {
+    const maximum = Math.min(
+      a.interaction?.insertionDepth ?? Infinity,
+      b.interaction?.insertionDepth ?? Infinity,
+    );
+    if (depth > maximum + EPS)
+      issues.push(
+        issue(
+          `depth-${a.id}-${b.id}`,
+          "error",
+          "超过允许插入深度",
+          `当前插入 ${depth.toFixed(3)} mm，用户声明上限 ${maximum.toFixed(3)} mm。`,
+          [a.id, b.id],
+          "fit",
+        ),
+      );
+  };
   for (const socket of parts.filter(
     (p) => p.kind === "mortise" || p.kind === "sleeve",
   )) {
@@ -346,6 +417,12 @@ function fitIssues(parts: Part[]): {
         Math.abs(local[2]) > socket.size[2] / 2 + extent[2]
       )
         continue;
+      if (!paired(socket, peg)) continue;
+      depthIssue(socket, peg, Math.max(0, depth));
+      const required = Math.max(
+        socket.interaction?.minClearance ?? 0,
+        peg.interaction?.minClearance ?? 0,
+      );
       const tol =
         Math.max(0, num(socket, "tolerance", 0.05)) +
         Math.max(0, num(peg, "tolerance", 0.05));
@@ -370,9 +447,13 @@ function fitIssues(parts: Part[]): {
       issues.push(
         issue(
           `fit-${socket.id}-${peg.id}`,
-          gap < -EPS ? "error" : aligned ? "pass" : "warning",
-          gap < -EPS ? "配合余隙不足" : depth > EPS ? "插入配合" : "孔口对齐",
-          `${peg.name} → ${socket.name}；最不利单侧余隙 ${gap.toFixed(3)} mm，插入深度 ${Math.max(0, depth).toFixed(2)} mm；尺寸公差合计 ±${tol.toFixed(2)} mm${aligned ? "" : "；轴线偏斜"}`,
+          gap < required - EPS ? "error" : aligned ? "pass" : "warning",
+          gap < required - EPS
+            ? "配合余隙不足"
+            : depth > EPS
+              ? "插入配合"
+              : "孔口对齐",
+          `${peg.name} → ${socket.name}；最不利单侧余隙 ${gap.toFixed(3)} mm，插入深度 ${Math.max(0, depth).toFixed(2)} mm；要求单侧余隙 ≥${required.toFixed(3)} mm；尺寸公差合计 ±${tol.toFixed(2)} mm${aligned ? "" : "；轴线偏斜"}`,
           [socket.id, peg.id],
           "fit",
         ),
@@ -390,6 +471,16 @@ function fitIssues(parts: Part[]): {
         Math.abs(local[1]) > socket.size[1] / 2 + peg.size[1] / 2
       )
         continue;
+      if (!paired(socket, peg)) continue;
+      depthIssue(
+        socket,
+        peg,
+        Math.max(0, 19 * (socket.size[1] / 18) - local[1]),
+      );
+      const required = Math.max(
+        socket.interaction?.minClearance ?? 0,
+        peg.interaction?.minClearance ?? 0,
+      );
       const aligned = dot(pegBasis[1], basis[1]) >= Math.cos(0.1 * RAD);
       const relativeYaw =
         Math.atan2(dot(pegBasis[2], basis[0]), dot(pegBasis[2], basis[2])) /
@@ -467,8 +558,8 @@ function fitIssues(parts: Part[]): {
       issues.push(
         issue(
           `bayonet-fit-${socket.id}-${peg.id}`,
-          gap < -EPS ? "error" : aligned ? "pass" : "warning",
-          gap < -EPS
+          gap < required - EPS ? "error" : aligned ? "pass" : "warning",
+          gap < required - EPS
             ? "旋锁最坏公差不足"
             : lock
               ? "旋锁已进入保持区"
@@ -487,8 +578,26 @@ function fitIssues(parts: Part[]): {
 export function validateAssembly(parts: Part[]): Validation {
   const issues: Issue[] = [],
     collisionPairs: [string, string][] = [];
-  const valid = parts.filter((p) => !invalid(p));
-  for (const p of parts) {
+  const componentIssues = new Map(
+    parts.map((part) => [part.id, componentPartIssues(part)]),
+  );
+  const unconfigured = new Set(
+    parts
+      .filter((part) =>
+        componentIssues
+          .get(part.id)!
+          .some((entry) => entry.severity === "error"),
+      )
+      .map((part) => part.id),
+  );
+  // Uncalibrated source geometry remains a preview; its placeholder proxy is not evidence of contact.
+  const valid = parts
+    .filter((p) => !invalid(p) && !unconfigured.has(p.id))
+    .map(functionalPart);
+  for (const original of parts) {
+    issues.push(...componentIssues.get(original.id)!);
+    if (unconfigured.has(original.id)) continue;
+    const p = functionalPart(original);
     if (invalid(p)) {
       issues.push(
         issue(
@@ -608,6 +717,23 @@ export function validateAssembly(parts: Part[]): Validation {
         );
     }
   }
+  const previewable = parts.filter((part) => !invalid(part));
+  for (let i = 0; i < previewable.length; i++)
+    for (let j = i + 1; j < previewable.length; j++) {
+      const a = previewable[i],
+        b = previewable[j];
+      if (!(unconfigured.has(a.id) || unconfigured.has(b.id))) continue;
+      if (separatingGap(box(a), box(b)) < -EPS)
+        issues.push(
+          issue(
+            `preview-bounds-${a.id}-${b.id}`,
+            "warning",
+            "待标定模型外观包围盒相交",
+            `${a.name} / ${b.name}：仅作保守预检，可能为正常嵌套；交互代理未完成，不能据此确认实体干涉或配合。`,
+            [a.id, b.id],
+          ),
+        );
+    }
   const allSolids = new Map(valid.map((p) => [p.id, solids(p)]));
   for (let i = 0; i < valid.length; i++)
     for (let j = i + 1; j < valid.length; j++) {
@@ -649,7 +775,7 @@ export function validateAssembly(parts: Part[]): Validation {
     );
   const fit = fitIssues(valid);
   issues.push(...fit.issues);
-  if (!issues.some((i) => i.category === "geometry" && i.severity === "error"))
+  if (!issues.some((i) => i.severity === "error"))
     issues.push(
       issue(
         "geometry-pass",
@@ -677,6 +803,10 @@ export function validateMotion(
         issue("missing-part", "error", "零件不存在", "请重新选择零件。", [id]),
       ],
     };
+  const configErrors = componentPartIssues(next).filter(
+    (i) => i.severity === "error",
+  );
+  if (configErrors.length) return { allowed: false, issues: configErrors };
   if (current.fixed)
     return {
       allowed: false,
@@ -704,13 +834,15 @@ export function validateMotion(
       ],
     };
   const distance = length(sub(next.position, current.position));
+  const reach = (p: Part) =>
+    p.interaction
+      ? length(p.interaction.anchor) + length(p.interaction.proxySize) / 2
+      : length(p.size) / 2;
   const angleTravel =
-    (next.rotation.reduce(
+    next.rotation.reduce(
       (s, v, i) => s + Math.abs(v - current.rotation[i]) * RAD,
       0,
-    ) *
-      Math.max(length(next.size), length(current.size))) /
-    2;
+    ) * Math.max(reach(next), reach(current));
   const sizeTravel = length(sub(next.size, current.size)) / 2;
   const count = Math.max(
     1,
@@ -766,6 +898,12 @@ export function validateMotion(
           ),
         ],
       };
+    if (candidate.interaction) {
+      const invalidFit = fitIssues([...others, candidate]).issues.filter(
+        (i) => i.severity === "error" && i.partIds.includes(id),
+      );
+      if (invalidFit.length) return { allowed: false, issues: invalidFit };
+    }
     for (const other of others) {
       const hits = collision(
         candidate,
@@ -835,6 +973,17 @@ export function solveCircuit(
   const electrical = parts.filter((p) =>
     ["battery", "lamp", "resistor", "button"].includes(p.kind),
   );
+  const configurationErrors = electrical
+    .flatMap(componentPartIssues)
+    .filter((i) => i.severity === "error");
+  if (configurationErrors.length)
+    return {
+      poweredLampIds: [],
+      current: 0,
+      voltage: 0,
+      shortCircuit: false,
+      issues: configurationErrors,
+    };
   const byId = new Map(electrical.map((p) => [p.id, p]));
   const parent = new Map<string, string>();
   const key = (id: string, terminal: number) => `${id}:${terminal}`;

@@ -4,12 +4,62 @@
   "wires": [],
   "parts": [
     {
-      "id": "puretv-buttons-left",
-      "name": "方向键 · 左",
-      "kind": "asset",
+      "id": "puretv-buttons-left-1",
+      "name": "左 · PS5 6×6 开关.005",
+      "kind": "button",
+      "position": [
+        -51.200001,
+        42.083967,
+        -22
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        6.000015,
+        3.000008,
+        6.000015
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/buttons-left.glb",
+        "assetNode": "左_·_PS5_6×6_开关005"
+      },
+      "assemblyGroup": {
+        "id": "puretv-buttons-left-switch",
+        "name": "左键 · 开关 / 按杆 / 焊脚"
+      },
+      "interaction": {
+        "version": 1,
+        "status": "unconfigured",
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "anchor": [
+          0,
+          0,
+          0
+        ],
+        "proxySize": [
+          6.000015,
+          3.000008,
+          6.000015
+        ]
+      }
+    },
+    {
+      "id": "puretv-buttons-left-2",
+      "name": "左 · PS5 一体式键帽与蓝色插销.003",
+      "kind": "pin",
       "position": [
         -51.228842,
-        45.809441,
+        51.181902,
         -22
       ],
       "rotation": [
@@ -19,23 +69,464 @@
       ],
       "size": [
         12.311832,
-        23.777056,
+        13.032135,
         11.560001
       ],
       "color": "#92a9b6",
       "fixed": false,
       "visible": true,
       "params": {
-        "assetUrl": "./models/buttons-left.glb"
+        "assetUrl": "./models/buttons-left.glb",
+        "assetNode": "左_·_PS5_一体式键帽与蓝色插销003"
+      },
+      "assemblyGroup": {
+        "id": "puretv-buttons-left-pin-sleeve",
+        "name": "左键 · 键帽插销 / 下套筒"
+      },
+      "interaction": {
+        "version": 1,
+        "status": "unconfigured",
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "anchor": [
+          0,
+          0,
+          0
+        ],
+        "proxySize": [
+          12.311832,
+          13.032135,
+          11.560001
+        ]
       }
     },
     {
-      "id": "puretv-buttons-right",
-      "name": "方向键 · 右",
+      "id": "puretv-buttons-left-3",
+      "name": "左 · PS5 下环一体式开关套筒.003",
+      "kind": "sleeve",
+      "position": [
+        -51.199966,
+        40.39851,
+        -21.999986
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        11.183365,
+        12.955192,
+        11.183237
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/buttons-left.glb",
+        "assetNode": "左_·_PS5_下环一体式开关套筒003"
+      },
+      "assemblyGroup": {
+        "id": "puretv-buttons-left-pin-sleeve",
+        "name": "左键 · 键帽插销 / 下套筒"
+      },
+      "interaction": {
+        "version": 1,
+        "status": "unconfigured",
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "anchor": [
+          0,
+          0,
+          0
+        ],
+        "proxySize": [
+          11.183365,
+          12.955192,
+          11.183237
+        ]
+      }
+    },
+    {
+      "id": "puretv-buttons-left-4",
+      "name": "左 · PS5 回位弹簧.003",
+      "kind": "spring",
+      "position": [
+        -51.198585,
+        46.079279,
+        -21.999252
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        6.074041,
+        4.04082,
+        6.075855
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/buttons-left.glb",
+        "assetNode": "左_·_PS5_回位弹簧003"
+      },
+      "assemblyGroup": {
+        "id": "puretv-buttons-left-spring-seat",
+        "name": "左键 · 弹簧 / 定位环"
+      },
+      "interaction": {
+        "version": 1,
+        "status": "unconfigured",
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "anchor": [
+          0,
+          0,
+          0
+        ],
+        "proxySize": [
+          6.074041,
+          4.04082,
+          6.075855
+        ]
+      }
+    },
+    {
+      "id": "puretv-buttons-left-5",
+      "name": "左 · PS5 弹簧定位环.004",
       "kind": "asset",
       "position": [
+        -51.200001,
+        47.719974,
+        -22
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        5.166206,
+        1.002852,
+        5.166206
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/buttons-left.glb",
+        "assetNode": "左_·_PS5_弹簧定位环004"
+      },
+      "assemblyGroup": {
+        "id": "puretv-buttons-left-spring-seat",
+        "name": "左键 · 弹簧 / 定位环"
+      }
+    },
+    {
+      "id": "puretv-buttons-left-6",
+      "name": "左 · PS5 按杆.005",
+      "kind": "asset",
+      "position": [
+        -51.200001,
+        44.23402,
+        -22
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        3.500008,
+        1.300003,
+        3.500008
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/buttons-left.glb",
+        "assetNode": "左_·_PS5_按杆005"
+      },
+      "assemblyGroup": {
+        "id": "puretv-buttons-left-switch",
+        "name": "左键 · 开关 / 按杆 / 焊脚"
+      }
+    },
+    {
+      "id": "puretv-buttons-left-7",
+      "name": "左 · PS5 焊脚占位.017",
+      "kind": "asset",
+      "position": [
+        -48.849998,
+        39.083958,
+        -24.100006
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.650002,
+        3.000007,
+        0.650002
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/buttons-left.glb",
+        "assetNode": "左_·_PS5_焊脚占位017"
+      },
+      "assemblyGroup": {
+        "id": "puretv-buttons-left-switch",
+        "name": "左键 · 开关 / 按杆 / 焊脚"
+      }
+    },
+    {
+      "id": "puretv-buttons-left-8",
+      "name": "左 · PS5 焊脚占位.018",
+      "kind": "asset",
+      "position": [
+        -48.849998,
+        39.083958,
+        -19.899996
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.650002,
+        3.000007,
+        0.650002
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/buttons-left.glb",
+        "assetNode": "左_·_PS5_焊脚占位018"
+      },
+      "assemblyGroup": {
+        "id": "puretv-buttons-left-switch",
+        "name": "左键 · 开关 / 按杆 / 焊脚"
+      }
+    },
+    {
+      "id": "puretv-buttons-left-9",
+      "name": "左 · PS5 焊脚占位.019",
+      "kind": "asset",
+      "position": [
+        -53.550007,
+        39.083958,
+        -24.100006
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.650002,
+        3.000007,
+        0.650002
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/buttons-left.glb",
+        "assetNode": "左_·_PS5_焊脚占位019"
+      },
+      "assemblyGroup": {
+        "id": "puretv-buttons-left-switch",
+        "name": "左键 · 开关 / 按杆 / 焊脚"
+      }
+    },
+    {
+      "id": "puretv-buttons-left-10",
+      "name": "左 · PS5 焊脚占位.020",
+      "kind": "asset",
+      "position": [
+        -53.550007,
+        39.083958,
+        -19.899996
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.650002,
+        3.000007,
+        0.650002
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/buttons-left.glb",
+        "assetNode": "左_·_PS5_焊脚占位020"
+      },
+      "assemblyGroup": {
+        "id": "puretv-buttons-left-switch",
+        "name": "左键 · 开关 / 按杆 / 焊脚"
+      }
+    },
+    {
+      "id": "puretv-buttons-left-11",
+      "name": "左 · 旋锁弹性垫 0.002",
+      "kind": "asset",
+      "position": [
+        -46.087564,
+        35.290914,
+        -22
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1.134212,
+        0.509998,
+        1.581005
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/buttons-left.glb",
+        "assetNode": "左_·_旋锁弹性垫_0002"
+      }
+    },
+    {
+      "id": "puretv-buttons-left-12",
+      "name": "左 · 旋锁弹性垫 120.002",
+      "kind": "asset",
+      "position": [
+        -53.808201,
+        35.290914,
+        -26.441688
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1.777512,
+        0.509998,
+        1.649435
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/buttons-left.glb",
+        "assetNode": "左_·_旋锁弹性垫_120002"
+      }
+    },
+    {
+      "id": "puretv-buttons-left-13",
+      "name": "左 · 旋锁弹性垫 240.002",
+      "kind": "asset",
+      "position": [
+        -53.808201,
+        35.290914,
+        -17.558312
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1.777512,
+        0.509998,
+        1.649435
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/buttons-left.glb",
+        "assetNode": "左_·_旋锁弹性垫_240002"
+      }
+    },
+    {
+      "id": "puretv-buttons-right-1",
+      "name": "右 · PS5 6×6 开关.004",
+      "kind": "button",
+      "position": [
+        -32.799996,
+        39.688536,
+        -22
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        6.000013,
+        3.000008,
+        6.000015
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/buttons-right.glb",
+        "assetNode": "右_·_PS5_6×6_开关004"
+      },
+      "assemblyGroup": {
+        "id": "puretv-buttons-right-switch",
+        "name": "右键 · 开关 / 按杆 / 焊脚"
+      },
+      "interaction": {
+        "version": 1,
+        "status": "unconfigured",
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "anchor": [
+          0,
+          0,
+          0
+        ],
+        "proxySize": [
+          6.000013,
+          3.000008,
+          6.000015
+        ]
+      }
+    },
+    {
+      "id": "puretv-buttons-right-2",
+      "name": "右 · PS5 一体式键帽与蓝色插销.003",
+      "kind": "pin",
+      "position": [
         -32.75567,
-        46.67482,
+        50.849565,
         -22
       ],
       "rotation": [
@@ -45,23 +536,464 @@
       ],
       "size": [
         12.280859,
-        25.507816,
+        17.158325,
         11.560001
       ],
       "color": "#92a9b6",
       "fixed": false,
       "visible": true,
       "params": {
-        "assetUrl": "./models/buttons-right.glb"
+        "assetUrl": "./models/buttons-right.glb",
+        "assetNode": "右_·_PS5_一体式键帽与蓝色插销003"
+      },
+      "assemblyGroup": {
+        "id": "puretv-buttons-right-pin-sleeve",
+        "name": "右键 · 键帽插销 / 下套筒"
+      },
+      "interaction": {
+        "version": 1,
+        "status": "unconfigured",
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "anchor": [
+          0,
+          0,
+          0
+        ],
+        "proxySize": [
+          12.280859,
+          17.158325,
+          11.560001
+        ]
       }
     },
     {
-      "id": "puretv-buttons-down",
-      "name": "方向键 · 下",
+      "id": "puretv-buttons-right-3",
+      "name": "右 · PS5 下环一体式开关套筒.003",
+      "kind": "sleeve",
+      "position": [
+        -32.799826,
+        39.200908,
+        -22.000025
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        11.183308,
+        10.559992,
+        11.183308
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/buttons-right.glb",
+        "assetNode": "右_·_PS5_下环一体式开关套筒003"
+      },
+      "assemblyGroup": {
+        "id": "puretv-buttons-right-pin-sleeve",
+        "name": "右键 · 键帽插销 / 下套筒"
+      },
+      "interaction": {
+        "version": 1,
+        "status": "unconfigured",
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "anchor": [
+          0,
+          0,
+          0
+        ],
+        "proxySize": [
+          11.183308,
+          10.559992,
+          11.183308
+        ]
+      }
+    },
+    {
+      "id": "puretv-buttons-right-4",
+      "name": "右 · PS5 回位弹簧.003",
+      "kind": "spring",
+      "position": [
+        -32.801415,
+        43.68385,
+        -22.000747
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        6.074042,
+        4.04082,
+        6.075854
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/buttons-right.glb",
+        "assetNode": "右_·_PS5_回位弹簧003"
+      },
+      "assemblyGroup": {
+        "id": "puretv-buttons-right-spring-seat",
+        "name": "右键 · 弹簧 / 定位环"
+      },
+      "interaction": {
+        "version": 1,
+        "status": "unconfigured",
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "anchor": [
+          0,
+          0,
+          0
+        ],
+        "proxySize": [
+          6.074042,
+          4.04082,
+          6.075854
+        ]
+      }
+    },
+    {
+      "id": "puretv-buttons-right-5",
+      "name": "右 · PS5 弹簧定位环.003",
       "kind": "asset",
       "position": [
+        -32.799996,
+        45.324542,
+        -22.000001
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        5.166204,
+        1.00285,
+        5.166204
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/buttons-right.glb",
+        "assetNode": "右_·_PS5_弹簧定位环003"
+      },
+      "assemblyGroup": {
+        "id": "puretv-buttons-right-spring-seat",
+        "name": "右键 · 弹簧 / 定位环"
+      }
+    },
+    {
+      "id": "puretv-buttons-right-6",
+      "name": "右 · PS5 按杆.004",
+      "kind": "asset",
+      "position": [
+        -32.799998,
+        41.838589,
+        -22.000001
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        3.50001,
+        1.300003,
+        3.50001
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/buttons-right.glb",
+        "assetNode": "右_·_PS5_按杆004"
+      },
+      "assemblyGroup": {
+        "id": "puretv-buttons-right-switch",
+        "name": "右键 · 开关 / 按杆 / 焊脚"
+      }
+    },
+    {
+      "id": "puretv-buttons-right-7",
+      "name": "右 · PS5 焊脚占位.013",
+      "kind": "asset",
+      "position": [
+        -35.150002,
+        36.688526,
+        -19.899994
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.650002,
+        3.000007,
+        0.650002
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/buttons-right.glb",
+        "assetNode": "右_·_PS5_焊脚占位013"
+      },
+      "assemblyGroup": {
+        "id": "puretv-buttons-right-switch",
+        "name": "右键 · 开关 / 按杆 / 焊脚"
+      }
+    },
+    {
+      "id": "puretv-buttons-right-8",
+      "name": "右 · PS5 焊脚占位.014",
+      "kind": "asset",
+      "position": [
+        -35.149998,
+        36.688526,
+        -24.100006
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.650002,
+        3.000007,
+        0.650002
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/buttons-right.glb",
+        "assetNode": "右_·_PS5_焊脚占位014"
+      },
+      "assemblyGroup": {
+        "id": "puretv-buttons-right-switch",
+        "name": "右键 · 开关 / 按杆 / 焊脚"
+      }
+    },
+    {
+      "id": "puretv-buttons-right-9",
+      "name": "右 · PS5 焊脚占位.015",
+      "kind": "asset",
+      "position": [
+        -30.449991,
+        36.688526,
+        -19.899994
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.650002,
+        3.000007,
+        0.650002
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/buttons-right.glb",
+        "assetNode": "右_·_PS5_焊脚占位015"
+      },
+      "assemblyGroup": {
+        "id": "puretv-buttons-right-switch",
+        "name": "右键 · 开关 / 按杆 / 焊脚"
+      }
+    },
+    {
+      "id": "puretv-buttons-right-10",
+      "name": "右 · PS5 焊脚占位.016",
+      "kind": "asset",
+      "position": [
+        -30.449991,
+        36.688526,
+        -24.100004
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.650002,
+        3.000007,
+        0.650002
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/buttons-right.glb",
+        "assetNode": "右_·_PS5_焊脚占位016"
+      },
+      "assemblyGroup": {
+        "id": "puretv-buttons-right-switch",
+        "name": "右键 · 开关 / 按杆 / 焊脚"
+      }
+    },
+    {
+      "id": "puretv-buttons-right-11",
+      "name": "右 · 旋锁弹性垫 0.002",
+      "kind": "asset",
+      "position": [
+        -37.912436,
+        35.290912,
+        -22
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1.134212,
+        0.51,
+        1.581005
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/buttons-right.glb",
+        "assetNode": "右_·_旋锁弹性垫_0002"
+      }
+    },
+    {
+      "id": "puretv-buttons-right-12",
+      "name": "右 · 旋锁弹性垫 120.002",
+      "kind": "asset",
+      "position": [
+        -30.191799,
+        35.290912,
+        -17.558312
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1.777512,
+        0.51,
+        1.649435
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/buttons-right.glb",
+        "assetNode": "右_·_旋锁弹性垫_120002"
+      }
+    },
+    {
+      "id": "puretv-buttons-right-13",
+      "name": "右 · 旋锁弹性垫 240.002",
+      "kind": "asset",
+      "position": [
+        -30.191799,
+        35.290912,
+        -26.441688
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1.777512,
+        0.51,
+        1.649435
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/buttons-right.glb",
+        "assetNode": "右_·_旋锁弹性垫_240002"
+      }
+    },
+    {
+      "id": "puretv-buttons-down-1",
+      "name": "下 · PS5 6×6 开关.004",
+      "kind": "button",
+      "position": [
         -42,
-        46.227316,
+        41.849852,
+        -12.800002
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        6.000015,
+        3.000008,
+        6.000015
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/buttons-down.glb",
+        "assetNode": "下_·_PS5_6×6_开关004"
+      },
+      "assemblyGroup": {
+        "id": "puretv-buttons-down-switch",
+        "name": "下键 · 开关 / 按杆 / 焊脚"
+      },
+      "interaction": {
+        "version": 1,
+        "status": "unconfigured",
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "anchor": [
+          0,
+          0,
+          0
+        ],
+        "proxySize": [
+          6.000015,
+          3.000008,
+          6.000015
+        ]
+      }
+    },
+    {
+      "id": "puretv-buttons-down-2",
+      "name": "下 · PS5 一体式键帽与蓝色插销.003",
+      "kind": "pin",
+      "position": [
+        -42,
+        51.48272,
         -12.765555
       ],
       "rotation": [
@@ -71,23 +1003,464 @@
       ],
       "size": [
         11.559998,
-        24.61281,
+        14.101999,
         12.300619
       ],
       "color": "#92a9b6",
       "fixed": false,
       "visible": true,
       "params": {
-        "assetUrl": "./models/buttons-down.glb"
+        "assetUrl": "./models/buttons-down.glb",
+        "assetNode": "下_·_PS5_一体式键帽与蓝色插销003"
+      },
+      "assemblyGroup": {
+        "id": "puretv-buttons-down-pin-sleeve",
+        "name": "下键 · 键帽插销 / 下套筒"
+      },
+      "interaction": {
+        "version": 1,
+        "status": "unconfigured",
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "anchor": [
+          0,
+          0,
+          0
+        ],
+        "proxySize": [
+          11.559998,
+          14.101999,
+          12.300619
+        ]
       }
     },
     {
-      "id": "puretv-buttons-up",
-      "name": "方向键 · 上",
+      "id": "puretv-buttons-down-3",
+      "name": "下 · PS5 下环一体式开关套筒.003",
+      "kind": "sleeve",
+      "position": [
+        -41.999973,
+        40.281566,
+        -12.800012
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        11.183197,
+        12.721312,
+        11.183412
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/buttons-down.glb",
+        "assetNode": "下_·_PS5_下环一体式开关套筒003"
+      },
+      "assemblyGroup": {
+        "id": "puretv-buttons-down-pin-sleeve",
+        "name": "下键 · 键帽插销 / 下套筒"
+      },
+      "interaction": {
+        "version": 1,
+        "status": "unconfigured",
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "anchor": [
+          0,
+          0,
+          0
+        ],
+        "proxySize": [
+          11.183197,
+          12.721312,
+          11.183412
+        ]
+      }
+    },
+    {
+      "id": "puretv-buttons-down-4",
+      "name": "下 · PS5 回位弹簧.003",
+      "kind": "spring",
+      "position": [
+        -41.999252,
+        45.845166,
+        -12.801421
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        6.075854,
+        4.04082,
+        6.074041
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/buttons-down.glb",
+        "assetNode": "下_·_PS5_回位弹簧003"
+      },
+      "assemblyGroup": {
+        "id": "puretv-buttons-down-spring-seat",
+        "name": "下键 · 弹簧 / 定位环"
+      },
+      "interaction": {
+        "version": 1,
+        "status": "unconfigured",
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "anchor": [
+          0,
+          0,
+          0
+        ],
+        "proxySize": [
+          6.075854,
+          4.04082,
+          6.074041
+        ]
+      }
+    },
+    {
+      "id": "puretv-buttons-down-5",
+      "name": "下 · PS5 弹簧定位环.003",
       "kind": "asset",
       "position": [
         -42,
-        46.371288,
+        47.485861,
+        -12.800002
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        5.166206,
+        1.00285,
+        5.166204
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/buttons-down.glb",
+        "assetNode": "下_·_PS5_弹簧定位环003"
+      },
+      "assemblyGroup": {
+        "id": "puretv-buttons-down-spring-seat",
+        "name": "下键 · 弹簧 / 定位环"
+      }
+    },
+    {
+      "id": "puretv-buttons-down-6",
+      "name": "下 · PS5 按杆.004",
+      "kind": "asset",
+      "position": [
+        -42,
+        43.999905,
+        -12.800002
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        3.500008,
+        1.300003,
+        3.50001
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/buttons-down.glb",
+        "assetNode": "下_·_PS5_按杆004"
+      },
+      "assemblyGroup": {
+        "id": "puretv-buttons-down-switch",
+        "name": "下键 · 开关 / 按杆 / 焊脚"
+      }
+    },
+    {
+      "id": "puretv-buttons-down-7",
+      "name": "下 · PS5 焊脚占位.013",
+      "kind": "asset",
+      "position": [
+        -44.100006,
+        38.849845,
+        -15.150004
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.650002,
+        3.000007,
+        0.650002
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/buttons-down.glb",
+        "assetNode": "下_·_PS5_焊脚占位013"
+      },
+      "assemblyGroup": {
+        "id": "puretv-buttons-down-switch",
+        "name": "下键 · 开关 / 按杆 / 焊脚"
+      }
+    },
+    {
+      "id": "puretv-buttons-down-8",
+      "name": "下 · PS5 焊脚占位.014",
+      "kind": "asset",
+      "position": [
+        -39.899998,
+        38.849845,
+        -15.150003
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.650002,
+        3.000007,
+        0.650002
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/buttons-down.glb",
+        "assetNode": "下_·_PS5_焊脚占位014"
+      },
+      "assemblyGroup": {
+        "id": "puretv-buttons-down-switch",
+        "name": "下键 · 开关 / 按杆 / 焊脚"
+      }
+    },
+    {
+      "id": "puretv-buttons-down-9",
+      "name": "下 · PS5 焊脚占位.015",
+      "kind": "asset",
+      "position": [
+        -44.100006,
+        38.849845,
+        -10.449996
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.650002,
+        3.000007,
+        0.650002
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/buttons-down.glb",
+        "assetNode": "下_·_PS5_焊脚占位015"
+      },
+      "assemblyGroup": {
+        "id": "puretv-buttons-down-switch",
+        "name": "下键 · 开关 / 按杆 / 焊脚"
+      }
+    },
+    {
+      "id": "puretv-buttons-down-10",
+      "name": "下 · PS5 焊脚占位.016",
+      "kind": "asset",
+      "position": [
+        -39.899998,
+        38.849845,
+        -10.449995
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.650002,
+        3.000007,
+        0.650002
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/buttons-down.glb",
+        "assetNode": "下_·_PS5_焊脚占位016"
+      },
+      "assemblyGroup": {
+        "id": "puretv-buttons-down-switch",
+        "name": "下键 · 开关 / 按杆 / 焊脚"
+      }
+    },
+    {
+      "id": "puretv-buttons-down-11",
+      "name": "下 · 旋锁弹性垫 0.002",
+      "kind": "asset",
+      "position": [
+        -42,
+        35.29091,
+        -17.912436
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1.581009,
+        0.509998,
+        1.134211
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/buttons-down.glb",
+        "assetNode": "下_·_旋锁弹性垫_0002"
+      }
+    },
+    {
+      "id": "puretv-buttons-down-12",
+      "name": "下 · 旋锁弹性垫 120.002",
+      "kind": "asset",
+      "position": [
+        -46.441687,
+        35.29091,
+        -10.191799
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1.649433,
+        0.509998,
+        1.777514
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/buttons-down.glb",
+        "assetNode": "下_·_旋锁弹性垫_120002"
+      }
+    },
+    {
+      "id": "puretv-buttons-down-13",
+      "name": "下 · 旋锁弹性垫 240.002",
+      "kind": "asset",
+      "position": [
+        -37.558313,
+        35.29091,
+        -10.191799
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1.649433,
+        0.509998,
+        1.777514
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/buttons-down.glb",
+        "assetNode": "下_·_旋锁弹性垫_240002"
+      }
+    },
+    {
+      "id": "puretv-buttons-up-1",
+      "name": "上 · PS5 6×6 开关.004",
+      "kind": "button",
+      "position": [
+        -42,
+        38.460492,
+        -31.200001
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        6.000015,
+        3.000008,
+        6.000015
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/buttons-up.glb",
+        "assetNode": "上_·_PS5_6×6_开关004"
+      },
+      "assemblyGroup": {
+        "id": "puretv-buttons-up-switch",
+        "name": "上键 · 开关 / 按杆 / 焊脚"
+      },
+      "interaction": {
+        "version": 1,
+        "status": "unconfigured",
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "anchor": [
+          0,
+          0,
+          0
+        ],
+        "proxySize": [
+          6.000015,
+          3.000008,
+          6.000015
+        ]
+      }
+    },
+    {
+      "id": "puretv-buttons-up-2",
+      "name": "上 · PS5 一体式键帽与蓝色插销.003",
+      "kind": "pin",
+      "position": [
+        -42,
+        49.932013,
         -31.246942
       ],
       "rotation": [
@@ -97,23 +1470,750 @@
       ],
       "size": [
         11.559998,
-        24.900761,
+        17.77931,
         12.275633
       ],
       "color": "#92a9b6",
       "fixed": false,
       "visible": true,
       "params": {
-        "assetUrl": "./models/buttons-up.glb"
+        "assetUrl": "./models/buttons-up.glb",
+        "assetNode": "上_·_PS5_一体式键帽与蓝色插销003"
+      },
+      "assemblyGroup": {
+        "id": "puretv-buttons-up-pin-sleeve",
+        "name": "上键 · 键帽插销 / 下套筒"
+      },
+      "interaction": {
+        "version": 1,
+        "status": "unconfigured",
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "anchor": [
+          0,
+          0,
+          0
+        ],
+        "proxySize": [
+          11.559998,
+          17.77931,
+          12.275633
+        ]
       }
     },
     {
-      "id": "puretv-buttons-a",
-      "name": "A 键 · 插销回弹总成",
+      "id": "puretv-buttons-up-3",
+      "name": "上 · PS5 下环一体式开关套筒.003",
+      "kind": "sleeve",
+      "position": [
+        -41.999958,
+        38.586782,
+        -31.200001
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        11.18325,
+        9.331749,
+        11.183395
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/buttons-up.glb",
+        "assetNode": "上_·_PS5_下环一体式开关套筒003"
+      },
+      "assemblyGroup": {
+        "id": "puretv-buttons-up-pin-sleeve",
+        "name": "上键 · 键帽插销 / 下套筒"
+      },
+      "interaction": {
+        "version": 1,
+        "status": "unconfigured",
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "anchor": [
+          0,
+          0,
+          0
+        ],
+        "proxySize": [
+          11.18325,
+          9.331749,
+          11.183395
+        ]
+      }
+    },
+    {
+      "id": "puretv-buttons-up-4",
+      "name": "上 · PS5 回位弹簧.003",
+      "kind": "spring",
+      "position": [
+        -42.000748,
+        42.455805,
+        -31.198583
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        6.075854,
+        4.04082,
+        6.074041
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/buttons-up.glb",
+        "assetNode": "上_·_PS5_回位弹簧003"
+      },
+      "assemblyGroup": {
+        "id": "puretv-buttons-up-spring-seat",
+        "name": "上键 · 弹簧 / 定位环"
+      },
+      "interaction": {
+        "version": 1,
+        "status": "unconfigured",
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "anchor": [
+          0,
+          0,
+          0
+        ],
+        "proxySize": [
+          6.075854,
+          4.04082,
+          6.074041
+        ]
+      }
+    },
+    {
+      "id": "puretv-buttons-up-5",
+      "name": "上 · PS5 弹簧定位环.003",
       "kind": "asset",
       "position": [
+        -42,
+        44.096498,
+        -31.200001
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        5.166206,
+        1.00285,
+        5.166206
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/buttons-up.glb",
+        "assetNode": "上_·_PS5_弹簧定位环003"
+      },
+      "assemblyGroup": {
+        "id": "puretv-buttons-up-spring-seat",
+        "name": "上键 · 弹簧 / 定位环"
+      }
+    },
+    {
+      "id": "puretv-buttons-up-6",
+      "name": "上 · PS5 按杆.004",
+      "kind": "asset",
+      "position": [
+        -42,
+        40.610545,
+        -31.2
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        3.500008,
+        1.300003,
+        3.50001
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/buttons-up.glb",
+        "assetNode": "上_·_PS5_按杆004"
+      },
+      "assemblyGroup": {
+        "id": "puretv-buttons-up-switch",
+        "name": "上键 · 开关 / 按杆 / 焊脚"
+      }
+    },
+    {
+      "id": "puretv-buttons-up-7",
+      "name": "上 · PS5 焊脚占位.013",
+      "kind": "asset",
+      "position": [
+        -39.899994,
+        35.460482,
+        -28.849997
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.650002,
+        3.000007,
+        0.650002
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/buttons-up.glb",
+        "assetNode": "上_·_PS5_焊脚占位013"
+      },
+      "assemblyGroup": {
+        "id": "puretv-buttons-up-switch",
+        "name": "上键 · 开关 / 按杆 / 焊脚"
+      }
+    },
+    {
+      "id": "puretv-buttons-up-8",
+      "name": "上 · PS5 焊脚占位.014",
+      "kind": "asset",
+      "position": [
+        -44.100002,
+        35.460482,
+        -28.849998
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.650002,
+        3.000007,
+        0.650002
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/buttons-up.glb",
+        "assetNode": "上_·_PS5_焊脚占位014"
+      },
+      "assemblyGroup": {
+        "id": "puretv-buttons-up-switch",
+        "name": "上键 · 开关 / 按杆 / 焊脚"
+      }
+    },
+    {
+      "id": "puretv-buttons-up-9",
+      "name": "上 · PS5 焊脚占位.015",
+      "kind": "asset",
+      "position": [
+        -39.899994,
+        35.460482,
+        -33.550007
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.650002,
+        3.000007,
+        0.650002
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/buttons-up.glb",
+        "assetNode": "上_·_PS5_焊脚占位015"
+      },
+      "assemblyGroup": {
+        "id": "puretv-buttons-up-switch",
+        "name": "上键 · 开关 / 按杆 / 焊脚"
+      }
+    },
+    {
+      "id": "puretv-buttons-up-10",
+      "name": "上 · PS5 焊脚占位.016",
+      "kind": "asset",
+      "position": [
+        -44.100002,
+        35.460482,
+        -33.550007
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.650002,
+        3.000007,
+        0.650002
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/buttons-up.glb",
+        "assetNode": "上_·_PS5_焊脚占位016"
+      },
+      "assemblyGroup": {
+        "id": "puretv-buttons-up-switch",
+        "name": "上键 · 开关 / 按杆 / 焊脚"
+      }
+    },
+    {
+      "id": "puretv-buttons-up-11",
+      "name": "上 · 旋锁弹性垫 0.002",
+      "kind": "asset",
+      "position": [
+        -42,
+        35.290909,
+        -26.087564
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1.581009,
+        0.51,
+        1.134211
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/buttons-up.glb",
+        "assetNode": "上_·_旋锁弹性垫_0002"
+      }
+    },
+    {
+      "id": "puretv-buttons-up-12",
+      "name": "上 · 旋锁弹性垫 120.002",
+      "kind": "asset",
+      "position": [
+        -37.558313,
+        35.290909,
+        -33.808201
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1.649433,
+        0.51,
+        1.777512
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/buttons-up.glb",
+        "assetNode": "上_·_旋锁弹性垫_120002"
+      }
+    },
+    {
+      "id": "puretv-buttons-up-13",
+      "name": "上 · 旋锁弹性垫 240.002",
+      "kind": "asset",
+      "position": [
+        -46.441687,
+        35.290909,
+        -33.808201
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1.649433,
+        0.51,
+        1.777512
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/buttons-up.glb",
+        "assetNode": "上_·_旋锁弹性垫_240002"
+      }
+    },
+    {
+      "id": "puretv-buttons-a-1",
+      "name": "A · 同款 6×6 开关.002",
+      "kind": "button",
+      "position": [
+        40.999996,
+        44.633966,
+        -9.5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        6.000015,
+        3.000008,
+        6.000015
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/buttons-a.glb",
+        "assetNode": "A_·_同款_6×6_开关002"
+      },
+      "assemblyGroup": {
+        "id": "puretv-buttons-a-switch",
+        "name": "A 键 · 开关 / 按杆 / 焊脚"
+      },
+      "interaction": {
+        "version": 1,
+        "status": "unconfigured",
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "anchor": [
+          0,
+          0,
+          0
+        ],
+        "proxySize": [
+          6.000015,
+          3.000008,
+          6.000015
+        ]
+      }
+    },
+    {
+      "id": "puretv-buttons-a-2",
+      "name": "A · 同款 下环一体式开关套筒.002",
+      "kind": "sleeve",
+      "position": [
+        40.999971,
+        43.712267,
+        -9.499987
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        11.183384,
+        11.427597,
+        11.183235
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/buttons-a.glb",
+        "assetNode": "A_·_同款_下环一体式开关套筒002"
+      },
+      "assemblyGroup": {
+        "id": "puretv-buttons-a-pin-sleeve",
+        "name": "A 键 · 键帽插销 / 下套筒"
+      },
+      "interaction": {
+        "version": 1,
+        "status": "unconfigured",
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "anchor": [
+          0,
+          0,
+          0
+        ],
+        "proxySize": [
+          11.183384,
+          11.427597,
+          11.183235
+        ]
+      }
+    },
+    {
+      "id": "puretv-buttons-a-3",
+      "name": "A · 同款 回位弹簧.002",
+      "kind": "spring",
+      "position": [
+        41.001412,
+        48.629278,
+        -9.499252
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        6.074041,
+        4.04082,
+        6.075855
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/buttons-a.glb",
+        "assetNode": "A_·_同款_回位弹簧002"
+      },
+      "assemblyGroup": {
+        "id": "puretv-buttons-a-spring-seat",
+        "name": "A 键 · 弹簧 / 定位环"
+      },
+      "interaction": {
+        "version": 1,
+        "status": "unconfigured",
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "anchor": [
+          0,
+          0,
+          0
+        ],
+        "proxySize": [
+          6.074041,
+          4.04082,
+          6.075855
+        ]
+      }
+    },
+    {
+      "id": "puretv-buttons-a-4",
+      "name": "A · 同款 弹簧定位环.002",
+      "kind": "asset",
+      "position": [
+        40.999996,
+        50.269975,
+        -9.5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        5.166206,
+        1.002852,
+        5.166206
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/buttons-a.glb",
+        "assetNode": "A_·_同款_弹簧定位环002"
+      },
+      "assemblyGroup": {
+        "id": "puretv-buttons-a-spring-seat",
+        "name": "A 键 · 弹簧 / 定位环"
+      }
+    },
+    {
+      "id": "puretv-buttons-a-5",
+      "name": "A · 同款 按杆.002",
+      "kind": "asset",
+      "position": [
+        40.999996,
+        46.784019,
+        -9.5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        3.500008,
+        1.300003,
+        3.500008
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/buttons-a.glb",
+        "assetNode": "A_·_同款_按杆002"
+      },
+      "assemblyGroup": {
+        "id": "puretv-buttons-a-switch",
+        "name": "A 键 · 开关 / 按杆 / 焊脚"
+      }
+    },
+    {
+      "id": "puretv-buttons-a-6",
+      "name": "A · 同款 焊脚占位.008",
+      "kind": "asset",
+      "position": [
+        43.349998,
+        41.633958,
+        -11.600006
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.650002,
+        3.000007,
+        0.650002
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/buttons-a.glb",
+        "assetNode": "A_·_同款_焊脚占位008"
+      },
+      "assemblyGroup": {
+        "id": "puretv-buttons-a-switch",
+        "name": "A 键 · 开关 / 按杆 / 焊脚"
+      }
+    },
+    {
+      "id": "puretv-buttons-a-7",
+      "name": "A · 同款 焊脚占位.009",
+      "kind": "asset",
+      "position": [
+        43.349998,
+        41.633958,
+        -7.399996
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.650002,
+        3.000007,
+        0.650002
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/buttons-a.glb",
+        "assetNode": "A_·_同款_焊脚占位009"
+      },
+      "assemblyGroup": {
+        "id": "puretv-buttons-a-switch",
+        "name": "A 键 · 开关 / 按杆 / 焊脚"
+      }
+    },
+    {
+      "id": "puretv-buttons-a-8",
+      "name": "A · 同款 焊脚占位.010",
+      "kind": "asset",
+      "position": [
+        38.64999,
+        41.633958,
+        -11.600006
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.650002,
+        3.000007,
+        0.650002
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/buttons-a.glb",
+        "assetNode": "A_·_同款_焊脚占位010"
+      },
+      "assemblyGroup": {
+        "id": "puretv-buttons-a-switch",
+        "name": "A 键 · 开关 / 按杆 / 焊脚"
+      }
+    },
+    {
+      "id": "puretv-buttons-a-9",
+      "name": "A · 同款 焊脚占位.011",
+      "kind": "asset",
+      "position": [
+        38.64999,
+        41.633958,
+        -7.399996
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.650002,
+        3.000007,
+        0.650002
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/buttons-a.glb",
+        "assetNode": "A_·_同款_焊脚占位011"
+      },
+      "assemblyGroup": {
+        "id": "puretv-buttons-a-switch",
+        "name": "A 键 · 开关 / 按杆 / 焊脚"
+      }
+    },
+    {
+      "id": "puretv-buttons-a-10",
+      "name": "A · 同款插销与圆形键帽.002",
+      "kind": "pin",
+      "position": [
         41.001287,
-        48.673693,
+        53.482034,
         -9.5
       ],
       "rotation": [
@@ -123,23 +2223,491 @@
       ],
       "size": [
         13.337421,
-        21.350449,
+        11.733765,
         13.338711
       ],
       "color": "#92a9b6",
       "fixed": false,
       "visible": true,
       "params": {
-        "assetUrl": "./models/buttons-a.glb"
+        "assetUrl": "./models/buttons-a.glb",
+        "assetNode": "A_·_同款插销与圆形键帽002"
+      },
+      "assemblyGroup": {
+        "id": "puretv-buttons-a-pin-sleeve",
+        "name": "A 键 · 键帽插销 / 下套筒"
+      },
+      "interaction": {
+        "version": 1,
+        "status": "unconfigured",
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "anchor": [
+          0,
+          0,
+          0
+        ],
+        "proxySize": [
+          13.337421,
+          11.733765,
+          13.338711
+        ]
       }
     },
     {
-      "id": "puretv-buttons-b",
-      "name": "B 键 · 插销回弹总成",
+      "id": "puretv-buttons-a-11",
+      "name": "A · 旋锁弹性垫 0.002",
       "kind": "asset",
+      "position": [
+        46.102438,
+        39.37097,
+        -9.5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1.114216,
+        0.504999,
+        1.575439
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/buttons-a.glb",
+        "assetNode": "A_·_旋锁弹性垫_0002"
+      }
+    },
+    {
+      "id": "puretv-buttons-a-12",
+      "name": "A · 旋锁弹性垫 120.002",
+      "kind": "asset",
+      "position": [
+        38.397955,
+        39.37097,
+        -13.932415
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1.765202,
+        0.504999,
+        1.630892
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/buttons-a.glb",
+        "assetNode": "A_·_旋锁弹性垫_120002"
+      }
+    },
+    {
+      "id": "puretv-buttons-a-13",
+      "name": "A · 旋锁弹性垫 240.002",
+      "kind": "asset",
+      "position": [
+        38.397955,
+        39.37097,
+        -5.067585
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1.765202,
+        0.504999,
+        1.630891
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/buttons-a.glb",
+        "assetNode": "A_·_旋锁弹性垫_240002"
+      }
+    },
+    {
+      "id": "puretv-buttons-a-14",
+      "name": "键帽标识 · A.002",
+      "kind": "asset",
+      "position": [
+        40.999377,
+        58.793903,
+        -9.671672
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        2.656043,
+        0.252309,
+        2.744587
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/buttons-a.glb",
+        "assetNode": "键帽标识_·_A002"
+      }
+    },
+    {
+      "id": "puretv-buttons-b-1",
+      "name": "B · 同款 6×6 开关.002",
+      "kind": "button",
+      "position": [
+        52.499996,
+        44.633966,
+        -21
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        6.000015,
+        3.000008,
+        6.000015
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/buttons-b.glb",
+        "assetNode": "B_·_同款_6×6_开关002"
+      },
+      "assemblyGroup": {
+        "id": "puretv-buttons-b-switch",
+        "name": "B 键 · 开关 / 按杆 / 焊脚"
+      },
+      "interaction": {
+        "version": 1,
+        "status": "unconfigured",
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "anchor": [
+          0,
+          0,
+          0
+        ],
+        "proxySize": [
+          6.000015,
+          3.000008,
+          6.000015
+        ]
+      }
+    },
+    {
+      "id": "puretv-buttons-b-2",
+      "name": "B · 同款 下环一体式开关套筒.002",
+      "kind": "sleeve",
+      "position": [
+        52.499996,
+        43.712404,
+        -21.000003
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        11.18335,
+        11.42787,
+        11.183233
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/buttons-b.glb",
+        "assetNode": "B_·_同款_下环一体式开关套筒002"
+      },
+      "assemblyGroup": {
+        "id": "puretv-buttons-b-pin-sleeve",
+        "name": "B 键 · 键帽插销 / 下套筒"
+      },
+      "interaction": {
+        "version": 1,
+        "status": "unconfigured",
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "anchor": [
+          0,
+          0,
+          0
+        ],
+        "proxySize": [
+          11.18335,
+          11.42787,
+          11.183233
+        ]
+      }
+    },
+    {
+      "id": "puretv-buttons-b-3",
+      "name": "B · 同款 回位弹簧.002",
+      "kind": "spring",
+      "position": [
+        52.501412,
+        48.629278,
+        -20.999252
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        6.074041,
+        4.04082,
+        6.075855
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/buttons-b.glb",
+        "assetNode": "B_·_同款_回位弹簧002"
+      },
+      "assemblyGroup": {
+        "id": "puretv-buttons-b-spring-seat",
+        "name": "B 键 · 弹簧 / 定位环"
+      },
+      "interaction": {
+        "version": 1,
+        "status": "unconfigured",
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "anchor": [
+          0,
+          0,
+          0
+        ],
+        "proxySize": [
+          6.074041,
+          4.04082,
+          6.075855
+        ]
+      }
+    },
+    {
+      "id": "puretv-buttons-b-4",
+      "name": "B · 同款 弹簧定位环.002",
+      "kind": "asset",
+      "position": [
+        52.499996,
+        50.269975,
+        -21
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        5.166206,
+        1.002852,
+        5.166206
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/buttons-b.glb",
+        "assetNode": "B_·_同款_弹簧定位环002"
+      },
+      "assemblyGroup": {
+        "id": "puretv-buttons-b-spring-seat",
+        "name": "B 键 · 弹簧 / 定位环"
+      }
+    },
+    {
+      "id": "puretv-buttons-b-5",
+      "name": "B · 同款 按杆.002",
+      "kind": "asset",
+      "position": [
+        52.499996,
+        46.784019,
+        -21
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        3.500008,
+        1.300003,
+        3.500008
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/buttons-b.glb",
+        "assetNode": "B_·_同款_按杆002"
+      },
+      "assemblyGroup": {
+        "id": "puretv-buttons-b-switch",
+        "name": "B 键 · 开关 / 按杆 / 焊脚"
+      }
+    },
+    {
+      "id": "puretv-buttons-b-6",
+      "name": "B · 同款 焊脚占位.008",
+      "kind": "asset",
+      "position": [
+        54.849998,
+        41.633958,
+        -23.100006
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.650002,
+        3.000007,
+        0.650002
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/buttons-b.glb",
+        "assetNode": "B_·_同款_焊脚占位008"
+      },
+      "assemblyGroup": {
+        "id": "puretv-buttons-b-switch",
+        "name": "B 键 · 开关 / 按杆 / 焊脚"
+      }
+    },
+    {
+      "id": "puretv-buttons-b-7",
+      "name": "B · 同款 焊脚占位.009",
+      "kind": "asset",
+      "position": [
+        54.849998,
+        41.633958,
+        -18.899996
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.650002,
+        3.000007,
+        0.650002
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/buttons-b.glb",
+        "assetNode": "B_·_同款_焊脚占位009"
+      },
+      "assemblyGroup": {
+        "id": "puretv-buttons-b-switch",
+        "name": "B 键 · 开关 / 按杆 / 焊脚"
+      }
+    },
+    {
+      "id": "puretv-buttons-b-8",
+      "name": "B · 同款 焊脚占位.010",
+      "kind": "asset",
+      "position": [
+        50.14999,
+        41.633958,
+        -23.100006
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.650002,
+        3.000007,
+        0.650002
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/buttons-b.glb",
+        "assetNode": "B_·_同款_焊脚占位010"
+      },
+      "assemblyGroup": {
+        "id": "puretv-buttons-b-switch",
+        "name": "B 键 · 开关 / 按杆 / 焊脚"
+      }
+    },
+    {
+      "id": "puretv-buttons-b-9",
+      "name": "B · 同款 焊脚占位.011",
+      "kind": "asset",
+      "position": [
+        50.14999,
+        41.633958,
+        -18.899996
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.650002,
+        3.000007,
+        0.650002
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/buttons-b.glb",
+        "assetNode": "B_·_同款_焊脚占位011"
+      },
+      "assemblyGroup": {
+        "id": "puretv-buttons-b-switch",
+        "name": "B 键 · 开关 / 按杆 / 焊脚"
+      }
+    },
+    {
+      "id": "puretv-buttons-b-10",
+      "name": "B · 同款插销与圆形键帽.002",
+      "kind": "pin",
       "position": [
         52.501287,
-        48.197085,
+        53.005426,
         -21
       ],
       "rotation": [
@@ -149,23 +2717,491 @@
       ],
       "size": [
         13.337421,
-        20.397232,
+        10.780548,
         13.338711
       ],
       "color": "#92a9b6",
       "fixed": false,
       "visible": true,
       "params": {
-        "assetUrl": "./models/buttons-b.glb"
+        "assetUrl": "./models/buttons-b.glb",
+        "assetNode": "B_·_同款插销与圆形键帽002"
+      },
+      "assemblyGroup": {
+        "id": "puretv-buttons-b-pin-sleeve",
+        "name": "B 键 · 键帽插销 / 下套筒"
+      },
+      "interaction": {
+        "version": 1,
+        "status": "unconfigured",
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "anchor": [
+          0,
+          0,
+          0
+        ],
+        "proxySize": [
+          13.337421,
+          10.780548,
+          13.338711
+        ]
       }
     },
     {
-      "id": "puretv-buttons-x",
-      "name": "X 键 · 插销回弹总成",
+      "id": "puretv-buttons-b-11",
+      "name": "B · 旋锁弹性垫 0.002",
       "kind": "asset",
+      "position": [
+        57.602438,
+        39.37097,
+        -21
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1.114216,
+        0.504999,
+        1.575439
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/buttons-b.glb",
+        "assetNode": "B_·_旋锁弹性垫_0002"
+      }
+    },
+    {
+      "id": "puretv-buttons-b-12",
+      "name": "B · 旋锁弹性垫 120.002",
+      "kind": "asset",
+      "position": [
+        49.897955,
+        39.37097,
+        -25.432415
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1.765202,
+        0.504999,
+        1.63089
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/buttons-b.glb",
+        "assetNode": "B_·_旋锁弹性垫_120002"
+      }
+    },
+    {
+      "id": "puretv-buttons-b-13",
+      "name": "B · 旋锁弹性垫 240.002",
+      "kind": "asset",
+      "position": [
+        49.897955,
+        39.37097,
+        -16.567585
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1.765202,
+        0.504999,
+        1.630891
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/buttons-b.glb",
+        "assetNode": "B_·_旋锁弹性垫_240002"
+      }
+    },
+    {
+      "id": "puretv-buttons-b-14",
+      "name": "键帽标识 · B.002",
+      "kind": "asset",
+      "position": [
+        52.608923,
+        57.852246,
+        -21.163694
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1.863747,
+        0.209251,
+        2.728269
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/buttons-b.glb",
+        "assetNode": "键帽标识_·_B002"
+      }
+    },
+    {
+      "id": "puretv-buttons-x-1",
+      "name": "X · 同款 6×6 开关.002",
+      "kind": "button",
+      "position": [
+        29.499996,
+        44.633966,
+        -21
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        6.000015,
+        3.000008,
+        6.000015
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/buttons-x.glb",
+        "assetNode": "X_·_同款_6×6_开关002"
+      },
+      "assemblyGroup": {
+        "id": "puretv-buttons-x-switch",
+        "name": "X 键 · 开关 / 按杆 / 焊脚"
+      },
+      "interaction": {
+        "version": 1,
+        "status": "unconfigured",
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "anchor": [
+          0,
+          0,
+          0
+        ],
+        "proxySize": [
+          6.000015,
+          3.000008,
+          6.000015
+        ]
+      }
+    },
+    {
+      "id": "puretv-buttons-x-2",
+      "name": "X · 同款 下环一体式开关套筒.002",
+      "kind": "sleeve",
+      "position": [
+        29.500008,
+        43.712252,
+        -21.000015
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        11.183327,
+        11.427567,
+        11.183285
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/buttons-x.glb",
+        "assetNode": "X_·_同款_下环一体式开关套筒002"
+      },
+      "assemblyGroup": {
+        "id": "puretv-buttons-x-pin-sleeve",
+        "name": "X 键 · 键帽插销 / 下套筒"
+      },
+      "interaction": {
+        "version": 1,
+        "status": "unconfigured",
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "anchor": [
+          0,
+          0,
+          0
+        ],
+        "proxySize": [
+          11.183327,
+          11.427567,
+          11.183285
+        ]
+      }
+    },
+    {
+      "id": "puretv-buttons-x-3",
+      "name": "X · 同款 回位弹簧.002",
+      "kind": "spring",
+      "position": [
+        29.501412,
+        48.629278,
+        -20.999252
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        6.074041,
+        4.04082,
+        6.075855
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/buttons-x.glb",
+        "assetNode": "X_·_同款_回位弹簧002"
+      },
+      "assemblyGroup": {
+        "id": "puretv-buttons-x-spring-seat",
+        "name": "X 键 · 弹簧 / 定位环"
+      },
+      "interaction": {
+        "version": 1,
+        "status": "unconfigured",
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "anchor": [
+          0,
+          0,
+          0
+        ],
+        "proxySize": [
+          6.074041,
+          4.04082,
+          6.075855
+        ]
+      }
+    },
+    {
+      "id": "puretv-buttons-x-4",
+      "name": "X · 同款 弹簧定位环.002",
+      "kind": "asset",
+      "position": [
+        29.499996,
+        50.269975,
+        -21
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        5.166206,
+        1.002852,
+        5.166206
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/buttons-x.glb",
+        "assetNode": "X_·_同款_弹簧定位环002"
+      },
+      "assemblyGroup": {
+        "id": "puretv-buttons-x-spring-seat",
+        "name": "X 键 · 弹簧 / 定位环"
+      }
+    },
+    {
+      "id": "puretv-buttons-x-5",
+      "name": "X · 同款 按杆.002",
+      "kind": "asset",
+      "position": [
+        29.499996,
+        46.784019,
+        -21
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        3.500008,
+        1.300003,
+        3.500008
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/buttons-x.glb",
+        "assetNode": "X_·_同款_按杆002"
+      },
+      "assemblyGroup": {
+        "id": "puretv-buttons-x-switch",
+        "name": "X 键 · 开关 / 按杆 / 焊脚"
+      }
+    },
+    {
+      "id": "puretv-buttons-x-6",
+      "name": "X · 同款 焊脚占位.008",
+      "kind": "asset",
+      "position": [
+        31.849998,
+        41.633958,
+        -23.100006
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.650002,
+        3.000007,
+        0.650002
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/buttons-x.glb",
+        "assetNode": "X_·_同款_焊脚占位008"
+      },
+      "assemblyGroup": {
+        "id": "puretv-buttons-x-switch",
+        "name": "X 键 · 开关 / 按杆 / 焊脚"
+      }
+    },
+    {
+      "id": "puretv-buttons-x-7",
+      "name": "X · 同款 焊脚占位.009",
+      "kind": "asset",
+      "position": [
+        31.849998,
+        41.633958,
+        -18.899996
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.650002,
+        3.000007,
+        0.650002
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/buttons-x.glb",
+        "assetNode": "X_·_同款_焊脚占位009"
+      },
+      "assemblyGroup": {
+        "id": "puretv-buttons-x-switch",
+        "name": "X 键 · 开关 / 按杆 / 焊脚"
+      }
+    },
+    {
+      "id": "puretv-buttons-x-8",
+      "name": "X · 同款 焊脚占位.010",
+      "kind": "asset",
+      "position": [
+        27.14999,
+        41.633958,
+        -23.100006
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.650002,
+        3.000007,
+        0.650002
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/buttons-x.glb",
+        "assetNode": "X_·_同款_焊脚占位010"
+      },
+      "assemblyGroup": {
+        "id": "puretv-buttons-x-switch",
+        "name": "X 键 · 开关 / 按杆 / 焊脚"
+      }
+    },
+    {
+      "id": "puretv-buttons-x-9",
+      "name": "X · 同款 焊脚占位.011",
+      "kind": "asset",
+      "position": [
+        27.14999,
+        41.633958,
+        -18.899996
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.650002,
+        3.000007,
+        0.650002
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/buttons-x.glb",
+        "assetNode": "X_·_同款_焊脚占位011"
+      },
+      "assemblyGroup": {
+        "id": "puretv-buttons-x-switch",
+        "name": "X 键 · 开关 / 按杆 / 焊脚"
+      }
+    },
+    {
+      "id": "puretv-buttons-x-10",
+      "name": "X · 同款插销与圆形键帽.002",
+      "kind": "pin",
       "position": [
         29.501287,
-        49.293295,
+        54.101638,
         -21
       ],
       "rotation": [
@@ -175,23 +3211,491 @@
       ],
       "size": [
         13.337421,
-        22.589653,
+        12.972969,
         13.338711
       ],
       "color": "#92a9b6",
       "fixed": false,
       "visible": true,
       "params": {
-        "assetUrl": "./models/buttons-x.glb"
+        "assetUrl": "./models/buttons-x.glb",
+        "assetNode": "X_·_同款插销与圆形键帽002"
+      },
+      "assemblyGroup": {
+        "id": "puretv-buttons-x-pin-sleeve",
+        "name": "X 键 · 键帽插销 / 下套筒"
+      },
+      "interaction": {
+        "version": 1,
+        "status": "unconfigured",
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "anchor": [
+          0,
+          0,
+          0
+        ],
+        "proxySize": [
+          13.337421,
+          12.972969,
+          13.338711
+        ]
       }
     },
     {
-      "id": "puretv-buttons-y",
-      "name": "Y 键 · 插销回弹总成",
+      "id": "puretv-buttons-x-11",
+      "name": "X · 旋锁弹性垫 0.002",
       "kind": "asset",
       "position": [
+        34.602438,
+        39.37097,
+        -21
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1.114216,
+        0.504999,
+        1.575439
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/buttons-x.glb",
+        "assetNode": "X_·_旋锁弹性垫_0002"
+      }
+    },
+    {
+      "id": "puretv-buttons-x-12",
+      "name": "X · 旋锁弹性垫 120.002",
+      "kind": "asset",
+      "position": [
+        26.897956,
+        39.37097,
+        -25.432415
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1.7652,
+        0.504999,
+        1.63089
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/buttons-x.glb",
+        "assetNode": "X_·_旋锁弹性垫_120002"
+      }
+    },
+    {
+      "id": "puretv-buttons-x-13",
+      "name": "X · 旋锁弹性垫 240.002",
+      "kind": "asset",
+      "position": [
+        26.897956,
+        39.37097,
+        -16.567585
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1.7652,
+        0.504999,
+        1.630891
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/buttons-x.glb",
+        "assetNode": "X_·_旋锁弹性垫_240002"
+      }
+    },
+    {
+      "id": "puretv-buttons-x-14",
+      "name": "键帽标识 · X.002",
+      "kind": "asset",
+      "position": [
+        29.499249,
+        60.0297,
+        -21.163962
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        2.802847,
+        0.299039,
+        2.729487
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/buttons-x.glb",
+        "assetNode": "键帽标识_·_X002"
+      }
+    },
+    {
+      "id": "puretv-buttons-y-1",
+      "name": "Y · 同款 6×6 开关.002",
+      "kind": "button",
+      "position": [
+        40.999996,
+        44.633966,
+        -32.5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        6.000015,
+        3.000008,
+        6.000015
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/buttons-y.glb",
+        "assetNode": "Y_·_同款_6×6_开关002"
+      },
+      "assemblyGroup": {
+        "id": "puretv-buttons-y-switch",
+        "name": "Y 键 · 开关 / 按杆 / 焊脚"
+      },
+      "interaction": {
+        "version": 1,
+        "status": "unconfigured",
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "anchor": [
+          0,
+          0,
+          0
+        ],
+        "proxySize": [
+          6.000015,
+          3.000008,
+          6.000015
+        ]
+      }
+    },
+    {
+      "id": "puretv-buttons-y-2",
+      "name": "Y · 同款 下环一体式开关套筒.002",
+      "kind": "sleeve",
+      "position": [
+        40.99999,
+        43.712404,
+        -32.499991
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        11.183315,
+        11.42787,
+        11.18326
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/buttons-y.glb",
+        "assetNode": "Y_·_同款_下环一体式开关套筒002"
+      },
+      "assemblyGroup": {
+        "id": "puretv-buttons-y-pin-sleeve",
+        "name": "Y 键 · 键帽插销 / 下套筒"
+      },
+      "interaction": {
+        "version": 1,
+        "status": "unconfigured",
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "anchor": [
+          0,
+          0,
+          0
+        ],
+        "proxySize": [
+          11.183315,
+          11.42787,
+          11.18326
+        ]
+      }
+    },
+    {
+      "id": "puretv-buttons-y-3",
+      "name": "Y · 同款 回位弹簧.002",
+      "kind": "spring",
+      "position": [
+        41.001412,
+        48.629278,
+        -32.499252
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        6.074041,
+        4.04082,
+        6.075855
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/buttons-y.glb",
+        "assetNode": "Y_·_同款_回位弹簧002"
+      },
+      "assemblyGroup": {
+        "id": "puretv-buttons-y-spring-seat",
+        "name": "Y 键 · 弹簧 / 定位环"
+      },
+      "interaction": {
+        "version": 1,
+        "status": "unconfigured",
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "anchor": [
+          0,
+          0,
+          0
+        ],
+        "proxySize": [
+          6.074041,
+          4.04082,
+          6.075855
+        ]
+      }
+    },
+    {
+      "id": "puretv-buttons-y-4",
+      "name": "Y · 同款 弹簧定位环.002",
+      "kind": "asset",
+      "position": [
+        40.999996,
+        50.269975,
+        -32.5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        5.166206,
+        1.002852,
+        5.166206
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/buttons-y.glb",
+        "assetNode": "Y_·_同款_弹簧定位环002"
+      },
+      "assemblyGroup": {
+        "id": "puretv-buttons-y-spring-seat",
+        "name": "Y 键 · 弹簧 / 定位环"
+      }
+    },
+    {
+      "id": "puretv-buttons-y-5",
+      "name": "Y · 同款 按杆.002",
+      "kind": "asset",
+      "position": [
+        40.999996,
+        46.784019,
+        -32.5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        3.500008,
+        1.300003,
+        3.500008
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/buttons-y.glb",
+        "assetNode": "Y_·_同款_按杆002"
+      },
+      "assemblyGroup": {
+        "id": "puretv-buttons-y-switch",
+        "name": "Y 键 · 开关 / 按杆 / 焊脚"
+      }
+    },
+    {
+      "id": "puretv-buttons-y-6",
+      "name": "Y · 同款 焊脚占位.008",
+      "kind": "asset",
+      "position": [
+        43.349998,
+        41.633958,
+        -34.600006
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.650002,
+        3.000007,
+        0.650002
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/buttons-y.glb",
+        "assetNode": "Y_·_同款_焊脚占位008"
+      },
+      "assemblyGroup": {
+        "id": "puretv-buttons-y-switch",
+        "name": "Y 键 · 开关 / 按杆 / 焊脚"
+      }
+    },
+    {
+      "id": "puretv-buttons-y-7",
+      "name": "Y · 同款 焊脚占位.009",
+      "kind": "asset",
+      "position": [
+        43.349998,
+        41.633958,
+        -30.399996
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.650002,
+        3.000007,
+        0.650002
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/buttons-y.glb",
+        "assetNode": "Y_·_同款_焊脚占位009"
+      },
+      "assemblyGroup": {
+        "id": "puretv-buttons-y-switch",
+        "name": "Y 键 · 开关 / 按杆 / 焊脚"
+      }
+    },
+    {
+      "id": "puretv-buttons-y-8",
+      "name": "Y · 同款 焊脚占位.010",
+      "kind": "asset",
+      "position": [
+        38.64999,
+        41.633958,
+        -34.600006
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.650002,
+        3.000007,
+        0.650002
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/buttons-y.glb",
+        "assetNode": "Y_·_同款_焊脚占位010"
+      },
+      "assemblyGroup": {
+        "id": "puretv-buttons-y-switch",
+        "name": "Y 键 · 开关 / 按杆 / 焊脚"
+      }
+    },
+    {
+      "id": "puretv-buttons-y-9",
+      "name": "Y · 同款 焊脚占位.011",
+      "kind": "asset",
+      "position": [
+        38.64999,
+        41.633958,
+        -30.399996
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.650002,
+        3.000007,
+        0.650002
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/buttons-y.glb",
+        "assetNode": "Y_·_同款_焊脚占位011"
+      },
+      "assemblyGroup": {
+        "id": "puretv-buttons-y-switch",
+        "name": "Y 键 · 开关 / 按杆 / 焊脚"
+      }
+    },
+    {
+      "id": "puretv-buttons-y-10",
+      "name": "Y · 同款插销与圆形键帽.002",
+      "kind": "pin",
+      "position": [
         41.001287,
-        48.830625,
+        53.638967,
         -32.500001
       ],
       "rotation": [
@@ -201,23 +3705,282 @@
       ],
       "size": [
         13.337421,
-        21.664314,
+        12.04763,
         13.338713
       ],
       "color": "#92a9b6",
       "fixed": false,
       "visible": true,
       "params": {
-        "assetUrl": "./models/buttons-y.glb"
+        "assetUrl": "./models/buttons-y.glb",
+        "assetNode": "Y_·_同款插销与圆形键帽002"
+      },
+      "assemblyGroup": {
+        "id": "puretv-buttons-y-pin-sleeve",
+        "name": "Y 键 · 键帽插销 / 下套筒"
+      },
+      "interaction": {
+        "version": 1,
+        "status": "unconfigured",
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "anchor": [
+          0,
+          0,
+          0
+        ],
+        "proxySize": [
+          13.337421,
+          12.04763,
+          13.338713
+        ]
       }
     },
     {
-      "id": "puretv-buttons-confirm",
-      "name": "确认键 · 旋锁总成",
+      "id": "puretv-buttons-y-11",
+      "name": "Y · 旋锁弹性垫 0.002",
       "kind": "asset",
       "position": [
+        46.102438,
+        39.37097,
+        -32.5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1.114216,
+        0.504999,
+        1.575439
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/buttons-y.glb",
+        "assetNode": "Y_·_旋锁弹性垫_0002"
+      }
+    },
+    {
+      "id": "puretv-buttons-y-12",
+      "name": "Y · 旋锁弹性垫 120.002",
+      "kind": "asset",
+      "position": [
+        38.397955,
+        39.37097,
+        -36.932415
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1.765202,
+        0.504999,
+        1.63089
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/buttons-y.glb",
+        "assetNode": "Y_·_旋锁弹性垫_120002"
+      }
+    },
+    {
+      "id": "puretv-buttons-y-13",
+      "name": "Y · 旋锁弹性垫 240.002",
+      "kind": "asset",
+      "position": [
+        38.397955,
+        39.37097,
+        -28.067585
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1.765202,
+        0.504999,
+        1.63089
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/buttons-y.glb",
+        "assetNode": "Y_·_旋锁弹性垫_240002"
+      }
+    },
+    {
+      "id": "puretv-buttons-y-14",
+      "name": "键帽标识 · Y.002",
+      "kind": "asset",
+      "position": [
+        41.001141,
+        59.13957,
+        -32.664357
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        2.405398,
+        0.226079,
+        2.728702
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/buttons-y.glb",
+        "assetNode": "键帽标识_·_Y002"
+      }
+    },
+    {
+      "id": "puretv-buttons-confirm-1",
+      "name": "确认 · 回弹压簧.005",
+      "kind": "spring",
+      "position": [
+        -0.000331,
+        47.069524,
+        -5.500456
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        5.799072,
+        3.239796,
+        5.767181
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/buttons-confirm.glb",
+        "assetNode": "确认_·_回弹压簧005"
+      },
+      "interaction": {
+        "version": 1,
+        "status": "unconfigured",
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "anchor": [
+          0,
+          0,
+          0
+        ],
+        "proxySize": [
+          5.799072,
+          3.239796,
+          5.767181
+        ]
+      }
+    },
+    {
+      "id": "puretv-buttons-confirm-2",
+      "name": "确认 · 常开开关.005",
+      "kind": "button",
+      "position": [
+        0,
+        41.841334,
+        -5.5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        6,
+        4.3,
+        6
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/buttons-confirm.glb",
+        "assetNode": "确认_·_常开开关005"
+      },
+      "assemblyGroup": {
+        "id": "puretv-buttons-confirm-switch",
+        "name": "确认键 · 开关 / 触头"
+      },
+      "interaction": {
+        "version": 1,
+        "status": "unconfigured",
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "anchor": [
+          0,
+          0,
+          0
+        ],
+        "proxySize": [
+          6,
+          4.3,
+          6
+        ]
+      }
+    },
+    {
+      "id": "puretv-buttons-confirm-3",
+      "name": "确认 · 开关触头.005",
+      "kind": "asset",
+      "position": [
+        0,
+        44.411333,
+        -5.5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        2.6,
+        0.84,
+        2.6
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/buttons-confirm.glb",
+        "assetNode": "确认_·_开关触头005"
+      },
+      "assemblyGroup": {
+        "id": "puretv-buttons-confirm-switch",
+        "name": "确认键 · 开关 / 触头"
+      }
+    },
+    {
+      "id": "puretv-buttons-confirm-4",
+      "name": "确认 · 旋锁座.005",
+      "kind": "bayonet-socket",
+      "position": [
         0.000001,
-        47.445758,
+        44.09091,
         -5.499999
       ],
       "rotation": [
@@ -226,24 +3989,98 @@
         0
       ],
       "size": [
-        14.784471,
-        15.508849,
-        15.683141
+        14.78447,
+        6.400001,
+        15.68314
       ],
       "color": "#92a9b6",
       "fixed": false,
       "visible": true,
       "params": {
-        "assetUrl": "./models/buttons-confirm.glb"
+        "assetUrl": "./models/buttons-confirm.glb",
+        "assetNode": "确认_·_旋锁座005"
+      },
+      "assemblyGroup": {
+        "id": "puretv-buttons-confirm-bayonet",
+        "name": "确认键 · 键帽 / 旋锁座"
+      },
+      "interaction": {
+        "version": 1,
+        "status": "unconfigured",
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "anchor": [
+          0,
+          0,
+          0
+        ],
+        "proxySize": [
+          14.78447,
+          6.400001,
+          15.68314
+        ]
       }
     },
     {
-      "id": "puretv-baseplates-dpad",
-      "name": "方向键 · 四键底座",
+      "id": "puretv-buttons-confirm-5",
+      "name": "确认 · 键帽.007",
+      "kind": "bayonet-pin",
+      "position": [
+        0,
+        50.320546,
+        -5.5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        14.2,
+        9.759272,
+        7.1
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/buttons-confirm.glb",
+        "assetNode": "确认_·_键帽007"
+      },
+      "assemblyGroup": {
+        "id": "puretv-buttons-confirm-bayonet",
+        "name": "确认键 · 键帽 / 旋锁座"
+      },
+      "interaction": {
+        "version": 1,
+        "status": "unconfigured",
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "anchor": [
+          0,
+          0,
+          0
+        ],
+        "proxySize": [
+          14.2,
+          9.759272,
+          7.1
+        ]
+      }
+    },
+    {
+      "id": "puretv-baseplates-dpad-1",
+      "name": "方向键 · 中央走线方形底座.002",
       "kind": "asset",
       "position": [
         -42.000001,
-        33.719909,
+        35.330909,
         -22.000001
       ],
       "rotation": [
@@ -253,23 +4090,152 @@
       ],
       "size": [
         34.417471,
-        5.761999,
+        2.539999,
         34.417471
       ],
       "color": "#92a9b6",
       "fixed": false,
       "visible": true,
       "params": {
-        "assetUrl": "./models/baseplates-dpad.glb"
+        "assetUrl": "./models/baseplates-dpad.glb",
+        "assetNode": "方向键_·_中央走线方形底座002"
+      },
+      "assemblyGroup": {
+        "id": "puretv-baseplates-dpad-fasteners",
+        "name": "方向键 · 底座 / M2 固定件"
       }
     },
     {
-      "id": "puretv-baseplates-abxy",
-      "name": "ABXY · 四键底座",
+      "id": "puretv-baseplates-dpad-2",
+      "name": "方向键 · 边中点 M2 固定螺钉 1.002",
+      "kind": "asset",
+      "position": [
+        -49.42,
+        33.338909,
+        -14.58
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        2.920002,
+        5,
+        2.920001
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/baseplates-dpad.glb",
+        "assetNode": "方向键_·_边中点_M2_固定螺钉_1002"
+      },
+      "assemblyGroup": {
+        "id": "puretv-baseplates-dpad-fasteners",
+        "name": "方向键 · 底座 / M2 固定件"
+      }
+    },
+    {
+      "id": "puretv-baseplates-dpad-3",
+      "name": "方向键 · 边中点 M2 固定螺钉 2.002",
+      "kind": "asset",
+      "position": [
+        -34.58,
+        33.338909,
+        -14.58
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        2.920002,
+        5,
+        2.920001
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/baseplates-dpad.glb",
+        "assetNode": "方向键_·_边中点_M2_固定螺钉_2002"
+      },
+      "assemblyGroup": {
+        "id": "puretv-baseplates-dpad-fasteners",
+        "name": "方向键 · 底座 / M2 固定件"
+      }
+    },
+    {
+      "id": "puretv-baseplates-dpad-4",
+      "name": "方向键 · 边中点 M2 固定螺钉 3.002",
+      "kind": "asset",
+      "position": [
+        -34.58,
+        33.338909,
+        -29.419999
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        2.920002,
+        5,
+        2.92
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/baseplates-dpad.glb",
+        "assetNode": "方向键_·_边中点_M2_固定螺钉_3002"
+      },
+      "assemblyGroup": {
+        "id": "puretv-baseplates-dpad-fasteners",
+        "name": "方向键 · 底座 / M2 固定件"
+      }
+    },
+    {
+      "id": "puretv-baseplates-dpad-5",
+      "name": "方向键 · 边中点 M2 固定螺钉 4.002",
+      "kind": "asset",
+      "position": [
+        -49.42,
+        33.338909,
+        -29.419999
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        2.920002,
+        5,
+        2.92
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/baseplates-dpad.glb",
+        "assetNode": "方向键_·_边中点_M2_固定螺钉_4002"
+      },
+      "assemblyGroup": {
+        "id": "puretv-baseplates-dpad-fasteners",
+        "name": "方向键 · 底座 / M2 固定件"
+      }
+    },
+    {
+      "id": "puretv-baseplates-abxy-1",
+      "name": "ABXY · 中央走线方形底座.002",
       "kind": "asset",
       "position": [
         40.999999,
-        37.373689,
+        38.98469,
         -20.999999
       ],
       "rotation": [
@@ -279,24 +4245,29 @@
       ],
       "size": [
         38.161409,
-        6.60956,
+        3.38756,
         38.161409
       ],
       "color": "#92a9b6",
       "fixed": false,
       "visible": true,
       "params": {
-        "assetUrl": "./models/baseplates-abxy.glb"
+        "assetUrl": "./models/baseplates-abxy.glb",
+        "assetNode": "ABXY_·_中央走线方形底座002"
+      },
+      "assemblyGroup": {
+        "id": "puretv-baseplates-abxy-fasteners",
+        "name": "ABXY · 底座 / M2 固定件"
       }
     },
     {
-      "id": "puretv-housing-top",
-      "name": "手柄 · 上盖",
+      "id": "puretv-baseplates-abxy-2",
+      "name": "ABXY · 边中点 M2 固定螺钉 1.002",
       "kind": "asset",
       "position": [
-        0,
-        40.05126,
-        0.499605
+        32.51,
+        36.992689,
+        -12.51
       ],
       "rotation": [
         0,
@@ -304,25 +4275,30 @@
         0
       ],
       "size": [
-        147.992371,
-        37.181545,
-        98.996342
+        2.920002,
+        5.847561,
+        2.92
       ],
       "color": "#92a9b6",
       "fixed": false,
       "visible": true,
       "params": {
-        "assetUrl": "./models/housing-top.glb"
+        "assetUrl": "./models/baseplates-abxy.glb",
+        "assetNode": "ABXY_·_边中点_M2_固定螺钉_1002"
+      },
+      "assemblyGroup": {
+        "id": "puretv-baseplates-abxy-fasteners",
+        "name": "ABXY · 底座 / M2 固定件"
       }
     },
     {
-      "id": "puretv-housing-bottom",
-      "name": "手柄 · 底壳",
+      "id": "puretv-baseplates-abxy-3",
+      "name": "ABXY · 边中点 M2 固定螺钉 2.002",
       "kind": "asset",
       "position": [
-        0,
-        24.520454,
-        0.5
+        49.49,
+        36.992689,
+        -12.51
       ],
       "rotation": [
         0,
@@ -330,24 +4306,1424 @@
         0
       ],
       "size": [
-        148,
-        49.040909,
-        99
+        2.920002,
+        5.847561,
+        2.92
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/baseplates-abxy.glb",
+        "assetNode": "ABXY_·_边中点_M2_固定螺钉_2002"
+      },
+      "assemblyGroup": {
+        "id": "puretv-baseplates-abxy-fasteners",
+        "name": "ABXY · 底座 / M2 固定件"
+      }
+    },
+    {
+      "id": "puretv-baseplates-abxy-4",
+      "name": "ABXY · 边中点 M2 固定螺钉 3.002",
+      "kind": "asset",
+      "position": [
+        49.49,
+        36.992689,
+        -29.490001
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        2.920002,
+        5.847561,
+        2.92
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/baseplates-abxy.glb",
+        "assetNode": "ABXY_·_边中点_M2_固定螺钉_3002"
+      },
+      "assemblyGroup": {
+        "id": "puretv-baseplates-abxy-fasteners",
+        "name": "ABXY · 底座 / M2 固定件"
+      }
+    },
+    {
+      "id": "puretv-baseplates-abxy-5",
+      "name": "ABXY · 边中点 M2 固定螺钉 4.002",
+      "kind": "asset",
+      "position": [
+        32.51,
+        36.992689,
+        -29.490001
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        2.920002,
+        5.847561,
+        2.92
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/baseplates-abxy.glb",
+        "assetNode": "ABXY_·_边中点_M2_固定螺钉_4002"
+      },
+      "assemblyGroup": {
+        "id": "puretv-baseplates-abxy-fasteners",
+        "name": "ABXY · 底座 / M2 固定件"
+      }
+    },
+    {
+      "id": "puretv-housing-top-1",
+      "name": "pureTV · 按键区圆滑过渡上壳.002",
+      "kind": "asset",
+      "position": [
+        0.001202,
+        40.049802,
+        0.494024
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        147.980476,
+        37.176781,
+        98.988628
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/housing-top.glb",
+        "assetNode": "pureTV_·_按键区圆滑过渡上壳002"
+      },
+      "assemblyGroup": {
+        "id": "puretv-housing-shell",
+        "name": "手柄 · 上盖 / 底壳"
+      }
+    },
+    {
+      "id": "puretv-housing-bottom-1",
+      "name": "底壳 · 合壳.007",
+      "kind": "asset",
+      "position": [
+        0,
+        24.519932,
+        0.499977
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        148.000259,
+        49.04232,
+        98.999962
       ],
       "color": "#92a9b6",
       "fixed": true,
       "visible": true,
       "params": {
-        "assetUrl": "./models/housing-bottom.glb"
+        "assetUrl": "./models/housing-bottom.glb",
+        "assetNode": "底壳_·_合壳007"
+      },
+      "assemblyGroup": {
+        "id": "puretv-housing-shell",
+        "name": "手柄 · 上盖 / 底壳"
       }
     },
     {
-      "id": "puretv-electronics-esp32-mount",
-      "name": "ESP32 · 固定总成",
+      "id": "puretv-electronics-esp32-mount-1",
+      "name": "ESP32 · 48.2 × 27.9 PCB.005",
+      "kind": "asset",
+      "position": [
+        -1.9,
+        28.44091,
+        -8.5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        48.200001,
+        1.6,
+        27.9
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/electronics-esp32-mount.glb",
+        "assetNode": "ESP32_·_482_×_279_PCB005"
+      },
+      "assemblyGroup": {
+        "id": "puretv-electronics-esp32-mount-board",
+        "name": "ESP32 · PCB / 板载模块"
+      }
+    },
+    {
+      "id": "puretv-electronics-esp32-mount-2",
+      "name": "ESP32 · RF module.005",
+      "kind": "asset",
+      "position": [
+        18.299999,
+        30.94091,
+        -8.5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        19.799999,
+        3.4,
+        18
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/electronics-esp32-mount.glb",
+        "assetNode": "ESP32_·_RF_module005"
+      },
+      "assemblyGroup": {
+        "id": "puretv-electronics-esp32-mount-board",
+        "name": "ESP32 · PCB / 板载模块"
+      }
+    },
+    {
+      "id": "puretv-electronics-esp32-mount-3",
+      "name": "ESP32 · USB connector.005",
+      "kind": "asset",
+      "position": [
+        -25.5,
+        30.640909,
+        -8.5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        5.2,
+        3.2,
+        8
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/electronics-esp32-mount.glb",
+        "assetNode": "ESP32_·_USB_connector005"
+      },
+      "assemblyGroup": {
+        "id": "puretv-electronics-esp32-mount-board",
+        "name": "ESP32 · PCB / 板载模块"
+      }
+    },
+    {
+      "id": "puretv-electronics-esp32-mount-4",
+      "name": "Header pin.170",
+      "kind": "asset",
+      "position": [
+        -21.4,
+        33.790909,
+        2.7
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.65,
+        5.7,
+        0.65
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/electronics-esp32-mount.glb",
+        "assetNode": "Header_pin170"
+      },
+      "assemblyGroup": {
+        "id": "puretv-electronics-esp32-mount-header-front",
+        "name": "ESP32 · 前排针座 / 排针"
+      }
+    },
+    {
+      "id": "puretv-electronics-esp32-mount-5",
+      "name": "Header pin.171",
+      "kind": "asset",
+      "position": [
+        -18.860001,
+        33.790909,
+        2.7
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.65,
+        5.7,
+        0.65
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/electronics-esp32-mount.glb",
+        "assetNode": "Header_pin171"
+      },
+      "assemblyGroup": {
+        "id": "puretv-electronics-esp32-mount-header-front",
+        "name": "ESP32 · 前排针座 / 排针"
+      }
+    },
+    {
+      "id": "puretv-electronics-esp32-mount-6",
+      "name": "Header pin.172",
+      "kind": "asset",
+      "position": [
+        -16.32,
+        33.790909,
+        2.7
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.65,
+        5.7,
+        0.65
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/electronics-esp32-mount.glb",
+        "assetNode": "Header_pin172"
+      },
+      "assemblyGroup": {
+        "id": "puretv-electronics-esp32-mount-header-front",
+        "name": "ESP32 · 前排针座 / 排针"
+      }
+    },
+    {
+      "id": "puretv-electronics-esp32-mount-7",
+      "name": "Header pin.173",
+      "kind": "asset",
+      "position": [
+        -13.78,
+        33.790909,
+        2.7
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.65,
+        5.7,
+        0.65
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/electronics-esp32-mount.glb",
+        "assetNode": "Header_pin173"
+      },
+      "assemblyGroup": {
+        "id": "puretv-electronics-esp32-mount-header-front",
+        "name": "ESP32 · 前排针座 / 排针"
+      }
+    },
+    {
+      "id": "puretv-electronics-esp32-mount-8",
+      "name": "Header pin.174",
+      "kind": "asset",
+      "position": [
+        -11.24,
+        33.790909,
+        2.7
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.65,
+        5.7,
+        0.65
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/electronics-esp32-mount.glb",
+        "assetNode": "Header_pin174"
+      },
+      "assemblyGroup": {
+        "id": "puretv-electronics-esp32-mount-header-front",
+        "name": "ESP32 · 前排针座 / 排针"
+      }
+    },
+    {
+      "id": "puretv-electronics-esp32-mount-9",
+      "name": "Header pin.175",
+      "kind": "asset",
+      "position": [
+        -8.7,
+        33.790909,
+        2.7
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.65,
+        5.7,
+        0.65
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/electronics-esp32-mount.glb",
+        "assetNode": "Header_pin175"
+      },
+      "assemblyGroup": {
+        "id": "puretv-electronics-esp32-mount-header-front",
+        "name": "ESP32 · 前排针座 / 排针"
+      }
+    },
+    {
+      "id": "puretv-electronics-esp32-mount-10",
+      "name": "Header pin.176",
+      "kind": "asset",
+      "position": [
+        -6.16,
+        33.790909,
+        2.7
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.65,
+        5.7,
+        0.65
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/electronics-esp32-mount.glb",
+        "assetNode": "Header_pin176"
+      },
+      "assemblyGroup": {
+        "id": "puretv-electronics-esp32-mount-header-front",
+        "name": "ESP32 · 前排针座 / 排针"
+      }
+    },
+    {
+      "id": "puretv-electronics-esp32-mount-11",
+      "name": "Header pin.177",
+      "kind": "asset",
+      "position": [
+        -3.62,
+        33.790909,
+        2.7
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.65,
+        5.7,
+        0.65
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/electronics-esp32-mount.glb",
+        "assetNode": "Header_pin177"
+      },
+      "assemblyGroup": {
+        "id": "puretv-electronics-esp32-mount-header-front",
+        "name": "ESP32 · 前排针座 / 排针"
+      }
+    },
+    {
+      "id": "puretv-electronics-esp32-mount-12",
+      "name": "Header pin.178",
+      "kind": "asset",
+      "position": [
+        -1.08,
+        33.790909,
+        2.7
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.65,
+        5.7,
+        0.65
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/electronics-esp32-mount.glb",
+        "assetNode": "Header_pin178"
+      },
+      "assemblyGroup": {
+        "id": "puretv-electronics-esp32-mount-header-front",
+        "name": "ESP32 · 前排针座 / 排针"
+      }
+    },
+    {
+      "id": "puretv-electronics-esp32-mount-13",
+      "name": "Header pin.179",
+      "kind": "asset",
+      "position": [
+        1.46,
+        33.790909,
+        2.7
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.65,
+        5.7,
+        0.65
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/electronics-esp32-mount.glb",
+        "assetNode": "Header_pin179"
+      },
+      "assemblyGroup": {
+        "id": "puretv-electronics-esp32-mount-header-front",
+        "name": "ESP32 · 前排针座 / 排针"
+      }
+    },
+    {
+      "id": "puretv-electronics-esp32-mount-14",
+      "name": "Header pin.180",
+      "kind": "asset",
+      "position": [
+        4,
+        33.790909,
+        2.7
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.65,
+        5.7,
+        0.65
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/electronics-esp32-mount.glb",
+        "assetNode": "Header_pin180"
+      },
+      "assemblyGroup": {
+        "id": "puretv-electronics-esp32-mount-header-front",
+        "name": "ESP32 · 前排针座 / 排针"
+      }
+    },
+    {
+      "id": "puretv-electronics-esp32-mount-15",
+      "name": "Header pin.181",
+      "kind": "asset",
+      "position": [
+        6.54,
+        33.790909,
+        2.7
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.65,
+        5.7,
+        0.65
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/electronics-esp32-mount.glb",
+        "assetNode": "Header_pin181"
+      },
+      "assemblyGroup": {
+        "id": "puretv-electronics-esp32-mount-header-front",
+        "name": "ESP32 · 前排针座 / 排针"
+      }
+    },
+    {
+      "id": "puretv-electronics-esp32-mount-16",
+      "name": "Header pin.182",
+      "kind": "asset",
+      "position": [
+        9.08,
+        33.790909,
+        2.7
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.65,
+        5.7,
+        0.65
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/electronics-esp32-mount.glb",
+        "assetNode": "Header_pin182"
+      },
+      "assemblyGroup": {
+        "id": "puretv-electronics-esp32-mount-header-front",
+        "name": "ESP32 · 前排针座 / 排针"
+      }
+    },
+    {
+      "id": "puretv-electronics-esp32-mount-17",
+      "name": "Header pin.183",
+      "kind": "asset",
+      "position": [
+        11.62,
+        33.790909,
+        2.7
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.65,
+        5.7,
+        0.65
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/electronics-esp32-mount.glb",
+        "assetNode": "Header_pin183"
+      },
+      "assemblyGroup": {
+        "id": "puretv-electronics-esp32-mount-header-front",
+        "name": "ESP32 · 前排针座 / 排针"
+      }
+    },
+    {
+      "id": "puretv-electronics-esp32-mount-18",
+      "name": "Header pin.184",
+      "kind": "asset",
+      "position": [
+        14.16,
+        33.790909,
+        2.7
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.65,
+        5.7,
+        0.65
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/electronics-esp32-mount.glb",
+        "assetNode": "Header_pin184"
+      },
+      "assemblyGroup": {
+        "id": "puretv-electronics-esp32-mount-header-front",
+        "name": "ESP32 · 前排针座 / 排针"
+      }
+    },
+    {
+      "id": "puretv-electronics-esp32-mount-19",
+      "name": "Header pin.185",
+      "kind": "asset",
+      "position": [
+        16.700001,
+        33.790909,
+        2.7
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.65,
+        5.7,
+        0.65
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/electronics-esp32-mount.glb",
+        "assetNode": "Header_pin185"
+      },
+      "assemblyGroup": {
+        "id": "puretv-electronics-esp32-mount-header-front",
+        "name": "ESP32 · 前排针座 / 排针"
+      }
+    },
+    {
+      "id": "puretv-electronics-esp32-mount-20",
+      "name": "Header pin.186",
+      "kind": "asset",
+      "position": [
+        19.24,
+        33.790909,
+        2.7
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.65,
+        5.7,
+        0.65
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/electronics-esp32-mount.glb",
+        "assetNode": "Header_pin186"
+      },
+      "assemblyGroup": {
+        "id": "puretv-electronics-esp32-mount-header-front",
+        "name": "ESP32 · 前排针座 / 排针"
+      }
+    },
+    {
+      "id": "puretv-electronics-esp32-mount-21",
+      "name": "Header pin.187",
+      "kind": "asset",
+      "position": [
+        -21.4,
+        33.790909,
+        -19.700001
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.65,
+        5.7,
+        0.65
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/electronics-esp32-mount.glb",
+        "assetNode": "Header_pin187"
+      },
+      "assemblyGroup": {
+        "id": "puretv-electronics-esp32-mount-header-back",
+        "name": "ESP32 · 后排针座 / 排针"
+      }
+    },
+    {
+      "id": "puretv-electronics-esp32-mount-22",
+      "name": "Header pin.188",
+      "kind": "asset",
+      "position": [
+        -18.860001,
+        33.790909,
+        -19.700001
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.65,
+        5.7,
+        0.65
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/electronics-esp32-mount.glb",
+        "assetNode": "Header_pin188"
+      },
+      "assemblyGroup": {
+        "id": "puretv-electronics-esp32-mount-header-back",
+        "name": "ESP32 · 后排针座 / 排针"
+      }
+    },
+    {
+      "id": "puretv-electronics-esp32-mount-23",
+      "name": "Header pin.189",
+      "kind": "asset",
+      "position": [
+        -16.32,
+        33.790909,
+        -19.700001
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.65,
+        5.7,
+        0.65
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/electronics-esp32-mount.glb",
+        "assetNode": "Header_pin189"
+      },
+      "assemblyGroup": {
+        "id": "puretv-electronics-esp32-mount-header-back",
+        "name": "ESP32 · 后排针座 / 排针"
+      }
+    },
+    {
+      "id": "puretv-electronics-esp32-mount-24",
+      "name": "Header pin.190",
+      "kind": "asset",
+      "position": [
+        -13.78,
+        33.790909,
+        -19.700001
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.65,
+        5.7,
+        0.65
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/electronics-esp32-mount.glb",
+        "assetNode": "Header_pin190"
+      },
+      "assemblyGroup": {
+        "id": "puretv-electronics-esp32-mount-header-back",
+        "name": "ESP32 · 后排针座 / 排针"
+      }
+    },
+    {
+      "id": "puretv-electronics-esp32-mount-25",
+      "name": "Header pin.191",
+      "kind": "asset",
+      "position": [
+        -11.24,
+        33.790909,
+        -19.700001
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.65,
+        5.7,
+        0.65
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/electronics-esp32-mount.glb",
+        "assetNode": "Header_pin191"
+      },
+      "assemblyGroup": {
+        "id": "puretv-electronics-esp32-mount-header-back",
+        "name": "ESP32 · 后排针座 / 排针"
+      }
+    },
+    {
+      "id": "puretv-electronics-esp32-mount-26",
+      "name": "Header pin.192",
+      "kind": "asset",
+      "position": [
+        -8.7,
+        33.790909,
+        -19.700001
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.65,
+        5.7,
+        0.65
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/electronics-esp32-mount.glb",
+        "assetNode": "Header_pin192"
+      },
+      "assemblyGroup": {
+        "id": "puretv-electronics-esp32-mount-header-back",
+        "name": "ESP32 · 后排针座 / 排针"
+      }
+    },
+    {
+      "id": "puretv-electronics-esp32-mount-27",
+      "name": "Header pin.193",
+      "kind": "asset",
+      "position": [
+        -6.16,
+        33.790909,
+        -19.700001
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.65,
+        5.7,
+        0.65
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/electronics-esp32-mount.glb",
+        "assetNode": "Header_pin193"
+      },
+      "assemblyGroup": {
+        "id": "puretv-electronics-esp32-mount-header-back",
+        "name": "ESP32 · 后排针座 / 排针"
+      }
+    },
+    {
+      "id": "puretv-electronics-esp32-mount-28",
+      "name": "Header pin.194",
+      "kind": "asset",
+      "position": [
+        -3.62,
+        33.790909,
+        -19.700001
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.65,
+        5.7,
+        0.65
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/electronics-esp32-mount.glb",
+        "assetNode": "Header_pin194"
+      },
+      "assemblyGroup": {
+        "id": "puretv-electronics-esp32-mount-header-back",
+        "name": "ESP32 · 后排针座 / 排针"
+      }
+    },
+    {
+      "id": "puretv-electronics-esp32-mount-29",
+      "name": "Header pin.195",
+      "kind": "asset",
+      "position": [
+        -1.08,
+        33.790909,
+        -19.700001
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.65,
+        5.7,
+        0.65
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/electronics-esp32-mount.glb",
+        "assetNode": "Header_pin195"
+      },
+      "assemblyGroup": {
+        "id": "puretv-electronics-esp32-mount-header-back",
+        "name": "ESP32 · 后排针座 / 排针"
+      }
+    },
+    {
+      "id": "puretv-electronics-esp32-mount-30",
+      "name": "Header pin.196",
+      "kind": "asset",
+      "position": [
+        1.46,
+        33.790909,
+        -19.700001
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.65,
+        5.7,
+        0.65
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/electronics-esp32-mount.glb",
+        "assetNode": "Header_pin196"
+      },
+      "assemblyGroup": {
+        "id": "puretv-electronics-esp32-mount-header-back",
+        "name": "ESP32 · 后排针座 / 排针"
+      }
+    },
+    {
+      "id": "puretv-electronics-esp32-mount-31",
+      "name": "Header pin.197",
+      "kind": "asset",
+      "position": [
+        4,
+        33.790909,
+        -19.700001
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.65,
+        5.7,
+        0.65
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/electronics-esp32-mount.glb",
+        "assetNode": "Header_pin197"
+      },
+      "assemblyGroup": {
+        "id": "puretv-electronics-esp32-mount-header-back",
+        "name": "ESP32 · 后排针座 / 排针"
+      }
+    },
+    {
+      "id": "puretv-electronics-esp32-mount-32",
+      "name": "Header pin.198",
+      "kind": "asset",
+      "position": [
+        6.54,
+        33.790909,
+        -19.700001
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.65,
+        5.7,
+        0.65
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/electronics-esp32-mount.glb",
+        "assetNode": "Header_pin198"
+      },
+      "assemblyGroup": {
+        "id": "puretv-electronics-esp32-mount-header-back",
+        "name": "ESP32 · 后排针座 / 排针"
+      }
+    },
+    {
+      "id": "puretv-electronics-esp32-mount-33",
+      "name": "Header pin.199",
+      "kind": "asset",
+      "position": [
+        9.08,
+        33.790909,
+        -19.700001
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.65,
+        5.7,
+        0.65
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/electronics-esp32-mount.glb",
+        "assetNode": "Header_pin199"
+      },
+      "assemblyGroup": {
+        "id": "puretv-electronics-esp32-mount-header-back",
+        "name": "ESP32 · 后排针座 / 排针"
+      }
+    },
+    {
+      "id": "puretv-electronics-esp32-mount-34",
+      "name": "Header pin.200",
+      "kind": "asset",
+      "position": [
+        11.62,
+        33.790909,
+        -19.700001
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.65,
+        5.7,
+        0.65
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/electronics-esp32-mount.glb",
+        "assetNode": "Header_pin200"
+      },
+      "assemblyGroup": {
+        "id": "puretv-electronics-esp32-mount-header-back",
+        "name": "ESP32 · 后排针座 / 排针"
+      }
+    },
+    {
+      "id": "puretv-electronics-esp32-mount-35",
+      "name": "Header pin.201",
+      "kind": "asset",
+      "position": [
+        14.16,
+        33.790909,
+        -19.700001
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.65,
+        5.7,
+        0.65
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/electronics-esp32-mount.glb",
+        "assetNode": "Header_pin201"
+      },
+      "assemblyGroup": {
+        "id": "puretv-electronics-esp32-mount-header-back",
+        "name": "ESP32 · 后排针座 / 排针"
+      }
+    },
+    {
+      "id": "puretv-electronics-esp32-mount-36",
+      "name": "Header pin.202",
+      "kind": "asset",
+      "position": [
+        16.700001,
+        33.790909,
+        -19.700001
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.65,
+        5.7,
+        0.65
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/electronics-esp32-mount.glb",
+        "assetNode": "Header_pin202"
+      },
+      "assemblyGroup": {
+        "id": "puretv-electronics-esp32-mount-header-back",
+        "name": "ESP32 · 后排针座 / 排针"
+      }
+    },
+    {
+      "id": "puretv-electronics-esp32-mount-37",
+      "name": "Header pin.203",
+      "kind": "asset",
+      "position": [
+        19.24,
+        33.790909,
+        -19.700001
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.65,
+        5.7,
+        0.65
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/electronics-esp32-mount.glb",
+        "assetNode": "Header_pin203"
+      },
+      "assemblyGroup": {
+        "id": "puretv-electronics-esp32-mount-header-back",
+        "name": "ESP32 · 后排针座 / 排针"
+      }
+    },
+    {
+      "id": "puretv-electronics-esp32-mount-38",
+      "name": "PCB · 0.40 mm 软垫（装配压缩至 0.25 mm）.010",
+      "kind": "asset",
+      "position": [
+        -10,
+        29.36591,
+        -8.5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        4.6,
+        0.25,
+        4.5
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/electronics-esp32-mount.glb",
+        "assetNode": "PCB_·_040_mm_软垫（装配压缩至_025_mm）010"
+      },
+      "assemblyGroup": {
+        "id": "puretv-electronics-esp32-mount-retainer",
+        "name": "ESP32 · 压条 / 软垫 / 螺钉"
+      }
+    },
+    {
+      "id": "puretv-electronics-esp32-mount-39",
+      "name": "PCB · 0.40 mm 软垫（装配压缩至 0.25 mm）.011",
+      "kind": "asset",
+      "position": [
+        3,
+        29.36591,
+        -8.5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        4.6,
+        0.25,
+        4.5
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/electronics-esp32-mount.glb",
+        "assetNode": "PCB_·_040_mm_软垫（装配压缩至_025_mm）011"
+      },
+      "assemblyGroup": {
+        "id": "puretv-electronics-esp32-mount-retainer",
+        "name": "ESP32 · 压条 / 软垫 / 螺钉"
+      }
+    },
+    {
+      "id": "puretv-electronics-esp32-mount-40",
+      "name": "PCB · 压条螺丝.009",
+      "kind": "asset",
+      "position": [
+        -34,
+        37.790909,
+        -8.5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        4.5,
+        1.7,
+        4.5
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/electronics-esp32-mount.glb",
+        "assetNode": "PCB_·_压条螺丝009"
+      },
+      "assemblyGroup": {
+        "id": "puretv-electronics-esp32-mount-retainer",
+        "name": "ESP32 · 压条 / 软垫 / 螺钉"
+      }
+    },
+    {
+      "id": "puretv-electronics-esp32-mount-41",
+      "name": "PCB · 右侧沉入式压条螺钉.002",
+      "kind": "asset",
+      "position": [
+        33.999999,
+        34.590909,
+        -8.5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        4.059999,
+        4.26,
+        4.06
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/electronics-esp32-mount.glb",
+        "assetNode": "PCB_·_右侧沉入式压条螺钉002"
+      },
+      "assemblyGroup": {
+        "id": "puretv-electronics-esp32-mount-retainer",
+        "name": "ESP32 · 压条 / 软垫 / 螺钉"
+      }
+    },
+    {
+      "id": "puretv-electronics-esp32-mount-42",
+      "name": "PCB · 长轴压条.005",
       "kind": "asset",
       "position": [
         0,
-        33.140909,
+        33.19091,
         -8.5
       ],
       "rotation": [
@@ -357,24 +5733,29 @@
       ],
       "size": [
         75,
-        10.999999,
-        27.9
+        7.4,
+        6.5
       ],
       "color": "#92a9b6",
       "fixed": false,
       "visible": true,
       "params": {
-        "assetUrl": "./models/electronics-esp32-mount.glb"
+        "assetUrl": "./models/electronics-esp32-mount.glb",
+        "assetNode": "PCB_·_长轴压条005"
+      },
+      "assemblyGroup": {
+        "id": "puretv-electronics-esp32-mount-retainer",
+        "name": "ESP32 · 压条 / 软垫 / 螺钉"
       }
     },
     {
-      "id": "puretv-electronics-harness",
-      "name": "手柄 · 九组线束",
+      "id": "puretv-electronics-esp32-mount-43",
+      "name": "Pin header.010",
       "kind": "asset",
       "position": [
-        0.673815,
-        36.846515,
-        -14.101357
+        -1.1,
+        30.640909,
+        2.7
       ],
       "rotation": [
         0,
@@ -382,15 +5763,671 @@
         0
       ],
       "size": [
-        108.696636,
-        10.945657,
-        34.159393
+        43.5,
+        2.8,
+        2.4
       ],
       "color": "#92a9b6",
       "fixed": false,
       "visible": true,
       "params": {
-        "assetUrl": "./models/electronics-harness.glb"
+        "assetUrl": "./models/electronics-esp32-mount.glb",
+        "assetNode": "Pin_header010"
+      },
+      "assemblyGroup": {
+        "id": "puretv-electronics-esp32-mount-header-front",
+        "name": "ESP32 · 前排针座 / 排针"
+      }
+    },
+    {
+      "id": "puretv-electronics-esp32-mount-44",
+      "name": "Pin header.011",
+      "kind": "asset",
+      "position": [
+        -1.1,
+        30.640909,
+        -19.700001
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        43.5,
+        2.8,
+        2.4
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/electronics-esp32-mount.glb",
+        "assetNode": "Pin_header011"
+      },
+      "assemblyGroup": {
+        "id": "puretv-electronics-esp32-mount-header-back",
+        "name": "ESP32 · 后排针座 / 排针"
+      }
+    },
+    {
+      "id": "puretv-electronics-harness-1",
+      "name": "A · 中央走线 GND.002",
+      "kind": "asset",
+      "position": [
+        26.034014,
+        38.303264,
+        -16.545461
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        28.6096,
+        7.475293,
+        11.453024
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/electronics-harness.glb",
+        "assetNode": "A_·_中央走线_GND002"
+      },
+      "assemblyGroup": {
+        "id": "puretv-electronics-harness-a",
+        "name": "A · GPIO / GND 线对"
+      }
+    },
+    {
+      "id": "puretv-electronics-harness-2",
+      "name": "A · 中央走线 GPIO.002",
+      "kind": "asset",
+      "position": [
+        15.965924,
+        37.642324,
+        -15.399424
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        54.971648,
+        6.062151,
+        9.160953
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/electronics-harness.glb",
+        "assetNode": "A_·_中央走线_GPIO002"
+      },
+      "assemblyGroup": {
+        "id": "puretv-electronics-harness-a",
+        "name": "A · GPIO / GND 线对"
+      }
+    },
+    {
+      "id": "puretv-electronics-harness-3",
+      "name": "B · 中央走线 GND.002",
+      "kind": "asset",
+      "position": [
+        31.627086,
+        38.463411,
+        -21.550424
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        46.790094,
+        7.696541,
+        3.540834
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/electronics-harness.glb",
+        "assetNode": "B_·_中央走线_GND002"
+      },
+      "assemblyGroup": {
+        "id": "puretv-electronics-harness-b",
+        "name": "B · GPIO / GND 线对"
+      }
+    },
+    {
+      "id": "puretv-electronics-harness-4",
+      "name": "B · 中央走线 GPIO.002",
+      "kind": "asset",
+      "position": [
+        18.575341,
+        37.634349,
+        -21.348068
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        65.244383,
+        6.077931,
+        3.821808
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/electronics-harness.glb",
+        "assetNode": "B_·_中央走线_GPIO002"
+      },
+      "assemblyGroup": {
+        "id": "puretv-electronics-harness-b",
+        "name": "B · GPIO / GND 线对"
+      }
+    },
+    {
+      "id": "puretv-electronics-harness-5",
+      "name": "X · 中央走线 GND.002",
+      "kind": "asset",
+      "position": [
+        22.370154,
+        38.43161,
+        -22.514194
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        35.555682,
+        7.741395,
+        1.708384
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/electronics-harness.glb",
+        "assetNode": "X_·_中央走线_GND002"
+      },
+      "assemblyGroup": {
+        "id": "puretv-electronics-harness-x",
+        "name": "X · GPIO / GND 线对"
+      }
+    },
+    {
+      "id": "puretv-electronics-harness-6",
+      "name": "X · 中央走线 GPIO.002",
+      "kind": "asset",
+      "position": [
+        15.166732,
+        37.916913,
+        -21.389969
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        48.351114,
+        6.694788,
+        3.939934
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/electronics-harness.glb",
+        "assetNode": "X_·_中央走线_GPIO002"
+      },
+      "assemblyGroup": {
+        "id": "puretv-electronics-harness-x",
+        "name": "X · GPIO / GND 线对"
+      }
+    },
+    {
+      "id": "puretv-electronics-harness-7",
+      "name": "Y · 中央走线 GND.002",
+      "kind": "asset",
+      "position": [
+        22.343969,
+        38.040846,
+        -26.458552
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        42.215559,
+        8.527494,
+        9.445002
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/electronics-harness.glb",
+        "assetNode": "Y_·_中央走线_GND002"
+      },
+      "assemblyGroup": {
+        "id": "puretv-electronics-harness-y",
+        "name": "Y · GPIO / GND 线对"
+      }
+    },
+    {
+      "id": "puretv-electronics-harness-8",
+      "name": "Y · 中央走线 GPIO.002",
+      "kind": "asset",
+      "position": [
+        11.879023,
+        37.636234,
+        -25.259386
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        56.919582,
+        6.133013,
+        11.843334
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/electronics-harness.glb",
+        "assetNode": "Y_·_中央走线_GPIO002"
+      },
+      "assemblyGroup": {
+        "id": "puretv-electronics-harness-y",
+        "name": "Y · GPIO / GND 线对"
+      }
+    },
+    {
+      "id": "puretv-electronics-harness-9",
+      "name": "上 · 中央走线 GND.002",
+      "kind": "asset",
+      "position": [
+        -25.104403,
+        37.163146,
+        -25.800493
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        32.746203,
+        10.296164,
+        8.138386
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/electronics-harness.glb",
+        "assetNode": "上_·_中央走线_GND002"
+      },
+      "assemblyGroup": {
+        "id": "puretv-electronics-harness-up",
+        "name": "上 · GPIO / GND 线对"
+      }
+    },
+    {
+      "id": "puretv-electronics-harness-10",
+      "name": "上 · 中央走线 GPIO.002",
+      "kind": "asset",
+      "position": [
+        -23.845716,
+        35.495958,
+        -24.596977
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        40.999875,
+        6.849231,
+        10.545418
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/electronics-harness.glb",
+        "assetNode": "上_·_中央走线_GPIO002"
+      },
+      "assemblyGroup": {
+        "id": "puretv-electronics-harness-up",
+        "name": "上 · GPIO / GND 线对"
+      }
+    },
+    {
+      "id": "puretv-electronics-harness-11",
+      "name": "下 · 中央走线 GND.002",
+      "kind": "asset",
+      "position": [
+        -24.778506,
+        36.840907,
+        -18.197808
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        39.091456,
+        10.93444,
+        8.138831
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/electronics-harness.glb",
+        "assetNode": "下_·_中央走线_GND002"
+      },
+      "assemblyGroup": {
+        "id": "puretv-electronics-harness-down",
+        "name": "下 · GPIO / GND 线对"
+      }
+    },
+    {
+      "id": "puretv-electronics-harness-12",
+      "name": "下 · 中央走线 GPIO.002",
+      "kind": "asset",
+      "position": [
+        -21.074507,
+        35.969949,
+        -17.276751
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        40.509846,
+        7.747294,
+        6.296718
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/electronics-harness.glb",
+        "assetNode": "下_·_中央走线_GPIO002"
+      },
+      "assemblyGroup": {
+        "id": "puretv-electronics-harness-down",
+        "name": "下 · GPIO / GND 线对"
+      }
+    },
+    {
+      "id": "puretv-electronics-harness-13",
+      "name": "公共接地 · GND 引线.002",
+      "kind": "asset",
+      "position": [
+        -19.521096,
+        38.82414,
+        -9.634096
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        4.307688,
+        4.566462,
+        25.224873
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/electronics-harness.glb",
+        "assetNode": "公共接地_·_GND_引线002"
+      },
+      "assemblyGroup": {
+        "id": "puretv-electronics-harness-common-ground",
+        "name": "公共接地 · 公共地线 / 汇流排"
+      }
+    },
+    {
+      "id": "puretv-electronics-harness-14",
+      "name": "公共接地 · GND 汇流排.002",
+      "kind": "asset",
+      "position": [
+        -2,
+        40.84091,
+        -22
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        31,
+        0.722801,
+        0.759998
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/electronics-harness.glb",
+        "assetNode": "公共接地_·_GND_汇流排002"
+      },
+      "assemblyGroup": {
+        "id": "puretv-electronics-harness-common-ground",
+        "name": "公共接地 · 公共地线 / 汇流排"
+      }
+    },
+    {
+      "id": "puretv-electronics-harness-15",
+      "name": "右 · 中央走线 GND.002",
+      "kind": "asset",
+      "position": [
+        -26.635247,
+        37.205466,
+        -20.942897
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        28.999496,
+        10.198944,
+        2.643282
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/electronics-harness.glb",
+        "assetNode": "右_·_中央走线_GND002"
+      },
+      "assemblyGroup": {
+        "id": "puretv-electronics-harness-right",
+        "name": "右 · GPIO / GND 线对"
+      }
+    },
+    {
+      "id": "puretv-electronics-harness-16",
+      "name": "右 · 中央走线 GPIO.002",
+      "kind": "asset",
+      "position": [
+        -18.033591,
+        35.501402,
+        -21.354823
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        44.608728,
+        6.802479,
+        4.045889
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/electronics-harness.glb",
+        "assetNode": "右_·_中央走线_GPIO002"
+      },
+      "assemblyGroup": {
+        "id": "puretv-electronics-harness-right",
+        "name": "右 · GPIO / GND 线对"
+      }
+    },
+    {
+      "id": "puretv-electronics-harness-17",
+      "name": "左 · 中央走线 GND.002",
+      "kind": "asset",
+      "position": [
+        -34.698833,
+        37.066457,
+        -23.045774
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        37.951341,
+        9.94891,
+        2.645224
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/electronics-harness.glb",
+        "assetNode": "左_·_中央走线_GND002"
+      },
+      "assemblyGroup": {
+        "id": "puretv-electronics-harness-left",
+        "name": "左 · GPIO / GND 线对"
+      }
+    },
+    {
+      "id": "puretv-electronics-harness-18",
+      "name": "左 · 中央走线 GPIO.002",
+      "kind": "asset",
+      "position": [
+        -34.22479,
+        35.496986,
+        -21.579396
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        31.28623,
+        6.826679,
+        5.31249
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/electronics-harness.glb",
+        "assetNode": "左_·_中央走线_GPIO002"
+      },
+      "assemblyGroup": {
+        "id": "puretv-electronics-harness-left",
+        "name": "左 · GPIO / GND 线对"
+      }
+    },
+    {
+      "id": "puretv-electronics-harness-19",
+      "name": "确认 · GND.005",
+      "kind": "asset",
+      "position": [
+        -2.796029,
+        40.434831,
+        -13.167891
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        2.150002,
+        3.769026,
+        18.209667
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/electronics-harness.glb",
+        "assetNode": "确认_·_GND005"
+      },
+      "assemblyGroup": {
+        "id": "puretv-electronics-harness-confirm",
+        "name": "确认 · GPIO / GND 线对"
+      }
+    },
+    {
+      "id": "puretv-electronics-harness-20",
+      "name": "确认 · GPIO.005",
+      "kind": "asset",
+      "position": [
+        -1.338559,
+        38.236691,
+        -12.005711
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        10.198101,
+        3.391565,
+        15.93919
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/electronics-harness.glb",
+        "assetNode": "确认_·_GPIO005"
+      },
+      "assemblyGroup": {
+        "id": "puretv-electronics-harness-confirm",
+        "name": "确认 · GPIO / GND 线对"
       }
     }
   ]
