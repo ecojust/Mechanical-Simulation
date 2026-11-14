@@ -66,7 +66,7 @@ npm run desktop:pack
 
 本机原生可执行文件位于 `src-tauri/target/release/`。当前仅发布 **macOS Apple Silicon（M 系列，arm64）** 安装包；需要 macOS 13 或更新系统。GitHub Actions 在推送匹配 package 版本的 `vX.Y.Z` 标签后，自动验证、构建并发布 DMG、ZIP 与 SHA-256 校验清单。
 
-[下载 v0.3.0](https://github.com/ecojust/Mechanical-Simulation/releases/tag/v0.3.0)：DMG **7.72 MB**，ZIP **7.64 MB**。Tauri 版 DMG 相比 v0.2.0 Electron 版的 123.06 MB 减少 **93.7%**；[实际 Mac 打包应用验证已通过](https://github.com/ecojust/Mechanical-Simulation/actions/runs/43588610970)。
+[下载 v0.4.1](https://github.com/ecojust/Mechanical-Simulation/releases/tag/v0.4.1)：DMG **8.30 MB**，ZIP **8.22 MB**。Tauri 版 DMG 相比 v0.2.0 Electron 版的 123.06 MB 减少 **93.3%**；[实际 Mac 打包应用验证已通过](https://github.com/ecojust/Mechanical-Simulation/actions/runs/43596336457)，包含完整手柄九键接触点灯与回弹试验。
 
 M 系列 Mac 上也可本地构建与检查：
 

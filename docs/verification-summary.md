@@ -18,6 +18,12 @@
 
 [真实MCP执行记录](puretv-mcp-verification.json)通过官方SDK、原生stdio服务与实际浏览器工作台完成108次工程变更；九键在接触前、压下和释放三个状态均验证源证据匹配。实际读取活动件、固定件及弹簧渲染矩阵，压下时仅对应灯亮、释放后九灯全灭。本地记录的`nativeDesktop=false`表示Chromium开发通路；macOS发布流水线另须启动实际打包WKWebView，以`requireEvidence`完整重跑同一193件试验，成功后才发布。
 
+2026-11-14，[macOS 发布流水线 43596336457](https://github.com/ecojust/Mechanical-Simulation/actions/runs/43596336457)全部通过。实际打包WKWebView经原生MCP重建193件试验台，九键逐一通过接触前断电、接触点灯、释放断电及真实键帽/弹簧/触头运动检查；源证据为pass，错误0项、名义参数等提示28项，渲染器无错误。官方SDK的19工具/38次调用、上传与分页导出，以及旋锁全路径、PBR和子件分组检查均通过。
+
+公开附件已重新下载并独立核对SHA-256。实际包大小：DMG **8,299,260字节（8.30 MB）**，ZIP **8,224,321字节（8.22 MB）**；DMG较v0.2.0 Electron版减少93.3%。[下载v0.4.1](https://github.com/ecojust/Mechanical-Simulation/releases/tag/v0.4.1)，仅macOS 13及以上Apple Silicon，ad-hoc签名、未公证。
+
+长期保存的[Mac验收日志摘录与附件校验](puretv-macos-release-verification.json)记录实际流水线、九键结果和公开文件哈希；它不是完整逐操作报告。完整原生MCP报告在该流水线的`puretv-macos-mcp-verification-0.4.1` artifact中保留30天，浏览器逐操作记录另见上文。
+
 弹簧为名义线性模型，显示/网格行程使用轴向仿射变形；钢丝真实截面保持、触发力、摩擦、疲劳及打印偏差尚未实测。软垫锁装需约50.5–51%压缩，只核剩余几何厚度，未认证材料允许应变或装配力。离散姿态不构成连续碰撞或制造合格证明，线材弯曲半径也未实测。
 
 v0.4.0首次Mac流水线在路径脱敏测试中发现硬编码Linux工作目录，未进入发布。v0.4.1将该测试改为从测试模块位置构造真实仓库路径，保留原有断言及验证规则。

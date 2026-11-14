@@ -1,0 +1,122 @@
+{
+  "version": 1,
+  "kind": "packaged-macos-release-log-extract",
+  "release": "v0.4.1",
+  "source": {
+    "runId": 43596336457,
+    "url": "https://github.com/ecojust/Mechanical-Simulation/actions/runs/43596336457",
+    "commit": "935b8b26585166897c7bd254eea30912a63a6103",
+    "conclusion": "success"
+  },
+  "scope": "Extracted from successful GitHub Actions logs and independently downloaded public release assets. This file is not the complete per-operation MCP report or an exported project.",
+  "nativeMcpReportArtifact": {
+    "id": 14114217593,
+    "name": "puretv-macos-mcp-verification-0.4.1",
+    "url": "https://github.com/ecojust/Mechanical-Simulation/actions/runs/43596336457/artifacts/14114217593",
+    "retentionDays": 30
+  },
+  "officialMcpSdk": {
+    "tools": 19,
+    "authenticatedCalls": 38,
+    "largeUpload": "greater than 16 MiB",
+    "pagedExport": true
+  },
+  "buttonChecks": [
+    "左: approach OFF / contact ON / release OFF, real cap + spring + actuator motion",
+    "右: approach OFF / contact ON / release OFF, real cap + spring + actuator motion",
+    "下: approach OFF / contact ON / release OFF, real cap + spring + actuator motion",
+    "上: approach OFF / contact ON / release OFF, real cap + spring + actuator motion",
+    "A: approach OFF / contact ON / release OFF, real cap + spring + actuator motion",
+    "B: approach OFF / contact ON / release OFF, real cap + spring + actuator motion",
+    "X: approach OFF / contact ON / release OFF, real cap + spring + actuator motion",
+    "Y: approach OFF / contact ON / release OFF, real cap + spring + actuator motion",
+    "确认: approach OFF / contact ON / release OFF, real cap + spring + actuator motion"
+  ],
+  "packagedSmoke": {
+    "canvasSize": [
+      630,
+      300
+    ],
+    "catalogCount": 15,
+    "deformedPartCount": 0,
+    "desktop": true,
+    "documentTitle": "Mechanical Studio · 机械仿真工作台",
+    "glbAssetAvailable": true,
+    "isolated": true,
+    "loadedAssetCount": 0,
+    "mechanismContacts": {},
+    "mechanismStates": {},
+    "modelMagic": "glTF",
+    "ready": true,
+    "renderedDeformations": {},
+    "renderedPositions": {},
+    "rendererErrors": [],
+    "sourceEvidence": null,
+    "webgl": true,
+    "mcpTools": 19,
+    "bayonet": "insert / lock / blocked withdrawal / unlock / withdraw",
+    "components": "STL import / typed instance / PBR recolor / portable export / grouped repository meshes / compound press and spring rebound",
+    "puretv": {
+      "sourceParts": 183,
+      "totalParts": 193,
+      "buttons": 9,
+      "sourceEvidence": "pass",
+      "issues": {
+        "error": 0,
+        "warning": 28,
+        "pass": 18
+      }
+    }
+  },
+  "publicAssets": [
+    {
+      "name": "Mechanical-Studio-0.4.1-macos-arm64.dmg",
+      "bytes": 8299260,
+      "sha256": "cfdaa4550f454d7198b1840705ef6b6d83eb1a149142aa5d19efa600572d060c"
+    },
+    {
+      "name": "Mechanical-Studio-0.4.1-macos-arm64.zip",
+      "bytes": 8224321,
+      "sha256": "c919b15082154d2eeba74c4e7642b64ed3eb32082f122b7b17e609b23ee2765b"
+    },
+    {
+      "name": "SHA256SUMS.txt",
+      "bytes": 212,
+      "sha256": "3ef1ead5af89d93d06aeb4729c5fdc19c28ab4d239f538d9e74b2f0d0e408a2f"
+    }
+  ],
+  "checksumsIndependentlyVerified": true,
+  "successfulJobs": [
+    {
+      "name": "Validate and build macOS arm64",
+      "steps": [
+        "Set up job",
+        "Checkout version tag",
+        "Set up Node.js",
+        "Set up native Rust toolchain",
+        "Verify architecture and release version",
+        "Install locked dependencies",
+        "Verify mechanics, project data, and original assets",
+        "Build Apple Silicon DMG and ZIP",
+        "Verify native architectures, signature, and archive contents",
+        "Verify packaged MCP against the official protocol client",
+        "Start packaged application and check the workbench",
+        "Preserve actual packaged controller verification",
+        "Upload only the verified Apple Silicon release files",
+        "Post Set up Node.js",
+        "Post Checkout version tag",
+        "Complete job"
+      ]
+    },
+    {
+      "name": "Publish verified macOS arm64 release",
+      "steps": [
+        "Set up job",
+        "Download verified release files",
+        "Verify checksums and release file allowlist",
+        "Publish GitHub Release",
+        "Complete job"
+      ]
+    }
+  ]
+}
