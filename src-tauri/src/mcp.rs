@@ -525,6 +525,22 @@ pub use desktop::{mcp_reply, mcp_set_enabled, mcp_status, start_bridge};
 
 #[cfg(test)]
 mod tests {
+    #[test]
+    fn calibrated_dimensions_survive_json_roundtrips_without_bit_changes() {
+        for expected in [1.8233663914345257_f64, 3.4636282920837402_f64] {
+            let encoded = format!(r#"{{"dimension":{expected}}}"#);
+            let parsed: serde_json::Value = serde_json::from_str(&encoded).unwrap();
+            let forwarded: serde_json::Value = serde_json::from_str(&parsed.to_string()).unwrap();
+            assert_eq!(
+                parsed["dimension"].as_f64().unwrap().to_bits(),
+                expected.to_bits()
+            );
+            assert_eq!(
+                forwarded["dimension"].as_f64().unwrap().to_bits(),
+                expected.to_bits()
+            );
+        }
+    }
     use super::*;
     #[test]
     fn protocol_initializes_and_lists_real_tools() {

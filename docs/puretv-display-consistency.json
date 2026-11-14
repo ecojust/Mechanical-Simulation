@@ -1,0 +1,78 @@
+{
+  "status": "pass",
+  "scope": "Rendered source spring endpoints and physical contact surfaces match measured calibration within 0.001 mm; collision/path evidence is separate.",
+  "buttons": [
+    {
+      "key": "left",
+      "sourceFile": "buttons/left.blend",
+      "sourceSha256": "3101d6492dd00cbd2be772090602374be193f264de2eb092fc5eb76f4e9015fc",
+      "displaySha256": "9e4f31a9ab153e9cac33b6ea2f920872485b58315a0ec4f21625eb7c771a7eff",
+      "springEndpointErrorMm": 0.0000013581020965602875,
+      "contactSurfaceErrorMm": 0
+    },
+    {
+      "key": "right",
+      "sourceFile": "buttons/right.blend",
+      "sourceSha256": "84e6de6ba5b1e17301acd0cc4f404cc74fb45bf02185f13d17a1240ae1311144",
+      "displaySha256": "5275c4c080f517360fcb1e635fed106b0579065d5c6ab98ba3d1c9e2aba2ec08",
+      "springEndpointErrorMm": 0.0000018166795818785886,
+      "contactSurfaceErrorMm": 0
+    },
+    {
+      "key": "down",
+      "sourceFile": "buttons/down.blend",
+      "sourceSha256": "ee9f528457ae365735ba772f891ee3de180854abbd1afdd155862fed2de22c47",
+      "displaySha256": "f64d7d4ed917a2d20ad362543d3ccf7f2bc89ff3add4e4200cabb39cdc2b027d",
+      "springEndpointErrorMm": 7.272264852531407e-7,
+      "contactSurfaceErrorMm": 0
+    },
+    {
+      "key": "up",
+      "sourceFile": "buttons/up.blend",
+      "sourceSha256": "8ecd5118238b99caffe3ad7b58998e6b07ddd6be4eff21f70a85a8d08822b909",
+      "displaySha256": "b87624e0867d1eca0f63662106eee69528dbec884f96a6b574b6ce7b2f808b16",
+      "springEndpointErrorMm": 6.731184498676157e-10,
+      "contactSurfaceErrorMm": 4.76837158203125e-7
+    },
+    {
+      "key": "a",
+      "sourceFile": "buttons/a.blend",
+      "sourceSha256": "5e50ca2bc37b022d2a8fb85c983a08d3c66100d3705d23d3e9467316516b4508",
+      "displaySha256": "d3016f68b0376fca22e22e1773084b19752d161d9463f25ffa174ddd78f99f7e",
+      "springEndpointErrorMm": 0.0000013581020965602875,
+      "contactSurfaceErrorMm": 0
+    },
+    {
+      "key": "b",
+      "sourceFile": "buttons/b.blend",
+      "sourceSha256": "ec5cbb6447b4a2025d85edae8fb7cd11f97d9c6e2ca4a1a7b93001bef20d083d",
+      "displaySha256": "ecfd5ac56cb46aa4265ecefb3aff17ce1e648062962253f7216ec5e0944315d1",
+      "springEndpointErrorMm": 0.0000013581020965602875,
+      "contactSurfaceErrorMm": 0
+    },
+    {
+      "key": "x",
+      "sourceFile": "buttons/x.blend",
+      "sourceSha256": "93c1bc7e9ee279a2f1f3f44808639889c6816e210e6bea1f0b304585b4343cbb",
+      "displaySha256": "3bdce491528cde01e888585e7fdb3c5d92f90ea17d234a451d2fe4fc515bfe79",
+      "springEndpointErrorMm": 0.0000013581020965602875,
+      "contactSurfaceErrorMm": 0
+    },
+    {
+      "key": "y",
+      "sourceFile": "buttons/y.blend",
+      "sourceSha256": "16333679918ad7bbd8bbedf74becb50889a95044192ee0a2dcb456a61e85ee01",
+      "displaySha256": "3c46ec708806f4b263ff1399413449d0243569868b4dd0db77892477190640d5",
+      "springEndpointErrorMm": 0.0000013581020965602875,
+      "contactSurfaceErrorMm": 0
+    },
+    {
+      "key": "confirm",
+      "sourceFile": "buttons/confirm.blend",
+      "sourceSha256": "6b42811a2e4f6bc66f0a5edcf5fd7de0226795ebdfeca60e4bb6c36ae8751865",
+      "displaySha256": "b4809e89d0129b80f2d3e6c7806f858a2a6a0571ccb83b744d508a71a0df8193",
+      "springEndpointErrorMm": 0,
+      "contactSurfaceErrorMm": 9.536741316651387e-7
+    }
+  ]
+}

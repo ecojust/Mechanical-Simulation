@@ -533,8 +533,10 @@ export default function Viewport(props: ViewportProps) {
       );
       // Read committed Three transforms, rather than echoing input props, for mechanism diagnostics.
       const tracked = [...new Set(p.trackedPartIds ?? [])].flatMap((id) => {
-        const object = models.get(id)?.object;
-        return object ? [{ id, object }] : [];
+        const entry = models.get(id);
+        return entry
+          ? [{ id, object: entry.object, deformation: entry.deformation }]
+          : [];
       });
       viewportRef.current?.setAttribute(
         "data-rendered-positions",
@@ -557,6 +559,30 @@ export default function Viewport(props: ViewportProps) {
               ],
             ]),
           ),
+        ),
+      );
+      viewportRef.current?.setAttribute(
+        "data-rendered-deformations",
+        JSON.stringify(
+          Object.fromEntries(
+            tracked.map(({ id, deformation }) => [
+              id,
+              deformation.matrix.toArray(),
+            ]),
+          ),
+        ),
+      );
+      // Count committed Three matrices, including the same 1e-4 rest tolerance
+      // used by the diagnostics; input ratios alone cannot prove rendered deformation.
+      viewportRef.current?.setAttribute(
+        "data-deformed-parts",
+        String(
+          [...models.values()].filter(({ deformation }) =>
+            deformation.matrix.elements.some(
+              (value, index) =>
+                Math.abs(value - (index % 5 === 0 ? 1 : 0)) > 0.0001,
+            ),
+          ).length,
         ),
       );
       grid.visible = p.showGrid;
@@ -643,9 +669,7 @@ export default function Viewport(props: ViewportProps) {
       controls.target.copy(center);
       const view = latest.current.view;
       if (view === "top")
-        camera.position
-          .copy(center)
-          .add(new THREE.Vector3(0.01, distance, 0.01));
+        camera.position.copy(center).add(new THREE.Vector3(0, distance, 0.01));
       else if (view === "front")
         camera.position
           .copy(center)
@@ -916,16 +940,13 @@ export default function Viewport(props: ViewportProps) {
       data-testid="viewport"
       data-rendered-positions="{}"
       data-rendered-rotations="{}"
+      data-rendered-deformations="{}"
       data-contact-markers="{}"
       data-loaded-assets={
         props.parts.filter((part) => loadedAssets.includes(part.id)).length
       }
       data-powered-lamps={props.poweredLampIds.length}
-      data-deformed-parts={
-        Object.values(props.deformations ?? {}).filter(
-          (value) => Math.abs(value.ratio - 1) > 0.0001,
-        ).length
-      }
+      data-deformed-parts="0"
     >
       <div ref={hostRef} style={{ position: "absolute", inset: 0 }} />
       {webglError && (

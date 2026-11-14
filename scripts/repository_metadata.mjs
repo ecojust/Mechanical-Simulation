@@ -56,19 +56,19 @@ export function repositoryNodeMetadata(asset, node) {
       return { kind: "asset", group: contact, role: "support" };
   }
   if (asset.id === "buttons-confirm") {
-    const mating = group("bayonet", "确认键 · 键帽 / 旋锁座");
-    const contact = group("switch", "确认键 · 开关 / 触头");
+    const mating = group("guide", "确认键 · 键帽 / 按压导向座");
+    const contact = group("switch", "确认键 · 开关 / 触头 / 焊脚");
     if (source.includes("旋锁座"))
       return typed(
-        "bayonet-socket",
-        "来源对象明确为确认键旋锁座",
+        "sleeve",
+        "源网格确认内部为键帽滑动导向；座体外部卡耳与上盖安装，另行核对实际锁装路径",
         mating,
         "female",
       );
     if (source.includes("键帽"))
       return typed(
-        "bayonet-pin",
-        "素材说明将确认键帽与其旋锁座配套；原网格不等于内置标准双耳代理",
+        "pin",
+        "源网格确认键帽在座内按压滑动，闭壳防脱由上盖止挡提供；键帽本身不是旋锁公件",
         mating,
         "male",
       );
@@ -76,7 +76,7 @@ export function repositoryNodeMetadata(asset, node) {
       return typed("spring", "来源对象明确为回弹压簧");
     if (source.includes("常开开关"))
       return typed("button", "来源对象明确为常开开关", contact);
-    if (source.includes("开关触头"))
+    if (source.includes("开关触头") || source.includes("焊脚"))
       return { kind: "asset", group: contact, role: "support" };
   }
   if (asset.id === "baseplates-dpad" || asset.id === "baseplates-abxy")

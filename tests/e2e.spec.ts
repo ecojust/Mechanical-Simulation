@@ -216,7 +216,7 @@ test("项目保存后可完整导入，Blender 原始零件可实际载入", asy
   expect(errors).toEqual([]);
 });
 
-test("原手柄以189个独立子零件保留装配坐标和公母分组，未配置功能不获得验证通过", async ({
+test("原手柄全部独立子零件保留装配坐标和公母分组，未配置功能不获得验证通过", async ({
   page,
 }, testInfo) => {
   test.setTimeout(180_000);
@@ -225,13 +225,26 @@ test("原手柄以189个独立子零件保留装配坐标和公母分组，未�
   const source: Project = await page.request
     .get("/models/puretv-assembly.json")
     .then((response) => response.json());
-  expect(source.parts).toHaveLength(189);
+  const catalog: AssetEntry[] = await page.request
+    .get("/models/catalog.json")
+    .then((response) => response.json());
+  const sourceCount = catalog.reduce(
+    (sum, asset) => sum + (asset.nodes?.length ?? 0),
+    0,
+  );
+  expect(sourceCount).toBe(
+    catalog.reduce((sum, asset) => sum + asset.objects, 0),
+  );
+  expect(sourceCount).toBeGreaterThan(0);
+  expect(source.parts).toHaveLength(sourceCount);
   await page.getByRole("button", { name: "原始素材", exact: true }).click();
   await page.getByRole("button", { name: /打开原手柄装配/ }).click();
-  await expect(page.locator(".statusbar")).toContainText("189 个零件");
+  await expect(page.locator(".statusbar")).toContainText(
+    `${sourceCount} 个零件`,
+  );
   await expect(page.getByTestId("viewport")).toHaveAttribute(
     "data-loaded-assets",
-    "189",
+    String(sourceCount),
     { timeout: 120_000 },
   );
   const original: Project = await page.evaluate(async () => {
@@ -256,7 +269,7 @@ test("原手柄以189个独立子零件保留装配坐标和公母分组，未�
   await expect(page.locator("[data-assembly-group]")).toHaveCount(
     groupIds.size,
   );
-  await expect(page.locator(".tree-select")).toHaveCount(189);
+  await expect(page.locator(".tree-select")).toHaveCount(sourceCount);
   const pair = original.parts.filter(
     (part) => part.assemblyGroup?.id === "puretv-buttons-left-pin-sleeve",
   );

@@ -1,6 +1,6 @@
 # 原有 Blender 素材与客户端显示副本
 
-客户端的「仓库素材」来自 `assets/puretv-controller/` 的 15 个集合。源 `.blend` 文件保持不变，`manifest.json` 中的 SHA-256 在转换前逐项核对。实际源清单 `manifest.json` 共列出 **189 个对象**，本次逐集合核对导出同为 189 个；原素材说明中的「192」与当前清单不一致。每个 GLB 仍包含独立命名的对象，不会把键帽、弹簧、套筒、开关或壳体焊接为一个网格。
+客户端的「仓库素材」来自 `assets/puretv-controller/` 的 15 个集合。`manifest.json` 中的 SHA-256 在转换前逐项核对。当前源清单包含 **183 个对象**：原 189 件中的八个上弹簧定位环已与对应键帽合并为闭合的一体打印件，并新增确认开关的两个独立金属焊脚。键帽、弹簧、套筒、开关和壳体仍独立。源尺寸修正、前后证据与物理参数假设见 [源几何说明](puretv-geometry.md)；导出脚本本身只读源文件。
 
 ## 重新生成
 
@@ -29,7 +29,7 @@ node scripts/verify_assets.mjs
 产物：
 
 - `public/models/catalog.json`：库条目、原文件路径、GLB 地址、源求值几何的整体尺寸与装配中心、对象数和显示三角形数。`nodes` 列出每个可拆分源对象的客户端实际节点名、显示名、世界尺寸和中心。
-- `public/models/puretv-assembly.json`：可直接导入客户端的原始手柄工程，15 个集合按共享装配坐标恢复，并用同一整体位移把最低表面放到工作台。原始线束保持显示模型，不会自动生成经过电气验证的电路。
+- `public/models/puretv-assembly.json`：可直接导入客户端的手柄工程。运行节点索引脚本后，183 个子件按共享装配坐标恢复，用同一整体位移放到工作台。原始线束保持显示模型；真实 MCP 装配脚本另外声明九个接触机构并连接九路指示灯。
 - `public/models/*.glb`：客户端显示用模型，保留源对象名及 `sourceName`、`sourceFile`、`previewOnly` 自定义属性。
 - `public/models/diagnostics.json`：源文件和显示文件 SHA-256、源对象边界边/非流形边数量、减面前后三角形数量和装配矩阵。
 

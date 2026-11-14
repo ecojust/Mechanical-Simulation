@@ -23,12 +23,12 @@ Mechanical Studio 的 macOS 应用本身就是 MCP stdio 服务。应用不包�
 | ---------------------- | -------------------------------------------------------------------------------------------------------------- |
 | `get_runtime_status`   | 读取真实 WebView 的就绪状态、WebGL 和素材加载状态                                                              |
 | `list_component_types` | 读取共享类型注册表：功能、必需参数、单位、范围及交互要求                                                       |
-| `list_components`      | 列出内置组件、189 个原始子零件所在集合与用户组件库，不含模型字节                                               |
+| `list_components`      | 列出内置组件、183 个原始子零件所在集合与用户组件库，不含模型字节                                               |
 | `get_project`          | 当前工程、零件和 revision；模型只返回元数据                                                                    |
 | `import_component`     | 上传 GLB/STL 的 base64 内容与明确类型、尺寸、功能和交互定义                                                    |
 | `add_part`             | 用内置 kind 或用户 componentId 实例化零件                                                                      |
 | `add_repository_parts` | 按 assetId 和可选 nodeNames 加入原始独立子零件；省略 nodeNames 加入整个集合，offset 为源位置偏移；同组关系保留 |
-| `configure_part`       | 设置类型、功能参数、交互定义、固定状态、名称、颜色和 PBR 材质                                                  |
+| `configure_part`       | 设置类型、功能参数、交互定义、固定/显示状态、名称、颜色和 PBR 材质                                             |
 | `transform_part`       | 按与右侧控制面板相同的路径碰撞、配合、固定状态和旋锁检查移动/旋转                                              |
 | `connect_wire`         | 连接两个电气零件端子，返回电路检查                                                                             |
 | `remove_part`          | 移除零件及关联导线                                                                                             |
@@ -38,8 +38,12 @@ Mechanical Studio 的 macOS 应用本身就是 MCP stdio 服务。应用不包�
 | `delete_mechanism`     | 移除功能定义，保留所有子零件                                                                                   |
 | `transform_mechanism`  | 受检移动/旋转活动子组，或整体变换组件坐标系                                                                    |
 | `press_mechanism`      | 推进当前工作台的按压/释放仿真，返回弹簧状态、成员位置及电路状态                                                |
+| `new_project`          | 通过同一撤销/保存路径清空当前工程，可设置name；保留用户组件库                                                  |
+| `import_project`       | 通过同一严格parseProject校验载入自包含工程对象；不接受URL或文件路径                                            |
 
 资源 `mechanical://project` 和 `mechanical://component-types` 提供只读工程元数据与类型注册表。
+
+`validate_project` 与 `press_mechanism` 的 `sourceEvidence` 由应用对随包来源哈希、工程构型和已覆盖行程的匹配结果提供，状态严格区分 pass / fail / unknown；MCP 参数不能注入通过结论。已匹配且为 fail 的源证据会在推进仿真前阻止按压；unknown 可以预览，仍保留未验证结论。仅完整且匹配的源证据通过后，汇总 issues 才替换旧的保守包围盒预检提示，raw geometry 仍保留原始检查；超出证据行程或更改机械构型后结论重新变为 unknown。
 
 所有写入工具都要求 `expectedRevision`。先读取 `get_project`，再携带返回的 revision。成功写入后 revision 增加 1；失败不会修改工程。若用户同时在界面操作，旧 revision 被拒绝，应重新读取工程再决定动作。桥接串行执行，异步校验结束时界面还会重新核对 revision。
 
@@ -57,6 +61,8 @@ Mechanical Studio 的 macOS 应用本身就是 MCP stdio 服务。应用不包�
 }
 ```
 
+设置 `visible:false` 只隐藏显示，碰撞与物理验证仍包含该零件。
+
 修改颜色可传 `color: "#cc8844"`，同时传 `material: {"metalness":0.8,"roughness":0.2}`。金属度与粗糙度必须在 0–1 之间；指定新颜色会关闭原模型颜色。只传材质且指定 `useSourceColor:true` 可重新保留源模型颜色。
 
 ## 上传与功能校验
@@ -69,7 +75,7 @@ Mechanical Studio 的 macOS 应用本身就是 MCP stdio 服务。应用不包�
 
 ## 复合功能组件
 
-先在当前工程加入所需子零件，再用 `configure_mechanism` 建立定义。`partIds` 保留原始子零件身份；`movingPartIds` 是一起运动的活动子组，`springPartIds` 是压缩变形的弹簧成员，其余成员固定在组件局部框架。每个零件只能属于一个功能组件，角色不能重叠。按压组件可把 `switchPartId` 绑定到一个固定成员，作为电路中的两端开关。绑定后必须提供 `contact`：`strikerPartId` 选一个活动成员，`strikerPoint` 与 `switchPoint` 分别是撞针和开关子件包络中心坐标系中的毫米接触点，`switchNormal` 是开关局部单位法向；`radius` 给出允许的横向触点半径，`maxOvertravel` 给出允许的轴向过行程。接触点必须位于相应子件的尺寸包络内，随真实子件位置和旋转变换，不能用悬空坐标替代实际摆放。
+先在当前工程加入所需子零件，再用 `configure_mechanism` 建立定义。`partIds` 保留原始子零件身份；`movingPartIds` 是一起运动的活动子组，`springPartIds` 是压缩变形的弹簧成员，其余成员固定在组件局部框架。每个零件只能属于一个功能组件，角色不能重叠。按压组件可把 `switchPartId` 绑定到一个固定成员，作为电路中的两端开关。绑定后必须提供 `contact`：`strikerPartId` 选一个活动成员，可选 `targetPartId` 指定实际触发面所属的固定角色成员，省略时使用 `switchPartId`。`strikerPoint` 与 `switchPoint` 分别是撞针和实际触发面子件包络中心坐标系中的毫米接触点，`switchNormal` 是触发面子件局部单位法向；`radius` 给出允许的横向触点半径，`maxOvertravel` 给出允许的轴向过行程。接触点必须位于相应子件的尺寸包络内，随真实子件位置和旋转变换，不能用悬空坐标替代实际摆放。可选 `actuatorPartIds` 指定接触后随撞针移动的触头成员，必须包含实际 `targetPartId`（缺省时为 `switchPartId`）、属于固定角色且解除零件固定锁；位移限制在 maxOvertravel 内。独立按杆随动时，电气开关主体保持原位，导线仍接 `switchPartId`。gap 继续对静止面测量，surfaceGap 对当前显示面测量，避免触头跟随掩盖过行程。
 
 `frame` 定义组件世界位置与 XYZ 旋转，`axis` 是组件局部单位操作轴；`movingProxy` 和 `fixedProxy` 分别声明局部碰撞/配合代理。`press` 类型须给出 mass、stiffness、damping、travel、freeLength、solidLength；legacy `trigger` 不再决定机制开关的通断。`mating` 类型须声明受支持的方榫/方孔、圆销/套筒或标准旋锁公母代理，参数遵从相应组件类型。参数不全可保存为 unconfigured，不能通过功能仿真。
 
@@ -127,4 +133,16 @@ npm run mcp:test-protocol
 
 第三条命令用于生成二进制，`cargo test` 本身不会生成脚本默认使用的 `src-tauri/target/debug/mechanical-studio`。也可以设置 `MCP_TEST_BINARY` 指向实际应用可执行文件或自定义 Cargo target-dir 下的二进制。
 
-`scripts/test-mcp-protocol.mjs` 使用官方 `@modelcontextprotocol/sdk` 客户端验证原生 stdio、协议协商、17 个工具、资源、错误、鉴权转发、大于 16 MiB 的上传和分块导出重组；这里的 HTTP 工作台是隔离的协议测试夹具。`tests/mcp.test.ts` 则执行真实共享仿真命令。macOS Actions 另外运行 `scripts/smoke-macos.mjs`，启动实际打包应用的 WKWebView，再经 MCP 验证模型加载、旋锁操作、真实 STL 上传/实例化、颜色与 PBR、工程导出、原始子件同组关系以及复合按压/回弹与撞针接触开关。
+`scripts/test-mcp-protocol.mjs` 使用官方 `@modelcontextprotocol/sdk` 客户端验证原生 stdio、协议协商、当前工具注册表中的全部工具、资源、错误、鉴权转发、大于 16 MiB 的上传和分块导出重组；这里的 HTTP 工作台是隔离的协议测试夹具。`tests/mcp.test.ts` 则执行真实共享仿真命令。macOS Actions 另外运行 `scripts/smoke-macos.mjs`，启动实际打包应用的 WKWebView，再经 MCP 验证模型加载、旋锁操作、真实 STL 上传/实例化、颜色与 PBR、工程导出、原始子件同组关系以及复合按压/回弹与撞针接触开关。该烟测继续使用同一 MCP 客户端调用 `drivePuretv`，完整装配校准后的原手柄，并逐一检查九键的接触通电、释放断电和实际显示件运动；只有匹配的源证据为 pass 才通过，记录写入 `src-tauri/target/puretv-macos-mcp-verification.json`。
+
+## 本地开发浏览器通路（不包含在发布包）
+
+无法运行本机 Tauri 时，`scripts/mcp-client-browser.mjs` 可启动实际 Vite App 与 Chromium。原生可执行文件仍提供 MCP stdio 和协议协商；随机令牌保护的 127.0.0.1 桥仅把命令转交给该 App 实际注册的 handler，状态、IndexedDB、仿真引擎和 WebGL 均在真实工作台中。它没有测试夹具结果或独立工程副本。浏览器入口仅在 Vite DEV、127.0.0.1 且显式 `?mcp=development` 时存在；生产构建会消除该分支。
+
+```sh
+MCP_DEV_DATA_DIR=/tmp/mechanical-workbench-dev node scripts/mcp-client-browser.mjs
+# 在另一个终端，使用实际原生二进制：
+MCP_NATIVE_BINARY=/absolute/path/mechanical-studio MECHANICAL_STUDIO_DATA_DIR=/tmp/mechanical-workbench-dev node scripts/mcp-client.mjs get_runtime_status
+```
+
+`scripts/drive-puretv-before.mjs` 经官方SDK调用原生MCP，按当前目录将15个来源集合的节点逐一加入实际工作台并等待显示模型加载（修形前报告记录189个，当前183个），再输出精简预检与真实截图。报告明确标记 Chromium/开发adapter，不能替代 macOS 打包 WKWebView 复验。`validate_project` 返回完整报告；精简记录只聚合/抽样显示，保留准确错误总数，不将原始素材导入宣称为仿真通过。

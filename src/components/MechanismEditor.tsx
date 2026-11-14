@@ -50,11 +50,13 @@ interface Draft {
 }
 interface ContactDraft {
   strikerPartId: string;
+  targetPartId?: string;
   strikerPoint: Triple;
   switchPoint: Triple;
   switchNormal: Triple;
   radius: string;
   maxOvertravel: string;
+  actuatorPartIds?: string[];
 }
 const emptyContact = (): ContactDraft => ({
   strikerPartId: "",
@@ -141,11 +143,17 @@ function toDraft(mechanism: Mechanism, requireRoles: boolean): Draft {
     contact: mechanism.contact
       ? {
           strikerPartId: mechanism.contact.strikerPartId,
+          ...(mechanism.contact.targetPartId
+            ? { targetPartId: mechanism.contact.targetPartId }
+            : {}),
           strikerPoint: strings(mechanism.contact.strikerPoint),
           switchPoint: strings(mechanism.contact.switchPoint),
           switchNormal: strings(mechanism.contact.switchNormal),
           radius: String(mechanism.contact.radius),
           maxOvertravel: String(mechanism.contact.maxOvertravel),
+          ...(mechanism.contact.actuatorPartIds
+            ? { actuatorPartIds: [...mechanism.contact.actuatorPartIds] }
+            : {}),
         }
       : null,
   };
@@ -390,6 +398,7 @@ export default function MechanismEditor({
     (id) => draft.roles[id] === "switch",
   );
   const contact = draft.contact ?? emptyContact();
+  const targetId = contact.targetPartId ?? switchId;
   const pairedProxy =
     draft.moving.kind !== "base" || draft.fixed.kind !== "base";
   const fields = [
@@ -508,11 +517,15 @@ export default function MechanismEditor({
         throw Error("请填写触发面的有效半径与允许过行程。");
       contactDefinition = {
         strikerPartId: entry.strikerPartId,
+        ...(entry.targetPartId ? { targetPartId: entry.targetPartId } : {}),
         strikerPoint: numberVector(entry.strikerPoint, "撞针局部端点"),
         switchPoint: numberVector(entry.switchPoint, "开关局部触发点"),
         switchNormal: numberVector(entry.switchNormal, "开关触发面法向"),
         radius: Number(entry.radius),
         maxOvertravel: Number(entry.maxOvertravel),
+        ...(entry.actuatorPartIds
+          ? { actuatorPartIds: [...entry.actuatorPartIds] }
+          : {}),
       };
     }
     return validateMechanismDefinition(
@@ -849,6 +862,49 @@ export default function MechanismEditor({
                       {project.parts.find((part) => part.id === switchId)?.name}
                     </small>
                   </label>
+                  <label className="me-field">
+                    触发面所属子件
+                    <select
+                      aria-label="触发面所属子件"
+                      value={contact.targetPartId ?? ""}
+                      onChange={(event) => {
+                        const nextTarget = event.target.value || switchId;
+                        update({
+                          contact: {
+                            ...contact,
+                            targetPartId: event.target.value || undefined,
+                            switchPoint: ["", "", ""],
+                            switchNormal: ["", "", ""],
+                            actuatorPartIds: contact.actuatorPartIds
+                              ? [
+                                  ...new Set(
+                                    contact.actuatorPartIds.map((id) =>
+                                      id === targetId ? nextTarget : id,
+                                    ),
+                                  ),
+                                ]
+                              : undefined,
+                          },
+                        });
+                      }}
+                    >
+                      <option value="">电气开关子件（默认）</option>
+                      {project.parts
+                        .filter(
+                          (part) =>
+                            draft.roles[part.id] === "fixed" ||
+                            draft.roles[part.id] === "switch",
+                        )
+                        .map((part) => (
+                          <option key={part.id} value={part.id}>
+                            {part.name}
+                          </option>
+                        ))}
+                    </select>
+                    <small>
+                      导线仍接电气开关；独立按杆的接触点和法向以此处所选子件为准。
+                    </small>
+                  </label>
                   <VectorFields
                     label="撞针局部端点"
                     value={contact.strikerPoint}
@@ -901,6 +957,64 @@ export default function MechanismEditor({
                       })
                     }
                   />
+                  <fieldset className="me-actuators">
+                    <legend>开关触头随动</legend>
+                    <label>
+                      <input
+                        type="checkbox"
+                        aria-label="启用触头随动"
+                        checked={Boolean(contact.actuatorPartIds?.length)}
+                        onChange={(event) =>
+                          update({
+                            contact: {
+                              ...contact,
+                              actuatorPartIds: event.target.checked
+                                ? [targetId!]
+                                : undefined,
+                            },
+                          })
+                        }
+                      />
+                      撞针接触后，触头随允许的过行程压入
+                    </label>
+                    <p className="me-note">
+                      仅选择实际可压入的按杆或触头，固定开关主体保持原位。实际触发面所属子件必须随动；所有触头需要解除零件固定锁。
+                    </p>
+                    {contact.actuatorPartIds &&
+                      project.parts
+                        .filter(
+                          (part) =>
+                            draft.roles[part.id] === "fixed" ||
+                            draft.roles[part.id] === "switch",
+                        )
+                        .map((part) => (
+                          <label key={part.id}>
+                            <input
+                              type="checkbox"
+                              aria-label={`随动触头 ${part.name}`}
+                              checked={contact.actuatorPartIds!.includes(
+                                part.id,
+                              )}
+                              disabled={part.id === targetId}
+                              onChange={(event) =>
+                                update({
+                                  contact: {
+                                    ...contact,
+                                    actuatorPartIds: event.target.checked
+                                      ? [...contact.actuatorPartIds!, part.id]
+                                      : contact.actuatorPartIds!.filter(
+                                          (id) => id !== part.id,
+                                        ),
+                                  },
+                                })
+                              }
+                            />
+                            {part.name}
+                            {part.id === targetId ? "（触发面，必选）" : ""}
+                            {part.fixed ? " · 零件已固定" : ""}
+                          </label>
+                        ))}
+                  </fieldset>
                   {contactMetrics && (
                     <p className="me-note">
                       根据当前装配计算：零位到首次接触{" "}

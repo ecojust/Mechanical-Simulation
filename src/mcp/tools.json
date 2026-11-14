@@ -106,10 +106,7 @@
                   "const": 1
                 },
                 "status": {
-                  "enum": [
-                    "configured",
-                    "unconfigured"
-                  ]
+                  "enum": ["configured", "unconfigured"]
                 },
                 "axis": {
                   "type": "array",
@@ -148,13 +145,7 @@
                   "type": "number"
                 }
               },
-              "required": [
-                "version",
-                "status",
-                "axis",
-                "anchor",
-                "proxySize"
-              ],
+              "required": ["version", "status", "axis", "anchor", "proxySize"],
               "additionalProperties": false,
               "description": "Declare local insertion axis, datum anchor and collision proxy in mm. Functional fields depend on list_component_types; missing values remain unverified."
             },
@@ -168,10 +159,7 @@
                   "type": "string"
                 },
                 "format": {
-                  "enum": [
-                    "glb",
-                    "stl"
-                  ]
+                  "enum": ["glb", "stl"]
                 },
                 "data": {
                   "type": "string",
@@ -232,10 +220,7 @@
                   "type": "boolean"
                 }
               },
-              "required": [
-                "metalness",
-                "roughness"
-              ],
+              "required": ["metalness", "roughness"],
               "additionalProperties": false
             }
           },
@@ -253,10 +238,7 @@
           "additionalProperties": false
         }
       },
-      "required": [
-        "expectedRevision",
-        "component"
-      ],
+      "required": ["expectedRevision", "component"],
       "additionalProperties": false
     },
     "annotations": {
@@ -290,10 +272,7 @@
           "maxItems": 3
         }
       },
-      "required": [
-        "expectedRevision",
-        "position"
-      ],
+      "required": ["expectedRevision", "position"],
       "additionalProperties": false
     },
     "annotations": {
@@ -332,10 +311,7 @@
           "minimum": 0
         }
       },
-      "required": [
-        "assetId",
-        "expectedRevision"
-      ],
+      "required": ["assetId", "expectedRevision"],
       "additionalProperties": false
     },
     "annotations": {
@@ -370,10 +346,7 @@
               "const": 1
             },
             "status": {
-              "enum": [
-                "configured",
-                "unconfigured"
-              ]
+              "enum": ["configured", "unconfigured"]
             },
             "axis": {
               "type": "array",
@@ -412,13 +385,7 @@
               "type": "number"
             }
           },
-          "required": [
-            "version",
-            "status",
-            "axis",
-            "anchor",
-            "proxySize"
-          ],
+          "required": ["version", "status", "axis", "anchor", "proxySize"],
           "additionalProperties": false,
           "description": "Declare local insertion axis, datum anchor and collision proxy in mm. Functional fields depend on list_component_types; missing values remain unverified."
         },
@@ -450,17 +417,15 @@
               "type": "boolean"
             }
           },
-          "required": [
-            "metalness",
-            "roughness"
-          ],
+          "required": ["metalness", "roughness"],
           "additionalProperties": false
+        },
+        "visible": {
+          "type": "boolean",
+          "description": "Show/hide this part in the viewport only; collision and physical validation still include it."
         }
       },
-      "required": [
-        "expectedRevision",
-        "partId"
-      ],
+      "required": ["expectedRevision", "partId"],
       "additionalProperties": false
     },
     "annotations": {
@@ -499,10 +464,7 @@
           "maxItems": 3
         }
       },
-      "required": [
-        "expectedRevision",
-        "partId"
-      ],
+      "required": ["expectedRevision", "partId"],
       "additionalProperties": false
     },
     "annotations": {
@@ -528,16 +490,10 @@
               "type": "string"
             },
             "terminal": {
-              "enum": [
-                0,
-                1
-              ]
+              "enum": [0, 1]
             }
           },
-          "required": [
-            "partId",
-            "terminal"
-          ],
+          "required": ["partId", "terminal"],
           "additionalProperties": false
         },
         "to": {
@@ -547,24 +503,14 @@
               "type": "string"
             },
             "terminal": {
-              "enum": [
-                0,
-                1
-              ]
+              "enum": [0, 1]
             }
           },
-          "required": [
-            "partId",
-            "terminal"
-          ],
+          "required": ["partId", "terminal"],
           "additionalProperties": false
         }
       },
-      "required": [
-        "expectedRevision",
-        "from",
-        "to"
-      ],
+      "required": ["expectedRevision", "from", "to"],
       "additionalProperties": false
     },
     "annotations": {
@@ -587,10 +533,7 @@
           "type": "string"
         }
       },
-      "required": [
-        "expectedRevision",
-        "partId"
-      ],
+      "required": ["expectedRevision", "partId"],
       "additionalProperties": false
     },
     "annotations": {
@@ -667,16 +610,10 @@
               "type": "string"
             },
             "kind": {
-              "enum": [
-                "press",
-                "mating"
-              ]
+              "enum": ["press", "mating"]
             },
             "status": {
-              "enum": [
-                "configured",
-                "unconfigured"
-              ]
+              "enum": ["configured", "unconfigured"]
             },
             "partIds": {
               "type": "array",
@@ -723,10 +660,7 @@
                   "maxItems": 3
                 }
               },
-              "required": [
-                "position",
-                "rotation"
-              ],
+              "required": ["position", "rotation"],
               "additionalProperties": false
             },
             "axis": {
@@ -747,10 +681,7 @@
                   "type": "number"
                 }
               },
-              "required": [
-                "offset",
-                "angle"
-              ],
+              "required": ["offset", "angle"],
               "additionalProperties": false
             },
             "params": {
@@ -846,13 +777,7 @@
                   }
                 }
               },
-              "required": [
-                "kind",
-                "position",
-                "rotation",
-                "size",
-                "params"
-              ],
+              "required": ["kind", "position", "rotation", "size", "params"],
               "additionalProperties": false,
               "description": "Declared collision/fit proxy in the mechanism local frame; does not infer mesh contact geometry."
             },
@@ -901,13 +826,7 @@
                   }
                 }
               },
-              "required": [
-                "kind",
-                "position",
-                "rotation",
-                "size",
-                "params"
-              ],
+              "required": ["kind", "position", "rotation", "size", "params"],
               "additionalProperties": false,
               "description": "Declared collision/fit proxy in the mechanism local frame; does not infer mesh contact geometry."
             },
@@ -917,6 +836,10 @@
                 "strikerPartId": {
                   "type": "string",
                   "description": "An existing moving member; its local striker point follows its actual rendered pose."
+                },
+                "targetPartId": {
+                  "type": "string",
+                  "description": "Optional fixed-role member carrying the physical trigger surface, such as a separate plunger. Defaults to switchPartId; wires and electrical closure still belong to switchPartId."
                 },
                 "strikerPoint": {
                   "type": "array",
@@ -951,6 +874,15 @@
                   "type": "number",
                   "minimum": 0,
                   "maximum": 100000
+                },
+                "actuatorPartIds": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  },
+                  "minItems": 1,
+                  "uniqueItems": true,
+                  "description": "Optional fixed-role switch actuator members that follow the striker after contact; must include targetPartId (or switchPartId when targetPartId is omitted). Contact overtravel remains measured from the rest surface."
                 }
               },
               "required": [
@@ -962,7 +894,7 @@
                 "maxOvertravel"
               ],
               "additionalProperties": false,
-              "description": "Required for configured press mechanisms with a switchPartId: local points in each part normalized coordinates (mm), local switch unit normal, lateral contact radius and allowed axial overtravel. Actual world contact closes the circuit; travel alone does not."
+              "description": "Required for configured press mechanisms with a switchPartId: local points in each part coordinates (mm), physical target local unit normal, lateral contact radius and allowed axial overtravel. targetPartId selects a separate physical trigger member when needed; actual contact closes the electrical switchPartId circuit."
             }
           },
           "required": [
@@ -985,10 +917,7 @@
           "description": "Functional assembly using existing part IDs. Press params: mass, stiffness, damping, travel, freeLength, solidLength. A configured switch requires explicit striker/switch contact geometry; legacy trigger is optional and does not close the circuit. Member roles and proxy envelopes must be explicitly declared; incomplete definitions stay unverified."
         }
       },
-      "required": [
-        "expectedRevision",
-        "mechanism"
-      ],
+      "required": ["expectedRevision", "mechanism"],
       "additionalProperties": false
     },
     "annotations": {
@@ -1011,10 +940,7 @@
           "type": "string"
         }
       },
-      "required": [
-        "expectedRevision",
-        "mechanismId"
-      ],
+      "required": ["expectedRevision", "mechanismId"],
       "additionalProperties": false
     },
     "annotations": {
@@ -1062,17 +988,11 @@
               "maxItems": 3
             }
           },
-          "required": [
-            "position",
-            "rotation"
-          ],
+          "required": ["position", "rotation"],
           "additionalProperties": false
         }
       },
-      "required": [
-        "expectedRevision",
-        "mechanismId"
-      ],
+      "required": ["expectedRevision", "mechanismId"],
       "additionalProperties": false
     },
     "annotations": {
@@ -1103,17 +1023,60 @@
           "maximum": 5
         }
       },
-      "required": [
-        "expectedRevision",
-        "mechanismId",
-        "held",
-        "duration"
-      ],
+      "required": ["expectedRevision", "mechanismId", "held", "duration"],
       "additionalProperties": false
     },
     "annotations": {
       "readOnlyHint": false,
       "destructiveHint": false,
+      "openWorldHint": false
+    }
+  },
+  {
+    "name": "new_project",
+    "description": "Replace the active workbench with an empty project using the same undo/save path; the uploaded component library is retained.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "expectedRevision": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "name": {
+          "type": "string",
+          "maxLength": 200
+        }
+      },
+      "required": ["expectedRevision"],
+      "additionalProperties": false
+    },
+    "annotations": {
+      "readOnlyHint": false,
+      "destructiveHint": true,
+      "openWorldHint": false
+    }
+  },
+  {
+    "name": "import_project",
+    "description": "Replace the active workbench with portable project data through the same strict project parser. Models, roles, contacts and references are validated; physical issues remain reviewable. No URL or filesystem path input.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "expectedRevision": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "project": {
+          "type": "object",
+          "description": "Portable Project JSON object, version 1, including embedded models and mechanism definitions."
+        }
+      },
+      "required": ["expectedRevision", "project"],
+      "additionalProperties": false
+    },
+    "annotations": {
+      "readOnlyHint": false,
+      "destructiveHint": true,
       "openWorldHint": false
     }
   }

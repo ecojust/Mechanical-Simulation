@@ -1,0 +1,4906 @@
+{
+  "schemaVersion": 1,
+  "sourceFile": "electronics/harness.blend",
+  "beforeSha256": "b576d5ed12b4ce178b6e1167782636e6574c17049ab6c5b9deb3d985de152b15",
+  "sourceSha256": "2dbed56630b7a16391a584b98b12e2b756cde3a632bf063bd81d885885d3aa91",
+  "status": "applied-pending-assembly-audit",
+  "centerlineCorrections": [
+    {
+      "name": "确认 · GPIO.005",
+      "removedIndices": [
+        1
+      ],
+      "removedPoints": [
+        [
+          3.5,
+          4.300000190734863,
+          19.15042495727539
+        ]
+      ],
+      "reason": "Remove a real return along the same conductor; preserve both authored electrical endpoint centers."
+    },
+    {
+      "name": "确认 · GND.005",
+      "removedIndices": [
+        4
+      ],
+      "removedPoints": [
+        [
+          -2.0,
+          22.0,
+          22.400001525878906
+        ]
+      ],
+      "reason": "Remove a real return along the same conductor; preserve both authored electrical endpoint centers."
+    },
+    {
+      "name": "A · 中央走线 GND.002",
+      "removedIndices": [
+        9
+      ],
+      "removedPoints": [
+        [
+          12.0,
+          22.0,
+          22.400001525878906
+        ]
+      ],
+      "reason": "Remove a real return along the same conductor; preserve both authored electrical endpoint centers."
+    },
+    {
+      "name": "X · 中央走线 GND.002",
+      "removedIndices": [
+        11
+      ],
+      "removedPoints": [
+        [
+          5.0,
+          22.0,
+          22.400001525878906
+        ]
+      ],
+      "reason": "Remove a real return along the same conductor; preserve both authored electrical endpoint centers."
+    },
+    {
+      "name": "Y · 中央走线 GND.002",
+      "removedIndices": [
+        10
+      ],
+      "removedPoints": [
+        [
+          1.5,
+          22.0,
+          22.400001525878906
+        ]
+      ],
+      "reason": "Remove a real return along the same conductor; preserve both authored electrical endpoint centers."
+    },
+    {
+      "name": "左 · 中央走线 GND.002",
+      "removedIndices": [
+        9
+      ],
+      "removedPoints": [
+        [
+          -16.0,
+          22.0,
+          22.400001525878906
+        ]
+      ],
+      "reason": "Remove a real return along the same conductor; preserve both authored electrical endpoint centers."
+    },
+    {
+      "name": "右 · 中央走线 GND.002",
+      "removedIndices": [
+        12,
+        13
+      ],
+      "removedPoints": [
+        [
+          -12.399999618530273,
+          22.0,
+          21.600000381469727
+        ],
+        [
+          -12.5,
+          22.0,
+          22.400001525878906
+        ]
+      ],
+      "reason": "Remove a real return along the same conductor; preserve both authored electrical endpoint centers."
+    },
+    {
+      "name": "下 · 中央走线 GND.002",
+      "removedIndices": [
+        10
+      ],
+      "removedPoints": [
+        [
+          -5.5,
+          22.0,
+          22.400001525878906
+        ]
+      ],
+      "reason": "Remove a real return along the same conductor; preserve both authored electrical endpoint centers."
+    },
+    {
+      "name": "上 · 中央走线 GND.002",
+      "removedIndices": [
+        4
+      ],
+      "removedPoints": [
+        [
+          -41.060001373291016,
+          23.049999237060547,
+          12.649999618530273
+        ]
+      ],
+      "reason": "Remove a real return along the same conductor; preserve both authored electrical endpoint centers."
+    }
+  ],
+  "objects": [
+    {
+      "name": "A · 中央走线 GND.002",
+      "before": {
+        "status": "fail",
+        "fullTriangleCount": 172,
+        "rawBvhTrianglePairs": 52,
+        "uniqueTrianglePairs": 26,
+        "examinedUniqueTrianglePairs": 26,
+        "sharedFeatureContactPairs": 0,
+        "disjointExactPairs": 0,
+        "forbiddenTriangleIntersections": 26,
+        "unknownTrianglePairs": 0,
+        "degenerateTriangles": 0,
+        "topologyAccepted": true,
+        "intersectionToleranceMm": 1e-08,
+        "sharedFeatureToleranceMm": 1e-07,
+        "examples": [
+          {
+            "triangles": [
+              3,
+              143
+            ],
+            "sharedVertexIndices": [],
+            "intersectionPointsBlender": [
+              [
+                12.25681591252625,
+                21.932439524540182,
+                21.200000762939453
+              ],
+              [
+                12.256984718608596,
+                21.930078563816114,
+                21.200000762939453
+              ]
+            ],
+            "reason": "Non-adjacent source triangles intersect"
+          },
+          {
+            "triangles": [
+              3,
+              140
+            ],
+            "sharedVertexIndices": [],
+            "intersectionPointsBlender": [
+              [
+                12.254275273171604,
+                21.926514015789266,
+                21.200000762939453
+              ],
+              [
+                12.256984718608596,
+                21.930078563816114,
+                21.200000762939453
+              ]
+            ],
+            "reason": "Non-adjacent source triangles intersect"
+          },
+          {
+            "triangles": [
+              3,
+              151
+            ],
+            "sharedVertexIndices": [],
+            "intersectionPointsBlender": [
+              [
+                11.74242996206161,
+                22.067758862977552,
+                21.200000762939453
+              ],
+              [
+                11.744995116213806,
+                22.03358177467639,
+                21.200000762939453
+              ]
+            ],
+            "reason": "Non-adjacent source triangles intersect"
+          },
+          {
+            "triangles": [
+              3,
+              150
+            ],
+            "sharedVertexIndices": [],
+            "intersectionPointsBlender": [
+              [
+                11.768608393060214,
+                21.86032125258181,
+                21.200000762939453
+              ],
+              [
+                11.744995116213806,
+                22.03358177467639,
+                21.200000762939453
+              ]
+            ],
+            "reason": "Non-adjacent source triangles intersect"
+          },
+          {
+            "triangles": [
+              4,
+              140
+            ],
+            "sharedVertexIndices": [],
+            "intersectionPointsBlender": [
+              [
+                12.254275273171604,
+                21.926514015789266,
+                21.200000762939453
+              ],
+              [
+                12.150847676980884,
+                21.79044460878446,
+                21.200000762939453
+              ]
+            ],
+            "reason": "Non-adjacent source triangles intersect"
+          },
+          {
+            "triangles": [
+              4,
+              141
+            ],
+            "sharedVertexIndices": [],
+            "intersectionPointsBlender": [
+              [
+                12.133703361920004,
+                21.760100723958423,
+                21.200000762939453
+              ],
+              [
+                12.150847676980884,
+                21.79044460878446,
+                21.200000762939453
+              ]
+            ],
+            "reason": "Non-adjacent source triangles intersect"
+          },
+          {
+            "triangles": [
+              4,
+              153
+            ],
+            "sharedVertexIndices": [],
+            "intersectionPointsBlender": [
+              [
+                11.771310637903955,
+                21.85543488356913,
+                21.200000762939453
+              ],
+              [
+                11.768942633108509,
+                21.857868793075696,
+                21.200000762939453
+              ]
+            ],
+            "reason": "Non-adjacent source triangles intersect"
+          },
+          {
+            "triangles": [
+              4,
+              150
+            ],
+            "sharedVertexIndices": [],
+            "intersectionPointsBlender": [
+              [
+                11.768608393060214,
+                21.86032125258181,
+                21.200000762939453
+              ],
+              [
+                11.768942633108509,
+                21.857868793075696,
+                21.200000762939453
+              ]
+            ],
+            "reason": "Non-adjacent source triangles intersect"
+          }
+        ],
+        "triangles": 172,
+        "exactIntersectionPairs": 26,
+        "componentCount": 1,
+        "topology": {
+          "boundaryEdges": 0,
+          "nonManifoldEdges": 0,
+          "inconsistentWindingEdges": 0,
+          "closedConsistentlyOriented": true
+        },
+        "boundsBlender": {
+          "min": [
+            11.72921371,
+            10.81894875,
+            14.92470837
+          ],
+          "max": [
+            40.33881378,
+            22.27197266,
+            22.40000153
+          ]
+        }
+      },
+      "afterCenterlineCorrection": {
+        "status": "pass",
+        "fullTriangleCount": 156,
+        "rawBvhTrianglePairs": 0,
+        "uniqueTrianglePairs": 0,
+        "examinedUniqueTrianglePairs": 0,
+        "sharedFeatureContactPairs": 0,
+        "disjointExactPairs": 0,
+        "forbiddenTriangleIntersections": 0,
+        "unknownTrianglePairs": 0,
+        "degenerateTriangles": 0,
+        "topologyAccepted": true,
+        "intersectionToleranceMm": 1e-08,
+        "sharedFeatureToleranceMm": 1e-07,
+        "examples": [],
+        "triangles": 156,
+        "exactIntersectionPairs": 0,
+        "componentCount": 1,
+        "topology": {
+          "boundaryEdges": 0,
+          "nonManifoldEdges": 0,
+          "inconsistentWindingEdges": 0,
+          "closedConsistentlyOriented": true
+        },
+        "boundsBlender": {
+          "min": [
+            11.72921371,
+            10.81894875,
+            14.92470837
+          ],
+          "max": [
+            40.33881378,
+            22.27197266,
+            21.20000076
+          ]
+        }
+      },
+      "after": {
+        "status": "pass",
+        "fullTriangleCount": 156,
+        "rawBvhTrianglePairs": 0,
+        "uniqueTrianglePairs": 0,
+        "examinedUniqueTrianglePairs": 0,
+        "sharedFeatureContactPairs": 0,
+        "disjointExactPairs": 0,
+        "forbiddenTriangleIntersections": 0,
+        "unknownTrianglePairs": 0,
+        "degenerateTriangles": 0,
+        "topologyAccepted": true,
+        "intersectionToleranceMm": 1e-08,
+        "sharedFeatureToleranceMm": 1e-07,
+        "examples": [],
+        "triangles": 156,
+        "exactIntersectionPairs": 0,
+        "componentCount": 1,
+        "topology": {
+          "boundaryEdges": 0,
+          "nonManifoldEdges": 0,
+          "inconsistentWindingEdges": 0,
+          "closedConsistentlyOriented": true
+        },
+        "boundsBlender": {
+          "min": [
+            11.72921371,
+            10.81894875,
+            14.92470837
+          ],
+          "max": [
+            40.33881378,
+            22.27197266,
+            21.20000076
+          ]
+        },
+        "closedVolumeMm3": 9.698538847383674
+      },
+      "centerlineEdited": true,
+      "cleanup": [],
+      "maximumCleanupBoundsChangeMm": 0.0,
+      "maximumCleanupVertexDistanceFromInputSurfaceMm": 0.0,
+      "endpointsUnchanged": true,
+      "nominalRadiusMm": 0.2800000011920929
+    },
+    {
+      "name": "A · 中央走线 GPIO.002",
+      "before": {
+        "status": "pass",
+        "fullTriangleCount": 444,
+        "rawBvhTrianglePairs": 0,
+        "uniqueTrianglePairs": 0,
+        "examinedUniqueTrianglePairs": 0,
+        "sharedFeatureContactPairs": 0,
+        "disjointExactPairs": 0,
+        "forbiddenTriangleIntersections": 0,
+        "unknownTrianglePairs": 0,
+        "degenerateTriangles": 0,
+        "topologyAccepted": true,
+        "intersectionToleranceMm": 1e-08,
+        "sharedFeatureToleranceMm": 1e-07,
+        "examples": [],
+        "triangles": 444,
+        "exactIntersectionPairs": 0,
+        "componentCount": 1,
+        "topology": {
+          "boundaryEdges": 0,
+          "nonManifoldEdges": 0,
+          "inconsistentWindingEdges": 0,
+          "closedConsistentlyOriented": true
+        },
+        "boundsBlender": {
+          "min": [
+            -11.51998997,
+            10.81894779,
+            14.97033882
+          ],
+          "max": [
+            43.45174789,
+            19.97999191,
+            21.03248978
+          ]
+        }
+      },
+      "afterCenterlineCorrection": {
+        "status": "pass",
+        "fullTriangleCount": 444,
+        "rawBvhTrianglePairs": 0,
+        "uniqueTrianglePairs": 0,
+        "examinedUniqueTrianglePairs": 0,
+        "sharedFeatureContactPairs": 0,
+        "disjointExactPairs": 0,
+        "forbiddenTriangleIntersections": 0,
+        "unknownTrianglePairs": 0,
+        "degenerateTriangles": 0,
+        "topologyAccepted": true,
+        "intersectionToleranceMm": 1e-08,
+        "sharedFeatureToleranceMm": 1e-07,
+        "examples": [],
+        "triangles": 444,
+        "exactIntersectionPairs": 0,
+        "componentCount": 1,
+        "topology": {
+          "boundaryEdges": 0,
+          "nonManifoldEdges": 0,
+          "inconsistentWindingEdges": 0,
+          "closedConsistentlyOriented": true
+        },
+        "boundsBlender": {
+          "min": [
+            -11.51998997,
+            10.81894779,
+            14.97033882
+          ],
+          "max": [
+            43.45174789,
+            19.97999191,
+            21.03248978
+          ]
+        }
+      },
+      "after": {
+        "status": "pass",
+        "fullTriangleCount": 444,
+        "rawBvhTrianglePairs": 0,
+        "uniqueTrianglePairs": 0,
+        "examinedUniqueTrianglePairs": 0,
+        "sharedFeatureContactPairs": 0,
+        "disjointExactPairs": 0,
+        "forbiddenTriangleIntersections": 0,
+        "unknownTrianglePairs": 0,
+        "degenerateTriangles": 0,
+        "topologyAccepted": true,
+        "intersectionToleranceMm": 1e-08,
+        "sharedFeatureToleranceMm": 1e-07,
+        "examples": [],
+        "triangles": 444,
+        "exactIntersectionPairs": 0,
+        "componentCount": 1,
+        "topology": {
+          "boundaryEdges": 0,
+          "nonManifoldEdges": 0,
+          "inconsistentWindingEdges": 0,
+          "closedConsistentlyOriented": true
+        },
+        "boundsBlender": {
+          "min": [
+            -11.51998997,
+            10.81894779,
+            14.97033882
+          ],
+          "max": [
+            43.45174789,
+            19.97999191,
+            21.03248978
+          ]
+        },
+        "closedVolumeMm3": 14.103277669241969
+      },
+      "centerlineEdited": false,
+      "cleanup": [],
+      "maximumCleanupBoundsChangeMm": 0.0,
+      "maximumCleanupVertexDistanceFromInputSurfaceMm": 0.0,
+      "endpointsUnchanged": true,
+      "nominalRadiusMm": 0.2800000011920929
+    },
+    {
+      "name": "B · 中央走线 GND.002",
+      "before": {
+        "status": "pass",
+        "fullTriangleCount": 236,
+        "rawBvhTrianglePairs": 0,
+        "uniqueTrianglePairs": 0,
+        "examinedUniqueTrianglePairs": 0,
+        "sharedFeatureContactPairs": 0,
+        "disjointExactPairs": 0,
+        "forbiddenTriangleIntersections": 0,
+        "unknownTrianglePairs": 0,
+        "degenerateTriangles": 0,
+        "topologyAccepted": true,
+        "intersectionToleranceMm": 1e-08,
+        "sharedFeatureToleranceMm": 1e-07,
+        "examples": [],
+        "triangles": 236,
+        "exactIntersectionPairs": 0,
+        "componentCount": 1,
+        "topology": {
+          "boundaryEdges": 0,
+          "nonManifoldEdges": 0,
+          "inconsistentWindingEdges": 0,
+          "closedConsistentlyOriented": true
+        },
+        "boundsBlender": {
+          "min": [
+            8.2320385,
+            19.78000641,
+            14.97423172
+          ],
+          "max": [
+            55.02213287,
+            23.32084084,
+            22.67077255
+          ]
+        }
+      },
+      "afterCenterlineCorrection": {
+        "status": "pass",
+        "fullTriangleCount": 236,
+        "rawBvhTrianglePairs": 0,
+        "uniqueTrianglePairs": 0,
+        "examinedUniqueTrianglePairs": 0,
+        "sharedFeatureContactPairs": 0,
+        "disjointExactPairs": 0,
+        "forbiddenTriangleIntersections": 0,
+        "unknownTrianglePairs": 0,
+        "degenerateTriangles": 0,
+        "topologyAccepted": true,
+        "intersectionToleranceMm": 1e-08,
+        "sharedFeatureToleranceMm": 1e-07,
+        "examples": [],
+        "triangles": 236,
+        "exactIntersectionPairs": 0,
+        "componentCount": 1,
+        "topology": {
+          "boundaryEdges": 0,
+          "nonManifoldEdges": 0,
+          "inconsistentWindingEdges": 0,
+          "closedConsistentlyOriented": true
+        },
+        "boundsBlender": {
+          "min": [
+            8.2320385,
+            19.78000641,
+            14.97423172
+          ],
+          "max": [
+            55.02213287,
+            23.32084084,
+            22.67077255
+          ]
+        }
+      },
+      "after": {
+        "status": "pass",
+        "fullTriangleCount": 236,
+        "rawBvhTrianglePairs": 0,
+        "uniqueTrianglePairs": 0,
+        "examinedUniqueTrianglePairs": 0,
+        "sharedFeatureContactPairs": 0,
+        "disjointExactPairs": 0,
+        "forbiddenTriangleIntersections": 0,
+        "unknownTrianglePairs": 0,
+        "degenerateTriangles": 0,
+        "topologyAccepted": true,
+        "intersectionToleranceMm": 1e-08,
+        "sharedFeatureToleranceMm": 1e-07,
+        "examples": [],
+        "triangles": 236,
+        "exactIntersectionPairs": 0,
+        "componentCount": 1,
+        "topology": {
+          "boundaryEdges": 0,
+          "nonManifoldEdges": 0,
+          "inconsistentWindingEdges": 0,
+          "closedConsistentlyOriented": true
+        },
+        "boundsBlender": {
+          "min": [
+            8.2320385,
+            19.78000641,
+            14.97423172
+          ],
+          "max": [
+            55.02213287,
+            23.32084084,
+            22.67077255
+          ]
+        },
+        "closedVolumeMm3": 11.623021686330922
+      },
+      "centerlineEdited": false,
+      "cleanup": [],
+      "maximumCleanupBoundsChangeMm": 0.0,
+      "maximumCleanupVertexDistanceFromInputSurfaceMm": 0.0,
+      "endpointsUnchanged": true,
+      "nominalRadiusMm": 0.2800000011920929
+    },
+    {
+      "name": "B · 中央走线 GPIO.002",
+      "before": {
+        "status": "pass",
+        "fullTriangleCount": 1356,
+        "rawBvhTrianglePairs": 0,
+        "uniqueTrianglePairs": 0,
+        "examinedUniqueTrianglePairs": 0,
+        "sharedFeatureContactPairs": 0,
+        "disjointExactPairs": 0,
+        "forbiddenTriangleIntersections": 0,
+        "unknownTrianglePairs": 0,
+        "degenerateTriangles": 0,
+        "topologyAccepted": true,
+        "intersectionToleranceMm": 1e-08,
+        "sharedFeatureToleranceMm": 1e-07,
+        "examples": [],
+        "triangles": 1356,
+        "exactIntersectionPairs": 0,
+        "componentCount": 1,
+        "topology": {
+          "boundaryEdges": 0,
+          "nonManifoldEdges": 0,
+          "inconsistentWindingEdges": 0,
+          "closedConsistentlyOriented": true
+        },
+        "boundsBlender": {
+          "min": [
+            -14.05949593,
+            19.42050552,
+            14.95447445
+          ],
+          "max": [
+            51.19753265,
+            23.25897217,
+            21.03240585
+          ]
+        }
+      },
+      "afterCenterlineCorrection": {
+        "status": "pass",
+        "fullTriangleCount": 1356,
+        "rawBvhTrianglePairs": 0,
+        "uniqueTrianglePairs": 0,
+        "examinedUniqueTrianglePairs": 0,
+        "sharedFeatureContactPairs": 0,
+        "disjointExactPairs": 0,
+        "forbiddenTriangleIntersections": 0,
+        "unknownTrianglePairs": 0,
+        "degenerateTriangles": 0,
+        "topologyAccepted": true,
+        "intersectionToleranceMm": 1e-08,
+        "sharedFeatureToleranceMm": 1e-07,
+        "examples": [],
+        "triangles": 1356,
+        "exactIntersectionPairs": 0,
+        "componentCount": 1,
+        "topology": {
+          "boundaryEdges": 0,
+          "nonManifoldEdges": 0,
+          "inconsistentWindingEdges": 0,
+          "closedConsistentlyOriented": true
+        },
+        "boundsBlender": {
+          "min": [
+            -14.05949593,
+            19.42050552,
+            14.95447445
+          ],
+          "max": [
+            51.19753265,
+            23.25897217,
+            21.03240585
+          ]
+        }
+      },
+      "after": {
+        "status": "pass",
+        "fullTriangleCount": 1356,
+        "rawBvhTrianglePairs": 0,
+        "uniqueTrianglePairs": 0,
+        "examinedUniqueTrianglePairs": 0,
+        "sharedFeatureContactPairs": 0,
+        "disjointExactPairs": 0,
+        "forbiddenTriangleIntersections": 0,
+        "unknownTrianglePairs": 0,
+        "degenerateTriangles": 0,
+        "topologyAccepted": true,
+        "intersectionToleranceMm": 1e-08,
+        "sharedFeatureToleranceMm": 1e-07,
+        "examples": [],
+        "triangles": 1356,
+        "exactIntersectionPairs": 0,
+        "componentCount": 1,
+        "topology": {
+          "boundaryEdges": 0,
+          "nonManifoldEdges": 0,
+          "inconsistentWindingEdges": 0,
+          "closedConsistentlyOriented": true
+        },
+        "boundsBlender": {
+          "min": [
+            -14.05949593,
+            19.42050552,
+            14.95447445
+          ],
+          "max": [
+            51.19753265,
+            23.25897217,
+            21.03240585
+          ]
+        },
+        "closedVolumeMm3": 15.74697964473517
+      },
+      "centerlineEdited": false,
+      "cleanup": [],
+      "maximumCleanupBoundsChangeMm": 0.0,
+      "maximumCleanupVertexDistanceFromInputSurfaceMm": 0.0,
+      "endpointsUnchanged": true,
+      "nominalRadiusMm": 0.2800000011920929
+    },
+    {
+      "name": "X · 中央走线 GND.002",
+      "before": {
+        "status": "fail",
+        "fullTriangleCount": 204,
+        "rawBvhTrianglePairs": 18,
+        "uniqueTrianglePairs": 9,
+        "examinedUniqueTrianglePairs": 9,
+        "sharedFeatureContactPairs": 0,
+        "disjointExactPairs": 0,
+        "forbiddenTriangleIntersections": 9,
+        "unknownTrianglePairs": 0,
+        "degenerateTriangles": 0,
+        "topologyAccepted": true,
+        "intersectionToleranceMm": 1e-08,
+        "sharedFeatureToleranceMm": 1e-07,
+        "examples": [
+          {
+            "triangles": [
+              2,
+              181
+            ],
+            "sharedVertexIndices": [],
+            "intersectionPointsBlender": [
+              [
+                4.981210982950485,
+                22.12182583484933,
+                21.200000762939453
+              ],
+              [
+                4.949236837239646,
+                22.102854563902437,
+                21.200000762939453
+              ]
+            ],
+            "reason": "Non-adjacent source triangles intersect"
+          },
+          {
+            "triangles": [
+              2,
+              178
+            ],
+            "sharedVertexIndices": [],
+            "intersectionPointsBlender": [
+              [
+                4.949236837239646,
+                22.102854563902437,
+                21.200000762939453
+              ],
+              [
+                4.8585981593726135,
+                22.057625284064574,
+                21.200000762939453
+              ]
+            ],
+            "reason": "Non-adjacent source triangles intersect"
+          },
+          {
+            "triangles": [
+              2,
+              176
+            ],
+            "sharedVertexIndices": [],
+            "intersectionPointsBlender": [
+              [
+                4.773767339228602,
+                22.132788125677628,
+                21.200000762939453
+              ],
+              [
+                4.786033662027739,
+                22.09946152474293,
+                21.200000762939453
+              ]
+            ],
+            "reason": "Non-adjacent source triangles intersect"
+          },
+          {
+            "triangles": [
+              2,
+              179
+            ],
+            "sharedVertexIndices": [],
+            "intersectionPointsBlender": [
+              [
+                4.8585981593726135,
+                22.057625284064574,
+                21.200000762939453
+              ],
+              [
+                4.786033662027739,
+                22.09946152474293,
+                21.200000762939453
+              ]
+            ],
+            "reason": "Non-adjacent source triangles intersect"
+          },
+          {
+            "triangles": [
+              1,
+              180
+            ],
+            "sharedVertexIndices": [],
+            "intersectionPointsBlender": [
+              [
+                5.065940133796882,
+                22.166685375010577,
+                21.200000762939453
+              ],
+              [
+                5.017316249468605,
+                22.143248230303442,
+                21.200000762939453
+              ]
+            ],
+            "reason": "Non-adjacent source triangles intersect"
+          },
+          {
+            "triangles": [
+              1,
+              183
+            ],
+            "sharedVertexIndices": [],
+            "intersectionPointsBlender": [
+              [
+                5.071719553694427,
+                22.200127170463343,
+                21.200000762939453
+              ],
+              [
+                5.065940133796882,
+                22.166685375010577,
+                21.200000762939453
+              ]
+            ],
+            "reason": "Non-adjacent source triangles intersect"
+          },
+          {
+            "triangles": [
+              1,
+              181
+            ],
+            "sharedVertexIndices": [],
+            "intersectionPointsBlender": [
+              [
+                4.981210982950485,
+                22.12182583484933,
+                21.200000762939453
+              ],
+              [
+                5.017316249468605,
+                22.143248230303442,
+                21.200000762939453
+              ]
+            ],
+            "reason": "Non-adjacent source triangles intersect"
+          },
+          {
+            "triangles": [
+              0,
+              183
+            ],
+            "sharedVertexIndices": [],
+            "intersectionPointsBlender": [
+              [
+                5.071719553694427,
+                22.200127170463343,
+                21.200000762939453
+              ],
+              [
+                5.079725210409288,
+                22.246450770248362,
+                21.200000762939453
+              ]
+            ],
+            "reason": "Non-adjacent source triangles intersect"
+          }
+        ],
+        "triangles": 204,
+        "exactIntersectionPairs": 9,
+        "componentCount": 1,
+        "topology": {
+          "boundaryEdges": 0,
+          "nonManifoldEdges": 0,
+          "inconsistentWindingEdges": 0,
+          "closedConsistentlyOriented": true
+        },
+        "boundsBlender": {
+          "min": [
+            4.59231329,
+            21.66000175,
+            14.92000294
+          ],
+          "max": [
+            40.147995,
+            23.36838531,
+            22.66139793
+          ]
+        }
+      },
+      "afterCenterlineCorrection": {
+        "status": "pass",
+        "fullTriangleCount": 188,
+        "rawBvhTrianglePairs": 0,
+        "uniqueTrianglePairs": 0,
+        "examinedUniqueTrianglePairs": 0,
+        "sharedFeatureContactPairs": 0,
+        "disjointExactPairs": 0,
+        "forbiddenTriangleIntersections": 0,
+        "unknownTrianglePairs": 0,
+        "degenerateTriangles": 0,
+        "topologyAccepted": true,
+        "intersectionToleranceMm": 1e-08,
+        "sharedFeatureToleranceMm": 1e-07,
+        "examples": [],
+        "triangles": 188,
+        "exactIntersectionPairs": 0,
+        "componentCount": 1,
+        "topology": {
+          "boundaryEdges": 0,
+          "nonManifoldEdges": 0,
+          "inconsistentWindingEdges": 0,
+          "closedConsistentlyOriented": true
+        },
+        "boundsBlender": {
+          "min": [
+            4.58774137,
+            21.66000175,
+            14.92000294
+          ],
+          "max": [
+            40.147995,
+            23.36838531,
+            21.33520889
+          ]
+        }
+      },
+      "after": {
+        "status": "pass",
+        "fullTriangleCount": 188,
+        "rawBvhTrianglePairs": 0,
+        "uniqueTrianglePairs": 0,
+        "examinedUniqueTrianglePairs": 0,
+        "sharedFeatureContactPairs": 0,
+        "disjointExactPairs": 0,
+        "forbiddenTriangleIntersections": 0,
+        "unknownTrianglePairs": 0,
+        "degenerateTriangles": 0,
+        "topologyAccepted": true,
+        "intersectionToleranceMm": 1e-08,
+        "sharedFeatureToleranceMm": 1e-07,
+        "examples": [],
+        "triangles": 188,
+        "exactIntersectionPairs": 0,
+        "componentCount": 1,
+        "topology": {
+          "boundaryEdges": 0,
+          "nonManifoldEdges": 0,
+          "inconsistentWindingEdges": 0,
+          "closedConsistentlyOriented": true
+        },
+        "boundsBlender": {
+          "min": [
+            4.58774137,
+            21.66000175,
+            14.92000294
+          ],
+          "max": [
+            40.147995,
+            23.36838531,
+            21.33520889
+          ]
+        },
+        "closedVolumeMm3": 11.057758519233765
+      },
+      "centerlineEdited": true,
+      "cleanup": [],
+      "maximumCleanupBoundsChangeMm": 0.0,
+      "maximumCleanupVertexDistanceFromInputSurfaceMm": 0.0,
+      "endpointsUnchanged": true,
+      "nominalRadiusMm": 0.2800000011920929
+    },
+    {
+      "name": "X · 中央走线 GPIO.002",
+      "before": {
+        "status": "pass",
+        "fullTriangleCount": 732,
+        "rawBvhTrianglePairs": 0,
+        "uniqueTrianglePairs": 0,
+        "examinedUniqueTrianglePairs": 0,
+        "sharedFeatureContactPairs": 0,
+        "disjointExactPairs": 0,
+        "forbiddenTriangleIntersections": 0,
+        "unknownTrianglePairs": 0,
+        "degenerateTriangles": 0,
+        "topologyAccepted": true,
+        "intersectionToleranceMm": 1e-08,
+        "sharedFeatureToleranceMm": 1e-07,
+        "examples": [],
+        "triangles": 732,
+        "exactIntersectionPairs": 0,
+        "componentCount": 1,
+        "topology": {
+          "boundaryEdges": 0,
+          "nonManifoldEdges": 0,
+          "inconsistentWindingEdges": 0,
+          "closedConsistentlyOriented": true
+        },
+        "boundsBlender": {
+          "min": [
+            -8.9674263,
+            19.2280426,
+            14.92980766
+          ],
+          "max": [
+            39.34228897,
+            23.35993576,
+            21.62339783
+          ]
+        }
+      },
+      "afterCenterlineCorrection": {
+        "status": "pass",
+        "fullTriangleCount": 732,
+        "rawBvhTrianglePairs": 0,
+        "uniqueTrianglePairs": 0,
+        "examinedUniqueTrianglePairs": 0,
+        "sharedFeatureContactPairs": 0,
+        "disjointExactPairs": 0,
+        "forbiddenTriangleIntersections": 0,
+        "unknownTrianglePairs": 0,
+        "degenerateTriangles": 0,
+        "topologyAccepted": true,
+        "intersectionToleranceMm": 1e-08,
+        "sharedFeatureToleranceMm": 1e-07,
+        "examples": [],
+        "triangles": 732,
+        "exactIntersectionPairs": 0,
+        "componentCount": 1,
+        "topology": {
+          "boundaryEdges": 0,
+          "nonManifoldEdges": 0,
+          "inconsistentWindingEdges": 0,
+          "closedConsistentlyOriented": true
+        },
+        "boundsBlender": {
+          "min": [
+            -8.9674263,
+            19.2280426,
+            14.92980766
+          ],
+          "max": [
+            39.34228897,
+            23.35993576,
+            21.62339783
+          ]
+        }
+      },
+      "after": {
+        "status": "pass",
+        "fullTriangleCount": 732,
+        "rawBvhTrianglePairs": 0,
+        "uniqueTrianglePairs": 0,
+        "examinedUniqueTrianglePairs": 0,
+        "sharedFeatureContactPairs": 0,
+        "disjointExactPairs": 0,
+        "forbiddenTriangleIntersections": 0,
+        "unknownTrianglePairs": 0,
+        "degenerateTriangles": 0,
+        "topologyAccepted": true,
+        "intersectionToleranceMm": 1e-08,
+        "sharedFeatureToleranceMm": 1e-07,
+        "examples": [],
+        "triangles": 732,
+        "exactIntersectionPairs": 0,
+        "componentCount": 1,
+        "topology": {
+          "boundaryEdges": 0,
+          "nonManifoldEdges": 0,
+          "inconsistentWindingEdges": 0,
+          "closedConsistentlyOriented": true
+        },
+        "boundsBlender": {
+          "min": [
+            -8.9674263,
+            19.2280426,
+            14.92980766
+          ],
+          "max": [
+            39.34228897,
+            23.35993576,
+            21.62339783
+          ]
+        },
+        "closedVolumeMm3": 13.932966740509272
+      },
+      "centerlineEdited": false,
+      "cleanup": [],
+      "maximumCleanupBoundsChangeMm": 0.0,
+      "maximumCleanupVertexDistanceFromInputSurfaceMm": 0.0,
+      "endpointsUnchanged": true,
+      "nominalRadiusMm": 0.2800000011920929
+    },
+    {
+      "name": "Y · 中央走线 GND.002",
+      "before": {
+        "status": "fail",
+        "fullTriangleCount": 188,
+        "rawBvhTrianglePairs": 84,
+        "uniqueTrianglePairs": 42,
+        "examinedUniqueTrianglePairs": 42,
+        "sharedFeatureContactPairs": 0,
+        "disjointExactPairs": 0,
+        "forbiddenTriangleIntersections": 42,
+        "unknownTrianglePairs": 0,
+        "degenerateTriangles": 0,
+        "topologyAccepted": true,
+        "intersectionToleranceMm": 1e-08,
+        "sharedFeatureToleranceMm": 1e-07,
+        "examples": [
+          {
+            "triangles": [
+              165,
+              187
+            ],
+            "sharedVertexIndices": [],
+            "intersectionPointsBlender": [
+              [
+                1.5373382520393637,
+                22.106102641137415,
+                22.03275172274477
+              ],
+              [
+                1.5497623804890812,
+                22.093828201293945,
+                21.98416605107919
+              ]
+            ],
+            "reason": "Non-adjacent source triangles intersect"
+          },
+          {
+            "triangles": [
+              163,
+              173
+            ],
+            "sharedVertexIndices": [],
+            "intersectionPointsBlender": [
+              [
+                1.548082019422036,
+                21.897203498636046,
+                21.997495247916596
+              ],
+              [
+                1.5454236979267246,
+                21.879804611206055,
+                22.021139943349972
+              ]
+            ],
+            "reason": "Non-adjacent source triangles intersect"
+          },
+          {
+            "triangles": [
+              162,
+              173
+            ],
+            "sharedVertexIndices": [],
+            "intersectionPointsBlender": [
+              [
+                1.548082019422036,
+                21.897203498636046,
+                21.997495247916596
+              ],
+              [
+                1.5490080633550214,
+                21.906171798706055,
+                21.98693484631229
+              ]
+            ],
+            "reason": "Non-adjacent source triangles intersect"
+          },
+          {
+            "triangles": [
+              162,
+              186
+            ],
+            "sharedVertexIndices": [],
+            "intersectionPointsBlender": [
+              [
+                1.5490080633550214,
+                21.906171798706055,
+                21.98693484631229
+              ],
+              [
+                1.550003022353735,
+                21.942712853926075,
+                21.976458777814894
+              ]
+            ],
+            "reason": "Non-adjacent source triangles intersect"
+          },
+          {
+            "triangles": [
+              162,
+              187
+            ],
+            "sharedVertexIndices": [],
+            "intersectionPointsBlender": [
+              [
+                1.5497623804890812,
+                22.093828201293945,
+                21.98416605107919
+              ],
+              [
+                1.550003022353735,
+                21.942712853926075,
+                21.976458777814894
+              ]
+            ],
+            "reason": "Non-adjacent source triangles intersect"
+          },
+          {
+            "triangles": [
+              160,
+              173
+            ],
+            "sharedVertexIndices": [],
+            "intersectionPointsBlender": [
+              [
+                1.5454236979267248,
+                21.879804611206055,
+                22.021139943349972
+              ],
+              [
+                1.5233455617499105,
+                21.759095385100373,
+                22.198499243969177
+              ]
+            ],
+            "reason": "Non-adjacent source triangles intersect"
+          },
+          {
+            "triangles": [
+              160,
+              172
+            ],
+            "sharedVertexIndices": [],
+            "intersectionPointsBlender": [
+              [
+                1.5549774072052722,
+                21.7484893130817,
+                21.81635215142375
+              ],
+              [
+                1.5233455617499105,
+                21.759095385100373,
+                22.198499243969177
+              ]
+            ],
+            "reason": "Non-adjacent source triangles intersect"
+          },
+          {
+            "triangles": [
+              167,
+              185
+            ],
+            "sharedVertexIndices": [],
+            "intersectionPointsBlender": [
+              [
+                1.5178812685643719,
+                22.25342716934888,
+                22.117112908677033
+              ],
+              [
+                1.5872945141874333,
+                22.252890756013013,
+                21.27202730616401
+              ]
+            ],
+            "reason": "Non-adjacent source triangles intersect"
+          }
+        ],
+        "triangles": 188,
+        "exactIntersectionPairs": 42,
+        "componentCount": 1,
+        "topology": {
+          "boundaryEdges": 0,
+          "nonManifoldEdges": 0,
+          "inconsistentWindingEdges": 0,
+          "closedConsistentlyOriented": true
+        },
+        "boundsBlender": {
+          "min": [
+            1.23618925,
+            21.73605156,
+            14.13618851
+          ],
+          "max": [
+            43.45174789,
+            31.18105316,
+            22.66368294
+          ]
+        }
+      },
+      "afterCenterlineCorrection": {
+        "status": "pass",
+        "fullTriangleCount": 172,
+        "rawBvhTrianglePairs": 0,
+        "uniqueTrianglePairs": 0,
+        "examinedUniqueTrianglePairs": 0,
+        "sharedFeatureContactPairs": 0,
+        "disjointExactPairs": 0,
+        "forbiddenTriangleIntersections": 0,
+        "unknownTrianglePairs": 0,
+        "degenerateTriangles": 0,
+        "topologyAccepted": true,
+        "intersectionToleranceMm": 1e-08,
+        "sharedFeatureToleranceMm": 1e-07,
+        "examples": [],
+        "triangles": 172,
+        "exactIntersectionPairs": 0,
+        "componentCount": 1,
+        "topology": {
+          "boundaryEdges": 0,
+          "nonManifoldEdges": 0,
+          "inconsistentWindingEdges": 0,
+          "closedConsistentlyOriented": true
+        },
+        "boundsBlender": {
+          "min": [
+            1.2368995,
+            21.73605156,
+            14.13618851
+          ],
+          "max": [
+            43.45174789,
+            31.18105316,
+            21.219347
+          ]
+        }
+      },
+      "after": {
+        "status": "pass",
+        "fullTriangleCount": 172,
+        "rawBvhTrianglePairs": 0,
+        "uniqueTrianglePairs": 0,
+        "examinedUniqueTrianglePairs": 0,
+        "sharedFeatureContactPairs": 0,
+        "disjointExactPairs": 0,
+        "forbiddenTriangleIntersections": 0,
+        "unknownTrianglePairs": 0,
+        "degenerateTriangles": 0,
+        "topologyAccepted": true,
+        "intersectionToleranceMm": 1e-08,
+        "sharedFeatureToleranceMm": 1e-07,
+        "examples": [],
+        "triangles": 172,
+        "exactIntersectionPairs": 0,
+        "componentCount": 1,
+        "topology": {
+          "boundaryEdges": 0,
+          "nonManifoldEdges": 0,
+          "inconsistentWindingEdges": 0,
+          "closedConsistentlyOriented": true
+        },
+        "boundsBlender": {
+          "min": [
+            1.2368995,
+            21.73605156,
+            14.13618851
+          ],
+          "max": [
+            43.45174789,
+            31.18105316,
+            21.219347
+          ]
+        },
+        "closedVolumeMm3": 12.707964680588901
+      },
+      "centerlineEdited": true,
+      "cleanup": [],
+      "maximumCleanupBoundsChangeMm": 0.0,
+      "maximumCleanupVertexDistanceFromInputSurfaceMm": 0.0,
+      "endpointsUnchanged": true,
+      "nominalRadiusMm": 0.2800000011920929
+    },
+    {
+      "name": "Y · 中央走线 GPIO.002",
+      "before": {
+        "status": "pass",
+        "fullTriangleCount": 716,
+        "rawBvhTrianglePairs": 0,
+        "uniqueTrianglePairs": 0,
+        "examinedUniqueTrianglePairs": 0,
+        "sharedFeatureContactPairs": 0,
+        "disjointExactPairs": 0,
+        "forbiddenTriangleIntersections": 0,
+        "unknownTrianglePairs": 0,
+        "degenerateTriangles": 0,
+        "topologyAccepted": true,
+        "intersectionToleranceMm": 1e-08,
+        "sharedFeatureToleranceMm": 1e-07,
+        "examples": [],
+        "triangles": 716,
+        "exactIntersectionPairs": 0,
+        "componentCount": 1,
+        "topology": {
+          "boundaryEdges": 0,
+          "nonManifoldEdges": 0,
+          "inconsistentWindingEdges": 0,
+          "closedConsistentlyOriented": true
+        },
+        "boundsBlender": {
+          "min": [
+            -16.59163094,
+            19.42836952,
+            14.92881775
+          ],
+          "max": [
+            40.33881378,
+            31.18105316,
+            21.03248978
+          ]
+        }
+      },
+      "afterCenterlineCorrection": {
+        "status": "pass",
+        "fullTriangleCount": 716,
+        "rawBvhTrianglePairs": 0,
+        "uniqueTrianglePairs": 0,
+        "examinedUniqueTrianglePairs": 0,
+        "sharedFeatureContactPairs": 0,
+        "disjointExactPairs": 0,
+        "forbiddenTriangleIntersections": 0,
+        "unknownTrianglePairs": 0,
+        "degenerateTriangles": 0,
+        "topologyAccepted": true,
+        "intersectionToleranceMm": 1e-08,
+        "sharedFeatureToleranceMm": 1e-07,
+        "examples": [],
+        "triangles": 716,
+        "exactIntersectionPairs": 0,
+        "componentCount": 1,
+        "topology": {
+          "boundaryEdges": 0,
+          "nonManifoldEdges": 0,
+          "inconsistentWindingEdges": 0,
+          "closedConsistentlyOriented": true
+        },
+        "boundsBlender": {
+          "min": [
+            -16.59163094,
+            19.42836952,
+            14.92881775
+          ],
+          "max": [
+            40.33881378,
+            31.18105316,
+            21.03248978
+          ]
+        }
+      },
+      "after": {
+        "status": "pass",
+        "fullTriangleCount": 716,
+        "rawBvhTrianglePairs": 0,
+        "uniqueTrianglePairs": 0,
+        "examinedUniqueTrianglePairs": 0,
+        "sharedFeatureContactPairs": 0,
+        "disjointExactPairs": 0,
+        "forbiddenTriangleIntersections": 0,
+        "unknownTrianglePairs": 0,
+        "degenerateTriangles": 0,
+        "topologyAccepted": true,
+        "intersectionToleranceMm": 1e-08,
+        "sharedFeatureToleranceMm": 1e-07,
+        "examples": [],
+        "triangles": 716,
+        "exactIntersectionPairs": 0,
+        "componentCount": 1,
+        "topology": {
+          "boundaryEdges": 0,
+          "nonManifoldEdges": 0,
+          "inconsistentWindingEdges": 0,
+          "closedConsistentlyOriented": true
+        },
+        "boundsBlender": {
+          "min": [
+            -16.59163094,
+            19.42836952,
+            14.92881775
+          ],
+          "max": [
+            40.33881378,
+            31.18105316,
+            21.03248978
+          ]
+        },
+        "closedVolumeMm3": 15.279929820926526
+      },
+      "centerlineEdited": false,
+      "cleanup": [],
+      "maximumCleanupBoundsChangeMm": 0.0,
+      "maximumCleanupVertexDistanceFromInputSurfaceMm": 0.0,
+      "endpointsUnchanged": true,
+      "nominalRadiusMm": 0.2800000011920929
+    },
+    {
+      "name": "上 · 中央走线 GND.002",
+      "before": {
+        "status": "fail",
+        "fullTriangleCount": 252,
+        "rawBvhTrianglePairs": 90,
+        "uniqueTrianglePairs": 45,
+        "examinedUniqueTrianglePairs": 45,
+        "sharedFeatureContactPairs": 0,
+        "disjointExactPairs": 0,
+        "forbiddenTriangleIntersections": 45,
+        "unknownTrianglePairs": 0,
+        "degenerateTriangles": 0,
+        "topologyAccepted": true,
+        "intersectionToleranceMm": 1e-08,
+        "sharedFeatureToleranceMm": 1e-07,
+        "examples": [
+          {
+            "triangles": [
+              65,
+              105
+            ],
+            "sharedVertexIndices": [],
+            "intersectionPointsBlender": [
+              [
+                -40.96935907006564,
+                23.012079507985902,
+                13.63329645935955
+              ],
+              [
+                -40.94397446597522,
+                23.052392939776862,
+                13.61000506317064
+              ]
+            ],
+            "reason": "Non-adjacent source triangles intersect"
+          },
+          {
+            "triangles": [
+              65,
+              103
+            ],
+            "sharedVertexIndices": [],
+            "intersectionPointsBlender": [
+              [
+                -40.97247225580073,
+                23.015157883024177,
+                13.541672896484247
+              ],
+              [
+                -40.94569000557589,
+                23.052443053527956,
+                13.578903101863569
+              ]
+            ],
+            "reason": "Non-adjacent source triangles intersect"
+          },
+          {
+            "triangles": [
+              62,
+              105
+            ],
+            "sharedVertexIndices": [],
+            "intersectionPointsBlender": [
+              [
+                -40.94397446597522,
+                23.052392939776862,
+                13.61000506317064
+              ],
+              [
+                -40.93200180098636,
+                23.066444555886257,
+                13.597774024397161
+              ]
+            ],
+            "reason": "Non-adjacent source triangles intersect"
+          },
+          {
+            "triangles": [
+              62,
+              103
+            ],
+            "sharedVertexIndices": [],
+            "intersectionPointsBlender": [
+              [
+                -40.94569000557589,
+                23.052443053527956,
+                13.578903101863569
+              ],
+              [
+                -40.94285462543882,
+                23.05534012864074,
+                13.582863007048442
+              ]
+            ],
+            "reason": "Non-adjacent source triangles intersect"
+          },
+          {
+            "triangles": [
+              62,
+              102
+            ],
+            "sharedVertexIndices": [],
+            "intersectionPointsBlender": [
+              [
+                -40.93200180098636,
+                23.066444555886257,
+                13.597774024397161
+              ],
+              [
+                -40.94285462543882,
+                23.05534012864074,
+                13.582863007048442
+              ]
+            ],
+            "reason": "Non-adjacent source triangles intersect"
+          },
+          {
+            "triangles": [
+              73,
+              106
+            ],
+            "sharedVertexIndices": [],
+            "intersectionPointsBlender": [
+              [
+                -41.14350827703295,
+                23.080863352520367,
+                13.773470171348025
+              ],
+              [
+                -41.16359782672241,
+                23.04742203041351,
+                13.804214069397089
+              ]
+            ],
+            "reason": "Non-adjacent source triangles intersect"
+          },
+          {
+            "triangles": [
+              73,
+              93
+            ],
+            "sharedVertexIndices": [],
+            "intersectionPointsBlender": [
+              [
+                -41.16369192297906,
+                23.047245627689982,
+                13.804192318068159
+              ],
+              [
+                -41.16359782672241,
+                23.04742203041351,
+                13.804214069397089
+              ]
+            ],
+            "reason": "Non-adjacent source triangles intersect"
+          },
+          {
+            "triangles": [
+              72,
+              106
+            ],
+            "sharedVertexIndices": [],
+            "intersectionPointsBlender": [
+              [
+                -41.14350827703295,
+                23.080863352520367,
+                13.773470171348025
+              ],
+              [
+                -41.13625957791185,
+                23.086632631382713,
+                13.763087266652974
+              ]
+            ],
+            "reason": "Non-adjacent source triangles intersect"
+          }
+        ],
+        "triangles": 252,
+        "exactIntersectionPairs": 45,
+        "componentCount": 1,
+        "topology": {
+          "boundaryEdges": 0,
+          "nonManifoldEdges": 0,
+          "inconsistentWindingEdges": 0,
+          "closedConsistentlyOriented": true
+        },
+        "boundsBlender": {
+          "min": [
+            -41.47750473,
+            21.73130035,
+            12.37415504
+          ],
+          "max": [
+            -8.73130131,
+            29.86968613,
+            22.6703186
+          ]
+        }
+      },
+      "afterCenterlineCorrection": {
+        "status": "pass",
+        "fullTriangleCount": 236,
+        "rawBvhTrianglePairs": 0,
+        "uniqueTrianglePairs": 0,
+        "examinedUniqueTrianglePairs": 0,
+        "sharedFeatureContactPairs": 0,
+        "disjointExactPairs": 0,
+        "forbiddenTriangleIntersections": 0,
+        "unknownTrianglePairs": 0,
+        "degenerateTriangles": 0,
+        "topologyAccepted": true,
+        "intersectionToleranceMm": 1e-08,
+        "sharedFeatureToleranceMm": 1e-07,
+        "examples": [],
+        "triangles": 236,
+        "exactIntersectionPairs": 0,
+        "componentCount": 1,
+        "topology": {
+          "boundaryEdges": 0,
+          "nonManifoldEdges": 0,
+          "inconsistentWindingEdges": 0,
+          "closedConsistentlyOriented": true
+        },
+        "boundsBlender": {
+          "min": [
+            -41.47974014,
+            21.73226547,
+            13.33858013
+          ],
+          "max": [
+            -8.73226643,
+            29.86968613,
+            22.671175
+          ]
+        }
+      },
+      "after": {
+        "status": "pass",
+        "fullTriangleCount": 236,
+        "rawBvhTrianglePairs": 0,
+        "uniqueTrianglePairs": 0,
+        "examinedUniqueTrianglePairs": 0,
+        "sharedFeatureContactPairs": 0,
+        "disjointExactPairs": 0,
+        "forbiddenTriangleIntersections": 0,
+        "unknownTrianglePairs": 0,
+        "degenerateTriangles": 0,
+        "topologyAccepted": true,
+        "intersectionToleranceMm": 1e-08,
+        "sharedFeatureToleranceMm": 1e-07,
+        "examples": [],
+        "triangles": 236,
+        "exactIntersectionPairs": 0,
+        "componentCount": 1,
+        "topology": {
+          "boundaryEdges": 0,
+          "nonManifoldEdges": 0,
+          "inconsistentWindingEdges": 0,
+          "closedConsistentlyOriented": true
+        },
+        "boundsBlender": {
+          "min": [
+            -41.47974014,
+            21.73226547,
+            13.33858013
+          ],
+          "max": [
+            -8.73226643,
+            29.86968613,
+            22.671175
+          ]
+        },
+        "closedVolumeMm3": 10.146364845397875
+      },
+      "centerlineEdited": true,
+      "cleanup": [],
+      "maximumCleanupBoundsChangeMm": 0.0,
+      "maximumCleanupVertexDistanceFromInputSurfaceMm": 0.0,
+      "endpointsUnchanged": true,
+      "nominalRadiusMm": 0.2800000011920929
+    },
+    {
+      "name": "上 · 中央走线 GPIO.002",
+      "before": {
+        "status": "fail",
+        "fullTriangleCount": 652,
+        "rawBvhTrianglePairs": 30,
+        "uniqueTrianglePairs": 15,
+        "examinedUniqueTrianglePairs": 15,
+        "sharedFeatureContactPairs": 0,
+        "disjointExactPairs": 0,
+        "forbiddenTriangleIntersections": 15,
+        "unknownTrianglePairs": 0,
+        "degenerateTriangles": 0,
+        "topologyAccepted": true,
+        "intersectionToleranceMm": 1e-08,
+        "sharedFeatureToleranceMm": 1e-07,
+        "examples": [
+          {
+            "triangles": [
+              623,
+              639
+            ],
+            "sharedVertexIndices": [
+              320
+            ],
+            "intersectionPointsBlender": [
+              [
+                -3.5521156787872314,
+                19.457202911376953,
+                18.278175354003906
+              ],
+              [
+                -3.5521156787872314,
+                19.457202911376953,
+                18.278175354003906
+              ],
+              [
+                -3.6688807636333114,
+                19.554532112738368,
+                17.96062650909089
+              ],
+              [
+                -3.5521156787872314,
+                19.457202911376953,
+                18.278175354003906
+              ],
+              [
+                -3.5521156787872314,
+                19.457202911376953,
+                18.278175354003906
+              ]
+            ],
+            "reason": "Intersection exceeds the actual common topological feature"
+          },
+          {
+            "triangles": [
+              623,
+              638
+            ],
+            "sharedVertexIndices": [],
+            "intersectionPointsBlender": [
+              [
+                -3.673989561150615,
+                19.555432299582165,
+                17.948850787245778
+              ],
+              [
+                -3.6688807636333114,
+                19.554532112738368,
+                17.96062650909089
+              ]
+            ],
+            "reason": "Non-adjacent source triangles intersect"
+          },
+          {
+            "triangles": [
+              627,
+              643
+            ],
+            "sharedVertexIndices": [
+              322
+            ],
+            "intersectionPointsBlender": [
+              [
+                -3.7689030170440674,
+                19.771766662597656,
+                18.173995971679688
+              ],
+              [
+                -3.7913856722805694,
+                19.766311173687605,
+                17.96361644340031
+              ],
+              [
+                -3.7689030170440674,
+                19.771766662597656,
+                18.173995971679688
+              ],
+              [
+                -3.7689030170440674,
+                19.771766662597656,
+                18.173995971679688
+              ]
+            ],
+            "reason": "Intersection exceeds the actual common topological feature"
+          },
+          {
+            "triangles": [
+              610,
+              643
+            ],
+            "sharedVertexIndices": [],
+            "intersectionPointsBlender": [
+              [
+                -3.7913856722805694,
+                19.766311173687605,
+                17.96361644340031
+              ],
+              [
+                -3.7914590514778075,
+                19.765404489348647,
+                17.96179677558519
+              ]
+            ],
+            "reason": "Non-adjacent source triangles intersect"
+          },
+          {
+            "triangles": [
+              611,
+              643
+            ],
+            "sharedVertexIndices": [],
+            "intersectionPointsBlender": [
+              [
+                -3.7914590514778075,
+                19.765404489348647,
+                17.96179677558519
+              ],
+              [
+                -3.7919418861571406,
+                19.75964102581955,
+                17.950081511056442
+              ]
+            ],
+            "reason": "Non-adjacent source triangles intersect"
+          },
+          {
+            "triangles": [
+              611,
+              640
+            ],
+            "sharedVertexIndices": [],
+            "intersectionPointsBlender": [
+              [
+                -3.7913977372333503,
+                19.756087278050366,
+                17.94297003642481
+              ],
+              [
+                -3.7919418861571406,
+                19.75964102581955,
+                17.950081511056442
+              ]
+            ],
+            "reason": "Non-adjacent source triangles intersect"
+          },
+          {
+            "triangles": [
+              606,
+              638
+            ],
+            "sharedVertexIndices": [],
+            "intersectionPointsBlender": [
+              [
+                -3.7029207017761756,
+                19.563171201791906,
+                17.906548765440483
+              ],
+              [
+                -3.673989561150615,
+                19.555432299582165,
+                17.948850787245778
+              ]
+            ],
+            "reason": "Non-adjacent source triangles intersect"
+          },
+          {
+            "triangles": [
+              608,
+              640
+            ],
+            "sharedVertexIndices": [],
+            "intersectionPointsBlender": [
+              [
+                -3.7913977372333503,
+                19.756087278050366,
+                17.94297003642481
+              ],
+              [
+                -3.7789889943562236,
+                19.72259129482225,
+                17.934321237164806
+              ]
+            ],
+            "reason": "Non-adjacent source triangles intersect"
+          }
+        ],
+        "triangles": 652,
+        "exactIntersectionPairs": 15,
+        "componentCount": 1,
+        "topology": {
+          "boundaryEdges": 0,
+          "nonManifoldEdges": 0,
+          "inconsistentWindingEdges": 0,
+          "closedConsistentlyOriented": true
+        },
+        "boundsBlender": {
+          "min": [
+            -44.34565353,
+            19.26210213,
+            12.43043232
+          ],
+          "max": [
+            -3.34001374,
+            29.86968613,
+            18.64595032
+          ]
+        }
+      },
+      "afterCenterlineCorrection": {
+        "status": "fail",
+        "fullTriangleCount": 652,
+        "rawBvhTrianglePairs": 30,
+        "uniqueTrianglePairs": 15,
+        "examinedUniqueTrianglePairs": 15,
+        "sharedFeatureContactPairs": 0,
+        "disjointExactPairs": 0,
+        "forbiddenTriangleIntersections": 15,
+        "unknownTrianglePairs": 0,
+        "degenerateTriangles": 0,
+        "topologyAccepted": true,
+        "intersectionToleranceMm": 1e-08,
+        "sharedFeatureToleranceMm": 1e-07,
+        "examples": [
+          {
+            "triangles": [
+              623,
+              639
+            ],
+            "sharedVertexIndices": [
+              320
+            ],
+            "intersectionPointsBlender": [
+              [
+                -3.5521156787872314,
+                19.457202911376953,
+                18.278175354003906
+              ],
+              [
+                -3.5521156787872314,
+                19.457202911376953,
+                18.278175354003906
+              ],
+              [
+                -3.6688807636333114,
+                19.554532112738368,
+                17.96062650909089
+              ],
+              [
+                -3.5521156787872314,
+                19.457202911376953,
+                18.278175354003906
+              ],
+              [
+                -3.5521156787872314,
+                19.457202911376953,
+                18.278175354003906
+              ]
+            ],
+            "reason": "Intersection exceeds the actual common topological feature"
+          },
+          {
+            "triangles": [
+              623,
+              638
+            ],
+            "sharedVertexIndices": [],
+            "intersectionPointsBlender": [
+              [
+                -3.673989561150615,
+                19.555432299582165,
+                17.948850787245778
+              ],
+              [
+                -3.6688807636333114,
+                19.554532112738368,
+                17.96062650909089
+              ]
+            ],
+            "reason": "Non-adjacent source triangles intersect"
+          },
+          {
+            "triangles": [
+              627,
+              643
+            ],
+            "sharedVertexIndices": [
+              322
+            ],
+            "intersectionPointsBlender": [
+              [
+                -3.7689030170440674,
+                19.771766662597656,
+                18.173995971679688
+              ],
+              [
+                -3.7913856722805694,
+                19.766311173687605,
+                17.96361644340031
+              ],
+              [
+                -3.7689030170440674,
+                19.771766662597656,
+                18.173995971679688
+              ],
+              [
+                -3.7689030170440674,
+                19.771766662597656,
+                18.173995971679688
+              ]
+            ],
+            "reason": "Intersection exceeds the actual common topological feature"
+          },
+          {
+            "triangles": [
+              610,
+              643
+            ],
+            "sharedVertexIndices": [],
+            "intersectionPointsBlender": [
+              [
+                -3.7913856722805694,
+                19.766311173687605,
+                17.96361644340031
+              ],
+              [
+                -3.7914590514778075,
+                19.765404489348647,
+                17.96179677558519
+              ]
+            ],
+            "reason": "Non-adjacent source triangles intersect"
+          },
+          {
+            "triangles": [
+              611,
+              643
+            ],
+            "sharedVertexIndices": [],
+            "intersectionPointsBlender": [
+              [
+                -3.7914590514778075,
+                19.765404489348647,
+                17.96179677558519
+              ],
+              [
+                -3.7919418861571406,
+                19.75964102581955,
+                17.950081511056442
+              ]
+            ],
+            "reason": "Non-adjacent source triangles intersect"
+          },
+          {
+            "triangles": [
+              611,
+              640
+            ],
+            "sharedVertexIndices": [],
+            "intersectionPointsBlender": [
+              [
+                -3.7913977372333503,
+                19.756087278050366,
+                17.94297003642481
+              ],
+              [
+                -3.7919418861571406,
+                19.75964102581955,
+                17.950081511056442
+              ]
+            ],
+            "reason": "Non-adjacent source triangles intersect"
+          },
+          {
+            "triangles": [
+              606,
+              638
+            ],
+            "sharedVertexIndices": [],
+            "intersectionPointsBlender": [
+              [
+                -3.7029207017761756,
+                19.563171201791906,
+                17.906548765440483
+              ],
+              [
+                -3.673989561150615,
+                19.555432299582165,
+                17.948850787245778
+              ]
+            ],
+            "reason": "Non-adjacent source triangles intersect"
+          },
+          {
+            "triangles": [
+              608,
+              640
+            ],
+            "sharedVertexIndices": [],
+            "intersectionPointsBlender": [
+              [
+                -3.7913977372333503,
+                19.756087278050366,
+                17.94297003642481
+              ],
+              [
+                -3.7789889943562236,
+                19.72259129482225,
+                17.934321237164806
+              ]
+            ],
+            "reason": "Non-adjacent source triangles intersect"
+          }
+        ],
+        "triangles": 652,
+        "exactIntersectionPairs": 15,
+        "componentCount": 1,
+        "topology": {
+          "boundaryEdges": 0,
+          "nonManifoldEdges": 0,
+          "inconsistentWindingEdges": 0,
+          "closedConsistentlyOriented": true
+        },
+        "boundsBlender": {
+          "min": [
+            -44.34565353,
+            19.26210213,
+            12.43043232
+          ],
+          "max": [
+            -3.34001374,
+            29.86968613,
+            18.64595032
+          ]
+        }
+      },
+      "after": {
+        "status": "pass",
+        "fullTriangleCount": 674,
+        "rawBvhTrianglePairs": 0,
+        "uniqueTrianglePairs": 0,
+        "examinedUniqueTrianglePairs": 0,
+        "sharedFeatureContactPairs": 0,
+        "disjointExactPairs": 0,
+        "forbiddenTriangleIntersections": 0,
+        "unknownTrianglePairs": 0,
+        "degenerateTriangles": 0,
+        "topologyAccepted": true,
+        "intersectionToleranceMm": 1e-08,
+        "sharedFeatureToleranceMm": 1e-07,
+        "examples": [],
+        "triangles": 674,
+        "exactIntersectionPairs": 0,
+        "componentCount": 1,
+        "topology": {
+          "boundaryEdges": 0,
+          "nonManifoldEdges": 0,
+          "inconsistentWindingEdges": 0,
+          "closedConsistentlyOriented": true
+        },
+        "boundsBlender": {
+          "min": [
+            -44.34565353,
+            19.26210213,
+            12.43043232
+          ],
+          "max": [
+            -3.34001374,
+            29.86968613,
+            18.64595032
+          ]
+        },
+        "closedVolumeMm3": 11.656478093415565
+      },
+      "centerlineEdited": false,
+      "cleanup": [
+        {
+          "exactSelfUnionPass": 1,
+          "numericalWeldToleranceMm": 1e-06,
+          "selfAfter": 0
+        }
+      ],
+      "maximumCleanupBoundsChangeMm": 0.0,
+      "maximumCleanupVertexDistanceFromInputSurfaceMm": 2.384185791015625e-07,
+      "endpointsUnchanged": true,
+      "nominalRadiusMm": 0.2800000011920929
+    },
+    {
+      "name": "下 · 中央走线 GND.002",
+      "before": {
+        "status": "fail",
+        "fullTriangleCount": 188,
+        "rawBvhTrianglePairs": 84,
+        "uniqueTrianglePairs": 42,
+        "examinedUniqueTrianglePairs": 42,
+        "sharedFeatureContactPairs": 0,
+        "disjointExactPairs": 0,
+        "forbiddenTriangleIntersections": 42,
+        "unknownTrianglePairs": 0,
+        "degenerateTriangles": 0,
+        "topologyAccepted": true,
+        "intersectionToleranceMm": 1e-08,
+        "sharedFeatureToleranceMm": 1e-07,
+        "examples": [
+          {
+            "triangles": [
+              4,
+              164
+            ],
+            "sharedVertexIndices": [],
+            "intersectionPointsBlender": [
+              [
+                -5.486008397303106,
+                21.788164143063582,
+                21.200000762939453
+              ],
+              [
+                -5.4880536787146506,
+                21.87017250061035,
+                21.200000762939453
+              ]
+            ],
+            "reason": "Non-adjacent source triangles intersect"
+          },
+          {
+            "triangles": [
+              4,
+              167
+            ],
+            "sharedVertexIndices": [],
+            "intersectionPointsBlender": [
+              [
+                -5.4863295595740755,
+                21.89364391175057,
+                21.200000762939453
+              ],
+              [
+                -5.4880536787146506,
+                21.87017250061035,
+                21.200000762939453
+              ]
+            ],
+            "reason": "Non-adjacent source triangles intersect"
+          },
+          {
+            "triangles": [
+              4,
+              160
+            ],
+            "sharedVertexIndices": [],
+            "intersectionPointsBlender": [
+              [
+                -5.536209490389137,
+                21.80387308562672,
+                21.200000762939453
+              ],
+              [
+                -5.537614503918225,
+                21.885420912238516,
+                21.200000762939453
+              ]
+            ],
+            "reason": "Non-adjacent source triangles intersect"
+          },
+          {
+            "triangles": [
+              4,
+              161
+            ],
+            "sharedVertexIndices": [],
+            "intersectionPointsBlender": [
+              [
+                -5.540035962778314,
+                21.88882805598652,
+                21.200000762939453
+              ],
+              [
+                -5.537614503918225,
+                21.885420912238516,
+                21.200000762939453
+              ]
+            ],
+            "reason": "Non-adjacent source triangles intersect"
+          },
+          {
+            "triangles": [
+              3,
+              166
+            ],
+            "sharedVertexIndices": [],
+            "intersectionPointsBlender": [
+              [
+                -5.486267121016334,
+                21.995702664514493,
+                21.200000762939453
+              ],
+              [
+                -5.4860641971441275,
+                21.897256440924405,
+                21.200000762939453
+              ]
+            ],
+            "reason": "Non-adjacent source triangles intersect"
+          },
+          {
+            "triangles": [
+              3,
+              167
+            ],
+            "sharedVertexIndices": [],
+            "intersectionPointsBlender": [
+              [
+                -5.4863295595740755,
+                21.89364391175057,
+                21.200000762939453
+              ],
+              [
+                -5.4860641971441275,
+                21.897256440924405,
+                21.200000762939453
+              ]
+            ],
+            "reason": "Non-adjacent source triangles intersect"
+          },
+          {
+            "triangles": [
+              3,
+              158
+            ],
+            "sharedVertexIndices": [],
+            "intersectionPointsBlender": [
+              [
+                -5.559294136060452,
+                22.01855450668998,
+                21.200000762939453
+              ],
+              [
+                -5.559617093179425,
+                21.916379928588867,
+                21.200000762939453
+              ]
+            ],
+            "reason": "Non-adjacent source triangles intersect"
+          },
+          {
+            "triangles": [
+              3,
+              161
+            ],
+            "sharedVertexIndices": [],
+            "intersectionPointsBlender": [
+              [
+                -5.540035962778314,
+                21.88882805598652,
+                21.200000762939453
+              ],
+              [
+                -5.559617093179425,
+                21.916379928588867,
+                21.200000762939453
+              ]
+            ],
+            "reason": "Non-adjacent source triangles intersect"
+          }
+        ],
+        "triangles": 188,
+        "exactIntersectionPairs": 42,
+        "componentCount": 1,
+        "topology": {
+          "boundaryEdges": 0,
+          "nonManifoldEdges": 0,
+          "inconsistentWindingEdges": 0,
+          "closedConsistentlyOriented": true
+        },
+        "boundsBlender": {
+          "min": [
+            -44.32423401,
+            14.12839222,
+            11.7327776
+          ],
+          "max": [
+            -5.2327776,
+            22.26722336,
+            22.66721725
+          ]
+        }
+      },
+      "afterCenterlineCorrection": {
+        "status": "pass",
+        "fullTriangleCount": 172,
+        "rawBvhTrianglePairs": 0,
+        "uniqueTrianglePairs": 0,
+        "examinedUniqueTrianglePairs": 0,
+        "sharedFeatureContactPairs": 0,
+        "disjointExactPairs": 0,
+        "forbiddenTriangleIntersections": 0,
+        "unknownTrianglePairs": 0,
+        "degenerateTriangles": 0,
+        "topologyAccepted": true,
+        "intersectionToleranceMm": 1e-08,
+        "sharedFeatureToleranceMm": 1e-07,
+        "examples": [],
+        "triangles": 172,
+        "exactIntersectionPairs": 0,
+        "componentCount": 1,
+        "topology": {
+          "boundaryEdges": 0,
+          "nonManifoldEdges": 0,
+          "inconsistentWindingEdges": 0,
+          "closedConsistentlyOriented": true
+        },
+        "boundsBlender": {
+          "min": [
+            -44.32423401,
+            14.12839222,
+            11.7327776
+          ],
+          "max": [
+            -5.23281002,
+            22.26722336,
+            21.20417595
+          ]
+        }
+      },
+      "after": {
+        "status": "pass",
+        "fullTriangleCount": 172,
+        "rawBvhTrianglePairs": 0,
+        "uniqueTrianglePairs": 0,
+        "examinedUniqueTrianglePairs": 0,
+        "sharedFeatureContactPairs": 0,
+        "disjointExactPairs": 0,
+        "forbiddenTriangleIntersections": 0,
+        "unknownTrianglePairs": 0,
+        "degenerateTriangles": 0,
+        "topologyAccepted": true,
+        "intersectionToleranceMm": 1e-08,
+        "sharedFeatureToleranceMm": 1e-07,
+        "examples": [],
+        "triangles": 172,
+        "exactIntersectionPairs": 0,
+        "componentCount": 1,
+        "topology": {
+          "boundaryEdges": 0,
+          "nonManifoldEdges": 0,
+          "inconsistentWindingEdges": 0,
+          "closedConsistentlyOriented": true
+        },
+        "boundsBlender": {
+          "min": [
+            -44.32423401,
+            14.12839222,
+            11.7327776
+          ],
+          "max": [
+            -5.23281002,
+            22.26722336,
+            21.20417595
+          ]
+        },
+        "closedVolumeMm3": 11.694054797278904
+      },
+      "centerlineEdited": true,
+      "cleanup": [],
+      "maximumCleanupBoundsChangeMm": 0.0,
+      "maximumCleanupVertexDistanceFromInputSurfaceMm": 0.0,
+      "endpointsUnchanged": true,
+      "nominalRadiusMm": 0.2800000011920929
+    },
+    {
+      "name": "下 · 中央走线 GPIO.002",
+      "before": {
+        "status": "pass",
+        "fullTriangleCount": 556,
+        "rawBvhTrianglePairs": 0,
+        "uniqueTrianglePairs": 0,
+        "examinedUniqueTrianglePairs": 0,
+        "sharedFeatureContactPairs": 0,
+        "disjointExactPairs": 0,
+        "forbiddenTriangleIntersections": 0,
+        "unknownTrianglePairs": 0,
+        "degenerateTriangles": 0,
+        "topologyAccepted": true,
+        "intersectionToleranceMm": 1e-08,
+        "sharedFeatureToleranceMm": 1e-07,
+        "examples": [],
+        "triangles": 556,
+        "exactIntersectionPairs": 0,
+        "componentCount": 1,
+        "topology": {
+          "boundaryEdges": 0,
+          "nonManifoldEdges": 0,
+          "inconsistentWindingEdges": 0,
+          "closedConsistentlyOriented": true
+        },
+        "boundsBlender": {
+          "min": [
+            -41.32942963,
+            14.12839222,
+            12.26279354
+          ],
+          "max": [
+            -0.80060005,
+            20.42510986,
+            18.62123108
+          ]
+        }
+      },
+      "afterCenterlineCorrection": {
+        "status": "pass",
+        "fullTriangleCount": 556,
+        "rawBvhTrianglePairs": 0,
+        "uniqueTrianglePairs": 0,
+        "examinedUniqueTrianglePairs": 0,
+        "sharedFeatureContactPairs": 0,
+        "disjointExactPairs": 0,
+        "forbiddenTriangleIntersections": 0,
+        "unknownTrianglePairs": 0,
+        "degenerateTriangles": 0,
+        "topologyAccepted": true,
+        "intersectionToleranceMm": 1e-08,
+        "sharedFeatureToleranceMm": 1e-07,
+        "examples": [],
+        "triangles": 556,
+        "exactIntersectionPairs": 0,
+        "componentCount": 1,
+        "topology": {
+          "boundaryEdges": 0,
+          "nonManifoldEdges": 0,
+          "inconsistentWindingEdges": 0,
+          "closedConsistentlyOriented": true
+        },
+        "boundsBlender": {
+          "min": [
+            -41.32942963,
+            14.12839222,
+            12.26279354
+          ],
+          "max": [
+            -0.80060005,
+            20.42510986,
+            18.62123108
+          ]
+        }
+      },
+      "after": {
+        "status": "pass",
+        "fullTriangleCount": 556,
+        "rawBvhTrianglePairs": 0,
+        "uniqueTrianglePairs": 0,
+        "examinedUniqueTrianglePairs": 0,
+        "sharedFeatureContactPairs": 0,
+        "disjointExactPairs": 0,
+        "forbiddenTriangleIntersections": 0,
+        "unknownTrianglePairs": 0,
+        "degenerateTriangles": 0,
+        "topologyAccepted": true,
+        "intersectionToleranceMm": 1e-08,
+        "sharedFeatureToleranceMm": 1e-07,
+        "examples": [],
+        "triangles": 556,
+        "exactIntersectionPairs": 0,
+        "componentCount": 1,
+        "topology": {
+          "boundaryEdges": 0,
+          "nonManifoldEdges": 0,
+          "inconsistentWindingEdges": 0,
+          "closedConsistentlyOriented": true
+        },
+        "boundsBlender": {
+          "min": [
+            -41.32942963,
+            14.12839222,
+            12.26279354
+          ],
+          "max": [
+            -0.80060005,
+            20.42510986,
+            18.62123108
+          ]
+        },
+        "closedVolumeMm3": 10.9684680183758
+      },
+      "centerlineEdited": false,
+      "cleanup": [],
+      "maximumCleanupBoundsChangeMm": 0.0,
+      "maximumCleanupVertexDistanceFromInputSurfaceMm": 0.0,
+      "endpointsUnchanged": true,
+      "nominalRadiusMm": 0.2800000011920929
+    },
+    {
+      "name": "公共接地 · GND 引线.002",
+      "before": {
+        "status": "pass",
+        "fullTriangleCount": 96,
+        "rawBvhTrianglePairs": 0,
+        "uniqueTrianglePairs": 0,
+        "examinedUniqueTrianglePairs": 0,
+        "sharedFeatureContactPairs": 0,
+        "disjointExactPairs": 0,
+        "forbiddenTriangleIntersections": 0,
+        "unknownTrianglePairs": 0,
+        "degenerateTriangles": 0,
+        "topologyAccepted": true,
+        "intersectionToleranceMm": 1e-08,
+        "sharedFeatureToleranceMm": 1e-07,
+        "examples": [],
+        "triangles": 96,
+        "exactIntersectionPairs": 0,
+        "componentCount": 1,
+        "topology": {
+          "boundaryEdges": 0,
+          "nonManifoldEdges": 0,
+          "inconsistentWindingEdges": 0,
+          "closedConsistentlyOriented": true
+        },
+        "boundsBlender": {
+          "min": [
+            -21.67494011,
+            -2.97834015,
+            16.89999962
+          ],
+          "max": [
+            -17.36725235,
+            22.24653244,
+            21.46646118
+          ]
+        }
+      },
+      "afterCenterlineCorrection": {
+        "status": "pass",
+        "fullTriangleCount": 96,
+        "rawBvhTrianglePairs": 0,
+        "uniqueTrianglePairs": 0,
+        "examinedUniqueTrianglePairs": 0,
+        "sharedFeatureContactPairs": 0,
+        "disjointExactPairs": 0,
+        "forbiddenTriangleIntersections": 0,
+        "unknownTrianglePairs": 0,
+        "degenerateTriangles": 0,
+        "topologyAccepted": true,
+        "intersectionToleranceMm": 1e-08,
+        "sharedFeatureToleranceMm": 1e-07,
+        "examples": [],
+        "triangles": 96,
+        "exactIntersectionPairs": 0,
+        "componentCount": 1,
+        "topology": {
+          "boundaryEdges": 0,
+          "nonManifoldEdges": 0,
+          "inconsistentWindingEdges": 0,
+          "closedConsistentlyOriented": true
+        },
+        "boundsBlender": {
+          "min": [
+            -21.67494011,
+            -2.97834015,
+            16.89999962
+          ],
+          "max": [
+            -17.36725235,
+            22.24653244,
+            21.46646118
+          ]
+        }
+      },
+      "after": {
+        "status": "pass",
+        "fullTriangleCount": 96,
+        "rawBvhTrianglePairs": 0,
+        "uniqueTrianglePairs": 0,
+        "examinedUniqueTrianglePairs": 0,
+        "sharedFeatureContactPairs": 0,
+        "disjointExactPairs": 0,
+        "forbiddenTriangleIntersections": 0,
+        "unknownTrianglePairs": 0,
+        "degenerateTriangles": 0,
+        "topologyAccepted": true,
+        "intersectionToleranceMm": 1e-08,
+        "sharedFeatureToleranceMm": 1e-07,
+        "examples": [],
+        "triangles": 96,
+        "exactIntersectionPairs": 0,
+        "componentCount": 1,
+        "topology": {
+          "boundaryEdges": 0,
+          "nonManifoldEdges": 0,
+          "inconsistentWindingEdges": 0,
+          "closedConsistentlyOriented": true
+        },
+        "boundsBlender": {
+          "min": [
+            -21.67494011,
+            -2.97834015,
+            16.89999962
+          ],
+          "max": [
+            -17.36725235,
+            22.24653244,
+            21.46646118
+          ]
+        },
+        "closedVolumeMm3": 5.67829731074229
+      },
+      "centerlineEdited": false,
+      "cleanup": [],
+      "maximumCleanupBoundsChangeMm": 0.0,
+      "maximumCleanupVertexDistanceFromInputSurfaceMm": 0.0,
+      "endpointsUnchanged": true,
+      "nominalRadiusMm": 0.2800000011920929
+    },
+    {
+      "name": "公共接地 · GND 汇流排.002",
+      "before": {
+        "status": "pass",
+        "fullTriangleCount": 36,
+        "rawBvhTrianglePairs": 0,
+        "uniqueTrianglePairs": 0,
+        "examinedUniqueTrianglePairs": 0,
+        "sharedFeatureContactPairs": 0,
+        "disjointExactPairs": 0,
+        "forbiddenTriangleIntersections": 0,
+        "unknownTrianglePairs": 0,
+        "degenerateTriangles": 0,
+        "topologyAccepted": true,
+        "intersectionToleranceMm": 1e-08,
+        "sharedFeatureToleranceMm": 1e-07,
+        "examples": [],
+        "triangles": 36,
+        "exactIntersectionPairs": 0,
+        "componentCount": 1,
+        "topology": {
+          "boundaryEdges": 0,
+          "nonManifoldEdges": 0,
+          "inconsistentWindingEdges": 0,
+          "closedConsistentlyOriented": true
+        },
+        "boundsBlender": {
+          "min": [
+            -17.5,
+            21.62000084,
+            20.83860016
+          ],
+          "max": [
+            13.5,
+            22.37999916,
+            21.56140137
+          ]
+        }
+      },
+      "afterCenterlineCorrection": {
+        "status": "pass",
+        "fullTriangleCount": 36,
+        "rawBvhTrianglePairs": 0,
+        "uniqueTrianglePairs": 0,
+        "examinedUniqueTrianglePairs": 0,
+        "sharedFeatureContactPairs": 0,
+        "disjointExactPairs": 0,
+        "forbiddenTriangleIntersections": 0,
+        "unknownTrianglePairs": 0,
+        "degenerateTriangles": 0,
+        "topologyAccepted": true,
+        "intersectionToleranceMm": 1e-08,
+        "sharedFeatureToleranceMm": 1e-07,
+        "examples": [],
+        "triangles": 36,
+        "exactIntersectionPairs": 0,
+        "componentCount": 1,
+        "topology": {
+          "boundaryEdges": 0,
+          "nonManifoldEdges": 0,
+          "inconsistentWindingEdges": 0,
+          "closedConsistentlyOriented": true
+        },
+        "boundsBlender": {
+          "min": [
+            -17.5,
+            21.62000084,
+            20.83860016
+          ],
+          "max": [
+            13.5,
+            22.37999916,
+            21.56140137
+          ]
+        }
+      },
+      "after": {
+        "status": "pass",
+        "fullTriangleCount": 36,
+        "rawBvhTrianglePairs": 0,
+        "uniqueTrianglePairs": 0,
+        "examinedUniqueTrianglePairs": 0,
+        "sharedFeatureContactPairs": 0,
+        "disjointExactPairs": 0,
+        "forbiddenTriangleIntersections": 0,
+        "unknownTrianglePairs": 0,
+        "degenerateTriangles": 0,
+        "topologyAccepted": true,
+        "intersectionToleranceMm": 1e-08,
+        "sharedFeatureToleranceMm": 1e-07,
+        "examples": [],
+        "triangles": 36,
+        "exactIntersectionPairs": 0,
+        "componentCount": 1,
+        "topology": {
+          "boundaryEdges": 0,
+          "nonManifoldEdges": 0,
+          "inconsistentWindingEdges": 0,
+          "closedConsistentlyOriented": true
+        },
+        "boundsBlender": {
+          "min": [
+            -17.5,
+            21.62000084,
+            20.83860016
+          ],
+          "max": [
+            13.5,
+            22.37999916,
+            21.56140137
+          ]
+        },
+        "closedVolumeMm3": 13.155766261814279
+      },
+      "centerlineEdited": false,
+      "cleanup": [],
+      "maximumCleanupBoundsChangeMm": 0.0,
+      "maximumCleanupVertexDistanceFromInputSurfaceMm": 0.0,
+      "endpointsUnchanged": true,
+      "nominalRadiusMm": 0.3799999952316284
+    },
+    {
+      "name": "右 · 中央走线 GND.002",
+      "before": {
+        "status": "fail",
+        "fullTriangleCount": 236,
+        "rawBvhTrianglePairs": 56,
+        "uniqueTrianglePairs": 28,
+        "examinedUniqueTrianglePairs": 28,
+        "sharedFeatureContactPairs": 0,
+        "disjointExactPairs": 0,
+        "forbiddenTriangleIntersections": 28,
+        "unknownTrianglePairs": 0,
+        "degenerateTriangles": 0,
+        "topologyAccepted": true,
+        "intersectionToleranceMm": 1e-08,
+        "sharedFeatureToleranceMm": 1e-07,
+        "examples": [
+          {
+            "triangles": [
+              219,
+              221
+            ],
+            "sharedVertexIndices": [],
+            "intersectionPointsBlender": [
+              [
+                -12.49158736299448,
+                21.738494966562918,
+                21.610172136304044
+              ],
+              [
+                -12.495474974256569,
+                21.738777765218735,
+                21.598390710566026
+              ]
+            ],
+            "reason": "Non-adjacent source triangles intersect"
+          },
+          {
+            "triangles": [
+              188,
+              234
+            ],
+            "sharedVertexIndices": [],
+            "intersectionPointsBlender": [
+              [
+                -12.43552480221123,
+                21.738773357858648,
+                21.599401002375103
+              ],
+              [
+                -12.39979942705832,
+                21.74296506799585,
+                21.200000762939453
+              ]
+            ],
+            "reason": "Non-adjacent source triangles intersect"
+          },
+          {
+            "triangles": [
+              188,
+              221
+            ],
+            "sharedVertexIndices": [],
+            "intersectionPointsBlender": [
+              [
+                -12.465479951451716,
+                21.737009106251516,
+                21.598896167320223
+              ],
+              [
+                -12.467669435741582,
+                21.738961796624395,
+                21.200000762939453
+              ]
+            ],
+            "reason": "Non-adjacent source triangles intersect"
+          },
+          {
+            "triangles": [
+              196,
+              228
+            ],
+            "sharedVertexIndices": [],
+            "intersectionPointsBlender": [
+              [
+                -12.471188126302783,
+                22.254941585767963,
+                21.598801311427984
+              ],
+              [
+                -12.468648898602693,
+                22.257288115095655,
+                21.200000762939453
+              ]
+            ],
+            "reason": "Non-adjacent source triangles intersect"
+          },
+          {
+            "triangles": [
+              202,
+              221
+            ],
+            "sharedVertexIndices": [],
+            "intersectionPointsBlender": [
+              [
+                -12.495474974256569,
+                21.738777765218735,
+                21.598390710566026
+              ],
+              [
+                -12.53486196145049,
+                21.742918632560873,
+                21.200000762939453
+              ]
+            ],
+            "reason": "Non-adjacent source triangles intersect"
+          },
+          {
+            "triangles": [
+              3,
+              200
+            ],
+            "sharedVertexIndices": [],
+            "intersectionPointsBlender": [
+              [
+                -12.686309165840298,
+                21.903634505742243,
+                21.200000762939453
+              ],
+              [
+                -12.688138278236389,
+                21.93474154405096,
+                21.200000762939453
+              ]
+            ],
+            "reason": "Non-adjacent source triangles intersect"
+          },
+          {
+            "triangles": [
+              1,
+              198
+            ],
+            "sharedVertexIndices": [],
+            "intersectionPointsBlender": [
+              [
+                -12.674781250759477,
+                22.11762956099422,
+                21.200000762939453
+              ],
+              [
+                -12.634645645695171,
+                22.162858452253804,
+                21.200000762939453
+              ]
+            ],
+            "reason": "Non-adjacent source triangles intersect"
+          },
+          {
+            "triangles": [
+              0,
+              196
+            ],
+            "sharedVertexIndices": [],
+            "intersectionPointsBlender": [
+              [
+                -12.468648898602693,
+                22.257288115095655,
+                21.200000762939453
+              ],
+              [
+                -12.557152953080555,
+                22.252067325410504,
+                21.200000762939453
+              ]
+            ],
+            "reason": "Non-adjacent source triangles intersect"
+          }
+        ],
+        "triangles": 236,
+        "exactIntersectionPairs": 28,
+        "componentCount": 1,
+        "topology": {
+          "boundaryEdges": 0,
+          "nonManifoldEdges": 0,
+          "inconsistentWindingEdges": 0,
+          "closedConsistentlyOriented": true
+        },
+        "boundsBlender": {
+          "min": [
+            -41.13499451,
+            19.62125587,
+            12.46508408
+          ],
+          "max": [
+            -12.135499,
+            22.26453781,
+            22.66402817
+          ]
+        }
+      },
+      "afterCenterlineCorrection": {
+        "status": "fail",
+        "fullTriangleCount": 204,
+        "rawBvhTrianglePairs": 20,
+        "uniqueTrianglePairs": 10,
+        "examinedUniqueTrianglePairs": 10,
+        "sharedFeatureContactPairs": 0,
+        "disjointExactPairs": 0,
+        "forbiddenTriangleIntersections": 10,
+        "unknownTrianglePairs": 0,
+        "degenerateTriangles": 0,
+        "topologyAccepted": true,
+        "intersectionToleranceMm": 1e-08,
+        "sharedFeatureToleranceMm": 1e-07,
+        "examples": [
+          {
+            "triangles": [
+              61,
+              93
+            ],
+            "sharedVertexIndices": [],
+            "intersectionPointsBlender": [
+              [
+                -34.677177141611224,
+                20.83189880752139,
+                16.586191148333256
+              ],
+              [
+                -34.68715679095625,
+                20.83382002416706,
+                16.583042357706383
+              ]
+            ],
+            "reason": "Non-adjacent source triangles intersect"
+          },
+          {
+            "triangles": [
+              61,
+              106
+            ],
+            "sharedVertexIndices": [],
+            "intersectionPointsBlender": [
+              [
+                -34.69081223825262,
+                20.83467761805923,
+                16.58211388023171
+              ],
+              [
+                -34.68715679095625,
+                20.83382002416706,
+                16.583042357706383
+              ]
+            ],
+            "reason": "Non-adjacent source triangles intersect"
+          },
+          {
+            "triangles": [
+              60,
+              93
+            ],
+            "sharedVertexIndices": [],
+            "intersectionPointsBlender": [
+              [
+                -34.58316339504263,
+                20.818399283082233,
+                16.60916801998957
+              ],
+              [
+                -34.677177141611224,
+                20.831898807521387,
+                16.586191148333256
+              ]
+            ],
+            "reason": "Non-adjacent source triangles intersect"
+          },
+          {
+            "triangles": [
+              74,
+              107
+            ],
+            "sharedVertexIndices": [],
+            "intersectionPointsBlender": [
+              [
+                -34.78469422237148,
+                20.996489572407985,
+                16.511449183832855
+              ],
+              [
+                -34.6936965491599,
+                20.839699000814655,
+                16.57727607459092
+              ]
+            ],
+            "reason": "Non-adjacent source triangles intersect"
+          },
+          {
+            "triangles": [
+              74,
+              106
+            ],
+            "sharedVertexIndices": [],
+            "intersectionPointsBlender": [
+              [
+                -34.69081223825262,
+                20.83467761805923,
+                16.58211388023171
+              ],
+              [
+                -34.6936965491599,
+                20.839699000814655,
+                16.57727607459092
+              ]
+            ],
+            "reason": "Non-adjacent source triangles intersect"
+          },
+          {
+            "triangles": [
+              75,
+              107
+            ],
+            "sharedVertexIndices": [],
+            "intersectionPointsBlender": [
+              [
+                -34.78469422237148,
+                20.996489572407985,
+                16.511449183832855
+              ],
+              [
+                -34.79185847615635,
+                21.00733565967787,
+                16.5068545607774
+              ]
+            ],
+            "reason": "Non-adjacent source triangles intersect"
+          },
+          {
+            "triangles": [
+              75,
+              104
+            ],
+            "sharedVertexIndices": [],
+            "intersectionPointsBlender": [
+              [
+                -34.79249693667306,
+                21.008338259178846,
+                16.50685574756378
+              ],
+              [
+                -34.79185847615635,
+                21.00733565967787,
+                16.5068545607774
+              ]
+            ],
+            "reason": "Non-adjacent source triangles intersect"
+          },
+          {
+            "triangles": [
+              72,
+              105
+            ],
+            "sharedVertexIndices": [],
+            "intersectionPointsBlender": [
+              [
+                -34.787405381593615,
+                21.129182537377382,
+                16.486822836214724
+              ],
+              [
+                -34.79284866808988,
+                21.015561858240776,
+                16.507045471232892
+              ]
+            ],
+            "reason": "Non-adjacent source triangles intersect"
+          }
+        ],
+        "triangles": 204,
+        "exactIntersectionPairs": 10,
+        "componentCount": 1,
+        "topology": {
+          "boundaryEdges": 0,
+          "nonManifoldEdges": 0,
+          "inconsistentWindingEdges": 0,
+          "closedConsistentlyOriented": true
+        },
+        "boundsBlender": {
+          "min": [
+            -41.13499451,
+            19.62125587,
+            12.46508408
+          ],
+          "max": [
+            -12.23668289,
+            22.26422882,
+            21.2219429
+          ]
+        }
+      },
+      "after": {
+        "status": "pass",
+        "fullTriangleCount": 218,
+        "rawBvhTrianglePairs": 0,
+        "uniqueTrianglePairs": 0,
+        "examinedUniqueTrianglePairs": 0,
+        "sharedFeatureContactPairs": 0,
+        "disjointExactPairs": 0,
+        "forbiddenTriangleIntersections": 0,
+        "unknownTrianglePairs": 0,
+        "degenerateTriangles": 0,
+        "topologyAccepted": true,
+        "intersectionToleranceMm": 1e-08,
+        "sharedFeatureToleranceMm": 1e-07,
+        "examples": [],
+        "triangles": 218,
+        "exactIntersectionPairs": 0,
+        "componentCount": 1,
+        "topology": {
+          "boundaryEdges": 0,
+          "nonManifoldEdges": 0,
+          "inconsistentWindingEdges": 0,
+          "closedConsistentlyOriented": true
+        },
+        "boundsBlender": {
+          "min": [
+            -41.13499451,
+            19.62125587,
+            12.46508408
+          ],
+          "max": [
+            -12.23668289,
+            22.26422882,
+            21.2219429
+          ]
+        },
+        "closedVolumeMm3": 9.912915716895705
+      },
+      "centerlineEdited": true,
+      "cleanup": [
+        {
+          "exactSelfUnionPass": 1,
+          "numericalWeldToleranceMm": 1e-06,
+          "selfAfter": 0
+        }
+      ],
+      "maximumCleanupBoundsChangeMm": 0.0,
+      "maximumCleanupVertexDistanceFromInputSurfaceMm": 1.9073486328125e-06,
+      "endpointsUnchanged": true,
+      "nominalRadiusMm": 0.2800000011920929
+    },
+    {
+      "name": "右 · 中央走线 GPIO.002",
+      "before": {
+        "status": "fail",
+        "fullTriangleCount": 892,
+        "rawBvhTrianglePairs": 84,
+        "uniqueTrianglePairs": 42,
+        "examinedUniqueTrianglePairs": 42,
+        "sharedFeatureContactPairs": 0,
+        "disjointExactPairs": 0,
+        "forbiddenTriangleIntersections": 42,
+        "unknownTrianglePairs": 0,
+        "degenerateTriangles": 0,
+        "topologyAccepted": true,
+        "intersectionToleranceMm": 1e-08,
+        "sharedFeatureToleranceMm": 1e-07,
+        "examples": [
+          {
+            "triangles": [
+              720,
+              864
+            ],
+            "sharedVertexIndices": [],
+            "intersectionPointsBlender": [
+              [
+                0.7793945429716324,
+                19.983440037726478,
+                17.28433651886115
+              ],
+              [
+                0.7782286899846231,
+                19.981037507665928,
+                17.28464145777849
+              ]
+            ],
+            "reason": "Non-adjacent source triangles intersect"
+          },
+          {
+            "triangles": [
+              720,
+              865
+            ],
+            "sharedVertexIndices": [],
+            "intersectionPointsBlender": [
+              [
+                0.7782286899846232,
+                19.981037507665928,
+                17.28464145777849
+              ],
+              [
+                0.7112787031785073,
+                19.84310735302111,
+                17.326227413480527
+              ]
+            ],
+            "reason": "Non-adjacent source triangles intersect"
+          },
+          {
+            "triangles": [
+              720,
+              848
+            ],
+            "sharedVertexIndices": [],
+            "intersectionPointsBlender": [
+              [
+                0.7112764027528489,
+                19.843102613727677,
+                17.32622886607721
+              ],
+              [
+                0.7112787031785073,
+                19.84310735302111,
+                17.326227413480527
+              ]
+            ],
+            "reason": "Non-adjacent source triangles intersect"
+          },
+          {
+            "triangles": [
+              723,
+              864
+            ],
+            "sharedVertexIndices": [],
+            "intersectionPointsBlender": [
+              [
+                0.7793945429716324,
+                19.983440037726478,
+                17.28433651886115
+              ],
+              [
+                0.7793920789062441,
+                19.98344716136857,
+                17.28433400947101
+              ]
+            ],
+            "reason": "Non-adjacent source triangles intersect"
+          },
+          {
+            "triangles": [
+              723,
+              867
+            ],
+            "sharedVertexIndices": [],
+            "intersectionPointsBlender": [
+              [
+                0.7668080100052298,
+                20.019789588197852,
+                17.296066729634724
+              ],
+              [
+                0.7793920789062443,
+                19.98344716136857,
+                17.28433400947101
+              ]
+            ],
+            "reason": "Non-adjacent source triangles intersect"
+          },
+          {
+            "triangles": [
+              738,
+              850
+            ],
+            "sharedVertexIndices": [],
+            "intersectionPointsBlender": [
+              [
+                0.7307679482738073,
+                20.123886559676745,
+                17.3296420157044
+              ],
+              [
+                0.7146697467636633,
+                20.172433865302565,
+                17.345406809418552
+              ]
+            ],
+            "reason": "Non-adjacent source triangles intersect"
+          },
+          {
+            "triangles": [
+              738,
+              834
+            ],
+            "sharedVertexIndices": [],
+            "intersectionPointsBlender": [
+              [
+                0.7138147139214281,
+                20.175019084515736,
+                17.346300023021016
+              ],
+              [
+                0.7142757745571986,
+                20.17363649671928,
+                17.345913851416647
+              ]
+            ],
+            "reason": "Non-adjacent source triangles intersect"
+          },
+          {
+            "triangles": [
+              738,
+              835
+            ],
+            "sharedVertexIndices": [],
+            "intersectionPointsBlender": [
+              [
+                0.7137732553582317,
+                20.175140024241536,
+                17.346306526571993
+              ],
+              [
+                0.7142757745571986,
+                20.17363649671928,
+                17.345913851416647
+              ]
+            ],
+            "reason": "Non-adjacent source triangles intersect"
+          }
+        ],
+        "triangles": 892,
+        "exactIntersectionPairs": 42,
+        "componentCount": 1,
+        "topology": {
+          "boundaryEdges": 0,
+          "nonManifoldEdges": 0,
+          "inconsistentWindingEdges": 0,
+          "closedConsistentlyOriented": true
+        },
+        "boundsBlender": {
+          "min": [
+            -40.33795547,
+            19.42150688,
+            12.45925331
+          ],
+          "max": [
+            4.27825117,
+            23.37776756,
+            18.62112236
+          ]
+        }
+      },
+      "afterCenterlineCorrection": {
+        "status": "fail",
+        "fullTriangleCount": 892,
+        "rawBvhTrianglePairs": 84,
+        "uniqueTrianglePairs": 42,
+        "examinedUniqueTrianglePairs": 42,
+        "sharedFeatureContactPairs": 0,
+        "disjointExactPairs": 0,
+        "forbiddenTriangleIntersections": 42,
+        "unknownTrianglePairs": 0,
+        "degenerateTriangles": 0,
+        "topologyAccepted": true,
+        "intersectionToleranceMm": 1e-08,
+        "sharedFeatureToleranceMm": 1e-07,
+        "examples": [
+          {
+            "triangles": [
+              720,
+              864
+            ],
+            "sharedVertexIndices": [],
+            "intersectionPointsBlender": [
+              [
+                0.7793945429716324,
+                19.983440037726478,
+                17.28433651886115
+              ],
+              [
+                0.7782286899846231,
+                19.981037507665928,
+                17.28464145777849
+              ]
+            ],
+            "reason": "Non-adjacent source triangles intersect"
+          },
+          {
+            "triangles": [
+              720,
+              865
+            ],
+            "sharedVertexIndices": [],
+            "intersectionPointsBlender": [
+              [
+                0.7782286899846232,
+                19.981037507665928,
+                17.28464145777849
+              ],
+              [
+                0.7112787031785073,
+                19.84310735302111,
+                17.326227413480527
+              ]
+            ],
+            "reason": "Non-adjacent source triangles intersect"
+          },
+          {
+            "triangles": [
+              720,
+              848
+            ],
+            "sharedVertexIndices": [],
+            "intersectionPointsBlender": [
+              [
+                0.7112764027528489,
+                19.843102613727677,
+                17.32622886607721
+              ],
+              [
+                0.7112787031785073,
+                19.84310735302111,
+                17.326227413480527
+              ]
+            ],
+            "reason": "Non-adjacent source triangles intersect"
+          },
+          {
+            "triangles": [
+              723,
+              864
+            ],
+            "sharedVertexIndices": [],
+            "intersectionPointsBlender": [
+              [
+                0.7793945429716324,
+                19.983440037726478,
+                17.28433651886115
+              ],
+              [
+                0.7793920789062441,
+                19.98344716136857,
+                17.28433400947101
+              ]
+            ],
+            "reason": "Non-adjacent source triangles intersect"
+          },
+          {
+            "triangles": [
+              723,
+              867
+            ],
+            "sharedVertexIndices": [],
+            "intersectionPointsBlender": [
+              [
+                0.7668080100052298,
+                20.019789588197852,
+                17.296066729634724
+              ],
+              [
+                0.7793920789062443,
+                19.98344716136857,
+                17.28433400947101
+              ]
+            ],
+            "reason": "Non-adjacent source triangles intersect"
+          },
+          {
+            "triangles": [
+              738,
+              850
+            ],
+            "sharedVertexIndices": [],
+            "intersectionPointsBlender": [
+              [
+                0.7307679482738073,
+                20.123886559676745,
+                17.3296420157044
+              ],
+              [
+                0.7146697467636633,
+                20.172433865302565,
+                17.345406809418552
+              ]
+            ],
+            "reason": "Non-adjacent source triangles intersect"
+          },
+          {
+            "triangles": [
+              738,
+              834
+            ],
+            "sharedVertexIndices": [],
+            "intersectionPointsBlender": [
+              [
+                0.7138147139214281,
+                20.175019084515736,
+                17.346300023021016
+              ],
+              [
+                0.7142757745571986,
+                20.17363649671928,
+                17.345913851416647
+              ]
+            ],
+            "reason": "Non-adjacent source triangles intersect"
+          },
+          {
+            "triangles": [
+              738,
+              835
+            ],
+            "sharedVertexIndices": [],
+            "intersectionPointsBlender": [
+              [
+                0.7137732553582317,
+                20.175140024241536,
+                17.346306526571993
+              ],
+              [
+                0.7142757745571986,
+                20.17363649671928,
+                17.345913851416647
+              ]
+            ],
+            "reason": "Non-adjacent source triangles intersect"
+          }
+        ],
+        "triangles": 892,
+        "exactIntersectionPairs": 42,
+        "componentCount": 1,
+        "topology": {
+          "boundaryEdges": 0,
+          "nonManifoldEdges": 0,
+          "inconsistentWindingEdges": 0,
+          "closedConsistentlyOriented": true
+        },
+        "boundsBlender": {
+          "min": [
+            -40.33795547,
+            19.42150688,
+            12.45925331
+          ],
+          "max": [
+            4.27825117,
+            23.37776756,
+            18.62112236
+          ]
+        }
+      },
+      "after": {
+        "status": "pass",
+        "fullTriangleCount": 910,
+        "rawBvhTrianglePairs": 0,
+        "uniqueTrianglePairs": 0,
+        "examinedUniqueTrianglePairs": 0,
+        "sharedFeatureContactPairs": 0,
+        "disjointExactPairs": 0,
+        "forbiddenTriangleIntersections": 0,
+        "unknownTrianglePairs": 0,
+        "degenerateTriangles": 0,
+        "topologyAccepted": true,
+        "intersectionToleranceMm": 1e-08,
+        "sharedFeatureToleranceMm": 1e-07,
+        "examples": [],
+        "triangles": 910,
+        "exactIntersectionPairs": 0,
+        "componentCount": 1,
+        "topology": {
+          "boundaryEdges": 0,
+          "nonManifoldEdges": 0,
+          "inconsistentWindingEdges": 0,
+          "closedConsistentlyOriented": true
+        },
+        "boundsBlender": {
+          "min": [
+            -40.33795547,
+            19.42150688,
+            12.45925331
+          ],
+          "max": [
+            4.27825117,
+            23.37776756,
+            18.62112236
+          ]
+        },
+        "closedVolumeMm3": 12.517054454195543
+      },
+      "centerlineEdited": false,
+      "cleanup": [
+        {
+          "exactSelfUnionPass": 1,
+          "numericalWeldToleranceMm": 1e-06,
+          "selfAfter": 4
+        },
+        {
+          "exactSelfUnionPass": 2,
+          "numericalWeldToleranceMm": 0.00015,
+          "selfAfter": 0
+        }
+      ],
+      "maximumCleanupBoundsChangeMm": 0.0,
+      "maximumCleanupVertexDistanceFromInputSurfaceMm": 4.172325134277344e-07,
+      "endpointsUnchanged": true,
+      "nominalRadiusMm": 0.2800000011920929
+    },
+    {
+      "name": "左 · 中央走线 GND.002",
+      "before": {
+        "status": "fail",
+        "fullTriangleCount": 172,
+        "rawBvhTrianglePairs": 52,
+        "uniqueTrianglePairs": 26,
+        "examinedUniqueTrianglePairs": 26,
+        "sharedFeatureContactPairs": 0,
+        "disjointExactPairs": 0,
+        "forbiddenTriangleIntersections": 26,
+        "unknownTrianglePairs": 0,
+        "degenerateTriangles": 0,
+        "topologyAccepted": true,
+        "intersectionToleranceMm": 1e-08,
+        "sharedFeatureToleranceMm": 1e-07,
+        "examples": [
+          {
+            "triangles": [
+              4,
+              151
+            ],
+            "sharedVertexIndices": [],
+            "intersectionPointsBlender": [
+              [
+                -15.837517768255593,
+                21.775117815766983,
+                21.200000762939453
+              ],
+              [
+                -15.817140300049163,
+                21.813016469994075,
+                21.200000762939453
+              ]
+            ],
+            "reason": "Non-adjacent source triangles intersect"
+          },
+          {
+            "triangles": [
+              4,
+              150
+            ],
+            "sharedVertexIndices": [],
+            "intersectionPointsBlender": [
+              [
+                -15.73071938094537,
+                21.956169046119783,
+                21.200000762939453
+              ],
+              [
+                -15.817140300049163,
+                21.813016469994075,
+                21.200000762939453
+              ]
+            ],
+            "reason": "Non-adjacent source triangles intersect"
+          },
+          {
+            "triangles": [
+              4,
+              147
+            ],
+            "sharedVertexIndices": [],
+            "intersectionPointsBlender": [
+              [
+                -16.218409812251544,
+                21.832855722496074,
+                21.200000762939453
+              ],
+              [
+                -16.219972951832116,
+                21.833919525146484,
+                21.200000762939453
+              ]
+            ],
+            "reason": "Non-adjacent source triangles intersect"
+          },
+          {
+            "triangles": [
+              4,
+              144
+            ],
+            "sharedVertexIndices": [],
+            "intersectionPointsBlender": [
+              [
+                -16.22028687455781,
+                21.835189879131242,
+                21.200000762939453
+              ],
+              [
+                -16.219972951832116,
+                21.833919525146484,
+                21.200000762939453
+              ]
+            ],
+            "reason": "Non-adjacent source triangles intersect"
+          },
+          {
+            "triangles": [
+              3,
+              153
+            ],
+            "sharedVertexIndices": [],
+            "intersectionPointsBlender": [
+              [
+                -15.729814198822254,
+                21.959044676343765,
+                21.200000762939453
+              ],
+              [
+                -15.729592049483431,
+                21.958036422729492,
+                21.200000762939453
+              ]
+            ],
+            "reason": "Non-adjacent source triangles intersect"
+          },
+          {
+            "triangles": [
+              3,
+              150
+            ],
+            "sharedVertexIndices": [],
+            "intersectionPointsBlender": [
+              [
+                -15.73071938094537,
+                21.956169046119783,
+                21.200000762939453
+              ],
+              [
+                -15.729592049483431,
+                21.958036422729492,
+                21.200000762939453
+              ]
+            ],
+            "reason": "Non-adjacent source triangles intersect"
+          },
+          {
+            "triangles": [
+              3,
+              144
+            ],
+            "sharedVertexIndices": [],
+            "intersectionPointsBlender": [
+              [
+                -16.22028687455781,
+                21.835189879131242,
+                21.200000762939453
+              ],
+              [
+                -16.260160319273076,
+                21.996546115026376,
+                21.200000762939453
+              ]
+            ],
+            "reason": "Non-adjacent source triangles intersect"
+          },
+          {
+            "triangles": [
+              3,
+              145
+            ],
+            "sharedVertexIndices": [],
+            "intersectionPointsBlender": [
+              [
+                -16.269879994888672,
+                22.04090882442734,
+                21.200000762939453
+              ],
+              [
+                -16.260160319273076,
+                21.996546115026376,
+                21.200000762939453
+              ]
+            ],
+            "reason": "Non-adjacent source triangles intersect"
+          }
+        ],
+        "triangles": 172,
+        "exactIntersectionPairs": 26,
+        "componentCount": 1,
+        "topology": {
+          "boundaryEdges": 0,
+          "nonManifoldEdges": 0,
+          "inconsistentWindingEdges": 0,
+          "closedConsistentlyOriented": true
+        },
+        "boundsBlender": {
+          "min": [
+            -53.67450333,
+            21.7231617,
+            12.45109177
+          ],
+          "max": [
+            -15.72316265,
+            24.36838531,
+            22.40000153
+          ]
+        }
+      },
+      "afterCenterlineCorrection": {
+        "status": "pass",
+        "fullTriangleCount": 156,
+        "rawBvhTrianglePairs": 0,
+        "uniqueTrianglePairs": 0,
+        "examinedUniqueTrianglePairs": 0,
+        "sharedFeatureContactPairs": 0,
+        "disjointExactPairs": 0,
+        "forbiddenTriangleIntersections": 0,
+        "unknownTrianglePairs": 0,
+        "degenerateTriangles": 0,
+        "topologyAccepted": true,
+        "intersectionToleranceMm": 1e-08,
+        "sharedFeatureToleranceMm": 1e-07,
+        "examples": [],
+        "triangles": 156,
+        "exactIntersectionPairs": 0,
+        "componentCount": 1,
+        "topology": {
+          "boundaryEdges": 0,
+          "nonManifoldEdges": 0,
+          "inconsistentWindingEdges": 0,
+          "closedConsistentlyOriented": true
+        },
+        "boundsBlender": {
+          "min": [
+            -53.67450333,
+            21.7231617,
+            12.45109177
+          ],
+          "max": [
+            -15.72316265,
+            24.36838531,
+            21.20000076
+          ]
+        }
+      },
+      "after": {
+        "status": "pass",
+        "fullTriangleCount": 156,
+        "rawBvhTrianglePairs": 0,
+        "uniqueTrianglePairs": 0,
+        "examinedUniqueTrianglePairs": 0,
+        "sharedFeatureContactPairs": 0,
+        "disjointExactPairs": 0,
+        "forbiddenTriangleIntersections": 0,
+        "unknownTrianglePairs": 0,
+        "degenerateTriangles": 0,
+        "topologyAccepted": true,
+        "intersectionToleranceMm": 1e-08,
+        "sharedFeatureToleranceMm": 1e-07,
+        "examples": [],
+        "triangles": 156,
+        "exactIntersectionPairs": 0,
+        "componentCount": 1,
+        "topology": {
+          "boundaryEdges": 0,
+          "nonManifoldEdges": 0,
+          "inconsistentWindingEdges": 0,
+          "closedConsistentlyOriented": true
+        },
+        "boundsBlender": {
+          "min": [
+            -53.67450333,
+            21.7231617,
+            12.45109177
+          ],
+          "max": [
+            -15.72316265,
+            24.36838531,
+            21.20000076
+          ]
+        },
+        "closedVolumeMm3": 9.94210933434168
+      },
+      "centerlineEdited": true,
+      "cleanup": [],
+      "maximumCleanupBoundsChangeMm": 0.0,
+      "maximumCleanupVertexDistanceFromInputSurfaceMm": 0.0,
+      "endpointsUnchanged": true,
+      "nominalRadiusMm": 0.2800000011920929
+    },
+    {
+      "name": "左 · 中央走线 GPIO.002",
+      "before": {
+        "status": "pass",
+        "fullTriangleCount": 460,
+        "rawBvhTrianglePairs": 0,
+        "uniqueTrianglePairs": 0,
+        "examinedUniqueTrianglePairs": 0,
+        "sharedFeatureContactPairs": 0,
+        "disjointExactPairs": 0,
+        "forbiddenTriangleIntersections": 0,
+        "unknownTrianglePairs": 0,
+        "degenerateTriangles": 0,
+        "topologyAccepted": true,
+        "intersectionToleranceMm": 1e-08,
+        "sharedFeatureToleranceMm": 1e-07,
+        "examples": [],
+        "triangles": 460,
+        "exactIntersectionPairs": 0,
+        "componentCount": 1,
+        "topology": {
+          "boundaryEdges": 0,
+          "nonManifoldEdges": 0,
+          "inconsistentWindingEdges": 0,
+          "closedConsistentlyOriented": true
+        },
+        "boundsBlender": {
+          "min": [
+            -49.86790466,
+            18.72151756,
+            12.44273758
+          ],
+          "max": [
+            -18.58722115,
+            24.23564148,
+            18.62306404
+          ]
+        }
+      },
+      "afterCenterlineCorrection": {
+        "status": "pass",
+        "fullTriangleCount": 460,
+        "rawBvhTrianglePairs": 0,
+        "uniqueTrianglePairs": 0,
+        "examinedUniqueTrianglePairs": 0,
+        "sharedFeatureContactPairs": 0,
+        "disjointExactPairs": 0,
+        "forbiddenTriangleIntersections": 0,
+        "unknownTrianglePairs": 0,
+        "degenerateTriangles": 0,
+        "topologyAccepted": true,
+        "intersectionToleranceMm": 1e-08,
+        "sharedFeatureToleranceMm": 1e-07,
+        "examples": [],
+        "triangles": 460,
+        "exactIntersectionPairs": 0,
+        "componentCount": 1,
+        "topology": {
+          "boundaryEdges": 0,
+          "nonManifoldEdges": 0,
+          "inconsistentWindingEdges": 0,
+          "closedConsistentlyOriented": true
+        },
+        "boundsBlender": {
+          "min": [
+            -49.86790466,
+            18.72151756,
+            12.44273758
+          ],
+          "max": [
+            -18.58722115,
+            24.23564148,
+            18.62306404
+          ]
+        }
+      },
+      "after": {
+        "status": "pass",
+        "fullTriangleCount": 460,
+        "rawBvhTrianglePairs": 0,
+        "uniqueTrianglePairs": 0,
+        "examinedUniqueTrianglePairs": 0,
+        "sharedFeatureContactPairs": 0,
+        "disjointExactPairs": 0,
+        "forbiddenTriangleIntersections": 0,
+        "unknownTrianglePairs": 0,
+        "degenerateTriangles": 0,
+        "topologyAccepted": true,
+        "intersectionToleranceMm": 1e-08,
+        "sharedFeatureToleranceMm": 1e-07,
+        "examples": [],
+        "triangles": 460,
+        "exactIntersectionPairs": 0,
+        "componentCount": 1,
+        "topology": {
+          "boundaryEdges": 0,
+          "nonManifoldEdges": 0,
+          "inconsistentWindingEdges": 0,
+          "closedConsistentlyOriented": true
+        },
+        "boundsBlender": {
+          "min": [
+            -49.86790466,
+            18.72151756,
+            12.44273758
+          ],
+          "max": [
+            -18.58722115,
+            24.23564148,
+            18.62306404
+          ]
+        },
+        "closedVolumeMm3": 8.496948666773788
+      },
+      "centerlineEdited": false,
+      "cleanup": [],
+      "maximumCleanupBoundsChangeMm": 0.0,
+      "maximumCleanupVertexDistanceFromInputSurfaceMm": 0.0,
+      "endpointsUnchanged": true,
+      "nominalRadiusMm": 0.2800000011920929
+    },
+    {
+      "name": "确认 · GND.005",
+      "before": {
+        "status": "fail",
+        "fullTriangleCount": 116,
+        "rawBvhTrianglePairs": 78,
+        "uniqueTrianglePairs": 39,
+        "examinedUniqueTrianglePairs": 39,
+        "sharedFeatureContactPairs": 0,
+        "disjointExactPairs": 0,
+        "forbiddenTriangleIntersections": 39,
+        "unknownTrianglePairs": 0,
+        "degenerateTriangles": 0,
+        "topologyAccepted": true,
+        "intersectionToleranceMm": 1e-08,
+        "sharedFeatureToleranceMm": 1e-07,
+        "examples": [
+          {
+            "triangles": [
+              76,
+              110
+            ],
+            "sharedVertexIndices": [],
+            "intersectionPointsBlender": [
+              [
+                -2.2719121373257267,
+                22.06513416039985,
+                21.200000762939453
+              ],
+              [
+                -2.2695523516436817,
+                22.065747099988638,
+                21.211795296945798
+              ]
+            ],
+            "reason": "Non-adjacent source triangles intersect"
+          },
+          {
+            "triangles": [
+              76,
+              111
+            ],
+            "sharedVertexIndices": [],
+            "intersectionPointsBlender": [
+              [
+                -2.2695523516436817,
+                22.065747099988638,
+                21.211795296945798
+              ],
+              [
+                -2.2707407344403627,
+                22.06403160095215,
+                21.206678438351602
+              ]
+            ],
+            "reason": "Non-adjacent source triangles intersect"
+          },
+          {
+            "triangles": [
+              76,
+              108
+            ],
+            "sharedVertexIndices": [],
+            "intersectionPointsBlender": [
+              [
+                -2.2707407344403627,
+                22.06403160095215,
+                21.206678438351602
+              ],
+              [
+                -2.2723500932480283,
+                22.061277904541015,
+                21.200000762939453
+              ]
+            ],
+            "reason": "Non-adjacent source triangles intersect"
+          },
+          {
+            "triangles": [
+              1,
+              90
+            ],
+            "sharedVertexIndices": [],
+            "intersectionPointsBlender": [
+              [
+                -2.143845485626171,
+                22.202850102711874,
+                21.200000762939453
+              ],
+              [
+                -2.144080870998689,
+                22.208545822977943,
+                21.200000762939453
+              ]
+            ],
+            "reason": "Non-adjacent source triangles intersect"
+          },
+          {
+            "triangles": [
+              1,
+              93
+            ],
+            "sharedVertexIndices": [],
+            "intersectionPointsBlender": [
+              [
+                -2.1576137054855105,
+                22.20608432154546,
+                21.200000762939453
+              ],
+              [
+                -2.144080870998689,
+                22.208545822977943,
+                21.200000762939453
+              ]
+            ],
+            "reason": "Non-adjacent source triangles intersect"
+          },
+          {
+            "triangles": [
+              2,
+              76
+            ],
+            "sharedVertexIndices": [],
+            "intersectionPointsBlender": [
+              [
+                -2.2720321481567267,
+                22.064077450245698,
+                21.200000762939453
+              ],
+              [
+                -2.2719121373257267,
+                22.06513416039985,
+                21.200000762939453
+              ]
+            ],
+            "reason": "Non-adjacent source triangles intersect"
+          },
+          {
+            "triangles": [
+              2,
+              90
+            ],
+            "sharedVertexIndices": [],
+            "intersectionPointsBlender": [
+              [
+                -2.143845485626171,
+                22.202850102711874,
+                21.200000762939453
+              ],
+              [
+                -2.139792543397288,
+                22.104779330754802,
+                21.200000762939453
+              ]
+            ],
+            "reason": "Non-adjacent source triangles intersect"
+          },
+          {
+            "triangles": [
+              2,
+              93
+            ],
+            "sharedVertexIndices": [],
+            "intersectionPointsBlender": [
+              [
+                -2.1900610119940436,
+                22.20018244699517,
+                21.200000762939453
+              ],
+              [
+                -2.1576137054855105,
+                22.20608432154546,
+                21.200000762939453
+              ]
+            ],
+            "reason": "Non-adjacent source triangles intersect"
+          }
+        ],
+        "triangles": 116,
+        "exactIntersectionPairs": 39,
+        "componentCount": 1,
+        "topology": {
+          "boundaryEdges": 0,
+          "nonManifoldEdges": 0,
+          "inconsistentWindingEdges": 0,
+          "closedConsistentlyOriented": true
+        },
+        "boundsBlender": {
+          "min": [
+            -3.87799287,
+            4.0472784,
+            18.87939835
+          ],
+          "max": [
+            -1.72741961,
+            22.27902603,
+            22.67205429
+          ]
+        }
+      },
+      "afterCenterlineCorrection": {
+        "status": "pass",
+        "fullTriangleCount": 96,
+        "rawBvhTrianglePairs": 0,
+        "uniqueTrianglePairs": 0,
+        "examinedUniqueTrianglePairs": 0,
+        "sharedFeatureContactPairs": 0,
+        "disjointExactPairs": 0,
+        "forbiddenTriangleIntersections": 0,
+        "unknownTrianglePairs": 0,
+        "degenerateTriangles": 0,
+        "topologyAccepted": true,
+        "intersectionToleranceMm": 1e-08,
+        "sharedFeatureToleranceMm": 1e-07,
+        "examples": [],
+        "triangles": 96,
+        "exactIntersectionPairs": 0,
+        "componentCount": 1,
+        "topology": {
+          "boundaryEdges": 0,
+          "nonManifoldEdges": 0,
+          "inconsistentWindingEdges": 0,
+          "closedConsistentlyOriented": true
+        },
+        "boundsBlender": {
+          "min": [
+            -3.87799287,
+            4.0472784,
+            18.87939835
+          ],
+          "max": [
+            -1.73231649,
+            22.27887154,
+            21.25353813
+          ]
+        }
+      },
+      "after": {
+        "status": "pass",
+        "fullTriangleCount": 96,
+        "rawBvhTrianglePairs": 0,
+        "uniqueTrianglePairs": 0,
+        "examinedUniqueTrianglePairs": 0,
+        "sharedFeatureContactPairs": 0,
+        "disjointExactPairs": 0,
+        "forbiddenTriangleIntersections": 0,
+        "unknownTrianglePairs": 0,
+        "degenerateTriangles": 0,
+        "topologyAccepted": true,
+        "intersectionToleranceMm": 1e-08,
+        "sharedFeatureToleranceMm": 1e-07,
+        "examples": [],
+        "triangles": 96,
+        "exactIntersectionPairs": 0,
+        "componentCount": 1,
+        "topology": {
+          "boundaryEdges": 0,
+          "nonManifoldEdges": 0,
+          "inconsistentWindingEdges": 0,
+          "closedConsistentlyOriented": true
+        },
+        "boundsBlender": {
+          "min": [
+            -3.87799287,
+            4.0472784,
+            18.87939835
+          ],
+          "max": [
+            -1.73231649,
+            22.27887154,
+            21.25353813
+          ]
+        },
+        "closedVolumeMm3": 3.940471607535725
+      },
+      "centerlineEdited": true,
+      "cleanup": [],
+      "maximumCleanupBoundsChangeMm": 0.0,
+      "maximumCleanupVertexDistanceFromInputSurfaceMm": 0.0,
+      "endpointsUnchanged": true,
+      "nominalRadiusMm": 0.2800000011920929
+    },
+    {
+      "name": "确认 · GPIO.005",
+      "before": {
+        "status": "fail",
+        "fullTriangleCount": 136,
+        "rawBvhTrianglePairs": 20,
+        "uniqueTrianglePairs": 10,
+        "examinedUniqueTrianglePairs": 10,
+        "sharedFeatureContactPairs": 0,
+        "disjointExactPairs": 0,
+        "forbiddenTriangleIntersections": 10,
+        "unknownTrianglePairs": 0,
+        "degenerateTriangles": 0,
+        "topologyAccepted": true,
+        "intersectionToleranceMm": 1e-08,
+        "sharedFeatureToleranceMm": 1e-07,
+        "examples": [
+          {
+            "triangles": [
+              10,
+              49
+            ],
+            "sharedVertexIndices": [],
+            "intersectionPointsBlender": [
+              [
+                1.8580012400907993,
+                5.335935557257721,
+                19.089216654683707
+              ],
+              [
+                1.8583133712918654,
+                5.336588175345969,
+                19.08606719970703
+              ]
+            ],
+            "reason": "Non-adjacent source triangles intersect"
+          },
+          {
+            "triangles": [
+              11,
+              49
+            ],
+            "sharedVertexIndices": [],
+            "intersectionPointsBlender": [
+              [
+                1.8580012400907993,
+                5.335935557257721,
+                19.089216654683707
+              ],
+              [
+                1.8563332757452908,
+                5.332448113552551,
+                19.10604664386861
+              ]
+            ],
+            "reason": "Non-adjacent source triangles intersect"
+          },
+          {
+            "triangles": [
+              11,
+              47
+            ],
+            "sharedVertexIndices": [],
+            "intersectionPointsBlender": [
+              [
+                1.8352079550310318,
+                5.29400999994403,
+                19.250425338745117
+              ],
+              [
+                1.8481265326918324,
+                5.318764134304628,
+                19.1471535832332
+              ]
+            ],
+            "reason": "Non-adjacent source triangles intersect"
+          },
+          {
+            "triangles": [
+              11,
+              46
+            ],
+            "sharedVertexIndices": [],
+            "intersectionPointsBlender": [
+              [
+                1.8563332757452906,
+                5.332448113552551,
+                19.10604664386861
+              ],
+              [
+                1.8481265326918326,
+                5.318764134304628,
+                19.1471535832332
+              ]
+            ],
+            "reason": "Non-adjacent source triangles intersect"
+          },
+          {
+            "triangles": [
+              12,
+              47
+            ],
+            "sharedVertexIndices": [],
+            "intersectionPointsBlender": [
+              [
+                1.8346023664997657,
+                5.292849586056319,
+                19.255266462641078
+              ],
+              [
+                1.8352079550310318,
+                5.29400999994403,
+                19.250425338745117
+              ]
+            ],
+            "reason": "Non-adjacent source triangles intersect"
+          },
+          {
+            "triangles": [
+              13,
+              47
+            ],
+            "sharedVertexIndices": [],
+            "intersectionPointsBlender": [
+              [
+                1.8346023664997657,
+                5.292849586056319,
+                19.255266462641078
+              ],
+              [
+                1.8327390100343512,
+                5.289279102713531,
+                19.270162175838752
+              ]
+            ],
+            "reason": "Non-adjacent source triangles intersect"
+          },
+          {
+            "triangles": [
+              13,
+              44
+            ],
+            "sharedVertexIndices": [],
+            "intersectionPointsBlender": [
+              [
+                1.8304873827116355,
+                5.286263611493791,
+                19.272573729842538
+              ],
+              [
+                1.8327390100343508,
+                5.2892791027135315,
+                19.270162175838752
+              ]
+            ],
+            "reason": "Non-adjacent source triangles intersect"
+          },
+          {
+            "triangles": [
+              9,
+              49
+            ],
+            "sharedVertexIndices": [],
+            "intersectionPointsBlender": [
+              [
+                1.8583133712918654,
+                5.336588175345969,
+                19.08606719970703
+              ],
+              [
+                1.859207027009672,
+                5.338456693564712,
+                19.077049983803118
+              ]
+            ],
+            "reason": "Non-adjacent source triangles intersect"
+          }
+        ],
+        "triangles": 136,
+        "exactIntersectionPairs": 10,
+        "componentCount": 1,
+        "topology": {
+          "boundaryEdges": 0,
+          "nonManifoldEdges": 0,
+          "inconsistentWindingEdges": 0,
+          "closedConsistentlyOriented": true
+        },
+        "boundsBlender": {
+          "min": [
+            -6.43044281,
+            4.13069963,
+            16.89999962
+          ],
+          "max": [
+            3.7331655,
+            19.97961998,
+            19.51636124
+          ]
+        }
+      },
+      "afterCenterlineCorrection": {
+        "status": "pass",
+        "fullTriangleCount": 116,
+        "rawBvhTrianglePairs": 0,
+        "uniqueTrianglePairs": 0,
+        "examinedUniqueTrianglePairs": 0,
+        "sharedFeatureContactPairs": 0,
+        "disjointExactPairs": 0,
+        "forbiddenTriangleIntersections": 0,
+        "unknownTrianglePairs": 0,
+        "degenerateTriangles": 0,
+        "topologyAccepted": true,
+        "intersectionToleranceMm": 1e-08,
+        "sharedFeatureToleranceMm": 1e-07,
+        "examples": [],
+        "triangles": 116,
+        "exactIntersectionPairs": 0,
+        "componentCount": 1,
+        "topology": {
+          "boundaryEdges": 0,
+          "nonManifoldEdges": 0,
+          "inconsistentWindingEdges": 0,
+          "closedConsistentlyOriented": true
+        },
+        "boundsBlender": {
+          "min": [
+            -6.43586493,
+            5.24730539,
+            16.89999962
+          ],
+          "max": [
+            2.12060428,
+            19.97717857,
+            19.51670647
+          ]
+        }
+      },
+      "after": {
+        "status": "pass",
+        "fullTriangleCount": 116,
+        "rawBvhTrianglePairs": 0,
+        "uniqueTrianglePairs": 0,
+        "examinedUniqueTrianglePairs": 0,
+        "sharedFeatureContactPairs": 0,
+        "disjointExactPairs": 0,
+        "forbiddenTriangleIntersections": 0,
+        "unknownTrianglePairs": 0,
+        "degenerateTriangles": 0,
+        "topologyAccepted": true,
+        "intersectionToleranceMm": 1e-08,
+        "sharedFeatureToleranceMm": 1e-07,
+        "examples": [],
+        "triangles": 116,
+        "exactIntersectionPairs": 0,
+        "componentCount": 1,
+        "topology": {
+          "boundaryEdges": 0,
+          "nonManifoldEdges": 0,
+          "inconsistentWindingEdges": 0,
+          "closedConsistentlyOriented": true
+        },
+        "boundsBlender": {
+          "min": [
+            -6.43586493,
+            5.24730539,
+            16.89999962
+          ],
+          "max": [
+            2.12060428,
+            19.97717857,
+            19.51670647
+          ]
+        },
+        "closedVolumeMm3": 4.182457144782943
+      },
+      "centerlineEdited": true,
+      "cleanup": [],
+      "maximumCleanupBoundsChangeMm": 0.0,
+      "maximumCleanupVertexDistanceFromInputSurfaceMm": 0.0,
+      "endpointsUnchanged": true,
+      "nominalRadiusMm": 0.2800000011920929
+    }
+  ],
+  "failed": [],
+  "scope": [
+    "The documented centerline reversals are actual route corrections; all electrical endpoint centers remain unchanged.",
+    "Remaining local adjacent sweep overlaps are resolved using exact solid union; numerical coincident-vertex welding is bounded and reported separately.",
+    "The nominal conductor envelope and endpoint locations do not establish manufacturable cable bend radius, insulation thickness, fatigue, solder quality or electrical pin identity.",
+    "Discrete centerline corners and local swept envelopes are modeling choices; wire material bending has not been physically measured or certified.",
+    "Inter-object and joint-range collision validation must be rerun against this exact final source hash."
+  ]
+}

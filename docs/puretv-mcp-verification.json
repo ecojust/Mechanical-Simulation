@@ -1,0 +1,2098 @@
+{
+  "version": 1,
+  "status": "pass",
+  "startedAt": "2026-11-14T12:33:22.105Z",
+  "completedAt": "2026-11-14T12:34:53.760Z",
+  "execution": {
+    "protocol": "Native --mcp stdio with actual workbench handler",
+    "renderer": "actual Chromium workbench via authenticated DEV adapter",
+    "nativeDesktop": false,
+    "fixture": false
+  },
+  "calibrationSha256": "98fc6e8334b6f3916d61273c70112b85e1c4fbdb0f365c9f20b4754e8954cf66",
+  "digestMethod": "SHA-256 of UTF-8 JSON.stringify(parsed JSON object), preserving key order; not the indented file bytes",
+  "exportedProjectSha256": "4b967a1bffa0904e623df20d56632c0b05786c33b21bc2f63fd2080a359dd5bb",
+  "sourceParts": 183,
+  "totalParts": 193,
+  "mechanisms": 9,
+  "wires": 27,
+  "analyticBench": [
+    {
+      "id": "1a49b14d-9ad8-4242-b9e7-4948c4a0d895",
+      "kind": "battery",
+      "position": [
+        -88,
+        6,
+        73
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        20,
+        12,
+        13
+      ],
+      "params": {
+        "voltage": 5
+      }
+    },
+    {
+      "id": "da3c7443-13fc-4f54-b4a7-610b569e1d84",
+      "kind": "lamp",
+      "position": [
+        -60,
+        8,
+        73
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        10,
+        16,
+        10
+      ],
+      "params": {
+        "resistance": 100
+      }
+    },
+    {
+      "id": "1f9d4e80-f223-4942-8ace-ca10e3d20aa3",
+      "kind": "lamp",
+      "position": [
+        -45,
+        8,
+        73
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        10,
+        16,
+        10
+      ],
+      "params": {
+        "resistance": 100
+      }
+    },
+    {
+      "id": "12df2630-a9c2-469f-8f76-aeb0d1c2ce61",
+      "kind": "lamp",
+      "position": [
+        -30,
+        8,
+        73
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        10,
+        16,
+        10
+      ],
+      "params": {
+        "resistance": 100
+      }
+    },
+    {
+      "id": "cc1c3be2-e753-4668-9e34-ab78b5404e15",
+      "kind": "lamp",
+      "position": [
+        -15,
+        8,
+        73
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        10,
+        16,
+        10
+      ],
+      "params": {
+        "resistance": 100
+      }
+    },
+    {
+      "id": "87b35b95-4749-480a-b091-e10b5b755fa3",
+      "kind": "lamp",
+      "position": [
+        0,
+        8,
+        73
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        10,
+        16,
+        10
+      ],
+      "params": {
+        "resistance": 100
+      }
+    },
+    {
+      "id": "338775e0-b950-48e4-91c6-2b48c01f6f77",
+      "kind": "lamp",
+      "position": [
+        15,
+        8,
+        73
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        10,
+        16,
+        10
+      ],
+      "params": {
+        "resistance": 100
+      }
+    },
+    {
+      "id": "0b8359b8-3691-4ef2-a3de-cb604edf3d6b",
+      "kind": "lamp",
+      "position": [
+        30,
+        8,
+        73
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        10,
+        16,
+        10
+      ],
+      "params": {
+        "resistance": 100
+      }
+    },
+    {
+      "id": "4553e8b3-7c69-4cef-bddd-cdbeb33a4081",
+      "kind": "lamp",
+      "position": [
+        45,
+        8,
+        73
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        10,
+        16,
+        10
+      ],
+      "params": {
+        "resistance": 100
+      }
+    },
+    {
+      "id": "a06f212d-8da7-4a09-99ff-6ebf3e4abe32",
+      "kind": "lamp",
+      "position": [
+        60,
+        8,
+        73
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        10,
+        16,
+        10
+      ],
+      "params": {
+        "resistance": 100
+      }
+    }
+  ],
+  "operations": [
+    {
+      "tool": "new_project",
+      "revision": 1
+    },
+    {
+      "tool": "add_repository_parts",
+      "revision": 2,
+      "assetId": "buttons-left",
+      "parts": 12
+    },
+    {
+      "tool": "add_repository_parts",
+      "revision": 3,
+      "assetId": "buttons-right",
+      "parts": 12
+    },
+    {
+      "tool": "add_repository_parts",
+      "revision": 4,
+      "assetId": "buttons-down",
+      "parts": 12
+    },
+    {
+      "tool": "add_repository_parts",
+      "revision": 5,
+      "assetId": "buttons-up",
+      "parts": 12
+    },
+    {
+      "tool": "add_repository_parts",
+      "revision": 6,
+      "assetId": "buttons-a",
+      "parts": 13
+    },
+    {
+      "tool": "add_repository_parts",
+      "revision": 7,
+      "assetId": "buttons-b",
+      "parts": 13
+    },
+    {
+      "tool": "add_repository_parts",
+      "revision": 8,
+      "assetId": "buttons-x",
+      "parts": 13
+    },
+    {
+      "tool": "add_repository_parts",
+      "revision": 9,
+      "assetId": "buttons-y",
+      "parts": 13
+    },
+    {
+      "tool": "add_repository_parts",
+      "revision": 10,
+      "assetId": "buttons-confirm",
+      "parts": 7
+    },
+    {
+      "tool": "add_repository_parts",
+      "revision": 11,
+      "assetId": "baseplates-dpad",
+      "parts": 5
+    },
+    {
+      "tool": "add_repository_parts",
+      "revision": 12,
+      "assetId": "baseplates-abxy",
+      "parts": 5
+    },
+    {
+      "tool": "add_repository_parts",
+      "revision": 13,
+      "assetId": "housing-top",
+      "parts": 1
+    },
+    {
+      "tool": "add_repository_parts",
+      "revision": 14,
+      "assetId": "housing-bottom",
+      "parts": 1
+    },
+    {
+      "tool": "add_repository_parts",
+      "revision": 15,
+      "assetId": "electronics-esp32-mount",
+      "parts": 44
+    },
+    {
+      "tool": "add_repository_parts",
+      "revision": 16,
+      "assetId": "electronics-harness",
+      "parts": 20
+    },
+    {
+      "tool": "configure_part",
+      "revision": 17
+    },
+    {
+      "tool": "configure_mechanism",
+      "revision": 18,
+      "mechanismId": "puretv-left-press"
+    },
+    {
+      "tool": "configure_part",
+      "revision": 19
+    },
+    {
+      "tool": "configure_mechanism",
+      "revision": 20,
+      "mechanismId": "puretv-right-press"
+    },
+    {
+      "tool": "configure_part",
+      "revision": 21
+    },
+    {
+      "tool": "configure_mechanism",
+      "revision": 22,
+      "mechanismId": "puretv-down-press"
+    },
+    {
+      "tool": "configure_part",
+      "revision": 23
+    },
+    {
+      "tool": "configure_mechanism",
+      "revision": 24,
+      "mechanismId": "puretv-up-press"
+    },
+    {
+      "tool": "configure_part",
+      "revision": 25
+    },
+    {
+      "tool": "configure_mechanism",
+      "revision": 26,
+      "mechanismId": "puretv-a-press"
+    },
+    {
+      "tool": "configure_part",
+      "revision": 27
+    },
+    {
+      "tool": "configure_mechanism",
+      "revision": 28,
+      "mechanismId": "puretv-b-press"
+    },
+    {
+      "tool": "configure_part",
+      "revision": 29
+    },
+    {
+      "tool": "configure_mechanism",
+      "revision": 30,
+      "mechanismId": "puretv-x-press"
+    },
+    {
+      "tool": "configure_part",
+      "revision": 31
+    },
+    {
+      "tool": "configure_mechanism",
+      "revision": 32,
+      "mechanismId": "puretv-y-press"
+    },
+    {
+      "tool": "configure_part",
+      "revision": 33
+    },
+    {
+      "tool": "configure_mechanism",
+      "revision": 34,
+      "mechanismId": "puretv-confirm-press"
+    },
+    {
+      "tool": "add_part",
+      "revision": 35
+    },
+    {
+      "tool": "configure_part",
+      "revision": 36
+    },
+    {
+      "tool": "add_part",
+      "revision": 37
+    },
+    {
+      "tool": "configure_part",
+      "revision": 38
+    },
+    {
+      "tool": "connect_wire",
+      "revision": 39
+    },
+    {
+      "tool": "connect_wire",
+      "revision": 40
+    },
+    {
+      "tool": "connect_wire",
+      "revision": 41
+    },
+    {
+      "tool": "add_part",
+      "revision": 42
+    },
+    {
+      "tool": "configure_part",
+      "revision": 43
+    },
+    {
+      "tool": "connect_wire",
+      "revision": 44
+    },
+    {
+      "tool": "connect_wire",
+      "revision": 45
+    },
+    {
+      "tool": "connect_wire",
+      "revision": 46
+    },
+    {
+      "tool": "add_part",
+      "revision": 47
+    },
+    {
+      "tool": "configure_part",
+      "revision": 48
+    },
+    {
+      "tool": "connect_wire",
+      "revision": 49
+    },
+    {
+      "tool": "connect_wire",
+      "revision": 50
+    },
+    {
+      "tool": "connect_wire",
+      "revision": 51
+    },
+    {
+      "tool": "add_part",
+      "revision": 52
+    },
+    {
+      "tool": "configure_part",
+      "revision": 53
+    },
+    {
+      "tool": "connect_wire",
+      "revision": 54
+    },
+    {
+      "tool": "connect_wire",
+      "revision": 55
+    },
+    {
+      "tool": "connect_wire",
+      "revision": 56
+    },
+    {
+      "tool": "add_part",
+      "revision": 57
+    },
+    {
+      "tool": "configure_part",
+      "revision": 58
+    },
+    {
+      "tool": "connect_wire",
+      "revision": 59
+    },
+    {
+      "tool": "connect_wire",
+      "revision": 60
+    },
+    {
+      "tool": "connect_wire",
+      "revision": 61
+    },
+    {
+      "tool": "add_part",
+      "revision": 62
+    },
+    {
+      "tool": "configure_part",
+      "revision": 63
+    },
+    {
+      "tool": "connect_wire",
+      "revision": 64
+    },
+    {
+      "tool": "connect_wire",
+      "revision": 65
+    },
+    {
+      "tool": "connect_wire",
+      "revision": 66
+    },
+    {
+      "tool": "add_part",
+      "revision": 67
+    },
+    {
+      "tool": "configure_part",
+      "revision": 68
+    },
+    {
+      "tool": "connect_wire",
+      "revision": 69
+    },
+    {
+      "tool": "connect_wire",
+      "revision": 70
+    },
+    {
+      "tool": "connect_wire",
+      "revision": 71
+    },
+    {
+      "tool": "add_part",
+      "revision": 72
+    },
+    {
+      "tool": "configure_part",
+      "revision": 73
+    },
+    {
+      "tool": "connect_wire",
+      "revision": 74
+    },
+    {
+      "tool": "connect_wire",
+      "revision": 75
+    },
+    {
+      "tool": "connect_wire",
+      "revision": 76
+    },
+    {
+      "tool": "add_part",
+      "revision": 77
+    },
+    {
+      "tool": "configure_part",
+      "revision": 78
+    },
+    {
+      "tool": "connect_wire",
+      "revision": 79
+    },
+    {
+      "tool": "connect_wire",
+      "revision": 80
+    },
+    {
+      "tool": "connect_wire",
+      "revision": 81
+    },
+    {
+      "tool": "press_mechanism",
+      "revision": 82,
+      "mechanismId": "puretv-left-press",
+      "held": true,
+      "duration": 0.001
+    },
+    {
+      "tool": "press_mechanism",
+      "revision": 83,
+      "mechanismId": "puretv-left-press",
+      "held": true,
+      "duration": 0.5
+    },
+    {
+      "tool": "press_mechanism",
+      "revision": 84,
+      "mechanismId": "puretv-left-press",
+      "held": false,
+      "duration": 1.5
+    },
+    {
+      "tool": "press_mechanism",
+      "revision": 85,
+      "mechanismId": "puretv-right-press",
+      "held": true,
+      "duration": 0.001
+    },
+    {
+      "tool": "press_mechanism",
+      "revision": 86,
+      "mechanismId": "puretv-right-press",
+      "held": true,
+      "duration": 0.5
+    },
+    {
+      "tool": "press_mechanism",
+      "revision": 87,
+      "mechanismId": "puretv-right-press",
+      "held": false,
+      "duration": 1.5
+    },
+    {
+      "tool": "press_mechanism",
+      "revision": 88,
+      "mechanismId": "puretv-down-press",
+      "held": true,
+      "duration": 0.001
+    },
+    {
+      "tool": "press_mechanism",
+      "revision": 89,
+      "mechanismId": "puretv-down-press",
+      "held": true,
+      "duration": 0.5
+    },
+    {
+      "tool": "press_mechanism",
+      "revision": 90,
+      "mechanismId": "puretv-down-press",
+      "held": false,
+      "duration": 1.5
+    },
+    {
+      "tool": "press_mechanism",
+      "revision": 91,
+      "mechanismId": "puretv-up-press",
+      "held": true,
+      "duration": 0.001
+    },
+    {
+      "tool": "press_mechanism",
+      "revision": 92,
+      "mechanismId": "puretv-up-press",
+      "held": true,
+      "duration": 0.5
+    },
+    {
+      "tool": "press_mechanism",
+      "revision": 93,
+      "mechanismId": "puretv-up-press",
+      "held": false,
+      "duration": 1.5
+    },
+    {
+      "tool": "press_mechanism",
+      "revision": 94,
+      "mechanismId": "puretv-a-press",
+      "held": true,
+      "duration": 0.001
+    },
+    {
+      "tool": "press_mechanism",
+      "revision": 95,
+      "mechanismId": "puretv-a-press",
+      "held": true,
+      "duration": 0.5
+    },
+    {
+      "tool": "press_mechanism",
+      "revision": 96,
+      "mechanismId": "puretv-a-press",
+      "held": false,
+      "duration": 1.5
+    },
+    {
+      "tool": "press_mechanism",
+      "revision": 97,
+      "mechanismId": "puretv-b-press",
+      "held": true,
+      "duration": 0.001
+    },
+    {
+      "tool": "press_mechanism",
+      "revision": 98,
+      "mechanismId": "puretv-b-press",
+      "held": true,
+      "duration": 0.5
+    },
+    {
+      "tool": "press_mechanism",
+      "revision": 99,
+      "mechanismId": "puretv-b-press",
+      "held": false,
+      "duration": 1.5
+    },
+    {
+      "tool": "press_mechanism",
+      "revision": 100,
+      "mechanismId": "puretv-x-press",
+      "held": true,
+      "duration": 0.001
+    },
+    {
+      "tool": "press_mechanism",
+      "revision": 101,
+      "mechanismId": "puretv-x-press",
+      "held": true,
+      "duration": 0.5
+    },
+    {
+      "tool": "press_mechanism",
+      "revision": 102,
+      "mechanismId": "puretv-x-press",
+      "held": false,
+      "duration": 1.5
+    },
+    {
+      "tool": "press_mechanism",
+      "revision": 103,
+      "mechanismId": "puretv-y-press",
+      "held": true,
+      "duration": 0.001
+    },
+    {
+      "tool": "press_mechanism",
+      "revision": 104,
+      "mechanismId": "puretv-y-press",
+      "held": true,
+      "duration": 0.5
+    },
+    {
+      "tool": "press_mechanism",
+      "revision": 105,
+      "mechanismId": "puretv-y-press",
+      "held": false,
+      "duration": 1.5
+    },
+    {
+      "tool": "press_mechanism",
+      "revision": 106,
+      "mechanismId": "puretv-confirm-press",
+      "held": true,
+      "duration": 0.001
+    },
+    {
+      "tool": "press_mechanism",
+      "revision": 107,
+      "mechanismId": "puretv-confirm-press",
+      "held": true,
+      "duration": 0.5
+    },
+    {
+      "tool": "press_mechanism",
+      "revision": 108,
+      "mechanismId": "puretv-confirm-press",
+      "held": false,
+      "duration": 1.5
+    }
+  ],
+  "tests": [
+    {
+      "key": "left",
+      "label": "左",
+      "status": "pass",
+      "mechanismId": "puretv-left-press",
+      "sourceAssetId": "buttons-left",
+      "sourceStrikerNode": "左 · PS5 一体式键帽与蓝色插销.003",
+      "sourceSwitchNode": "左 · PS5 按杆.005",
+      "sourceElectricalSwitchNode": "左 · PS5 6×6 开关.005",
+      "precontact": {
+        "displacement": 0.06387068173656653,
+        "gap": 0.6861293182634327,
+        "litLamps": 0
+      },
+      "pressed": {
+        "displacement": 1,
+        "contact": {
+          "actuatorTravel": 0.25,
+          "axisAlignment": 1,
+          "gap": -0.25,
+          "maxOvertravel": 0.25,
+          "normalWorld": [
+            0,
+            1,
+            0
+          ],
+          "overtravel": 0.25,
+          "pressed": true,
+          "radial": 0,
+          "radius": 0.7124995,
+          "restSwitchWorld": [
+            -51.20000076293945,
+            45.24311065673828,
+            -22
+          ],
+          "strikerWorld": [
+            -51.20000076293945,
+            44.99311065673828,
+            -22
+          ],
+          "surfaceGap": 0,
+          "switchWorld": [
+            -51.20000076293945,
+            44.99311065673828,
+            -22
+          ],
+          "touching": true,
+          "triggerTravel": 0.75
+        },
+        "litLampId": "da3c7443-13fc-4f54-b4a7-610b569e1d84",
+        "litLamp": "左 · 指示灯",
+        "litLamps": 1,
+        "currentA": 0.05
+      },
+      "released": {
+        "displacement": 0,
+        "velocity": 0,
+        "contact": {
+          "actuatorTravel": 0,
+          "axisAlignment": 1,
+          "gap": 0.75,
+          "maxOvertravel": 0.25,
+          "normalWorld": [
+            0,
+            1,
+            0
+          ],
+          "overtravel": 0,
+          "pressed": false,
+          "radial": 0,
+          "radius": 0.7124995,
+          "restSwitchWorld": [
+            -51.20000076293945,
+            45.24311065673828,
+            -22
+          ],
+          "strikerWorld": [
+            -51.20000076293945,
+            45.99311065673828,
+            -22
+          ],
+          "surfaceGap": 0.75,
+          "switchWorld": [
+            -51.20000076293945,
+            45.24311065673828,
+            -22
+          ],
+          "touching": false,
+          "triggerTravel": 0.75
+        },
+        "litLamps": 0
+      },
+      "actualRendererChecked": true,
+      "springTransforms": {
+        "pressed": [
+          {
+            "partId": "d2259311-40d9-4c18-9c06-39633d4c55c6",
+            "matrix": [
+              1,
+              0,
+              0,
+              0,
+              0,
+              0.7525254627003382,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              1
+            ]
+          }
+        ],
+        "released": [
+          {
+            "partId": "d2259311-40d9-4c18-9c06-39633d4c55c6",
+            "matrix": [
+              1,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              1
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "key": "right",
+      "label": "右",
+      "status": "pass",
+      "mechanismId": "puretv-right-press",
+      "sourceAssetId": "buttons-right",
+      "sourceStrikerNode": "右 · PS5 一体式键帽与蓝色插销.003",
+      "sourceSwitchNode": "右 · PS5 按杆.004",
+      "sourceElectricalSwitchNode": "右 · PS5 6×6 开关.004",
+      "precontact": {
+        "displacement": 0.04927882166058732,
+        "gap": 0.700721178339414,
+        "litLamps": 0
+      },
+      "pressed": {
+        "displacement": 1,
+        "contact": {
+          "actuatorTravel": 0.25,
+          "axisAlignment": 1,
+          "gap": -0.25,
+          "maxOvertravel": 0.25,
+          "normalWorld": [
+            0,
+            1,
+            0
+          ],
+          "overtravel": 0.25,
+          "pressed": true,
+          "radial": 0,
+          "radius": 0.7125,
+          "restSwitchWorld": [
+            -32.79999828338623,
+            42.847679138183594,
+            -22.000000953674316
+          ],
+          "strikerWorld": [
+            -32.79999828338623,
+            42.597679138183594,
+            -22.000000953674316
+          ],
+          "surfaceGap": 0,
+          "switchWorld": [
+            -32.79999828338623,
+            42.597679138183594,
+            -22.000000953674316
+          ],
+          "touching": true,
+          "triggerTravel": 0.75
+        },
+        "litLampId": "1f9d4e80-f223-4942-8ace-ca10e3d20aa3",
+        "litLamp": "右 · 指示灯",
+        "litLamps": 1,
+        "currentA": 0.05
+      },
+      "released": {
+        "displacement": 0,
+        "velocity": 0,
+        "contact": {
+          "actuatorTravel": 0,
+          "axisAlignment": 1,
+          "gap": 0.75,
+          "maxOvertravel": 0.25,
+          "normalWorld": [
+            0,
+            1,
+            0
+          ],
+          "overtravel": 0,
+          "pressed": false,
+          "radial": 0,
+          "radius": 0.7125,
+          "restSwitchWorld": [
+            -32.79999828338623,
+            42.847679138183594,
+            -22.000000953674316
+          ],
+          "strikerWorld": [
+            -32.79999828338623,
+            43.597679138183594,
+            -22.000000953674316
+          ],
+          "surfaceGap": 0.75,
+          "switchWorld": [
+            -32.79999828338623,
+            42.847679138183594,
+            -22.000000953674316
+          ],
+          "touching": false,
+          "triggerTravel": 0.75
+        },
+        "litLamps": 0
+      },
+      "actualRendererChecked": true,
+      "springTransforms": {
+        "pressed": [
+          {
+            "partId": "20133d23-8728-4848-b38a-2343a07b01ee",
+            "matrix": [
+              1,
+              0,
+              0,
+              0,
+              0,
+              0.7525254627003382,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              1
+            ]
+          }
+        ],
+        "released": [
+          {
+            "partId": "20133d23-8728-4848-b38a-2343a07b01ee",
+            "matrix": [
+              1,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              1
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "key": "down",
+      "label": "下",
+      "status": "pass",
+      "mechanismId": "puretv-down-press",
+      "sourceAssetId": "buttons-down",
+      "sourceStrikerNode": "下 · PS5 一体式键帽与蓝色插销.003",
+      "sourceSwitchNode": "下 · PS5 按杆.004",
+      "sourceElectricalSwitchNode": "下 · PS5 6×6 开关.004",
+      "precontact": {
+        "displacement": 0.059849515004469264,
+        "gap": 0.6901504849955273,
+        "litLamps": 0
+      },
+      "pressed": {
+        "displacement": 1,
+        "contact": {
+          "actuatorTravel": 0.25,
+          "axisAlignment": 1,
+          "gap": -0.25,
+          "maxOvertravel": 0.25,
+          "normalWorld": [
+            0,
+            1,
+            0
+          ],
+          "overtravel": 0.25,
+          "pressed": true,
+          "radial": 0,
+          "radius": 0.7124995,
+          "restSwitchWorld": [
+            -42,
+            45.00899887084961,
+            -12.800002098083496
+          ],
+          "strikerWorld": [
+            -42,
+            44.75899887084961,
+            -12.800002098083496
+          ],
+          "surfaceGap": 0,
+          "switchWorld": [
+            -42,
+            44.75899887084961,
+            -12.800002098083496
+          ],
+          "touching": true,
+          "triggerTravel": 0.75
+        },
+        "litLampId": "12df2630-a9c2-469f-8f76-aeb0d1c2ce61",
+        "litLamp": "下 · 指示灯",
+        "litLamps": 1,
+        "currentA": 0.05
+      },
+      "released": {
+        "displacement": 0,
+        "velocity": 0,
+        "contact": {
+          "actuatorTravel": 0,
+          "axisAlignment": 1,
+          "gap": 0.75,
+          "maxOvertravel": 0.25,
+          "normalWorld": [
+            0,
+            1,
+            0
+          ],
+          "overtravel": 0,
+          "pressed": false,
+          "radial": 0,
+          "radius": 0.7124995,
+          "restSwitchWorld": [
+            -42,
+            45.00899887084961,
+            -12.800002098083496
+          ],
+          "strikerWorld": [
+            -42,
+            45.75899887084961,
+            -12.800002098083496
+          ],
+          "surfaceGap": 0.75,
+          "switchWorld": [
+            -42,
+            45.00899887084961,
+            -12.800002098083496
+          ],
+          "touching": false,
+          "triggerTravel": 0.75
+        },
+        "litLamps": 0
+      },
+      "actualRendererChecked": true,
+      "springTransforms": {
+        "pressed": [
+          {
+            "partId": "e69177ea-52e2-4982-83cd-c4089d1b2e95",
+            "matrix": [
+              1,
+              0,
+              0,
+              0,
+              0,
+              0.7525254624498039,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              1
+            ]
+          }
+        ],
+        "released": [
+          {
+            "partId": "e69177ea-52e2-4982-83cd-c4089d1b2e95",
+            "matrix": [
+              1,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              1
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "key": "up",
+      "label": "上",
+      "status": "pass",
+      "mechanismId": "puretv-up-press",
+      "sourceAssetId": "buttons-up",
+      "sourceStrikerNode": "上 · PS5 一体式键帽与蓝色插销.003",
+      "sourceSwitchNode": "上 · PS5 按杆.004",
+      "sourceElectricalSwitchNode": "上 · PS5 6×6 开关.004",
+      "precontact": {
+        "displacement": 0.047507167881978535,
+        "gap": 0.7024928321180184,
+        "litLamps": 0
+      },
+      "pressed": {
+        "displacement": 1,
+        "contact": {
+          "actuatorTravel": 0.25,
+          "axisAlignment": 1,
+          "gap": -0.25,
+          "maxOvertravel": 0.25,
+          "normalWorld": [
+            0,
+            1,
+            0
+          ],
+          "overtravel": 0.25,
+          "pressed": true,
+          "radial": 0,
+          "radius": 0.7124995,
+          "restSwitchWorld": [
+            -42,
+            41.61963653564453,
+            -31.199999809265137
+          ],
+          "strikerWorld": [
+            -42,
+            41.36963653564453,
+            -31.199999809265137
+          ],
+          "surfaceGap": 0,
+          "switchWorld": [
+            -42,
+            41.36963653564453,
+            -31.199999809265137
+          ],
+          "touching": true,
+          "triggerTravel": 0.75
+        },
+        "litLampId": "cc1c3be2-e753-4668-9e34-ab78b5404e15",
+        "litLamp": "上 · 指示灯",
+        "litLamps": 1,
+        "currentA": 0.05
+      },
+      "released": {
+        "displacement": 0,
+        "velocity": 0,
+        "contact": {
+          "actuatorTravel": 0,
+          "axisAlignment": 1,
+          "gap": 0.75,
+          "maxOvertravel": 0.25,
+          "normalWorld": [
+            0,
+            1,
+            0
+          ],
+          "overtravel": 0,
+          "pressed": false,
+          "radial": 0,
+          "radius": 0.7124995,
+          "restSwitchWorld": [
+            -42,
+            41.61963653564453,
+            -31.199999809265137
+          ],
+          "strikerWorld": [
+            -42,
+            42.36963653564453,
+            -31.199999809265137
+          ],
+          "surfaceGap": 0.75,
+          "switchWorld": [
+            -42,
+            41.61963653564453,
+            -31.199999809265137
+          ],
+          "touching": false,
+          "triggerTravel": 0.75
+        },
+        "litLamps": 0
+      },
+      "actualRendererChecked": true,
+      "springTransforms": {
+        "pressed": [
+          {
+            "partId": "5e025745-8a0c-44a0-8a4c-3b3d8e83b100",
+            "matrix": [
+              1,
+              0,
+              0,
+              0,
+              0,
+              0.752525462587912,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              1
+            ]
+          }
+        ],
+        "released": [
+          {
+            "partId": "5e025745-8a0c-44a0-8a4c-3b3d8e83b100",
+            "matrix": [
+              1,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              1
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "key": "a",
+      "label": "A",
+      "status": "pass",
+      "mechanismId": "puretv-a-press",
+      "sourceAssetId": "buttons-a",
+      "sourceStrikerNode": "A · 同款插销与圆形键帽.002",
+      "sourceSwitchNode": "A · 同款 按杆.002",
+      "sourceElectricalSwitchNode": "A · 同款 6×6 开关.002",
+      "precontact": {
+        "displacement": 0.059098982788655136,
+        "gap": 0.6909010172113454,
+        "litLamps": 0
+      },
+      "pressed": {
+        "displacement": 1,
+        "contact": {
+          "actuatorTravel": 0.25,
+          "axisAlignment": 1,
+          "gap": -0.25,
+          "maxOvertravel": 0.25,
+          "normalWorld": [
+            0,
+            1,
+            0
+          ],
+          "overtravel": 0.25,
+          "pressed": true,
+          "radial": 0,
+          "radius": 0.7124995,
+          "restSwitchWorld": [
+            40.999996185302734,
+            47.79311180114746,
+            -9.5
+          ],
+          "strikerWorld": [
+            40.999996185302734,
+            47.54311180114746,
+            -9.5
+          ],
+          "surfaceGap": 0,
+          "switchWorld": [
+            40.999996185302734,
+            47.54311180114746,
+            -9.5
+          ],
+          "touching": true,
+          "triggerTravel": 0.75
+        },
+        "litLampId": "87b35b95-4749-480a-b091-e10b5b755fa3",
+        "litLamp": "A · 指示灯",
+        "litLamps": 1,
+        "currentA": 0.05
+      },
+      "released": {
+        "displacement": 0,
+        "velocity": 0,
+        "contact": {
+          "actuatorTravel": 0,
+          "axisAlignment": 1,
+          "gap": 0.75,
+          "maxOvertravel": 0.25,
+          "normalWorld": [
+            0,
+            1,
+            0
+          ],
+          "overtravel": 0,
+          "pressed": false,
+          "radial": 0,
+          "radius": 0.7124995,
+          "restSwitchWorld": [
+            40.999996185302734,
+            47.79311180114746,
+            -9.5
+          ],
+          "strikerWorld": [
+            40.999996185302734,
+            48.54311180114746,
+            -9.5
+          ],
+          "surfaceGap": 0.75,
+          "switchWorld": [
+            40.999996185302734,
+            47.79311180114746,
+            -9.5
+          ],
+          "touching": false,
+          "triggerTravel": 0.75
+        },
+        "litLamps": 0
+      },
+      "actualRendererChecked": true,
+      "springTransforms": {
+        "pressed": [
+          {
+            "partId": "93433399-a38d-4284-9205-c7de24a87c93",
+            "matrix": [
+              1,
+              0,
+              0,
+              0,
+              0,
+              0.7525254627003382,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              1
+            ]
+          }
+        ],
+        "released": [
+          {
+            "partId": "93433399-a38d-4284-9205-c7de24a87c93",
+            "matrix": [
+              1,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              1
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "key": "b",
+      "label": "B",
+      "status": "pass",
+      "mechanismId": "puretv-b-press",
+      "sourceAssetId": "buttons-b",
+      "sourceStrikerNode": "B · 同款插销与圆形键帽.002",
+      "sourceSwitchNode": "B · 同款 按杆.002",
+      "sourceElectricalSwitchNode": "B · 同款 6×6 开关.002",
+      "precontact": {
+        "displacement": 0.06418805501338411,
+        "gap": 0.685811944986618,
+        "litLamps": 0
+      },
+      "pressed": {
+        "displacement": 1,
+        "contact": {
+          "actuatorTravel": 0.25,
+          "axisAlignment": 1,
+          "gap": -0.25,
+          "maxOvertravel": 0.25,
+          "normalWorld": [
+            0,
+            1,
+            0
+          ],
+          "overtravel": 0.25,
+          "pressed": true,
+          "radial": 0,
+          "radius": 0.7124995,
+          "restSwitchWorld": [
+            52.499996185302734,
+            47.79311180114746,
+            -21
+          ],
+          "strikerWorld": [
+            52.499996185302734,
+            47.54311180114746,
+            -21
+          ],
+          "surfaceGap": 0,
+          "switchWorld": [
+            52.499996185302734,
+            47.54311180114746,
+            -21
+          ],
+          "touching": true,
+          "triggerTravel": 0.75
+        },
+        "litLampId": "338775e0-b950-48e4-91c6-2b48c01f6f77",
+        "litLamp": "B · 指示灯",
+        "litLamps": 1,
+        "currentA": 0.05
+      },
+      "released": {
+        "displacement": 0,
+        "velocity": 0,
+        "contact": {
+          "actuatorTravel": 0,
+          "axisAlignment": 1,
+          "gap": 0.75,
+          "maxOvertravel": 0.25,
+          "normalWorld": [
+            0,
+            1,
+            0
+          ],
+          "overtravel": 0,
+          "pressed": false,
+          "radial": 0,
+          "radius": 0.7124995,
+          "restSwitchWorld": [
+            52.499996185302734,
+            47.79311180114746,
+            -21
+          ],
+          "strikerWorld": [
+            52.499996185302734,
+            48.54311180114746,
+            -21
+          ],
+          "surfaceGap": 0.75,
+          "switchWorld": [
+            52.499996185302734,
+            47.79311180114746,
+            -21
+          ],
+          "touching": false,
+          "triggerTravel": 0.75
+        },
+        "litLamps": 0
+      },
+      "actualRendererChecked": true,
+      "springTransforms": {
+        "pressed": [
+          {
+            "partId": "d922b058-819e-49eb-939d-2ccb2ea58762",
+            "matrix": [
+              1,
+              0,
+              0,
+              0,
+              0,
+              0.7525254627003382,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              1
+            ]
+          }
+        ],
+        "released": [
+          {
+            "partId": "d922b058-819e-49eb-939d-2ccb2ea58762",
+            "matrix": [
+              1,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              1
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "key": "x",
+      "label": "X",
+      "status": "pass",
+      "mechanismId": "puretv-x-press",
+      "sourceAssetId": "buttons-x",
+      "sourceStrikerNode": "X · 同款插销与圆形键帽.002",
+      "sourceSwitchNode": "X · 同款 按杆.002",
+      "sourceElectricalSwitchNode": "X · 同款 6×6 开关.002",
+      "precontact": {
+        "displacement": 0.05339433066420875,
+        "gap": 0.6966056693357885,
+        "litLamps": 0
+      },
+      "pressed": {
+        "displacement": 1,
+        "contact": {
+          "actuatorTravel": 0.25,
+          "axisAlignment": 1,
+          "gap": -0.25,
+          "maxOvertravel": 0.25,
+          "normalWorld": [
+            0,
+            1,
+            0
+          ],
+          "overtravel": 0.25,
+          "pressed": true,
+          "radial": 0,
+          "radius": 0.7124995,
+          "restSwitchWorld": [
+            29.499996185302734,
+            47.79311180114746,
+            -21
+          ],
+          "strikerWorld": [
+            29.499996185302734,
+            47.54311180114746,
+            -21
+          ],
+          "surfaceGap": 0,
+          "switchWorld": [
+            29.499996185302734,
+            47.54311180114746,
+            -21
+          ],
+          "touching": true,
+          "triggerTravel": 0.75
+        },
+        "litLampId": "0b8359b8-3691-4ef2-a3de-cb604edf3d6b",
+        "litLamp": "X · 指示灯",
+        "litLamps": 1,
+        "currentA": 0.05
+      },
+      "released": {
+        "displacement": 0,
+        "velocity": 0,
+        "contact": {
+          "actuatorTravel": 0,
+          "axisAlignment": 1,
+          "gap": 0.75,
+          "maxOvertravel": 0.25,
+          "normalWorld": [
+            0,
+            1,
+            0
+          ],
+          "overtravel": 0,
+          "pressed": false,
+          "radial": 0,
+          "radius": 0.7124995,
+          "restSwitchWorld": [
+            29.499996185302734,
+            47.79311180114746,
+            -21
+          ],
+          "strikerWorld": [
+            29.499996185302734,
+            48.54311180114746,
+            -21
+          ],
+          "surfaceGap": 0.75,
+          "switchWorld": [
+            29.499996185302734,
+            47.79311180114746,
+            -21
+          ],
+          "touching": false,
+          "triggerTravel": 0.75
+        },
+        "litLamps": 0
+      },
+      "actualRendererChecked": true,
+      "springTransforms": {
+        "pressed": [
+          {
+            "partId": "4946b9ec-6abc-4fb9-bcf9-5eb7c5c777d6",
+            "matrix": [
+              1,
+              0,
+              0,
+              0,
+              0,
+              0.7525254627003382,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              1
+            ]
+          }
+        ],
+        "released": [
+          {
+            "partId": "4946b9ec-6abc-4fb9-bcf9-5eb7c5c777d6",
+            "matrix": [
+              1,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              1
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "key": "y",
+      "label": "Y",
+      "status": "pass",
+      "mechanismId": "puretv-y-press",
+      "sourceAssetId": "buttons-y",
+      "sourceStrikerNode": "Y · 同款插销与圆形键帽.002",
+      "sourceSwitchNode": "Y · 同款 按杆.002",
+      "sourceElectricalSwitchNode": "Y · 同款 6×6 开关.002",
+      "precontact": {
+        "displacement": 0.057534952151941425,
+        "gap": 0.6924650478480601,
+        "litLamps": 0
+      },
+      "pressed": {
+        "displacement": 1,
+        "contact": {
+          "actuatorTravel": 0.25,
+          "axisAlignment": 1,
+          "gap": -0.25,
+          "maxOvertravel": 0.25,
+          "normalWorld": [
+            0,
+            1,
+            0
+          ],
+          "overtravel": 0.25,
+          "pressed": true,
+          "radial": 0,
+          "radius": 0.7124995,
+          "restSwitchWorld": [
+            40.999996185302734,
+            47.79311180114746,
+            -32.5
+          ],
+          "strikerWorld": [
+            40.999996185302734,
+            47.54311180114746,
+            -32.5
+          ],
+          "surfaceGap": 0,
+          "switchWorld": [
+            40.999996185302734,
+            47.54311180114746,
+            -32.5
+          ],
+          "touching": true,
+          "triggerTravel": 0.75
+        },
+        "litLampId": "4553e8b3-7c69-4cef-bddd-cdbeb33a4081",
+        "litLamp": "Y · 指示灯",
+        "litLamps": 1,
+        "currentA": 0.05
+      },
+      "released": {
+        "displacement": 0,
+        "velocity": 0,
+        "contact": {
+          "actuatorTravel": 0,
+          "axisAlignment": 1,
+          "gap": 0.75,
+          "maxOvertravel": 0.25,
+          "normalWorld": [
+            0,
+            1,
+            0
+          ],
+          "overtravel": 0,
+          "pressed": false,
+          "radial": 0,
+          "radius": 0.7124995,
+          "restSwitchWorld": [
+            40.999996185302734,
+            47.79311180114746,
+            -32.5
+          ],
+          "strikerWorld": [
+            40.999996185302734,
+            48.54311180114746,
+            -32.5
+          ],
+          "surfaceGap": 0.75,
+          "switchWorld": [
+            40.999996185302734,
+            47.79311180114746,
+            -32.5
+          ],
+          "touching": false,
+          "triggerTravel": 0.75
+        },
+        "litLamps": 0
+      },
+      "actualRendererChecked": true,
+      "springTransforms": {
+        "pressed": [
+          {
+            "partId": "8e863344-e479-46ae-9e8f-fef022cfbfb3",
+            "matrix": [
+              1,
+              0,
+              0,
+              0,
+              0,
+              0.7525254627003382,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              1
+            ]
+          }
+        ],
+        "released": [
+          {
+            "partId": "8e863344-e479-46ae-9e8f-fef022cfbfb3",
+            "matrix": [
+              1,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              1
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "key": "confirm",
+      "label": "确认",
+      "status": "pass",
+      "mechanismId": "puretv-confirm-press",
+      "sourceAssetId": "buttons-confirm",
+      "sourceStrikerNode": "确认 · 键帽.007",
+      "sourceSwitchNode": "确认 · 开关触头.005",
+      "sourceElectricalSwitchNode": "确认 · 常开开关.005",
+      "precontact": {
+        "displacement": 0.2127759811745127,
+        "gap": 0.5372240188254906,
+        "litLamps": 0
+      },
+      "pressed": {
+        "displacement": 1,
+        "contact": {
+          "actuatorTravel": 0.25,
+          "axisAlignment": 1,
+          "gap": -0.25,
+          "maxOvertravel": 0.25,
+          "normalWorld": [
+            0,
+            1,
+            0
+          ],
+          "overtravel": 0.25,
+          "pressed": true,
+          "radial": 0,
+          "radius": 0.65,
+          "restSwitchWorld": [
+            0,
+            45.1904239654541,
+            -5.5
+          ],
+          "strikerWorld": [
+            0,
+            44.9404239654541,
+            -5.5
+          ],
+          "surfaceGap": 0,
+          "switchWorld": [
+            0,
+            44.9404239654541,
+            -5.5
+          ],
+          "touching": true,
+          "triggerTravel": 0.75
+        },
+        "litLampId": "a06f212d-8da7-4a09-99ff-6ebf3e4abe32",
+        "litLamp": "确认 · 指示灯",
+        "litLamps": 1,
+        "currentA": 0.05
+      },
+      "released": {
+        "displacement": 0,
+        "velocity": 0,
+        "contact": {
+          "actuatorTravel": 0,
+          "axisAlignment": 1,
+          "gap": 0.75,
+          "maxOvertravel": 0.25,
+          "normalWorld": [
+            0,
+            1,
+            0
+          ],
+          "overtravel": 0,
+          "pressed": false,
+          "radial": 0,
+          "radius": 0.65,
+          "restSwitchWorld": [
+            0,
+            45.1904239654541,
+            -5.5
+          ],
+          "strikerWorld": [
+            0,
+            45.9404239654541,
+            -5.5
+          ],
+          "surfaceGap": 0.75,
+          "switchWorld": [
+            0,
+            45.1904239654541,
+            -5.5
+          ],
+          "touching": false,
+          "triggerTravel": 0.75
+        },
+        "litLamps": 0
+      },
+      "actualRendererChecked": true,
+      "springTransforms": {
+        "pressed": [
+          {
+            "partId": "0a262a86-2fd1-4e48-a9e8-f34877e4d01f",
+            "matrix": [
+              1,
+              0,
+              0,
+              0,
+              0,
+              0.6913385604261427,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              1
+            ]
+          }
+        ],
+        "released": [
+          {
+            "partId": "0a262a86-2fd1-4e48-a9e8-f34877e4d01f",
+            "matrix": [
+              1,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              1
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "before": {
+    "issues": {
+      "error": 0,
+      "warning": 28,
+      "pass": 18
+    },
+    "sourceEvidenceStatus": "pass",
+    "lampsOn": 0
+  },
+  "after": {
+    "issues": {
+      "error": 0,
+      "warning": 28,
+      "pass": 18
+    },
+    "sourceEvidenceStatus": "pass",
+    "lampsOn": 0
+  },
+  "limits": [
+    "Source geometry validation is a separate hash-bound evidence report; this MCP pass alone is not a source-mesh or manufacturing certificate.",
+    "Nominal linear spring and ideal contact/electrical model; real tactile switch force, friction and material deformation require physical measurement.",
+    "The nine indicator lamps and their logical leads form an external test bench, not the ESP32 firmware or final manufactured harness."
+  ]
+}

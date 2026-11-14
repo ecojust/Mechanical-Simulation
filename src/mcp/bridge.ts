@@ -1,3 +1,4 @@
+/// <reference types="vite/client" />
 import type { WorkbenchRequest } from "./workbench";
 export interface DesktopBridgeRequest extends WorkbenchRequest {
   id: string;
@@ -9,11 +10,32 @@ export interface McpStatus {
 }
 export const isDesktop = () =>
   typeof window !== "undefined" && "__TAURI_INTERNALS__" in window;
+type DevelopmentWindow = Window & {
+  __MECHANICAL_WORKBENCH_MCP__?: {
+    dispatch: (request: WorkbenchRequest) => Promise<unknown>;
+  };
+};
 /** Native requests are serialized; the handler must read current state from refs. */
 export async function registerDesktopBridge(
   handler: (request: WorkbenchRequest) => Promise<unknown>,
 ): Promise<() => void> {
-  if (!isDesktop()) return () => {};
+  if (!isDesktop()) {
+    // Explicit local development only. Vite removes this branch from production bundles.
+    if (
+      import.meta.env.DEV &&
+      window.location.hostname === "127.0.0.1" &&
+      new URLSearchParams(window.location.search).get("mcp") === "development"
+    ) {
+      const target = window as DevelopmentWindow;
+      const bridge = { dispatch: handler };
+      target.__MECHANICAL_WORKBENCH_MCP__ = bridge;
+      return () => {
+        if (target.__MECHANICAL_WORKBENCH_MCP__ === bridge)
+          delete target.__MECHANICAL_WORKBENCH_MCP__;
+      };
+    }
+    return () => {};
+  }
   const [{ listen }, { invoke }] = await Promise.all([
     import("@tauri-apps/api/event"),
     import("@tauri-apps/api/core"),

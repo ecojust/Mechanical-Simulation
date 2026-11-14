@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-14T10:34:54.787Z",
+  "generatedAt": "2026-11-14T12:38:24.268Z",
   "command": "npx vite-node scripts/verify-demo.ts",
   "scope": "Default parameterized tenon / mortise / spring-button / DC lamp demo only. This does not validate the original pureTV controller geometry.",
   "overallPassed": true,

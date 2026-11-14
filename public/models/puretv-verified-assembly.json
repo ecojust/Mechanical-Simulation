@@ -1,0 +1,7981 @@
+{
+  "mechanisms": [
+    {
+      "axis": [
+        0,
+        1,
+        0
+      ],
+      "contact": {
+        "actuatorPartIds": [
+          "c47ea09b-9667-4b0c-b635-818182888de3"
+        ],
+        "maxOvertravel": 0.25,
+        "radius": 0.7124995,
+        "strikerPartId": "ab675569-61c1-4fc2-9663-fdb0eba31eda",
+        "strikerPoint": [
+          0.028841237060547087,
+          -5.922882343261719,
+          0
+        ],
+        "switchNormal": [
+          0,
+          1,
+          0
+        ],
+        "switchPoint": [
+          2.3706054719241365e-7,
+          0.6500016567382829,
+          0
+        ],
+        "targetPartId": "c47ea09b-9667-4b0c-b635-818182888de3"
+      },
+      "fixedProxy": {
+        "kind": "sleeve",
+        "params": {
+          "holeDiameter": 3.4636290073394775,
+          "tolerance": 0.1
+        },
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "size": [
+          11.183315909859743,
+          3.291975975036621,
+          11.183315909859743
+        ]
+      },
+      "frame": {
+        "position": [
+          -51.20000076293945,
+          45.589048862457275,
+          -22
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "puretv-left-press",
+      "kind": "press",
+      "movingPartIds": [
+        "ab675569-61c1-4fc2-9663-fdb0eba31eda"
+      ],
+      "movingProxy": {
+        "kind": "pin",
+        "params": {
+          "pinDiameter": 2.065824508666992,
+          "tolerance": 0.1
+        },
+        "position": [
+          0,
+          1.4040617942810059,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "size": [
+          2.065824508666992,
+          2,
+          2.065824508666992
+        ]
+      },
+      "name": "左 · 按键",
+      "params": {
+        "damping": 0.39015890314372004,
+        "freeLength": 4.040819758313642,
+        "insertionDepth": 2,
+        "mass": 0.001029360386694242,
+        "minClearance": 0.1,
+        "solidLength": 1.8233663914345257,
+        "stiffness": 0.08750419776955475,
+        "travel": 1
+      },
+      "partIds": [
+        "1c64b282-2b93-4999-b379-b46837fd5103",
+        "ab675569-61c1-4fc2-9663-fdb0eba31eda",
+        "c891d2f6-a8de-42c8-a5be-822fe9561948",
+        "d2259311-40d9-4c18-9c06-39633d4c55c6",
+        "c47ea09b-9667-4b0c-b635-818182888de3",
+        "08f3c846-b1ae-40fd-9a1d-cece0df102f6",
+        "8da12b2c-40f7-4f8f-a415-aa9653f06c57",
+        "1e344443-1bfc-45b8-b36e-0d0c396a1c5a",
+        "ea2461a2-166d-4458-b8e5-976685586059",
+        "85f14594-21ca-48ac-9f4a-b984ca5a5ae4",
+        "5f7ef4f8-624b-49b1-a37d-d367b6648ee9",
+        "1462163b-8e47-4f87-ab9a-a6fcf2a57b20"
+      ],
+      "pose": {
+        "angle": 0,
+        "offset": 0
+      },
+      "springPartIds": [
+        "d2259311-40d9-4c18-9c06-39633d4c55c6"
+      ],
+      "status": "configured",
+      "switchPartId": "1c64b282-2b93-4999-b379-b46837fd5103",
+      "version": 1
+    },
+    {
+      "axis": [
+        0,
+        1,
+        0
+      ],
+      "contact": {
+        "actuatorPartIds": [
+          "bc2a2e62-f514-4046-b1e9-2915c1c21422"
+        ],
+        "maxOvertravel": 0.25,
+        "radius": 0.7125,
+        "strikerPartId": "9794deeb-749b-431f-ab38-8422222ea897",
+        "strikerPoint": [
+          -0.044328283386228406,
+          -7.985976861816411,
+          -9.5367431640625e-7
+        ],
+        "switchNormal": [
+          0,
+          1,
+          0
+        ],
+        "switchPoint": [
+          -2.8338622826140636e-7,
+          0.6500011381835975,
+          4.6325684621706387e-8
+        ],
+        "targetPartId": "bc2a2e62-f514-4046-b1e9-2915c1c21422"
+      },
+      "fixedProxy": {
+        "kind": "sleeve",
+        "params": {
+          "holeDiameter": 3.4636282920837402,
+          "tolerance": 0.1
+        },
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "size": [
+          11.183315275942503,
+          3.2919750213623047,
+          11.183315275942503
+        ]
+      },
+      "frame": {
+        "position": [
+          -32.79999828338623,
+          43.19361686706543,
+          -22.000000953674316
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "puretv-right-press",
+      "kind": "press",
+      "movingPartIds": [
+        "9794deeb-749b-431f-ab38-8422222ea897"
+      ],
+      "movingProxy": {
+        "kind": "pin",
+        "params": {
+          "pinDiameter": 2.0658278465270996,
+          "tolerance": 0.1
+        },
+        "position": [
+          0,
+          1.404062271118164,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "size": [
+          2.0658278465270996,
+          2,
+          2.0658278465270996
+        ]
+      },
+      "name": "右 · 按键",
+      "params": {
+        "damping": 0.4565116365607717,
+        "freeLength": 4.040819758313642,
+        "insertionDepth": 2,
+        "mass": 0.0014092499424465975,
+        "minClearance": 0.1,
+        "solidLength": 1.8233663914345257,
+        "stiffness": 0.0875042152080615,
+        "travel": 1
+      },
+      "partIds": [
+        "9e494684-f37b-448a-b7d6-75a02bde8362",
+        "9794deeb-749b-431f-ab38-8422222ea897",
+        "705e3849-a233-427c-9db4-d9778cd37fea",
+        "20133d23-8728-4848-b38a-2343a07b01ee",
+        "bc2a2e62-f514-4046-b1e9-2915c1c21422",
+        "fd6a3f84-4bbe-4a57-907d-6db6d514d195",
+        "bf9f45c2-2022-4120-b300-faefef8b26bb",
+        "c4b05ade-fc78-4826-b596-c15dbcaad69e",
+        "35474865-60f7-43f3-b2ec-7c2fe2be7b42",
+        "9b9827b0-caf9-4c81-a14d-d9108a5541e1",
+        "e501ff45-e6b7-43e6-a845-4152d02ac71a",
+        "c7250eac-507d-4cf2-bad9-1ef3435a5623"
+      ],
+      "pose": {
+        "angle": 0,
+        "offset": 0
+      },
+      "springPartIds": [
+        "20133d23-8728-4848-b38a-2343a07b01ee"
+      ],
+      "status": "configured",
+      "switchPartId": "9e494684-f37b-448a-b7d6-75a02bde8362",
+      "version": 1
+    },
+    {
+      "axis": [
+        0,
+        1,
+        0
+      ],
+      "contact": {
+        "actuatorPartIds": [
+          "7b075079-f918-4099-aa14-512c9aac2eb4"
+        ],
+        "maxOvertravel": 0.25,
+        "radius": 0.7124995,
+        "strikerPartId": "6b9bfe8e-f871-4cf8-a23d-c227e1610fbe",
+        "strikerPoint": [
+          0,
+          -6.4578121291503905,
+          -0.03444709808349522
+        ],
+        "switchNormal": [
+          0,
+          1,
+          0
+        ],
+        "switchPoint": [
+          0,
+          0.6500018708496071,
+          -9.808349688000817e-8
+        ],
+        "targetPartId": "7b075079-f918-4099-aa14-512c9aac2eb4"
+      },
+      "fixedProxy": {
+        "kind": "sleeve",
+        "params": {
+          "holeDiameter": 3.4636287689208984,
+          "tolerance": 0.1
+        },
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "size": [
+          11.183315179943785,
+          3.2919750213623047,
+          11.183315179943785
+        ]
+      },
+      "frame": {
+        "position": [
+          -42,
+          45.35493469238281,
+          -12.800002098083496
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "puretv-down-press",
+      "kind": "press",
+      "movingPartIds": [
+        "6b9bfe8e-f871-4cf8-a23d-c227e1610fbe"
+      ],
+      "movingProxy": {
+        "kind": "pin",
+        "params": {
+          "pinDiameter": 2.065826416015625,
+          "tolerance": 0.1
+        },
+        "position": [
+          0,
+          1.4040641784667969,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "size": [
+          2.065826416015625,
+          2,
+          2.065826416015625
+        ]
+      },
+      "name": "下 · 按键",
+      "params": {
+        "damping": 0.40601984691611237,
+        "freeLength": 4.040819754222863,
+        "insertionDepth": 2,
+        "mass": 0.0011147535371298528,
+        "minClearance": 0.1,
+        "solidLength": 1.8233663914345257,
+        "stiffness": 0.08750421288055021,
+        "travel": 1
+      },
+      "partIds": [
+        "dc7ee0b6-f74b-44c2-8918-e9ef20f7e307",
+        "6b9bfe8e-f871-4cf8-a23d-c227e1610fbe",
+        "2063e167-88e4-4c08-9c35-d3900632deb9",
+        "e69177ea-52e2-4982-83cd-c4089d1b2e95",
+        "7b075079-f918-4099-aa14-512c9aac2eb4",
+        "45daa181-d35e-4cd3-87a3-cc53518ab03e",
+        "8a869d12-e26f-4126-bdf4-f837cba9aac5",
+        "86c9dfe9-17f0-4a27-96c9-9d2f54775bfe",
+        "af8b1f4b-9eb5-4b3a-87e9-93774c8f3153",
+        "58edf741-971f-46d3-b36d-4d9c2c42cac3",
+        "9b6ea507-823c-451a-a5b6-3ac9a09aed4f",
+        "4d72451b-28eb-4e3f-867d-6bb1fc51ad23"
+      ],
+      "pose": {
+        "angle": 0,
+        "offset": 0
+      },
+      "springPartIds": [
+        "e69177ea-52e2-4982-83cd-c4089d1b2e95"
+      ],
+      "status": "configured",
+      "switchPartId": "dc7ee0b6-f74b-44c2-8918-e9ef20f7e307",
+      "version": 1
+    },
+    {
+      "axis": [
+        0,
+        1,
+        0
+      ],
+      "contact": {
+        "actuatorPartIds": [
+          "c3f1597e-629a-4858-b07b-7ad00a80e1d0"
+        ],
+        "maxOvertravel": 0.25,
+        "radius": 0.7124995,
+        "strikerPartId": "186ba112-77ec-4bad-b6fc-22ad048d09b8",
+        "strikerPoint": [
+          0,
+          -8.296467464355473,
+          0.04694219073486394
+        ],
+        "switchNormal": [
+          0,
+          1,
+          0
+        ],
+        "switchPoint": [
+          0,
+          0.6500015356445346,
+          1.9073486257070726e-7
+        ],
+        "targetPartId": "c3f1597e-629a-4858-b07b-7ad00a80e1d0"
+      },
+      "fixedProxy": {
+        "kind": "sleeve",
+        "params": {
+          "holeDiameter": 3.4636285305023193,
+          "tolerance": 0.1
+        },
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "size": [
+          11.183317672017903,
+          3.2919750213623047,
+          11.183317672017903
+        ]
+      },
+      "frame": {
+        "position": [
+          -42,
+          41.96557283401489,
+          -31.199999809265137
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "puretv-up-press",
+      "kind": "press",
+      "movingPartIds": [
+        "186ba112-77ec-4bad-b6fc-22ad048d09b8"
+      ],
+      "movingProxy": {
+        "kind": "pin",
+        "params": {
+          "pinDiameter": 2.0658278465270996,
+          "tolerance": 0.1
+        },
+        "position": [
+          0,
+          1.4040637016296387,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "size": [
+          2.0658278465270996,
+          2,
+          2.0658278465270996
+        ]
+      },
+      "name": "上 · 按键",
+      "params": {
+        "damping": 0.46656985775274534,
+        "freeLength": 4.040819756477923,
+        "insertionDepth": 2,
+        "mass": 0.001472033506710386,
+        "minClearance": 0.1,
+        "solidLength": 1.8233663914345257,
+        "stiffness": 0.08750421160283116,
+        "travel": 1
+      },
+      "partIds": [
+        "a06612e3-b4a2-4246-8197-b4f7fdc9aab7",
+        "186ba112-77ec-4bad-b6fc-22ad048d09b8",
+        "16f5199f-8494-4fdf-8875-972f54fc0a2c",
+        "5e025745-8a0c-44a0-8a4c-3b3d8e83b100",
+        "c3f1597e-629a-4858-b07b-7ad00a80e1d0",
+        "05abc772-4d01-48b4-b408-32f3a4c9e972",
+        "d22b5b70-b206-4ce1-9d42-a388ec006dd7",
+        "c01ef450-79dd-4073-af75-bb16e8b1bfd6",
+        "5adef7e0-1709-48a4-8990-5849b3edb91b",
+        "2ddd054d-619a-4b21-bde7-49d8f8a5fd8a",
+        "36542cda-2961-4b1a-8a01-2068fbf0a36b",
+        "ca223e3c-b997-479b-b2f8-17df8c03bc3a"
+      ],
+      "pose": {
+        "angle": 0,
+        "offset": 0
+      },
+      "springPartIds": [
+        "5e025745-8a0c-44a0-8a4c-3b3d8e83b100"
+      ],
+      "status": "configured",
+      "switchPartId": "a06612e3-b4a2-4246-8197-b4f7fdc9aab7",
+      "version": 1
+    },
+    {
+      "axis": [
+        0,
+        1,
+        0
+      ],
+      "contact": {
+        "actuatorPartIds": [
+          "0b1bd2bf-f197-40da-88a3-260ae476f0fe"
+        ],
+        "maxOvertravel": 0.25,
+        "radius": 0.7124995,
+        "strikerPartId": "d5a7f5d6-8892-47fd-8691-0590c0d3e6fa",
+        "strikerPoint": [
+          -0.0012908146972634427,
+          -5.388384198852542,
+          0
+        ],
+        "switchNormal": [
+          0,
+          1,
+          0
+        ],
+        "switchPoint": [
+          1.853027313813982e-7,
+          0.6500018011474609,
+          0
+        ],
+        "targetPartId": "0b1bd2bf-f197-40da-88a3-260ae476f0fe"
+      },
+      "fixedProxy": {
+        "kind": "sleeve",
+        "params": {
+          "holeDiameter": 3.4636287689208984,
+          "tolerance": 0.1
+        },
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "size": [
+          11.183315909859743,
+          3.2919769287109375,
+          11.183315909859743
+        ]
+      },
+      "frame": {
+        "position": [
+          40.999996185302734,
+          48.1390495300293,
+          -9.5
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "puretv-a-press",
+      "kind": "press",
+      "movingPartIds": [
+        "d5a7f5d6-8892-47fd-8691-0590c0d3e6fa",
+        "57ee9349-4c7a-46e1-b0fd-ab2b61abd157"
+      ],
+      "movingProxy": {
+        "kind": "pin",
+        "params": {
+          "pinDiameter": 2.065824270248413,
+          "tolerance": 0.1
+        },
+        "position": [
+          0,
+          1.404062271118164,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "size": [
+          2.065824270248413,
+          2,
+          2.065824270248413
+        ]
+      },
+      "name": "A · 按键",
+      "params": {
+        "damping": 0.40915603213132046,
+        "freeLength": 4.040819758313642,
+        "insertionDepth": 2,
+        "mass": 0.0011320414789827904,
+        "minClearance": 0.1,
+        "solidLength": 1.8233663914345257,
+        "stiffness": 0.08750419461330723,
+        "travel": 1
+      },
+      "partIds": [
+        "b36b281f-fab7-40ae-a716-2e62aa4bbc96",
+        "068b5aa9-1424-4eb4-b286-5d70d30efb41",
+        "93433399-a38d-4284-9205-c7de24a87c93",
+        "0b1bd2bf-f197-40da-88a3-260ae476f0fe",
+        "a7e9ac89-f8e7-4cb6-9bd9-8dbf2088f241",
+        "cb17b0bd-5f96-443d-9707-55c99d426de2",
+        "eea60eea-4f7c-4aa8-b338-70a75d468c8f",
+        "59f836be-7cbb-4db7-ade4-88d910a6cccf",
+        "d5a7f5d6-8892-47fd-8691-0590c0d3e6fa",
+        "4e800046-0434-4c8f-a91e-da006fa4e7af",
+        "d572dafb-67cf-4832-86fb-bc2afaa16eb1",
+        "1c133530-c87c-48d4-a171-080c98654f82",
+        "57ee9349-4c7a-46e1-b0fd-ab2b61abd157"
+      ],
+      "pose": {
+        "angle": 0,
+        "offset": 0
+      },
+      "springPartIds": [
+        "93433399-a38d-4284-9205-c7de24a87c93"
+      ],
+      "status": "configured",
+      "switchPartId": "b36b281f-fab7-40ae-a716-2e62aa4bbc96",
+      "version": 1
+    },
+    {
+      "axis": [
+        0,
+        1,
+        0
+      ],
+      "contact": {
+        "actuatorPartIds": [
+          "f44a8cf6-4ba1-439f-bd05-de925b5ab23e"
+        ],
+        "maxOvertravel": 0.25,
+        "radius": 0.7124995,
+        "strikerPartId": "56cbc3aa-483a-458f-89e9-ad74001260ae",
+        "strikerPoint": [
+          -0.0012908146972634427,
+          -4.911775198852538,
+          0
+        ],
+        "switchNormal": [
+          0,
+          1,
+          0
+        ],
+        "switchPoint": [
+          1.853027313813982e-7,
+          0.6500018011474609,
+          0
+        ],
+        "targetPartId": "f44a8cf6-4ba1-439f-bd05-de925b5ab23e"
+      },
+      "fixedProxy": {
+        "kind": "sleeve",
+        "params": {
+          "holeDiameter": 3.4636287689208984,
+          "tolerance": 0.1
+        },
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "size": [
+          11.183315909859743,
+          3.2919769287109375,
+          11.183315909859743
+        ]
+      },
+      "frame": {
+        "position": [
+          52.499996185302734,
+          48.1390495300293,
+          -21
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "puretv-b-press",
+      "kind": "press",
+      "movingPartIds": [
+        "56cbc3aa-483a-458f-89e9-ad74001260ae",
+        "43e7c868-5f49-4ed5-9c3e-b32ba8c19408"
+      ],
+      "movingProxy": {
+        "kind": "pin",
+        "params": {
+          "pinDiameter": 2.065824270248413,
+          "tolerance": 0.1
+        },
+        "position": [
+          0,
+          1.404062271118164,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "size": [
+          2.065824270248413,
+          2,
+          2.065824270248413
+        ]
+      },
+      "name": "B · 按键",
+      "params": {
+        "damping": 0.3889702181929237,
+        "freeLength": 4.040819758313642,
+        "insertionDepth": 2,
+        "mass": 0.0010230977010994855,
+        "minClearance": 0.1,
+        "solidLength": 1.8233663914345257,
+        "stiffness": 0.08750419776955475,
+        "travel": 1
+      },
+      "partIds": [
+        "bf2d8102-b2c4-4518-92b4-5eafee25d9da",
+        "be158c79-4808-4caf-9f42-b855503d22e4",
+        "d922b058-819e-49eb-939d-2ccb2ea58762",
+        "f44a8cf6-4ba1-439f-bd05-de925b5ab23e",
+        "1788098e-daa8-4bf8-9226-3cc25ae9fc76",
+        "f16f35ea-be1f-4755-9983-578566015ce8",
+        "5781c6c9-fcc2-4fad-9800-499cd2b03767",
+        "b412dfcc-1cf5-478a-a838-2344d66afe08",
+        "56cbc3aa-483a-458f-89e9-ad74001260ae",
+        "37069d32-1a7f-4b42-b417-a372621260b1",
+        "ae015a0f-8aab-42ff-86ff-5e1ecc717d7e",
+        "8eb080a2-aae9-4de3-a7c7-e66633ca83d6",
+        "43e7c868-5f49-4ed5-9c3e-b32ba8c19408"
+      ],
+      "pose": {
+        "angle": 0,
+        "offset": 0
+      },
+      "springPartIds": [
+        "d922b058-819e-49eb-939d-2ccb2ea58762"
+      ],
+      "status": "configured",
+      "switchPartId": "bf2d8102-b2c4-4518-92b4-5eafee25d9da",
+      "version": 1
+    },
+    {
+      "axis": [
+        0,
+        1,
+        0
+      ],
+      "contact": {
+        "actuatorPartIds": [
+          "f37f5f5e-4726-403d-ac75-6bb73a2b3e36"
+        ],
+        "maxOvertravel": 0.25,
+        "radius": 0.7124995,
+        "strikerPartId": "9c0b17e6-8fff-4b36-ba9f-687334b07c2a",
+        "strikerPoint": [
+          -0.0012908146972669954,
+          -6.007986198852542,
+          0
+        ],
+        "switchNormal": [
+          0,
+          1,
+          0
+        ],
+        "switchPoint": [
+          1.8530273493411187e-7,
+          0.6500018011474609,
+          0
+        ],
+        "targetPartId": "f37f5f5e-4726-403d-ac75-6bb73a2b3e36"
+      },
+      "fixedProxy": {
+        "kind": "sleeve",
+        "params": {
+          "holeDiameter": 3.4636287689208984,
+          "tolerance": 0.1
+        },
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "size": [
+          11.183315909859743,
+          3.2919769287109375,
+          11.183315909859743
+        ]
+      },
+      "frame": {
+        "position": [
+          29.499996185302734,
+          48.1390495300293,
+          -21
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "puretv-x-press",
+      "kind": "press",
+      "movingPartIds": [
+        "9c0b17e6-8fff-4b36-ba9f-687334b07c2a",
+        "7b962213-bc80-471a-be5e-8684333f10f1"
+      ],
+      "movingProxy": {
+        "kind": "pin",
+        "params": {
+          "pinDiameter": 2.065824270248413,
+          "tolerance": 0.1
+        },
+        "position": [
+          0,
+          1.404062271118164,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "size": [
+          2.065824270248413,
+          2,
+          2.065824270248413
+        ]
+      },
+      "name": "X · 按键",
+      "params": {
+        "damping": 0.43509326852848385,
+        "freeLength": 4.040819758313642,
+        "insertionDepth": 2,
+        "mass": 0.0012801151889063735,
+        "minClearance": 0.1,
+        "solidLength": 1.8233663914345257,
+        "stiffness": 0.08750421502345317,
+        "travel": 1
+      },
+      "partIds": [
+        "5dd1db6c-4023-43d1-a8d1-b653f9622603",
+        "d5c5b0e0-170c-41d1-9a8d-79d9d23f0222",
+        "4946b9ec-6abc-4fb9-bcf9-5eb7c5c777d6",
+        "f37f5f5e-4726-403d-ac75-6bb73a2b3e36",
+        "10fa1084-0562-4fcb-905f-37d993ea80f4",
+        "16223d19-138c-42d3-bb71-63e54d9f26dd",
+        "77f2e8d3-d840-4123-831a-e7cc42744b41",
+        "df1558ca-a2e0-4f2c-a1b8-cfc3d911aa9c",
+        "9c0b17e6-8fff-4b36-ba9f-687334b07c2a",
+        "9fbf16be-76e2-413b-a082-3ae9163af53f",
+        "a5d9b880-a1f7-4a3e-bda0-3b2fef95c62a",
+        "22d704b8-4cc8-4024-94dd-634b97d2c5e1",
+        "7b962213-bc80-471a-be5e-8684333f10f1"
+      ],
+      "pose": {
+        "angle": 0,
+        "offset": 0
+      },
+      "springPartIds": [
+        "4946b9ec-6abc-4fb9-bcf9-5eb7c5c777d6"
+      ],
+      "status": "configured",
+      "switchPartId": "5dd1db6c-4023-43d1-a8d1-b653f9622603",
+      "version": 1
+    },
+    {
+      "axis": [
+        0,
+        1,
+        0
+      ],
+      "contact": {
+        "actuatorPartIds": [
+          "2e9f37e0-f154-4092-b4ec-deb6b1dd1571"
+        ],
+        "maxOvertravel": 0.25,
+        "radius": 0.7124995,
+        "strikerPartId": "5f69a045-73c5-4252-9752-d2ecb821eaa2",
+        "strikerPoint": [
+          -0.0012908146972634427,
+          -5.5453161988525395,
+          9.999999974752427e-7
+        ],
+        "switchNormal": [
+          0,
+          1,
+          0
+        ],
+        "switchPoint": [
+          1.853027313813982e-7,
+          0.6500018011474609,
+          0
+        ],
+        "targetPartId": "2e9f37e0-f154-4092-b4ec-deb6b1dd1571"
+      },
+      "fixedProxy": {
+        "kind": "sleeve",
+        "params": {
+          "holeDiameter": 3.4636287689208984,
+          "tolerance": 0.1
+        },
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "size": [
+          11.183315909859743,
+          3.2919769287109375,
+          11.183315909859743
+        ]
+      },
+      "frame": {
+        "position": [
+          40.999996185302734,
+          48.1390495300293,
+          -32.5
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "puretv-y-press",
+      "kind": "press",
+      "movingPartIds": [
+        "5f69a045-73c5-4252-9752-d2ecb821eaa2",
+        "c8214aac-02a4-49f4-92ee-b31caba2b381"
+      ],
+      "movingProxy": {
+        "kind": "pin",
+        "params": {
+          "pinDiameter": 2.0658276081085205,
+          "tolerance": 0.1
+        },
+        "position": [
+          0,
+          1.404062271118164,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "size": [
+          2.0658276081085205,
+          2,
+          2.0658276081085205
+        ]
+      },
+      "name": "Y · 按键",
+      "params": {
+        "damping": 0.41588566791148335,
+        "freeLength": 4.040819758313642,
+        "insertionDepth": 2,
+        "mass": 0.0011695864700859671,
+        "minClearance": 0.1,
+        "solidLength": 1.8233663914345257,
+        "stiffness": 0.08750419382042927,
+        "travel": 1
+      },
+      "partIds": [
+        "a2a88ac5-74ad-4b20-b001-1900213cd16f",
+        "a37ef421-3c35-41f1-bb4e-99ed79a81e05",
+        "8e863344-e479-46ae-9e8f-fef022cfbfb3",
+        "2e9f37e0-f154-4092-b4ec-deb6b1dd1571",
+        "9d4c078d-2ed9-4df6-91ea-8c2fa05c67e9",
+        "089b1872-63f8-4cd8-a6ff-a8416784bde8",
+        "1c48bad7-05f0-49e2-b8a5-97a1849c0274",
+        "51e9752b-8303-4e4a-aeb5-d264ef182df2",
+        "5f69a045-73c5-4252-9752-d2ecb821eaa2",
+        "812ae72a-5fa2-4977-9ac7-11071f2f2d6b",
+        "0297a417-7033-4bc6-9b5c-fd0ca6bab302",
+        "b30ab309-82b7-4326-b481-53a97d0b27ca",
+        "c8214aac-02a4-49f4-92ee-b31caba2b381"
+      ],
+      "pose": {
+        "angle": 0,
+        "offset": 0
+      },
+      "springPartIds": [
+        "8e863344-e479-46ae-9e8f-fef022cfbfb3"
+      ],
+      "status": "configured",
+      "switchPartId": "a2a88ac5-74ad-4b20-b001-1900213cd16f",
+      "version": 1
+    },
+    {
+      "axis": [
+        0,
+        1,
+        0
+      ],
+      "contact": {
+        "actuatorPartIds": [
+          "d341ad04-ae6c-4164-a2f6-8f1199b311c6"
+        ],
+        "maxOvertravel": 0.25,
+        "radius": 0.65,
+        "strikerPartId": "9a6387f4-a72a-4a30-8ff7-b1a961865253",
+        "strikerPoint": [
+          0,
+          -4.809425034545896,
+          0
+        ],
+        "switchNormal": [
+          0,
+          1,
+          0
+        ],
+        "switchPoint": [
+          0,
+          0.4199999654541031,
+          0
+        ],
+        "targetPartId": "d341ad04-ae6c-4164-a2f6-8f1199b311c6"
+      },
+      "fixedProxy": {
+        "kind": "sleeve",
+        "params": {
+          "holeDiameter": 3.7954461574554443,
+          "tolerance": 0.1
+        },
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "size": [
+          18.60000251219187,
+          3.299577861607766,
+          18.60000251219187
+        ]
+      },
+      "frame": {
+        "position": [
+          0,
+          46.00021322050725,
+          -5.5
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ]
+      },
+      "id": "puretv-confirm-press",
+      "kind": "press",
+      "movingPartIds": [
+        "9a6387f4-a72a-4a30-8ff7-b1a961865253"
+      ],
+      "movingProxy": {
+        "kind": "pin",
+        "params": {
+          "pinDiameter": 3.099012851715088,
+          "tolerance": 0.1
+        },
+        "position": [
+          0,
+          0.9402107449468531,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "size": [
+          3.099012851715088,
+          2,
+          3.099012851715088
+        ]
+      },
+      "name": "确认 · 按键",
+      "params": {
+        "damping": 0.4441706269999605,
+        "freeLength": 3.239795684814453,
+        "insertionDepth": 2,
+        "mass": 0.0005100975314300627,
+        "minClearance": 0.1,
+        "solidLength": 1.7499999701976776,
+        "stiffness": 0.22885465159333293,
+        "travel": 1
+      },
+      "partIds": [
+        "955f1b8c-bd58-4441-9e4c-42875c5cf021",
+        "84164696-5ec5-4fb8-b3fd-feb6cadefa63",
+        "0a262a86-2fd1-4e48-a9e8-f34877e4d01f",
+        "266d0496-ef85-47ce-b49f-5dfc00fb7b7e",
+        "d341ad04-ae6c-4164-a2f6-8f1199b311c6",
+        "52ac6097-620e-4c01-bb65-660fb1c87779",
+        "9a6387f4-a72a-4a30-8ff7-b1a961865253"
+      ],
+      "pose": {
+        "angle": 0,
+        "offset": 0
+      },
+      "springPartIds": [
+        "0a262a86-2fd1-4e48-a9e8-f34877e4d01f"
+      ],
+      "status": "configured",
+      "switchPartId": "266d0496-ef85-47ce-b49f-5dfc00fb7b7e",
+      "version": 1
+    }
+  ],
+  "name": "pureTV 手柄 · 九键触点与指示灯试验",
+  "parts": [
+    {
+      "assemblyGroup": {
+        "id": "de679a13-9568-455f-86a9-0ef167345d28-buttons-left-switch",
+        "name": "左键 · 开关 / 按杆 / 焊脚"
+      },
+      "color": "#92a9b6",
+      "fixed": true,
+      "id": "1c64b282-2b93-4999-b379-b46837fd5103",
+      "interaction": {
+        "anchor": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "proxySize": [
+          6.000015,
+          3.000008,
+          6.000015
+        ],
+        "status": "unconfigured",
+        "version": 1
+      },
+      "kind": "button",
+      "name": "左 · PS5 6×6 开关.005",
+      "params": {
+        "assetNode": "左_·_PS5_6×6_开关005",
+        "assetUrl": "./models/buttons-left.glb"
+      },
+      "position": [
+        -51.200001,
+        42.443056999999996,
+        -22
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        6.000015,
+        3.000008,
+        6.000015
+      ],
+      "visible": true
+    },
+    {
+      "assemblyGroup": {
+        "id": "de679a13-9568-455f-86a9-0ef167345d28-buttons-left-pin-sleeve",
+        "name": "左键 · 键帽插销 / 下套筒"
+      },
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "ab675569-61c1-4fc2-9663-fdb0eba31eda",
+      "interaction": {
+        "anchor": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "proxySize": [
+          12.311832,
+          12.282135,
+          11.560001
+        ],
+        "status": "unconfigured",
+        "version": 1
+      },
+      "kind": "pin",
+      "name": "左 · PS5 一体式键帽与蓝色插销.003",
+      "params": {
+        "assetNode": "左_·_PS5_一体式键帽与蓝色插销003",
+        "assetUrl": "./models/buttons-left.glb"
+      },
+      "position": [
+        -51.228842,
+        51.915993,
+        -22
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        12.311832,
+        12.282135,
+        11.560001
+      ],
+      "visible": true
+    },
+    {
+      "assemblyGroup": {
+        "id": "de679a13-9568-455f-86a9-0ef167345d28-buttons-left-pin-sleeve",
+        "name": "左键 · 键帽插销 / 下套筒"
+      },
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "c891d2f6-a8de-42c8-a5be-822fe9561948",
+      "interaction": {
+        "anchor": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "proxySize": [
+          11.183365,
+          12.955192,
+          11.183237
+        ],
+        "status": "unconfigured",
+        "version": 1
+      },
+      "kind": "sleeve",
+      "name": "左 · PS5 下环一体式开关套筒.003",
+      "params": {
+        "assetNode": "左_·_PS5_下环一体式开关套筒003",
+        "assetUrl": "./models/buttons-left.glb"
+      },
+      "position": [
+        -51.199966,
+        40.7576,
+        -21.999986
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        11.183365,
+        12.955192,
+        11.183237
+      ],
+      "visible": true
+    },
+    {
+      "assemblyGroup": {
+        "id": "de679a13-9568-455f-86a9-0ef167345d28-buttons-left-spring-seat",
+        "name": "左键 · 弹簧 / 定位环"
+      },
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "d2259311-40d9-4c18-9c06-39633d4c55c6",
+      "interaction": {
+        "anchor": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "proxySize": [
+          6.074041,
+          4.04082,
+          6.075855
+        ],
+        "status": "unconfigured",
+        "version": 1
+      },
+      "kind": "spring",
+      "name": "左 · PS5 回位弹簧.003",
+      "params": {
+        "assetNode": "左_·_PS5_回位弹簧003",
+        "assetUrl": "./models/buttons-left.glb"
+      },
+      "position": [
+        -51.198585,
+        46.43837,
+        -21.999252
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        6.074041,
+        4.04082,
+        6.075855
+      ],
+      "visible": true
+    },
+    {
+      "assemblyGroup": {
+        "id": "de679a13-9568-455f-86a9-0ef167345d28-buttons-left-switch",
+        "name": "左键 · 开关 / 按杆 / 焊脚"
+      },
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "c47ea09b-9667-4b0c-b635-818182888de3",
+      "kind": "asset",
+      "name": "左 · PS5 按杆.005",
+      "params": {
+        "assetNode": "左_·_PS5_按杆005",
+        "assetUrl": "./models/buttons-left.glb"
+      },
+      "position": [
+        -51.200001,
+        44.593109,
+        -22
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        2.849998,
+        1.300003,
+        2.849998
+      ],
+      "visible": true
+    },
+    {
+      "assemblyGroup": {
+        "id": "de679a13-9568-455f-86a9-0ef167345d28-buttons-left-switch",
+        "name": "左键 · 开关 / 按杆 / 焊脚"
+      },
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "08f3c846-b1ae-40fd-9a1d-cece0df102f6",
+      "kind": "asset",
+      "name": "左 · PS5 焊脚占位.017",
+      "params": {
+        "assetNode": "左_·_PS5_焊脚占位017",
+        "assetUrl": "./models/buttons-left.glb"
+      },
+      "position": [
+        -48.849998,
+        39.443049,
+        -24.100006
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.650002,
+        3.000007,
+        0.650002
+      ],
+      "visible": true
+    },
+    {
+      "assemblyGroup": {
+        "id": "de679a13-9568-455f-86a9-0ef167345d28-buttons-left-switch",
+        "name": "左键 · 开关 / 按杆 / 焊脚"
+      },
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "8da12b2c-40f7-4f8f-a415-aa9653f06c57",
+      "kind": "asset",
+      "name": "左 · PS5 焊脚占位.018",
+      "params": {
+        "assetNode": "左_·_PS5_焊脚占位018",
+        "assetUrl": "./models/buttons-left.glb"
+      },
+      "position": [
+        -48.849998,
+        39.443049,
+        -19.899996
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.650002,
+        3.000007,
+        0.650002
+      ],
+      "visible": true
+    },
+    {
+      "assemblyGroup": {
+        "id": "de679a13-9568-455f-86a9-0ef167345d28-buttons-left-switch",
+        "name": "左键 · 开关 / 按杆 / 焊脚"
+      },
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "1e344443-1bfc-45b8-b36e-0d0c396a1c5a",
+      "kind": "asset",
+      "name": "左 · PS5 焊脚占位.019",
+      "params": {
+        "assetNode": "左_·_PS5_焊脚占位019",
+        "assetUrl": "./models/buttons-left.glb"
+      },
+      "position": [
+        -53.550007,
+        39.443049,
+        -24.100006
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.650002,
+        3.000007,
+        0.650002
+      ],
+      "visible": true
+    },
+    {
+      "assemblyGroup": {
+        "id": "de679a13-9568-455f-86a9-0ef167345d28-buttons-left-switch",
+        "name": "左键 · 开关 / 按杆 / 焊脚"
+      },
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "ea2461a2-166d-4458-b8e5-976685586059",
+      "kind": "asset",
+      "name": "左 · PS5 焊脚占位.020",
+      "params": {
+        "assetNode": "左_·_PS5_焊脚占位020",
+        "assetUrl": "./models/buttons-left.glb"
+      },
+      "position": [
+        -53.550007,
+        39.443049,
+        -19.899996
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.650002,
+        3.000007,
+        0.650002
+      ],
+      "visible": true
+    },
+    {
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "85f14594-21ca-48ac-9f4a-b984ca5a5ae4",
+      "kind": "asset",
+      "name": "左 · 旋锁弹性垫 0.002",
+      "params": {
+        "assetNode": "左_·_旋锁弹性垫_0002",
+        "assetUrl": "./models/buttons-left.glb"
+      },
+      "position": [
+        -46.087564,
+        35.650005,
+        -22
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1.134212,
+        0.509998,
+        1.581005
+      ],
+      "visible": true
+    },
+    {
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "5f7ef4f8-624b-49b1-a37d-d367b6648ee9",
+      "kind": "asset",
+      "name": "左 · 旋锁弹性垫 120.002",
+      "params": {
+        "assetNode": "左_·_旋锁弹性垫_120002",
+        "assetUrl": "./models/buttons-left.glb"
+      },
+      "position": [
+        -53.808201,
+        35.650005,
+        -26.441688
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1.777512,
+        0.509998,
+        1.649435
+      ],
+      "visible": true
+    },
+    {
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "1462163b-8e47-4f87-ab9a-a6fcf2a57b20",
+      "kind": "asset",
+      "name": "左 · 旋锁弹性垫 240.002",
+      "params": {
+        "assetNode": "左_·_旋锁弹性垫_240002",
+        "assetUrl": "./models/buttons-left.glb"
+      },
+      "position": [
+        -53.808201,
+        35.650005,
+        -17.558312
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1.777512,
+        0.509998,
+        1.649435
+      ],
+      "visible": true
+    },
+    {
+      "assemblyGroup": {
+        "id": "86bc7f29-7f1c-4139-bb98-6dad4f96ff14-buttons-right-switch",
+        "name": "右键 · 开关 / 按杆 / 焊脚"
+      },
+      "color": "#92a9b6",
+      "fixed": true,
+      "id": "9e494684-f37b-448a-b7d6-75a02bde8362",
+      "interaction": {
+        "anchor": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "proxySize": [
+          6.000013,
+          3.000008,
+          6.000015
+        ],
+        "status": "unconfigured",
+        "version": 1
+      },
+      "kind": "button",
+      "name": "右 · PS5 6×6 开关.004",
+      "params": {
+        "assetNode": "右_·_PS5_6×6_开关004",
+        "assetUrl": "./models/buttons-right.glb"
+      },
+      "position": [
+        -32.799996,
+        40.047626,
+        -22
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        6.000013,
+        3.000008,
+        6.000015
+      ],
+      "visible": true
+    },
+    {
+      "assemblyGroup": {
+        "id": "86bc7f29-7f1c-4139-bb98-6dad4f96ff14-buttons-right-pin-sleeve",
+        "name": "右键 · 键帽插销 / 下套筒"
+      },
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "9794deeb-749b-431f-ab38-8422222ea897",
+      "interaction": {
+        "anchor": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "proxySize": [
+          12.280859,
+          16.408325,
+          11.560001
+        ],
+        "status": "unconfigured",
+        "version": 1
+      },
+      "kind": "pin",
+      "name": "右 · PS5 一体式键帽与蓝色插销.003",
+      "params": {
+        "assetNode": "右_·_PS5_一体式键帽与蓝色插销003",
+        "assetUrl": "./models/buttons-right.glb"
+      },
+      "position": [
+        -32.75567,
+        51.583656000000005,
+        -22
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        12.280859,
+        16.408325,
+        11.560001
+      ],
+      "visible": true
+    },
+    {
+      "assemblyGroup": {
+        "id": "86bc7f29-7f1c-4139-bb98-6dad4f96ff14-buttons-right-pin-sleeve",
+        "name": "右键 · 键帽插销 / 下套筒"
+      },
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "705e3849-a233-427c-9db4-d9778cd37fea",
+      "interaction": {
+        "anchor": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "proxySize": [
+          11.183308,
+          10.559992,
+          11.183308
+        ],
+        "status": "unconfigured",
+        "version": 1
+      },
+      "kind": "sleeve",
+      "name": "右 · PS5 下环一体式开关套筒.003",
+      "params": {
+        "assetNode": "右_·_PS5_下环一体式开关套筒003",
+        "assetUrl": "./models/buttons-right.glb"
+      },
+      "position": [
+        -32.799826,
+        39.559999000000005,
+        -22.000025
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        11.183308,
+        10.559992,
+        11.183308
+      ],
+      "visible": true
+    },
+    {
+      "assemblyGroup": {
+        "id": "86bc7f29-7f1c-4139-bb98-6dad4f96ff14-buttons-right-spring-seat",
+        "name": "右键 · 弹簧 / 定位环"
+      },
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "20133d23-8728-4848-b38a-2343a07b01ee",
+      "interaction": {
+        "anchor": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "proxySize": [
+          6.074042,
+          4.04082,
+          6.075854
+        ],
+        "status": "unconfigured",
+        "version": 1
+      },
+      "kind": "spring",
+      "name": "右 · PS5 回位弹簧.003",
+      "params": {
+        "assetNode": "右_·_PS5_回位弹簧003",
+        "assetUrl": "./models/buttons-right.glb"
+      },
+      "position": [
+        -32.801415,
+        44.042941,
+        -22.000747
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        6.074042,
+        4.04082,
+        6.075854
+      ],
+      "visible": true
+    },
+    {
+      "assemblyGroup": {
+        "id": "86bc7f29-7f1c-4139-bb98-6dad4f96ff14-buttons-right-switch",
+        "name": "右键 · 开关 / 按杆 / 焊脚"
+      },
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "bc2a2e62-f514-4046-b1e9-2915c1c21422",
+      "kind": "asset",
+      "name": "右 · PS5 按杆.004",
+      "params": {
+        "assetNode": "右_·_PS5_按杆004",
+        "assetUrl": "./models/buttons-right.glb"
+      },
+      "position": [
+        -32.799998,
+        42.197677999999996,
+        -22.000001
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        2.85,
+        1.300003,
+        2.85
+      ],
+      "visible": true
+    },
+    {
+      "assemblyGroup": {
+        "id": "86bc7f29-7f1c-4139-bb98-6dad4f96ff14-buttons-right-switch",
+        "name": "右键 · 开关 / 按杆 / 焊脚"
+      },
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "fd6a3f84-4bbe-4a57-907d-6db6d514d195",
+      "kind": "asset",
+      "name": "右 · PS5 焊脚占位.013",
+      "params": {
+        "assetNode": "右_·_PS5_焊脚占位013",
+        "assetUrl": "./models/buttons-right.glb"
+      },
+      "position": [
+        -35.150002,
+        37.047617,
+        -19.899994
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.650002,
+        3.000007,
+        0.650002
+      ],
+      "visible": true
+    },
+    {
+      "assemblyGroup": {
+        "id": "86bc7f29-7f1c-4139-bb98-6dad4f96ff14-buttons-right-switch",
+        "name": "右键 · 开关 / 按杆 / 焊脚"
+      },
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "bf9f45c2-2022-4120-b300-faefef8b26bb",
+      "kind": "asset",
+      "name": "右 · PS5 焊脚占位.014",
+      "params": {
+        "assetNode": "右_·_PS5_焊脚占位014",
+        "assetUrl": "./models/buttons-right.glb"
+      },
+      "position": [
+        -35.149998,
+        37.047617,
+        -24.100006
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.650002,
+        3.000007,
+        0.650002
+      ],
+      "visible": true
+    },
+    {
+      "assemblyGroup": {
+        "id": "86bc7f29-7f1c-4139-bb98-6dad4f96ff14-buttons-right-switch",
+        "name": "右键 · 开关 / 按杆 / 焊脚"
+      },
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "c4b05ade-fc78-4826-b596-c15dbcaad69e",
+      "kind": "asset",
+      "name": "右 · PS5 焊脚占位.015",
+      "params": {
+        "assetNode": "右_·_PS5_焊脚占位015",
+        "assetUrl": "./models/buttons-right.glb"
+      },
+      "position": [
+        -30.449991,
+        37.047617,
+        -19.899994
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.650002,
+        3.000007,
+        0.650002
+      ],
+      "visible": true
+    },
+    {
+      "assemblyGroup": {
+        "id": "86bc7f29-7f1c-4139-bb98-6dad4f96ff14-buttons-right-switch",
+        "name": "右键 · 开关 / 按杆 / 焊脚"
+      },
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "35474865-60f7-43f3-b2ec-7c2fe2be7b42",
+      "kind": "asset",
+      "name": "右 · PS5 焊脚占位.016",
+      "params": {
+        "assetNode": "右_·_PS5_焊脚占位016",
+        "assetUrl": "./models/buttons-right.glb"
+      },
+      "position": [
+        -30.449991,
+        37.047617,
+        -24.100004
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.650002,
+        3.000007,
+        0.650002
+      ],
+      "visible": true
+    },
+    {
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "9b9827b0-caf9-4c81-a14d-d9108a5541e1",
+      "kind": "asset",
+      "name": "右 · 旋锁弹性垫 0.002",
+      "params": {
+        "assetNode": "右_·_旋锁弹性垫_0002",
+        "assetUrl": "./models/buttons-right.glb"
+      },
+      "position": [
+        -37.912436,
+        35.650003,
+        -22
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1.134212,
+        0.51,
+        1.581005
+      ],
+      "visible": true
+    },
+    {
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "e501ff45-e6b7-43e6-a845-4152d02ac71a",
+      "kind": "asset",
+      "name": "右 · 旋锁弹性垫 120.002",
+      "params": {
+        "assetNode": "右_·_旋锁弹性垫_120002",
+        "assetUrl": "./models/buttons-right.glb"
+      },
+      "position": [
+        -30.191799,
+        35.650003,
+        -17.558312
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1.777512,
+        0.51,
+        1.649435
+      ],
+      "visible": true
+    },
+    {
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "c7250eac-507d-4cf2-bad9-1ef3435a5623",
+      "kind": "asset",
+      "name": "右 · 旋锁弹性垫 240.002",
+      "params": {
+        "assetNode": "右_·_旋锁弹性垫_240002",
+        "assetUrl": "./models/buttons-right.glb"
+      },
+      "position": [
+        -30.191799,
+        35.650003,
+        -26.441688
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1.777512,
+        0.51,
+        1.649435
+      ],
+      "visible": true
+    },
+    {
+      "assemblyGroup": {
+        "id": "90186ae5-7680-4ab0-9c16-633636943642-buttons-down-switch",
+        "name": "下键 · 开关 / 按杆 / 焊脚"
+      },
+      "color": "#92a9b6",
+      "fixed": true,
+      "id": "dc7ee0b6-f74b-44c2-8918-e9ef20f7e307",
+      "interaction": {
+        "anchor": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "proxySize": [
+          6.000015,
+          3.000008,
+          6.000015
+        ],
+        "status": "unconfigured",
+        "version": 1
+      },
+      "kind": "button",
+      "name": "下 · PS5 6×6 开关.004",
+      "params": {
+        "assetNode": "下_·_PS5_6×6_开关004",
+        "assetUrl": "./models/buttons-down.glb"
+      },
+      "position": [
+        -42,
+        42.208943000000005,
+        -12.800002
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        6.000015,
+        3.000008,
+        6.000015
+      ],
+      "visible": true
+    },
+    {
+      "assemblyGroup": {
+        "id": "90186ae5-7680-4ab0-9c16-633636943642-buttons-down-pin-sleeve",
+        "name": "下键 · 键帽插销 / 下套筒"
+      },
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "6b9bfe8e-f871-4cf8-a23d-c227e1610fbe",
+      "interaction": {
+        "anchor": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "proxySize": [
+          11.559998,
+          13.351999,
+          12.300619
+        ],
+        "status": "unconfigured",
+        "version": 1
+      },
+      "kind": "pin",
+      "name": "下 · PS5 一体式键帽与蓝色插销.003",
+      "params": {
+        "assetNode": "下_·_PS5_一体式键帽与蓝色插销003",
+        "assetUrl": "./models/buttons-down.glb"
+      },
+      "position": [
+        -42,
+        52.216811,
+        -12.765555
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        11.559998,
+        13.351999,
+        12.300619
+      ],
+      "visible": true
+    },
+    {
+      "assemblyGroup": {
+        "id": "90186ae5-7680-4ab0-9c16-633636943642-buttons-down-pin-sleeve",
+        "name": "下键 · 键帽插销 / 下套筒"
+      },
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "2063e167-88e4-4c08-9c35-d3900632deb9",
+      "interaction": {
+        "anchor": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "proxySize": [
+          11.183197,
+          12.721312,
+          11.183412
+        ],
+        "status": "unconfigured",
+        "version": 1
+      },
+      "kind": "sleeve",
+      "name": "下 · PS5 下环一体式开关套筒.003",
+      "params": {
+        "assetNode": "下_·_PS5_下环一体式开关套筒003",
+        "assetUrl": "./models/buttons-down.glb"
+      },
+      "position": [
+        -41.999973,
+        40.640657000000004,
+        -12.800012
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        11.183197,
+        12.721312,
+        11.183412
+      ],
+      "visible": true
+    },
+    {
+      "assemblyGroup": {
+        "id": "90186ae5-7680-4ab0-9c16-633636943642-buttons-down-spring-seat",
+        "name": "下键 · 弹簧 / 定位环"
+      },
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "e69177ea-52e2-4982-83cd-c4089d1b2e95",
+      "interaction": {
+        "anchor": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "proxySize": [
+          6.075854,
+          4.04082,
+          6.074041
+        ],
+        "status": "unconfigured",
+        "version": 1
+      },
+      "kind": "spring",
+      "name": "下 · PS5 回位弹簧.003",
+      "params": {
+        "assetNode": "下_·_PS5_回位弹簧003",
+        "assetUrl": "./models/buttons-down.glb"
+      },
+      "position": [
+        -41.999252,
+        46.204256,
+        -12.801421
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        6.075854,
+        4.04082,
+        6.074041
+      ],
+      "visible": true
+    },
+    {
+      "assemblyGroup": {
+        "id": "90186ae5-7680-4ab0-9c16-633636943642-buttons-down-switch",
+        "name": "下键 · 开关 / 按杆 / 焊脚"
+      },
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "7b075079-f918-4099-aa14-512c9aac2eb4",
+      "kind": "asset",
+      "name": "下 · PS5 按杆.004",
+      "params": {
+        "assetNode": "下_·_PS5_按杆004",
+        "assetUrl": "./models/buttons-down.glb"
+      },
+      "position": [
+        -42,
+        44.358997,
+        -12.800002
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        2.849998,
+        1.300003,
+        2.85
+      ],
+      "visible": true
+    },
+    {
+      "assemblyGroup": {
+        "id": "90186ae5-7680-4ab0-9c16-633636943642-buttons-down-switch",
+        "name": "下键 · 开关 / 按杆 / 焊脚"
+      },
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "45daa181-d35e-4cd3-87a3-cc53518ab03e",
+      "kind": "asset",
+      "name": "下 · PS5 焊脚占位.013",
+      "params": {
+        "assetNode": "下_·_PS5_焊脚占位013",
+        "assetUrl": "./models/buttons-down.glb"
+      },
+      "position": [
+        -44.100006,
+        39.208935,
+        -15.150004
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.650002,
+        3.000007,
+        0.650002
+      ],
+      "visible": true
+    },
+    {
+      "assemblyGroup": {
+        "id": "90186ae5-7680-4ab0-9c16-633636943642-buttons-down-switch",
+        "name": "下键 · 开关 / 按杆 / 焊脚"
+      },
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "8a869d12-e26f-4126-bdf4-f837cba9aac5",
+      "kind": "asset",
+      "name": "下 · PS5 焊脚占位.014",
+      "params": {
+        "assetNode": "下_·_PS5_焊脚占位014",
+        "assetUrl": "./models/buttons-down.glb"
+      },
+      "position": [
+        -39.899998,
+        39.208935,
+        -15.150003
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.650002,
+        3.000007,
+        0.650002
+      ],
+      "visible": true
+    },
+    {
+      "assemblyGroup": {
+        "id": "90186ae5-7680-4ab0-9c16-633636943642-buttons-down-switch",
+        "name": "下键 · 开关 / 按杆 / 焊脚"
+      },
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "86c9dfe9-17f0-4a27-96c9-9d2f54775bfe",
+      "kind": "asset",
+      "name": "下 · PS5 焊脚占位.015",
+      "params": {
+        "assetNode": "下_·_PS5_焊脚占位015",
+        "assetUrl": "./models/buttons-down.glb"
+      },
+      "position": [
+        -44.100006,
+        39.208935,
+        -10.449996
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.650002,
+        3.000007,
+        0.650002
+      ],
+      "visible": true
+    },
+    {
+      "assemblyGroup": {
+        "id": "90186ae5-7680-4ab0-9c16-633636943642-buttons-down-switch",
+        "name": "下键 · 开关 / 按杆 / 焊脚"
+      },
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "af8b1f4b-9eb5-4b3a-87e9-93774c8f3153",
+      "kind": "asset",
+      "name": "下 · PS5 焊脚占位.016",
+      "params": {
+        "assetNode": "下_·_PS5_焊脚占位016",
+        "assetUrl": "./models/buttons-down.glb"
+      },
+      "position": [
+        -39.899998,
+        39.208935,
+        -10.449995
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.650002,
+        3.000007,
+        0.650002
+      ],
+      "visible": true
+    },
+    {
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "58edf741-971f-46d3-b36d-4d9c2c42cac3",
+      "kind": "asset",
+      "name": "下 · 旋锁弹性垫 0.002",
+      "params": {
+        "assetNode": "下_·_旋锁弹性垫_0002",
+        "assetUrl": "./models/buttons-down.glb"
+      },
+      "position": [
+        -42,
+        35.650001,
+        -17.912436
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1.581009,
+        0.509998,
+        1.134211
+      ],
+      "visible": true
+    },
+    {
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "9b6ea507-823c-451a-a5b6-3ac9a09aed4f",
+      "kind": "asset",
+      "name": "下 · 旋锁弹性垫 120.002",
+      "params": {
+        "assetNode": "下_·_旋锁弹性垫_120002",
+        "assetUrl": "./models/buttons-down.glb"
+      },
+      "position": [
+        -46.441687,
+        35.650001,
+        -10.191799
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1.649433,
+        0.509998,
+        1.777514
+      ],
+      "visible": true
+    },
+    {
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "4d72451b-28eb-4e3f-867d-6bb1fc51ad23",
+      "kind": "asset",
+      "name": "下 · 旋锁弹性垫 240.002",
+      "params": {
+        "assetNode": "下_·_旋锁弹性垫_240002",
+        "assetUrl": "./models/buttons-down.glb"
+      },
+      "position": [
+        -37.558313,
+        35.650001,
+        -10.191799
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1.649433,
+        0.509998,
+        1.777514
+      ],
+      "visible": true
+    },
+    {
+      "assemblyGroup": {
+        "id": "ba62f976-f787-4f70-8ddf-f076e69365fa-buttons-up-switch",
+        "name": "上键 · 开关 / 按杆 / 焊脚"
+      },
+      "color": "#92a9b6",
+      "fixed": true,
+      "id": "a06612e3-b4a2-4246-8197-b4f7fdc9aab7",
+      "interaction": {
+        "anchor": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "proxySize": [
+          6.000015,
+          3.000008,
+          6.000015
+        ],
+        "status": "unconfigured",
+        "version": 1
+      },
+      "kind": "button",
+      "name": "上 · PS5 6×6 开关.004",
+      "params": {
+        "assetNode": "上_·_PS5_6×6_开关004",
+        "assetUrl": "./models/buttons-up.glb"
+      },
+      "position": [
+        -42,
+        38.819582,
+        -31.200001
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        6.000015,
+        3.000008,
+        6.000015
+      ],
+      "visible": true
+    },
+    {
+      "assemblyGroup": {
+        "id": "ba62f976-f787-4f70-8ddf-f076e69365fa-buttons-up-pin-sleeve",
+        "name": "上键 · 键帽插销 / 下套筒"
+      },
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "186ba112-77ec-4bad-b6fc-22ad048d09b8",
+      "interaction": {
+        "anchor": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "proxySize": [
+          11.559998,
+          17.02931,
+          12.275633
+        ],
+        "status": "unconfigured",
+        "version": 1
+      },
+      "kind": "pin",
+      "name": "上 · PS5 一体式键帽与蓝色插销.003",
+      "params": {
+        "assetNode": "上_·_PS5_一体式键帽与蓝色插销003",
+        "assetUrl": "./models/buttons-up.glb"
+      },
+      "position": [
+        -42,
+        50.666104000000004,
+        -31.246942
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        11.559998,
+        17.02931,
+        12.275633
+      ],
+      "visible": true
+    },
+    {
+      "assemblyGroup": {
+        "id": "ba62f976-f787-4f70-8ddf-f076e69365fa-buttons-up-pin-sleeve",
+        "name": "上键 · 键帽插销 / 下套筒"
+      },
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "16f5199f-8494-4fdf-8875-972f54fc0a2c",
+      "interaction": {
+        "anchor": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "proxySize": [
+          11.18325,
+          9.331749,
+          11.183395
+        ],
+        "status": "unconfigured",
+        "version": 1
+      },
+      "kind": "sleeve",
+      "name": "上 · PS5 下环一体式开关套筒.003",
+      "params": {
+        "assetNode": "上_·_PS5_下环一体式开关套筒003",
+        "assetUrl": "./models/buttons-up.glb"
+      },
+      "position": [
+        -41.999958,
+        38.945873,
+        -31.200001
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        11.18325,
+        9.331749,
+        11.183395
+      ],
+      "visible": true
+    },
+    {
+      "assemblyGroup": {
+        "id": "ba62f976-f787-4f70-8ddf-f076e69365fa-buttons-up-spring-seat",
+        "name": "上键 · 弹簧 / 定位环"
+      },
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "5e025745-8a0c-44a0-8a4c-3b3d8e83b100",
+      "interaction": {
+        "anchor": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "proxySize": [
+          6.075854,
+          4.04082,
+          6.074041
+        ],
+        "status": "unconfigured",
+        "version": 1
+      },
+      "kind": "spring",
+      "name": "上 · PS5 回位弹簧.003",
+      "params": {
+        "assetNode": "上_·_PS5_回位弹簧003",
+        "assetUrl": "./models/buttons-up.glb"
+      },
+      "position": [
+        -42.000748,
+        42.814896000000005,
+        -31.198583
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        6.075854,
+        4.04082,
+        6.074041
+      ],
+      "visible": true
+    },
+    {
+      "assemblyGroup": {
+        "id": "ba62f976-f787-4f70-8ddf-f076e69365fa-buttons-up-switch",
+        "name": "上键 · 开关 / 按杆 / 焊脚"
+      },
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "c3f1597e-629a-4858-b07b-7ad00a80e1d0",
+      "kind": "asset",
+      "name": "上 · PS5 按杆.004",
+      "params": {
+        "assetNode": "上_·_PS5_按杆004",
+        "assetUrl": "./models/buttons-up.glb"
+      },
+      "position": [
+        -42,
+        40.969635,
+        -31.2
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        2.849998,
+        1.300003,
+        2.85
+      ],
+      "visible": true
+    },
+    {
+      "assemblyGroup": {
+        "id": "ba62f976-f787-4f70-8ddf-f076e69365fa-buttons-up-switch",
+        "name": "上键 · 开关 / 按杆 / 焊脚"
+      },
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "05abc772-4d01-48b4-b408-32f3a4c9e972",
+      "kind": "asset",
+      "name": "上 · PS5 焊脚占位.013",
+      "params": {
+        "assetNode": "上_·_PS5_焊脚占位013",
+        "assetUrl": "./models/buttons-up.glb"
+      },
+      "position": [
+        -39.899994,
+        35.819573,
+        -28.849997
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.650002,
+        3.000007,
+        0.650002
+      ],
+      "visible": true
+    },
+    {
+      "assemblyGroup": {
+        "id": "ba62f976-f787-4f70-8ddf-f076e69365fa-buttons-up-switch",
+        "name": "上键 · 开关 / 按杆 / 焊脚"
+      },
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "d22b5b70-b206-4ce1-9d42-a388ec006dd7",
+      "kind": "asset",
+      "name": "上 · PS5 焊脚占位.014",
+      "params": {
+        "assetNode": "上_·_PS5_焊脚占位014",
+        "assetUrl": "./models/buttons-up.glb"
+      },
+      "position": [
+        -44.100002,
+        35.819573,
+        -28.849998
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.650002,
+        3.000007,
+        0.650002
+      ],
+      "visible": true
+    },
+    {
+      "assemblyGroup": {
+        "id": "ba62f976-f787-4f70-8ddf-f076e69365fa-buttons-up-switch",
+        "name": "上键 · 开关 / 按杆 / 焊脚"
+      },
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "c01ef450-79dd-4073-af75-bb16e8b1bfd6",
+      "kind": "asset",
+      "name": "上 · PS5 焊脚占位.015",
+      "params": {
+        "assetNode": "上_·_PS5_焊脚占位015",
+        "assetUrl": "./models/buttons-up.glb"
+      },
+      "position": [
+        -39.899994,
+        35.819573,
+        -33.550007
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.650002,
+        3.000007,
+        0.650002
+      ],
+      "visible": true
+    },
+    {
+      "assemblyGroup": {
+        "id": "ba62f976-f787-4f70-8ddf-f076e69365fa-buttons-up-switch",
+        "name": "上键 · 开关 / 按杆 / 焊脚"
+      },
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "5adef7e0-1709-48a4-8990-5849b3edb91b",
+      "kind": "asset",
+      "name": "上 · PS5 焊脚占位.016",
+      "params": {
+        "assetNode": "上_·_PS5_焊脚占位016",
+        "assetUrl": "./models/buttons-up.glb"
+      },
+      "position": [
+        -44.100002,
+        35.819573,
+        -33.550007
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.650002,
+        3.000007,
+        0.650002
+      ],
+      "visible": true
+    },
+    {
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "2ddd054d-619a-4b21-bde7-49d8f8a5fd8a",
+      "kind": "asset",
+      "name": "上 · 旋锁弹性垫 0.002",
+      "params": {
+        "assetNode": "上_·_旋锁弹性垫_0002",
+        "assetUrl": "./models/buttons-up.glb"
+      },
+      "position": [
+        -42,
+        35.649999,
+        -26.087564
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1.581009,
+        0.51,
+        1.134211
+      ],
+      "visible": true
+    },
+    {
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "36542cda-2961-4b1a-8a01-2068fbf0a36b",
+      "kind": "asset",
+      "name": "上 · 旋锁弹性垫 120.002",
+      "params": {
+        "assetNode": "上_·_旋锁弹性垫_120002",
+        "assetUrl": "./models/buttons-up.glb"
+      },
+      "position": [
+        -37.558313,
+        35.649999,
+        -33.808201
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1.649433,
+        0.51,
+        1.777512
+      ],
+      "visible": true
+    },
+    {
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "ca223e3c-b997-479b-b2f8-17df8c03bc3a",
+      "kind": "asset",
+      "name": "上 · 旋锁弹性垫 240.002",
+      "params": {
+        "assetNode": "上_·_旋锁弹性垫_240002",
+        "assetUrl": "./models/buttons-up.glb"
+      },
+      "position": [
+        -46.441687,
+        35.649999,
+        -33.808201
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1.649433,
+        0.51,
+        1.777512
+      ],
+      "visible": true
+    },
+    {
+      "assemblyGroup": {
+        "id": "5dd08b86-b5e9-4d2d-837d-5b6856542160-buttons-a-switch",
+        "name": "A 键 · 开关 / 按杆 / 焊脚"
+      },
+      "color": "#92a9b6",
+      "fixed": true,
+      "id": "b36b281f-fab7-40ae-a716-2e62aa4bbc96",
+      "interaction": {
+        "anchor": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "proxySize": [
+          6.000015,
+          3.000008,
+          6.000015
+        ],
+        "status": "unconfigured",
+        "version": 1
+      },
+      "kind": "button",
+      "name": "A · 同款 6×6 开关.002",
+      "params": {
+        "assetNode": "A_·_同款_6×6_开关002",
+        "assetUrl": "./models/buttons-a.glb"
+      },
+      "position": [
+        40.999996,
+        44.993057,
+        -9.5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        6.000015,
+        3.000008,
+        6.000015
+      ],
+      "visible": true
+    },
+    {
+      "assemblyGroup": {
+        "id": "5dd08b86-b5e9-4d2d-837d-5b6856542160-buttons-a-pin-sleeve",
+        "name": "A 键 · 键帽插销 / 下套筒"
+      },
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "068b5aa9-1424-4eb4-b286-5d70d30efb41",
+      "interaction": {
+        "anchor": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "proxySize": [
+          11.183384,
+          11.427597,
+          11.183235
+        ],
+        "status": "unconfigured",
+        "version": 1
+      },
+      "kind": "sleeve",
+      "name": "A · 同款 下环一体式开关套筒.002",
+      "params": {
+        "assetNode": "A_·_同款_下环一体式开关套筒002",
+        "assetUrl": "./models/buttons-a.glb"
+      },
+      "position": [
+        40.999971,
+        44.071358000000004,
+        -9.499987
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        11.183384,
+        11.427597,
+        11.183235
+      ],
+      "visible": true
+    },
+    {
+      "assemblyGroup": {
+        "id": "5dd08b86-b5e9-4d2d-837d-5b6856542160-buttons-a-spring-seat",
+        "name": "A 键 · 弹簧 / 定位环"
+      },
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "93433399-a38d-4284-9205-c7de24a87c93",
+      "interaction": {
+        "anchor": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "proxySize": [
+          6.074041,
+          4.04082,
+          6.075855
+        ],
+        "status": "unconfigured",
+        "version": 1
+      },
+      "kind": "spring",
+      "name": "A · 同款 回位弹簧.002",
+      "params": {
+        "assetNode": "A_·_同款_回位弹簧002",
+        "assetUrl": "./models/buttons-a.glb"
+      },
+      "position": [
+        41.001412,
+        48.988369,
+        -9.499252
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        6.074041,
+        4.04082,
+        6.075855
+      ],
+      "visible": true
+    },
+    {
+      "assemblyGroup": {
+        "id": "5dd08b86-b5e9-4d2d-837d-5b6856542160-buttons-a-switch",
+        "name": "A 键 · 开关 / 按杆 / 焊脚"
+      },
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "0b1bd2bf-f197-40da-88a3-260ae476f0fe",
+      "kind": "asset",
+      "name": "A · 同款 按杆.002",
+      "params": {
+        "assetNode": "A_·_同款_按杆002",
+        "assetUrl": "./models/buttons-a.glb"
+      },
+      "position": [
+        40.999996,
+        47.14311,
+        -9.5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        2.849998,
+        1.300003,
+        2.849998
+      ],
+      "visible": true
+    },
+    {
+      "assemblyGroup": {
+        "id": "5dd08b86-b5e9-4d2d-837d-5b6856542160-buttons-a-switch",
+        "name": "A 键 · 开关 / 按杆 / 焊脚"
+      },
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "a7e9ac89-f8e7-4cb6-9bd9-8dbf2088f241",
+      "kind": "asset",
+      "name": "A · 同款 焊脚占位.008",
+      "params": {
+        "assetNode": "A_·_同款_焊脚占位008",
+        "assetUrl": "./models/buttons-a.glb"
+      },
+      "position": [
+        43.349998,
+        41.993049,
+        -11.600006
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.650002,
+        3.000007,
+        0.650002
+      ],
+      "visible": true
+    },
+    {
+      "assemblyGroup": {
+        "id": "5dd08b86-b5e9-4d2d-837d-5b6856542160-buttons-a-switch",
+        "name": "A 键 · 开关 / 按杆 / 焊脚"
+      },
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "cb17b0bd-5f96-443d-9707-55c99d426de2",
+      "kind": "asset",
+      "name": "A · 同款 焊脚占位.009",
+      "params": {
+        "assetNode": "A_·_同款_焊脚占位009",
+        "assetUrl": "./models/buttons-a.glb"
+      },
+      "position": [
+        43.349998,
+        41.993049,
+        -7.399996
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.650002,
+        3.000007,
+        0.650002
+      ],
+      "visible": true
+    },
+    {
+      "assemblyGroup": {
+        "id": "5dd08b86-b5e9-4d2d-837d-5b6856542160-buttons-a-switch",
+        "name": "A 键 · 开关 / 按杆 / 焊脚"
+      },
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "eea60eea-4f7c-4aa8-b338-70a75d468c8f",
+      "kind": "asset",
+      "name": "A · 同款 焊脚占位.010",
+      "params": {
+        "assetNode": "A_·_同款_焊脚占位010",
+        "assetUrl": "./models/buttons-a.glb"
+      },
+      "position": [
+        38.64999,
+        41.993049,
+        -11.600006
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.650002,
+        3.000007,
+        0.650002
+      ],
+      "visible": true
+    },
+    {
+      "assemblyGroup": {
+        "id": "5dd08b86-b5e9-4d2d-837d-5b6856542160-buttons-a-switch",
+        "name": "A 键 · 开关 / 按杆 / 焊脚"
+      },
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "59f836be-7cbb-4db7-ade4-88d910a6cccf",
+      "kind": "asset",
+      "name": "A · 同款 焊脚占位.011",
+      "params": {
+        "assetNode": "A_·_同款_焊脚占位011",
+        "assetUrl": "./models/buttons-a.glb"
+      },
+      "position": [
+        38.64999,
+        41.993049,
+        -7.399996
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.650002,
+        3.000007,
+        0.650002
+      ],
+      "visible": true
+    },
+    {
+      "assemblyGroup": {
+        "id": "5dd08b86-b5e9-4d2d-837d-5b6856542160-buttons-a-pin-sleeve",
+        "name": "A 键 · 键帽插销 / 下套筒"
+      },
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "d5a7f5d6-8892-47fd-8691-0590c0d3e6fa",
+      "interaction": {
+        "anchor": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "proxySize": [
+          13.337421,
+          11.553024,
+          13.338711
+        ],
+        "status": "unconfigured",
+        "version": 1
+      },
+      "kind": "pin",
+      "name": "A · 同款插销与圆形键帽.002",
+      "params": {
+        "assetNode": "A_·_同款插销与圆形键帽002",
+        "assetUrl": "./models/buttons-a.glb"
+      },
+      "position": [
+        41.001287,
+        53.931496,
+        -9.5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        13.337421,
+        11.553024,
+        13.338711
+      ],
+      "visible": true
+    },
+    {
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "4e800046-0434-4c8f-a91e-da006fa4e7af",
+      "kind": "asset",
+      "name": "A · 旋锁弹性垫 0.002",
+      "params": {
+        "assetNode": "A_·_旋锁弹性垫_0002",
+        "assetUrl": "./models/buttons-a.glb"
+      },
+      "position": [
+        46.102438,
+        39.73006,
+        -9.5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1.114216,
+        0.504999,
+        1.575439
+      ],
+      "visible": true
+    },
+    {
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "d572dafb-67cf-4832-86fb-bc2afaa16eb1",
+      "kind": "asset",
+      "name": "A · 旋锁弹性垫 120.002",
+      "params": {
+        "assetNode": "A_·_旋锁弹性垫_120002",
+        "assetUrl": "./models/buttons-a.glb"
+      },
+      "position": [
+        38.397955,
+        39.73006,
+        -13.932415
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1.765202,
+        0.504999,
+        1.630892
+      ],
+      "visible": true
+    },
+    {
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "1c133530-c87c-48d4-a171-080c98654f82",
+      "kind": "asset",
+      "name": "A · 旋锁弹性垫 240.002",
+      "params": {
+        "assetNode": "A_·_旋锁弹性垫_240002",
+        "assetUrl": "./models/buttons-a.glb"
+      },
+      "position": [
+        38.397955,
+        39.73006,
+        -5.067585
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1.765202,
+        0.504999,
+        1.630891
+      ],
+      "visible": true
+    },
+    {
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "57ee9349-4c7a-46e1-b0fd-ab2b61abd157",
+      "kind": "asset",
+      "name": "键帽标识 · A.002",
+      "params": {
+        "assetNode": "键帽标识_·_A002",
+        "assetUrl": "./models/buttons-a.glb"
+      },
+      "position": [
+        40.999377,
+        59.152994,
+        -9.671672
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        2.656043,
+        0.252309,
+        2.744587
+      ],
+      "visible": true
+    },
+    {
+      "assemblyGroup": {
+        "id": "46e304e5-ba31-4389-b301-16facc99b6eb-buttons-b-switch",
+        "name": "B 键 · 开关 / 按杆 / 焊脚"
+      },
+      "color": "#92a9b6",
+      "fixed": true,
+      "id": "bf2d8102-b2c4-4518-92b4-5eafee25d9da",
+      "interaction": {
+        "anchor": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "proxySize": [
+          6.000015,
+          3.000008,
+          6.000015
+        ],
+        "status": "unconfigured",
+        "version": 1
+      },
+      "kind": "button",
+      "name": "B · 同款 6×6 开关.002",
+      "params": {
+        "assetNode": "B_·_同款_6×6_开关002",
+        "assetUrl": "./models/buttons-b.glb"
+      },
+      "position": [
+        52.499996,
+        44.993057,
+        -21
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        6.000015,
+        3.000008,
+        6.000015
+      ],
+      "visible": true
+    },
+    {
+      "assemblyGroup": {
+        "id": "46e304e5-ba31-4389-b301-16facc99b6eb-buttons-b-pin-sleeve",
+        "name": "B 键 · 键帽插销 / 下套筒"
+      },
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "be158c79-4808-4caf-9f42-b855503d22e4",
+      "interaction": {
+        "anchor": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "proxySize": [
+          11.18335,
+          11.42787,
+          11.183233
+        ],
+        "status": "unconfigured",
+        "version": 1
+      },
+      "kind": "sleeve",
+      "name": "B · 同款 下环一体式开关套筒.002",
+      "params": {
+        "assetNode": "B_·_同款_下环一体式开关套筒002",
+        "assetUrl": "./models/buttons-b.glb"
+      },
+      "position": [
+        52.499996,
+        44.071494,
+        -21.000003
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        11.18335,
+        11.42787,
+        11.183233
+      ],
+      "visible": true
+    },
+    {
+      "assemblyGroup": {
+        "id": "46e304e5-ba31-4389-b301-16facc99b6eb-buttons-b-spring-seat",
+        "name": "B 键 · 弹簧 / 定位环"
+      },
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "d922b058-819e-49eb-939d-2ccb2ea58762",
+      "interaction": {
+        "anchor": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "proxySize": [
+          6.074041,
+          4.04082,
+          6.075855
+        ],
+        "status": "unconfigured",
+        "version": 1
+      },
+      "kind": "spring",
+      "name": "B · 同款 回位弹簧.002",
+      "params": {
+        "assetNode": "B_·_同款_回位弹簧002",
+        "assetUrl": "./models/buttons-b.glb"
+      },
+      "position": [
+        52.501412,
+        48.988369,
+        -20.999252
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        6.074041,
+        4.04082,
+        6.075855
+      ],
+      "visible": true
+    },
+    {
+      "assemblyGroup": {
+        "id": "46e304e5-ba31-4389-b301-16facc99b6eb-buttons-b-switch",
+        "name": "B 键 · 开关 / 按杆 / 焊脚"
+      },
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "f44a8cf6-4ba1-439f-bd05-de925b5ab23e",
+      "kind": "asset",
+      "name": "B · 同款 按杆.002",
+      "params": {
+        "assetNode": "B_·_同款_按杆002",
+        "assetUrl": "./models/buttons-b.glb"
+      },
+      "position": [
+        52.499996,
+        47.14311,
+        -21
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        2.849998,
+        1.300003,
+        2.849998
+      ],
+      "visible": true
+    },
+    {
+      "assemblyGroup": {
+        "id": "46e304e5-ba31-4389-b301-16facc99b6eb-buttons-b-switch",
+        "name": "B 键 · 开关 / 按杆 / 焊脚"
+      },
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "1788098e-daa8-4bf8-9226-3cc25ae9fc76",
+      "kind": "asset",
+      "name": "B · 同款 焊脚占位.008",
+      "params": {
+        "assetNode": "B_·_同款_焊脚占位008",
+        "assetUrl": "./models/buttons-b.glb"
+      },
+      "position": [
+        54.849998,
+        41.993049,
+        -23.100006
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.650002,
+        3.000007,
+        0.650002
+      ],
+      "visible": true
+    },
+    {
+      "assemblyGroup": {
+        "id": "46e304e5-ba31-4389-b301-16facc99b6eb-buttons-b-switch",
+        "name": "B 键 · 开关 / 按杆 / 焊脚"
+      },
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "f16f35ea-be1f-4755-9983-578566015ce8",
+      "kind": "asset",
+      "name": "B · 同款 焊脚占位.009",
+      "params": {
+        "assetNode": "B_·_同款_焊脚占位009",
+        "assetUrl": "./models/buttons-b.glb"
+      },
+      "position": [
+        54.849998,
+        41.993049,
+        -18.899996
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.650002,
+        3.000007,
+        0.650002
+      ],
+      "visible": true
+    },
+    {
+      "assemblyGroup": {
+        "id": "46e304e5-ba31-4389-b301-16facc99b6eb-buttons-b-switch",
+        "name": "B 键 · 开关 / 按杆 / 焊脚"
+      },
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "5781c6c9-fcc2-4fad-9800-499cd2b03767",
+      "kind": "asset",
+      "name": "B · 同款 焊脚占位.010",
+      "params": {
+        "assetNode": "B_·_同款_焊脚占位010",
+        "assetUrl": "./models/buttons-b.glb"
+      },
+      "position": [
+        50.14999,
+        41.993049,
+        -23.100006
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.650002,
+        3.000007,
+        0.650002
+      ],
+      "visible": true
+    },
+    {
+      "assemblyGroup": {
+        "id": "46e304e5-ba31-4389-b301-16facc99b6eb-buttons-b-switch",
+        "name": "B 键 · 开关 / 按杆 / 焊脚"
+      },
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "b412dfcc-1cf5-478a-a838-2344d66afe08",
+      "kind": "asset",
+      "name": "B · 同款 焊脚占位.011",
+      "params": {
+        "assetNode": "B_·_同款_焊脚占位011",
+        "assetUrl": "./models/buttons-b.glb"
+      },
+      "position": [
+        50.14999,
+        41.993049,
+        -18.899996
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.650002,
+        3.000007,
+        0.650002
+      ],
+      "visible": true
+    },
+    {
+      "assemblyGroup": {
+        "id": "46e304e5-ba31-4389-b301-16facc99b6eb-buttons-b-pin-sleeve",
+        "name": "B 键 · 键帽插销 / 下套筒"
+      },
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "56cbc3aa-483a-458f-89e9-ad74001260ae",
+      "interaction": {
+        "anchor": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "proxySize": [
+          13.337421,
+          10.599808,
+          13.338711
+        ],
+        "status": "unconfigured",
+        "version": 1
+      },
+      "kind": "pin",
+      "name": "B · 同款插销与圆形键帽.002",
+      "params": {
+        "assetNode": "B_·_同款插销与圆形键帽002",
+        "assetUrl": "./models/buttons-b.glb"
+      },
+      "position": [
+        52.501287,
+        53.454887,
+        -21
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        13.337421,
+        10.599808,
+        13.338711
+      ],
+      "visible": true
+    },
+    {
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "37069d32-1a7f-4b42-b417-a372621260b1",
+      "kind": "asset",
+      "name": "B · 旋锁弹性垫 0.002",
+      "params": {
+        "assetNode": "B_·_旋锁弹性垫_0002",
+        "assetUrl": "./models/buttons-b.glb"
+      },
+      "position": [
+        57.602438,
+        39.73006,
+        -21
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1.114216,
+        0.504999,
+        1.575439
+      ],
+      "visible": true
+    },
+    {
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "ae015a0f-8aab-42ff-86ff-5e1ecc717d7e",
+      "kind": "asset",
+      "name": "B · 旋锁弹性垫 120.002",
+      "params": {
+        "assetNode": "B_·_旋锁弹性垫_120002",
+        "assetUrl": "./models/buttons-b.glb"
+      },
+      "position": [
+        49.897955,
+        39.73006,
+        -25.432415
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1.765202,
+        0.504999,
+        1.63089
+      ],
+      "visible": true
+    },
+    {
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "8eb080a2-aae9-4de3-a7c7-e66633ca83d6",
+      "kind": "asset",
+      "name": "B · 旋锁弹性垫 240.002",
+      "params": {
+        "assetNode": "B_·_旋锁弹性垫_240002",
+        "assetUrl": "./models/buttons-b.glb"
+      },
+      "position": [
+        49.897955,
+        39.73006,
+        -16.567585
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1.765202,
+        0.504999,
+        1.630891
+      ],
+      "visible": true
+    },
+    {
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "43e7c868-5f49-4ed5-9c3e-b32ba8c19408",
+      "kind": "asset",
+      "name": "键帽标识 · B.002",
+      "params": {
+        "assetNode": "键帽标识_·_B002",
+        "assetUrl": "./models/buttons-b.glb"
+      },
+      "position": [
+        52.608923,
+        58.211336,
+        -21.163694
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1.863747,
+        0.209251,
+        2.728269
+      ],
+      "visible": true
+    },
+    {
+      "assemblyGroup": {
+        "id": "587cbfa0-369a-42e3-978e-d75aa54ff248-buttons-x-switch",
+        "name": "X 键 · 开关 / 按杆 / 焊脚"
+      },
+      "color": "#92a9b6",
+      "fixed": true,
+      "id": "5dd1db6c-4023-43d1-a8d1-b653f9622603",
+      "interaction": {
+        "anchor": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "proxySize": [
+          6.000015,
+          3.000008,
+          6.000015
+        ],
+        "status": "unconfigured",
+        "version": 1
+      },
+      "kind": "button",
+      "name": "X · 同款 6×6 开关.002",
+      "params": {
+        "assetNode": "X_·_同款_6×6_开关002",
+        "assetUrl": "./models/buttons-x.glb"
+      },
+      "position": [
+        29.499996,
+        44.993057,
+        -21
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        6.000015,
+        3.000008,
+        6.000015
+      ],
+      "visible": true
+    },
+    {
+      "assemblyGroup": {
+        "id": "587cbfa0-369a-42e3-978e-d75aa54ff248-buttons-x-pin-sleeve",
+        "name": "X 键 · 键帽插销 / 下套筒"
+      },
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "d5c5b0e0-170c-41d1-9a8d-79d9d23f0222",
+      "interaction": {
+        "anchor": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "proxySize": [
+          11.183327,
+          11.427567,
+          11.183285
+        ],
+        "status": "unconfigured",
+        "version": 1
+      },
+      "kind": "sleeve",
+      "name": "X · 同款 下环一体式开关套筒.002",
+      "params": {
+        "assetNode": "X_·_同款_下环一体式开关套筒002",
+        "assetUrl": "./models/buttons-x.glb"
+      },
+      "position": [
+        29.500008,
+        44.071343,
+        -21.000015
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        11.183327,
+        11.427567,
+        11.183285
+      ],
+      "visible": true
+    },
+    {
+      "assemblyGroup": {
+        "id": "587cbfa0-369a-42e3-978e-d75aa54ff248-buttons-x-spring-seat",
+        "name": "X 键 · 弹簧 / 定位环"
+      },
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "4946b9ec-6abc-4fb9-bcf9-5eb7c5c777d6",
+      "interaction": {
+        "anchor": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "proxySize": [
+          6.074041,
+          4.04082,
+          6.075855
+        ],
+        "status": "unconfigured",
+        "version": 1
+      },
+      "kind": "spring",
+      "name": "X · 同款 回位弹簧.002",
+      "params": {
+        "assetNode": "X_·_同款_回位弹簧002",
+        "assetUrl": "./models/buttons-x.glb"
+      },
+      "position": [
+        29.501412,
+        48.988369,
+        -20.999252
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        6.074041,
+        4.04082,
+        6.075855
+      ],
+      "visible": true
+    },
+    {
+      "assemblyGroup": {
+        "id": "587cbfa0-369a-42e3-978e-d75aa54ff248-buttons-x-switch",
+        "name": "X 键 · 开关 / 按杆 / 焊脚"
+      },
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "f37f5f5e-4726-403d-ac75-6bb73a2b3e36",
+      "kind": "asset",
+      "name": "X · 同款 按杆.002",
+      "params": {
+        "assetNode": "X_·_同款_按杆002",
+        "assetUrl": "./models/buttons-x.glb"
+      },
+      "position": [
+        29.499996,
+        47.14311,
+        -21
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        2.849998,
+        1.300003,
+        2.849998
+      ],
+      "visible": true
+    },
+    {
+      "assemblyGroup": {
+        "id": "587cbfa0-369a-42e3-978e-d75aa54ff248-buttons-x-switch",
+        "name": "X 键 · 开关 / 按杆 / 焊脚"
+      },
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "10fa1084-0562-4fcb-905f-37d993ea80f4",
+      "kind": "asset",
+      "name": "X · 同款 焊脚占位.008",
+      "params": {
+        "assetNode": "X_·_同款_焊脚占位008",
+        "assetUrl": "./models/buttons-x.glb"
+      },
+      "position": [
+        31.849998,
+        41.993049,
+        -23.100006
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.650002,
+        3.000007,
+        0.650002
+      ],
+      "visible": true
+    },
+    {
+      "assemblyGroup": {
+        "id": "587cbfa0-369a-42e3-978e-d75aa54ff248-buttons-x-switch",
+        "name": "X 键 · 开关 / 按杆 / 焊脚"
+      },
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "16223d19-138c-42d3-bb71-63e54d9f26dd",
+      "kind": "asset",
+      "name": "X · 同款 焊脚占位.009",
+      "params": {
+        "assetNode": "X_·_同款_焊脚占位009",
+        "assetUrl": "./models/buttons-x.glb"
+      },
+      "position": [
+        31.849998,
+        41.993049,
+        -18.899996
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.650002,
+        3.000007,
+        0.650002
+      ],
+      "visible": true
+    },
+    {
+      "assemblyGroup": {
+        "id": "587cbfa0-369a-42e3-978e-d75aa54ff248-buttons-x-switch",
+        "name": "X 键 · 开关 / 按杆 / 焊脚"
+      },
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "77f2e8d3-d840-4123-831a-e7cc42744b41",
+      "kind": "asset",
+      "name": "X · 同款 焊脚占位.010",
+      "params": {
+        "assetNode": "X_·_同款_焊脚占位010",
+        "assetUrl": "./models/buttons-x.glb"
+      },
+      "position": [
+        27.14999,
+        41.993049,
+        -23.100006
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.650002,
+        3.000007,
+        0.650002
+      ],
+      "visible": true
+    },
+    {
+      "assemblyGroup": {
+        "id": "587cbfa0-369a-42e3-978e-d75aa54ff248-buttons-x-switch",
+        "name": "X 键 · 开关 / 按杆 / 焊脚"
+      },
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "df1558ca-a2e0-4f2c-a1b8-cfc3d911aa9c",
+      "kind": "asset",
+      "name": "X · 同款 焊脚占位.011",
+      "params": {
+        "assetNode": "X_·_同款_焊脚占位011",
+        "assetUrl": "./models/buttons-x.glb"
+      },
+      "position": [
+        27.14999,
+        41.993049,
+        -18.899996
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.650002,
+        3.000007,
+        0.650002
+      ],
+      "visible": true
+    },
+    {
+      "assemblyGroup": {
+        "id": "587cbfa0-369a-42e3-978e-d75aa54ff248-buttons-x-pin-sleeve",
+        "name": "X 键 · 键帽插销 / 下套筒"
+      },
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "9c0b17e6-8fff-4b36-ba9f-687334b07c2a",
+      "interaction": {
+        "anchor": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "proxySize": [
+          13.337421,
+          12.792229,
+          13.338711
+        ],
+        "status": "unconfigured",
+        "version": 1
+      },
+      "kind": "pin",
+      "name": "X · 同款插销与圆形键帽.002",
+      "params": {
+        "assetNode": "X_·_同款插销与圆形键帽002",
+        "assetUrl": "./models/buttons-x.glb"
+      },
+      "position": [
+        29.501287,
+        54.551098,
+        -21
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        13.337421,
+        12.792229,
+        13.338711
+      ],
+      "visible": true
+    },
+    {
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "9fbf16be-76e2-413b-a082-3ae9163af53f",
+      "kind": "asset",
+      "name": "X · 旋锁弹性垫 0.002",
+      "params": {
+        "assetNode": "X_·_旋锁弹性垫_0002",
+        "assetUrl": "./models/buttons-x.glb"
+      },
+      "position": [
+        34.602438,
+        39.73006,
+        -21
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1.114216,
+        0.504999,
+        1.575439
+      ],
+      "visible": true
+    },
+    {
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "a5d9b880-a1f7-4a3e-bda0-3b2fef95c62a",
+      "kind": "asset",
+      "name": "X · 旋锁弹性垫 120.002",
+      "params": {
+        "assetNode": "X_·_旋锁弹性垫_120002",
+        "assetUrl": "./models/buttons-x.glb"
+      },
+      "position": [
+        26.897956,
+        39.73006,
+        -25.432415
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1.7652,
+        0.504999,
+        1.63089
+      ],
+      "visible": true
+    },
+    {
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "22d704b8-4cc8-4024-94dd-634b97d2c5e1",
+      "kind": "asset",
+      "name": "X · 旋锁弹性垫 240.002",
+      "params": {
+        "assetNode": "X_·_旋锁弹性垫_240002",
+        "assetUrl": "./models/buttons-x.glb"
+      },
+      "position": [
+        26.897956,
+        39.73006,
+        -16.567585
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1.7652,
+        0.504999,
+        1.630891
+      ],
+      "visible": true
+    },
+    {
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "7b962213-bc80-471a-be5e-8684333f10f1",
+      "kind": "asset",
+      "name": "键帽标识 · X.002",
+      "params": {
+        "assetNode": "键帽标识_·_X002",
+        "assetUrl": "./models/buttons-x.glb"
+      },
+      "position": [
+        29.499249,
+        60.388791,
+        -21.163962
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        2.802847,
+        0.299039,
+        2.729487
+      ],
+      "visible": true
+    },
+    {
+      "assemblyGroup": {
+        "id": "1affa47b-df85-4629-9aa6-0892efd0567f-buttons-y-switch",
+        "name": "Y 键 · 开关 / 按杆 / 焊脚"
+      },
+      "color": "#92a9b6",
+      "fixed": true,
+      "id": "a2a88ac5-74ad-4b20-b001-1900213cd16f",
+      "interaction": {
+        "anchor": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "proxySize": [
+          6.000015,
+          3.000008,
+          6.000015
+        ],
+        "status": "unconfigured",
+        "version": 1
+      },
+      "kind": "button",
+      "name": "Y · 同款 6×6 开关.002",
+      "params": {
+        "assetNode": "Y_·_同款_6×6_开关002",
+        "assetUrl": "./models/buttons-y.glb"
+      },
+      "position": [
+        40.999996,
+        44.993057,
+        -32.5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        6.000015,
+        3.000008,
+        6.000015
+      ],
+      "visible": true
+    },
+    {
+      "assemblyGroup": {
+        "id": "1affa47b-df85-4629-9aa6-0892efd0567f-buttons-y-pin-sleeve",
+        "name": "Y 键 · 键帽插销 / 下套筒"
+      },
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "a37ef421-3c35-41f1-bb4e-99ed79a81e05",
+      "interaction": {
+        "anchor": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "proxySize": [
+          11.183315,
+          11.42787,
+          11.18326
+        ],
+        "status": "unconfigured",
+        "version": 1
+      },
+      "kind": "sleeve",
+      "name": "Y · 同款 下环一体式开关套筒.002",
+      "params": {
+        "assetNode": "Y_·_同款_下环一体式开关套筒002",
+        "assetUrl": "./models/buttons-y.glb"
+      },
+      "position": [
+        40.99999,
+        44.071494,
+        -32.499991
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        11.183315,
+        11.42787,
+        11.18326
+      ],
+      "visible": true
+    },
+    {
+      "assemblyGroup": {
+        "id": "1affa47b-df85-4629-9aa6-0892efd0567f-buttons-y-spring-seat",
+        "name": "Y 键 · 弹簧 / 定位环"
+      },
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "8e863344-e479-46ae-9e8f-fef022cfbfb3",
+      "interaction": {
+        "anchor": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "proxySize": [
+          6.074041,
+          4.04082,
+          6.075855
+        ],
+        "status": "unconfigured",
+        "version": 1
+      },
+      "kind": "spring",
+      "name": "Y · 同款 回位弹簧.002",
+      "params": {
+        "assetNode": "Y_·_同款_回位弹簧002",
+        "assetUrl": "./models/buttons-y.glb"
+      },
+      "position": [
+        41.001412,
+        48.988369,
+        -32.499252
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        6.074041,
+        4.04082,
+        6.075855
+      ],
+      "visible": true
+    },
+    {
+      "assemblyGroup": {
+        "id": "1affa47b-df85-4629-9aa6-0892efd0567f-buttons-y-switch",
+        "name": "Y 键 · 开关 / 按杆 / 焊脚"
+      },
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "2e9f37e0-f154-4092-b4ec-deb6b1dd1571",
+      "kind": "asset",
+      "name": "Y · 同款 按杆.002",
+      "params": {
+        "assetNode": "Y_·_同款_按杆002",
+        "assetUrl": "./models/buttons-y.glb"
+      },
+      "position": [
+        40.999996,
+        47.14311,
+        -32.5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        2.849998,
+        1.300003,
+        2.849998
+      ],
+      "visible": true
+    },
+    {
+      "assemblyGroup": {
+        "id": "1affa47b-df85-4629-9aa6-0892efd0567f-buttons-y-switch",
+        "name": "Y 键 · 开关 / 按杆 / 焊脚"
+      },
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "9d4c078d-2ed9-4df6-91ea-8c2fa05c67e9",
+      "kind": "asset",
+      "name": "Y · 同款 焊脚占位.008",
+      "params": {
+        "assetNode": "Y_·_同款_焊脚占位008",
+        "assetUrl": "./models/buttons-y.glb"
+      },
+      "position": [
+        43.349998,
+        41.993049,
+        -34.600006
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.650002,
+        3.000007,
+        0.650002
+      ],
+      "visible": true
+    },
+    {
+      "assemblyGroup": {
+        "id": "1affa47b-df85-4629-9aa6-0892efd0567f-buttons-y-switch",
+        "name": "Y 键 · 开关 / 按杆 / 焊脚"
+      },
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "089b1872-63f8-4cd8-a6ff-a8416784bde8",
+      "kind": "asset",
+      "name": "Y · 同款 焊脚占位.009",
+      "params": {
+        "assetNode": "Y_·_同款_焊脚占位009",
+        "assetUrl": "./models/buttons-y.glb"
+      },
+      "position": [
+        43.349998,
+        41.993049,
+        -30.399996
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.650002,
+        3.000007,
+        0.650002
+      ],
+      "visible": true
+    },
+    {
+      "assemblyGroup": {
+        "id": "1affa47b-df85-4629-9aa6-0892efd0567f-buttons-y-switch",
+        "name": "Y 键 · 开关 / 按杆 / 焊脚"
+      },
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "1c48bad7-05f0-49e2-b8a5-97a1849c0274",
+      "kind": "asset",
+      "name": "Y · 同款 焊脚占位.010",
+      "params": {
+        "assetNode": "Y_·_同款_焊脚占位010",
+        "assetUrl": "./models/buttons-y.glb"
+      },
+      "position": [
+        38.64999,
+        41.993049,
+        -34.600006
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.650002,
+        3.000007,
+        0.650002
+      ],
+      "visible": true
+    },
+    {
+      "assemblyGroup": {
+        "id": "1affa47b-df85-4629-9aa6-0892efd0567f-buttons-y-switch",
+        "name": "Y 键 · 开关 / 按杆 / 焊脚"
+      },
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "51e9752b-8303-4e4a-aeb5-d264ef182df2",
+      "kind": "asset",
+      "name": "Y · 同款 焊脚占位.011",
+      "params": {
+        "assetNode": "Y_·_同款_焊脚占位011",
+        "assetUrl": "./models/buttons-y.glb"
+      },
+      "position": [
+        38.64999,
+        41.993049,
+        -30.399996
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.650002,
+        3.000007,
+        0.650002
+      ],
+      "visible": true
+    },
+    {
+      "assemblyGroup": {
+        "id": "1affa47b-df85-4629-9aa6-0892efd0567f-buttons-y-pin-sleeve",
+        "name": "Y 键 · 键帽插销 / 下套筒"
+      },
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "5f69a045-73c5-4252-9752-d2ecb821eaa2",
+      "interaction": {
+        "anchor": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "proxySize": [
+          13.337421,
+          11.86689,
+          13.338713
+        ],
+        "status": "unconfigured",
+        "version": 1
+      },
+      "kind": "pin",
+      "name": "Y · 同款插销与圆形键帽.002",
+      "params": {
+        "assetNode": "Y_·_同款插销与圆形键帽002",
+        "assetUrl": "./models/buttons-y.glb"
+      },
+      "position": [
+        41.001287,
+        54.088428,
+        -32.500001
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        13.337421,
+        11.86689,
+        13.338713
+      ],
+      "visible": true
+    },
+    {
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "812ae72a-5fa2-4977-9ac7-11071f2f2d6b",
+      "kind": "asset",
+      "name": "Y · 旋锁弹性垫 0.002",
+      "params": {
+        "assetNode": "Y_·_旋锁弹性垫_0002",
+        "assetUrl": "./models/buttons-y.glb"
+      },
+      "position": [
+        46.102438,
+        39.73006,
+        -32.5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1.114216,
+        0.504999,
+        1.575439
+      ],
+      "visible": true
+    },
+    {
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "0297a417-7033-4bc6-9b5c-fd0ca6bab302",
+      "kind": "asset",
+      "name": "Y · 旋锁弹性垫 120.002",
+      "params": {
+        "assetNode": "Y_·_旋锁弹性垫_120002",
+        "assetUrl": "./models/buttons-y.glb"
+      },
+      "position": [
+        38.397955,
+        39.73006,
+        -36.932415
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1.765202,
+        0.504999,
+        1.63089
+      ],
+      "visible": true
+    },
+    {
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "b30ab309-82b7-4326-b481-53a97d0b27ca",
+      "kind": "asset",
+      "name": "Y · 旋锁弹性垫 240.002",
+      "params": {
+        "assetNode": "Y_·_旋锁弹性垫_240002",
+        "assetUrl": "./models/buttons-y.glb"
+      },
+      "position": [
+        38.397955,
+        39.73006,
+        -28.067585
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1.765202,
+        0.504999,
+        1.63089
+      ],
+      "visible": true
+    },
+    {
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "c8214aac-02a4-49f4-92ee-b31caba2b381",
+      "kind": "asset",
+      "name": "键帽标识 · Y.002",
+      "params": {
+        "assetNode": "键帽标识_·_Y002",
+        "assetUrl": "./models/buttons-y.glb"
+      },
+      "position": [
+        41.001141,
+        59.498661,
+        -32.664357
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        2.405398,
+        0.226079,
+        2.728702
+      ],
+      "visible": true
+    },
+    {
+      "assemblyGroup": {
+        "id": "be7906a9-e9a6-4cf3-9b61-bba01242464e-buttons-confirm-switch",
+        "name": "确认键 · 开关 / 触头 / 焊脚"
+      },
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "955f1b8c-bd58-4441-9e4c-42875c5cf021",
+      "kind": "asset",
+      "name": "确认 · GND 金属焊脚.005",
+      "params": {
+        "assetNode": "确认_·_GND_金属焊脚005",
+        "assetUrl": "./models/buttons-confirm.glb"
+      },
+      "position": [
+        -2,
+        39.675213,
+        -5.5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.65,
+        1.350424,
+        0.65
+      ],
+      "visible": true
+    },
+    {
+      "assemblyGroup": {
+        "id": "be7906a9-e9a6-4cf3-9b61-bba01242464e-buttons-confirm-switch",
+        "name": "确认键 · 开关 / 触头 / 焊脚"
+      },
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "84164696-5ec5-4fb8-b3fd-feb6cadefa63",
+      "kind": "asset",
+      "name": "确认 · GPIO 金属焊脚.005",
+      "params": {
+        "assetNode": "确认_·_GPIO_金属焊脚005",
+        "assetUrl": "./models/buttons-confirm.glb"
+      },
+      "position": [
+        2,
+        39.675213,
+        -5.5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.65,
+        1.350424,
+        0.65
+      ],
+      "visible": true
+    },
+    {
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "0a262a86-2fd1-4e48-a9e8-f34877e4d01f",
+      "interaction": {
+        "anchor": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "proxySize": [
+          5.799072,
+          3.239796,
+          5.767181
+        ],
+        "status": "unconfigured",
+        "version": 1
+      },
+      "kind": "spring",
+      "name": "确认 · 回弹压簧.005",
+      "params": {
+        "assetNode": "确认_·_回弹压簧005",
+        "assetUrl": "./models/buttons-confirm.glb"
+      },
+      "position": [
+        -0.000331,
+        47.428613999999996,
+        -5.500456
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        5.799072,
+        3.239796,
+        5.767181
+      ],
+      "visible": true
+    },
+    {
+      "assemblyGroup": {
+        "id": "be7906a9-e9a6-4cf3-9b61-bba01242464e-buttons-confirm-switch",
+        "name": "确认键 · 开关 / 触头 / 焊脚"
+      },
+      "color": "#92a9b6",
+      "fixed": true,
+      "id": "266d0496-ef85-47ce-b49f-5dfc00fb7b7e",
+      "interaction": {
+        "anchor": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "proxySize": [
+          6,
+          4.3,
+          6
+        ],
+        "status": "unconfigured",
+        "version": 1
+      },
+      "kind": "button",
+      "name": "确认 · 常开开关.005",
+      "params": {
+        "assetNode": "确认_·_常开开关005",
+        "assetUrl": "./models/buttons-confirm.glb"
+      },
+      "position": [
+        0,
+        42.200424,
+        -5.5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        6,
+        4.3,
+        6
+      ],
+      "visible": true
+    },
+    {
+      "assemblyGroup": {
+        "id": "be7906a9-e9a6-4cf3-9b61-bba01242464e-buttons-confirm-switch",
+        "name": "确认键 · 开关 / 触头 / 焊脚"
+      },
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "d341ad04-ae6c-4164-a2f6-8f1199b311c6",
+      "kind": "asset",
+      "name": "确认 · 开关触头.005",
+      "params": {
+        "assetNode": "确认_·_开关触头005",
+        "assetUrl": "./models/buttons-confirm.glb"
+      },
+      "position": [
+        0,
+        44.770424,
+        -5.5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        2.6,
+        0.84,
+        2.6
+      ],
+      "visible": true
+    },
+    {
+      "assemblyGroup": {
+        "id": "be7906a9-e9a6-4cf3-9b61-bba01242464e-buttons-confirm-guide",
+        "name": "确认键 · 键帽 / 按压导向座"
+      },
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "52ac6097-620e-4c01-bb65-660fb1c87779",
+      "interaction": {
+        "anchor": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "proxySize": [
+          14.584681,
+          6.400001,
+          15.14255
+        ],
+        "status": "unconfigured",
+        "version": 1
+      },
+      "kind": "sleeve",
+      "name": "确认 · 旋锁座.005",
+      "params": {
+        "assetNode": "确认_·_旋锁座005",
+        "assetUrl": "./models/buttons-confirm.glb"
+      },
+      "position": [
+        0,
+        44.450002,
+        -5.499999
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        14.584681,
+        6.400001,
+        15.14255
+      ],
+      "visible": true
+    },
+    {
+      "assemblyGroup": {
+        "id": "be7906a9-e9a6-4cf3-9b61-bba01242464e-buttons-confirm-guide",
+        "name": "确认键 · 键帽 / 按压导向座"
+      },
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "9a6387f4-a72a-4a30-8ff7-b1a961865253",
+      "interaction": {
+        "anchor": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "proxySize": [
+          14.2,
+          9.618848,
+          7.1
+        ],
+        "status": "unconfigured",
+        "version": 1
+      },
+      "kind": "pin",
+      "name": "确认 · 键帽.007",
+      "params": {
+        "assetNode": "确认_·_键帽007",
+        "assetUrl": "./models/buttons-confirm.glb"
+      },
+      "position": [
+        0,
+        50.749849,
+        -5.5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        14.2,
+        9.618848,
+        7.1
+      ],
+      "visible": true
+    },
+    {
+      "assemblyGroup": {
+        "id": "c572aa4e-563f-41a4-88fd-6a9eab09e9bb-baseplates-dpad-fasteners",
+        "name": "方向键 · 底座 / M2 固定件"
+      },
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "e8a56cb1-1dfb-4856-997f-04199575425a",
+      "kind": "asset",
+      "name": "方向键 · 中央走线方形底座.002",
+      "params": {
+        "assetNode": "方向键_·_中央走线方形底座002",
+        "assetUrl": "./models/baseplates-dpad.glb"
+      },
+      "position": [
+        -42.000001,
+        35.69,
+        -22.000001
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        34.417471,
+        2.539999,
+        34.417471
+      ],
+      "visible": true
+    },
+    {
+      "assemblyGroup": {
+        "id": "c572aa4e-563f-41a4-88fd-6a9eab09e9bb-baseplates-dpad-fasteners",
+        "name": "方向键 · 底座 / M2 固定件"
+      },
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "53d0a9c8-00a0-4604-85bf-7759cf8d7ca5",
+      "kind": "asset",
+      "name": "方向键 · 边中点 M2 固定螺钉 1.002",
+      "params": {
+        "assetNode": "方向键_·_边中点_M2_固定螺钉_1002",
+        "assetUrl": "./models/baseplates-dpad.glb"
+      },
+      "position": [
+        -49.42,
+        33.698,
+        -14.58
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        2.920002,
+        5,
+        2.920001
+      ],
+      "visible": true
+    },
+    {
+      "assemblyGroup": {
+        "id": "c572aa4e-563f-41a4-88fd-6a9eab09e9bb-baseplates-dpad-fasteners",
+        "name": "方向键 · 底座 / M2 固定件"
+      },
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "b4dad4ba-ea77-465d-a681-f3681d5a7b4a",
+      "kind": "asset",
+      "name": "方向键 · 边中点 M2 固定螺钉 2.002",
+      "params": {
+        "assetNode": "方向键_·_边中点_M2_固定螺钉_2002",
+        "assetUrl": "./models/baseplates-dpad.glb"
+      },
+      "position": [
+        -34.58,
+        33.698,
+        -14.58
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        2.920002,
+        5,
+        2.920001
+      ],
+      "visible": true
+    },
+    {
+      "assemblyGroup": {
+        "id": "c572aa4e-563f-41a4-88fd-6a9eab09e9bb-baseplates-dpad-fasteners",
+        "name": "方向键 · 底座 / M2 固定件"
+      },
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "4f7510e5-be27-4721-a249-a69dd2716058",
+      "kind": "asset",
+      "name": "方向键 · 边中点 M2 固定螺钉 3.002",
+      "params": {
+        "assetNode": "方向键_·_边中点_M2_固定螺钉_3002",
+        "assetUrl": "./models/baseplates-dpad.glb"
+      },
+      "position": [
+        -34.58,
+        33.698,
+        -29.419999
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        2.920002,
+        5,
+        2.92
+      ],
+      "visible": true
+    },
+    {
+      "assemblyGroup": {
+        "id": "c572aa4e-563f-41a4-88fd-6a9eab09e9bb-baseplates-dpad-fasteners",
+        "name": "方向键 · 底座 / M2 固定件"
+      },
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "ed44d322-98d8-4f3e-bc70-6720751bf727",
+      "kind": "asset",
+      "name": "方向键 · 边中点 M2 固定螺钉 4.002",
+      "params": {
+        "assetNode": "方向键_·_边中点_M2_固定螺钉_4002",
+        "assetUrl": "./models/baseplates-dpad.glb"
+      },
+      "position": [
+        -49.42,
+        33.698,
+        -29.419999
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        2.920002,
+        5,
+        2.92
+      ],
+      "visible": true
+    },
+    {
+      "assemblyGroup": {
+        "id": "cca15428-7a16-4f87-9382-e83f1989cf88-baseplates-abxy-fasteners",
+        "name": "ABXY · 底座 / M2 固定件"
+      },
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "8e87c6ed-5cb3-45d6-b710-85ac6adfddda",
+      "kind": "asset",
+      "name": "ABXY · 中央走线方形底座.002",
+      "params": {
+        "assetNode": "ABXY_·_中央走线方形底座002",
+        "assetUrl": "./models/baseplates-abxy.glb"
+      },
+      "position": [
+        40.999999,
+        39.343779999999995,
+        -20.999999
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        38.161409,
+        3.38756,
+        38.161409
+      ],
+      "visible": true
+    },
+    {
+      "assemblyGroup": {
+        "id": "cca15428-7a16-4f87-9382-e83f1989cf88-baseplates-abxy-fasteners",
+        "name": "ABXY · 底座 / M2 固定件"
+      },
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "fe64585a-1948-4819-a82c-6710d5ecc846",
+      "kind": "asset",
+      "name": "ABXY · 边中点 M2 固定螺钉 1.002",
+      "params": {
+        "assetNode": "ABXY_·_边中点_M2_固定螺钉_1002",
+        "assetUrl": "./models/baseplates-abxy.glb"
+      },
+      "position": [
+        32.51,
+        37.351780000000005,
+        -12.51
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        2.920002,
+        5.847561,
+        2.92
+      ],
+      "visible": true
+    },
+    {
+      "assemblyGroup": {
+        "id": "cca15428-7a16-4f87-9382-e83f1989cf88-baseplates-abxy-fasteners",
+        "name": "ABXY · 底座 / M2 固定件"
+      },
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "7deda6d1-e427-4eb3-b8e4-0eaecc80458a",
+      "kind": "asset",
+      "name": "ABXY · 边中点 M2 固定螺钉 2.002",
+      "params": {
+        "assetNode": "ABXY_·_边中点_M2_固定螺钉_2002",
+        "assetUrl": "./models/baseplates-abxy.glb"
+      },
+      "position": [
+        49.49,
+        37.351780000000005,
+        -12.51
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        2.920002,
+        5.847561,
+        2.92
+      ],
+      "visible": true
+    },
+    {
+      "assemblyGroup": {
+        "id": "cca15428-7a16-4f87-9382-e83f1989cf88-baseplates-abxy-fasteners",
+        "name": "ABXY · 底座 / M2 固定件"
+      },
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "df9aad1f-3b4c-421f-b7f5-2a535ecd810a",
+      "kind": "asset",
+      "name": "ABXY · 边中点 M2 固定螺钉 3.002",
+      "params": {
+        "assetNode": "ABXY_·_边中点_M2_固定螺钉_3002",
+        "assetUrl": "./models/baseplates-abxy.glb"
+      },
+      "position": [
+        49.49,
+        37.351780000000005,
+        -29.490001
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        2.920002,
+        5.847561,
+        2.92
+      ],
+      "visible": true
+    },
+    {
+      "assemblyGroup": {
+        "id": "cca15428-7a16-4f87-9382-e83f1989cf88-baseplates-abxy-fasteners",
+        "name": "ABXY · 底座 / M2 固定件"
+      },
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "52b61ad8-390c-4383-aefc-a14819bbfa2a",
+      "kind": "asset",
+      "name": "ABXY · 边中点 M2 固定螺钉 4.002",
+      "params": {
+        "assetNode": "ABXY_·_边中点_M2_固定螺钉_4002",
+        "assetUrl": "./models/baseplates-abxy.glb"
+      },
+      "position": [
+        32.51,
+        37.351780000000005,
+        -29.490001
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        2.920002,
+        5.847561,
+        2.92
+      ],
+      "visible": true
+    },
+    {
+      "assemblyGroup": {
+        "id": "4ad632fd-7e9e-42c6-8f00-f023814b5b4e-housing-shell",
+        "name": "手柄 · 上盖 / 底壳"
+      },
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "2ae990e2-7d5f-4b58-a526-afdbf2c7398e",
+      "kind": "asset",
+      "name": "pureTV · 按键区圆滑过渡上壳.002",
+      "params": {
+        "assetNode": "pureTV_·_按键区圆滑过渡上壳002",
+        "assetUrl": "./models/housing-top.glb"
+      },
+      "position": [
+        0.001202,
+        40.411621,
+        0.494024
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        147.980476,
+        37.18224,
+        98.988628
+      ],
+      "visible": true
+    },
+    {
+      "assemblyGroup": {
+        "id": "d9d4314c-be31-48c8-b0a8-45c095eb02c4-housing-shell",
+        "name": "手柄 · 上盖 / 底壳"
+      },
+      "color": "#92a9b6",
+      "fixed": true,
+      "id": "ed8e3bde-40de-4e8e-ac07-b74baad38440",
+      "kind": "asset",
+      "name": "底壳 · 合壳.007",
+      "params": {
+        "assetNode": "底壳_·_合壳007",
+        "assetUrl": "./models/housing-bottom.glb"
+      },
+      "position": [
+        0,
+        24.879023,
+        0.499977
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        148.000259,
+        49.04232,
+        98.999962
+      ],
+      "visible": true
+    },
+    {
+      "assemblyGroup": {
+        "id": "5f28399f-6bcc-448e-b7b1-d12721be84c3-electronics-esp32-mount-board",
+        "name": "ESP32 · PCB / 板载模块"
+      },
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "0de172bf-b092-42cb-b69d-6ee9aef601f3",
+      "kind": "asset",
+      "name": "ESP32 · 48.2 × 27.9 PCB.005",
+      "params": {
+        "assetNode": "ESP32_·_482_×_279_PCB005",
+        "assetUrl": "./models/electronics-esp32-mount.glb"
+      },
+      "position": [
+        -1.9,
+        28.8,
+        -8.5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        48.200001,
+        1.6,
+        27.9
+      ],
+      "visible": true
+    },
+    {
+      "assemblyGroup": {
+        "id": "5f28399f-6bcc-448e-b7b1-d12721be84c3-electronics-esp32-mount-board",
+        "name": "ESP32 · PCB / 板载模块"
+      },
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "0e00936c-77c7-4e77-8af0-805cc96bd254",
+      "kind": "asset",
+      "name": "ESP32 · RF module.005",
+      "params": {
+        "assetNode": "ESP32_·_RF_module005",
+        "assetUrl": "./models/electronics-esp32-mount.glb"
+      },
+      "position": [
+        18.299999,
+        31.3,
+        -8.5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        19.799999,
+        3.4,
+        18
+      ],
+      "visible": true
+    },
+    {
+      "assemblyGroup": {
+        "id": "5f28399f-6bcc-448e-b7b1-d12721be84c3-electronics-esp32-mount-board",
+        "name": "ESP32 · PCB / 板载模块"
+      },
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "74d6482b-f78e-4c26-bef8-5d230ec50aa3",
+      "kind": "asset",
+      "name": "ESP32 · USB connector.005",
+      "params": {
+        "assetNode": "ESP32_·_USB_connector005",
+        "assetUrl": "./models/electronics-esp32-mount.glb"
+      },
+      "position": [
+        -25.5,
+        31.1,
+        -8.5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        5.2,
+        3,
+        8
+      ],
+      "visible": true
+    },
+    {
+      "assemblyGroup": {
+        "id": "5f28399f-6bcc-448e-b7b1-d12721be84c3-electronics-esp32-mount-header-front",
+        "name": "ESP32 · 前排针座 / 排针"
+      },
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "99e8225c-38d7-4e9e-b091-66f6a930f12b",
+      "kind": "asset",
+      "name": "Header pin.170",
+      "params": {
+        "assetNode": "Header_pin170",
+        "assetUrl": "./models/electronics-esp32-mount.glb"
+      },
+      "position": [
+        -21.4,
+        34.15,
+        2.7
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.65,
+        5.7,
+        0.65
+      ],
+      "visible": true
+    },
+    {
+      "assemblyGroup": {
+        "id": "5f28399f-6bcc-448e-b7b1-d12721be84c3-electronics-esp32-mount-header-front",
+        "name": "ESP32 · 前排针座 / 排针"
+      },
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "a05ff3db-13a6-4e4e-9656-67f2a19cfd11",
+      "kind": "asset",
+      "name": "Header pin.171",
+      "params": {
+        "assetNode": "Header_pin171",
+        "assetUrl": "./models/electronics-esp32-mount.glb"
+      },
+      "position": [
+        -18.860001,
+        34.15,
+        2.7
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.65,
+        5.7,
+        0.65
+      ],
+      "visible": true
+    },
+    {
+      "assemblyGroup": {
+        "id": "5f28399f-6bcc-448e-b7b1-d12721be84c3-electronics-esp32-mount-header-front",
+        "name": "ESP32 · 前排针座 / 排针"
+      },
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "1b681fd5-b9a6-4120-af8d-287a9b84cfff",
+      "kind": "asset",
+      "name": "Header pin.172",
+      "params": {
+        "assetNode": "Header_pin172",
+        "assetUrl": "./models/electronics-esp32-mount.glb"
+      },
+      "position": [
+        -16.32,
+        34.15,
+        2.7
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.65,
+        5.7,
+        0.65
+      ],
+      "visible": true
+    },
+    {
+      "assemblyGroup": {
+        "id": "5f28399f-6bcc-448e-b7b1-d12721be84c3-electronics-esp32-mount-header-front",
+        "name": "ESP32 · 前排针座 / 排针"
+      },
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "d6e0ac90-c9b0-47ca-a08d-b1cc7aefa2da",
+      "kind": "asset",
+      "name": "Header pin.173",
+      "params": {
+        "assetNode": "Header_pin173",
+        "assetUrl": "./models/electronics-esp32-mount.glb"
+      },
+      "position": [
+        -13.78,
+        34.15,
+        2.7
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.65,
+        5.7,
+        0.65
+      ],
+      "visible": true
+    },
+    {
+      "assemblyGroup": {
+        "id": "5f28399f-6bcc-448e-b7b1-d12721be84c3-electronics-esp32-mount-header-front",
+        "name": "ESP32 · 前排针座 / 排针"
+      },
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "e8b8a3bf-00fb-4b7d-8679-3f97e477fe46",
+      "kind": "asset",
+      "name": "Header pin.174",
+      "params": {
+        "assetNode": "Header_pin174",
+        "assetUrl": "./models/electronics-esp32-mount.glb"
+      },
+      "position": [
+        -11.24,
+        34.15,
+        2.7
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.65,
+        5.7,
+        0.65
+      ],
+      "visible": true
+    },
+    {
+      "assemblyGroup": {
+        "id": "5f28399f-6bcc-448e-b7b1-d12721be84c3-electronics-esp32-mount-header-front",
+        "name": "ESP32 · 前排针座 / 排针"
+      },
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "f6b79653-9d5c-4335-a789-2a2fe54ab3d0",
+      "kind": "asset",
+      "name": "Header pin.175",
+      "params": {
+        "assetNode": "Header_pin175",
+        "assetUrl": "./models/electronics-esp32-mount.glb"
+      },
+      "position": [
+        -8.7,
+        34.15,
+        2.7
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.65,
+        5.7,
+        0.65
+      ],
+      "visible": true
+    },
+    {
+      "assemblyGroup": {
+        "id": "5f28399f-6bcc-448e-b7b1-d12721be84c3-electronics-esp32-mount-header-front",
+        "name": "ESP32 · 前排针座 / 排针"
+      },
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "55a75f55-293d-473f-9194-91e6dffdc078",
+      "kind": "asset",
+      "name": "Header pin.176",
+      "params": {
+        "assetNode": "Header_pin176",
+        "assetUrl": "./models/electronics-esp32-mount.glb"
+      },
+      "position": [
+        -6.16,
+        34.15,
+        2.7
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.65,
+        5.7,
+        0.65
+      ],
+      "visible": true
+    },
+    {
+      "assemblyGroup": {
+        "id": "5f28399f-6bcc-448e-b7b1-d12721be84c3-electronics-esp32-mount-header-front",
+        "name": "ESP32 · 前排针座 / 排针"
+      },
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "f5a4a944-7f1e-4eee-8a1c-8b879e63c8d2",
+      "kind": "asset",
+      "name": "Header pin.177",
+      "params": {
+        "assetNode": "Header_pin177",
+        "assetUrl": "./models/electronics-esp32-mount.glb"
+      },
+      "position": [
+        -3.62,
+        34.15,
+        2.7
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.65,
+        5.7,
+        0.65
+      ],
+      "visible": true
+    },
+    {
+      "assemblyGroup": {
+        "id": "5f28399f-6bcc-448e-b7b1-d12721be84c3-electronics-esp32-mount-header-front",
+        "name": "ESP32 · 前排针座 / 排针"
+      },
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "a4812a7b-6381-4ff9-990f-944b27502cbc",
+      "kind": "asset",
+      "name": "Header pin.178",
+      "params": {
+        "assetNode": "Header_pin178",
+        "assetUrl": "./models/electronics-esp32-mount.glb"
+      },
+      "position": [
+        -1.08,
+        34.15,
+        2.7
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.65,
+        5.7,
+        0.65
+      ],
+      "visible": true
+    },
+    {
+      "assemblyGroup": {
+        "id": "5f28399f-6bcc-448e-b7b1-d12721be84c3-electronics-esp32-mount-header-front",
+        "name": "ESP32 · 前排针座 / 排针"
+      },
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "2e0f946e-0f29-43c7-8898-5707cfac8522",
+      "kind": "asset",
+      "name": "Header pin.179",
+      "params": {
+        "assetNode": "Header_pin179",
+        "assetUrl": "./models/electronics-esp32-mount.glb"
+      },
+      "position": [
+        1.46,
+        34.15,
+        2.7
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.65,
+        5.7,
+        0.65
+      ],
+      "visible": true
+    },
+    {
+      "assemblyGroup": {
+        "id": "5f28399f-6bcc-448e-b7b1-d12721be84c3-electronics-esp32-mount-header-front",
+        "name": "ESP32 · 前排针座 / 排针"
+      },
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "f562da1c-d6c9-40ce-b510-af2e4725aa1d",
+      "kind": "asset",
+      "name": "Header pin.180",
+      "params": {
+        "assetNode": "Header_pin180",
+        "assetUrl": "./models/electronics-esp32-mount.glb"
+      },
+      "position": [
+        4,
+        34.15,
+        2.7
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.65,
+        5.7,
+        0.65
+      ],
+      "visible": true
+    },
+    {
+      "assemblyGroup": {
+        "id": "5f28399f-6bcc-448e-b7b1-d12721be84c3-electronics-esp32-mount-header-front",
+        "name": "ESP32 · 前排针座 / 排针"
+      },
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "c2b1a383-3ae2-4a0d-8587-b94d4fdf4c08",
+      "kind": "asset",
+      "name": "Header pin.181",
+      "params": {
+        "assetNode": "Header_pin181",
+        "assetUrl": "./models/electronics-esp32-mount.glb"
+      },
+      "position": [
+        6.54,
+        34.15,
+        2.7
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.65,
+        5.7,
+        0.65
+      ],
+      "visible": true
+    },
+    {
+      "assemblyGroup": {
+        "id": "5f28399f-6bcc-448e-b7b1-d12721be84c3-electronics-esp32-mount-header-front",
+        "name": "ESP32 · 前排针座 / 排针"
+      },
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "c3257aab-11b6-45ea-844d-dc08f8308222",
+      "kind": "asset",
+      "name": "Header pin.182",
+      "params": {
+        "assetNode": "Header_pin182",
+        "assetUrl": "./models/electronics-esp32-mount.glb"
+      },
+      "position": [
+        9.08,
+        34.15,
+        2.7
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.65,
+        5.7,
+        0.65
+      ],
+      "visible": true
+    },
+    {
+      "assemblyGroup": {
+        "id": "5f28399f-6bcc-448e-b7b1-d12721be84c3-electronics-esp32-mount-header-front",
+        "name": "ESP32 · 前排针座 / 排针"
+      },
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "ef779a78-eb8a-47b7-ad16-26c9e8a9605d",
+      "kind": "asset",
+      "name": "Header pin.183",
+      "params": {
+        "assetNode": "Header_pin183",
+        "assetUrl": "./models/electronics-esp32-mount.glb"
+      },
+      "position": [
+        11.62,
+        34.15,
+        2.7
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.65,
+        5.7,
+        0.65
+      ],
+      "visible": true
+    },
+    {
+      "assemblyGroup": {
+        "id": "5f28399f-6bcc-448e-b7b1-d12721be84c3-electronics-esp32-mount-header-front",
+        "name": "ESP32 · 前排针座 / 排针"
+      },
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "47740c0f-754e-4ef9-89f4-542710ad6ba5",
+      "kind": "asset",
+      "name": "Header pin.184",
+      "params": {
+        "assetNode": "Header_pin184",
+        "assetUrl": "./models/electronics-esp32-mount.glb"
+      },
+      "position": [
+        14.16,
+        34.15,
+        2.7
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.65,
+        5.7,
+        0.65
+      ],
+      "visible": true
+    },
+    {
+      "assemblyGroup": {
+        "id": "5f28399f-6bcc-448e-b7b1-d12721be84c3-electronics-esp32-mount-header-front",
+        "name": "ESP32 · 前排针座 / 排针"
+      },
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "eaff9478-6717-496a-a798-4db410368782",
+      "kind": "asset",
+      "name": "Header pin.185",
+      "params": {
+        "assetNode": "Header_pin185",
+        "assetUrl": "./models/electronics-esp32-mount.glb"
+      },
+      "position": [
+        16.700001,
+        34.15,
+        2.7
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.65,
+        5.7,
+        0.65
+      ],
+      "visible": true
+    },
+    {
+      "assemblyGroup": {
+        "id": "5f28399f-6bcc-448e-b7b1-d12721be84c3-electronics-esp32-mount-header-front",
+        "name": "ESP32 · 前排针座 / 排针"
+      },
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "4d7cf874-d6b3-4077-829d-4798692087fe",
+      "kind": "asset",
+      "name": "Header pin.186",
+      "params": {
+        "assetNode": "Header_pin186",
+        "assetUrl": "./models/electronics-esp32-mount.glb"
+      },
+      "position": [
+        19.24,
+        34.15,
+        2.7
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.65,
+        5.7,
+        0.65
+      ],
+      "visible": true
+    },
+    {
+      "assemblyGroup": {
+        "id": "5f28399f-6bcc-448e-b7b1-d12721be84c3-electronics-esp32-mount-header-back",
+        "name": "ESP32 · 后排针座 / 排针"
+      },
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "9934e772-b514-404b-be70-e690f7eb494d",
+      "kind": "asset",
+      "name": "Header pin.187",
+      "params": {
+        "assetNode": "Header_pin187",
+        "assetUrl": "./models/electronics-esp32-mount.glb"
+      },
+      "position": [
+        -21.4,
+        34.15,
+        -19.700001
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.65,
+        5.7,
+        0.65
+      ],
+      "visible": true
+    },
+    {
+      "assemblyGroup": {
+        "id": "5f28399f-6bcc-448e-b7b1-d12721be84c3-electronics-esp32-mount-header-back",
+        "name": "ESP32 · 后排针座 / 排针"
+      },
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "161d7f1b-6997-4fd2-b761-ae9de83dd2c7",
+      "kind": "asset",
+      "name": "Header pin.188",
+      "params": {
+        "assetNode": "Header_pin188",
+        "assetUrl": "./models/electronics-esp32-mount.glb"
+      },
+      "position": [
+        -18.860001,
+        34.15,
+        -19.700001
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.65,
+        5.7,
+        0.65
+      ],
+      "visible": true
+    },
+    {
+      "assemblyGroup": {
+        "id": "5f28399f-6bcc-448e-b7b1-d12721be84c3-electronics-esp32-mount-header-back",
+        "name": "ESP32 · 后排针座 / 排针"
+      },
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "d42a06d0-7f20-4282-b454-a00d54fdbf6d",
+      "kind": "asset",
+      "name": "Header pin.189",
+      "params": {
+        "assetNode": "Header_pin189",
+        "assetUrl": "./models/electronics-esp32-mount.glb"
+      },
+      "position": [
+        -16.32,
+        34.15,
+        -19.700001
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.65,
+        5.7,
+        0.65
+      ],
+      "visible": true
+    },
+    {
+      "assemblyGroup": {
+        "id": "5f28399f-6bcc-448e-b7b1-d12721be84c3-electronics-esp32-mount-header-back",
+        "name": "ESP32 · 后排针座 / 排针"
+      },
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "32dc2d71-f5f7-43bd-b5d9-ce47359b7123",
+      "kind": "asset",
+      "name": "Header pin.190",
+      "params": {
+        "assetNode": "Header_pin190",
+        "assetUrl": "./models/electronics-esp32-mount.glb"
+      },
+      "position": [
+        -13.78,
+        34.15,
+        -19.700001
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.65,
+        5.7,
+        0.65
+      ],
+      "visible": true
+    },
+    {
+      "assemblyGroup": {
+        "id": "5f28399f-6bcc-448e-b7b1-d12721be84c3-electronics-esp32-mount-header-back",
+        "name": "ESP32 · 后排针座 / 排针"
+      },
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "d22e51cd-3171-4756-bce7-4aa69d8aa029",
+      "kind": "asset",
+      "name": "Header pin.191",
+      "params": {
+        "assetNode": "Header_pin191",
+        "assetUrl": "./models/electronics-esp32-mount.glb"
+      },
+      "position": [
+        -11.24,
+        34.15,
+        -19.700001
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.65,
+        5.7,
+        0.65
+      ],
+      "visible": true
+    },
+    {
+      "assemblyGroup": {
+        "id": "5f28399f-6bcc-448e-b7b1-d12721be84c3-electronics-esp32-mount-header-back",
+        "name": "ESP32 · 后排针座 / 排针"
+      },
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "d43fe8e1-e0df-4834-bb1e-3c9cea43f730",
+      "kind": "asset",
+      "name": "Header pin.192",
+      "params": {
+        "assetNode": "Header_pin192",
+        "assetUrl": "./models/electronics-esp32-mount.glb"
+      },
+      "position": [
+        -8.7,
+        34.15,
+        -19.700001
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.65,
+        5.7,
+        0.65
+      ],
+      "visible": true
+    },
+    {
+      "assemblyGroup": {
+        "id": "5f28399f-6bcc-448e-b7b1-d12721be84c3-electronics-esp32-mount-header-back",
+        "name": "ESP32 · 后排针座 / 排针"
+      },
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "f387d87a-901e-4b7d-b3ce-97bf54bfb93d",
+      "kind": "asset",
+      "name": "Header pin.193",
+      "params": {
+        "assetNode": "Header_pin193",
+        "assetUrl": "./models/electronics-esp32-mount.glb"
+      },
+      "position": [
+        -6.16,
+        34.15,
+        -19.700001
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.65,
+        5.7,
+        0.65
+      ],
+      "visible": true
+    },
+    {
+      "assemblyGroup": {
+        "id": "5f28399f-6bcc-448e-b7b1-d12721be84c3-electronics-esp32-mount-header-back",
+        "name": "ESP32 · 后排针座 / 排针"
+      },
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "3e38fabb-9fb1-492c-ad4f-f448af0b6a17",
+      "kind": "asset",
+      "name": "Header pin.194",
+      "params": {
+        "assetNode": "Header_pin194",
+        "assetUrl": "./models/electronics-esp32-mount.glb"
+      },
+      "position": [
+        -3.62,
+        34.15,
+        -19.700001
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.65,
+        5.7,
+        0.65
+      ],
+      "visible": true
+    },
+    {
+      "assemblyGroup": {
+        "id": "5f28399f-6bcc-448e-b7b1-d12721be84c3-electronics-esp32-mount-header-back",
+        "name": "ESP32 · 后排针座 / 排针"
+      },
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "bb39920f-953f-4927-8126-573ba7db9851",
+      "kind": "asset",
+      "name": "Header pin.195",
+      "params": {
+        "assetNode": "Header_pin195",
+        "assetUrl": "./models/electronics-esp32-mount.glb"
+      },
+      "position": [
+        -1.08,
+        34.15,
+        -19.700001
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.65,
+        5.7,
+        0.65
+      ],
+      "visible": true
+    },
+    {
+      "assemblyGroup": {
+        "id": "5f28399f-6bcc-448e-b7b1-d12721be84c3-electronics-esp32-mount-header-back",
+        "name": "ESP32 · 后排针座 / 排针"
+      },
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "69605cf9-53bc-4520-88e5-7b4d74eed8f6",
+      "kind": "asset",
+      "name": "Header pin.196",
+      "params": {
+        "assetNode": "Header_pin196",
+        "assetUrl": "./models/electronics-esp32-mount.glb"
+      },
+      "position": [
+        1.46,
+        34.15,
+        -19.700001
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.65,
+        5.7,
+        0.65
+      ],
+      "visible": true
+    },
+    {
+      "assemblyGroup": {
+        "id": "5f28399f-6bcc-448e-b7b1-d12721be84c3-electronics-esp32-mount-header-back",
+        "name": "ESP32 · 后排针座 / 排针"
+      },
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "716107ff-df2f-4bed-9a3b-e2f14cc34013",
+      "kind": "asset",
+      "name": "Header pin.197",
+      "params": {
+        "assetNode": "Header_pin197",
+        "assetUrl": "./models/electronics-esp32-mount.glb"
+      },
+      "position": [
+        4,
+        34.15,
+        -19.700001
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.65,
+        5.7,
+        0.65
+      ],
+      "visible": true
+    },
+    {
+      "assemblyGroup": {
+        "id": "5f28399f-6bcc-448e-b7b1-d12721be84c3-electronics-esp32-mount-header-back",
+        "name": "ESP32 · 后排针座 / 排针"
+      },
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "ce70a41b-e555-46f5-9468-d2704d84ac87",
+      "kind": "asset",
+      "name": "Header pin.198",
+      "params": {
+        "assetNode": "Header_pin198",
+        "assetUrl": "./models/electronics-esp32-mount.glb"
+      },
+      "position": [
+        6.54,
+        34.15,
+        -19.700001
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.65,
+        5.7,
+        0.65
+      ],
+      "visible": true
+    },
+    {
+      "assemblyGroup": {
+        "id": "5f28399f-6bcc-448e-b7b1-d12721be84c3-electronics-esp32-mount-header-back",
+        "name": "ESP32 · 后排针座 / 排针"
+      },
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "75330d5f-bf15-43ea-bb0d-9d4af6995d51",
+      "kind": "asset",
+      "name": "Header pin.199",
+      "params": {
+        "assetNode": "Header_pin199",
+        "assetUrl": "./models/electronics-esp32-mount.glb"
+      },
+      "position": [
+        9.08,
+        34.15,
+        -19.700001
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.65,
+        5.7,
+        0.65
+      ],
+      "visible": true
+    },
+    {
+      "assemblyGroup": {
+        "id": "5f28399f-6bcc-448e-b7b1-d12721be84c3-electronics-esp32-mount-header-back",
+        "name": "ESP32 · 后排针座 / 排针"
+      },
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "2eaa21f1-fd7b-4e38-9cfb-33aaf5319e7d",
+      "kind": "asset",
+      "name": "Header pin.200",
+      "params": {
+        "assetNode": "Header_pin200",
+        "assetUrl": "./models/electronics-esp32-mount.glb"
+      },
+      "position": [
+        11.62,
+        34.15,
+        -19.700001
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.65,
+        5.7,
+        0.65
+      ],
+      "visible": true
+    },
+    {
+      "assemblyGroup": {
+        "id": "5f28399f-6bcc-448e-b7b1-d12721be84c3-electronics-esp32-mount-header-back",
+        "name": "ESP32 · 后排针座 / 排针"
+      },
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "b9667388-39e8-4d66-88d7-8fb81c845039",
+      "kind": "asset",
+      "name": "Header pin.201",
+      "params": {
+        "assetNode": "Header_pin201",
+        "assetUrl": "./models/electronics-esp32-mount.glb"
+      },
+      "position": [
+        14.16,
+        34.15,
+        -19.700001
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.65,
+        5.7,
+        0.65
+      ],
+      "visible": true
+    },
+    {
+      "assemblyGroup": {
+        "id": "5f28399f-6bcc-448e-b7b1-d12721be84c3-electronics-esp32-mount-header-back",
+        "name": "ESP32 · 后排针座 / 排针"
+      },
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "58bfa14e-4455-4dce-89fe-6aba9173c472",
+      "kind": "asset",
+      "name": "Header pin.202",
+      "params": {
+        "assetNode": "Header_pin202",
+        "assetUrl": "./models/electronics-esp32-mount.glb"
+      },
+      "position": [
+        16.700001,
+        34.15,
+        -19.700001
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.65,
+        5.7,
+        0.65
+      ],
+      "visible": true
+    },
+    {
+      "assemblyGroup": {
+        "id": "5f28399f-6bcc-448e-b7b1-d12721be84c3-electronics-esp32-mount-header-back",
+        "name": "ESP32 · 后排针座 / 排针"
+      },
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "afcaf155-faf8-4fde-9665-1adb6c1e7296",
+      "kind": "asset",
+      "name": "Header pin.203",
+      "params": {
+        "assetNode": "Header_pin203",
+        "assetUrl": "./models/electronics-esp32-mount.glb"
+      },
+      "position": [
+        19.24,
+        34.15,
+        -19.700001
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.65,
+        5.7,
+        0.65
+      ],
+      "visible": true
+    },
+    {
+      "assemblyGroup": {
+        "id": "5f28399f-6bcc-448e-b7b1-d12721be84c3-electronics-esp32-mount-retainer",
+        "name": "ESP32 · 压条 / 软垫 / 螺钉"
+      },
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "d816a403-1e8e-42ce-888d-051471957715",
+      "kind": "asset",
+      "name": "PCB · 0.40 mm 软垫（装配压缩至 0.25 mm）.010",
+      "params": {
+        "assetNode": "PCB_·_040_mm_软垫（装配压缩至_025_mm）010",
+        "assetUrl": "./models/electronics-esp32-mount.glb"
+      },
+      "position": [
+        -10,
+        29.725,
+        -8.5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        4.6,
+        0.25,
+        4.5
+      ],
+      "visible": true
+    },
+    {
+      "assemblyGroup": {
+        "id": "5f28399f-6bcc-448e-b7b1-d12721be84c3-electronics-esp32-mount-retainer",
+        "name": "ESP32 · 压条 / 软垫 / 螺钉"
+      },
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "0310e892-5da1-4a81-9099-dfa33a62c10c",
+      "kind": "asset",
+      "name": "PCB · 0.40 mm 软垫（装配压缩至 0.25 mm）.011",
+      "params": {
+        "assetNode": "PCB_·_040_mm_软垫（装配压缩至_025_mm）011",
+        "assetUrl": "./models/electronics-esp32-mount.glb"
+      },
+      "position": [
+        3,
+        29.725,
+        -8.5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        4.6,
+        0.25,
+        4.5
+      ],
+      "visible": true
+    },
+    {
+      "assemblyGroup": {
+        "id": "5f28399f-6bcc-448e-b7b1-d12721be84c3-electronics-esp32-mount-retainer",
+        "name": "ESP32 · 压条 / 软垫 / 螺钉"
+      },
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "17118096-1c05-4f40-a133-87b601c275b9",
+      "kind": "asset",
+      "name": "PCB · 压条螺丝.009",
+      "params": {
+        "assetNode": "PCB_·_压条螺丝009",
+        "assetUrl": "./models/electronics-esp32-mount.glb"
+      },
+      "position": [
+        -34,
+        38.15,
+        -8.5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        4.5,
+        1.7,
+        4.5
+      ],
+      "visible": true
+    },
+    {
+      "assemblyGroup": {
+        "id": "5f28399f-6bcc-448e-b7b1-d12721be84c3-electronics-esp32-mount-retainer",
+        "name": "ESP32 · 压条 / 软垫 / 螺钉"
+      },
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "dbcf4240-ecc4-4b5e-8624-825171a287b6",
+      "kind": "asset",
+      "name": "PCB · 右侧沉入式压条螺钉.002",
+      "params": {
+        "assetNode": "PCB_·_右侧沉入式压条螺钉002",
+        "assetUrl": "./models/electronics-esp32-mount.glb"
+      },
+      "position": [
+        33.999999,
+        34.95,
+        -8.5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        4.059999,
+        4.26,
+        4.06
+      ],
+      "visible": true
+    },
+    {
+      "assemblyGroup": {
+        "id": "5f28399f-6bcc-448e-b7b1-d12721be84c3-electronics-esp32-mount-retainer",
+        "name": "ESP32 · 压条 / 软垫 / 螺钉"
+      },
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "661ed163-26ac-4aee-82dc-8644907ae2bd",
+      "kind": "asset",
+      "name": "PCB · 长轴压条.005",
+      "params": {
+        "assetNode": "PCB_·_长轴压条005",
+        "assetUrl": "./models/electronics-esp32-mount.glb"
+      },
+      "position": [
+        0,
+        33.55,
+        -8.5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        75,
+        7.4,
+        6.5
+      ],
+      "visible": true
+    },
+    {
+      "assemblyGroup": {
+        "id": "5f28399f-6bcc-448e-b7b1-d12721be84c3-electronics-esp32-mount-header-front",
+        "name": "ESP32 · 前排针座 / 排针"
+      },
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "21e354a6-d6a2-4f53-81e9-c3029701de76",
+      "kind": "asset",
+      "name": "Pin header.010",
+      "params": {
+        "assetNode": "Pin_header010",
+        "assetUrl": "./models/electronics-esp32-mount.glb"
+      },
+      "position": [
+        -1.1,
+        31,
+        2.7
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        43.5,
+        2.8,
+        2.4
+      ],
+      "visible": true
+    },
+    {
+      "assemblyGroup": {
+        "id": "5f28399f-6bcc-448e-b7b1-d12721be84c3-electronics-esp32-mount-header-back",
+        "name": "ESP32 · 后排针座 / 排针"
+      },
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "a8204d9f-6c61-4bc0-899e-44bcd7822b40",
+      "kind": "asset",
+      "name": "Pin header.011",
+      "params": {
+        "assetNode": "Pin_header011",
+        "assetUrl": "./models/electronics-esp32-mount.glb"
+      },
+      "position": [
+        -1.1,
+        31,
+        -19.700001
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        43.5,
+        2.8,
+        2.4
+      ],
+      "visible": true
+    },
+    {
+      "assemblyGroup": {
+        "id": "8759d227-5733-4ff7-9eca-f49d6559b201-electronics-harness-a",
+        "name": "A · GPIO / GND 线对"
+      },
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "dc519928-f67c-46d8-a73d-0762e150a4af",
+      "kind": "asset",
+      "name": "A · 中央走线 GND.002",
+      "params": {
+        "assetNode": "A_·_中央走线_GND002",
+        "assetUrl": "./models/electronics-harness.glb"
+      },
+      "position": [
+        26.034014,
+        38.062355,
+        -16.545461
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        28.6096,
+        6.275292,
+        11.453024
+      ],
+      "visible": true
+    },
+    {
+      "assemblyGroup": {
+        "id": "8759d227-5733-4ff7-9eca-f49d6559b201-electronics-harness-a",
+        "name": "A · GPIO / GND 线对"
+      },
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "b93486ad-cefa-4bc5-b0e7-6eb07289a3f3",
+      "kind": "asset",
+      "name": "A · 中央走线 GPIO.002",
+      "params": {
+        "assetNode": "A_·_中央走线_GPIO002",
+        "assetUrl": "./models/electronics-harness.glb"
+      },
+      "position": [
+        15.965879,
+        38.001414,
+        -15.39947
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        54.971738,
+        6.062151,
+        9.161044
+      ],
+      "visible": true
+    },
+    {
+      "assemblyGroup": {
+        "id": "8759d227-5733-4ff7-9eca-f49d6559b201-electronics-harness-b",
+        "name": "B · GPIO / GND 线对"
+      },
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "e44bc1df-4ba2-44f7-bd87-fd32767d77f8",
+      "kind": "asset",
+      "name": "B · 中央走线 GND.002",
+      "params": {
+        "assetNode": "B_·_中央走线_GND002",
+        "assetUrl": "./models/electronics-harness.glb"
+      },
+      "position": [
+        31.627086,
+        38.822502,
+        -21.550424
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        46.790094,
+        7.696541,
+        3.540834
+      ],
+      "visible": true
+    },
+    {
+      "assemblyGroup": {
+        "id": "8759d227-5733-4ff7-9eca-f49d6559b201-electronics-harness-b",
+        "name": "B · GPIO / GND 线对"
+      },
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "036ef2dc-2dd3-4928-8f7e-71ec2a2d4501",
+      "kind": "asset",
+      "name": "B · 中央走线 GPIO.002",
+      "params": {
+        "assetNode": "B_·_中央走线_GPIO002",
+        "assetUrl": "./models/electronics-harness.glb"
+      },
+      "position": [
+        18.569018,
+        37.99344,
+        -21.339739
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        65.257029,
+        6.077931,
+        3.838467
+      ],
+      "visible": true
+    },
+    {
+      "assemblyGroup": {
+        "id": "8759d227-5733-4ff7-9eca-f49d6559b201-electronics-harness-x",
+        "name": "X · GPIO / GND 线对"
+      },
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "889eab94-ba35-4740-9be2-5b27953c5f25",
+      "kind": "asset",
+      "name": "X · 中央走线 GND.002",
+      "params": {
+        "assetNode": "X_·_中央走线_GND002",
+        "assetUrl": "./models/electronics-harness.glb"
+      },
+      "position": [
+        22.367868,
+        38.127606,
+        -22.514194
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        35.560254,
+        6.415206,
+        1.708384
+      ],
+      "visible": true
+    },
+    {
+      "assemblyGroup": {
+        "id": "8759d227-5733-4ff7-9eca-f49d6559b201-electronics-harness-x",
+        "name": "X · GPIO / GND 线对"
+      },
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "2af1e132-d0dc-4503-852f-3c31c8a9c7b1",
+      "kind": "asset",
+      "name": "X · 中央走线 GPIO.002",
+      "params": {
+        "assetNode": "X_·_中央走线_GPIO002",
+        "assetUrl": "./models/electronics-harness.glb"
+      },
+      "position": [
+        15.187431,
+        38.276603,
+        -21.293989
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        48.309715,
+        6.69359,
+        4.131893
+      ],
+      "visible": true
+    },
+    {
+      "assemblyGroup": {
+        "id": "8759d227-5733-4ff7-9eca-f49d6559b201-electronics-harness-y",
+        "name": "Y · GPIO / GND 线对"
+      },
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "3cda9d44-3c3f-454f-96f6-5aa13beb1273",
+      "kind": "asset",
+      "name": "Y · 中央走线 GND.002",
+      "params": {
+        "assetNode": "Y_·_中央走线_GND002",
+        "assetUrl": "./models/electronics-harness.glb"
+      },
+      "position": [
+        22.344324,
+        37.677768,
+        -26.458552
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        42.214848,
+        7.083158,
+        9.445002
+      ],
+      "visible": true
+    },
+    {
+      "assemblyGroup": {
+        "id": "8759d227-5733-4ff7-9eca-f49d6559b201-electronics-harness-y",
+        "name": "Y · GPIO / GND 线对"
+      },
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "bd8ba5fa-a797-407a-8010-80beebe249c4",
+      "kind": "asset",
+      "name": "Y · 中央走线 GPIO.002",
+      "params": {
+        "assetNode": "Y_·_中央走线_GPIO002",
+        "assetUrl": "./models/electronics-harness.glb"
+      },
+      "position": [
+        11.873591,
+        37.980654,
+        -25.304711
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        56.930445,
+        6.103672,
+        11.752684
+      ],
+      "visible": true
+    },
+    {
+      "assemblyGroup": {
+        "id": "8759d227-5733-4ff7-9eca-f49d6559b201-electronics-harness-up",
+        "name": "上 · GPIO / GND 线对"
+      },
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "464f1d69-4e7a-4d0c-b70a-ce3dc66626c5",
+      "kind": "asset",
+      "name": "上 · 中央走线 GND.002",
+      "params": {
+        "assetNode": "上_·_中央走线_GND002",
+        "assetUrl": "./models/electronics-harness.glb"
+      },
+      "position": [
+        -25.106003,
+        38.004878000000005,
+        -25.800976
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        32.747474,
+        9.332595,
+        8.137421
+      ],
+      "visible": true
+    },
+    {
+      "assemblyGroup": {
+        "id": "8759d227-5733-4ff7-9eca-f49d6559b201-electronics-harness-up",
+        "name": "上 · GPIO / GND 线对"
+      },
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "39193919-39f6-4483-8f17-ed24bb9a957b",
+      "kind": "asset",
+      "name": "上 · 中央走线 GPIO.002",
+      "params": {
+        "assetNode": "上_·_中央走线_GPIO002",
+        "assetUrl": "./models/electronics-harness.glb"
+      },
+      "position": [
+        -23.842834,
+        35.538191,
+        -24.565894
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        41.00564,
+        6.215518,
+        10.607584
+      ],
+      "visible": true
+    },
+    {
+      "assemblyGroup": {
+        "id": "8759d227-5733-4ff7-9eca-f49d6559b201-electronics-harness-down",
+        "name": "下 · GPIO / GND 线对"
+      },
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "df61c01e-4cde-4fae-92d4-105b1c0d02dc",
+      "kind": "asset",
+      "name": "下 · 中央走线 GND.002",
+      "params": {
+        "assetNode": "下_·_中央走线_GND002",
+        "assetUrl": "./models/electronics-harness.glb"
+      },
+      "position": [
+        -24.778522,
+        36.468477,
+        -18.197808
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        39.091424,
+        9.471398,
+        8.138831
+      ],
+      "visible": true
+    },
+    {
+      "assemblyGroup": {
+        "id": "8759d227-5733-4ff7-9eca-f49d6559b201-electronics-harness-down",
+        "name": "下 · GPIO / GND 线对"
+      },
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "553e9749-f490-4895-b483-dbfc65ef5bd5",
+      "kind": "asset",
+      "name": "下 · 中央走线 GPIO.002",
+      "params": {
+        "assetNode": "下_·_中央走线_GPIO002",
+        "assetUrl": "./models/electronics-harness.glb"
+      },
+      "position": [
+        -21.065015,
+        35.442012,
+        -17.276751
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        40.52883,
+        6.358438,
+        6.296718
+      ],
+      "visible": true
+    },
+    {
+      "assemblyGroup": {
+        "id": "8759d227-5733-4ff7-9eca-f49d6559b201-electronics-harness-common-ground",
+        "name": "公共接地 · 公共地线 / 汇流排"
+      },
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "2bf47d63-58d8-46fc-af0f-9aedda03bde4",
+      "kind": "asset",
+      "name": "公共接地 · GND 引线.002",
+      "params": {
+        "assetNode": "公共接地_·_GND_引线002",
+        "assetUrl": "./models/electronics-harness.glb"
+      },
+      "position": [
+        -19.521096,
+        39.183229999999995,
+        -9.634096
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        4.307688,
+        4.566462,
+        25.224873
+      ],
+      "visible": true
+    },
+    {
+      "assemblyGroup": {
+        "id": "8759d227-5733-4ff7-9eca-f49d6559b201-electronics-harness-common-ground",
+        "name": "公共接地 · 公共地线 / 汇流排"
+      },
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "aeed4eac-7085-4c63-942a-a8be22a583a3",
+      "kind": "asset",
+      "name": "公共接地 · GND 汇流排.002",
+      "params": {
+        "assetNode": "公共接地_·_GND_汇流排002",
+        "assetUrl": "./models/electronics-harness.glb"
+      },
+      "position": [
+        -2,
+        41.200001,
+        -22
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        31,
+        0.722801,
+        0.759998
+      ],
+      "visible": true
+    },
+    {
+      "assemblyGroup": {
+        "id": "8759d227-5733-4ff7-9eca-f49d6559b201-electronics-harness-right",
+        "name": "右 · GPIO / GND 线对"
+      },
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "3a25166d-7d25-4acf-a2b6-61350b4972d9",
+      "kind": "asset",
+      "name": "右 · 中央走线 GND.002",
+      "params": {
+        "assetNode": "右_·_中央走线_GND002",
+        "assetUrl": "./models/electronics-harness.glb"
+      },
+      "position": [
+        -26.685839,
+        36.843513,
+        -20.942742
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        28.898312,
+        8.756859,
+        2.642973
+      ],
+      "visible": true
+    },
+    {
+      "assemblyGroup": {
+        "id": "8759d227-5733-4ff7-9eca-f49d6559b201-electronics-harness-right",
+        "name": "右 · GPIO / GND 线对"
+      },
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "55d9d5d7-91d6-4f27-8d2a-2d743cd8d39f",
+      "kind": "asset",
+      "name": "右 · 中央走线 GPIO.002",
+      "params": {
+        "assetNode": "右_·_中央走线_GPIO002",
+        "assetUrl": "./models/electronics-harness.glb"
+      },
+      "position": [
+        -18.029852,
+        35.540188,
+        -21.399637
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        44.616207,
+        6.161869,
+        3.956261
+      ],
+      "visible": true
+    },
+    {
+      "assemblyGroup": {
+        "id": "8759d227-5733-4ff7-9eca-f49d6559b201-electronics-harness-left",
+        "name": "左 · GPIO / GND 线对"
+      },
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "f022f32c-6940-4fd6-a723-ccf446f3b380",
+      "kind": "asset",
+      "name": "左 · 中央走线 GND.002",
+      "params": {
+        "assetNode": "左_·_中央走线_GND002",
+        "assetUrl": "./models/electronics-harness.glb"
+      },
+      "position": [
+        -34.698833,
+        36.825546,
+        -23.045774
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        37.951341,
+        8.748909,
+        2.645224
+      ],
+      "visible": true
+    },
+    {
+      "assemblyGroup": {
+        "id": "8759d227-5733-4ff7-9eca-f49d6559b201-electronics-harness-left",
+        "name": "左 · GPIO / GND 线对"
+      },
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "16d2def0-299e-4c0d-a6fd-4476fc00ce77",
+      "kind": "asset",
+      "name": "左 · 中央走线 GPIO.002",
+      "params": {
+        "assetNode": "左_·_中央走线_GPIO002",
+        "assetUrl": "./models/electronics-harness.glb"
+      },
+      "position": [
+        -34.227563,
+        35.532901,
+        -21.47858
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        31.280684,
+        6.180326,
+        5.514124
+      ],
+      "visible": true
+    },
+    {
+      "assemblyGroup": {
+        "id": "8759d227-5733-4ff7-9eca-f49d6559b201-electronics-harness-confirm",
+        "name": "确认 · GPIO / GND 线对"
+      },
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "93ee8a35-f4f8-42c0-aa94-ac59b75c611a",
+      "kind": "asset",
+      "name": "确认 · GND.005",
+      "params": {
+        "assetNode": "确认_·_GND005",
+        "assetUrl": "./models/electronics-harness.glb"
+      },
+      "position": [
+        -2.805155,
+        40.066468,
+        -13.163075
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        2.145676,
+        2.37414,
+        18.231593
+      ],
+      "visible": true
+    },
+    {
+      "assemblyGroup": {
+        "id": "8759d227-5733-4ff7-9eca-f49d6559b201-electronics-harness-confirm",
+        "name": "确认 · GPIO / GND 线对"
+      },
+      "color": "#92a9b6",
+      "fixed": false,
+      "id": "40eaa40b-eea4-451d-8a4b-5356ff0b9700",
+      "kind": "asset",
+      "name": "确认 · GPIO.005",
+      "params": {
+        "assetNode": "确认_·_GPIO005",
+        "assetUrl": "./models/electronics-harness.glb"
+      },
+      "position": [
+        -2.15763,
+        38.208353,
+        -12.612242
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        8.556469,
+        2.616707,
+        14.729873
+      ],
+      "visible": true
+    },
+    {
+      "color": "#58788f",
+      "fixed": true,
+      "id": "1a49b14d-9ad8-4242-b9e7-4948c4a0d895",
+      "kind": "battery",
+      "name": "试验台 · 5 V 电源",
+      "params": {
+        "voltage": 5
+      },
+      "position": [
+        -88,
+        6,
+        73
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        20,
+        12,
+        13
+      ],
+      "visible": true
+    },
+    {
+      "color": "#d4aa55",
+      "fixed": true,
+      "id": "da3c7443-13fc-4f54-b4a7-610b569e1d84",
+      "kind": "lamp",
+      "name": "左 · 指示灯",
+      "params": {
+        "resistance": 100
+      },
+      "position": [
+        -60,
+        8,
+        73
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        10,
+        16,
+        10
+      ],
+      "visible": true
+    },
+    {
+      "color": "#d4aa55",
+      "fixed": true,
+      "id": "1f9d4e80-f223-4942-8ace-ca10e3d20aa3",
+      "kind": "lamp",
+      "name": "右 · 指示灯",
+      "params": {
+        "resistance": 100
+      },
+      "position": [
+        -45,
+        8,
+        73
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        10,
+        16,
+        10
+      ],
+      "visible": true
+    },
+    {
+      "color": "#d4aa55",
+      "fixed": true,
+      "id": "12df2630-a9c2-469f-8f76-aeb0d1c2ce61",
+      "kind": "lamp",
+      "name": "下 · 指示灯",
+      "params": {
+        "resistance": 100
+      },
+      "position": [
+        -30,
+        8,
+        73
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        10,
+        16,
+        10
+      ],
+      "visible": true
+    },
+    {
+      "color": "#d4aa55",
+      "fixed": true,
+      "id": "cc1c3be2-e753-4668-9e34-ab78b5404e15",
+      "kind": "lamp",
+      "name": "上 · 指示灯",
+      "params": {
+        "resistance": 100
+      },
+      "position": [
+        -15,
+        8,
+        73
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        10,
+        16,
+        10
+      ],
+      "visible": true
+    },
+    {
+      "color": "#d4aa55",
+      "fixed": true,
+      "id": "87b35b95-4749-480a-b091-e10b5b755fa3",
+      "kind": "lamp",
+      "name": "A · 指示灯",
+      "params": {
+        "resistance": 100
+      },
+      "position": [
+        0,
+        8,
+        73
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        10,
+        16,
+        10
+      ],
+      "visible": true
+    },
+    {
+      "color": "#d4aa55",
+      "fixed": true,
+      "id": "338775e0-b950-48e4-91c6-2b48c01f6f77",
+      "kind": "lamp",
+      "name": "B · 指示灯",
+      "params": {
+        "resistance": 100
+      },
+      "position": [
+        15,
+        8,
+        73
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        10,
+        16,
+        10
+      ],
+      "visible": true
+    },
+    {
+      "color": "#d4aa55",
+      "fixed": true,
+      "id": "0b8359b8-3691-4ef2-a3de-cb604edf3d6b",
+      "kind": "lamp",
+      "name": "X · 指示灯",
+      "params": {
+        "resistance": 100
+      },
+      "position": [
+        30,
+        8,
+        73
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        10,
+        16,
+        10
+      ],
+      "visible": true
+    },
+    {
+      "color": "#d4aa55",
+      "fixed": true,
+      "id": "4553e8b3-7c69-4cef-bddd-cdbeb33a4081",
+      "kind": "lamp",
+      "name": "Y · 指示灯",
+      "params": {
+        "resistance": 100
+      },
+      "position": [
+        45,
+        8,
+        73
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        10,
+        16,
+        10
+      ],
+      "visible": true
+    },
+    {
+      "color": "#d4aa55",
+      "fixed": true,
+      "id": "a06f212d-8da7-4a09-99ff-6ebf3e4abe32",
+      "kind": "lamp",
+      "name": "确认 · 指示灯",
+      "params": {
+        "resistance": 100
+      },
+      "position": [
+        60,
+        8,
+        73
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        10,
+        16,
+        10
+      ],
+      "visible": true
+    }
+  ],
+  "version": 1,
+  "wires": [
+    {
+      "color": "#c97b63",
+      "from": {
+        "partId": "1a49b14d-9ad8-4242-b9e7-4948c4a0d895",
+        "terminal": 0
+      },
+      "id": "1df524a3-8265-4513-a661-bb0563c6d391",
+      "to": {
+        "partId": "1c64b282-2b93-4999-b379-b46837fd5103",
+        "terminal": 0
+      }
+    },
+    {
+      "color": "#c97b63",
+      "from": {
+        "partId": "1c64b282-2b93-4999-b379-b46837fd5103",
+        "terminal": 1
+      },
+      "id": "c02f4b55-096b-4116-b735-c89b5d572124",
+      "to": {
+        "partId": "da3c7443-13fc-4f54-b4a7-610b569e1d84",
+        "terminal": 0
+      }
+    },
+    {
+      "color": "#c97b63",
+      "from": {
+        "partId": "da3c7443-13fc-4f54-b4a7-610b569e1d84",
+        "terminal": 1
+      },
+      "id": "da89072d-49d3-42f0-a21f-21a0b86d708e",
+      "to": {
+        "partId": "1a49b14d-9ad8-4242-b9e7-4948c4a0d895",
+        "terminal": 1
+      }
+    },
+    {
+      "color": "#c97b63",
+      "from": {
+        "partId": "1a49b14d-9ad8-4242-b9e7-4948c4a0d895",
+        "terminal": 0
+      },
+      "id": "32d6c910-e305-4d3a-9ee6-8164d56ec4b0",
+      "to": {
+        "partId": "9e494684-f37b-448a-b7d6-75a02bde8362",
+        "terminal": 0
+      }
+    },
+    {
+      "color": "#c97b63",
+      "from": {
+        "partId": "9e494684-f37b-448a-b7d6-75a02bde8362",
+        "terminal": 1
+      },
+      "id": "847c5deb-b506-4247-bb9a-97062e26da4b",
+      "to": {
+        "partId": "1f9d4e80-f223-4942-8ace-ca10e3d20aa3",
+        "terminal": 0
+      }
+    },
+    {
+      "color": "#c97b63",
+      "from": {
+        "partId": "1f9d4e80-f223-4942-8ace-ca10e3d20aa3",
+        "terminal": 1
+      },
+      "id": "dcde50ab-327e-43e5-bdba-eefb772a4d2d",
+      "to": {
+        "partId": "1a49b14d-9ad8-4242-b9e7-4948c4a0d895",
+        "terminal": 1
+      }
+    },
+    {
+      "color": "#c97b63",
+      "from": {
+        "partId": "1a49b14d-9ad8-4242-b9e7-4948c4a0d895",
+        "terminal": 0
+      },
+      "id": "ae5f9e0b-71b1-4859-95e1-fd815e0a8dbd",
+      "to": {
+        "partId": "dc7ee0b6-f74b-44c2-8918-e9ef20f7e307",
+        "terminal": 0
+      }
+    },
+    {
+      "color": "#c97b63",
+      "from": {
+        "partId": "dc7ee0b6-f74b-44c2-8918-e9ef20f7e307",
+        "terminal": 1
+      },
+      "id": "08c3231f-a268-4fc9-a6ff-7ce7d119089a",
+      "to": {
+        "partId": "12df2630-a9c2-469f-8f76-aeb0d1c2ce61",
+        "terminal": 0
+      }
+    },
+    {
+      "color": "#c97b63",
+      "from": {
+        "partId": "12df2630-a9c2-469f-8f76-aeb0d1c2ce61",
+        "terminal": 1
+      },
+      "id": "e64fc8b1-7f8d-4741-9ccf-a56b69d8bcb9",
+      "to": {
+        "partId": "1a49b14d-9ad8-4242-b9e7-4948c4a0d895",
+        "terminal": 1
+      }
+    },
+    {
+      "color": "#c97b63",
+      "from": {
+        "partId": "1a49b14d-9ad8-4242-b9e7-4948c4a0d895",
+        "terminal": 0
+      },
+      "id": "2346928c-294d-447c-8567-8d786d056098",
+      "to": {
+        "partId": "a06612e3-b4a2-4246-8197-b4f7fdc9aab7",
+        "terminal": 0
+      }
+    },
+    {
+      "color": "#c97b63",
+      "from": {
+        "partId": "a06612e3-b4a2-4246-8197-b4f7fdc9aab7",
+        "terminal": 1
+      },
+      "id": "bc0fb880-2c41-45a3-805a-53ec98d88fc5",
+      "to": {
+        "partId": "cc1c3be2-e753-4668-9e34-ab78b5404e15",
+        "terminal": 0
+      }
+    },
+    {
+      "color": "#c97b63",
+      "from": {
+        "partId": "cc1c3be2-e753-4668-9e34-ab78b5404e15",
+        "terminal": 1
+      },
+      "id": "3175acfa-6c1a-4000-9abd-458027e15eac",
+      "to": {
+        "partId": "1a49b14d-9ad8-4242-b9e7-4948c4a0d895",
+        "terminal": 1
+      }
+    },
+    {
+      "color": "#c97b63",
+      "from": {
+        "partId": "1a49b14d-9ad8-4242-b9e7-4948c4a0d895",
+        "terminal": 0
+      },
+      "id": "fb188aa4-759c-4e16-839f-f8d4129489ef",
+      "to": {
+        "partId": "b36b281f-fab7-40ae-a716-2e62aa4bbc96",
+        "terminal": 0
+      }
+    },
+    {
+      "color": "#c97b63",
+      "from": {
+        "partId": "b36b281f-fab7-40ae-a716-2e62aa4bbc96",
+        "terminal": 1
+      },
+      "id": "c5fd6089-f427-4c94-b654-80008d8da352",
+      "to": {
+        "partId": "87b35b95-4749-480a-b091-e10b5b755fa3",
+        "terminal": 0
+      }
+    },
+    {
+      "color": "#c97b63",
+      "from": {
+        "partId": "87b35b95-4749-480a-b091-e10b5b755fa3",
+        "terminal": 1
+      },
+      "id": "2d7f6b18-e9ab-49a5-a441-d612b02c4a27",
+      "to": {
+        "partId": "1a49b14d-9ad8-4242-b9e7-4948c4a0d895",
+        "terminal": 1
+      }
+    },
+    {
+      "color": "#c97b63",
+      "from": {
+        "partId": "1a49b14d-9ad8-4242-b9e7-4948c4a0d895",
+        "terminal": 0
+      },
+      "id": "19f91c30-015f-49fd-b08f-b24152cde5f4",
+      "to": {
+        "partId": "bf2d8102-b2c4-4518-92b4-5eafee25d9da",
+        "terminal": 0
+      }
+    },
+    {
+      "color": "#c97b63",
+      "from": {
+        "partId": "bf2d8102-b2c4-4518-92b4-5eafee25d9da",
+        "terminal": 1
+      },
+      "id": "52076db1-bbd5-4fb3-9325-e80a948f93d6",
+      "to": {
+        "partId": "338775e0-b950-48e4-91c6-2b48c01f6f77",
+        "terminal": 0
+      }
+    },
+    {
+      "color": "#c97b63",
+      "from": {
+        "partId": "338775e0-b950-48e4-91c6-2b48c01f6f77",
+        "terminal": 1
+      },
+      "id": "580dc5f4-595d-42cb-bc87-1db9bec9128c",
+      "to": {
+        "partId": "1a49b14d-9ad8-4242-b9e7-4948c4a0d895",
+        "terminal": 1
+      }
+    },
+    {
+      "color": "#c97b63",
+      "from": {
+        "partId": "1a49b14d-9ad8-4242-b9e7-4948c4a0d895",
+        "terminal": 0
+      },
+      "id": "8323a6d4-a161-4fdf-b8fb-65b842ad209a",
+      "to": {
+        "partId": "5dd1db6c-4023-43d1-a8d1-b653f9622603",
+        "terminal": 0
+      }
+    },
+    {
+      "color": "#c97b63",
+      "from": {
+        "partId": "5dd1db6c-4023-43d1-a8d1-b653f9622603",
+        "terminal": 1
+      },
+      "id": "019fcd5a-2174-43aa-a0ab-8a9471068615",
+      "to": {
+        "partId": "0b8359b8-3691-4ef2-a3de-cb604edf3d6b",
+        "terminal": 0
+      }
+    },
+    {
+      "color": "#c97b63",
+      "from": {
+        "partId": "0b8359b8-3691-4ef2-a3de-cb604edf3d6b",
+        "terminal": 1
+      },
+      "id": "d01f4655-e25e-4e3e-9ccc-9fecc3dc4f47",
+      "to": {
+        "partId": "1a49b14d-9ad8-4242-b9e7-4948c4a0d895",
+        "terminal": 1
+      }
+    },
+    {
+      "color": "#c97b63",
+      "from": {
+        "partId": "1a49b14d-9ad8-4242-b9e7-4948c4a0d895",
+        "terminal": 0
+      },
+      "id": "8de4ab39-8e1b-48a4-a1da-883bac507560",
+      "to": {
+        "partId": "a2a88ac5-74ad-4b20-b001-1900213cd16f",
+        "terminal": 0
+      }
+    },
+    {
+      "color": "#c97b63",
+      "from": {
+        "partId": "a2a88ac5-74ad-4b20-b001-1900213cd16f",
+        "terminal": 1
+      },
+      "id": "d6b020f5-633c-4374-ba76-6f7353962b9a",
+      "to": {
+        "partId": "4553e8b3-7c69-4cef-bddd-cdbeb33a4081",
+        "terminal": 0
+      }
+    },
+    {
+      "color": "#c97b63",
+      "from": {
+        "partId": "4553e8b3-7c69-4cef-bddd-cdbeb33a4081",
+        "terminal": 1
+      },
+      "id": "4fc5282e-5a35-4fe2-ba3d-1a2a6b2b8f1f",
+      "to": {
+        "partId": "1a49b14d-9ad8-4242-b9e7-4948c4a0d895",
+        "terminal": 1
+      }
+    },
+    {
+      "color": "#c97b63",
+      "from": {
+        "partId": "1a49b14d-9ad8-4242-b9e7-4948c4a0d895",
+        "terminal": 0
+      },
+      "id": "cbfc3cda-cd5e-4f53-98ff-454abcaa0945",
+      "to": {
+        "partId": "266d0496-ef85-47ce-b49f-5dfc00fb7b7e",
+        "terminal": 0
+      }
+    },
+    {
+      "color": "#c97b63",
+      "from": {
+        "partId": "266d0496-ef85-47ce-b49f-5dfc00fb7b7e",
+        "terminal": 1
+      },
+      "id": "abf91f73-0524-466a-b9e2-b81d9815c0c3",
+      "to": {
+        "partId": "a06f212d-8da7-4a09-99ff-6ebf3e4abe32",
+        "terminal": 0
+      }
+    },
+    {
+      "color": "#c97b63",
+      "from": {
+        "partId": "a06f212d-8da7-4a09-99ff-6ebf3e4abe32",
+        "terminal": 1
+      },
+      "id": "5c62f9ab-413d-4815-83c3-fb85490c41f1",
+      "to": {
+        "partId": "1a49b14d-9ad8-4242-b9e7-4948c4a0d895",
+        "terminal": 1
+      }
+    }
+  ]
+}

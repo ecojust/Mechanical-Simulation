@@ -1,0 +1,570 @@
+{
+  "schema": 1,
+  "appliedToSource": true,
+  "sourceFile": "assets/puretv-controller/housing/bottom.blend",
+  "sourceSha256Before": "7607b598496754c90b3b978eff5c6af482329406724cf3cb4392919d33bc8948",
+  "sourceSha256After": "44bb57f9b1571b7abb70571a5a90344e3d0ea3733c3bac26c680fec62c0e0514",
+  "candidateSha256": "44bb57f9b1571b7abb70571a5a90344e3d0ea3733c3bac26c680fec62c0e0514",
+  "targetPair": [
+    "baseplates/abxy.blend::ABXY · 边中点 M2 固定螺钉 1.002",
+    "housing/bottom.blend::底壳 · 合壳.007"
+  ],
+  "axisCenterSourceXY": [
+    32.510000228881836,
+    12.510000228881836
+  ],
+  "nominalPilotDiameterMm": 1.7,
+  "originalPilotPolygonSides": 63,
+  "originalPilotSourceZ": [
+    12.850000381469727,
+    17.6200008392334
+  ],
+  "before": {
+    "name": "底壳 · 合壳.007",
+    "vertices": 121528,
+    "triangles": 243080,
+    "evaluatedGeometrySha256": "288b9fa40c9591f9f2230b78f31efd8e870581c79120768826d5fee3d4151c55",
+    "sourceMin": [
+      -74.0,
+      -50.0,
+      -19.64090919494629
+    ],
+    "sourceMax": [
+      74.0,
+      49.0,
+      29.399999618530273
+    ],
+    "clientCenter": [
+      0.0,
+      4.879545211791992,
+      0.5
+    ],
+    "clientSize": [
+      148.0,
+      49.04090881347656,
+      99.0
+    ]
+  },
+  "after": {
+    "name": "底壳 · 合壳.007",
+    "vertices": 121690,
+    "triangles": 243404,
+    "evaluatedGeometrySha256": "2d38896238b74d69bee30e42fd9a26d6487c7de31ef4c4fc81c3d89d60736982",
+    "sourceMin": [
+      -74.0,
+      -50.0,
+      -19.64090919494629
+    ],
+    "sourceMax": [
+      74.0,
+      49.0,
+      29.399999618530273
+    ],
+    "clientCenter": [
+      0.0,
+      4.879545211791992,
+      0.5
+    ],
+    "clientSize": [
+      148.0,
+      49.04090881347656,
+      99.0
+    ]
+  },
+  "topologyBefore": {
+    "boundaryEdges": 0,
+    "nonManifoldEdges": 0,
+    "volumeMm3": 52426.18578110377
+  },
+  "topologyAfter": {
+    "boundaryEdges": 0,
+    "nonManifoldEdges": 0,
+    "volumeMm3": 52426.13003203101
+  },
+  "removedVolumeMm3": 0.055749072758771945,
+  "outsideBoreSurfaceChanges": [],
+  "axisRayBefore": [
+    {
+      "sourceZ": 0.1353912353515625,
+      "normalZ": -0.9977520704269409
+    },
+    {
+      "sourceZ": 12.84999942779541,
+      "normalZ": 1.0
+    }
+  ],
+  "axisRayAfter": [
+    {
+      "sourceZ": 0.1353912353515625,
+      "normalZ": -0.9977520704269409
+    },
+    {
+      "sourceZ": 12.85000228881836,
+      "normalZ": 1.0
+    }
+  ],
+  "radialSectionsAfter": [
+    {
+      "sourceZ": 12.860000381469726,
+      "minimumPilotRadiusMm": 0.8489428758621216,
+      "maximumPilotRadiusMm": 0.8499028086662292,
+      "invalidRays": 0,
+      "rayCount": 180
+    },
+    {
+      "sourceZ": 13.097500404357909,
+      "minimumPilotRadiusMm": 0.8489428758621216,
+      "maximumPilotRadiusMm": 0.8499029278755188,
+      "invalidRays": 0,
+      "rayCount": 180
+    },
+    {
+      "sourceZ": 13.335000427246094,
+      "minimumPilotRadiusMm": 0.8489428758621216,
+      "maximumPilotRadiusMm": 0.8499029278755188,
+      "invalidRays": 0,
+      "rayCount": 180
+    },
+    {
+      "sourceZ": 13.572500450134276,
+      "minimumPilotRadiusMm": 0.8489428758621216,
+      "maximumPilotRadiusMm": 0.8499029278755188,
+      "invalidRays": 0,
+      "rayCount": 180
+    },
+    {
+      "sourceZ": 13.81000047302246,
+      "minimumPilotRadiusMm": 0.8489428758621216,
+      "maximumPilotRadiusMm": 0.8499029278755188,
+      "invalidRays": 0,
+      "rayCount": 180
+    },
+    {
+      "sourceZ": 14.047500495910644,
+      "minimumPilotRadiusMm": 0.8489428758621216,
+      "maximumPilotRadiusMm": 0.8499029278755188,
+      "invalidRays": 0,
+      "rayCount": 180
+    },
+    {
+      "sourceZ": 14.285000518798828,
+      "minimumPilotRadiusMm": 0.8489428758621216,
+      "maximumPilotRadiusMm": 0.8499029278755188,
+      "invalidRays": 0,
+      "rayCount": 180
+    },
+    {
+      "sourceZ": 14.52250054168701,
+      "minimumPilotRadiusMm": 0.8489428758621216,
+      "maximumPilotRadiusMm": 0.8499029278755188,
+      "invalidRays": 0,
+      "rayCount": 180
+    },
+    {
+      "sourceZ": 14.760000564575195,
+      "minimumPilotRadiusMm": 0.8489428758621216,
+      "maximumPilotRadiusMm": 0.8499029278755188,
+      "invalidRays": 0,
+      "rayCount": 180
+    },
+    {
+      "sourceZ": 14.997500587463378,
+      "minimumPilotRadiusMm": 0.8489428758621216,
+      "maximumPilotRadiusMm": 0.8499029278755188,
+      "invalidRays": 0,
+      "rayCount": 180
+    },
+    {
+      "sourceZ": 15.235000610351562,
+      "minimumPilotRadiusMm": 0.8489425182342529,
+      "maximumPilotRadiusMm": 0.8499029278755188,
+      "invalidRays": 0,
+      "rayCount": 180
+    },
+    {
+      "sourceZ": 15.472500633239745,
+      "minimumPilotRadiusMm": 0.8489423394203186,
+      "maximumPilotRadiusMm": 0.8499029278755188,
+      "invalidRays": 0,
+      "rayCount": 180
+    },
+    {
+      "sourceZ": 15.710000656127928,
+      "minimumPilotRadiusMm": 0.8489422798156738,
+      "maximumPilotRadiusMm": 0.8499029278755188,
+      "invalidRays": 0,
+      "rayCount": 180
+    },
+    {
+      "sourceZ": 15.947500679016112,
+      "minimumPilotRadiusMm": 0.8489422798156738,
+      "maximumPilotRadiusMm": 0.8499029278755188,
+      "invalidRays": 0,
+      "rayCount": 180
+    },
+    {
+      "sourceZ": 16.185000701904297,
+      "minimumPilotRadiusMm": 0.8489422798156738,
+      "maximumPilotRadiusMm": 0.8499029278755188,
+      "invalidRays": 0,
+      "rayCount": 180
+    },
+    {
+      "sourceZ": 16.422500724792478,
+      "minimumPilotRadiusMm": 0.8489422798156738,
+      "maximumPilotRadiusMm": 0.8499029278755188,
+      "invalidRays": 0,
+      "rayCount": 180
+    },
+    {
+      "sourceZ": 16.660000747680662,
+      "minimumPilotRadiusMm": 0.8489421606063843,
+      "maximumPilotRadiusMm": 0.8499029278755188,
+      "invalidRays": 0,
+      "rayCount": 180
+    },
+    {
+      "sourceZ": 16.897500770568847,
+      "minimumPilotRadiusMm": 0.8489421010017395,
+      "maximumPilotRadiusMm": 0.8499029278755188,
+      "invalidRays": 0,
+      "rayCount": 180
+    },
+    {
+      "sourceZ": 17.13500079345703,
+      "minimumPilotRadiusMm": 0.8489421010017395,
+      "maximumPilotRadiusMm": 0.8499029278755188,
+      "invalidRays": 0,
+      "rayCount": 180
+    },
+    {
+      "sourceZ": 17.372500816345212,
+      "minimumPilotRadiusMm": 0.848942220211029,
+      "maximumPilotRadiusMm": 0.8499029278755188,
+      "invalidRays": 0,
+      "rayCount": 180
+    },
+    {
+      "sourceZ": 17.610000839233397,
+      "minimumPilotRadiusMm": 0.8489421606063843,
+      "maximumPilotRadiusMm": 0.8499029278755188,
+      "invalidRays": 0,
+      "rayCount": 180
+    }
+  ],
+  "beforeObstructingFaces": [
+    {
+      "fixedTriangleIndex": 14583,
+      "verticesSource": [
+        [
+          32.984004974365234,
+          11.84929084777832,
+          14.850000381469727
+        ],
+        [
+          33.067298889160156,
+          11.870155334472656,
+          14.850000381469727
+        ],
+        [
+          33.067298889160156,
+          11.870155334472656,
+          12.850000381469727
+        ]
+      ],
+      "normalSource": [
+        -0.2429850801790465,
+        0.9700300257262053,
+        0.0
+      ],
+      "planeDistanceFromAxisMm": 0.7560840190359206
+    },
+    {
+      "fixedTriangleIndex": 14585,
+      "verticesSource": [
+        [
+          32.660606384277344,
+          11.7335786819458,
+          14.850000381469727
+        ],
+        [
+          32.741455078125,
+          11.762506484985352,
+          14.850000381469727
+        ],
+        [
+          32.741455078125,
+          11.762506484985352,
+          12.850000381469727
+        ]
+      ],
+      "normalSource": [
+        -0.3368865271928895,
+        0.941545255309544,
+        0.0
+      ],
+      "planeDistanceFromAxisMm": 0.7817732083027856
+    },
+    {
+      "fixedTriangleIndex": 15769,
+      "verticesSource": [
+        [
+          32.50653076171875,
+          11.66070556640625,
+          14.850000381469727
+        ],
+        [
+          32.582984924316406,
+          11.69686508178711,
+          14.850000381469727
+        ],
+        [
+          32.582984924316406,
+          11.69686508178711,
+          12.850000381469727
+        ]
+      ],
+      "normalSource": [
+        -0.42754919447571593,
+        0.9039920830976157,
+        0.0
+      ],
+      "planeDistanceFromAxisMm": 0.766272283204154
+    },
+    {
+      "fixedTriangleIndex": 15770,
+      "verticesSource": [
+        [
+          32.50653076171875,
+          11.66070556640625,
+          14.850000381469727
+        ],
+        [
+          32.582984924316406,
+          11.69686508178711,
+          12.850000381469727
+        ],
+        [
+          32.556053161621094,
+          11.684127807617188,
+          12.850000381469727
+        ]
+      ],
+      "normalSource": [
+        -0.42754135258601844,
+        0.9039957919309045,
+        3.668273621794775e-07
+      ],
+      "planeDistanceFromAxisMm": 0.7662754603037005
+    },
+    {
+      "fixedTriangleIndex": 15771,
+      "verticesSource": [
+        [
+          32.822303771972656,
+          11.791435241699219,
+          14.850000381469727
+        ],
+        [
+          32.90315246582031,
+          11.82036304473877,
+          14.850000381469727
+        ],
+        [
+          32.90315246582031,
+          11.82036304473877,
+          12.850000381469727
+        ]
+      ],
+      "normalSource": [
+        -0.3368865271928895,
+        0.941545255309544,
+        0.0
+      ],
+      "planeDistanceFromAxisMm": 0.781772310375258
+    },
+    {
+      "fixedTriangleIndex": 191062,
+      "verticesSource": [
+        [
+          32.955955505371094,
+          11.839254379272461,
+          12.850000381469727
+        ],
+        [
+          32.90315246582031,
+          11.82036304473877,
+          12.850000381469727
+        ],
+        [
+          32.90315246582031,
+          11.82036304473877,
+          14.850000381469727
+        ]
+      ],
+      "normalSource": [
+        -0.33685989577656017,
+        0.941554783651703,
+        0.0
+      ],
+      "planeDistanceFromAxisMm": 0.7817684112734112
+    },
+    {
+      "fixedTriangleIndex": 191063,
+      "verticesSource": [
+        [
+          32.90315246582031,
+          11.82036304473877,
+          14.850000381469727
+        ],
+        [
+          32.984004974365234,
+          11.84929084777832,
+          14.850000381469727
+        ],
+        [
+          32.984004974365234,
+          11.84929084777832,
+          12.850000381469727
+        ]
+      ],
+      "normalSource": [
+        -0.33687243637803105,
+        0.94155029690863,
+        0.0
+      ],
+      "planeDistanceFromAxisMm": 0.7817702474140734
+    },
+    {
+      "fixedTriangleIndex": 191064,
+      "verticesSource": [
+        [
+          32.90315246582031,
+          11.82036304473877,
+          14.850000381469727
+        ],
+        [
+          32.984004974365234,
+          11.84929084777832,
+          12.850000381469727
+        ],
+        [
+          32.955955505371094,
+          11.839254379272461,
+          12.850000381469727
+        ]
+      ],
+      "normalSource": [
+        -0.33689604353531744,
+        0.9415418502908358,
+        -1.076519991058613e-06
+      ],
+      "planeDistanceFromAxisMm": 0.78177370351951
+    },
+    {
+      "fixedTriangleIndex": 191066,
+      "verticesSource": [
+        [
+          32.63367462158203,
+          11.720841407775879,
+          12.850000381469727
+        ],
+        [
+          32.582984924316406,
+          11.69686508178711,
+          12.850000381469727
+        ],
+        [
+          32.582984924316406,
+          11.69686508178711,
+          14.850000381469727
+        ]
+      ],
+      "normalSource": [
+        -0.4275825596428215,
+        0.9039763020617814,
+        0.0
+      ],
+      "planeDistanceFromAxisMm": 0.7662618862358189
+    },
+    {
+      "fixedTriangleIndex": 191067,
+      "verticesSource": [
+        [
+          32.582984924316406,
+          11.69686508178711,
+          14.850000381469727
+        ],
+        [
+          32.660606384277344,
+          11.7335786819458,
+          14.850000381469727
+        ],
+        [
+          32.660606384277344,
+          11.7335786819458,
+          12.850000381469727
+        ]
+      ],
+      "normalSource": [
+        -0.42756826262705566,
+        0.9039830644398607,
+        0.0
+      ],
+      "planeDistanceFromAxisMm": 0.7662663414997718
+    },
+    {
+      "fixedTriangleIndex": 191069,
+      "verticesSource": [
+        [
+          32.50653076171875,
+          11.66070556640625,
+          14.80374526977539
+        ],
+        [
+          32.556053161621094,
+          11.684127807617188,
+          12.850000381469727
+        ],
+        [
+          32.50653076171875,
+          11.66070556640625,
+          12.850000381469727
+        ]
+      ],
+      "normalSource": [
+        -0.4275534590894163,
+        0.9039900661072968,
+        0.0
+      ],
+      "planeDistanceFromAxisMm": 0.7662705553891047
+    },
+    {
+      "fixedTriangleIndex": 194595,
+      "verticesSource": [
+        [
+          32.741455078125,
+          11.762506484985352,
+          14.850000381469727
+        ],
+        [
+          32.822303771972656,
+          11.791435241699219,
+          14.850000381469727
+        ],
+        [
+          32.822303771972656,
+          11.791435241699219,
+          12.850000381469727
+        ]
+      ],
+      "normalSource": [
+        -0.33689637293007385,
+        0.941541732429615,
+        0.0
+      ],
+      "planeDistanceFromAxisMm": 0.781772853815694
+    }
+  ],
+  "scope": "Remove only the old off-axis material protruding into an already existing D1.70 nominal M2 pilot. The existing 63-sided pilot contour and its floor are retained; no outer support or screw is resized. Threads remain declared nominal envelopes, not resolved helical geometry."
+}

@@ -1,0 +1,500 @@
+{
+  "version": 1,
+  "status": "applied-pending-independent-assembly-review",
+  "blenderVersion": "5.2.2 LTS",
+  "sourceFile": "electronics/esp32-mount.blend",
+  "sourceObject": "PCB · 长轴压条.005",
+  "beforeSha256": "84c4bdaa1b598067dbc804d40aa5a1f26c37e9c43dc82803a9d8db8a8a5b5715",
+  "afterSha256": "81c1e24d812cbb482338e4ad5422b98f3a5e4b2f3d394015cf6276ec77f36e94",
+  "coordinates": "Source millimetres, Z up; client=(source.x,source.z,-source.y).",
+  "operation": "Two local cylindrical outer-corner subtractions; original object frame and all other objects unchanged.",
+  "before": {
+    "vertices": 483,
+    "triangles": 970,
+    "boundsBlender": {
+      "min": [
+        -37.5,
+        5.25,
+        9.850000381469727
+      ],
+      "max": [
+        37.5,
+        11.75,
+        17.25
+      ]
+    },
+    "volumeMm3": 1319.7911957936824,
+    "componentCount": 1,
+    "topology": {
+      "boundaryEdges": 0,
+      "nonManifoldEdges": 0,
+      "inconsistentWindingEdges": 0,
+      "closedConsistentlyOriented": true
+    },
+    "geometrySha256": "36a2bb4ab86d5beea853a3e10e668d3bbe661d12fcd1abef98a78ac65354f8bf",
+    "worldMatrix": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ]
+  },
+  "after": {
+    "vertices": 718,
+    "triangles": 1440,
+    "boundsBlender": {
+      "min": [
+        -37.5,
+        5.25,
+        9.850000381469727
+      ],
+      "max": [
+        37.5,
+        11.75,
+        17.25
+      ]
+    },
+    "volumeMm3": 1309.5830622574422,
+    "componentCount": 1,
+    "topology": {
+      "boundaryEdges": 0,
+      "nonManifoldEdges": 0,
+      "inconsistentWindingEdges": 0,
+      "closedConsistentlyOriented": true
+    },
+    "geometrySha256": "96388180a174cbe88a7e57941a88c87ba72f0bf03881e76dd2367924c8458d6e",
+    "worldMatrix": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ]
+  },
+  "removedVolumeMm3": 10.208133536240211,
+  "retainedVolumeFraction": 0.992265341995935,
+  "cuts": [
+    {
+      "name": "Down sleeve outer arc relief",
+      "centerBlenderXY": [
+        -42,
+        12.8
+      ],
+      "obstacleRadiusMm": 5.59167,
+      "clearanceMm": 0.32,
+      "cutterInradiusMm": 5.91167,
+      "cutterCircumradiusMm": 5.912115171399172,
+      "minimumClampAxisDistanceMm": 5.911668463567471,
+      "analyticEnvelopeClearanceMm": 0.3199984635674715,
+      "measuredSourceMaximumRadiusMm": 5.5916590122247705
+    },
+    {
+      "name": "ABXY pillar and screw outer arc relief",
+      "centerBlenderXY": [
+        32.51,
+        12.51
+      ],
+      "obstacleRadiusMm": 1.86001,
+      "clearanceMm": 0.32,
+      "cutterInradiusMm": 2.18001,
+      "cutterCircumradiusMm": 2.180174163104826,
+      "minimumClampAxisDistanceMm": 2.180007518655081,
+      "analyticEnvelopeClearanceMm": 0.31999751865508097,
+      "measuredSourceMaximumRadiusMm": 1.8600010791605845
+    }
+  ],
+  "preservedInterfaces": {
+    "pcbPadFeet": [
+      {
+        "centerBlender": [
+          -10,
+          8.5,
+          9.85
+        ],
+        "sampleCount": 9,
+        "lowerHeightsMm": [
+          9.850000381469727,
+          9.850000381469727,
+          9.850000381469727,
+          9.850000381469727,
+          9.850000381469727,
+          9.850000381469727,
+          9.850000381469727,
+          9.850000381469727,
+          9.850000381469727
+        ]
+      },
+      {
+        "centerBlender": [
+          3,
+          8.5,
+          9.85
+        ],
+        "sampleCount": 9,
+        "lowerHeightsMm": [
+          9.850000381469727,
+          9.850000381469727,
+          9.850000381469727,
+          9.850000381469727,
+          9.850000381469727,
+          9.850000381469727,
+          9.850000381469727,
+          9.850000381469727,
+          9.850000381469727
+        ]
+      }
+    ],
+    "lowerFastenerBearingAnnuli": [
+      {
+        "centerBlender": [
+          -34,
+          8.5,
+          14.85
+        ],
+        "radiiMm": [
+          1.55,
+          1.8,
+          2.0
+        ],
+        "angularSamples": 360,
+        "retainedSamples": 1080,
+        "totalSamples": 1080,
+        "minimumSectionThicknessMm": 2.3999977111816406,
+        "maximumSectionThicknessMm": 2.4000015258789062
+      },
+      {
+        "centerBlender": [
+          34,
+          8.5,
+          14.85
+        ],
+        "radiiMm": [
+          1.55,
+          1.8,
+          2.0
+        ],
+        "angularSamples": 360,
+        "retainedSamples": 1080,
+        "totalSamples": 1080,
+        "minimumSectionThicknessMm": 1.3599967956542969,
+        "maximumSectionThicknessMm": 1.3600006103515625
+      }
+    ],
+    "leftThroughBoreAxisLevels": [],
+    "rightThroughBoreAxisLevels": [],
+    "pcbPadTotalContactAreaMm2": 41.400002628564835,
+    "protectedAnnulusOuterRadiusMm": 2,
+    "protectedAnnulusCutterGapsMm": [
+      1.1702853923284593,
+      0.09769914030190341
+    ]
+  },
+  "unchangedOtherObjectCount": 43,
+  "sourceObjectCount": 44,
+  "minimumRightShaftHoleLigamentMm": 0.6976991403019035,
+  "lowerRightFastenerSeatThicknessMm": 1.3599967956542969,
+  "sourceBvhChecks": [
+    {
+      "sourceFile": "buttons/down.blend",
+      "sourceName": "下 · PS5 下环一体式开关套筒.003",
+      "sourceSha256": "ee9f528457ae365735ba772f891ee3de180854abbd1afdd155862fed2de22c47",
+      "result": {
+        "status": "no-intersection-observed",
+        "surfaceTrianglePairs": 0,
+        "aInsideB": {
+          "testedPoints": 0,
+          "insidePoints": 0,
+          "surfacePoints": 0,
+          "uncertainPoints": 0,
+          "allSourceComponentsRepresented": true,
+          "targetClosedConsistentlyOriented": true,
+          "maximumSampledDepthMm": 0.0,
+          "insideExamples": [],
+          "uncertainExamples": []
+        },
+        "bInsideA": {
+          "testedPoints": 0,
+          "insidePoints": 0,
+          "surfacePoints": 0,
+          "uncertainPoints": 0,
+          "allSourceComponentsRepresented": true,
+          "targetClosedConsistentlyOriented": true,
+          "maximumSampledDepthMm": 0.0,
+          "insideExamples": [],
+          "uncertainExamples": []
+        },
+        "geometrySemantics": {
+          "a": {
+            "kind": "solid-volume-candidate"
+          },
+          "b": {
+            "kind": "solid-volume-candidate"
+          }
+        },
+        "possibleOverlapBoundsBlender": {
+          "min": [
+            -37.5,
+            7.20873451,
+            14.28000116
+          ],
+          "max": [
+            -36.40873337,
+            11.75,
+            17.25
+          ]
+        },
+        "maximumSampledPenetrationMm": 0.0
+      }
+    },
+    {
+      "sourceFile": "housing/bottom.blend",
+      "sourceName": "底壳 · 合壳.007",
+      "sourceSha256": "7607b598496754c90b3b978eff5c6af482329406724cf3cb4392919d33bc8948",
+      "result": {
+        "status": "unknown-contact-or-crossing",
+        "surfaceTrianglePairs": 1027,
+        "aInsideB": {
+          "testedPoints": 1084,
+          "insidePoints": 0,
+          "surfacePoints": 249,
+          "uncertainPoints": 0,
+          "allSourceComponentsRepresented": true,
+          "targetClosedConsistentlyOriented": true,
+          "maximumSampledDepthMm": 0.0,
+          "insideExamples": [],
+          "uncertainExamples": []
+        },
+        "bInsideA": {
+          "testedPoints": 5361,
+          "insidePoints": 0,
+          "surfacePoints": 1915,
+          "uncertainPoints": 30,
+          "allSourceComponentsRepresented": true,
+          "targetClosedConsistentlyOriented": true,
+          "maximumSampledDepthMm": 0.0,
+          "insideExamples": [],
+          "uncertainExamples": [
+            {
+              "pointBlender": [
+                -34.85225677,
+                7.93054056,
+                11.52499962
+              ],
+              "pointClient": [
+                -34.852256774902344,
+                11.524999618530273,
+                -7.930540561676025
+              ]
+            },
+            {
+              "pointBlender": [
+                -34.98086548,
+                8.20245838,
+                11.52499962
+              ],
+              "pointClient": [
+                -34.980865478515625,
+                11.524999618530273,
+                -8.202458381652832
+              ]
+            },
+            {
+              "pointBlender": [
+                -33.09603119,
+                8.01681805,
+                11.52499962
+              ],
+              "pointClient": [
+                -33.096031188964844,
+                11.524999618530273,
+                -8.016818046569824
+              ]
+            },
+            {
+              "pointBlender": [
+                -34.80731583,
+                7.86994505,
+                14.85000038
+              ],
+              "pointClient": [
+                -34.807315826416016,
+                14.850000381469727,
+                -7.869945049285889
+              ]
+            }
+          ]
+        },
+        "geometrySemantics": {
+          "a": {
+            "kind": "solid-volume-candidate"
+          },
+          "b": {
+            "kind": "solid-volume-candidate"
+          }
+        },
+        "possibleOverlapBoundsBlender": {
+          "min": [
+            -37.5,
+            5.25,
+            9.85000038
+          ],
+          "max": [
+            37.5,
+            11.75,
+            17.25
+          ]
+        },
+        "maximumSampledPenetrationMm": 0.0,
+        "conservativeCrossingRegionBlender": {
+          "min": [
+            -37.45794678,
+            5.25,
+            14.85000038
+          ],
+          "max": [
+            37.5,
+            11.75,
+            14.85000038
+          ]
+        },
+        "sourceTrianglePairExamples": [
+          [
+            1336,
+            191741
+          ],
+          [
+            741,
+            192066
+          ],
+          [
+            1339,
+            191741
+          ],
+          [
+            1338,
+            194364
+          ],
+          [
+            1341,
+            194364
+          ],
+          [
+            1340,
+            15533
+          ],
+          [
+            1342,
+            15533
+          ],
+          [
+            1343,
+            15533
+          ]
+        ]
+      },
+      "retainedMountingBearingPlane": {
+        "sourceZMm": 14.850000381469727,
+        "allSourceTriangleCrossingsOnPlane": true,
+        "contactPurpose": "Original PCB screw mounting-column end faces against clamp underside; two protected bearing annuli remain intact.",
+        "rawNumericalClassificationRetained": true,
+        "independentReviewRequired": true
+      }
+    },
+    {
+      "sourceFile": "baseplates/abxy.blend",
+      "sourceName": "ABXY · 边中点 M2 固定螺钉 1.002",
+      "sourceSha256": "da515976fc39bab26bcb1e1bd3d68e1e7367bc7186245e5028bde98c3d034a78",
+      "result": {
+        "status": "no-intersection-observed",
+        "surfaceTrianglePairs": 0,
+        "aInsideB": {
+          "testedPoints": 0,
+          "insidePoints": 0,
+          "surfacePoints": 0,
+          "uncertainPoints": 0,
+          "allSourceComponentsRepresented": true,
+          "targetClosedConsistentlyOriented": true,
+          "maximumSampledDepthMm": 0.0,
+          "insideExamples": [],
+          "uncertainExamples": []
+        },
+        "bInsideA": {
+          "testedPoints": 0,
+          "insidePoints": 0,
+          "surfacePoints": 0,
+          "uncertainPoints": 0,
+          "allSourceComponentsRepresented": true,
+          "targetClosedConsistentlyOriented": true,
+          "maximumSampledDepthMm": 0.0,
+          "insideExamples": [],
+          "uncertainExamples": []
+        },
+        "geometrySemantics": {
+          "a": {
+            "kind": "solid-volume-candidate"
+          },
+          "b": {
+            "kind": "solid-volume-candidate"
+          }
+        },
+        "possibleOverlapBoundsBlender": {
+          "min": [
+            31.04999924,
+            11.05000019,
+            14.42799962
+          ],
+          "max": [
+            33.97000122,
+            11.75,
+            17.25
+          ]
+        },
+        "maximumSampledPenetrationMm": 0.0
+      }
+    }
+  ],
+  "limitations": [
+    "The two original mounting-column bearing planes at Z=14.85 are intentionally retained; full-source BVH may report coplanar contact, which requires a bounded interface review rather than a global collision waiver.",
+    "Radial envelope clearance bounds the full projected triangles for the relieved sleeve and pillar zones; it does not certify unreviewed source interfaces.",
+    "Retained section and seat dimensions are geometric measurements, not fastener preload, polymer strength, fatigue or printability certification."
+  ]
+}

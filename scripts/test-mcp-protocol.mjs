@@ -2,7 +2,7 @@
 // The private HTTP fixture isolates transport checks; smoke-macos.mjs tests the real WebView.
 import assert from "node:assert/strict";
 import { createServer } from "node:http";
-import { mkdtemp, writeFile, rm } from "node:fs/promises";
+import { mkdtemp, writeFile, rm, readFile } from "node:fs/promises";
 import { tmpdir } from "node:os";
 import { resolve, join } from "node:path";
 import { randomBytes } from "node:crypto";
@@ -105,11 +105,22 @@ try {
   assert.equal(client.getServerVersion().name, "mechanical-studio");
   await client.ping();
   const { tools } = await client.listTools();
-  assert.equal(tools.length, 17);
+  const expectedTools = JSON.parse(
+    await readFile(new URL("../src/mcp/tools.json", import.meta.url), "utf8"),
+  );
+  assert.deepEqual(
+    tools.map((tool) => tool.name).sort(),
+    expectedTools.map((tool) => tool.name).sort(),
+  );
   assert.equal(
     tools.find((tool) => tool.name === "configure_mechanism").inputSchema
       .properties.mechanism.properties.contact.properties.switchNormal.type,
     "array",
+  );
+  assert.equal(
+    tools.find((tool) => tool.name === "configure_mechanism").inputSchema
+      .properties.mechanism.properties.contact.properties.targetPartId.type,
+    "string",
   );
   assert.ok(
     tools

@@ -7,6 +7,7 @@ import { createInterface } from "node:readline";
 import assert from "node:assert/strict";
 import { fileURLToPath } from "node:url";
 import { createHash } from "node:crypto";
+import { drivePuretv, matchesRenderedYScale } from "./drive-puretv.mjs";
 
 assert.equal(
   process.platform,
@@ -91,6 +92,9 @@ async function waitForRuntime(predicate, label) {
   let runtime;
   while (Date.now() < deadline) {
     runtime = (await tool("get_runtime_status")).runtime;
+    assert.equal(runtime.ready, true, "Actual workbench must remain ready");
+    assert.equal(runtime.webgl, true, "Actual WebGL context must not be lost");
+    assert.deepEqual(runtime.rendererErrors, [], "Actual renderer must remain healthy");
     if (predicate(runtime)) return runtime;
     await delay(100);
   }
@@ -472,6 +476,7 @@ try {
     (runtime) =>
       runtime.loadedAssetCount >= 4 &&
       runtime.renderedPositions?.[moving.part.id]?.[1] < 14 &&
+      matchesRenderedYScale(runtime.renderedDeformations?.[spring.part.id], 1 - compound.params.travel / compound.params.freeLength) &&
       runtime.deformedPartCount >= 1,
     "WKWebView must load all uploaded STL instances and apply compound motion/deformation to real Three objects",
   );
@@ -501,7 +506,8 @@ try {
     "Compound spring must rebound on release",
   );
   await waitForRuntime(
-    (runtime) => runtime.renderedPositions?.[moving.part.id]?.[1] > 14.9,
+    (runtime) => runtime.renderedPositions?.[moving.part.id]?.[1] > 14.9 &&
+      matchesRenderedYScale(runtime.renderedDeformations?.[spring.part.id], 1),
     "Actual WKWebView moving member must return to its rest position after release",
   );
   const rest = await tool("get_project");
@@ -527,8 +533,8 @@ try {
   const catalog = (await tool("list_components")).repository;
   assert.equal(
     catalog.reduce((count, asset) => count + (asset.nodes?.length ?? 0), 0),
-    189,
-    "Original source meshes must be indexed individually",
+    catalog.reduce((count, asset) => count + asset.objects, 0),
+    "Every currently exported source mesh must be indexed individually",
   );
   const groupedAsset = catalog.find((asset) =>
     asset.nodes?.some(
@@ -573,6 +579,30 @@ try {
     );
   // Give WKWebView a frame to mount uploaded/source meshes before checking renderer errors.
   await delay(500);
+  const calibration = JSON.parse(
+    await fs.readFile(path.join(root, "docs/puretv-calibration.json"), "utf8"),
+  );
+  const puretv = await drivePuretv(tool, {
+    calibration,
+    requireEvidence: true,
+    waitForRendered: true,
+    onStep: (message) => console.log(`Packaged pureTV: ${message}`),
+  });
+  assert.equal(
+    puretv.report.execution.nativeDesktop,
+    true,
+    "The complete controller must run in the packaged Tauri WebView",
+  );
+  assert.equal(puretv.report.after.sourceEvidenceStatus, "pass");
+  assert.equal(
+    puretv.report.tests.length,
+    9,
+    "All nine source buttons must close only on contact and reopen after release",
+  );
+  await fs.writeFile(
+    path.join(root, "src-tauri/target/puretv-macos-mcp-verification.json"),
+    JSON.stringify(puretv.report, null, 2) + "\n",
+  );
   const finalStatus = (await tool("get_runtime_status")).runtime;
   assert.deepEqual(
     finalStatus.rendererErrors,
@@ -587,6 +617,13 @@ try {
       bayonet: "insert / lock / blocked withdrawal / unlock / withdraw",
       components:
         "STL import / typed instance / PBR recolor / portable export / grouped repository meshes / compound press and spring rebound",
+      puretv: {
+        sourceParts: puretv.report.sourceParts,
+        totalParts: puretv.report.totalParts,
+        buttons: puretv.report.tests.length,
+        sourceEvidence: puretv.report.after.sourceEvidenceStatus,
+        issues: puretv.report.after.issues,
+      },
     }),
   );
 } catch (error) {

@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
     inputs:
       tag:
-        description: 'Existing version tag to release, for example v0.3.0'
+        description: 'Existing version tag to release, for example v0.4.0'
         required: true
         type: string
 
@@ -84,6 +84,8 @@ jobs:
           npm run verify:demo
           npm run verify:bayonet
           npm run assets:verify
+          npm run verify:puretv-calibration
+          npm run verify:puretv-evidence
           cargo test --locked --manifest-path src-tauri/Cargo.toml --no-default-features
 
       - name: Build Apple Silicon DMG and ZIP
@@ -99,6 +101,14 @@ jobs:
 
       - name: Start packaged application and check the workbench
         run: npm run release:mac:smoke
+
+      - name: Preserve actual packaged controller verification
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: puretv-macos-mcp-verification-${{ steps.version.outputs.version }}
+          path: src-tauri/target/puretv-macos-mcp-verification.json
+          if-no-files-found: error
+          retention-days: 30
 
       - name: Upload only the verified Apple Silicon release files
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
@@ -150,7 +160,10 @@ jobs:
 
           - Lightweight Tauri 2 desktop application using the system WKWebView; no bundled Chromium or Node.js.
           - Typed components, self-contained GLB/STL uploads, required mechanical interaction parameters, and MCP access.
-          - 189 independently editable source parts, mating groups, and per-part PBR color, metalness and roughness.
+          - Independently editable source parts, mating groups, and per-part PBR color, metalness and roughness.
+          - Complete pureTV controller assembled through MCP, with nine spring/button mechanisms and separate indicator lamps.
+          - Revised source strikers, guides and shell clearances; hash-bound source geometry checks tied to the exact assembly and tested travel.
+          - Contact-driven switch actuator motion, lamp-on press and lamp-off rebound verified inside the packaged application.
           - Compound spring/button and mating mechanisms with coordinated members, press/rebound and checked insertion/rotation.
           - 3D assembly, dimensional checks, mating paths, spring/button and DC circuit verification.
           - Insert-and-turn bayonet pair with a checked 45° locking and reverse removal path.
@@ -160,7 +173,7 @@ jobs:
 
           This build has an ad-hoc signature. It is not Apple Developer ID signed or notarized. macOS may require approval under System Settings → Privacy & Security after the first open attempt. Verify the source and checksum before granting approval; do not disable Gatekeeper globally.
 
-          Geometry and physics checks use the documented parameterized models. Original hand-controller meshes remain preview/precheck assets, not a manufacturing certification.
+          Source mesh evidence applies only to the matching pureTV assembly and documented sampled paths; edits invalidate it. General components continue to use their declared parameterized proxies. Nominal spring/electrical results are not a manufacturing or material certification.
           NOTES
           dmg="release/Mechanical-Studio-${RELEASE_VERSION}-macos-arm64.dmg"
           zip="release/Mechanical-Studio-${RELEASE_VERSION}-macos-arm64.zip"

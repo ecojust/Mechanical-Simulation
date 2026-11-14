@@ -184,14 +184,44 @@ export function validateMechanismDefinition(
       throw Error(
         "接触定义需要活动撞针成员、有效局部点、单位法向、触发半径和允许压入量。",
       );
+    if (
+      c.targetPartId !== undefined &&
+      (typeof c.targetPartId !== "string" ||
+        !partIds.includes(c.targetPartId) ||
+        movingPartIds.includes(c.targetPartId) ||
+        springPartIds.includes(c.targetPartId))
+    )
+      throw Error("触发面必须引用固定角色成员。");
     contact = {
       strikerPartId: c.strikerPartId,
+      ...(c.targetPartId !== undefined
+        ? { targetPartId: c.targetPartId as string }
+        : {}),
       strikerPoint: [...c.strikerPoint],
       switchPoint: [...c.switchPoint],
       switchNormal: [...c.switchNormal],
       radius: c.radius,
       maxOvertravel: c.maxOvertravel,
     };
+    if (c.actuatorPartIds !== undefined) {
+      const actuatorPartIds = ids(c.actuatorPartIds);
+      const targetPartId = c.targetPartId ?? raw.switchPartId;
+      if (
+        !actuatorPartIds.length ||
+        typeof targetPartId !== "string" ||
+        !actuatorPartIds.includes(targetPartId) ||
+        actuatorPartIds.some(
+          (id) =>
+            !partIds.includes(id) ||
+            movingPartIds.includes(id) ||
+            springPartIds.includes(id),
+        )
+      )
+        throw Error(
+          "随动触头必须是不同的固定角色成员，并包含实际触发面所属子件。",
+        );
+      contact.actuatorPartIds = actuatorPartIds;
+    }
   }
   return {
     version: 1,
@@ -378,7 +408,13 @@ function proxyPart(m: Mechanism, moving: boolean, displacement = 0): Part {
   };
 }
 export interface MechanismContactState {
+  /** Gap to the stationary trigger plane; it remains negative during overtravel. */
   gap: number;
+  /** Gap to the visible, possibly following plunger surface. */
+  surfaceGap: number;
+  /** Unclamped axial penetration after the first contact. */
+  overtravel: number;
+  actuatorTravel: number;
   radial: number;
   triggerTravel: number;
   axisAlignment: number;
@@ -388,6 +424,7 @@ export interface MechanismContactState {
   touching: boolean;
   strikerWorld: Vec3;
   switchWorld: Vec3;
+  restSwitchWorld: Vec3;
   normalWorld: Vec3;
 }
 /** Measures the declared points on the actual member poses, never a scalar trigger threshold. */
@@ -399,7 +436,9 @@ export function mechanismContact(
   const c = m.contact;
   if (!c || !m.switchPartId) return undefined;
   const striker = project.parts.find((part) => part.id === c.strikerPartId),
-    target = project.parts.find((part) => part.id === m.switchPartId);
+    target = project.parts.find(
+      (part) => part.id === (c.targetPartId ?? m.switchPartId),
+    );
   if (
     !striker ||
     !target ||
@@ -426,11 +465,25 @@ export function mechanismContact(
   const gap = relative.dot(normal),
     radial = relative.addScaledVector(normal, -gap).length();
   const touching = gap <= 1e-6 && radial <= c.radius + 1e-6;
+  const triggerTravel =
+    alignment > 1e-8 ? Math.max(0, restGap / alignment) : Infinity;
+  const overtravel = Math.max(0, displacement - triggerTravel);
+  const aligned = alignment >= Math.cos(0.5 * RAD);
+  const hasActuator = Boolean(c.actuatorPartIds?.length);
+  const actuatorTravel =
+    hasActuator && touching && aligned
+      ? Math.min(c.maxOvertravel, overtravel)
+      : 0;
+  const currentSwitchPoint = switchPoint
+    .clone()
+    .addScaledVector(axis, -actuatorTravel);
   return {
     gap,
+    surfaceGap: position.clone().sub(currentSwitchPoint).dot(normal),
+    overtravel,
+    actuatorTravel,
     radial,
-    triggerTravel:
-      alignment > 1e-8 ? Math.max(0, restGap / alignment) : Infinity,
+    triggerTravel,
     axisAlignment: alignment,
     radius: c.radius,
     maxOvertravel: c.maxOvertravel,
@@ -438,9 +491,11 @@ export function mechanismContact(
     pressed:
       touching &&
       gap >= -c.maxOvertravel - 1e-6 &&
-      alignment >= Math.cos(0.5 * RAD),
+      (!hasActuator || overtravel <= c.maxOvertravel + 1e-6) &&
+      aligned,
     strikerWorld: vector(position),
-    switchWorld: vector(switchPoint),
+    switchWorld: vector(currentSwitchPoint),
+    restSwitchWorld: vector(switchPoint),
     normalWorld: vector(normal),
   };
 }
@@ -468,6 +523,12 @@ export function mechanismDefinitionIssues(
     fail("roles", "至少需要一个活动成员和一个固定成员。");
   if (parts.some((part) => m.movingPartIds.includes(part.id) && part.fixed))
     fail("fixed", "活动成员仍被固定，请先解除该成员的固定状态。");
+  if (
+    parts.some(
+      (part) => m.contact?.actuatorPartIds?.includes(part.id) && part.fixed,
+    )
+  )
+    fail("actuator-fixed", "随动触头仍被固定，请先解除该触头子件的固定状态。");
   if (
     parts.some(
       (part) =>
@@ -537,7 +598,9 @@ export function mechanismDefinitionIssues(
         const striker = parts.find(
             (part) => part.id === m.contact!.strikerPartId,
           )!,
-          target = parts.find((part) => part.id === m.switchPartId)!;
+          target = parts.find(
+            (part) => part.id === (m.contact!.targetPartId ?? m.switchPartId),
+          )!;
         if (
           m.contact.strikerPoint.some(
             (v, i) => Math.abs(v) > striker.size[i] / 2 + 1e-4,
@@ -598,7 +661,10 @@ export function mechanismDefinitionIssues(
         }
         if (
           m.params.travel * metrics.axisAlignment >
-          metrics.gap + m.contact.maxOvertravel + 1e-6
+            metrics.gap + m.contact.maxOvertravel + 1e-6 ||
+          (m.contact.actuatorPartIds?.length &&
+            m.params.travel >
+              metrics.triggerTravel + m.contact.maxOvertravel + 1e-6)
         )
           fail(
             "contact-overtravel",
@@ -682,6 +748,32 @@ export function mechanismIssues(project: Project): Issue[] {
   }
   return issues;
 }
+interface MechanismAnalysis {
+  issues: Issue[];
+  active: Mechanism[];
+  errorsById: Map<string, Issue[]>;
+}
+/** Reused only within one synchronous operation; callers may mutate projects between calls. */
+function analyzeMechanisms(project: Project): MechanismAnalysis {
+  const issues = mechanismIssues(project);
+  const errorsById = new Map(
+    (project.mechanisms ?? []).map((m) => [
+      m.id,
+      issues.filter(
+        (entry) =>
+          entry.severity === "error" &&
+          entry.id.startsWith(`mechanism-${m.id}-`),
+      ),
+    ]),
+  );
+  return {
+    issues,
+    errorsById,
+    active: (project.mechanisms ?? []).filter(
+      (m) => !errorsById.get(m.id)!.length,
+    ),
+  };
+}
 export interface MechanismScene {
   renderParts: Part[];
   physicsParts: Part[];
@@ -695,14 +787,16 @@ export function mechanismScene(
   project: Project,
   states: MechanismStates = {},
 ): MechanismScene {
-  const issues = mechanismIssues(project),
+  return sceneWithAnalysis(project, states, analyzeMechanisms(project));
+}
+function sceneWithAnalysis(
+  project: Project,
+  states: MechanismStates,
+  analysis: MechanismAnalysis,
+): MechanismScene {
+  const issues = [...analysis.issues],
     render = new Map(project.parts.map((p) => [p.id, p]));
-  const active = (project.mechanisms ?? []).filter(
-    (m) =>
-      !issues.some(
-        (i) => i.severity === "error" && i.id.startsWith(`mechanism-${m.id}-`),
-      ),
-  );
+  const active = analysis.active;
   const memberIds = new Set(active.flatMap((m) => m.partIds));
   const physicsParts = project.parts.filter((p) => !memberIds.has(p.id));
   const circuitParts = project.parts.filter(
@@ -752,7 +846,6 @@ export function mechanismScene(
       };
     }
     if (m.switchPartId) {
-      const source = render.get(m.switchPartId)!;
       const contact = mechanismContact(project, m, {
         [m.id]: {
           displacement,
@@ -761,6 +854,19 @@ export function mechanismScene(
         },
       })!;
       contacts[m.id] = contact;
+      for (const id of m.contact?.actuatorPartIds ?? []) {
+        const part = render.get(id)!;
+        render.set(id, {
+          ...part,
+          position: vector(
+            new Vector3(...part.position).addScaledVector(
+              axis,
+              -contact.actuatorTravel,
+            ),
+          ),
+        });
+      }
+      const source = render.get(m.switchPartId)!;
       circuitParts.push({
         ...source,
         kind: "button",
@@ -840,11 +946,12 @@ export function stepMechanisms(
         },
       ],
     };
+  const analysis = analyzeMechanisms(project);
+  const held = new Set(heldIds);
+  let physicsParts: Part[] | undefined;
   for (const m of project.mechanisms ?? []) {
     if (m.kind !== "press") continue;
-    const configuration = mechanismIssues(project).filter(
-      (i) => i.severity === "error" && i.id.startsWith(`mechanism-${m.id}-`),
-    );
+    const configuration = analysis.errorsById.get(m.id)!;
     if (configuration.length) {
       issues.push(...configuration);
       continue;
@@ -864,26 +971,34 @@ export function stepMechanisms(
       issues.push(issue(m, "state", "压缩状态须在有效行程范围内。"));
       continue;
     }
+    // Idle keys still pass definition/state checks, but need no swept-motion query.
+    if (
+      !held.has(m.id) &&
+      previous.displacement === 0 &&
+      previous.velocity === 0
+    ) {
+      next[m.id] = { displacement: 0, velocity: 0, force: 0 };
+      continue;
+    }
     const candidate = stepSpring(previous, dt, {
       stiffness: m.params.stiffness,
       mass: m.params.mass,
       damping: m.params.damping,
       travel: m.params.travel,
-      force: heldIds.includes(m.id)
-        ? m.params.stiffness * m.params.travel * 1.1
-        : 0,
+      force: held.has(m.id) ? m.params.stiffness * m.params.travel * 1.1 : 0,
     });
-    const before = mechanismScene(project, next).physicsParts;
-    const after = mechanismScene(project, {
-      ...next,
-      [m.id]: candidate,
-    }).physicsParts;
-    const moved = after.find((p) => p.id === proxyId(m, true))!;
-    const check = validateMotion(before, moved.id, moved);
+    // All keys see prior accepted moves in this same step; no state is cached across calls.
+    physicsParts ??= sceneWithAnalysis(project, next, analysis).physicsParts;
+    const moved = proxyPart(m, true, candidate.displacement);
+    const check = validateMotion(physicsParts, moved.id, moved);
     if (!check.allowed) {
       next[m.id] = { ...previous, velocity: 0 };
       issues.push(...mapIssues(project, check.issues));
-    } else next[m.id] = candidate;
+    } else {
+      next[m.id] = candidate;
+      const index = physicsParts.findIndex((part) => part.id === moved.id);
+      physicsParts[index] = moved;
+    }
   }
   return { states: next, issues };
 }

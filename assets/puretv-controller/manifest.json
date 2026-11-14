@@ -5,8 +5,8 @@
   "assets": [
     {
       "file": "buttons/left.blend",
-      "sha256": "1a120a04753624d61892a707ba9c94dec803b5d667ab762bb210510e5fc02c1c",
-      "bytes": 32275779,
+      "sha256": "3101d6492dd00cbd2be772090602374be193f264de2eb092fc5eb76f4e9015fc",
+      "bytes": 32463186,
       "objects": [
         {
           "source": "左 · PS5 焊脚占位.009",
@@ -189,36 +189,6 @@
           ]
         },
         {
-          "source": "左 · PS5 弹簧定位环.002",
-          "exported": "左 · PS5 弹簧定位环.004",
-          "world_matrix": [
-            [
-              1.0,
-              0.0,
-              0.0,
-              0.0
-            ],
-            [
-              0.0,
-              1.0,
-              0.0,
-              0.0
-            ],
-            [
-              0.0,
-              0.0,
-              1.0,
-              11.800000190734863
-            ],
-            [
-              0.0,
-              0.0,
-              0.0,
-              1.0
-            ]
-          ]
-        },
-        {
           "source": "左 · PS5 回位弹簧.001",
           "exported": "左 · PS5 回位弹簧.003",
           "world_matrix": [
@@ -306,6 +276,9 @@
               0.0,
               1.0
             ]
+          ],
+          "merged_sources": [
+            "左 · PS5 弹簧定位环.004"
           ]
         },
         {
@@ -398,12 +371,13 @@
             ]
           ]
         }
-      ]
+      ],
+      "mechanicalRevision": "striker075-locatorunion-springcaps-dpadrelief-roundplunger-v2"
     },
     {
       "file": "buttons/right.blend",
-      "sha256": "6e898c9bf18df6bca66a540bb6dbda4071cb7bb086b5b90e8aa235667bae88bb",
-      "bytes": 32197718,
+      "sha256": "84e6de6ba5b1e17301acd0cc4f404cc74fb45bf02185f13d17a1240ae1311144",
+      "bytes": 32384874,
       "objects": [
         {
           "source": "右 · PS5 焊脚占位.001",
@@ -586,36 +560,6 @@
           ]
         },
         {
-          "source": "右 · PS5 弹簧定位环.001",
-          "exported": "右 · PS5 弹簧定位环.003",
-          "world_matrix": [
-            [
-              1.0,
-              0.0,
-              0.0,
-              0.0
-            ],
-            [
-              0.0,
-              1.0,
-              0.0,
-              0.0
-            ],
-            [
-              0.0,
-              0.0,
-              1.0,
-              7.199999809265137
-            ],
-            [
-              0.0,
-              0.0,
-              0.0,
-              1.0
-            ]
-          ]
-        },
-        {
           "source": "右 · PS5 回位弹簧.001",
           "exported": "右 · PS5 回位弹簧.003",
           "world_matrix": [
@@ -703,6 +647,9 @@
               0.0,
               1.0
             ]
+          ],
+          "merged_sources": [
+            "右 · PS5 弹簧定位环.003"
           ]
         },
         {
@@ -795,12 +742,13 @@
             ]
           ]
         }
-      ]
+      ],
+      "mechanicalRevision": "striker075-locatorunion-springcaps-dpadrelief-roundplunger-v2"
     },
     {
       "file": "buttons/down.blend",
-      "sha256": "4f0bd1b9f73b9769b98ba2501d7b1f3953da5d4a5734c9fbfc88a13003d58438",
-      "bytes": 32361531,
+      "sha256": "ee9f528457ae365735ba772f891ee3de180854abbd1afdd155862fed2de22c47",
+      "bytes": 32549678,
       "objects": [
         {
           "source": "下 · PS5 焊脚占位.001",
@@ -983,36 +931,6 @@
           ]
         },
         {
-          "source": "下 · PS5 弹簧定位环.001",
-          "exported": "下 · PS5 弹簧定位环.003",
-          "world_matrix": [
-            [
-              1.0,
-              0.0,
-              0.0,
-              0.0
-            ],
-            [
-              0.0,
-              1.0,
-              0.0,
-              0.0
-            ],
-            [
-              0.0,
-              0.0,
-              1.0,
-              10.300000190734863
-            ],
-            [
-              0.0,
-              0.0,
-              0.0,
-              1.0
-            ]
-          ]
-        },
-        {
           "source": "下 · PS5 回位弹簧.001",
           "exported": "下 · PS5 回位弹簧.003",
           "world_matrix": [
@@ -1100,6 +1018,9 @@
               0.0,
               1.0
             ]
+          ],
+          "merged_sources": [
+            "下 · PS5 弹簧定位环.003"
           ]
         },
         {
@@ -1192,12 +1113,13 @@
             ]
           ]
         }
-      ]
+      ],
+      "mechanicalRevision": "striker075-locatorunion-springcaps-dpadrelief-roundplunger-v2"
     },
     {
       "file": "buttons/up.blend",
-      "sha256": "c393f1a584c7463ba56a68ac9e97a1912ec284886ab30951b5767ad4d93df534",
-      "bytes": 32030111,
+      "sha256": "8ecd5118238b99caffe3ad7b58998e6b07ddd6be4eff21f70a85a8d08822b909",
+      "bytes": 32218500,
       "objects": [
         {
           "source": "上 · PS5 焊脚占位.001",
@@ -1380,36 +1302,6 @@
           ]
         },
         {
-          "source": "上 · PS5 弹簧定位环.001",
-          "exported": "上 · PS5 弹簧定位环.003",
-          "world_matrix": [
-            [
-              1.0,
-              0.0,
-              0.0,
-              0.0
-            ],
-            [
-              0.0,
-              1.0,
-              0.0,
-              0.0
-            ],
-            [
-              0.0,
-              0.0,
-              1.0,
-              6.099999904632568
-            ],
-            [
-              0.0,
-              0.0,
-              0.0,
-              1.0
-            ]
-          ]
-        },
-        {
           "source": "上 · PS5 回位弹簧.001",
           "exported": "上 · PS5 回位弹簧.003",
           "world_matrix": [
@@ -1497,6 +1389,9 @@
               0.0,
               1.0
             ]
+          ],
+          "merged_sources": [
+            "上 · PS5 弹簧定位环.003"
           ]
         },
         {
@@ -1589,12 +1484,13 @@
             ]
           ]
         }
-      ]
+      ],
+      "mechanicalRevision": "striker075-locatorunion-springcaps-dpadrelief-roundplunger-v2"
     },
     {
       "file": "buttons/a.blend",
-      "sha256": "7e9fb6516fcdfcb77d91b5646995c585383201b825815be90e5463f84122be01",
-      "bytes": 32274743,
+      "sha256": "5e50ca2bc37b022d2a8fb85c983a08d3c66100d3705d23d3e9467316516b4508",
+      "bytes": 32352215,
       "objects": [
         {
           "source": "键帽标识 · A",
@@ -1654,6 +1550,9 @@
               0.0,
               1.0
             ]
+          ],
+          "merged_sources": [
+            "A · 同款 弹簧定位环.002"
           ]
         },
         {
@@ -1837,36 +1736,6 @@
           ]
         },
         {
-          "source": "A · 同款 弹簧定位环",
-          "exported": "A · 同款 弹簧定位环.002",
-          "world_matrix": [
-            [
-              1.0,
-              0.0,
-              0.0,
-              92.19999694824219
-            ],
-            [
-              0.0,
-              1.0,
-              0.0,
-              -12.5
-            ],
-            [
-              0.0,
-              0.0,
-              1.0,
-              14.350000381469727
-            ],
-            [
-              0.0,
-              0.0,
-              0.0,
-              1.0
-            ]
-          ]
-        },
-        {
           "source": "A · 同款 回位弹簧",
           "exported": "A · 同款 回位弹簧.002",
           "world_matrix": [
@@ -2016,12 +1885,13 @@
             ]
           ]
         }
-      ]
+      ],
+      "mechanicalRevision": "striker075-locatorunion-springcaps-dpadrelief-roundplunger-v2"
     },
     {
       "file": "buttons/b.blend",
-      "sha256": "e3c94902e44715351cfde6ac768ed5aa8ea33616fd0cccce6ccdf4b547f23a89",
-      "bytes": 32267457,
+      "sha256": "ec5cbb6447b4a2025d85edae8fb7cd11f97d9c6e2ca4a1a7b93001bef20d083d",
+      "bytes": 32343317,
       "objects": [
         {
           "source": "键帽标识 · B",
@@ -2081,6 +1951,9 @@
               0.0,
               1.0
             ]
+          ],
+          "merged_sources": [
+            "B · 同款 弹簧定位环.002"
           ]
         },
         {
@@ -2264,36 +2137,6 @@
           ]
         },
         {
-          "source": "B · 同款 弹簧定位环",
-          "exported": "B · 同款 弹簧定位环.002",
-          "world_matrix": [
-            [
-              1.0,
-              0.0,
-              0.0,
-              103.69999694824219
-            ],
-            [
-              0.0,
-              1.0,
-              0.0,
-              -1.0
-            ],
-            [
-              0.0,
-              0.0,
-              1.0,
-              14.350000381469727
-            ],
-            [
-              0.0,
-              0.0,
-              0.0,
-              1.0
-            ]
-          ]
-        },
-        {
           "source": "B · 同款 回位弹簧",
           "exported": "B · 同款 回位弹簧.002",
           "world_matrix": [
@@ -2443,12 +2286,13 @@
             ]
           ]
         }
-      ]
+      ],
+      "mechanicalRevision": "striker075-locatorunion-springcaps-dpadrelief-roundplunger-v2"
     },
     {
       "file": "buttons/x.blend",
-      "sha256": "256b0777bb5927606b63cee9ec74e9457a157c94af63b74c29187d7d3d0bcd20",
-      "bytes": 32268017,
+      "sha256": "93c1bc7e9ee279a2f1f3f44808639889c6816e210e6bea1f0b304585b4343cbb",
+      "bytes": 32345264,
       "objects": [
         {
           "source": "键帽标识 · X",
@@ -2508,6 +2352,9 @@
               0.0,
               1.0
             ]
+          ],
+          "merged_sources": [
+            "X · 同款 弹簧定位环.002"
           ]
         },
         {
@@ -2691,36 +2538,6 @@
           ]
         },
         {
-          "source": "X · 同款 弹簧定位环",
-          "exported": "X · 同款 弹簧定位环.002",
-          "world_matrix": [
-            [
-              1.0,
-              0.0,
-              0.0,
-              80.69999694824219
-            ],
-            [
-              0.0,
-              1.0,
-              0.0,
-              -1.0
-            ],
-            [
-              0.0,
-              0.0,
-              1.0,
-              14.350000381469727
-            ],
-            [
-              0.0,
-              0.0,
-              0.0,
-              1.0
-            ]
-          ]
-        },
-        {
           "source": "X · 同款 回位弹簧",
           "exported": "X · 同款 回位弹簧.002",
           "world_matrix": [
@@ -2870,12 +2687,13 @@
             ]
           ]
         }
-      ]
+      ],
+      "mechanicalRevision": "striker075-locatorunion-springcaps-dpadrelief-roundplunger-v2"
     },
     {
       "file": "buttons/y.blend",
-      "sha256": "382b00f14733cc034d744d5499d4c53f178776008f5c2d32ad21e17bda25944f",
-      "bytes": 32191766,
+      "sha256": "16333679918ad7bbd8bbedf74becb50889a95044192ee0a2dcb456a61e85ee01",
+      "bytes": 32267819,
       "objects": [
         {
           "source": "键帽标识 · Y",
@@ -2935,6 +2753,9 @@
               0.0,
               1.0
             ]
+          ],
+          "merged_sources": [
+            "Y · 同款 弹簧定位环.002"
           ]
         },
         {
@@ -3118,36 +2939,6 @@
           ]
         },
         {
-          "source": "Y · 同款 弹簧定位环",
-          "exported": "Y · 同款 弹簧定位环.002",
-          "world_matrix": [
-            [
-              1.0,
-              0.0,
-              0.0,
-              92.19999694824219
-            ],
-            [
-              0.0,
-              1.0,
-              0.0,
-              10.5
-            ],
-            [
-              0.0,
-              0.0,
-              1.0,
-              14.350000381469727
-            ],
-            [
-              0.0,
-              0.0,
-              0.0,
-              1.0
-            ]
-          ]
-        },
-        {
           "source": "Y · 同款 回位弹簧",
           "exported": "Y · 同款 回位弹簧.002",
           "world_matrix": [
@@ -3297,12 +3088,13 @@
             ]
           ]
         }
-      ]
+      ],
+      "mechanicalRevision": "striker075-locatorunion-springcaps-dpadrelief-roundplunger-v2"
     },
     {
       "file": "buttons/confirm.blend",
-      "sha256": "d5a318afe1870ac36a5b7261c79fcd89bd55cc9f678b95e2fdd0e37e746db61a",
-      "bytes": 97482,
+      "sha256": "6b42811a2e4f6bc66f0a5edcf5fd7de0226795ebdfeca60e4bb6c36ae8751865",
+      "bytes": 186494,
       "objects": [
         {
           "source": "确认 · 键帽.005",
@@ -3453,8 +3245,71 @@
               1.0
             ]
           ]
+        },
+        {
+          "source": "确认 · GPIO 金属焊脚.005",
+          "addedBy": "scripts/repair-puretv-confirm-cavity.py",
+          "exported": "确认 · GPIO 金属焊脚.005",
+          "world_matrix": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              2.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              5.5
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              19.675212860107422
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        },
+        {
+          "source": "确认 · GND 金属焊脚.005",
+          "addedBy": "scripts/repair-puretv-confirm-cavity.py",
+          "exported": "确认 · GND 金属焊脚.005",
+          "world_matrix": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              -2.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              5.5
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              19.675212860107422
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
         }
-      ]
+      ],
+      "mechanicalRevision": "confirm-switch-cavity-and-independent-metal-terminals-v4"
     },
     {
       "file": "baseplates/dpad.blend",
@@ -3772,8 +3627,8 @@
     },
     {
       "file": "housing/top.blend",
-      "sha256": "1e44d562e5bb8d40cf9ec9a889203bed911c0716705b036f0ab681b32156b036",
-      "bytes": 23648198,
+      "sha256": "c988fa32f19567f0ed0f913609615723f366a20506386f1e3eed0fdd26b05cce",
+      "bytes": 23739983,
       "objects": [
         {
           "source": "pureTV · 按键区圆滑过渡上壳",
@@ -3805,12 +3660,13 @@
             ]
           ]
         }
-      ]
+      ],
+      "mechanicalRevision": "confirm-dual-ear-lock-seat-positive-clearance-v3"
     },
     {
       "file": "housing/bottom.blend",
-      "sha256": "7607b598496754c90b3b978eff5c6af482329406724cf3cb4392919d33bc8948",
-      "bytes": 6495333,
+      "sha256": "44bb57f9b1571b7abb70571a5a90344e3d0ea3733c3bac26c680fec62c0e0514",
+      "bytes": 6330187,
       "objects": [
         {
           "source": "底壳 · 合壳.005",
@@ -3842,12 +3698,13 @@
             ]
           ]
         }
-      ]
+      ],
+      "mechanicalRevision": "abxy1-pilot-wall-axis-restored-v1"
     },
     {
       "file": "electronics/esp32-mount.blend",
-      "sha256": "84c4bdaa1b598067dbc804d40aa5a1f26c37e9c43dc82803a9d8db8a8a5b5715",
-      "bytes": 100957,
+      "sha256": "1f6ad69caa250b89d2b403c904ab37ec21a4e4437df757080f619edf2bd0e64c",
+      "bytes": 107616,
       "objects": [
         {
           "source": "ESP32 · 48.2 × 27.9 PCB.003",
@@ -5169,12 +5026,13 @@
             ]
           ]
         }
-      ]
+      ],
+      "mechanicalRevision": "pcb-clamp-relief-and-usb-seated-v2"
     },
     {
       "file": "electronics/harness.blend",
-      "sha256": "dd1bad29b6697aaa51c6cef62e17597b46dc2d717cfc394146f3d1458e7a4e48",
-      "bytes": 71822,
+      "sha256": "2dbed56630b7a16391a584b98b12e2b756cde3a632bf063bd81d885885d3aa91",
+      "bytes": 192933,
       "objects": [
         {
           "source": "确认 · GPIO.003",
@@ -5777,7 +5635,9 @@
           ]
         }
       ],
-      "source_file": "pureTV-PS5-harness-routed.blend"
+      "source_file": "pureTV-PS5-harness-routed.blend",
+      "mechanicalRevision": "harness-routing-and-self-intersection-repair-v3"
     }
-  ]
+  ],
+  "mechanicalRevision": "puretv-dimension-contact-correction-v2"
 }

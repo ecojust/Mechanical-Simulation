@@ -1,0 +1,1186 @@
+{
+  "schemaVersion": 1,
+  "source": "assets/puretv-controller/buttons/confirm.blend",
+  "target": "确认 · 旋锁座.005",
+  "sourceSha256Before": "c9065577d57727318698819b655a4e600ea040f8aa846f157258f29b1800e347",
+  "method": "Exact Boolean difference of the actual fixed switch body world AABB expanded by0.30mm. Full source mesh re-evaluation, BVH triangle intersections and bounded three-ray winding interior witnesses. No decimation or collider exclusion.",
+  "cavitySourceMin": [
+    -3.3,
+    2.2,
+    19.750424098968505
+  ],
+  "cavitySourceMax": [
+    3.3,
+    8.8,
+    24.65042428970337
+  ],
+  "nominalClearanceMm": 0.3,
+  "beforeSeat": {
+    "name": "确认 · 旋锁座.005",
+    "vertices": 1015,
+    "triangles": 2030,
+    "closedTopology": true,
+    "sourceMin": [
+      -7.2923397537609596,
+      -2.071275758568655,
+      21.250000805079246
+    ],
+    "sourceMax": [
+      7.292341454506,
+      13.07127409374027,
+      27.650002151311135
+    ],
+    "clientCenter": [
+      8.503725204001e-07,
+      24.45000147819519,
+      -5.499999167585807
+    ],
+    "clientSize": [
+      14.58468120826696,
+      6.400001346231889,
+      15.142549852308925
+    ],
+    "signedVolumeMm3": 830.3472329733994
+  },
+  "afterSeat": {
+    "name": "确认 · 旋锁座.005",
+    "vertices": 1056,
+    "triangles": 2112,
+    "closedTopology": true,
+    "sourceMin": [
+      -7.2923397537609596,
+      -2.071275758568655,
+      21.250000805079246
+    ],
+    "sourceMax": [
+      7.292341454506,
+      13.07127409374027,
+      27.650002151311135
+    ],
+    "clientCenter": [
+      8.503725204001e-07,
+      24.45000147819519,
+      -5.499999167585807
+    ],
+    "clientSize": [
+      14.58468120826696,
+      6.400001346231889,
+      15.142549852308925
+    ],
+    "signedVolumeMm3": 801.8278101264704
+  },
+  "afterTopology": {
+    "components": [
+      1056
+    ],
+    "boundaryEdges": 0,
+    "nonManifoldEdges": 0
+  },
+  "beforePlasticBody": {
+    "name": "确认 · 常开开关.005",
+    "vertices": 8,
+    "triangles": 12,
+    "closedTopology": true,
+    "sourceMin": [
+      -3.0,
+      2.5,
+      20.050424098968506
+    ],
+    "sourceMax": [
+      3.0,
+      8.5,
+      24.35042428970337
+    ],
+    "clientCenter": [
+      0.0,
+      22.200424194335938,
+      -5.5
+    ],
+    "clientSize": [
+      6.0,
+      4.300000190734863,
+      6.0
+    ],
+    "signedVolumeMm3": 154.80000686645508
+  },
+  "afterPlasticBody": {
+    "name": "确认 · 常开开关.005",
+    "vertices": 24,
+    "triangles": 44,
+    "closedTopology": true,
+    "sourceMin": [
+      -3.0,
+      2.5,
+      20.050424098968506
+    ],
+    "sourceMax": [
+      3.0,
+      8.5,
+      24.35042428970337
+    ],
+    "clientCenter": [
+      0.0,
+      22.200424194335938,
+      -5.5
+    ],
+    "clientSize": [
+      6.0,
+      4.300000190734863,
+      6.0
+    ],
+    "signedVolumeMm3": 154.5465061737298
+  },
+  "afterPlasticBodyTopology": {
+    "components": [
+      24
+    ],
+    "boundaryEdges": 0,
+    "nonManifoldEdges": 0
+  },
+  "beforeBodyIntersection": {
+    "surfaceTrianglePairs": 219,
+    "insideVertices": 32,
+    "sampledVertices": 32,
+    "maximumSampledPenetrationMm": 1.0868260860443115,
+    "penetrationWitnesses": [
+      {
+        "pointSource": [
+          3.0,
+          8.5,
+          24.35042381286621
+        ],
+        "surfaceSource": [
+          2.2727713584899902,
+          7.692330837249756,
+          24.35042381286621
+        ],
+        "depthMm": 1.0868260860443115,
+        "pointObject": "确认 · 常开开关.005",
+        "containingObject": "确认 · 旋锁座.005"
+      },
+      {
+        "pointSource": [
+          -3.0,
+          2.5,
+          24.35042381286621
+        ],
+        "surfaceSource": [
+          -2.2727718353271484,
+          3.3076694011688232,
+          24.35042381286621
+        ],
+        "depthMm": 1.086825966835022,
+        "pointObject": "确认 · 常开开关.005",
+        "containingObject": "确认 · 旋锁座.005"
+      },
+      {
+        "pointSource": [
+          3.0,
+          2.5,
+          24.35042381286621
+        ],
+        "surfaceSource": [
+          2.707564353942871,
+          2.2721993923187256,
+          24.35000228881836
+        ],
+        "depthMm": 0.37069109082221985,
+        "pointObject": "确认 · 常开开关.005",
+        "containingObject": "确认 · 旋锁座.005"
+      },
+      {
+        "pointSource": [
+          -3.0,
+          8.5,
+          24.35042381286621
+        ],
+        "surfaceSource": [
+          -2.7075626850128174,
+          8.727798461914062,
+          24.350000381469727
+        ],
+        "depthMm": 0.37069109082221985,
+        "pointObject": "确认 · 常开开关.005",
+        "containingObject": "确认 · 旋锁座.005"
+      },
+      {
+        "pointSource": [
+          -2.850905179977417,
+          3.8282227516174316,
+          21.250001907348633
+        ],
+        "surfaceSource": [
+          -3.0,
+          3.8282227516174316,
+          21.250001907348633
+        ],
+        "depthMm": 0.149094820022583,
+        "pointObject": "确认 · 旋锁座.005",
+        "containingObject": "确认 · 常开开关.005"
+      },
+      {
+        "pointSource": [
+          -2.850905418395996,
+          3.8282229900360107,
+          23.200000762939453
+        ],
+        "surfaceSource": [
+          -3.0,
+          3.82822322845459,
+          23.200000762939453
+        ],
+        "depthMm": 0.1490945816040039,
+        "pointObject": "确认 · 旋锁座.005",
+        "containingObject": "确认 · 常开开关.005"
+      },
+      {
+        "pointSource": [
+          2.85090708732605,
+          7.171774864196777,
+          23.200002670288086
+        ],
+        "surfaceSource": [
+          3.0,
+          7.171774864196777,
+          23.200002670288086
+        ],
+        "depthMm": 0.1490929126739502,
+        "pointObject": "确认 · 旋锁座.005",
+        "containingObject": "确认 · 常开开关.005"
+      },
+      {
+        "pointSource": [
+          2.850907325744629,
+          7.171774387359619,
+          21.250001907348633
+        ],
+        "surfaceSource": [
+          3.0,
+          7.171774864196777,
+          21.250001907348633
+        ],
+        "depthMm": 0.1490926742553711,
+        "pointObject": "确认 · 旋锁座.005",
+        "containingObject": "确认 · 常开开关.005"
+      }
+    ],
+    "status": "penetration-evidence",
+    "sourceCrossingRegionMin": [
+      -5.567252118175098,
+      0.5799435063548408,
+      21.250001259700923
+    ],
+    "sourceCrossingRegionMax": [
+      6.324511057808145,
+      12.586993571478107,
+      25.15000200151571
+    ]
+  },
+  "afterBodyIntersection": {
+    "surfaceTrianglePairs": 0,
+    "insideVertices": 0,
+    "sampledVertices": 4,
+    "maximumSampledPenetrationMm": 0,
+    "penetrationWitnesses": [],
+    "status": "no-intersection-found"
+  },
+  "protectedGeometry": {
+    "external-mount": {
+      "beforeTriangles": 410,
+      "afterTriangles": 410,
+      "identicalWorldVerticesAt1e8Mm": true,
+      "identicalWorldTrianglesAt1e8Mm": true,
+      "maximumBidirectionalSurfaceSampleChangeMm": 1.4533758985635359e-05,
+      "note": "Original evaluated diagonals are frozen before Boolean. Triangle coordinates, not triangle indices, are compared exactly at1e-8mm; BVH nearest-point distances on identical thin triangles have floating-point noise."
+    },
+    "upper-guide-and-spring-support": {
+      "beforeTriangles": 756,
+      "afterTriangles": 756,
+      "identicalWorldVerticesAt1e8Mm": true,
+      "identicalWorldTrianglesAt1e8Mm": true,
+      "maximumBidirectionalSurfaceSampleChangeMm": 0.0017215597908943892,
+      "note": "Original evaluated diagonals are frozen before Boolean. Triangle coordinates, not triangle indices, are compared exactly at1e-8mm; BVH nearest-point distances on identical thin triangles have floating-point noise."
+    }
+  },
+  "unchangedObjectGeometrySha256": {
+    "确认 · 键帽.007": "29d41094f20a52c0ce14736737dcb8f76ac4d549a834f56b5284c5857095ae37",
+    "确认 · 开关触头.005": "155ab09e14dcb47fa8618ddaae127e254435b76dc47d943bc256933f09fc7e04",
+    "确认 · 回弹压簧.005": "497a052b99da555db834165bd7575c5c0a1e0086345e365e2da10b896eab0ec7"
+  },
+  "bodyClearanceWitnesses": [
+    {
+      "bodySourcePoint": [
+        -3.0,
+        2.5,
+        20.050424098968506
+      ],
+      "seatSourcePoint": [
+        -3.3000001907348633,
+        2.5,
+        21.250001907348633
+      ],
+      "distanceMm": 1.2365217208862305,
+      "seatTriangle": 425
+    },
+    {
+      "bodySourcePoint": [
+        3.0,
+        2.5,
+        20.050424098968506
+      ],
+      "seatSourcePoint": [
+        2.999999761581421,
+        2.200000047683716,
+        21.250001907348633
+      ],
+      "distanceMm": 1.236521601676941,
+      "seatTriangle": 371
+    },
+    {
+      "bodySourcePoint": [
+        3.0,
+        8.5,
+        20.050424098968506
+      ],
+      "seatSourcePoint": [
+        3.3000001907348633,
+        8.5,
+        21.250001907348633
+      ],
+      "distanceMm": 1.2365217208862305,
+      "seatTriangle": 293
+    },
+    {
+      "bodySourcePoint": [
+        -3.0,
+        8.5,
+        20.050424098968506
+      ],
+      "seatSourcePoint": [
+        -3.0,
+        8.800000190734863,
+        21.250001907348633
+      ],
+      "distanceMm": 1.2365217208862305,
+      "seatTriangle": 507
+    },
+    {
+      "bodySourcePoint": [
+        -3.0,
+        2.5,
+        24.35042428970337
+      ],
+      "seatSourcePoint": [
+        -3.000000238418579,
+        2.200000286102295,
+        24.35042381286621
+      ],
+      "distanceMm": 0.2999997138977051,
+      "seatTriangle": 2105
+    },
+    {
+      "bodySourcePoint": [
+        3.0,
+        2.5,
+        24.35042428970337
+      ],
+      "seatSourcePoint": [
+        3.299999713897705,
+        2.5,
+        24.35042381286621
+      ],
+      "distanceMm": 0.2999997138977051,
+      "seatTriangle": 2060
+    },
+    {
+      "bodySourcePoint": [
+        3.0,
+        8.5,
+        24.35042428970337
+      ],
+      "seatSourcePoint": [
+        3.299999713897705,
+        8.5,
+        24.35042381286621
+      ],
+      "distanceMm": 0.2999997138977051,
+      "seatTriangle": 2048
+    },
+    {
+      "bodySourcePoint": [
+        -3.0,
+        8.5,
+        24.35042428970337
+      ],
+      "seatSourcePoint": [
+        -3.0,
+        8.800000190734863,
+        24.35042381286621
+      ],
+      "distanceMm": 0.3000001907348633,
+      "seatTriangle": 2036
+    },
+    {
+      "bodySourcePoint": [
+        1.0,
+        6.5,
+        20.050424098968506
+      ],
+      "seatSourcePoint": [
+        1.0425792932510376,
+        8.800000190734863,
+        21.250001907348633
+      ],
+      "distanceMm": 2.5943784713745117,
+      "seatTriangle": 1270
+    },
+    {
+      "bodySourcePoint": [
+        -1.0,
+        4.5,
+        20.050424098968506
+      ],
+      "seatSourcePoint": [
+        -1.0425801277160645,
+        2.1999998092651367,
+        21.250001907348633
+      ],
+      "distanceMm": 2.5943784713745117,
+      "seatTriangle": 2104
+    },
+    {
+      "bodySourcePoint": [
+        1.0,
+        2.5,
+        21.483757495880127
+      ],
+      "seatSourcePoint": [
+        1.2674124240875244,
+        2.1999998092651367,
+        21.48375701904297
+      ],
+      "distanceMm": 0.40188246965408325,
+      "seatTriangle": 1281
+    },
+    {
+      "bodySourcePoint": [
+        -1.0,
+        2.5,
+        22.917090892791748
+      ],
+      "seatSourcePoint": [
+        -1.0425803661346436,
+        2.200000047683716,
+        22.917091369628906
+      ],
+      "distanceMm": 0.30300670862197876,
+      "seatTriangle": 2107
+    },
+    {
+      "bodySourcePoint": [
+        3.0,
+        6.5,
+        21.483757495880127
+      ],
+      "seatSourcePoint": [
+        3.816995620727539,
+        6.301904678344727,
+        21.48375701904297
+      ],
+      "distanceMm": 0.8406684994697571,
+      "seatTriangle": 1317
+    },
+    {
+      "bodySourcePoint": [
+        3.0,
+        4.5,
+        22.917090892791748
+      ],
+      "seatSourcePoint": [
+        3.299999952316284,
+        4.457417964935303,
+        22.917091369628906
+      ],
+      "distanceMm": 0.30300694704055786,
+      "seatTriangle": 1283
+    },
+    {
+      "bodySourcePoint": [
+        -1.0,
+        8.5,
+        21.483757495880127
+      ],
+      "seatSourcePoint": [
+        -1.2674074172973633,
+        8.800000190734863,
+        21.48375701904297
+      ],
+      "distanceMm": 0.40187913179397583,
+      "seatTriangle": 1263
+    },
+    {
+      "bodySourcePoint": [
+        1.0,
+        8.5,
+        22.917090892791748
+      ],
+      "seatSourcePoint": [
+        1.0425790548324585,
+        8.800000190734863,
+        22.917091369628906
+      ],
+      "distanceMm": 0.30300673842430115,
+      "seatTriangle": 1268
+    },
+    {
+      "bodySourcePoint": [
+        -3.0,
+        4.5,
+        21.483757495880127
+      ],
+      "seatSourcePoint": [
+        -3.816993236541748,
+        4.698092460632324,
+        21.48375701904297
+      ],
+      "distanceMm": 0.8406655192375183,
+      "seatTriangle": 1284
+    },
+    {
+      "bodySourcePoint": [
+        -3.0,
+        6.5,
+        22.917090892791748
+      ],
+      "seatSourcePoint": [
+        -3.3000004291534424,
+        6.542576789855957,
+        22.917091369628906
+      ],
+      "distanceMm": 0.30300667881965637,
+      "seatTriangle": 1944
+    },
+    {
+      "bodySourcePoint": [
+        1.0,
+        4.5,
+        24.35042428970337
+      ],
+      "seatSourcePoint": [
+        1.343008041381836,
+        4.1592302322387695,
+        25.150001525878906
+      ],
+      "distanceMm": 0.9343998432159424,
+      "seatTriangle": 1204
+    },
+    {
+      "bodySourcePoint": [
+        -1.0,
+        6.5,
+        24.35042428970337
+      ],
+      "seatSourcePoint": [
+        -1.3430061340332031,
+        6.840768337249756,
+        25.150001525878906
+      ],
+      "distanceMm": 0.9343986511230469,
+      "seatTriangle": 899
+    }
+  ],
+  "minimumSampledBodyClearanceMm": 0.2999997138977051,
+  "roofHeights": {
+    "centralGuideStepSourceZ": 25.15,
+    "springSupportSourceZ": 25.8,
+    "cavityTopSourceZ": 24.65042428970337,
+    "centralGuideStepAboveCavityMm": 0.4995757102966287,
+    "springSupportAboveCavityMm": 1.1495757102966309,
+    "note": "Vertical section distances at the named levels; not a global minimum wall-thickness or structural-strength certificate."
+  },
+  "pressSamples": [
+    {
+      "displacementMm": 0,
+      "capAgainstSeat": {
+        "surfaceTrianglePairs": 0,
+        "insideVertices": 0,
+        "sampledVertices": 142,
+        "maximumSampledPenetrationMm": 0,
+        "penetrationWitnesses": [],
+        "status": "no-intersection-found"
+      },
+      "springAgainstSeat": {
+        "surfaceTrianglePairs": 0,
+        "insideVertices": 0,
+        "sampledVertices": 731,
+        "maximumSampledPenetrationMm": 0,
+        "penetrationWitnesses": [],
+        "status": "no-intersection-found"
+      },
+      "actuatorAgainstSeat": {
+        "surfaceTrianglePairs": 0,
+        "insideVertices": 0,
+        "sampledVertices": 8,
+        "maximumSampledPenetrationMm": 0,
+        "penetrationWitnesses": [],
+        "status": "no-intersection-found"
+      }
+    },
+    {
+      "displacementMm": 0.25,
+      "capAgainstSeat": {
+        "surfaceTrianglePairs": 0,
+        "insideVertices": 0,
+        "sampledVertices": 270,
+        "maximumSampledPenetrationMm": 0,
+        "penetrationWitnesses": [],
+        "status": "no-intersection-found"
+      },
+      "springAgainstSeat": {
+        "surfaceTrianglePairs": 0,
+        "insideVertices": 0,
+        "sampledVertices": 794,
+        "maximumSampledPenetrationMm": 0,
+        "penetrationWitnesses": [],
+        "status": "no-intersection-found"
+      },
+      "actuatorAgainstSeat": {
+        "surfaceTrianglePairs": 0,
+        "insideVertices": 0,
+        "sampledVertices": 8,
+        "maximumSampledPenetrationMm": 0,
+        "penetrationWitnesses": [],
+        "status": "no-intersection-found"
+      }
+    },
+    {
+      "displacementMm": 0.5,
+      "capAgainstSeat": {
+        "surfaceTrianglePairs": 0,
+        "insideVertices": 0,
+        "sampledVertices": 270,
+        "maximumSampledPenetrationMm": 0,
+        "penetrationWitnesses": [],
+        "status": "no-intersection-found"
+      },
+      "springAgainstSeat": {
+        "surfaceTrianglePairs": 0,
+        "insideVertices": 0,
+        "sampledVertices": 870,
+        "maximumSampledPenetrationMm": 0,
+        "penetrationWitnesses": [],
+        "status": "no-intersection-found"
+      },
+      "actuatorAgainstSeat": {
+        "surfaceTrianglePairs": 0,
+        "insideVertices": 0,
+        "sampledVertices": 8,
+        "maximumSampledPenetrationMm": 0,
+        "penetrationWitnesses": [],
+        "status": "no-intersection-found"
+      }
+    },
+    {
+      "displacementMm": 0.75,
+      "capAgainstSeat": {
+        "surfaceTrianglePairs": 0,
+        "insideVertices": 0,
+        "sampledVertices": 270,
+        "maximumSampledPenetrationMm": 0,
+        "penetrationWitnesses": [],
+        "status": "no-intersection-found"
+      },
+      "springAgainstSeat": {
+        "surfaceTrianglePairs": 0,
+        "insideVertices": 0,
+        "sampledVertices": 960,
+        "maximumSampledPenetrationMm": 0,
+        "penetrationWitnesses": [],
+        "status": "no-intersection-found"
+      },
+      "actuatorAgainstSeat": {
+        "surfaceTrianglePairs": 0,
+        "insideVertices": 0,
+        "sampledVertices": 8,
+        "maximumSampledPenetrationMm": 0,
+        "penetrationWitnesses": [],
+        "status": "no-intersection-found"
+      }
+    },
+    {
+      "displacementMm": 1.0,
+      "capAgainstSeat": {
+        "surfaceTrianglePairs": 0,
+        "insideVertices": 0,
+        "sampledVertices": 336,
+        "maximumSampledPenetrationMm": 0,
+        "penetrationWitnesses": [],
+        "status": "no-intersection-found"
+      },
+      "springAgainstSeat": {
+        "surfaceTrianglePairs": 0,
+        "insideVertices": 0,
+        "sampledVertices": 1071,
+        "maximumSampledPenetrationMm": 0,
+        "penetrationWitnesses": [],
+        "status": "no-intersection-found"
+      },
+      "actuatorAgainstSeat": {
+        "surfaceTrianglePairs": 0,
+        "insideVertices": 0,
+        "sampledVertices": 8,
+        "maximumSampledPenetrationMm": 0,
+        "penetrationWitnesses": [],
+        "status": "no-intersection-found"
+      }
+    }
+  ],
+  "terminals": [
+    {
+      "name": "确认 · GPIO 金属焊脚.005",
+      "geometry": {
+        "name": "确认 · GPIO 金属焊脚.005",
+        "vertices": 8,
+        "triangles": 12,
+        "closedTopology": true,
+        "sourceMin": [
+          1.675000011920929,
+          5.175000011920929,
+          19.000000834465027
+        ],
+        "sourceMax": [
+          2.324999988079071,
+          5.824999988079071,
+          20.350424885749817
+        ],
+        "clientCenter": [
+          2.0,
+          19.675212860107422,
+          -5.5
+        ],
+        "clientSize": [
+          0.6499999761581421,
+          1.35042405128479,
+          0.6499999761581421
+        ],
+        "signedVolumeMm3": 0.5705541198122249
+      },
+      "topology": {
+        "components": [
+          8
+        ],
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0
+      },
+      "world_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          2.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          5.5
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          19.675212860107422
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "againstPlasticBody": {
+        "surfaceTrianglePairs": 0,
+        "insideVertices": 0,
+        "sampledVertices": 12,
+        "maximumSampledPenetrationMm": 0,
+        "penetrationWitnesses": [],
+        "status": "no-intersection-found"
+      },
+      "againstSeat": {
+        "surfaceTrianglePairs": 0,
+        "insideVertices": 0,
+        "maximumSampledPenetrationMm": 0,
+        "status": "disjoint-bounds"
+      },
+      "plasticContactRegionSourceMin": [
+        1.675000011920929,
+        5.175000011920929,
+        20.050424098968506
+      ],
+      "plasticContactRegionSourceMax": [
+        2.324999988079071,
+        5.824999988079071,
+        20.350424885749817
+      ],
+      "contactDefinition": "Fixed metal terminal seated in a matching plastic blind pocket. Nominal zero-gap boundary contact only; no plastic/metal volume penetration allowed.",
+      "solderRegionSourceMin": [
+        1.675000011920929,
+        5.175000011920929,
+        19.0
+      ],
+      "solderRegionSourceMax": [
+        2.324999988079071,
+        5.824999988079071,
+        19.55
+      ],
+      "solderDefinition": "Only the matching confirm wire end may intersect this terminal-local region as a declared solder joint; actual wire source is repaired and checked separately.",
+      "material": {
+        "name": "Tin-plated confirm switch terminals",
+        "metalness": 1,
+        "roughness": 0.28,
+        "baseColor": [
+          0.72,
+          0.76,
+          0.8,
+          1
+        ]
+      }
+    },
+    {
+      "name": "确认 · GND 金属焊脚.005",
+      "geometry": {
+        "name": "确认 · GND 金属焊脚.005",
+        "vertices": 8,
+        "triangles": 12,
+        "closedTopology": true,
+        "sourceMin": [
+          -2.324999988079071,
+          5.175000011920929,
+          19.000000834465027
+        ],
+        "sourceMax": [
+          -1.675000011920929,
+          5.824999988079071,
+          20.350424885749817
+        ],
+        "clientCenter": [
+          -2.0,
+          19.675212860107422,
+          -5.5
+        ],
+        "clientSize": [
+          0.6499999761581421,
+          1.35042405128479,
+          0.6499999761581421
+        ],
+        "signedVolumeMm3": 0.5705541198122249
+      },
+      "topology": {
+        "components": [
+          8
+        ],
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0
+      },
+      "world_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -2.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          5.5
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          19.675212860107422
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "againstPlasticBody": {
+        "surfaceTrianglePairs": 2,
+        "insideVertices": 0,
+        "sampledVertices": 12,
+        "maximumSampledPenetrationMm": 0,
+        "penetrationWitnesses": [],
+        "status": "surface-contact-or-crossing",
+        "sourceCrossingRegionMin": [
+          -2.324999988079071,
+          5.175000011920929,
+          19.000000834465027
+        ],
+        "sourceCrossingRegionMax": [
+          -2.324999988079071,
+          5.824999988079071,
+          20.350424885749817
+        ]
+      },
+      "againstSeat": {
+        "surfaceTrianglePairs": 0,
+        "insideVertices": 0,
+        "maximumSampledPenetrationMm": 0,
+        "status": "disjoint-bounds"
+      },
+      "plasticContactRegionSourceMin": [
+        -2.324999988079071,
+        5.175000011920929,
+        20.050424098968506
+      ],
+      "plasticContactRegionSourceMax": [
+        -1.675000011920929,
+        5.824999988079071,
+        20.350424885749817
+      ],
+      "contactDefinition": "Fixed metal terminal seated in a matching plastic blind pocket. Nominal zero-gap boundary contact only; no plastic/metal volume penetration allowed.",
+      "solderRegionSourceMin": [
+        -2.324999988079071,
+        5.175000011920929,
+        19.0
+      ],
+      "solderRegionSourceMax": [
+        -1.675000011920929,
+        5.824999988079071,
+        19.55
+      ],
+      "solderDefinition": "Only the matching confirm wire end may intersect this terminal-local region as a declared solder joint; actual wire source is repaired and checked separately.",
+      "material": {
+        "name": "Tin-plated confirm switch terminals",
+        "metalness": 1,
+        "roughness": 0.28,
+        "baseColor": [
+          0.72,
+          0.76,
+          0.8,
+          1
+        ]
+      }
+    }
+  ],
+  "sourceObjectsAfter": [
+    {
+      "exported": "确认 · 键帽.007",
+      "world_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -1.0,
+          -1.5099580252808664e-07,
+          5.5
+        ],
+        [
+          0.0,
+          1.5099580252808664e-07,
+          -1.0,
+          34.150001525878906
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "exported": "确认 · 旋锁座.005",
+      "world_matrix": [
+        [
+          0.6691305637359619,
+          0.7431448698043823,
+          1.1221175100217806e-07,
+          0.0
+        ],
+        [
+          0.7431448698043823,
+          -0.6691305637359619,
+          -1.0103590142307439e-07,
+          5.5
+        ],
+        [
+          -3.568004741080809e-15,
+          1.5099580252808664e-07,
+          -1.0,
+          33.45000076293945
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "exported": "确认 · 常开开关.005",
+      "world_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          5.5
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          22.200424194335938
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "exported": "确认 · 开关触头.005",
+      "world_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          5.5
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          24.770423889160156
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "exported": "确认 · 回弹压簧.005",
+      "world_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "exported": "确认 · GPIO 金属焊脚.005",
+      "world_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          2.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          5.5
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          19.675212860107422
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "exported": "确认 · GND 金属焊脚.005",
+      "world_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -2.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          5.5
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          19.675212860107422
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    }
+  ],
+  "limitations": [
+    "Five press samples do not prove a continuous collision-free sweep.",
+    "The switch cavity is an open-bottom geometric fit; fastening and real switch load capacity require physical design verification.",
+    "Protected outer mounting vertices retain their source coordinates; coplanar tessellation may change and the complete installation audit must still bind the new source file hash."
+  ],
+  "appliedToSource": true,
+  "failures": [],
+  "candidateSha256": "6b42811a2e4f6bc66f0a5edcf5fd7de0226795ebdfeca60e4bb6c36ae8751865",
+  "candidateBytes": 186494,
+  "sourceSha256After": "6b42811a2e4f6bc66f0a5edcf5fd7de0226795ebdfeca60e4bb6c36ae8751865",
+  "sourceBytesAfter": 186494
+}

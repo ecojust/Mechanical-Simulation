@@ -1,0 +1,4374 @@
+{
+  "version": 1,
+  "offset": [
+    0,
+    20,
+    0
+  ],
+  "coordinates": "Source millimetres/Z-up to client (x,z,-y); common [0,20,0] offset is applied only when instantiating the assembly.",
+  "sourceSha256": {
+    "buttons/left.blend": "3101d6492dd00cbd2be772090602374be193f264de2eb092fc5eb76f4e9015fc",
+    "buttons/right.blend": "84e6de6ba5b1e17301acd0cc4f404cc74fb45bf02185f13d17a1240ae1311144",
+    "buttons/down.blend": "ee9f528457ae365735ba772f891ee3de180854abbd1afdd155862fed2de22c47",
+    "buttons/up.blend": "8ecd5118238b99caffe3ad7b58998e6b07ddd6be4eff21f70a85a8d08822b909",
+    "buttons/a.blend": "5e50ca2bc37b022d2a8fb85c983a08d3c66100d3705d23d3e9467316516b4508",
+    "buttons/b.blend": "ec5cbb6447b4a2025d85edae8fb7cd11f97d9c6e2ca4a1a7b93001bef20d083d",
+    "buttons/x.blend": "93c1bc7e9ee279a2f1f3f44808639889c6816e210e6bea1f0b304585b4343cbb",
+    "buttons/y.blend": "16333679918ad7bbd8bbedf74becb50889a95044192ee0a2dcb456a61e85ee01",
+    "buttons/confirm.blend": "6b42811a2e4f6bc66f0a5edcf5fd7de0226795ebdfeca60e4bb6c36ae8751865",
+    "baseplates/dpad.blend": "f15c56ca076c87be9a098ef054db5206c6352c788cada8884806203e255f76a6",
+    "baseplates/abxy.blend": "da515976fc39bab26bcb1e1bd3d68e1e7367bc7186245e5028bde98c3d034a78",
+    "housing/top.blend": "c988fa32f19567f0ed0f913609615723f366a20506386f1e3eed0fdd26b05cce",
+    "housing/bottom.blend": "44bb57f9b1571b7abb70571a5a90344e3d0ea3733c3bac26c680fec62c0e0514",
+    "electronics/esp32-mount.blend": "1f6ad69caa250b89d2b403c904ab37ec21a4e4437df757080f619edf2bd0e64c",
+    "electronics/harness.blend": "2dbed56630b7a16391a584b98b12e2b756cde3a632bf063bd81d885885d3aa91"
+  },
+  "buttons": [
+    {
+      "key": "left",
+      "label": "左",
+      "assetId": "buttons-left",
+      "sourceFile": "buttons/left.blend",
+      "sourceSha256": "3101d6492dd00cbd2be772090602374be193f264de2eb092fc5eb76f4e9015fc",
+      "movingNodes": [
+        "左 · PS5 一体式键帽与蓝色插销.003"
+      ],
+      "springNodes": [
+        "左 · PS5 回位弹簧.003"
+      ],
+      "switchNode": "左 · PS5 按杆.005",
+      "electricalSwitchNode": "左 · PS5 6×6 开关.005",
+      "actuatorNodes": [
+        "左 · PS5 按杆.005"
+      ],
+      "strikerNode": "左 · PS5 一体式键帽与蓝色插销.003",
+      "strikerSourceClient": [
+        -51.20000076293945,
+        25.99311065673828,
+        -22.0
+      ],
+      "switchSourceClient": [
+        -51.20000076293945,
+        25.24311065673828,
+        -22.0
+      ],
+      "axis": [
+        0,
+        1,
+        0
+      ],
+      "travel": 1.0,
+      "maxOvertravel": 0.25,
+      "measuredRestGap": 0.75,
+      "freeLength": 4.040819758313642,
+      "solidLength": 1.8233663914345257,
+      "stiffness": 0.08750419776955475,
+      "mass": 0.001029360386694242,
+      "damping": 0.39015890314372004,
+      "springMeasured": {
+        "bottomSourceZ": 24.41795975157276,
+        "topSourceZ": 28.4587795098864,
+        "centerlineStartSource": [
+          -48.31300354003906,
+          22.0,
+          28.323299407958984
+        ],
+        "centerlineEndSource": [
+          -48.31300354003906,
+          22.0,
+          24.552764892578125
+        ],
+        "centerlineTurns": 5.0,
+        "nominalWireDiameterMm": 0.30389439857242095,
+        "wireEnvelopeAxesMm": [
+          0.30389439857242095,
+          0.2712614380286311,
+          0.30389439857242095
+        ],
+        "meanCoilDiameterMm": 5.773994036826107,
+        "conservativeSolidLengthMm": 1.8233663914345257,
+        "note": "Solid length is a conservative geometry estimate; source scaling makes the wire envelope slightly anisotropic. This is not a measured spring specification."
+      },
+      "springSupportWitnesses": {
+        "lower": {
+          "supportName": "左 · PS5 下环一体式开关套筒.003",
+          "minimumEndpointDistanceMm": 0.000823974609375,
+          "witnesses": [
+            {
+              "springSource": [
+                -48.29844792506918,
+                21.99174106420293,
+                24.41795975157276
+              ],
+              "supportSource": [
+                -48.29844665527344,
+                21.991741180419922,
+                24.41713523864746
+              ],
+              "distanceMm": 0.000823974609375,
+              "normalSource": [
+                0.0,
+                -0.0,
+                1.0
+              ]
+            }
+          ]
+        },
+        "upper": {
+          "supportName": "左 · PS5 一体式键帽与蓝色插销.003",
+          "minimumEndpointDistanceMm": 0.0001506805419921875,
+          "witnesses": [
+            {
+              "springSource": [
+                -48.31251873233349,
+                22.00713987454338,
+                28.4587795098864
+              ],
+              "supportSource": [
+                -48.31251907348633,
+                22.007139205932617,
+                28.45893096923828
+              ],
+              "distanceMm": 0.0001506805419921875,
+              "normalSource": [
+                -0.0,
+                0.0,
+                -1.0
+              ]
+            }
+          ]
+        }
+      },
+      "movingVolumeMm3": 830.1293441082597,
+      "guide": {
+        "basis": "central-shaft and sampled central-free-bore only; outer interleaved arcs require source audit",
+        "pinDiameter": 2.065824508666992,
+        "holeDiameter": 3.4636290073394775,
+        "outerDiameter": 11.183315909859743,
+        "height": 3.291975975036621,
+        "centerClient": [
+          -51.20000076293945,
+          25.589048862457275,
+          -22.0
+        ],
+        "shaftHeight": 2.0,
+        "shaftCenterClient": [
+          -51.20000076293945,
+          26.99311065673828,
+          -22.0
+        ],
+        "tolerance": 0.1,
+        "minClearance": 0.1,
+        "insertionDepth": 2.0,
+        "shaftRadiusSamples": 64,
+        "boreRadiusSamples": 808,
+        "axialBandSource": [
+          23.943060874938965,
+          27.235036849975586
+        ],
+        "nominalMinimumRadialClearance": 0.6989022493362427,
+        "worstCaseRadialClearance": 0.5989022493362427
+      },
+      "objects": [
+        {
+          "name": "左 · PS5 焊脚占位.017",
+          "vertices": 8,
+          "triangles": 12,
+          "closedTopology": true,
+          "sourceMin": [
+            -49.17499923706055,
+            23.775005340576172,
+            17.943045139312744
+          ],
+          "sourceMax": [
+            -48.52499771118164,
+            24.425006866455078,
+            20.943052291870117
+          ],
+          "clientCenter": [
+            -48.849998474121094,
+            19.44304871559143,
+            -24.100006103515625
+          ],
+          "clientSize": [
+            0.6500015258789062,
+            3.000007152557373,
+            0.6500015258789062
+          ],
+          "signedVolumeMm3": 1.2675089729044469
+        },
+        {
+          "name": "左 · PS5 焊脚占位.018",
+          "vertices": 8,
+          "triangles": 12,
+          "closedTopology": true,
+          "sourceMin": [
+            -49.17499923706055,
+            19.574995040893555,
+            17.943045139312744
+          ],
+          "sourceMax": [
+            -48.52499771118164,
+            20.22499656677246,
+            20.943052291870117
+          ],
+          "clientCenter": [
+            -48.849998474121094,
+            19.44304871559143,
+            -19.899995803833008
+          ],
+          "clientSize": [
+            0.6500015258789062,
+            3.000007152557373,
+            0.6500015258789062
+          ],
+          "signedVolumeMm3": 1.2675089729044373
+        },
+        {
+          "name": "左 · PS5 焊脚占位.019",
+          "vertices": 8,
+          "triangles": 12,
+          "closedTopology": true,
+          "sourceMin": [
+            -53.87500762939453,
+            23.775005340576172,
+            17.943045139312744
+          ],
+          "sourceMax": [
+            -53.225006103515625,
+            24.425006866455078,
+            20.943052291870117
+          ],
+          "clientCenter": [
+            -53.55000686645508,
+            19.44304871559143,
+            -24.100006103515625
+          ],
+          "clientSize": [
+            0.6500015258789062,
+            3.000007152557373,
+            0.6500015258789062
+          ],
+          "signedVolumeMm3": 1.2675089729044846
+        },
+        {
+          "name": "左 · PS5 焊脚占位.020",
+          "vertices": 8,
+          "triangles": 12,
+          "closedTopology": true,
+          "sourceMin": [
+            -53.87500762939453,
+            19.574995040893555,
+            17.943045139312744
+          ],
+          "sourceMax": [
+            -53.225006103515625,
+            20.22499656677246,
+            20.943052291870117
+          ],
+          "clientCenter": [
+            -53.55000686645508,
+            19.44304871559143,
+            -19.899995803833008
+          ],
+          "clientSize": [
+            0.6500015258789062,
+            3.000007152557373,
+            0.6500015258789062
+          ],
+          "signedVolumeMm3": 1.2675089729043236
+        },
+        {
+          "name": "左 · PS5 按杆.005",
+          "vertices": 256,
+          "triangles": 508,
+          "closedTopology": true,
+          "sourceMin": [
+            -52.625,
+            20.575000762939453,
+            23.94310760498047
+          ],
+          "sourceMax": [
+            -49.775001525878906,
+            23.424999237060547,
+            25.24311065673828
+          ],
+          "clientCenter": [
+            -51.20000076293945,
+            24.593109130859375,
+            -22.0
+          ],
+          "clientSize": [
+            2.8499984741210938,
+            1.3000030517578125,
+            2.8499984741210938
+          ],
+          "signedVolumeMm3": 8.289902321109688
+        },
+        {
+          "name": "左 · PS5 6×6 开关.005",
+          "vertices": 8,
+          "triangles": 12,
+          "closedTopology": true,
+          "sourceMin": [
+            -54.200008392333984,
+            18.99999237060547,
+            20.943053245544434
+          ],
+          "sourceMax": [
+            -48.19999313354492,
+            25.00000762939453,
+            23.943060874938965
+          ],
+          "clientCenter": [
+            -51.20000076293945,
+            22.4430570602417,
+            -22.0
+          ],
+          "clientSize": [
+            6.0000152587890625,
+            3.0000076293945312,
+            6.0000152587890625
+          ],
+          "signedVolumeMm3": 108.00082397670485
+        },
+        {
+          "name": "左 · PS5 回位弹簧.003",
+          "vertices": 2316,
+          "triangles": 4628,
+          "closedTopology": true,
+          "sourceMin": [
+            -54.23560540839594,
+            18.96132468108552,
+            24.41795975157276
+          ],
+          "sourceMax": [
+            -48.16156474818793,
+            25.03717835995675,
+            28.4587795098864
+          ],
+          "clientCenter": [
+            -51.198585078291934,
+            26.438369630729582,
+            -21.999251520521135
+          ],
+          "clientSize": [
+            6.074040660208013,
+            4.040819758313642,
+            6.07585367887123
+          ],
+          "signedVolumeMm3": 5.588714385535668
+        },
+        {
+          "name": "左 · PS5 下环一体式开关套筒.003",
+          "vertices": 1022300,
+          "triangles": 2044624,
+          "closedTopology": true,
+          "sourceMin": [
+            -56.79126739501953,
+            16.408733367919922,
+            14.280003786087036
+          ],
+          "sourceMax": [
+            -45.608734130859375,
+            27.59158706665039,
+            27.235036849975586
+          ],
+          "clientCenter": [
+            -51.20000076293945,
+            20.75752031803131,
+            -22.000160217285156
+          ],
+          "clientSize": [
+            11.182533264160156,
+            12.95503306388855,
+            11.182853698730469
+          ],
+          "signedVolumeMm3": 408.6161081000432
+        },
+        {
+          "name": "左 · PS5 一体式键帽与蓝色插销.003",
+          "vertices": 3434,
+          "triangles": 6864,
+          "closedTopology": true,
+          "sourceMin": [
+            -57.38475799560547,
+            16.219999313354492,
+            25.774925231933594
+          ],
+          "sourceMax": [
+            -45.07292556762695,
+            27.780000686645508,
+            38.05706024169922
+          ],
+          "clientCenter": [
+            -51.22884178161621,
+            31.915992736816406,
+            -22.0
+          ],
+          "clientSize": [
+            12.311832427978516,
+            12.282135009765625,
+            11.560001373291016
+          ],
+          "signedVolumeMm3": 830.1293441082597
+        },
+        {
+          "name": "左 · 旋锁弹性垫 0.002",
+          "vertices": 48,
+          "triangles": 92,
+          "closedTopology": true,
+          "sourceMin": [
+            -46.65467071533203,
+            21.209497451782227,
+            15.395005464553833
+          ],
+          "sourceMax": [
+            -45.52045822143555,
+            22.790502548217773,
+            15.905003786087036
+          ],
+          "clientCenter": [
+            -46.08756446838379,
+            15.650004625320435,
+            -22.0
+          ],
+          "clientSize": [
+            1.1342124938964844,
+            0.5099983215332031,
+            1.5810050964355469
+          ],
+          "signedVolumeMm3": 0.7970514806482806
+        },
+        {
+          "name": "左 · 旋锁弹性垫 120.002",
+          "vertices": 48,
+          "triangles": 92,
+          "closedTopology": true,
+          "sourceMin": [
+            -54.696956634521484,
+            25.61697006225586,
+            15.395005464553833
+          ],
+          "sourceMax": [
+            -52.9194450378418,
+            27.26640510559082,
+            15.905003786087036
+          ],
+          "clientCenter": [
+            -53.80820083618164,
+            15.650004625320435,
+            -26.44168758392334
+          ],
+          "clientSize": [
+            1.7775115966796875,
+            0.5099983215332031,
+            1.649435043334961
+          ],
+          "signedVolumeMm3": 0.7970512227120045
+        },
+        {
+          "name": "左 · 旋锁弹性垫 240.002",
+          "vertices": 48,
+          "triangles": 92,
+          "closedTopology": true,
+          "sourceMin": [
+            -54.696956634521484,
+            16.73359489440918,
+            15.395005464553833
+          ],
+          "sourceMax": [
+            -52.9194450378418,
+            18.38302993774414,
+            15.905003786087036
+          ],
+          "clientCenter": [
+            -53.80820083618164,
+            15.650004625320435,
+            -17.55831241607666
+          ],
+          "clientSize": [
+            1.7775115966796875,
+            0.5099983215332031,
+            1.649435043334961
+          ],
+          "signedVolumeMm3": 0.797051222711886
+        }
+      ],
+      "installationPrimaryNode": "左 · PS5 下环一体式开关套筒.003",
+      "installationMovingNodes": [
+        "左 · PS5 6×6 开关.005",
+        "左 · PS5 按杆.005",
+        "左 · PS5 焊脚占位.017",
+        "左 · PS5 焊脚占位.018",
+        "左 · PS5 焊脚占位.019",
+        "左 · PS5 焊脚占位.020"
+      ]
+    },
+    {
+      "key": "right",
+      "label": "右",
+      "assetId": "buttons-right",
+      "sourceFile": "buttons/right.blend",
+      "sourceSha256": "84e6de6ba5b1e17301acd0cc4f404cc74fb45bf02185f13d17a1240ae1311144",
+      "movingNodes": [
+        "右 · PS5 一体式键帽与蓝色插销.003"
+      ],
+      "springNodes": [
+        "右 · PS5 回位弹簧.003"
+      ],
+      "switchNode": "右 · PS5 按杆.004",
+      "electricalSwitchNode": "右 · PS5 6×6 开关.004",
+      "actuatorNodes": [
+        "右 · PS5 按杆.004"
+      ],
+      "strikerNode": "右 · PS5 一体式键帽与蓝色插销.003",
+      "strikerSourceClient": [
+        -32.79999828338623,
+        23.597679138183594,
+        -22.000000953674316
+      ],
+      "switchSourceClient": [
+        -32.79999828338623,
+        22.847679138183594,
+        -22.000000953674316
+      ],
+      "axis": [
+        0,
+        1,
+        0
+      ],
+      "travel": 1.0,
+      "maxOvertravel": 0.25,
+      "measuredRestGap": 0.75,
+      "freeLength": 4.040819758313642,
+      "solidLength": 1.8233663914345257,
+      "stiffness": 0.0875042152080615,
+      "mass": 0.0014092499424465975,
+      "damping": 0.4565116365607717,
+      "springMeasured": {
+        "bottomSourceZ": 22.02253014036672,
+        "topSourceZ": 26.06334989868036,
+        "centerlineStartSource": [
+          -35.68699645996094,
+          21.999998092651367,
+          25.92786979675293
+        ],
+        "centerlineEndSource": [
+          -35.68699645996094,
+          21.999998092651367,
+          22.15733528137207
+        ],
+        "centerlineTurns": 5.0,
+        "nominalWireDiameterMm": 0.30389439857242095,
+        "wireEnvelopeAxesMm": [
+          0.30389439857242095,
+          0.2712614380286311,
+          0.30389439857242095
+        ],
+        "meanCoilDiameterMm": 5.773993653264239,
+        "conservativeSolidLengthMm": 1.8233663914345257,
+        "note": "Solid length is a conservative geometry estimate; source scaling makes the wire envelope slightly anisotropic. This is not a measured spring specification."
+      },
+      "springSupportWitnesses": {
+        "lower": {
+          "supportName": "右 · PS5 下环一体式开关套筒.003",
+          "minimumEndpointDistanceMm": 0.000823974609375,
+          "witnesses": [
+            {
+              "springSource": [
+                -35.70155207368374,
+                22.008257466570758,
+                22.02253014036672
+              ],
+              "supportSource": [
+                -35.70155334472656,
+                22.008256912231445,
+                22.021705627441406
+              ],
+              "distanceMm": 0.000823974609375,
+              "normalSource": [
+                -0.0,
+                0.0,
+                1.0
+              ]
+            }
+          ]
+        },
+        "upper": {
+          "supportName": "右 · PS5 一体式键帽与蓝色插销.003",
+          "minimumEndpointDistanceMm": 0.0001506805419921875,
+          "witnesses": [
+            {
+              "springSource": [
+                -35.68748126874458,
+                21.992858654105675,
+                26.06334989868036
+              ],
+              "supportSource": [
+                -35.68748092651367,
+                21.99285888671875,
+                26.063501358032227
+              ],
+              "distanceMm": 0.0001506805419921875,
+              "normalSource": [
+                0.0,
+                -0.0,
+                -1.0
+              ]
+            }
+          ]
+        }
+      },
+      "movingVolumeMm3": 1136.4918890698368,
+      "guide": {
+        "basis": "central-shaft and sampled central-free-bore only; outer interleaved arcs require source audit",
+        "pinDiameter": 2.0658278465270996,
+        "holeDiameter": 3.4636282920837402,
+        "outerDiameter": 11.183315275942503,
+        "height": 3.2919750213623047,
+        "centerClient": [
+          -32.79999828338623,
+          23.19361686706543,
+          -22.000000953674316
+        ],
+        "shaftHeight": 2.0,
+        "shaftCenterClient": [
+          -32.79999828338623,
+          24.597679138183594,
+          -22.000000953674316
+        ],
+        "tolerance": 0.1,
+        "minClearance": 0.1,
+        "insertionDepth": 2.0,
+        "shaftRadiusSamples": 64,
+        "boreRadiusSamples": 808,
+        "axialBandSource": [
+          21.547629356384277,
+          24.839604377746582
+        ],
+        "nominalMinimumRadialClearance": 0.6989002227783203,
+        "worstCaseRadialClearance": 0.5989002227783203
+      },
+      "objects": [
+        {
+          "name": "右 · PS5 焊脚占位.013",
+          "vertices": 8,
+          "triangles": 12,
+          "closedTopology": true,
+          "sourceMin": [
+            -35.47500228881836,
+            19.574993133544922,
+            15.547614097595215
+          ],
+          "sourceMax": [
+            -34.82500076293945,
+            20.224994659423828,
+            18.54762077331543
+          ],
+          "clientCenter": [
+            -35.150001525878906,
+            17.047617435455322,
+            -19.899993896484375
+          ],
+          "clientSize": [
+            0.6500015258789062,
+            3.000006675720215,
+            0.6500015258789062
+          ],
+          "signedVolumeMm3": 1.2675087714396511
+        },
+        {
+          "name": "右 · PS5 焊脚占位.014",
+          "vertices": 8,
+          "triangles": 12,
+          "closedTopology": true,
+          "sourceMin": [
+            -35.474998474121094,
+            23.775005340576172,
+            15.547614097595215
+          ],
+          "sourceMax": [
+            -34.82499694824219,
+            24.425006866455078,
+            18.54762077331543
+          ],
+          "clientCenter": [
+            -35.14999771118164,
+            17.047617435455322,
+            -24.100006103515625
+          ],
+          "clientSize": [
+            0.6500015258789062,
+            3.000006675720215,
+            0.6500015258789062
+          ],
+          "signedVolumeMm3": 1.2675087714397364
+        },
+        {
+          "name": "右 · PS5 焊脚占位.015",
+          "vertices": 8,
+          "triangles": 12,
+          "closedTopology": true,
+          "sourceMin": [
+            -30.774991989135742,
+            19.574993133544922,
+            15.547614097595215
+          ],
+          "sourceMax": [
+            -30.124990463256836,
+            20.224994659423828,
+            18.54762077331543
+          ],
+          "clientCenter": [
+            -30.44999122619629,
+            17.047617435455322,
+            -19.899993896484375
+          ],
+          "clientSize": [
+            0.6500015258789062,
+            3.000006675720215,
+            0.6500015258789062
+          ],
+          "signedVolumeMm3": 1.2675087714397268
+        },
+        {
+          "name": "右 · PS5 焊脚占位.016",
+          "vertices": 8,
+          "triangles": 12,
+          "closedTopology": true,
+          "sourceMin": [
+            -30.774991989135742,
+            23.77500343322754,
+            15.547614097595215
+          ],
+          "sourceMax": [
+            -30.124990463256836,
+            24.425004959106445,
+            18.54762077331543
+          ],
+          "clientCenter": [
+            -30.44999122619629,
+            17.047617435455322,
+            -24.100004196166992
+          ],
+          "clientSize": [
+            0.6500015258789062,
+            3.000006675720215,
+            0.6500015258789062
+          ],
+          "signedVolumeMm3": 1.267508771439869
+        },
+        {
+          "name": "右 · PS5 按杆.004",
+          "vertices": 256,
+          "triangles": 508,
+          "closedTopology": true,
+          "sourceMin": [
+            -34.224998474121094,
+            20.575000762939453,
+            21.54767608642578
+          ],
+          "sourceMax": [
+            -31.374998092651367,
+            23.42500114440918,
+            22.847679138183594
+          ],
+          "clientCenter": [
+            -32.79999828338623,
+            22.197677612304688,
+            -22.000000953674316
+          ],
+          "clientSize": [
+            2.8500003814697266,
+            1.3000030517578125,
+            2.8500003814697266
+          ],
+          "signedVolumeMm3": 8.28990584160598
+        },
+        {
+          "name": "右 · PS5 6×6 开关.004",
+          "vertices": 8,
+          "triangles": 12,
+          "closedTopology": true,
+          "sourceMin": [
+            -35.80000305175781,
+            18.99999237060547,
+            18.547621726989746
+          ],
+          "sourceMax": [
+            -29.799989700317383,
+            25.00000762939453,
+            21.547629356384277
+          ],
+          "clientCenter": [
+            -32.7999963760376,
+            20.04762554168701,
+            -22.0
+          ],
+          "clientSize": [
+            6.00001335144043,
+            3.0000076293945312,
+            6.0000152587890625
+          ],
+          "signedVolumeMm3": 108.00077247803547
+        },
+        {
+          "name": "右 · PS5 回位弹簧.003",
+          "vertices": 2316,
+          "triangles": 4628,
+          "closedTopology": true,
+          "sourceMin": [
+            -35.83843525367941,
+            18.962819732531667,
+            22.02253014036672
+          ],
+          "sourceMax": [
+            -29.76439460676826,
+            25.038673411502053,
+            26.06334989868036
+          ],
+          "clientCenter": [
+            -32.801414930223835,
+            24.04294001952354,
+            -22.00074657201686
+          ],
+          "clientSize": [
+            6.074040646911147,
+            4.040819758313642,
+            6.075853678970386
+          ],
+          "signedVolumeMm3": 5.5887143856045585
+        },
+        {
+          "name": "右 · PS5 下环一体式开关套筒.003",
+          "vertices": 1022169,
+          "triangles": 2044362,
+          "closedTopology": true,
+          "sourceMin": [
+            -38.391265869140625,
+            16.40841293334961,
+            14.280003070831299
+          ],
+          "sourceMax": [
+            -27.208728790283203,
+            27.59126853942871,
+            24.839604377746582
+          ],
+          "clientCenter": [
+            -32.799997329711914,
+            19.55980372428894,
+            -21.99984073638916
+          ],
+          "clientSize": [
+            11.182537078857422,
+            10.559601306915283,
+            11.182855606079102
+          ],
+          "signedVolumeMm3": 322.5794364481086
+        },
+        {
+          "name": "右 · PS5 一体式键帽与蓝色插销.003",
+          "vertices": 3423,
+          "triangles": 6842,
+          "closedTopology": true,
+          "sourceMin": [
+            -38.89609909057617,
+            16.219999313354492,
+            23.379493713378906
+          ],
+          "sourceMax": [
+            -26.6152400970459,
+            27.780000686645508,
+            39.787818908691406
+          ],
+          "clientCenter": [
+            -32.755669593811035,
+            31.583656311035156,
+            -22.0
+          ],
+          "clientSize": [
+            12.280858993530273,
+            16.4083251953125,
+            11.560001373291016
+          ],
+          "signedVolumeMm3": 1136.4918890698368
+        },
+        {
+          "name": "右 · 旋锁弹性垫 0.002",
+          "vertices": 48,
+          "triangles": 92,
+          "closedTopology": true,
+          "sourceMin": [
+            -38.47954177856445,
+            21.209497451782227,
+            15.395002961158752
+          ],
+          "sourceMax": [
+            -37.34532928466797,
+            22.790502548217773,
+            15.905003190040588
+          ],
+          "clientCenter": [
+            -37.91243553161621,
+            15.65000307559967,
+            -22.0
+          ],
+          "clientSize": [
+            1.1342124938964844,
+            0.5100002288818359,
+            1.5810050964355469
+          ],
+          "signedVolumeMm3": 0.7970544615503042
+        },
+        {
+          "name": "右 · 旋锁弹性垫 120.002",
+          "vertices": 48,
+          "triangles": 92,
+          "closedTopology": true,
+          "sourceMin": [
+            -31.080554962158203,
+            16.73359489440918,
+            15.395002961158752
+          ],
+          "sourceMax": [
+            -29.303043365478516,
+            18.38302993774414,
+            15.905003190040588
+          ],
+          "clientCenter": [
+            -30.19179916381836,
+            15.65000307559967,
+            -17.55831241607666
+          ],
+          "clientSize": [
+            1.7775115966796875,
+            0.5100002288818359,
+            1.649435043334961
+          ],
+          "signedVolumeMm3": 0.797054378660769
+        },
+        {
+          "name": "右 · 旋锁弹性垫 240.002",
+          "vertices": 48,
+          "triangles": 92,
+          "closedTopology": true,
+          "sourceMin": [
+            -31.080554962158203,
+            25.61697006225586,
+            15.395002961158752
+          ],
+          "sourceMax": [
+            -29.303043365478516,
+            27.26640510559082,
+            15.905003190040588
+          ],
+          "clientCenter": [
+            -30.19179916381836,
+            15.65000307559967,
+            -26.44168758392334
+          ],
+          "clientSize": [
+            1.7775115966796875,
+            0.5100002288818359,
+            1.649435043334961
+          ],
+          "signedVolumeMm3": 0.7970543786607666
+        }
+      ],
+      "installationPrimaryNode": "右 · PS5 下环一体式开关套筒.003",
+      "installationMovingNodes": [
+        "右 · PS5 6×6 开关.004",
+        "右 · PS5 按杆.004",
+        "右 · PS5 焊脚占位.013",
+        "右 · PS5 焊脚占位.014",
+        "右 · PS5 焊脚占位.015",
+        "右 · PS5 焊脚占位.016"
+      ]
+    },
+    {
+      "key": "down",
+      "label": "下",
+      "assetId": "buttons-down",
+      "sourceFile": "buttons/down.blend",
+      "sourceSha256": "ee9f528457ae365735ba772f891ee3de180854abbd1afdd155862fed2de22c47",
+      "movingNodes": [
+        "下 · PS5 一体式键帽与蓝色插销.003"
+      ],
+      "springNodes": [
+        "下 · PS5 回位弹簧.003"
+      ],
+      "switchNode": "下 · PS5 按杆.004",
+      "electricalSwitchNode": "下 · PS5 6×6 开关.004",
+      "actuatorNodes": [
+        "下 · PS5 按杆.004"
+      ],
+      "strikerNode": "下 · PS5 一体式键帽与蓝色插销.003",
+      "strikerSourceClient": [
+        -42.0,
+        25.75899887084961,
+        -12.800002098083496
+      ],
+      "switchSourceClient": [
+        -42.0,
+        25.00899887084961,
+        -12.800002098083496
+      ],
+      "axis": [
+        0,
+        1,
+        0
+      ],
+      "travel": 1.0,
+      "maxOvertravel": 0.25,
+      "measuredRestGap": 0.75,
+      "freeLength": 4.040819754222863,
+      "solidLength": 1.8233663914345257,
+      "stiffness": 0.08750421288055021,
+      "mass": 0.0011147535371298528,
+      "damping": 0.40601984691611237,
+      "springMeasured": {
+        "bottomSourceZ": 24.183846146777512,
+        "topSourceZ": 28.224665901000375,
+        "centerlineStartSource": [
+          -42.0,
+          15.68700122833252,
+          28.08918571472168
+        ],
+        "centerlineEndSource": [
+          -42.0,
+          15.68700122833252,
+          24.31865119934082
+        ],
+        "centerlineTurns": 5.0,
+        "nominalWireDiameterMm": 0.30389439857242095,
+        "wireEnvelopeAxesMm": [
+          0.30389439857242095,
+          0.2712614380286311,
+          0.30389439857242095
+        ],
+        "meanCoilDiameterMm": 5.773993704458099,
+        "conservativeSolidLengthMm": 1.8233663914345257,
+        "note": "Solid length is a conservative geometry estimate; source scaling makes the wire envelope slightly anisotropic. This is not a measured spring specification."
+      },
+      "springSupportWitnesses": {
+        "lower": {
+          "supportName": "下 · PS5 下环一体式开关套筒.003",
+          "minimumEndpointDistanceMm": 0.000823974609375,
+          "witnesses": [
+            {
+              "springSource": [
+                -41.99174193163265,
+                15.70155774898387,
+                24.183846146777512
+              ],
+              "supportSource": [
+                -41.99174118041992,
+                15.701558113098145,
+                24.183021545410156
+              ],
+              "distanceMm": 0.000823974609375,
+              "normalSource": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            }
+          ]
+        },
+        "upper": {
+          "supportName": "下 · PS5 一体式键帽与蓝色插销.003",
+          "minimumEndpointDistanceMm": 0.0001506805419921875,
+          "witnesses": [
+            {
+              "springSource": [
+                -42.00714170308718,
+                15.687486818784834,
+                28.224665901000375
+              ],
+              "supportSource": [
+                -42.00714111328125,
+                15.68748664855957,
+                28.224817276000977
+              ],
+              "distanceMm": 0.0001506805419921875,
+              "normalSource": [
+                -0.0,
+                -0.0,
+                -1.0
+              ]
+            }
+          ]
+        }
+      },
+      "movingVolumeMm3": 898.9947880079458,
+      "guide": {
+        "basis": "central-shaft and sampled central-free-bore only; outer interleaved arcs require source audit",
+        "pinDiameter": 2.065826416015625,
+        "holeDiameter": 3.4636287689208984,
+        "outerDiameter": 11.183315179943785,
+        "height": 3.2919750213623047,
+        "centerClient": [
+          -42.0,
+          25.354934692382812,
+          -12.800002098083496
+        ],
+        "shaftHeight": 2.0,
+        "shaftCenterClient": [
+          -42.0,
+          26.75899887084961,
+          -12.800002098083496
+        ],
+        "tolerance": 0.1,
+        "minClearance": 0.1,
+        "insertionDepth": 2.0,
+        "shaftRadiusSamples": 64,
+        "boreRadiusSamples": 808,
+        "axialBandSource": [
+          23.70894718170166,
+          27.000922203063965
+        ],
+        "nominalMinimumRadialClearance": 0.6989011764526367,
+        "worstCaseRadialClearance": 0.5989011764526367
+      },
+      "objects": [
+        {
+          "name": "下 · PS5 焊脚占位.013",
+          "vertices": 8,
+          "triangles": 12,
+          "closedTopology": true,
+          "sourceMin": [
+            -44.42500686645508,
+            14.825003623962402,
+            17.70893144607544
+          ],
+          "sourceMax": [
+            -43.77500534057617,
+            15.475005149841309,
+            20.708938598632812
+          ],
+          "clientCenter": [
+            -44.100006103515625,
+            19.208935022354126,
+            -15.150004386901855
+          ],
+          "clientSize": [
+            0.6500015258789062,
+            3.000007152557373,
+            0.6500015258789062
+          ],
+          "signedVolumeMm3": 1.2675089729043805
+        },
+        {
+          "name": "下 · PS5 焊脚占位.014",
+          "vertices": 8,
+          "triangles": 12,
+          "closedTopology": true,
+          "sourceMin": [
+            -40.224998474121094,
+            14.825002670288086,
+            17.70893144607544
+          ],
+          "sourceMax": [
+            -39.57499694824219,
+            15.475004196166992,
+            20.708938598632812
+          ],
+          "clientCenter": [
+            -39.89999771118164,
+            19.208935022354126,
+            -15.150003433227539
+          ],
+          "clientSize": [
+            0.6500015258789062,
+            3.000007152557373,
+            0.6500015258789062
+          ],
+          "signedVolumeMm3": 1.2675089729043616
+        },
+        {
+          "name": "下 · PS5 焊脚占位.015",
+          "vertices": 8,
+          "triangles": 12,
+          "closedTopology": true,
+          "sourceMin": [
+            -44.42500686645508,
+            10.124995231628418,
+            17.70893144607544
+          ],
+          "sourceMax": [
+            -43.77500534057617,
+            10.774996757507324,
+            20.708938598632812
+          ],
+          "clientCenter": [
+            -44.100006103515625,
+            19.208935022354126,
+            -10.449995994567871
+          ],
+          "clientSize": [
+            0.6500015258789062,
+            3.000007152557373,
+            0.6500015258789062
+          ],
+          "signedVolumeMm3": 1.267508972904442
+        },
+        {
+          "name": "下 · PS5 焊脚占位.016",
+          "vertices": 8,
+          "triangles": 12,
+          "closedTopology": true,
+          "sourceMin": [
+            -40.224998474121094,
+            10.124994277954102,
+            17.70893144607544
+          ],
+          "sourceMax": [
+            -39.57499694824219,
+            10.774995803833008,
+            20.708938598632812
+          ],
+          "clientCenter": [
+            -39.89999771118164,
+            19.208935022354126,
+            -10.449995040893555
+          ],
+          "clientSize": [
+            0.6500015258789062,
+            3.000007152557373,
+            0.6500015258789062
+          ],
+          "signedVolumeMm3": 1.2675089729043758
+        },
+        {
+          "name": "下 · PS5 按杆.004",
+          "vertices": 256,
+          "triangles": 508,
+          "closedTopology": true,
+          "sourceMin": [
+            -43.42499923706055,
+            11.375001907348633,
+            23.708995819091797
+          ],
+          "sourceMax": [
+            -40.57500076293945,
+            14.22500228881836,
+            25.00899887084961
+          ],
+          "clientCenter": [
+            -42.0,
+            24.358997344970703,
+            -12.800002098083496
+          ],
+          "clientSize": [
+            2.8499984741210938,
+            1.3000030517578125,
+            2.8500003814697266
+          ],
+          "signedVolumeMm3": 8.28990269826815
+        },
+        {
+          "name": "下 · PS5 6×6 开关.004",
+          "vertices": 8,
+          "triangles": 12,
+          "closedTopology": true,
+          "sourceMin": [
+            -45.00000762939453,
+            9.799994468688965,
+            20.70893955230713
+          ],
+          "sourceMax": [
+            -38.99999237060547,
+            15.800009727478027,
+            23.70894718170166
+          ],
+          "clientCenter": [
+            -42.0,
+            22.208943367004395,
+            -12.800002098083496
+          ],
+          "clientSize": [
+            6.0000152587890625,
+            3.0000076293945312,
+            6.0000152587890625
+          ],
+          "signedVolumeMm3": 108.00081539359228
+        },
+        {
+          "name": "下 · PS5 回位弹簧.003",
+          "vertices": 2316,
+          "triangles": 4628,
+          "closedTopology": true,
+          "sourceMin": [
+            -45.03717946576118,
+            9.764400143279975,
+            24.183846146777512
+          ],
+          "sourceMax": [
+            -38.96132533068364,
+            15.838440806144774,
+            28.224665901000375
+          ],
+          "clientCenter": [
+            -41.99925239822241,
+            26.204256023888945,
+            -12.801420474712375
+          ],
+          "clientSize": [
+            6.075854135077535,
+            4.040819754222863,
+            6.0740406628648
+          ],
+          "signedVolumeMm3": 5.588714385610582
+        },
+        {
+          "name": "下 · PS5 下环一体式开关套筒.003",
+          "vertices": 1022294,
+          "triangles": 2044612,
+          "closedTopology": true,
+          "sourceMin": [
+            -47.59158706665039,
+            7.208734512329102,
+            14.280001163482666
+          ],
+          "sourceMax": [
+            -36.40873336791992,
+            18.39126968383789,
+            27.000922203063965
+          ],
+          "clientCenter": [
+            -42.000160217285156,
+            20.640461683273315,
+            -12.800002098083496
+          ],
+          "clientSize": [
+            11.182853698730469,
+            12.720921039581299,
+            11.182535171508789
+          ],
+          "signedVolumeMm3": 400.2105116827932
+        },
+        {
+          "name": "下 · PS5 一体式键帽与蓝色插销.003",
+          "vertices": 3433,
+          "triangles": 6862,
+          "closedTopology": true,
+          "sourceMin": [
+            -47.779998779296875,
+            6.615245819091797,
+            25.54081153869629
+          ],
+          "sourceMax": [
+            -36.220001220703125,
+            18.915864944458008,
+            38.8928108215332
+          ],
+          "clientCenter": [
+            -42.0,
+            32.216811180114746,
+            -12.765555381774902
+          ],
+          "clientSize": [
+            11.55999755859375,
+            13.351999282836914,
+            12.300619125366211
+          ],
+          "signedVolumeMm3": 898.9947880079458
+        },
+        {
+          "name": "下 · 旋锁弹性垫 0.002",
+          "vertices": 48,
+          "triangles": 92,
+          "closedTopology": true,
+          "sourceMin": [
+            -42.790504455566406,
+            17.3453311920166,
+            15.395001769065857
+          ],
+          "sourceMax": [
+            -41.209495544433594,
+            18.479541778564453,
+            15.90500009059906
+          ],
+          "clientCenter": [
+            -42.0,
+            15.650000929832458,
+            -17.912436485290527
+          ],
+          "clientSize": [
+            1.5810089111328125,
+            0.5099983215332031,
+            1.1342105865478516
+          ],
+          "signedVolumeMm3": 0.7970527437719994
+        },
+        {
+          "name": "下 · 旋锁弹性垫 120.002",
+          "vertices": 48,
+          "triangles": 92,
+          "closedTopology": true,
+          "sourceMin": [
+            -47.26640319824219,
+            9.3030424118042,
+            15.395001769065857
+          ],
+          "sourceMax": [
+            -45.61697006225586,
+            11.08055591583252,
+            15.90500009059906
+          ],
+          "clientCenter": [
+            -46.44168663024902,
+            15.650000929832458,
+            -10.19179916381836
+          ],
+          "clientSize": [
+            1.6494331359863281,
+            0.5099983215332031,
+            1.7775135040283203
+          ],
+          "signedVolumeMm3": 0.7970515750149367
+        },
+        {
+          "name": "下 · 旋锁弹性垫 240.002",
+          "vertices": 48,
+          "triangles": 92,
+          "closedTopology": true,
+          "sourceMin": [
+            -38.38302993774414,
+            9.3030424118042,
+            15.395001769065857
+          ],
+          "sourceMax": [
+            -36.73359680175781,
+            11.08055591583252,
+            15.90500009059906
+          ],
+          "clientCenter": [
+            -37.55831336975098,
+            15.650000929832458,
+            -10.19179916381836
+          ],
+          "clientSize": [
+            1.6494331359863281,
+            0.5099983215332031,
+            1.7775135040283203
+          ],
+          "signedVolumeMm3": 0.7970515750148254
+        }
+      ],
+      "installationPrimaryNode": "下 · PS5 下环一体式开关套筒.003",
+      "installationMovingNodes": [
+        "下 · PS5 6×6 开关.004",
+        "下 · PS5 按杆.004",
+        "下 · PS5 焊脚占位.013",
+        "下 · PS5 焊脚占位.014",
+        "下 · PS5 焊脚占位.015",
+        "下 · PS5 焊脚占位.016"
+      ]
+    },
+    {
+      "key": "up",
+      "label": "上",
+      "assetId": "buttons-up",
+      "sourceFile": "buttons/up.blend",
+      "sourceSha256": "8ecd5118238b99caffe3ad7b58998e6b07ddd6be4eff21f70a85a8d08822b909",
+      "movingNodes": [
+        "上 · PS5 一体式键帽与蓝色插销.003"
+      ],
+      "springNodes": [
+        "上 · PS5 回位弹簧.003"
+      ],
+      "switchNode": "上 · PS5 按杆.004",
+      "electricalSwitchNode": "上 · PS5 6×6 开关.004",
+      "actuatorNodes": [
+        "上 · PS5 按杆.004"
+      ],
+      "strikerNode": "上 · PS5 一体式键帽与蓝色插销.003",
+      "strikerSourceClient": [
+        -42.0,
+        22.36963653564453,
+        -31.199999809265137
+      ],
+      "switchSourceClient": [
+        -42.0,
+        21.61963653564453,
+        -31.199999809265137
+      ],
+      "axis": [
+        0,
+        1,
+        0
+      ],
+      "travel": 1.0,
+      "maxOvertravel": 0.25,
+      "measuredRestGap": 0.75,
+      "freeLength": 4.040819756477923,
+      "solidLength": 1.8233663914345257,
+      "stiffness": 0.08750421160283116,
+      "mass": 0.001472033506710386,
+      "damping": 0.46656985775274534,
+      "springMeasured": {
+        "bottomSourceZ": 20.794485631463537,
+        "topSourceZ": 24.83530538794146,
+        "centerlineStartSource": [
+          -42.0,
+          28.31300163269043,
+          24.699825286865234
+        ],
+        "centerlineEndSource": [
+          -42.0,
+          28.31300163269043,
+          20.929290771484375
+        ],
+        "centerlineTurns": 5.0,
+        "nominalWireDiameterMm": 0.30389439857242095,
+        "wireEnvelopeAxesMm": [
+          0.30389439857242095,
+          0.2712614380286311,
+          0.30389439857242095
+        ],
+        "meanCoilDiameterMm": 5.773993732561667,
+        "conservativeSolidLengthMm": 1.8233663914345257,
+        "note": "Solid length is a conservative geometry estimate; source scaling makes the wire envelope slightly anisotropic. This is not a measured spring specification."
+      },
+      "springSupportWitnesses": {
+        "lower": {
+          "supportName": "上 · PS5 下环一体式开关套筒.003",
+          "minimumEndpointDistanceMm": 0.000823974609375,
+          "witnesses": [
+            {
+              "springSource": [
+                -42.008258865274605,
+                28.298446018081552,
+                20.794485631463537
+              ],
+              "supportSource": [
+                -42.00825881958008,
+                28.298446655273438,
+                20.79366111755371
+              ],
+              "distanceMm": 0.000823974609375,
+              "normalSource": [
+                -0.0,
+                0.0,
+                1.0
+              ]
+            }
+          ]
+        },
+        "upper": {
+          "supportName": "上 · PS5 一体式键帽与蓝色插销.003",
+          "minimumEndpointDistanceMm": 0.0001506805419921875,
+          "witnesses": [
+            {
+              "springSource": [
+                -41.99285957261585,
+                28.31251682467273,
+                24.83530538794146
+              ],
+              "supportSource": [
+                -41.99285888671875,
+                28.312517166137695,
+                24.83545684814453
+              ],
+              "distanceMm": 0.0001506805419921875,
+              "normalSource": [
+                0.0,
+                0.0,
+                -1.0
+              ]
+            }
+          ]
+        }
+      },
+      "movingVolumeMm3": 1187.1237957341823,
+      "guide": {
+        "basis": "central-shaft and sampled central-free-bore only; outer interleaved arcs require source audit",
+        "pinDiameter": 2.0658278465270996,
+        "holeDiameter": 3.4636285305023193,
+        "outerDiameter": 11.183317672017903,
+        "height": 3.2919750213623047,
+        "centerClient": [
+          -42.0,
+          21.965572834014893,
+          -31.199999809265137
+        ],
+        "shaftHeight": 2.0,
+        "shaftCenterClient": [
+          -42.0,
+          23.36963653564453,
+          -31.199999809265137
+        ],
+        "tolerance": 0.1,
+        "minClearance": 0.1,
+        "insertionDepth": 2.0,
+        "shaftRadiusSamples": 64,
+        "boreRadiusSamples": 808,
+        "axialBandSource": [
+          20.31958532333374,
+          23.611560344696045
+        ],
+        "nominalMinimumRadialClearance": 0.6989003419876099,
+        "worstCaseRadialClearance": 0.5989003419876099
+      },
+      "objects": [
+        {
+          "name": "上 · PS5 焊脚占位.013",
+          "vertices": 8,
+          "triangles": 12,
+          "closedTopology": true,
+          "sourceMin": [
+            -40.22499465942383,
+            28.524995803833008,
+            14.319570064544678
+          ],
+          "sourceMax": [
+            -39.57499313354492,
+            29.174997329711914,
+            17.319576740264893
+          ],
+          "clientCenter": [
+            -39.899993896484375,
+            15.819573402404785,
+            -28.84999656677246
+          ],
+          "clientSize": [
+            0.6500015258789062,
+            3.000006675720215,
+            0.6500015258789062
+          ],
+          "signedVolumeMm3": 1.2675087714397553
+        },
+        {
+          "name": "上 · PS5 焊脚占位.014",
+          "vertices": 8,
+          "triangles": 12,
+          "closedTopology": true,
+          "sourceMin": [
+            -44.42500305175781,
+            28.52499771118164,
+            14.319570064544678
+          ],
+          "sourceMax": [
+            -43.775001525878906,
+            29.174999237060547,
+            17.319576740264893
+          ],
+          "clientCenter": [
+            -44.10000228881836,
+            15.819573402404785,
+            -28.849998474121094
+          ],
+          "clientSize": [
+            0.6500015258789062,
+            3.000006675720215,
+            0.6500015258789062
+          ],
+          "signedVolumeMm3": 1.2675087714397175
+        },
+        {
+          "name": "上 · PS5 焊脚占位.015",
+          "vertices": 8,
+          "triangles": 12,
+          "closedTopology": true,
+          "sourceMin": [
+            -40.22499465942383,
+            33.225006103515625,
+            14.319570064544678
+          ],
+          "sourceMax": [
+            -39.57499313354492,
+            33.87500762939453,
+            17.319576740264893
+          ],
+          "clientCenter": [
+            -39.899993896484375,
+            15.819573402404785,
+            -33.55000686645508
+          ],
+          "clientSize": [
+            0.6500015258789062,
+            3.000006675720215,
+            0.6500015258789062
+          ],
+          "signedVolumeMm3": 1.2675087714397364
+        },
+        {
+          "name": "上 · PS5 焊脚占位.016",
+          "vertices": 8,
+          "triangles": 12,
+          "closedTopology": true,
+          "sourceMin": [
+            -44.42500305175781,
+            33.225006103515625,
+            14.319570064544678
+          ],
+          "sourceMax": [
+            -43.775001525878906,
+            33.87500762939453,
+            17.319576740264893
+          ],
+          "clientCenter": [
+            -44.10000228881836,
+            15.819573402404785,
+            -33.55000686645508
+          ],
+          "clientSize": [
+            0.6500015258789062,
+            3.000006675720215,
+            0.6500015258789062
+          ],
+          "signedVolumeMm3": 1.2675087714396984
+        },
+        {
+          "name": "上 · PS5 按杆.004",
+          "vertices": 256,
+          "triangles": 508,
+          "closedTopology": true,
+          "sourceMin": [
+            -43.42499923706055,
+            29.774999618530273,
+            20.31963300704956
+          ],
+          "sourceMax": [
+            -40.57500076293945,
+            32.625,
+            21.619636058807373
+          ],
+          "clientCenter": [
+            -42.0,
+            20.969634532928467,
+            -31.199999809265137
+          ],
+          "clientSize": [
+            2.8499984741210938,
+            1.3000030517578125,
+            2.8500003814697266
+          ],
+          "signedVolumeMm3": 8.289903578113373
+        },
+        {
+          "name": "上 · PS5 6×6 开关.004",
+          "vertices": 8,
+          "triangles": 12,
+          "closedTopology": true,
+          "sourceMin": [
+            -45.00000762939453,
+            28.199993133544922,
+            17.31957769393921
+          ],
+          "sourceMax": [
+            -38.99999237060547,
+            34.200008392333984,
+            20.31958532333374
+          ],
+          "clientCenter": [
+            -42.0,
+            18.819581508636475,
+            -31.200000762939453
+          ],
+          "clientSize": [
+            6.0000152587890625,
+            3.0000076293945312,
+            6.0000152587890625
+          ],
+          "signedVolumeMm3": 108.0008239767047
+        },
+        {
+          "name": "上 · PS5 回位弹簧.003",
+          "vertices": 2316,
+          "triangles": 4628,
+          "closedTopology": true,
+          "sourceMin": [
+            -45.03867499406254,
+            28.161562840298686,
+            20.794485631463537
+          ],
+          "sourceMax": [
+            -38.962821087005956,
+            34.235603496657426,
+            24.83530538794146
+          ],
+          "clientCenter": [
+            -42.00074804053425,
+            22.8148955097025,
+            -31.198583168478056
+          ],
+          "clientSize": [
+            6.075853907056583,
+            4.040819756477923,
+            6.07404065635874
+          ],
+          "signedVolumeMm3": 5.588714385610829
+        },
+        {
+          "name": "上 · PS5 下环一体式开关套筒.003",
+          "vertices": 1022129,
+          "triangles": 2044282,
+          "closedTopology": true,
+          "sourceMin": [
+            -47.59126663208008,
+            25.608732223510742,
+            14.279998302459717
+          ],
+          "sourceMax": [
+            -36.40841293334961,
+            36.79126739501953,
+            23.611560344696045
+          ],
+          "clientCenter": [
+            -41.999839782714844,
+            18.94577932357788,
+            -31.199999809265137
+          ],
+          "clientSize": [
+            11.182853698730469,
+            9.331562042236328,
+            11.182535171508789
+          ],
+          "signedVolumeMm3": 278.4872274947519
+        },
+        {
+          "name": "上 · PS5 一体式键帽与蓝色插销.003",
+          "vertices": 3433,
+          "triangles": 6862,
+          "closedTopology": true,
+          "sourceMin": [
+            -47.779998779296875,
+            25.1091251373291,
+            22.15144920349121
+          ],
+          "sourceMax": [
+            -36.220001220703125,
+            37.38475799560547,
+            39.18075942993164
+          ],
+          "clientCenter": [
+            -42.0,
+            30.666104316711426,
+            -31.246941566467285
+          ],
+          "clientSize": [
+            11.55999755859375,
+            17.02931022644043,
+            12.275632858276367
+          ],
+          "signedVolumeMm3": 1187.1237957341823
+        },
+        {
+          "name": "上 · 旋锁弹性垫 0.002",
+          "vertices": 48,
+          "triangles": 92,
+          "closedTopology": true,
+          "sourceMin": [
+            -42.790504455566406,
+            25.520458221435547,
+            15.394998550415039
+          ],
+          "sourceMax": [
+            -41.209495544433594,
+            26.6546688079834,
+            15.904998779296875
+          ],
+          "clientCenter": [
+            -42.0,
+            15.649998664855957,
+            -26.087563514709473
+          ],
+          "clientSize": [
+            1.5810089111328125,
+            0.5100002288818359,
+            1.1342105865478516
+          ],
+          "signedVolumeMm3": 0.7970557246788891
+        },
+        {
+          "name": "上 · 旋锁弹性垫 120.002",
+          "vertices": 48,
+          "triangles": 92,
+          "closedTopology": true,
+          "sourceMin": [
+            -38.38302993774414,
+            32.9194450378418,
+            15.394998550415039
+          ],
+          "sourceMax": [
+            -36.73359680175781,
+            34.696956634521484,
+            15.904998779296875
+          ],
+          "clientCenter": [
+            -37.55831336975098,
+            15.649998664855957,
+            -33.80820083618164
+          ],
+          "clientSize": [
+            1.6494331359863281,
+            0.5100002288818359,
+            1.7775115966796875
+          ],
+          "signedVolumeMm3": 0.7970540657220049
+        },
+        {
+          "name": "上 · 旋锁弹性垫 240.002",
+          "vertices": 48,
+          "triangles": 92,
+          "closedTopology": true,
+          "sourceMin": [
+            -47.26640319824219,
+            32.9194450378418,
+            15.394998550415039
+          ],
+          "sourceMax": [
+            -45.61697006225586,
+            34.696956634521484,
+            15.904998779296875
+          ],
+          "clientCenter": [
+            -46.44168663024902,
+            15.649998664855957,
+            -33.80820083618164
+          ],
+          "clientSize": [
+            1.6494331359863281,
+            0.5100002288818359,
+            1.7775115966796875
+          ],
+          "signedVolumeMm3": 0.7970540657219504
+        }
+      ],
+      "installationPrimaryNode": "上 · PS5 下环一体式开关套筒.003",
+      "installationMovingNodes": [
+        "上 · PS5 6×6 开关.004",
+        "上 · PS5 按杆.004",
+        "上 · PS5 焊脚占位.013",
+        "上 · PS5 焊脚占位.014",
+        "上 · PS5 焊脚占位.015",
+        "上 · PS5 焊脚占位.016"
+      ]
+    },
+    {
+      "key": "a",
+      "label": "A",
+      "assetId": "buttons-a",
+      "sourceFile": "buttons/a.blend",
+      "sourceSha256": "5e50ca2bc37b022d2a8fb85c983a08d3c66100d3705d23d3e9467316516b4508",
+      "movingNodes": [
+        "A · 同款插销与圆形键帽.002",
+        "键帽标识 · A.002"
+      ],
+      "springNodes": [
+        "A · 同款 回位弹簧.002"
+      ],
+      "switchNode": "A · 同款 按杆.002",
+      "electricalSwitchNode": "A · 同款 6×6 开关.002",
+      "actuatorNodes": [
+        "A · 同款 按杆.002"
+      ],
+      "strikerNode": "A · 同款插销与圆形键帽.002",
+      "strikerSourceClient": [
+        40.999996185302734,
+        28.54311180114746,
+        -9.5
+      ],
+      "switchSourceClient": [
+        40.999996185302734,
+        27.79311180114746,
+        -9.5
+      ],
+      "axis": [
+        0,
+        1,
+        0
+      ],
+      "travel": 1.0,
+      "maxOvertravel": 0.25,
+      "measuredRestGap": 0.75,
+      "freeLength": 4.040819758313642,
+      "solidLength": 1.8233663914345257,
+      "stiffness": 0.08750419461330723,
+      "mass": 0.0011320414789827904,
+      "damping": 0.40915603213132046,
+      "springMeasured": {
+        "bottomSourceZ": 26.967958988633306,
+        "topSourceZ": 31.00877874694695,
+        "centerlineStartSource": [
+          43.886993408203125,
+          9.5,
+          30.87329864501953
+        ],
+        "centerlineEndSource": [
+          43.886993408203125,
+          9.5,
+          27.102764129638672
+        ],
+        "centerlineTurns": 5.0,
+        "nominalWireDiameterMm": 0.30389439857242095,
+        "wireEnvelopeAxesMm": [
+          0.30389439857242095,
+          0.2712614380286311,
+          0.30389439857242095
+        ],
+        "meanCoilDiameterMm": 5.773994106248128,
+        "conservativeSolidLengthMm": 1.8233663914345257,
+        "note": "Solid length is a conservative geometry estimate; source scaling makes the wire envelope slightly anisotropic. This is not a measured spring specification."
+      },
+      "springSupportWitnesses": {
+        "lower": {
+          "supportName": "A · 同款 下环一体式开关套筒.002",
+          "minimumEndpointDistanceMm": 0.0008220672607421875,
+          "witnesses": [
+            {
+              "springSource": [
+                43.901549023173004,
+                9.49174106420293,
+                26.967958988633306
+              ],
+              "supportSource": [
+                43.90155029296875,
+                9.491741180419922,
+                26.96713638305664
+              ],
+              "distanceMm": 0.0008220672607421875,
+              "normalSource": [
+                0.0,
+                -0.0,
+                1.0
+              ]
+            }
+          ]
+        },
+        "upper": {
+          "supportName": "A · 同款插销与圆形键帽.002",
+          "minimumEndpointDistanceMm": 0.00015886336041148752,
+          "witnesses": [
+            {
+              "springSource": [
+                43.8874782159087,
+                9.507139874543379,
+                31.00877874694695
+              ],
+              "supportSource": [
+                43.88750076293945,
+                9.507095336914062,
+                31.008930206298828
+              ],
+              "distanceMm": 0.00015886336041148752,
+              "normalSource": [
+                -0.0,
+                -0.0,
+                -1.0
+              ]
+            }
+          ]
+        }
+      },
+      "zeroThicknessDecorationNodes": [
+        "键帽标识 · A.002"
+      ],
+      "movingVolumeMm3": 912.9366765990245,
+      "guide": {
+        "basis": "central-shaft and sampled central-free-bore only; outer interleaved arcs require source audit",
+        "pinDiameter": 2.065824270248413,
+        "holeDiameter": 3.4636287689208984,
+        "outerDiameter": 11.183315909859743,
+        "height": 3.2919769287109375,
+        "centerClient": [
+          40.999996185302734,
+          28.139049530029297,
+          -9.5
+        ],
+        "shaftHeight": 2.0,
+        "shaftCenterClient": [
+          40.999996185302734,
+          29.54311180114746,
+          -9.5
+        ],
+        "tolerance": 0.1,
+        "minClearance": 0.1,
+        "insertionDepth": 2.0,
+        "shaftRadiusSamples": 64,
+        "boreRadiusSamples": 808,
+        "axialBandSource": [
+          26.493061065673828,
+          29.785037994384766
+        ],
+        "nominalMinimumRadialClearance": 0.6989022493362427,
+        "worstCaseRadialClearance": 0.5989022493362427
+      },
+      "objects": [
+        {
+          "name": "键帽标识 · A.002",
+          "vertices": 11,
+          "triangles": 11,
+          "closedTopology": false,
+          "sourceMin": [
+            39.671355869572416,
+            8.299378826547702,
+            39.02683944575315
+          ],
+          "sourceMax": [
+            42.32739866757678,
+            11.04396558875223,
+            39.27914822049493
+          ],
+          "clientCenter": [
+            40.9993772685746,
+            39.15299383312404,
+            -9.671672207649966
+          ],
+          "clientSize": [
+            2.656042798004364,
+            0.2523087747417847,
+            2.744586762204527
+          ],
+          "signedVolumeMm3": 34.25199189387293
+        },
+        {
+          "name": "A · 同款插销与圆形键帽.002",
+          "vertices": 2430,
+          "triangles": 4856,
+          "closedTopology": true,
+          "sourceMin": [
+            34.332576751708984,
+            2.830644369125366,
+            28.154983520507812
+          ],
+          "sourceMax": [
+            47.66999816894531,
+            16.169355392456055,
+            39.7080078125
+          ],
+          "clientCenter": [
+            41.00128746032715,
+            33.931495666503906,
+            -9.49999988079071
+          ],
+          "clientSize": [
+            13.337421417236328,
+            11.553024291992188,
+            13.338711023330688
+          ],
+          "signedVolumeMm3": 912.9366765990245
+        },
+        {
+          "name": "A · 同款 焊脚占位.008",
+          "vertices": 8,
+          "triangles": 12,
+          "closedTopology": true,
+          "sourceMin": [
+            43.02499771118164,
+            11.275005340576172,
+            20.493045330047607
+          ],
+          "sourceMax": [
+            43.67499923706055,
+            11.925006866455078,
+            23.49305248260498
+          ],
+          "clientCenter": [
+            43.349998474121094,
+            21.993048906326294,
+            -11.600006103515625
+          ],
+          "clientSize": [
+            0.6500015258789062,
+            3.000007152557373,
+            0.6500015258789062
+          ],
+          "signedVolumeMm3": 1.2675089729044846
+        },
+        {
+          "name": "A · 同款 焊脚占位.009",
+          "vertices": 8,
+          "triangles": 12,
+          "closedTopology": true,
+          "sourceMin": [
+            43.02499771118164,
+            7.074995040893555,
+            20.493045330047607
+          ],
+          "sourceMax": [
+            43.67499923706055,
+            7.724996566772461,
+            23.49305248260498
+          ],
+          "clientCenter": [
+            43.349998474121094,
+            21.993048906326294,
+            -7.399995803833008
+          ],
+          "clientSize": [
+            0.6500015258789062,
+            3.000007152557373,
+            0.6500015258789062
+          ],
+          "signedVolumeMm3": 1.2675089729044018
+        },
+        {
+          "name": "A · 同款 焊脚占位.010",
+          "vertices": 8,
+          "triangles": 12,
+          "closedTopology": true,
+          "sourceMin": [
+            38.324989318847656,
+            11.275005340576172,
+            20.493045330047607
+          ],
+          "sourceMax": [
+            38.97499084472656,
+            11.925006866455078,
+            23.49305248260498
+          ],
+          "clientCenter": [
+            38.64999008178711,
+            21.993048906326294,
+            -11.600006103515625
+          ],
+          "clientSize": [
+            0.6500015258789062,
+            3.000007152557373,
+            0.6500015258789062
+          ],
+          "signedVolumeMm3": 1.2675089729044846
+        },
+        {
+          "name": "A · 同款 焊脚占位.011",
+          "vertices": 8,
+          "triangles": 12,
+          "closedTopology": true,
+          "sourceMin": [
+            38.324989318847656,
+            7.074995040893555,
+            20.493045330047607
+          ],
+          "sourceMax": [
+            38.97499084472656,
+            7.724996566772461,
+            23.49305248260498
+          ],
+          "clientCenter": [
+            38.64999008178711,
+            21.993048906326294,
+            -7.399995803833008
+          ],
+          "clientSize": [
+            0.6500015258789062,
+            3.000007152557373,
+            0.6500015258789062
+          ],
+          "signedVolumeMm3": 1.2675089729044018
+        },
+        {
+          "name": "A · 同款 按杆.002",
+          "vertices": 256,
+          "triangles": 508,
+          "closedTopology": true,
+          "sourceMin": [
+            39.57499694824219,
+            8.075000762939453,
+            26.49310874938965
+          ],
+          "sourceMax": [
+            42.42499542236328,
+            10.924999237060547,
+            27.79311180114746
+          ],
+          "clientCenter": [
+            40.999996185302734,
+            27.143110275268555,
+            -9.5
+          ],
+          "clientSize": [
+            2.8499984741210938,
+            1.3000030517578125,
+            2.8499984741210938
+          ],
+          "signedVolumeMm3": 8.289901465299133
+        },
+        {
+          "name": "A · 同款 6×6 开关.002",
+          "vertices": 8,
+          "triangles": 12,
+          "closedTopology": true,
+          "sourceMin": [
+            37.9999885559082,
+            6.499992370605469,
+            23.493053436279297
+          ],
+          "sourceMax": [
+            44.000003814697266,
+            12.500007629394531,
+            26.493061065673828
+          ],
+          "clientCenter": [
+            40.999996185302734,
+            24.993057250976562,
+            -9.5
+          ],
+          "clientSize": [
+            6.0000152587890625,
+            3.0000076293945312,
+            6.0000152587890625
+          ],
+          "signedVolumeMm3": 108.00082397670484
+        },
+        {
+          "name": "A · 同款 回位弹簧.002",
+          "vertices": 2316,
+          "triangles": 4628,
+          "closedTopology": true,
+          "sourceMin": [
+            37.96439153984625,
+            6.461324681085523,
+            26.967958988633306
+          ],
+          "sourceMax": [
+            44.03843220005426,
+            12.537178359956751,
+            31.00877874694695
+          ],
+          "clientCenter": [
+            41.00141186995025,
+            28.98836886779013,
+            -9.499251520521138
+          ],
+          "clientSize": [
+            6.074040660208013,
+            4.040819758313642,
+            6.075853678871228
+          ],
+          "signedVolumeMm3": 5.5887143856071235
+        },
+        {
+          "name": "A · 同款 下环一体式开关套筒.002",
+          "vertices": 1022465,
+          "triangles": 2044954,
+          "closedTopology": true,
+          "sourceMin": [
+            35.408729553222656,
+            3.908733367919922,
+            18.357559204101562
+          ],
+          "sourceMax": [
+            46.59126281738281,
+            15.09158706665039,
+            29.785037994384766
+          ],
+          "clientCenter": [
+            40.999996185302734,
+            24.071298599243164,
+            -9.500160217285156
+          ],
+          "clientSize": [
+            11.182533264160156,
+            11.427478790283203,
+            11.182853698730469
+          ],
+          "signedVolumeMm3": 353.6586444751968
+        },
+        {
+          "name": "A · 旋锁弹性垫 0.002",
+          "vertices": 48,
+          "triangles": 92,
+          "closedTopology": true,
+          "sourceMin": [
+            45.54533004760742,
+            8.7122802734375,
+            19.47756004333496
+          ],
+          "sourceMax": [
+            46.6595458984375,
+            10.2877197265625,
+            19.982559204101562
+          ],
+          "clientCenter": [
+            46.10243797302246,
+            19.73005962371826,
+            -9.5
+          ],
+          "clientSize": [
+            1.1142158508300781,
+            0.5049991607666016,
+            1.575439453125
+          ],
+          "signedVolumeMm3": 0.7732488980880312
+        },
+        {
+          "name": "A · 旋锁弹性垫 120.002",
+          "vertices": 48,
+          "triangles": 92,
+          "closedTopology": true,
+          "sourceMin": [
+            37.51535415649414,
+            13.116969108581543,
+            19.47756004333496
+          ],
+          "sourceMax": [
+            39.280555725097656,
+            14.7478609085083,
+            19.982559204101562
+          ],
+          "clientCenter": [
+            38.3979549407959,
+            19.73005962371826,
+            -13.932415008544922
+          ],
+          "clientSize": [
+            1.7652015686035156,
+            0.5049991607666016,
+            1.6308917999267578
+          ],
+          "signedVolumeMm3": 0.773248689203823
+        },
+        {
+          "name": "A · 旋锁弹性垫 240.002",
+          "vertices": 48,
+          "triangles": 92,
+          "closedTopology": true,
+          "sourceMin": [
+            37.51535415649414,
+            4.252139568328857,
+            19.47756004333496
+          ],
+          "sourceMax": [
+            39.280555725097656,
+            5.883030414581299,
+            19.982559204101562
+          ],
+          "clientCenter": [
+            38.3979549407959,
+            19.73005962371826,
+            -5.067584991455078
+          ],
+          "clientSize": [
+            1.7652015686035156,
+            0.5049991607666016,
+            1.6308908462524414
+          ],
+          "signedVolumeMm3": 0.7732488225759381
+        }
+      ],
+      "installationPrimaryNode": "A · 同款 下环一体式开关套筒.002",
+      "installationMovingNodes": [
+        "A · 同款 6×6 开关.002",
+        "A · 同款 按杆.002",
+        "A · 同款 焊脚占位.008",
+        "A · 同款 焊脚占位.009",
+        "A · 同款 焊脚占位.010",
+        "A · 同款 焊脚占位.011"
+      ]
+    },
+    {
+      "key": "b",
+      "label": "B",
+      "assetId": "buttons-b",
+      "sourceFile": "buttons/b.blend",
+      "sourceSha256": "ec5cbb6447b4a2025d85edae8fb7cd11f97d9c6e2ca4a1a7b93001bef20d083d",
+      "movingNodes": [
+        "B · 同款插销与圆形键帽.002",
+        "键帽标识 · B.002"
+      ],
+      "springNodes": [
+        "B · 同款 回位弹簧.002"
+      ],
+      "switchNode": "B · 同款 按杆.002",
+      "electricalSwitchNode": "B · 同款 6×6 开关.002",
+      "actuatorNodes": [
+        "B · 同款 按杆.002"
+      ],
+      "strikerNode": "B · 同款插销与圆形键帽.002",
+      "strikerSourceClient": [
+        52.499996185302734,
+        28.54311180114746,
+        -21.0
+      ],
+      "switchSourceClient": [
+        52.499996185302734,
+        27.79311180114746,
+        -21.0
+      ],
+      "axis": [
+        0,
+        1,
+        0
+      ],
+      "travel": 1.0,
+      "maxOvertravel": 0.25,
+      "measuredRestGap": 0.75,
+      "freeLength": 4.040819758313642,
+      "solidLength": 1.8233663914345257,
+      "stiffness": 0.08750419776955475,
+      "mass": 0.0010230977010994855,
+      "damping": 0.3889702181929237,
+      "springMeasured": {
+        "bottomSourceZ": 26.967958988633306,
+        "topSourceZ": 31.00877874694695,
+        "centerlineStartSource": [
+          55.386993408203125,
+          21.0,
+          30.87329864501953
+        ],
+        "centerlineEndSource": [
+          55.386993408203125,
+          21.0,
+          27.102764129638672
+        ],
+        "centerlineTurns": 5.0,
+        "nominalWireDiameterMm": 0.30389439857242095,
+        "wireEnvelopeAxesMm": [
+          0.30389439857242095,
+          0.2712614380286311,
+          0.30389439857242095
+        ],
+        "meanCoilDiameterMm": 5.773994036826107,
+        "conservativeSolidLengthMm": 1.8233663914345257,
+        "note": "Solid length is a conservative geometry estimate; source scaling makes the wire envelope slightly anisotropic. This is not a measured spring specification."
+      },
+      "springSupportWitnesses": {
+        "lower": {
+          "supportName": "B · 同款 下环一体式开关套筒.002",
+          "minimumEndpointDistanceMm": 0.0008220672607421875,
+          "witnesses": [
+            {
+              "springSource": [
+                55.401549023173004,
+                20.99174106420293,
+                26.967958988633306
+              ],
+              "supportSource": [
+                55.40155029296875,
+                20.991741180419922,
+                26.96713638305664
+              ],
+              "distanceMm": 0.0008220672607421875,
+              "normalSource": [
+                0.0,
+                -0.0,
+                1.0
+              ]
+            }
+          ]
+        },
+        "upper": {
+          "supportName": "B · 同款插销与圆形键帽.002",
+          "minimumEndpointDistanceMm": 0.00015232540317811072,
+          "witnesses": [
+            {
+              "springSource": [
+                55.3874782159087,
+                21.00713987454338,
+                31.00877874694695
+              ],
+              "supportSource": [
+                55.38748550415039,
+                21.007118225097656,
+                31.008930206298828
+              ],
+              "distanceMm": 0.00015232540317811072,
+              "normalSource": [
+                0.0,
+                0.0,
+                -0.9999999403953552
+              ]
+            }
+          ]
+        }
+      },
+      "zeroThicknessDecorationNodes": [
+        "键帽标识 · B.002"
+      ],
+      "movingVolumeMm3": 825.0787912092625,
+      "guide": {
+        "basis": "central-shaft and sampled central-free-bore only; outer interleaved arcs require source audit",
+        "pinDiameter": 2.065824270248413,
+        "holeDiameter": 3.4636287689208984,
+        "outerDiameter": 11.183315909859743,
+        "height": 3.2919769287109375,
+        "centerClient": [
+          52.499996185302734,
+          28.139049530029297,
+          -21.0
+        ],
+        "shaftHeight": 2.0,
+        "shaftCenterClient": [
+          52.499996185302734,
+          29.54311180114746,
+          -21.0
+        ],
+        "tolerance": 0.1,
+        "minClearance": 0.1,
+        "insertionDepth": 2.0,
+        "shaftRadiusSamples": 64,
+        "boreRadiusSamples": 808,
+        "axialBandSource": [
+          26.493061065673828,
+          29.785037994384766
+        ],
+        "nominalMinimumRadialClearance": 0.6989022493362427,
+        "worstCaseRadialClearance": 0.5989022493362427
+      },
+      "objects": [
+        {
+          "name": "键帽标识 · B.002",
+          "vertices": 106,
+          "triangles": 108,
+          "closedTopology": false,
+          "sourceMin": [
+            51.67704911740596,
+            19.799559836095927,
+            38.106710617057736
+          ],
+          "sourceMax": [
+            53.54079620698227,
+            22.527828559427096,
+            38.315961462301054
+          ],
+          "clientCenter": [
+            52.60892266219412,
+            38.211336039679395,
+            -21.16369419776151
+          ],
+          "clientSize": [
+            1.8637470895763144,
+            0.20925084524331794,
+            2.728268723331169
+          ],
+          "signedVolumeMm3": 41.86190318472321
+        },
+        {
+          "name": "B · 同款插销与圆形键帽.002",
+          "vertices": 2560,
+          "triangles": 5120,
+          "closedTopology": true,
+          "sourceMin": [
+            45.832576751708984,
+            14.330644607543945,
+            28.154983520507812
+          ],
+          "sourceMax": [
+            59.16999816894531,
+            27.669355392456055,
+            38.754791259765625
+          ],
+          "clientCenter": [
+            52.50128746032715,
+            33.45488739013672,
+            -21.0
+          ],
+          "clientSize": [
+            13.337421417236328,
+            10.599807739257812,
+            13.33871078491211
+          ],
+          "signedVolumeMm3": 825.0787912092625
+        },
+        {
+          "name": "B · 同款 焊脚占位.008",
+          "vertices": 8,
+          "triangles": 12,
+          "closedTopology": true,
+          "sourceMin": [
+            54.52499771118164,
+            22.775005340576172,
+            20.493045330047607
+          ],
+          "sourceMax": [
+            55.17499923706055,
+            23.425006866455078,
+            23.49305248260498
+          ],
+          "clientCenter": [
+            54.849998474121094,
+            21.993048906326294,
+            -23.100006103515625
+          ],
+          "clientSize": [
+            0.6500015258789062,
+            3.000007152557373,
+            0.6500015258789062
+          ],
+          "signedVolumeMm3": 1.2675089729044846
+        },
+        {
+          "name": "B · 同款 焊脚占位.009",
+          "vertices": 8,
+          "triangles": 12,
+          "closedTopology": true,
+          "sourceMin": [
+            54.52499771118164,
+            18.574995040893555,
+            20.493045330047607
+          ],
+          "sourceMax": [
+            55.17499923706055,
+            19.22499656677246,
+            23.49305248260498
+          ],
+          "clientCenter": [
+            54.849998474121094,
+            21.993048906326294,
+            -18.899995803833008
+          ],
+          "clientSize": [
+            0.6500015258789062,
+            3.000007152557373,
+            0.6500015258789062
+          ],
+          "signedVolumeMm3": 1.2675089729044753
+        },
+        {
+          "name": "B · 同款 焊脚占位.010",
+          "vertices": 8,
+          "triangles": 12,
+          "closedTopology": true,
+          "sourceMin": [
+            49.824989318847656,
+            22.775005340576172,
+            20.493045330047607
+          ],
+          "sourceMax": [
+            50.47499084472656,
+            23.425006866455078,
+            23.49305248260498
+          ],
+          "clientCenter": [
+            50.14999008178711,
+            21.993048906326294,
+            -23.100006103515625
+          ],
+          "clientSize": [
+            0.6500015258789062,
+            3.000007152557373,
+            0.6500015258789062
+          ],
+          "signedVolumeMm3": 1.2675089729043332
+        },
+        {
+          "name": "B · 同款 焊脚占位.011",
+          "vertices": 8,
+          "triangles": 12,
+          "closedTopology": true,
+          "sourceMin": [
+            49.824989318847656,
+            18.574995040893555,
+            20.493045330047607
+          ],
+          "sourceMax": [
+            50.47499084472656,
+            19.22499656677246,
+            23.49305248260498
+          ],
+          "clientCenter": [
+            50.14999008178711,
+            21.993048906326294,
+            -18.899995803833008
+          ],
+          "clientSize": [
+            0.6500015258789062,
+            3.000007152557373,
+            0.6500015258789062
+          ],
+          "signedVolumeMm3": 1.2675089729044753
+        },
+        {
+          "name": "B · 同款 按杆.002",
+          "vertices": 256,
+          "triangles": 508,
+          "closedTopology": true,
+          "sourceMin": [
+            51.07499694824219,
+            19.575000762939453,
+            26.49310874938965
+          ],
+          "sourceMax": [
+            53.92499542236328,
+            22.424999237060547,
+            27.79311180114746
+          ],
+          "clientCenter": [
+            52.499996185302734,
+            27.143110275268555,
+            -21.0
+          ],
+          "clientSize": [
+            2.8499984741210938,
+            1.3000030517578125,
+            2.8499984741210938
+          ],
+          "signedVolumeMm3": 8.289902321109784
+        },
+        {
+          "name": "B · 同款 6×6 开关.002",
+          "vertices": 8,
+          "triangles": 12,
+          "closedTopology": true,
+          "sourceMin": [
+            49.4999885559082,
+            17.99999237060547,
+            23.493053436279297
+          ],
+          "sourceMax": [
+            55.500003814697266,
+            24.00000762939453,
+            26.493061065673828
+          ],
+          "clientCenter": [
+            52.499996185302734,
+            24.993057250976562,
+            -21.0
+          ],
+          "clientSize": [
+            6.0000152587890625,
+            3.0000076293945312,
+            6.0000152587890625
+          ],
+          "signedVolumeMm3": 108.00082397670485
+        },
+        {
+          "name": "B · 同款 回位弹簧.002",
+          "vertices": 2316,
+          "triangles": 4628,
+          "closedTopology": true,
+          "sourceMin": [
+            49.46439153984625,
+            17.96132468108552,
+            26.967958988633306
+          ],
+          "sourceMax": [
+            55.53843220005426,
+            24.03717835995675,
+            31.00877874694695
+          ],
+          "clientCenter": [
+            52.50141186995025,
+            28.98836886779013,
+            -20.999251520521135
+          ],
+          "clientSize": [
+            6.074040660208013,
+            4.040819758313642,
+            6.07585367887123
+          ],
+          "signedVolumeMm3": 5.588714385637666
+        },
+        {
+          "name": "B · 同款 下环一体式开关套筒.002",
+          "vertices": 1022469,
+          "triangles": 2044962,
+          "closedTopology": true,
+          "sourceMin": [
+            46.908729553222656,
+            15.408733367919922,
+            18.357559204101562
+          ],
+          "sourceMax": [
+            58.09126281738281,
+            26.59158706665039,
+            29.785037994384766
+          ],
+          "clientCenter": [
+            52.499996185302734,
+            24.071298599243164,
+            -21.000160217285156
+          ],
+          "clientSize": [
+            11.182533264160156,
+            11.427478790283203,
+            11.182853698730469
+          ],
+          "signedVolumeMm3": 353.6581258267592
+        },
+        {
+          "name": "B · 旋锁弹性垫 0.002",
+          "vertices": 48,
+          "triangles": 92,
+          "closedTopology": true,
+          "sourceMin": [
+            57.04533004760742,
+            20.2122802734375,
+            19.47756004333496
+          ],
+          "sourceMax": [
+            58.1595458984375,
+            21.7877197265625,
+            19.982559204101562
+          ],
+          "clientCenter": [
+            57.60243797302246,
+            19.73005962371826,
+            -21.0
+          ],
+          "clientSize": [
+            1.1142158508300781,
+            0.5049991607666016,
+            1.575439453125
+          ],
+          "signedVolumeMm3": 0.7732494267004751
+        },
+        {
+          "name": "B · 旋锁弹性垫 120.002",
+          "vertices": 48,
+          "triangles": 92,
+          "closedTopology": true,
+          "sourceMin": [
+            49.01535415649414,
+            24.61697006225586,
+            19.47756004333496
+          ],
+          "sourceMax": [
+            50.780555725097656,
+            26.247859954833984,
+            19.982559204101562
+          ],
+          "clientCenter": [
+            49.8979549407959,
+            19.73005962371826,
+            -25.432415008544922
+          ],
+          "clientSize": [
+            1.7652015686035156,
+            0.5049991607666016,
+            1.630889892578125
+          ],
+          "signedVolumeMm3": 0.7732487129648528
+        },
+        {
+          "name": "B · 旋锁弹性垫 240.002",
+          "vertices": 48,
+          "triangles": 92,
+          "closedTopology": true,
+          "sourceMin": [
+            49.01535415649414,
+            15.7521390914917,
+            19.47756004333496
+          ],
+          "sourceMax": [
+            50.780555725097656,
+            17.38302993774414,
+            19.982559204101562
+          ],
+          "clientCenter": [
+            49.8979549407959,
+            19.73005962371826,
+            -16.56758451461792
+          ],
+          "clientSize": [
+            1.7652015686035156,
+            0.5049991607666016,
+            1.6308908462524414
+          ],
+          "signedVolumeMm3": 0.7732487778411526
+        }
+      ],
+      "installationPrimaryNode": "B · 同款 下环一体式开关套筒.002",
+      "installationMovingNodes": [
+        "B · 同款 6×6 开关.002",
+        "B · 同款 按杆.002",
+        "B · 同款 焊脚占位.008",
+        "B · 同款 焊脚占位.009",
+        "B · 同款 焊脚占位.010",
+        "B · 同款 焊脚占位.011"
+      ]
+    },
+    {
+      "key": "x",
+      "label": "X",
+      "assetId": "buttons-x",
+      "sourceFile": "buttons/x.blend",
+      "sourceSha256": "93c1bc7e9ee279a2f1f3f44808639889c6816e210e6bea1f0b304585b4343cbb",
+      "movingNodes": [
+        "X · 同款插销与圆形键帽.002",
+        "键帽标识 · X.002"
+      ],
+      "springNodes": [
+        "X · 同款 回位弹簧.002"
+      ],
+      "switchNode": "X · 同款 按杆.002",
+      "electricalSwitchNode": "X · 同款 6×6 开关.002",
+      "actuatorNodes": [
+        "X · 同款 按杆.002"
+      ],
+      "strikerNode": "X · 同款插销与圆形键帽.002",
+      "strikerSourceClient": [
+        29.499996185302734,
+        28.54311180114746,
+        -21.0
+      ],
+      "switchSourceClient": [
+        29.499996185302734,
+        27.79311180114746,
+        -21.0
+      ],
+      "axis": [
+        0,
+        1,
+        0
+      ],
+      "travel": 1.0,
+      "maxOvertravel": 0.25,
+      "measuredRestGap": 0.75,
+      "freeLength": 4.040819758313642,
+      "solidLength": 1.8233663914345257,
+      "stiffness": 0.08750421502345317,
+      "mass": 0.0012801151889063735,
+      "damping": 0.43509326852848385,
+      "springMeasured": {
+        "bottomSourceZ": 26.967958988633306,
+        "topSourceZ": 31.00877874694695,
+        "centerlineStartSource": [
+          32.386993408203125,
+          21.0,
+          30.87329864501953
+        ],
+        "centerlineEndSource": [
+          32.386993408203125,
+          21.0,
+          27.102764129638672
+        ],
+        "centerlineTurns": 5.0,
+        "nominalWireDiameterMm": 0.30389439857242095,
+        "wireEnvelopeAxesMm": [
+          0.30389439857242095,
+          0.2712614380286311,
+          0.30389439857242095
+        ],
+        "meanCoilDiameterMm": 5.773993657324719,
+        "conservativeSolidLengthMm": 1.8233663914345257,
+        "note": "Solid length is a conservative geometry estimate; source scaling makes the wire envelope slightly anisotropic. This is not a measured spring specification."
+      },
+      "springSupportWitnesses": {
+        "lower": {
+          "supportName": "X · 同款 下环一体式开关套筒.002",
+          "minimumEndpointDistanceMm": 0.0008220672607421875,
+          "witnesses": [
+            {
+              "springSource": [
+                32.401549023173004,
+                20.99174106420293,
+                26.967958988633306
+              ],
+              "supportSource": [
+                32.40155029296875,
+                20.991741180419922,
+                26.96713638305664
+              ],
+              "distanceMm": 0.0008220672607421875,
+              "normalSource": [
+                0.0,
+                -0.0,
+                1.0
+              ]
+            }
+          ]
+        },
+        "upper": {
+          "supportName": "X · 同款插销与圆形键帽.002",
+          "minimumEndpointDistanceMm": 0.00015757285291329026,
+          "witnesses": [
+            {
+              "springSource": [
+                32.3874782159087,
+                21.00713987454338,
+                31.00877874694695
+              ],
+              "supportSource": [
+                32.38749694824219,
+                21.007097244262695,
+                31.008930206298828
+              ],
+              "distanceMm": 0.00015757285291329026,
+              "normalSource": [
+                -0.0,
+                -0.0,
+                -1.0
+              ]
+            }
+          ]
+        }
+      },
+      "zeroThicknessDecorationNodes": [
+        "键帽标识 · X.002"
+      ],
+      "movingVolumeMm3": 1032.3509587954625,
+      "guide": {
+        "basis": "central-shaft and sampled central-free-bore only; outer interleaved arcs require source audit",
+        "pinDiameter": 2.065824270248413,
+        "holeDiameter": 3.4636287689208984,
+        "outerDiameter": 11.183315909859743,
+        "height": 3.2919769287109375,
+        "centerClient": [
+          29.499996185302734,
+          28.139049530029297,
+          -21.0
+        ],
+        "shaftHeight": 2.0,
+        "shaftCenterClient": [
+          29.499996185302734,
+          29.54311180114746,
+          -21.0
+        ],
+        "tolerance": 0.1,
+        "minClearance": 0.1,
+        "insertionDepth": 2.0,
+        "shaftRadiusSamples": 64,
+        "boreRadiusSamples": 808,
+        "axialBandSource": [
+          26.493061065673828,
+          29.785037994384766
+        ],
+        "nominalMinimumRadialClearance": 0.6989022493362427,
+        "worstCaseRadialClearance": 0.5989022493362427
+      },
+      "objects": [
+        {
+          "name": "键帽标识 · X.002",
+          "vertices": 12,
+          "triangles": 10,
+          "closedTopology": false,
+          "sourceMin": [
+            28.097825535849374,
+            19.79921938604995,
+            40.23927174168401
+          ],
+          "sourceMax": [
+            30.900672166413933,
+            22.528705540239038,
+            40.538311080265046
+          ],
+          "clientCenter": [
+            29.499248851131654,
+            40.38879141097453,
+            -21.163962463144493
+          ],
+          "clientSize": [
+            2.8028466305645594,
+            0.29903933858103926,
+            2.7294861541890896
+          ],
+          "signedVolumeMm3": 34.83721891112199
+        },
+        {
+          "name": "X · 同款插销与圆形键帽.002",
+          "vertices": 2430,
+          "triangles": 4856,
+          "closedTopology": true,
+          "sourceMin": [
+            22.832576751708984,
+            14.330644607543945,
+            28.154983520507812
+          ],
+          "sourceMax": [
+            36.16999816894531,
+            27.669355392456055,
+            40.94721221923828
+          ],
+          "clientCenter": [
+            29.50128746032715,
+            34.55109786987305,
+            -21.0
+          ],
+          "clientSize": [
+            13.337421417236328,
+            12.792228698730469,
+            13.33871078491211
+          ],
+          "signedVolumeMm3": 1032.3509587954625
+        },
+        {
+          "name": "X · 同款 焊脚占位.008",
+          "vertices": 8,
+          "triangles": 12,
+          "closedTopology": true,
+          "sourceMin": [
+            31.52499771118164,
+            22.775005340576172,
+            20.493045330047607
+          ],
+          "sourceMax": [
+            32.17499923706055,
+            23.425006866455078,
+            23.49305248260498
+          ],
+          "clientCenter": [
+            31.849998474121094,
+            21.993048906326294,
+            -23.100006103515625
+          ],
+          "clientSize": [
+            0.6500015258789062,
+            3.000007152557373,
+            0.6500015258789062
+          ],
+          "signedVolumeMm3": 1.2675089729044469
+        },
+        {
+          "name": "X · 同款 焊脚占位.009",
+          "vertices": 8,
+          "triangles": 12,
+          "closedTopology": true,
+          "sourceMin": [
+            31.52499771118164,
+            18.574995040893555,
+            20.493045330047607
+          ],
+          "sourceMax": [
+            32.17499923706055,
+            19.22499656677246,
+            23.49305248260498
+          ],
+          "clientCenter": [
+            31.849998474121094,
+            21.993048906326294,
+            -18.899995803833008
+          ],
+          "clientSize": [
+            0.6500015258789062,
+            3.000007152557373,
+            0.6500015258789062
+          ],
+          "signedVolumeMm3": 1.2675089729043616
+        },
+        {
+          "name": "X · 同款 焊脚占位.010",
+          "vertices": 8,
+          "triangles": 12,
+          "closedTopology": true,
+          "sourceMin": [
+            26.824989318847656,
+            22.775005340576172,
+            20.493045330047607
+          ],
+          "sourceMax": [
+            27.474990844726562,
+            23.425006866455078,
+            23.49305248260498
+          ],
+          "clientCenter": [
+            27.14999008178711,
+            21.993048906326294,
+            -23.100006103515625
+          ],
+          "clientSize": [
+            0.6500015258789062,
+            3.000007152557373,
+            0.6500015258789062
+          ],
+          "signedVolumeMm3": 1.2675089729044469
+        },
+        {
+          "name": "X · 同款 焊脚占位.011",
+          "vertices": 8,
+          "triangles": 12,
+          "closedTopology": true,
+          "sourceMin": [
+            26.824989318847656,
+            18.574995040893555,
+            20.493045330047607
+          ],
+          "sourceMax": [
+            27.474990844726562,
+            19.22499656677246,
+            23.49305248260498
+          ],
+          "clientCenter": [
+            27.14999008178711,
+            21.993048906326294,
+            -18.899995803833008
+          ],
+          "clientSize": [
+            0.6500015258789062,
+            3.000007152557373,
+            0.6500015258789062
+          ],
+          "signedVolumeMm3": 1.2675089729043616
+        },
+        {
+          "name": "X · 同款 按杆.002",
+          "vertices": 256,
+          "triangles": 508,
+          "closedTopology": true,
+          "sourceMin": [
+            28.074996948242188,
+            19.575000762939453,
+            26.49310874938965
+          ],
+          "sourceMax": [
+            30.92499542236328,
+            22.424999237060547,
+            27.79311180114746
+          ],
+          "clientCenter": [
+            29.499996185302734,
+            27.143110275268555,
+            -21.0
+          ],
+          "clientSize": [
+            2.8499984741210938,
+            1.3000030517578125,
+            2.8499984741210938
+          ],
+          "signedVolumeMm3": 8.28990697015019
+        },
+        {
+          "name": "X · 同款 6×6 开关.002",
+          "vertices": 8,
+          "triangles": 12,
+          "closedTopology": true,
+          "sourceMin": [
+            26.499988555908203,
+            17.99999237060547,
+            23.493053436279297
+          ],
+          "sourceMax": [
+            32.500003814697266,
+            24.00000762939453,
+            26.493061065673828
+          ],
+          "clientCenter": [
+            29.499996185302734,
+            24.993057250976562,
+            -21.0
+          ],
+          "clientSize": [
+            6.0000152587890625,
+            3.0000076293945312,
+            6.0000152587890625
+          ],
+          "signedVolumeMm3": 108.00082397670501
+        },
+        {
+          "name": "X · 同款 回位弹簧.002",
+          "vertices": 2316,
+          "triangles": 4628,
+          "closedTopology": true,
+          "sourceMin": [
+            26.464391539846247,
+            17.96132468108552,
+            26.967958988633306
+          ],
+          "sourceMax": [
+            32.53843220005426,
+            24.03717835995675,
+            31.00877874694695
+          ],
+          "clientCenter": [
+            29.501411869950253,
+            28.98836886779013,
+            -20.999251520521135
+          ],
+          "clientSize": [
+            6.074040660208013,
+            4.040819758313642,
+            6.07585367887123
+          ],
+          "signedVolumeMm3": 5.588714385612729
+        },
+        {
+          "name": "X · 同款 下环一体式开关套筒.002",
+          "vertices": 1022465,
+          "triangles": 2044954,
+          "closedTopology": true,
+          "sourceMin": [
+            23.908729553222656,
+            15.408733367919922,
+            18.357559204101562
+          ],
+          "sourceMax": [
+            35.09126281738281,
+            26.59158706665039,
+            29.785037994384766
+          ],
+          "clientCenter": [
+            29.499996185302734,
+            24.071298599243164,
+            -21.000160217285156
+          ],
+          "clientSize": [
+            11.182533264160156,
+            11.427478790283203,
+            11.182853698730469
+          ],
+          "signedVolumeMm3": 353.6581244024035
+        },
+        {
+          "name": "X · 旋锁弹性垫 0.002",
+          "vertices": 48,
+          "triangles": 92,
+          "closedTopology": true,
+          "sourceMin": [
+            34.04533004760742,
+            20.2122802734375,
+            19.47756004333496
+          ],
+          "sourceMax": [
+            35.1595458984375,
+            21.7877197265625,
+            19.982559204101562
+          ],
+          "clientCenter": [
+            34.60243797302246,
+            19.73005962371826,
+            -21.0
+          ],
+          "clientSize": [
+            1.1142158508300781,
+            0.5049991607666016,
+            1.575439453125
+          ],
+          "signedVolumeMm3": 0.7732494267005924
+        },
+        {
+          "name": "X · 旋锁弹性垫 120.002",
+          "vertices": 48,
+          "triangles": 92,
+          "closedTopology": true,
+          "sourceMin": [
+            26.015356063842773,
+            24.61697006225586,
+            19.47756004333496
+          ],
+          "sourceMax": [
+            27.780555725097656,
+            26.247859954833984,
+            19.982559204101562
+          ],
+          "clientCenter": [
+            26.897955894470215,
+            19.73005962371826,
+            -25.432415008544922
+          ],
+          "clientSize": [
+            1.7651996612548828,
+            0.5049991607666016,
+            1.630889892578125
+          ],
+          "signedVolumeMm3": 0.7732480869728242
+        },
+        {
+          "name": "X · 旋锁弹性垫 240.002",
+          "vertices": 48,
+          "triangles": 92,
+          "closedTopology": true,
+          "sourceMin": [
+            26.015356063842773,
+            15.7521390914917,
+            19.47756004333496
+          ],
+          "sourceMax": [
+            27.780555725097656,
+            17.38302993774414,
+            19.982559204101562
+          ],
+          "clientCenter": [
+            26.897955894470215,
+            19.73005962371826,
+            -16.56758451461792
+          ],
+          "clientSize": [
+            1.7651996612548828,
+            0.5049991607666016,
+            1.6308908462524414
+          ],
+          "signedVolumeMm3": 0.7732481518504386
+        }
+      ],
+      "installationPrimaryNode": "X · 同款 下环一体式开关套筒.002",
+      "installationMovingNodes": [
+        "X · 同款 6×6 开关.002",
+        "X · 同款 按杆.002",
+        "X · 同款 焊脚占位.008",
+        "X · 同款 焊脚占位.009",
+        "X · 同款 焊脚占位.010",
+        "X · 同款 焊脚占位.011"
+      ]
+    },
+    {
+      "key": "y",
+      "label": "Y",
+      "assetId": "buttons-y",
+      "sourceFile": "buttons/y.blend",
+      "sourceSha256": "16333679918ad7bbd8bbedf74becb50889a95044192ee0a2dcb456a61e85ee01",
+      "movingNodes": [
+        "Y · 同款插销与圆形键帽.002",
+        "键帽标识 · Y.002"
+      ],
+      "springNodes": [
+        "Y · 同款 回位弹簧.002"
+      ],
+      "switchNode": "Y · 同款 按杆.002",
+      "electricalSwitchNode": "Y · 同款 6×6 开关.002",
+      "actuatorNodes": [
+        "Y · 同款 按杆.002"
+      ],
+      "strikerNode": "Y · 同款插销与圆形键帽.002",
+      "strikerSourceClient": [
+        40.999996185302734,
+        28.54311180114746,
+        -32.5
+      ],
+      "switchSourceClient": [
+        40.999996185302734,
+        27.79311180114746,
+        -32.5
+      ],
+      "axis": [
+        0,
+        1,
+        0
+      ],
+      "travel": 1.0,
+      "maxOvertravel": 0.25,
+      "measuredRestGap": 0.75,
+      "freeLength": 4.040819758313642,
+      "solidLength": 1.8233663914345257,
+      "stiffness": 0.08750419382042927,
+      "mass": 0.0011695864700859671,
+      "damping": 0.41588566791148335,
+      "springMeasured": {
+        "bottomSourceZ": 26.967958988633306,
+        "topSourceZ": 31.00877874694695,
+        "centerlineStartSource": [
+          43.886993408203125,
+          32.5,
+          30.87329864501953
+        ],
+        "centerlineEndSource": [
+          43.886993408203125,
+          32.5,
+          27.102764129638672
+        ],
+        "centerlineTurns": 5.0,
+        "nominalWireDiameterMm": 0.30389439857242095,
+        "wireEnvelopeAxesMm": [
+          0.30389439857242095,
+          0.2712614380286311,
+          0.30389439857242095
+        ],
+        "meanCoilDiameterMm": 5.773994123687569,
+        "conservativeSolidLengthMm": 1.8233663914345257,
+        "note": "Solid length is a conservative geometry estimate; source scaling makes the wire envelope slightly anisotropic. This is not a measured spring specification."
+      },
+      "springSupportWitnesses": {
+        "lower": {
+          "supportName": "Y · 同款 下环一体式开关套筒.002",
+          "minimumEndpointDistanceMm": 0.0008220672607421875,
+          "witnesses": [
+            {
+              "springSource": [
+                43.901549023173004,
+                32.49174106420293,
+                26.967958988633306
+              ],
+              "supportSource": [
+                43.90155029296875,
+                32.49174118041992,
+                26.96713638305664
+              ],
+              "distanceMm": 0.0008220672607421875,
+              "normalSource": [
+                0.0,
+                -0.0,
+                1.0
+              ]
+            }
+          ]
+        },
+        "upper": {
+          "supportName": "Y · 同款插销与圆形键帽.002",
+          "minimumEndpointDistanceMm": 0.00016207975568249822,
+          "witnesses": [
+            {
+              "springSource": [
+                43.8874782159087,
+                32.50713987454338,
+                31.00877874694695
+              ],
+              "supportSource": [
+                43.887451171875,
+                32.50719451904297,
+                31.008930206298828
+              ],
+              "distanceMm": 0.00016207975568249822,
+              "normalSource": [
+                -0.0,
+                -0.0,
+                -1.0
+              ]
+            }
+          ]
+        }
+      },
+      "zeroThicknessDecorationNodes": [
+        "键帽标识 · Y.002"
+      ],
+      "movingVolumeMm3": 943.2148952306187,
+      "guide": {
+        "basis": "central-shaft and sampled central-free-bore only; outer interleaved arcs require source audit",
+        "pinDiameter": 2.0658276081085205,
+        "holeDiameter": 3.4636287689208984,
+        "outerDiameter": 11.183315909859743,
+        "height": 3.2919769287109375,
+        "centerClient": [
+          40.999996185302734,
+          28.139049530029297,
+          -32.5
+        ],
+        "shaftHeight": 2.0,
+        "shaftCenterClient": [
+          40.999996185302734,
+          29.54311180114746,
+          -32.5
+        ],
+        "tolerance": 0.1,
+        "minClearance": 0.1,
+        "insertionDepth": 2.0,
+        "shaftRadiusSamples": 64,
+        "boreRadiusSamples": 808,
+        "axialBandSource": [
+          26.493061065673828,
+          29.785037994384766
+        ],
+        "nominalMinimumRadialClearance": 0.698900580406189,
+        "worstCaseRadialClearance": 0.598900580406189
+      },
+      "objects": [
+        {
+          "name": "键帽标识 · Y.002",
+          "vertices": 9,
+          "triangles": 7,
+          "closedTopology": false,
+          "sourceMin": [
+            39.798442033855586,
+            31.3000062649756,
+            39.385621595116135
+          ],
+          "sourceMax": [
+            42.20384052610793,
+            34.02870793724698,
+            39.611700176963446
+          ],
+          "clientCenter": [
+            41.00114127998176,
+            39.49866088603979,
+            -32.66435710111129
+          ],
+          "clientSize": [
+            2.4053984922523455,
+            0.226078581847311,
+            2.7287016722713773
+          ],
+          "signedVolumeMm3": 23.849756982378267
+        },
+        {
+          "name": "Y · 同款插销与圆形键帽.002",
+          "vertices": 2430,
+          "triangles": 4856,
+          "closedTopology": true,
+          "sourceMin": [
+            34.332576751708984,
+            25.830644607543945,
+            28.154983520507812
+          ],
+          "sourceMax": [
+            47.66999816894531,
+            39.16935729980469,
+            40.021873474121094
+          ],
+          "clientCenter": [
+            41.00128746032715,
+            34.08842849731445,
+            -32.500000953674316
+          ],
+          "clientSize": [
+            13.337421417236328,
+            11.866889953613281,
+            13.338712692260742
+          ],
+          "signedVolumeMm3": 943.2148952306187
+        },
+        {
+          "name": "Y · 同款 焊脚占位.008",
+          "vertices": 8,
+          "triangles": 12,
+          "closedTopology": true,
+          "sourceMin": [
+            43.02499771118164,
+            34.27500534057617,
+            20.493045330047607
+          ],
+          "sourceMax": [
+            43.67499923706055,
+            34.92500686645508,
+            23.49305248260498
+          ],
+          "clientCenter": [
+            43.349998474121094,
+            21.993048906326294,
+            -34.600006103515625
+          ],
+          "clientSize": [
+            0.6500015258789062,
+            3.000007152557373,
+            0.6500015258789062
+          ],
+          "signedVolumeMm3": 1.2675089729045037
+        },
+        {
+          "name": "Y · 同款 焊脚占位.009",
+          "vertices": 8,
+          "triangles": 12,
+          "closedTopology": true,
+          "sourceMin": [
+            43.02499771118164,
+            30.074995040893555,
+            20.493045330047607
+          ],
+          "sourceMax": [
+            43.67499923706055,
+            30.72499656677246,
+            23.49305248260498
+          ],
+          "clientCenter": [
+            43.349998474121094,
+            21.993048906326294,
+            -30.399995803833008
+          ],
+          "clientSize": [
+            0.6500015258789062,
+            3.000007152557373,
+            0.6500015258789062
+          ],
+          "signedVolumeMm3": 1.2675089729044657
+        },
+        {
+          "name": "Y · 同款 焊脚占位.010",
+          "vertices": 8,
+          "triangles": 12,
+          "closedTopology": true,
+          "sourceMin": [
+            38.324989318847656,
+            34.27500534057617,
+            20.493045330047607
+          ],
+          "sourceMax": [
+            38.97499084472656,
+            34.92500686645508,
+            23.49305248260498
+          ],
+          "clientCenter": [
+            38.64999008178711,
+            21.993048906326294,
+            -34.600006103515625
+          ],
+          "clientSize": [
+            0.6500015258789062,
+            3.000007152557373,
+            0.6500015258789062
+          ],
+          "signedVolumeMm3": 1.267508972904352
+        },
+        {
+          "name": "Y · 同款 焊脚占位.011",
+          "vertices": 8,
+          "triangles": 12,
+          "closedTopology": true,
+          "sourceMin": [
+            38.324989318847656,
+            30.074995040893555,
+            20.493045330047607
+          ],
+          "sourceMax": [
+            38.97499084472656,
+            30.72499656677246,
+            23.49305248260498
+          ],
+          "clientCenter": [
+            38.64999008178711,
+            21.993048906326294,
+            -30.399995803833008
+          ],
+          "clientSize": [
+            0.6500015258789062,
+            3.000007152557373,
+            0.6500015258789062
+          ],
+          "signedVolumeMm3": 1.2675089729044657
+        },
+        {
+          "name": "Y · 同款 按杆.002",
+          "vertices": 256,
+          "triangles": 508,
+          "closedTopology": true,
+          "sourceMin": [
+            39.57499694824219,
+            31.075000762939453,
+            26.49310874938965
+          ],
+          "sourceMax": [
+            42.42499542236328,
+            33.92499923706055,
+            27.79311180114746
+          ],
+          "clientCenter": [
+            40.999996185302734,
+            27.143110275268555,
+            -32.5
+          ],
+          "clientSize": [
+            2.8499984741210938,
+            1.3000030517578125,
+            2.8499984741210938
+          ],
+          "signedVolumeMm3": 8.289901720184957
+        },
+        {
+          "name": "Y · 同款 6×6 开关.002",
+          "vertices": 8,
+          "triangles": 12,
+          "closedTopology": true,
+          "sourceMin": [
+            37.9999885559082,
+            29.49999237060547,
+            23.493053436279297
+          ],
+          "sourceMax": [
+            44.000003814697266,
+            35.50000762939453,
+            26.493061065673828
+          ],
+          "clientCenter": [
+            40.999996185302734,
+            24.993057250976562,
+            -32.5
+          ],
+          "clientSize": [
+            6.0000152587890625,
+            3.0000076293945312,
+            6.0000152587890625
+          ],
+          "signedVolumeMm3": 108.00082397670485
+        },
+        {
+          "name": "Y · 同款 回位弹簧.002",
+          "vertices": 2316,
+          "triangles": 4628,
+          "closedTopology": true,
+          "sourceMin": [
+            37.96439153984625,
+            29.46132468108552,
+            26.967958988633306
+          ],
+          "sourceMax": [
+            44.03843220005426,
+            35.537178359956755,
+            31.00877874694695
+          ],
+          "clientCenter": [
+            41.00141186995025,
+            28.98836886779013,
+            -32.49925152052114
+          ],
+          "clientSize": [
+            6.074040660208013,
+            4.040819758313642,
+            6.075853678871233
+          ],
+          "signedVolumeMm3": 5.5887143855995935
+        },
+        {
+          "name": "Y · 同款 下环一体式开关套筒.002",
+          "vertices": 1020702,
+          "triangles": 2041420,
+          "closedTopology": true,
+          "sourceMin": [
+            35.408729553222656,
+            26.908733367919922,
+            18.357559204101562
+          ],
+          "sourceMax": [
+            46.59126281738281,
+            38.09158706665039,
+            29.785037994384766
+          ],
+          "clientCenter": [
+            40.999996185302734,
+            24.071298599243164,
+            -32.500160217285156
+          ],
+          "clientSize": [
+            11.182533264160156,
+            11.427478790283203,
+            11.182853698730469
+          ],
+          "signedVolumeMm3": 354.3250234404309
+        },
+        {
+          "name": "Y · 旋锁弹性垫 0.002",
+          "vertices": 48,
+          "triangles": 92,
+          "closedTopology": true,
+          "sourceMin": [
+            45.54533004760742,
+            31.7122802734375,
+            19.47756004333496
+          ],
+          "sourceMax": [
+            46.6595458984375,
+            33.2877197265625,
+            19.982559204101562
+          ],
+          "clientCenter": [
+            46.10243797302246,
+            19.73005962371826,
+            -32.5
+          ],
+          "clientSize": [
+            1.1142158508300781,
+            0.5049991607666016,
+            1.575439453125
+          ],
+          "signedVolumeMm3": 0.7732494205386627
+        },
+        {
+          "name": "Y · 旋锁弹性垫 120.002",
+          "vertices": 48,
+          "triangles": 92,
+          "closedTopology": true,
+          "sourceMin": [
+            37.51535415649414,
+            36.11697006225586,
+            19.47756004333496
+          ],
+          "sourceMax": [
+            39.280555725097656,
+            37.747859954833984,
+            19.982559204101562
+          ],
+          "clientCenter": [
+            38.3979549407959,
+            19.73005962371826,
+            -36.93241500854492
+          ],
+          "clientSize": [
+            1.7652015686035156,
+            0.5049991607666016,
+            1.630889892578125
+          ],
+          "signedVolumeMm3": 0.7732485080059727
+        },
+        {
+          "name": "Y · 旋锁弹性垫 240.002",
+          "vertices": 48,
+          "triangles": 92,
+          "closedTopology": true,
+          "sourceMin": [
+            37.51535415649414,
+            27.252140045166016,
+            19.47756004333496
+          ],
+          "sourceMax": [
+            39.280555725097656,
+            28.88302993774414,
+            19.982559204101562
+          ],
+          "clientCenter": [
+            38.3979549407959,
+            19.73005962371826,
+            -28.067584991455078
+          ],
+          "clientSize": [
+            1.7652015686035156,
+            0.5049991607666016,
+            1.630889892578125
+          ],
+          "signedVolumeMm3": 0.7732487129649984
+        }
+      ],
+      "installationPrimaryNode": "Y · 同款 下环一体式开关套筒.002",
+      "installationMovingNodes": [
+        "Y · 同款 6×6 开关.002",
+        "Y · 同款 按杆.002",
+        "Y · 同款 焊脚占位.008",
+        "Y · 同款 焊脚占位.009",
+        "Y · 同款 焊脚占位.010",
+        "Y · 同款 焊脚占位.011"
+      ]
+    },
+    {
+      "key": "confirm",
+      "label": "确认",
+      "assetId": "buttons-confirm",
+      "sourceFile": "buttons/confirm.blend",
+      "sourceSha256": "6b42811a2e4f6bc66f0a5edcf5fd7de0226795ebdfeca60e4bb6c36ae8751865",
+      "movingNodes": [
+        "确认 · 键帽.007"
+      ],
+      "springNodes": [
+        "确认 · 回弹压簧.005"
+      ],
+      "switchNode": "确认 · 开关触头.005",
+      "electricalSwitchNode": "确认 · 常开开关.005",
+      "actuatorNodes": [
+        "确认 · 开关触头.005"
+      ],
+      "strikerNode": "确认 · 键帽.007",
+      "strikerSourceClient": [
+        0.0,
+        25.9404239654541,
+        -5.5
+      ],
+      "switchSourceClient": [
+        0.0,
+        25.1904239654541,
+        -5.5
+      ],
+      "axis": [
+        0,
+        1,
+        0
+      ],
+      "travel": 1.0,
+      "maxOvertravel": 0.25,
+      "measuredRestGap": 0.75,
+      "freeLength": 3.239795684814453,
+      "solidLength": 1.7499999701976776,
+      "stiffness": 0.22885465159333293,
+      "mass": 0.0005100975314300627,
+      "damping": 0.4441706269999605,
+      "springMeasured": {
+        "bottomSourceZ": 25.8087158203125,
+        "topSourceZ": 29.048511505126953,
+        "centerlineStartSource": [
+          2.7249999046325684,
+          5.5,
+          25.975000381469727
+        ],
+        "centerlineEndSource": [
+          2.7249999046325684,
+          5.5,
+          28.875
+        ],
+        "centerlineTurns": 4.0,
+        "nominalWireDiameterMm": 0.3499999940395355,
+        "wireEnvelopeAxesMm": [
+          0.3499999940395355,
+          0.3499999940395355,
+          0.3499999940395355
+        ],
+        "meanCoilDiameterMm": 5.450000041147758,
+        "conservativeSolidLengthMm": 1.7499999701976776,
+        "note": "Solid length is a conservative geometry estimate; source scaling makes the wire envelope slightly anisotropic. This is not a measured spring specification."
+      },
+      "springSupportWitnesses": {
+        "lower": {
+          "supportName": "确认 · 旋锁座.005",
+          "minimumEndpointDistanceMm": 0.008714675903320312,
+          "witnesses": [
+            {
+              "springSource": [
+                2.7780442237854004,
+                5.512668132781982,
+                25.8087158203125
+              ],
+              "supportSource": [
+                2.7780442237854004,
+                5.512668132781982,
+                25.80000114440918
+              ],
+              "distanceMm": 0.008714675903320312,
+              "normalSource": [
+                0.0,
+                0.0,
+                0.9999999403953552
+              ]
+            },
+            {
+              "springSource": [
+                2.670480728149414,
+                5.5013628005981445,
+                25.8087158203125
+              ],
+              "supportSource": [
+                2.670480489730835,
+                5.5013628005981445,
+                25.80000114440918
+              ],
+              "distanceMm": 0.008714675903320312,
+              "normalSource": [
+                0.0,
+                0.0,
+                0.9999999403953552
+              ]
+            }
+          ]
+        },
+        "upper": {
+          "supportName": "确认 · 键帽.007",
+          "minimumEndpointDistanceMm": 0.0014896393986418843,
+          "witnesses": [
+            {
+              "springSource": [
+                2.702789783477783,
+                5.494933128356934,
+                29.048511505126953
+              ],
+              "supportSource": [
+                2.702789545059204,
+                5.494933605194092,
+                29.05000114440918
+              ],
+              "distanceMm": 0.0014896393986418843,
+              "normalSource": [
+                4.2979621639460674e-07,
+                1.537836169518414e-07,
+                -1.0
+              ]
+            }
+          ]
+        }
+      },
+      "movingVolumeMm3": 411.36897695972795,
+      "guide": {
+        "basis": "central-shaft and sampled central-free-bore only; outer interleaved arcs require source audit",
+        "pinDiameter": 3.099012851715088,
+        "holeDiameter": 3.7954461574554443,
+        "outerDiameter": 18.60000251219187,
+        "height": 3.299577861607766,
+        "centerClient": [
+          0.0,
+          26.000213220507252,
+          -5.5
+        ],
+        "shaftHeight": 2.0,
+        "shaftCenterClient": [
+          0.0,
+          26.9404239654541,
+          -5.5
+        ],
+        "tolerance": 0.1,
+        "minClearance": 0.1,
+        "insertionDepth": 2.0,
+        "shaftRadiusSamples": 64,
+        "boreRadiusSamples": 1088,
+        "axialBandSource": [
+          24.35042428970337,
+          27.650002151311135
+        ],
+        "nominalMinimumRadialClearance": 0.3482166528701782,
+        "worstCaseRadialClearance": 0.24821665287017822
+      },
+      "objects": [
+        {
+          "name": "确认 · 键帽.007",
+          "vertices": 393,
+          "triangles": 782,
+          "closedTopology": true,
+          "sourceMin": [
+            -7.099999904632568,
+            1.9499995160239325,
+            25.940424685084913
+          ],
+          "sourceMax": [
+            7.099999904632568,
+            9.04999989749366,
+            35.55927314360275
+          ],
+          "clientCenter": [
+            0.0,
+            30.749848914343833,
+            -5.499999706758796
+          ],
+          "clientSize": [
+            14.199999809265137,
+            9.618848458517839,
+            7.100000381469727
+          ],
+          "signedVolumeMm3": 411.36897695972795
+        },
+        {
+          "name": "确认 · 旋锁座.005",
+          "vertices": 1056,
+          "triangles": 2112,
+          "closedTopology": true,
+          "sourceMin": [
+            -7.2923397537609596,
+            -2.071275758568655,
+            21.250000805079246
+          ],
+          "sourceMax": [
+            7.292341454506,
+            13.07127409374027,
+            27.650002151311135
+          ],
+          "clientCenter": [
+            8.503725204001e-07,
+            24.45000147819519,
+            -5.499999167585807
+          ],
+          "clientSize": [
+            14.58468120826696,
+            6.400001346231889,
+            15.142549852308925
+          ],
+          "signedVolumeMm3": 801.8278101264704
+        },
+        {
+          "name": "确认 · 常开开关.005",
+          "vertices": 24,
+          "triangles": 44,
+          "closedTopology": true,
+          "sourceMin": [
+            -3.0,
+            2.5,
+            20.050424098968506
+          ],
+          "sourceMax": [
+            3.0,
+            8.5,
+            24.35042428970337
+          ],
+          "clientCenter": [
+            0.0,
+            22.200424194335938,
+            -5.5
+          ],
+          "clientSize": [
+            6.0,
+            4.300000190734863,
+            6.0
+          ],
+          "signedVolumeMm3": 154.5465061737298
+        },
+        {
+          "name": "确认 · 开关触头.005",
+          "vertices": 8,
+          "triangles": 12,
+          "closedTopology": true,
+          "sourceMin": [
+            -1.2999999523162842,
+            4.200000047683716,
+            24.350423902273178
+          ],
+          "sourceMax": [
+            1.2999999523162842,
+            6.799999952316284,
+            25.190423876047134
+          ],
+          "clientCenter": [
+            0.0,
+            24.770423889160156,
+            -5.5
+          ],
+          "clientSize": [
+            2.5999999046325684,
+            0.8399999737739563,
+            2.5999999046325684
+          ],
+          "signedVolumeMm3": 5.678399406147055
+        },
+        {
+          "name": "确认 · 回弹压簧.005",
+          "vertices": 1210,
+          "triangles": 2416,
+          "closedTopology": true,
+          "sourceMin": [
+            -2.8998665809631348,
+            2.616865873336792,
+            25.8087158203125
+          ],
+          "sourceMax": [
+            2.899205446243286,
+            8.38404655456543,
+            29.048511505126953
+          ],
+          "clientCenter": [
+            -0.0003305673599243164,
+            27.428613662719727,
+            -5.500456213951111
+          ],
+          "clientSize": [
+            5.799072027206421,
+            3.239795684814453,
+            5.767180681228638
+          ],
+          "signedVolumeMm3": 6.124967025330636
+        },
+        {
+          "name": "确认 · GPIO 金属焊脚.005",
+          "vertices": 8,
+          "triangles": 12,
+          "closedTopology": true,
+          "sourceMin": [
+            1.675000011920929,
+            5.175000011920929,
+            19.000000834465027
+          ],
+          "sourceMax": [
+            2.324999988079071,
+            5.824999988079071,
+            20.350424885749817
+          ],
+          "clientCenter": [
+            2.0,
+            19.675212860107422,
+            -5.5
+          ],
+          "clientSize": [
+            0.6499999761581421,
+            1.35042405128479,
+            0.6499999761581421
+          ],
+          "signedVolumeMm3": 0.5705541198122249
+        },
+        {
+          "name": "确认 · GND 金属焊脚.005",
+          "vertices": 8,
+          "triangles": 12,
+          "closedTopology": true,
+          "sourceMin": [
+            -2.324999988079071,
+            5.175000011920929,
+            19.000000834465027
+          ],
+          "sourceMax": [
+            -1.675000011920929,
+            5.824999988079071,
+            20.350424885749817
+          ],
+          "clientCenter": [
+            -2.0,
+            19.675212860107422,
+            -5.5
+          ],
+          "clientSize": [
+            0.6499999761581421,
+            1.35042405128479,
+            0.6499999761581421
+          ],
+          "signedVolumeMm3": 0.5705541198122249
+        }
+      ],
+      "installationPrimaryNode": "确认 · 旋锁座.005",
+      "installationMovingNodes": [
+        "确认 · 常开开关.005",
+        "确认 · 开关触头.005",
+        "确认 · GPIO 金属焊脚.005",
+        "确认 · GND 金属焊脚.005"
+      ]
+    }
+  ],
+  "assumptions": [
+    "Nominal travel 1.00 mm; measured rest gap 0.75 mm; rated switch overtravel 0.25 mm is a declared 6x6/H4.3 round-plunger specification that requires actual component matching and measurement.",
+    "Switch reaction/trigger force is not included in the mass-spring model. Electrical contact closes when the declared physical faces touch. This does not certify real switch feel.",
+    "Eight main switches use revised D2.85 mm round actuators. Confirmation uses its original round actuator. The external switch-body model does not model internal cavities or compliant contacts.",
+    "Moving mass assumes homogeneous PLA density 1.24 g/cm^3 and uses the evaluated closed source cap volume. Zero-extrusion source lettering is treated as a massless decorative surface; no fictitious volume is inferred from its open triangles. No infill or density measurement is claimed.",
+    "Spring k uses G=79000 N/mm^2 and k=G*d^4/(8*D^3*N), d=max source wire envelope, measured mean coil diameter and centreline turn count. Source wire scaling is slightly anisotropic; stiffness is nominal, not a measured force curve.",
+    "Damping uses assumed damping ratio 0.65 and c=2*zeta*sqrt(k*1000*mass), units N s/m. Solid height=(N+1)*max wire envelope is a conservative geometric estimate, not a spring specification.",
+    "Guide cylinder proxies represent the measured central shaft and minimum sampled central bore over the axial guide band only. Interleaved outer arcs, retention ears, cap shoulders and housing are covered by separate source-mesh audits; they are not represented by these cylinders.",
+    "Proxy diametral manufacturing tolerance is +/-0.10 mm for each part; minClearance is radial. Local axial relief and housing lateral tolerances are documented separately.",
+    "Spring visual/source-path compression is the declared axial affine deformation about the fixed lower endpoint. It preserves the measured end-to-end displacement but is not a constant-wire-section elastic deformation or finite-element model.",
+    "Path evidence is discrete sampled source geometry, not continuous collision detection or a guarantee for fabricated material, friction, wear or tolerances."
+  ]
+}

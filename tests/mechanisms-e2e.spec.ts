@@ -39,7 +39,7 @@ const pressProject = (): Project => ({
       "press-switch",
       "独立触发开关",
       "button",
-      [0, 7, 0],
+      [0, 5, 0],
       [5, 2, 5],
       {
         stiffness: 0.8,
@@ -51,6 +51,7 @@ const pressProject = (): Project => ({
       },
       true,
     ),
+    part("press-plunger", "独立开关按杆", "base", [0, 7, 0], [3, 2, 3]),
     part("press-battery", "外部电源", "battery", [-30, 6, 0], [20, 12, 13], {
       voltage: 5,
     }),
@@ -162,6 +163,7 @@ test("多个独立子件创建按压组件，真实键帽移动、弹簧压缩�
   await role(editor, "独立键帽", "moving");
   await role(editor, "独立回位弹簧", "spring");
   await role(editor, "独立触发开关", "switch");
+  await role(editor, "独立开关按杆", "fixed");
   await expect(
     editor.getByLabel("机制参数 弹簧刚度", { exact: true }),
   ).toHaveValue("");
@@ -172,7 +174,7 @@ test("多个独立子件创建按压组件，真实键帽移动、弹簧压缩�
     弹簧刚度: "0.02",
     运动质量: "0.3",
     阻尼系数: "2.5",
-    最大行程: "3",
+    最大行程: "2.25",
     自由长度: "8",
     并圈高度: "3",
   }))
@@ -194,11 +196,24 @@ test("多个独立子件创建按压组件，真实键帽移动、弹簧压缩�
   await editor
     .getByLabel("撞针所属子件", { exact: true })
     .selectOption("press-cap");
+  await editor
+    .getByLabel("触发面所属子件", { exact: true })
+    .selectOption("press-plunger");
   await vector(editor, "撞针局部端点", [0, -2, 0]);
   await vector(editor, "开关局部触发点", [0, 1, 0]);
   await vector(editor, "开关触发面法向", [0, 1, 0]);
   await editor.getByLabel("接触参数 触发面有效半径", { exact: true }).fill("1");
-  await editor.getByLabel("接触参数 允许过行程", { exact: true }).fill("1");
+  await editor.getByLabel("接触参数 允许过行程", { exact: true }).fill("0.25");
+  await editor.getByLabel("启用触头随动", { exact: true }).check();
+  await expect(
+    editor.getByLabel("随动触头 独立开关按杆", { exact: true }),
+  ).toBeChecked();
+  await expect(
+    editor.getByLabel("随动触头 独立开关按杆", { exact: true }),
+  ).toBeDisabled();
+  await expect(
+    editor.getByLabel("随动触头 独立触发开关", { exact: true }),
+  ).not.toBeChecked();
   await expect(editor).toContainText("首次接触 2 mm");
   await editor
     .getByRole("button", { name: "保存并启用组件", exact: true })
@@ -206,7 +221,22 @@ test("多个独立子件创建按压组件，真实键帽移动、弹簧压缩�
   await expect(editor).toBeHidden();
   const controls = page.getByTestId("mechanism-controls");
   await expect(controls).toContainText("测试按压组件");
-  await expect(page.locator("[data-mechanism-id] .tree-row")).toHaveCount(4);
+  await controls
+    .getByRole("button", { name: "编辑成员、类型与交互参数", exact: true })
+    .click();
+  const edit = page.getByRole("dialog", { name: "编辑功能组件", exact: true });
+  await expect(edit.getByLabel("启用触头随动", { exact: true })).toBeChecked();
+  await expect(edit.getByLabel("触发面所属子件", { exact: true })).toHaveValue(
+    "press-plunger",
+  );
+  await expect(
+    edit.getByLabel("随动触头 独立开关按杆", { exact: true }),
+  ).toBeChecked();
+  await edit
+    .getByRole("button", { name: "保存并启用组件", exact: true })
+    .click();
+  await expect(edit).toBeHidden();
+  await expect(page.locator("[data-mechanism-id] .tree-row")).toHaveCount(5);
   await expect
     .poll(async () => (await rendered(page, "press-cap"))?.[1])
     .toBe(12);
@@ -255,17 +285,37 @@ test("多个独立子件创建按压组件，真实键帽移动、弹簧压缩�
     );
     await expect
       .poll(async () => (await rendered(page, "press-cap"))?.[1] ?? 12)
-      .toBeLessThanOrEqual(10);
-    const positions: Record<string, Vec3> = JSON.parse(
-      (await page
-        .getByTestId("viewport")
-        .getAttribute("data-rendered-positions")) ?? "{}",
-    );
+      .toBeLessThanOrEqual(9.751);
+    const {
+      positions,
+      matrices,
+    }: { positions: Record<string, Vec3>; matrices: Record<string, number[]> } =
+      await page.getByTestId("viewport").evaluate((viewport) => ({
+        positions: JSON.parse(
+          viewport.getAttribute("data-rendered-positions") ?? "{}",
+        ),
+        matrices: JSON.parse(
+          viewport.getAttribute("data-rendered-deformations") ?? "{}",
+        ),
+      }));
     const cap = positions["press-cap"];
     const spring = positions["press-spring"];
     expect(spring[1]).toBeCloseTo(6 - (12 - cap[1]) / 2, 1);
+    const springMatrix = matrices["press-spring"];
+    expect(springMatrix).toHaveLength(16);
+    const actualRatio = 1 - (12 - cap[1]) / 8;
+    springMatrix.forEach((value, index) =>
+      expect(value).toBeCloseTo(
+        index === 5 ? actualRatio : index % 5 === 0 ? 1 : 0,
+        5,
+      ),
+    );
+    expect(matrices["press-base"]).toEqual([
+      1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1,
+    ]);
     expect(await rendered(page, "press-base")).toEqual([0, 2, 0]);
-    expect(await rendered(page, "press-switch")).toEqual([0, 7, 0]);
+    expect((await rendered(page, "press-plunger"))![1]).toBeCloseTo(6.75, 3);
+    expect((await rendered(page, "press-switch"))![1]).toBe(5);
     const contacts = Object.values(
       JSON.parse(
         (await page
@@ -273,8 +323,9 @@ test("多个独立子件创建按压组件，真实键帽移动、弹簧压缩�
           .getAttribute("data-contact-markers")) ?? "{}",
       ),
     ) as { striker: Vec3; target: Vec3; contact: boolean }[];
-    expect(contacts[0].target).toEqual([0, 8, 0]);
+    expect(contacts[0].target[1]).toBeCloseTo(7.75, 3);
     expect(contacts[0].striker[1]).toBeLessThanOrEqual(8);
+    expect(contacts[0].striker[1]).toBeCloseTo(contacts[0].target[1], 5);
     expect(contacts[0].contact).toBe(true);
     const samples = await page.evaluate(() => {
       const recorder = (
@@ -306,10 +357,25 @@ test("多个独立子件创建按压组件，真实键帽移动、弹簧压缩�
     )
     .toBeLessThan(0.01);
   await expect
+    .poll(async () => (await rendered(page, "press-plunger"))?.[1])
+    .toBe(7);
+  await expect
     .poll(async () =>
       Math.abs(((await rendered(page, "press-spring"))?.[1] ?? 0) - 6),
     )
     .toBeLessThan(0.01);
+  await expect(page.getByTestId("viewport")).toHaveAttribute(
+    "data-deformed-parts",
+    "0",
+  );
+  const returnedMatrices: Record<string, number[]> = JSON.parse(
+    (await page
+      .getByTestId("viewport")
+      .getAttribute("data-rendered-deformations")) ?? "{}",
+  );
+  returnedMatrices["press-spring"].forEach((value, index) =>
+    expect(value).toBeCloseTo(index % 5 === 0 ? 1 : 0, 3),
+  );
   await page.getByRole("button", { name: "暂停仿真", exact: true }).click();
   await page.getByRole("button", { name: "运行验证", exact: true }).click();
   await expect(
@@ -325,14 +391,16 @@ test("多个独立子件创建按压组件，真实键帽移动、弹簧压缩�
     movingPartIds: ["press-cap"],
     springPartIds: ["press-spring"],
     switchPartId: "press-switch",
-    params: { travel: 3 },
+    params: { travel: 2.25 },
     contact: {
       strikerPartId: "press-cap",
+      targetPartId: "press-plunger",
       strikerPoint: [0, -2, 0],
       switchPoint: [0, 1, 0],
       switchNormal: [0, 1, 0],
       radius: 1,
-      maxOvertravel: 1,
+      maxOvertravel: 0.25,
+      actuatorPartIds: ["press-plunger"],
     },
   });
   expect(

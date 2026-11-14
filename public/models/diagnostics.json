@@ -8,10 +8,10 @@
   "assets": [
     {
       "id": "buttons-left",
-      "sourceSha256": "1a120a04753624d61892a707ba9c94dec803b5d667ab762bb210510e5fc02c1c",
-      "displaySha256": "0398136641cf76219da136e4e09eee2fdf005499f3efc760eac0c5c34633abf2",
-      "displayBytes": 1502072,
-      "sourceTriangles": 2054764,
+      "sourceSha256": "3101d6492dd00cbd2be772090602374be193f264de2eb092fc5eb76f4e9015fc",
+      "displaySha256": "9e4f31a9ab153e9cac33b6ea2f920872485b58315a0ec4f21625eb7c771a7eff",
+      "displayBytes": 1625380,
+      "sourceTriangles": 2056960,
       "objects": [
         {
           "name": "左 · PS5 焊脚占位.017",
@@ -155,8 +155,8 @@
         },
         {
           "name": "左 · PS5 按杆.005",
-          "vertices": 8,
-          "triangles": 12,
+          "vertices": 256,
+          "triangles": 508,
           "boundaryEdges": 0,
           "nonManifoldEdges": 0,
           "worldMatrix": [
@@ -185,7 +185,7 @@
               1.0
             ]
           ],
-          "displayTriangles": 12,
+          "displayTriangles": 508,
           "simplified": false
         },
         {
@@ -224,46 +224,11 @@
           "simplified": false
         },
         {
-          "name": "左 · PS5 弹簧定位环.004",
-          "vertices": 640,
-          "triangles": 1280,
-          "boundaryEdges": 0,
-          "nonManifoldEdges": 0,
-          "worldMatrix": [
-            [
-              1.0,
-              0.0,
-              0.0,
-              0.0
-            ],
-            [
-              0.0,
-              1.0,
-              0.0,
-              0.0
-            ],
-            [
-              0.0,
-              0.0,
-              1.0,
-              11.800000190734863
-            ],
-            [
-              0.0,
-              0.0,
-              0.0,
-              1.0
-            ]
-          ],
-          "displayTriangles": 1280,
-          "simplified": false
-        },
-        {
           "name": "左 · PS5 回位弹簧.003",
           "vertices": 2316,
-          "triangles": 4608,
-          "boundaryEdges": 24,
-          "nonManifoldEdges": 24,
+          "triangles": 4628,
+          "boundaryEdges": 0,
+          "nonManifoldEdges": 0,
           "worldMatrix": [
             [
               30.389440536499023,
@@ -290,7 +255,7 @@
               1.0
             ]
           ],
-          "displayTriangles": 4608,
+          "displayTriangles": 4628,
           "simplified": false
         },
         {
@@ -330,8 +295,8 @@
         },
         {
           "name": "左 · PS5 一体式键帽与蓝色插销.003",
-          "vertices": 1954,
-          "triangles": 3904,
+          "vertices": 3434,
+          "triangles": 6864,
           "boundaryEdges": 0,
           "nonManifoldEdges": 0,
           "worldMatrix": [
@@ -360,7 +325,7 @@
               1.0
             ]
           ],
-          "displayTriangles": 3904,
+          "displayTriangles": 6864,
           "simplified": false
         },
         {
@@ -472,10 +437,10 @@
     },
     {
       "id": "buttons-right",
-      "sourceSha256": "6e898c9bf18df6bca66a540bb6dbda4071cb7bb086b5b90e8aa235667bae88bb",
-      "displaySha256": "f63454205c3dde68500bd87ee920806dcecb2c1a58163a133ab52c1e5858999b",
-      "displayBytes": 1501736,
-      "sourceTriangles": 2054502,
+      "sourceSha256": "84e6de6ba5b1e17301acd0cc4f404cc74fb45bf02185f13d17a1240ae1311144",
+      "displaySha256": "5275c4c080f517360fcb1e635fed106b0579065d5c6ab98ba3d1c9e2aba2ec08",
+      "displayBytes": 1616044,
+      "sourceTriangles": 2056676,
       "objects": [
         {
           "name": "右 · PS5 焊脚占位.013",
@@ -619,8 +584,8 @@
         },
         {
           "name": "右 · PS5 按杆.004",
-          "vertices": 8,
-          "triangles": 12,
+          "vertices": 256,
+          "triangles": 508,
           "boundaryEdges": 0,
           "nonManifoldEdges": 0,
           "worldMatrix": [
@@ -649,7 +614,7 @@
               1.0
             ]
           ],
-          "displayTriangles": 12,
+          "displayTriangles": 508,
           "simplified": false
         },
         {
@@ -688,46 +653,11 @@
           "simplified": false
         },
         {
-          "name": "右 · PS5 弹簧定位环.003",
-          "vertices": 640,
-          "triangles": 1280,
-          "boundaryEdges": 0,
-          "nonManifoldEdges": 0,
-          "worldMatrix": [
-            [
-              1.0,
-              0.0,
-              0.0,
-              0.0
-            ],
-            [
-              0.0,
-              1.0,
-              0.0,
-              0.0
-            ],
-            [
-              0.0,
-              0.0,
-              1.0,
-              7.199999809265137
-            ],
-            [
-              0.0,
-              0.0,
-              0.0,
-              1.0
-            ]
-          ],
-          "displayTriangles": 1280,
-          "simplified": false
-        },
-        {
           "name": "右 · PS5 回位弹簧.003",
           "vertices": 2316,
-          "triangles": 4608,
-          "boundaryEdges": 24,
-          "nonManifoldEdges": 24,
+          "triangles": 4628,
+          "boundaryEdges": 0,
+          "nonManifoldEdges": 0,
           "worldMatrix": [
             [
               -30.389440536499023,
@@ -754,7 +684,7 @@
               1.0
             ]
           ],
-          "displayTriangles": 4608,
+          "displayTriangles": 4628,
           "simplified": false
         },
         {
@@ -794,8 +724,8 @@
         },
         {
           "name": "右 · PS5 一体式键帽与蓝色插销.003",
-          "vertices": 1954,
-          "triangles": 3904,
+          "vertices": 3423,
+          "triangles": 6842,
           "boundaryEdges": 0,
           "nonManifoldEdges": 0,
           "worldMatrix": [
@@ -824,7 +754,7 @@
               1.0
             ]
           ],
-          "displayTriangles": 3904,
+          "displayTriangles": 6842,
           "simplified": false
         },
         {
@@ -936,10 +866,10 @@
     },
     {
       "id": "buttons-down",
-      "sourceSha256": "4f0bd1b9f73b9769b98ba2501d7b1f3953da5d4a5734c9fbfc88a13003d58438",
-      "displaySha256": "7233a16c0cb7b207eb2c99f54af8cff379a318db88d4388a94cb64ad3f2e5147",
-      "displayBytes": 1499604,
-      "sourceTriangles": 2054752,
+      "sourceSha256": "ee9f528457ae365735ba772f891ee3de180854abbd1afdd155862fed2de22c47",
+      "displaySha256": "f64d7d4ed917a2d20ad362543d3ccf7f2bc89ff3add4e4200cabb39cdc2b027d",
+      "displayBytes": 1613740,
+      "sourceTriangles": 2056946,
       "objects": [
         {
           "name": "下 · PS5 焊脚占位.013",
@@ -1083,8 +1013,8 @@
         },
         {
           "name": "下 · PS5 按杆.004",
-          "vertices": 8,
-          "triangles": 12,
+          "vertices": 256,
+          "triangles": 508,
           "boundaryEdges": 0,
           "nonManifoldEdges": 0,
           "worldMatrix": [
@@ -1113,7 +1043,7 @@
               1.0
             ]
           ],
-          "displayTriangles": 12,
+          "displayTriangles": 508,
           "simplified": false
         },
         {
@@ -1152,46 +1082,11 @@
           "simplified": false
         },
         {
-          "name": "下 · PS5 弹簧定位环.003",
-          "vertices": 640,
-          "triangles": 1280,
-          "boundaryEdges": 0,
-          "nonManifoldEdges": 0,
-          "worldMatrix": [
-            [
-              1.0,
-              0.0,
-              0.0,
-              0.0
-            ],
-            [
-              0.0,
-              1.0,
-              0.0,
-              0.0
-            ],
-            [
-              0.0,
-              0.0,
-              1.0,
-              10.300000190734863
-            ],
-            [
-              0.0,
-              0.0,
-              0.0,
-              1.0
-            ]
-          ],
-          "displayTriangles": 1280,
-          "simplified": false
-        },
-        {
           "name": "下 · PS5 回位弹簧.003",
           "vertices": 2316,
-          "triangles": 4608,
-          "boundaryEdges": 24,
-          "nonManifoldEdges": 24,
+          "triangles": 4628,
+          "boundaryEdges": 0,
+          "nonManifoldEdges": 0,
           "worldMatrix": [
             [
               -4.951068603986641e-06,
@@ -1218,7 +1113,7 @@
               1.0
             ]
           ],
-          "displayTriangles": 4608,
+          "displayTriangles": 4628,
           "simplified": false
         },
         {
@@ -1258,8 +1153,8 @@
         },
         {
           "name": "下 · PS5 一体式键帽与蓝色插销.003",
-          "vertices": 1954,
-          "triangles": 3904,
+          "vertices": 3433,
+          "triangles": 6862,
           "boundaryEdges": 0,
           "nonManifoldEdges": 0,
           "worldMatrix": [
@@ -1288,7 +1183,7 @@
               1.0
             ]
           ],
-          "displayTriangles": 3904,
+          "displayTriangles": 6862,
           "simplified": false
         },
         {
@@ -1400,10 +1295,10 @@
     },
     {
       "id": "buttons-up",
-      "sourceSha256": "c393f1a584c7463ba56a68ac9e97a1912ec284886ab30951b5767ad4d93df534",
-      "displaySha256": "5e6b5ce965f8181869458869bf00c61f1c2a48c19eb156e23ac11b8b19020ffc",
-      "displayBytes": 1504384,
-      "sourceTriangles": 2054422,
+      "sourceSha256": "8ecd5118238b99caffe3ad7b58998e6b07ddd6be4eff21f70a85a8d08822b909",
+      "displaySha256": "b87624e0867d1eca0f63662106eee69528dbec884f96a6b574b6ce7b2f808b16",
+      "displayBytes": 1620380,
+      "sourceTriangles": 2056616,
       "objects": [
         {
           "name": "上 · PS5 焊脚占位.013",
@@ -1547,8 +1442,8 @@
         },
         {
           "name": "上 · PS5 按杆.004",
-          "vertices": 8,
-          "triangles": 12,
+          "vertices": 256,
+          "triangles": 508,
           "boundaryEdges": 0,
           "nonManifoldEdges": 0,
           "worldMatrix": [
@@ -1577,7 +1472,7 @@
               1.0
             ]
           ],
-          "displayTriangles": 12,
+          "displayTriangles": 508,
           "simplified": false
         },
         {
@@ -1616,46 +1511,11 @@
           "simplified": false
         },
         {
-          "name": "上 · PS5 弹簧定位环.003",
-          "vertices": 640,
-          "triangles": 1280,
-          "boundaryEdges": 0,
-          "nonManifoldEdges": 0,
-          "worldMatrix": [
-            [
-              1.0,
-              0.0,
-              0.0,
-              0.0
-            ],
-            [
-              0.0,
-              1.0,
-              0.0,
-              0.0
-            ],
-            [
-              0.0,
-              0.0,
-              1.0,
-              6.099999904632568
-            ],
-            [
-              0.0,
-              0.0,
-              0.0,
-              1.0
-            ]
-          ],
-          "displayTriangles": 1280,
-          "simplified": false
-        },
-        {
           "name": "上 · PS5 回位弹簧.003",
           "vertices": 2316,
-          "triangles": 4608,
-          "boundaryEdges": 24,
-          "nonManifoldEdges": 24,
+          "triangles": 4628,
+          "boundaryEdges": 0,
+          "nonManifoldEdges": 0,
           "worldMatrix": [
             [
               -1.328364646724367e-06,
@@ -1682,7 +1542,7 @@
               1.0
             ]
           ],
-          "displayTriangles": 4608,
+          "displayTriangles": 4628,
           "simplified": false
         },
         {
@@ -1722,8 +1582,8 @@
         },
         {
           "name": "上 · PS5 一体式键帽与蓝色插销.003",
-          "vertices": 1954,
-          "triangles": 3904,
+          "vertices": 3433,
+          "triangles": 6862,
           "boundaryEdges": 0,
           "nonManifoldEdges": 0,
           "worldMatrix": [
@@ -1752,7 +1612,7 @@
               1.0
             ]
           ],
-          "displayTriangles": 3904,
+          "displayTriangles": 6862,
           "simplified": false
         },
         {
@@ -1864,10 +1724,10 @@
     },
     {
       "id": "buttons-a",
-      "sourceSha256": "7e9fb6516fcdfcb77d91b5646995c585383201b825815be90e5463f84122be01",
-      "displaySha256": "9ca1ecf900b0e0e322f0f60e308c4044d14d2ad8c94998ed2324af0310c4e203",
-      "displayBytes": 1476692,
-      "sourceTriangles": 2055537,
+      "sourceSha256": "5e50ca2bc37b022d2a8fb85c983a08d3c66100d3705d23d3e9467316516b4508",
+      "displaySha256": "d3016f68b0376fca22e22e1773084b19752d161d9463f25ffa174ddd78f99f7e",
+      "displayBytes": 1452564,
+      "sourceTriangles": 2055293,
       "objects": [
         {
           "name": "键帽标识 · A.002",
@@ -1906,8 +1766,8 @@
         },
         {
           "name": "A · 同款插销与圆形键帽.002",
-          "vertices": 2170,
-          "triangles": 4336,
+          "vertices": 2430,
+          "triangles": 4856,
           "boundaryEdges": 0,
           "nonManifoldEdges": 0,
           "worldMatrix": [
@@ -1936,7 +1796,7 @@
               1.0
             ]
           ],
-          "displayTriangles": 4336,
+          "displayTriangles": 4856,
           "simplified": false
         },
         {
@@ -2081,8 +1941,8 @@
         },
         {
           "name": "A · 同款 按杆.002",
-          "vertices": 8,
-          "triangles": 12,
+          "vertices": 256,
+          "triangles": 508,
           "boundaryEdges": 0,
           "nonManifoldEdges": 0,
           "worldMatrix": [
@@ -2111,7 +1971,7 @@
               1.0
             ]
           ],
-          "displayTriangles": 12,
+          "displayTriangles": 508,
           "simplified": false
         },
         {
@@ -2150,46 +2010,11 @@
           "simplified": false
         },
         {
-          "name": "A · 同款 弹簧定位环.002",
-          "vertices": 640,
-          "triangles": 1280,
-          "boundaryEdges": 0,
-          "nonManifoldEdges": 0,
-          "worldMatrix": [
-            [
-              1.0,
-              0.0,
-              0.0,
-              92.19999694824219
-            ],
-            [
-              0.0,
-              1.0,
-              0.0,
-              -12.5
-            ],
-            [
-              0.0,
-              0.0,
-              1.0,
-              14.350000381469727
-            ],
-            [
-              0.0,
-              0.0,
-              0.0,
-              1.0
-            ]
-          ],
-          "displayTriangles": 1280,
-          "simplified": false
-        },
-        {
           "name": "A · 同款 回位弹簧.002",
           "vertices": 2316,
-          "triangles": 4608,
-          "boundaryEdges": 24,
-          "nonManifoldEdges": 24,
+          "triangles": 4628,
+          "boundaryEdges": 0,
+          "nonManifoldEdges": 0,
           "worldMatrix": [
             [
               30.389440536499023,
@@ -2216,7 +2041,7 @@
               1.0
             ]
           ],
-          "displayTriangles": 4608,
+          "displayTriangles": 4628,
           "simplified": false
         },
         {
@@ -2363,10 +2188,10 @@
     },
     {
       "id": "buttons-b",
-      "sourceSha256": "e3c94902e44715351cfde6ac768ed5aa8ea33616fd0cccce6ccdf4b547f23a89",
-      "displaySha256": "b87c07e13ed979e1d04f24d8b70e42cead291f448b3e90e5cb49f513342059bb",
-      "displayBytes": 1495804,
-      "sourceTriangles": 2055950,
+      "sourceSha256": "ec5cbb6447b4a2025d85edae8fb7cd11f97d9c6e2ca4a1a7b93001bef20d083d",
+      "displaySha256": "ecfd5ac56cb46aa4265ecefb3aff17ce1e648062962253f7216ec5e0944315d1",
+      "displayBytes": 1470288,
+      "sourceTriangles": 2055662,
       "objects": [
         {
           "name": "键帽标识 · B.002",
@@ -2405,8 +2230,8 @@
         },
         {
           "name": "B · 同款插销与圆形键帽.002",
-          "vertices": 2322,
-          "triangles": 4644,
+          "vertices": 2560,
+          "triangles": 5120,
           "boundaryEdges": 0,
           "nonManifoldEdges": 0,
           "worldMatrix": [
@@ -2435,7 +2260,7 @@
               1.0
             ]
           ],
-          "displayTriangles": 4644,
+          "displayTriangles": 5120,
           "simplified": false
         },
         {
@@ -2580,8 +2405,8 @@
         },
         {
           "name": "B · 同款 按杆.002",
-          "vertices": 8,
-          "triangles": 12,
+          "vertices": 256,
+          "triangles": 508,
           "boundaryEdges": 0,
           "nonManifoldEdges": 0,
           "worldMatrix": [
@@ -2610,7 +2435,7 @@
               1.0
             ]
           ],
-          "displayTriangles": 12,
+          "displayTriangles": 508,
           "simplified": false
         },
         {
@@ -2649,46 +2474,11 @@
           "simplified": false
         },
         {
-          "name": "B · 同款 弹簧定位环.002",
-          "vertices": 640,
-          "triangles": 1280,
-          "boundaryEdges": 0,
-          "nonManifoldEdges": 0,
-          "worldMatrix": [
-            [
-              1.0,
-              0.0,
-              0.0,
-              103.69999694824219
-            ],
-            [
-              0.0,
-              1.0,
-              0.0,
-              -1.0
-            ],
-            [
-              0.0,
-              0.0,
-              1.0,
-              14.350000381469727
-            ],
-            [
-              0.0,
-              0.0,
-              0.0,
-              1.0
-            ]
-          ],
-          "displayTriangles": 1280,
-          "simplified": false
-        },
-        {
           "name": "B · 同款 回位弹簧.002",
           "vertices": 2316,
-          "triangles": 4608,
-          "boundaryEdges": 24,
-          "nonManifoldEdges": 24,
+          "triangles": 4628,
+          "boundaryEdges": 0,
+          "nonManifoldEdges": 0,
           "worldMatrix": [
             [
               30.389440536499023,
@@ -2715,7 +2505,7 @@
               1.0
             ]
           ],
-          "displayTriangles": 4608,
+          "displayTriangles": 4628,
           "simplified": false
         },
         {
@@ -2862,10 +2652,10 @@
     },
     {
       "id": "buttons-x",
-      "sourceSha256": "256b0777bb5927606b63cee9ec74e9457a157c94af63b74c29187d7d3d0bcd20",
-      "displaySha256": "225a4eaacfeade7e0885e62f9bbd365fb510aa83a401038d8fb6e2c40b4d3970",
-      "displayBytes": 1472836,
-      "sourceTriangles": 2055536,
+      "sourceSha256": "93c1bc7e9ee279a2f1f3f44808639889c6816e210e6bea1f0b304585b4343cbb",
+      "displaySha256": "3bdce491528cde01e888585e7fdb3c5d92f90ea17d234a451d2fe4fc515bfe79",
+      "displayBytes": 1448784,
+      "sourceTriangles": 2055292,
       "objects": [
         {
           "name": "键帽标识 · X.002",
@@ -2904,8 +2694,8 @@
         },
         {
           "name": "X · 同款插销与圆形键帽.002",
-          "vertices": 2170,
-          "triangles": 4336,
+          "vertices": 2430,
+          "triangles": 4856,
           "boundaryEdges": 0,
           "nonManifoldEdges": 0,
           "worldMatrix": [
@@ -2934,7 +2724,7 @@
               1.0
             ]
           ],
-          "displayTriangles": 4336,
+          "displayTriangles": 4856,
           "simplified": false
         },
         {
@@ -3079,8 +2869,8 @@
         },
         {
           "name": "X · 同款 按杆.002",
-          "vertices": 8,
-          "triangles": 12,
+          "vertices": 256,
+          "triangles": 508,
           "boundaryEdges": 0,
           "nonManifoldEdges": 0,
           "worldMatrix": [
@@ -3109,7 +2899,7 @@
               1.0
             ]
           ],
-          "displayTriangles": 12,
+          "displayTriangles": 508,
           "simplified": false
         },
         {
@@ -3148,46 +2938,11 @@
           "simplified": false
         },
         {
-          "name": "X · 同款 弹簧定位环.002",
-          "vertices": 640,
-          "triangles": 1280,
-          "boundaryEdges": 0,
-          "nonManifoldEdges": 0,
-          "worldMatrix": [
-            [
-              1.0,
-              0.0,
-              0.0,
-              80.69999694824219
-            ],
-            [
-              0.0,
-              1.0,
-              0.0,
-              -1.0
-            ],
-            [
-              0.0,
-              0.0,
-              1.0,
-              14.350000381469727
-            ],
-            [
-              0.0,
-              0.0,
-              0.0,
-              1.0
-            ]
-          ],
-          "displayTriangles": 1280,
-          "simplified": false
-        },
-        {
           "name": "X · 同款 回位弹簧.002",
           "vertices": 2316,
-          "triangles": 4608,
-          "boundaryEdges": 24,
-          "nonManifoldEdges": 24,
+          "triangles": 4628,
+          "boundaryEdges": 0,
+          "nonManifoldEdges": 0,
           "worldMatrix": [
             [
               30.389440536499023,
@@ -3214,7 +2969,7 @@
               1.0
             ]
           ],
-          "displayTriangles": 4608,
+          "displayTriangles": 4628,
           "simplified": false
         },
         {
@@ -3361,10 +3116,10 @@
     },
     {
       "id": "buttons-y",
-      "sourceSha256": "382b00f14733cc034d744d5499d4c53f178776008f5c2d32ad21e17bda25944f",
-      "displaySha256": "1be14caef538b38edbab8d4f1a18bcf45d6485176964ccab8e37554f8af3a694",
-      "displayBytes": 1472540,
-      "sourceTriangles": 2051999,
+      "sourceSha256": "16333679918ad7bbd8bbedf74becb50889a95044192ee0a2dcb456a61e85ee01",
+      "displaySha256": "3c46ec708806f4b263ff1399413449d0243569868b4dd0db77892477190640d5",
+      "displayBytes": 1448340,
+      "sourceTriangles": 2051755,
       "objects": [
         {
           "name": "键帽标识 · Y.002",
@@ -3403,8 +3158,8 @@
         },
         {
           "name": "Y · 同款插销与圆形键帽.002",
-          "vertices": 2170,
-          "triangles": 4336,
+          "vertices": 2430,
+          "triangles": 4856,
           "boundaryEdges": 0,
           "nonManifoldEdges": 0,
           "worldMatrix": [
@@ -3433,7 +3188,7 @@
               1.0
             ]
           ],
-          "displayTriangles": 4336,
+          "displayTriangles": 4856,
           "simplified": false
         },
         {
@@ -3578,8 +3333,8 @@
         },
         {
           "name": "Y · 同款 按杆.002",
-          "vertices": 8,
-          "triangles": 12,
+          "vertices": 256,
+          "triangles": 508,
           "boundaryEdges": 0,
           "nonManifoldEdges": 0,
           "worldMatrix": [
@@ -3608,7 +3363,7 @@
               1.0
             ]
           ],
-          "displayTriangles": 12,
+          "displayTriangles": 508,
           "simplified": false
         },
         {
@@ -3647,46 +3402,11 @@
           "simplified": false
         },
         {
-          "name": "Y · 同款 弹簧定位环.002",
-          "vertices": 640,
-          "triangles": 1280,
-          "boundaryEdges": 0,
-          "nonManifoldEdges": 0,
-          "worldMatrix": [
-            [
-              1.0,
-              0.0,
-              0.0,
-              92.19999694824219
-            ],
-            [
-              0.0,
-              1.0,
-              0.0,
-              10.5
-            ],
-            [
-              0.0,
-              0.0,
-              1.0,
-              14.350000381469727
-            ],
-            [
-              0.0,
-              0.0,
-              0.0,
-              1.0
-            ]
-          ],
-          "displayTriangles": 1280,
-          "simplified": false
-        },
-        {
           "name": "Y · 同款 回位弹簧.002",
           "vertices": 2316,
-          "triangles": 4608,
-          "boundaryEdges": 24,
-          "nonManifoldEdges": 24,
+          "triangles": 4628,
+          "boundaryEdges": 0,
+          "nonManifoldEdges": 0,
           "worldMatrix": [
             [
               30.389440536499023,
@@ -3713,7 +3433,7 @@
               1.0
             ]
           ],
-          "displayTriangles": 4608,
+          "displayTriangles": 4628,
           "simplified": false
         },
         {
@@ -3860,10 +3580,10 @@
     },
     {
       "id": "buttons-confirm",
-      "sourceSha256": "d5a318afe1870ac36a5b7261c79fcd89bd55cc9f678b95e2fdd0e37e746db61a",
-      "displaySha256": "9b90c08b42c8d5551a14288694b5af9004bf70f0c1e12031c5cd47538db1e39b",
-      "displayBytes": 168392,
-      "sourceTriangles": 5236,
+      "sourceSha256": "6b42811a2e4f6bc66f0a5edcf5fd7de0226795ebdfeca60e4bb6c36ae8751865",
+      "displaySha256": "b4809e89d0129b80f2d3e6c7806f858a2a6a0571ccb83b744d508a71a0df8193",
+      "displayBytes": 179676,
+      "sourceTriangles": 5390,
       "objects": [
         {
           "name": "确认 · 键帽.007",
@@ -3902,8 +3622,8 @@
         },
         {
           "name": "确认 · 旋锁座.005",
-          "vertices": 1015,
-          "triangles": 2030,
+          "vertices": 1056,
+          "triangles": 2112,
           "boundaryEdges": 0,
           "nonManifoldEdges": 0,
           "worldMatrix": [
@@ -3932,13 +3652,13 @@
               1.0
             ]
           ],
-          "displayTriangles": 2030,
+          "displayTriangles": 2112,
           "simplified": false
         },
         {
           "name": "确认 · 常开开关.005",
-          "vertices": 8,
-          "triangles": 12,
+          "vertices": 24,
+          "triangles": 44,
           "boundaryEdges": 0,
           "nonManifoldEdges": 0,
           "worldMatrix": [
@@ -3967,7 +3687,7 @@
               1.0
             ]
           ],
-          "displayTriangles": 12,
+          "displayTriangles": 44,
           "simplified": false
         },
         {
@@ -4008,9 +3728,9 @@
         {
           "name": "确认 · 回弹压簧.005",
           "vertices": 1210,
-          "triangles": 2400,
-          "boundaryEdges": 20,
-          "nonManifoldEdges": 20,
+          "triangles": 2416,
+          "boundaryEdges": 0,
+          "nonManifoldEdges": 0,
           "worldMatrix": [
             [
               1.0,
@@ -4037,7 +3757,77 @@
               1.0
             ]
           ],
-          "displayTriangles": 2400,
+          "displayTriangles": 2416,
+          "simplified": false
+        },
+        {
+          "name": "确认 · GPIO 金属焊脚.005",
+          "vertices": 8,
+          "triangles": 12,
+          "boundaryEdges": 0,
+          "nonManifoldEdges": 0,
+          "worldMatrix": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              2.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              5.5
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              19.675212860107422
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "displayTriangles": 12,
+          "simplified": false
+        },
+        {
+          "name": "确认 · GND 金属焊脚.005",
+          "vertices": 8,
+          "triangles": 12,
+          "boundaryEdges": 0,
+          "nonManifoldEdges": 0,
+          "worldMatrix": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              -2.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              5.5
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              19.675212860107422
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "displayTriangles": 12,
           "simplified": false
         }
       ]
@@ -4412,9 +4202,9 @@
     },
     {
       "id": "housing-top",
-      "sourceSha256": "1e44d562e5bb8d40cf9ec9a889203bed911c0716705b036f0ab681b32156b036",
-      "displaySha256": "5c1dc36f5f50fd9e182f20c0236451d0dca5be2f534cf84c954b7abf863769db",
-      "displayBytes": 977856,
+      "sourceSha256": "c988fa32f19567f0ed0f913609615723f366a20506386f1e3eed0fdd26b05cce",
+      "displaySha256": "ac471b4d5138f4a2224960b732be982e9448e0a01e4d38953201f43c87c475b2",
+      "displayBytes": 979632,
       "sourceTriangles": 1231844,
       "objects": [
         {
@@ -4456,15 +4246,15 @@
     },
     {
       "id": "housing-bottom",
-      "sourceSha256": "7607b598496754c90b3b978eff5c6af482329406724cf3cb4392919d33bc8948",
-      "displaySha256": "495f2d1985e718db220a8818fa9baf4c7cf6c89e29641ada4795225dbb0b65d7",
-      "displayBytes": 959980,
-      "sourceTriangles": 243080,
+      "sourceSha256": "44bb57f9b1571b7abb70571a5a90344e3d0ea3733c3bac26c680fec62c0e0514",
+      "displaySha256": "0056d4edf5ab39f70a3471911f3c4646ab5ff1ad226105f6bcbfe764078b6485",
+      "displayBytes": 960820,
+      "sourceTriangles": 243404,
       "objects": [
         {
           "name": "底壳 · 合壳.007",
-          "vertices": 121528,
-          "triangles": 243080,
+          "vertices": 121690,
+          "triangles": 243404,
           "boundaryEdges": 0,
           "nonManifoldEdges": 0,
           "worldMatrix": [
@@ -4500,10 +4290,10 @@
     },
     {
       "id": "electronics-esp32-mount",
-      "sourceSha256": "84c4bdaa1b598067dbc804d40aa5a1f26c37e9c43dc82803a9d8db8a8a5b5715",
-      "displaySha256": "2f954b597d41c7103e51443db979a123203bea500a5bd137a8cea57c715579c8",
-      "displayBytes": 130616,
-      "sourceTriangles": 2238,
+      "sourceSha256": "1f6ad69caa250b89d2b403c904ab37ec21a4e4437df757080f619edf2bd0e64c",
+      "displaySha256": "f79134eeaf033283a167eb8fd0aed17cc36f90b33142725ca2f443b52b4270d4",
+      "displayBytes": 150540,
+      "sourceTriangles": 2708,
       "objects": [
         {
           "name": "ESP32 · 48.2 × 27.9 PCB.005",
@@ -5872,8 +5662,8 @@
         },
         {
           "name": "PCB · 长轴压条.005",
-          "vertices": 483,
-          "triangles": 970,
+          "vertices": 718,
+          "triangles": 1440,
           "boundaryEdges": 0,
           "nonManifoldEdges": 0,
           "worldMatrix": [
@@ -5902,7 +5692,7 @@
               1.0
             ]
           ],
-          "displayTriangles": 970,
+          "displayTriangles": 1440,
           "simplified": false
         },
         {
@@ -6049,17 +5839,17 @@
     },
     {
       "id": "electronics-harness",
-      "sourceSha256": "dd1bad29b6697aaa51c6cef62e17597b46dc2d717cfc394146f3d1458e7a4e48",
-      "displaySha256": "31e25925162fa17da426cfab0e23001960a2ea65bafd084b9bc3eacd507424f1",
-      "displayBytes": 97868,
-      "sourceTriangles": 3968,
+      "sourceSha256": "2dbed56630b7a16391a584b98b12e2b756cde3a632bf063bd81d885885d3aa91",
+      "displaySha256": "dfb703993607c840843683f6e17126d04a947eb95a9555d5dded7c7d0bd59319",
+      "displayBytes": 158544,
+      "sourceTriangles": 7726,
       "objects": [
         {
           "name": "确认 · GPIO.005",
-          "vertices": 70,
-          "triangles": 120,
-          "boundaryEdges": 20,
-          "nonManifoldEdges": 20,
+          "vertices": 60,
+          "triangles": 116,
+          "boundaryEdges": 0,
+          "nonManifoldEdges": 0,
           "worldMatrix": [
             [
               1.0,
@@ -6086,15 +5876,15 @@
               1.0
             ]
           ],
-          "displayTriangles": 120,
+          "displayTriangles": 116,
           "simplified": false
         },
         {
           "name": "确认 · GND.005",
-          "vertices": 60,
-          "triangles": 100,
-          "boundaryEdges": 20,
-          "nonManifoldEdges": 20,
+          "vertices": 50,
+          "triangles": 96,
+          "boundaryEdges": 0,
+          "nonManifoldEdges": 0,
           "worldMatrix": [
             [
               1.0,
@@ -6121,15 +5911,15 @@
               1.0
             ]
           ],
-          "displayTriangles": 100,
+          "displayTriangles": 96,
           "simplified": false
         },
         {
           "name": "A · 中央走线 GPIO.002",
-          "vertices": 136,
-          "triangles": 236,
-          "boundaryEdges": 32,
-          "nonManifoldEdges": 32,
+          "vertices": 224,
+          "triangles": 444,
+          "boundaryEdges": 0,
+          "nonManifoldEdges": 0,
           "worldMatrix": [
             [
               1.0,
@@ -6156,15 +5946,15 @@
               1.0
             ]
           ],
-          "displayTriangles": 236,
+          "displayTriangles": 444,
           "simplified": false
         },
         {
           "name": "A · 中央走线 GND.002",
-          "vertices": 104,
-          "triangles": 172,
-          "boundaryEdges": 32,
-          "nonManifoldEdges": 32,
+          "vertices": 80,
+          "triangles": 156,
+          "boundaryEdges": 0,
+          "nonManifoldEdges": 0,
           "worldMatrix": [
             [
               1.0,
@@ -6191,15 +5981,15 @@
               1.0
             ]
           ],
-          "displayTriangles": 172,
+          "displayTriangles": 156,
           "simplified": false
         },
         {
           "name": "B · 中央走线 GPIO.002",
-          "vertices": 168,
-          "triangles": 300,
-          "boundaryEdges": 32,
-          "nonManifoldEdges": 32,
+          "vertices": 680,
+          "triangles": 1356,
+          "boundaryEdges": 0,
+          "nonManifoldEdges": 0,
           "worldMatrix": [
             [
               1.0,
@@ -6226,15 +6016,15 @@
               1.0
             ]
           ],
-          "displayTriangles": 300,
+          "displayTriangles": 1356,
           "simplified": false
         },
         {
           "name": "B · 中央走线 GND.002",
-          "vertices": 136,
+          "vertices": 120,
           "triangles": 236,
-          "boundaryEdges": 32,
-          "nonManifoldEdges": 32,
+          "boundaryEdges": 0,
+          "nonManifoldEdges": 0,
           "worldMatrix": [
             [
               1.0,
@@ -6266,10 +6056,10 @@
         },
         {
           "name": "X · 中央走线 GPIO.002",
-          "vertices": 144,
-          "triangles": 252,
-          "boundaryEdges": 32,
-          "nonManifoldEdges": 32,
+          "vertices": 368,
+          "triangles": 732,
+          "boundaryEdges": 0,
+          "nonManifoldEdges": 0,
           "worldMatrix": [
             [
               1.0,
@@ -6296,15 +6086,15 @@
               1.0
             ]
           ],
-          "displayTriangles": 252,
+          "displayTriangles": 732,
           "simplified": false
         },
         {
           "name": "X · 中央走线 GND.002",
-          "vertices": 120,
-          "triangles": 204,
-          "boundaryEdges": 32,
-          "nonManifoldEdges": 32,
+          "vertices": 96,
+          "triangles": 188,
+          "boundaryEdges": 0,
+          "nonManifoldEdges": 0,
           "worldMatrix": [
             [
               1.0,
@@ -6331,15 +6121,15 @@
               1.0
             ]
           ],
-          "displayTriangles": 204,
+          "displayTriangles": 188,
           "simplified": false
         },
         {
           "name": "Y · 中央走线 GPIO.002",
-          "vertices": 152,
-          "triangles": 268,
-          "boundaryEdges": 32,
-          "nonManifoldEdges": 32,
+          "vertices": 360,
+          "triangles": 716,
+          "boundaryEdges": 0,
+          "nonManifoldEdges": 0,
           "worldMatrix": [
             [
               1.0,
@@ -6366,15 +6156,15 @@
               1.0
             ]
           ],
-          "displayTriangles": 268,
+          "displayTriangles": 716,
           "simplified": false
         },
         {
           "name": "Y · 中央走线 GND.002",
-          "vertices": 112,
-          "triangles": 188,
-          "boundaryEdges": 32,
-          "nonManifoldEdges": 32,
+          "vertices": 88,
+          "triangles": 172,
+          "boundaryEdges": 0,
+          "nonManifoldEdges": 0,
           "worldMatrix": [
             [
               1.0,
@@ -6401,15 +6191,15 @@
               1.0
             ]
           ],
-          "displayTriangles": 188,
+          "displayTriangles": 172,
           "simplified": false
         },
         {
           "name": "左 · 中央走线 GPIO.002",
-          "vertices": 104,
-          "triangles": 172,
-          "boundaryEdges": 32,
-          "nonManifoldEdges": 32,
+          "vertices": 232,
+          "triangles": 460,
+          "boundaryEdges": 0,
+          "nonManifoldEdges": 0,
           "worldMatrix": [
             [
               1.0,
@@ -6436,15 +6226,225 @@
               1.0
             ]
           ],
-          "displayTriangles": 172,
+          "displayTriangles": 460,
           "simplified": false
         },
         {
           "name": "左 · 中央走线 GND.002",
-          "vertices": 104,
+          "vertices": 80,
+          "triangles": 156,
+          "boundaryEdges": 0,
+          "nonManifoldEdges": 0,
+          "worldMatrix": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "displayTriangles": 156,
+          "simplified": false
+        },
+        {
+          "name": "右 · 中央走线 GPIO.002",
+          "vertices": 457,
+          "triangles": 910,
+          "boundaryEdges": 0,
+          "nonManifoldEdges": 0,
+          "worldMatrix": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "displayTriangles": 910,
+          "simplified": false
+        },
+        {
+          "name": "右 · 中央走线 GND.002",
+          "vertices": 111,
+          "triangles": 218,
+          "boundaryEdges": 0,
+          "nonManifoldEdges": 0,
+          "worldMatrix": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "displayTriangles": 218,
+          "simplified": false
+        },
+        {
+          "name": "上 · 中央走线 GPIO.002",
+          "vertices": 339,
+          "triangles": 674,
+          "boundaryEdges": 0,
+          "nonManifoldEdges": 0,
+          "worldMatrix": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "displayTriangles": 674,
+          "simplified": false
+        },
+        {
+          "name": "上 · 中央走线 GND.002",
+          "vertices": 120,
+          "triangles": 236,
+          "boundaryEdges": 0,
+          "nonManifoldEdges": 0,
+          "worldMatrix": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "displayTriangles": 236,
+          "simplified": false
+        },
+        {
+          "name": "下 · 中央走线 GPIO.002",
+          "vertices": 280,
+          "triangles": 556,
+          "boundaryEdges": 0,
+          "nonManifoldEdges": 0,
+          "worldMatrix": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "displayTriangles": 556,
+          "simplified": false
+        },
+        {
+          "name": "下 · 中央走线 GND.002",
+          "vertices": 88,
           "triangles": 172,
-          "boundaryEdges": 32,
-          "nonManifoldEdges": 32,
+          "boundaryEdges": 0,
+          "nonManifoldEdges": 0,
           "worldMatrix": [
             [
               1.0,
@@ -6475,221 +6475,11 @@
           "simplified": false
         },
         {
-          "name": "右 · 中央走线 GPIO.002",
-          "vertices": 136,
-          "triangles": 236,
-          "boundaryEdges": 32,
-          "nonManifoldEdges": 32,
-          "worldMatrix": [
-            [
-              1.0,
-              0.0,
-              0.0,
-              0.0
-            ],
-            [
-              0.0,
-              1.0,
-              0.0,
-              0.0
-            ],
-            [
-              0.0,
-              0.0,
-              1.0,
-              0.0
-            ],
-            [
-              0.0,
-              0.0,
-              0.0,
-              1.0
-            ]
-          ],
-          "displayTriangles": 236,
-          "simplified": false
-        },
-        {
-          "name": "右 · 中央走线 GND.002",
-          "vertices": 136,
-          "triangles": 236,
-          "boundaryEdges": 32,
-          "nonManifoldEdges": 32,
-          "worldMatrix": [
-            [
-              1.0,
-              0.0,
-              0.0,
-              0.0
-            ],
-            [
-              0.0,
-              1.0,
-              0.0,
-              0.0
-            ],
-            [
-              0.0,
-              0.0,
-              1.0,
-              0.0
-            ],
-            [
-              0.0,
-              0.0,
-              0.0,
-              1.0
-            ]
-          ],
-          "displayTriangles": 236,
-          "simplified": false
-        },
-        {
-          "name": "上 · 中央走线 GPIO.002",
-          "vertices": 152,
-          "triangles": 268,
-          "boundaryEdges": 32,
-          "nonManifoldEdges": 32,
-          "worldMatrix": [
-            [
-              1.0,
-              0.0,
-              0.0,
-              0.0
-            ],
-            [
-              0.0,
-              1.0,
-              0.0,
-              0.0
-            ],
-            [
-              0.0,
-              0.0,
-              1.0,
-              0.0
-            ],
-            [
-              0.0,
-              0.0,
-              0.0,
-              1.0
-            ]
-          ],
-          "displayTriangles": 268,
-          "simplified": false
-        },
-        {
-          "name": "上 · 中央走线 GND.002",
-          "vertices": 144,
-          "triangles": 252,
-          "boundaryEdges": 32,
-          "nonManifoldEdges": 32,
-          "worldMatrix": [
-            [
-              1.0,
-              0.0,
-              0.0,
-              0.0
-            ],
-            [
-              0.0,
-              1.0,
-              0.0,
-              0.0
-            ],
-            [
-              0.0,
-              0.0,
-              1.0,
-              0.0
-            ],
-            [
-              0.0,
-              0.0,
-              0.0,
-              1.0
-            ]
-          ],
-          "displayTriangles": 252,
-          "simplified": false
-        },
-        {
-          "name": "下 · 中央走线 GPIO.002",
-          "vertices": 136,
-          "triangles": 236,
-          "boundaryEdges": 32,
-          "nonManifoldEdges": 32,
-          "worldMatrix": [
-            [
-              1.0,
-              0.0,
-              0.0,
-              0.0
-            ],
-            [
-              0.0,
-              1.0,
-              0.0,
-              0.0
-            ],
-            [
-              0.0,
-              0.0,
-              1.0,
-              0.0
-            ],
-            [
-              0.0,
-              0.0,
-              0.0,
-              1.0
-            ]
-          ],
-          "displayTriangles": 236,
-          "simplified": false
-        },
-        {
-          "name": "下 · 中央走线 GND.002",
-          "vertices": 112,
-          "triangles": 188,
-          "boundaryEdges": 32,
-          "nonManifoldEdges": 32,
-          "worldMatrix": [
-            [
-              1.0,
-              0.0,
-              0.0,
-              0.0
-            ],
-            [
-              0.0,
-              1.0,
-              0.0,
-              0.0
-            ],
-            [
-              0.0,
-              0.0,
-              1.0,
-              0.0
-            ],
-            [
-              0.0,
-              0.0,
-              0.0,
-              1.0
-            ]
-          ],
-          "displayTriangles": 188,
-          "simplified": false
-        },
-        {
           "name": "公共接地 · GND 引线.002",
-          "vertices": 70,
+          "vertices": 50,
           "triangles": 96,
-          "boundaryEdges": 40,
-          "nonManifoldEdges": 40,
+          "boundaryEdges": 0,
+          "nonManifoldEdges": 0,
           "worldMatrix": [
             [
               1.0,
@@ -6721,10 +6511,10 @@
         },
         {
           "name": "公共接地 · GND 汇流排.002",
-          "vertices": 40,
+          "vertices": 20,
           "triangles": 36,
-          "boundaryEdges": 40,
-          "nonManifoldEdges": 40,
+          "boundaryEdges": 0,
+          "nonManifoldEdges": 0,
           "worldMatrix": [
             [
               1.0,

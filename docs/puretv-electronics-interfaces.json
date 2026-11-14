@@ -1,0 +1,1316 @@
+{
+  "schemaVersion": 1,
+  "sourceSha256": {
+    "electronics/esp32-mount.blend": "1f6ad69caa250b89d2b403c904ab37ec21a4e4437df757080f619edf2bd0e64c",
+    "electronics/harness.blend": "2dbed56630b7a16391a584b98b12e2b756cde3a632bf063bd81d885885d3aa91",
+    "housing/bottom.blend": "44bb57f9b1571b7abb70571a5a90344e3d0ea3733c3bac26c680fec62c0e0514"
+  },
+  "interfaces": [
+    {
+      "id": "header-insert-01",
+      "pair": [
+        "electronics/esp32-mount.blend::Header pin.170",
+        "electronics/esp32-mount.blend::Pin header.010"
+      ],
+      "regionBlender": {
+        "min": [
+          -21.72501961,
+          -3.0250200400000002,
+          11.29997971
+        ],
+        "max": [
+          -21.07497963,
+          -2.37498006,
+          12.40001998
+        ]
+      },
+      "maximumPenetrationMm": 1.10002,
+      "reason": "This exact 0.65 mm square metal pin is the retained insert of this exact moulded connector housing; the source simplifies the preassembled insert interface as overlapping solids. Only its 1.10 mm-deep internal socket region is included; no external pin/wire collision or assembly travel is exempted.",
+      "nominalInsertLengthMm": 1.1,
+      "scope": "Nominal preassembled connector internal insert; does not certify polymer displacement or manufacturing fit."
+    },
+    {
+      "id": "header-insert-02",
+      "pair": [
+        "electronics/esp32-mount.blend::Header pin.171",
+        "electronics/esp32-mount.blend::Pin header.010"
+      ],
+      "regionBlender": {
+        "min": [
+          -19.185020599999998,
+          -3.0250200400000002,
+          11.29997971
+        ],
+        "max": [
+          -18.534980620000002,
+          -2.37498006,
+          12.40001998
+        ]
+      },
+      "maximumPenetrationMm": 1.10002,
+      "reason": "This exact 0.65 mm square metal pin is the retained insert of this exact moulded connector housing; the source simplifies the preassembled insert interface as overlapping solids. Only its 1.10 mm-deep internal socket region is included; no external pin/wire collision or assembly travel is exempted.",
+      "nominalInsertLengthMm": 1.1,
+      "scope": "Nominal preassembled connector internal insert; does not certify polymer displacement or manufacturing fit."
+    },
+    {
+      "id": "header-insert-03",
+      "pair": [
+        "electronics/esp32-mount.blend::Header pin.172",
+        "electronics/esp32-mount.blend::Pin header.010"
+      ],
+      "regionBlender": {
+        "min": [
+          -16.64501968,
+          -3.0250200400000002,
+          11.29997971
+        ],
+        "max": [
+          -15.99497971,
+          -2.37498006,
+          12.40001998
+        ]
+      },
+      "maximumPenetrationMm": 1.10002,
+      "reason": "This exact 0.65 mm square metal pin is the retained insert of this exact moulded connector housing; the source simplifies the preassembled insert interface as overlapping solids. Only its 1.10 mm-deep internal socket region is included; no external pin/wire collision or assembly travel is exempted.",
+      "nominalInsertLengthMm": 1.1,
+      "scope": "Nominal preassembled connector internal insert; does not certify polymer displacement or manufacturing fit."
+    },
+    {
+      "id": "header-insert-04",
+      "pair": [
+        "electronics/esp32-mount.blend::Header pin.173",
+        "electronics/esp32-mount.blend::Pin header.010"
+      ],
+      "regionBlender": {
+        "min": [
+          -14.10501972,
+          -3.0250200400000002,
+          11.29997971
+        ],
+        "max": [
+          -13.45497974,
+          -2.37498006,
+          12.40001998
+        ]
+      },
+      "maximumPenetrationMm": 1.10002,
+      "reason": "This exact 0.65 mm square metal pin is the retained insert of this exact moulded connector housing; the source simplifies the preassembled insert interface as overlapping solids. Only its 1.10 mm-deep internal socket region is included; no external pin/wire collision or assembly travel is exempted.",
+      "nominalInsertLengthMm": 1.1,
+      "scope": "Nominal preassembled connector internal insert; does not certify polymer displacement or manufacturing fit."
+    },
+    {
+      "id": "header-insert-05",
+      "pair": [
+        "electronics/esp32-mount.blend::Header pin.174",
+        "electronics/esp32-mount.blend::Pin header.010"
+      ],
+      "regionBlender": {
+        "min": [
+          -11.565019759999998,
+          -3.0250200400000002,
+          11.29997971
+        ],
+        "max": [
+          -10.914979780000001,
+          -2.37498006,
+          12.40001998
+        ]
+      },
+      "maximumPenetrationMm": 1.10002,
+      "reason": "This exact 0.65 mm square metal pin is the retained insert of this exact moulded connector housing; the source simplifies the preassembled insert interface as overlapping solids. Only its 1.10 mm-deep internal socket region is included; no external pin/wire collision or assembly travel is exempted.",
+      "nominalInsertLengthMm": 1.1,
+      "scope": "Nominal preassembled connector internal insert; does not certify polymer displacement or manufacturing fit."
+    },
+    {
+      "id": "header-insert-06",
+      "pair": [
+        "electronics/esp32-mount.blend::Header pin.175",
+        "electronics/esp32-mount.blend::Pin header.010"
+      ],
+      "regionBlender": {
+        "min": [
+          -9.025019799999999,
+          -3.0250200400000002,
+          11.29997971
+        ],
+        "max": [
+          -8.37497982,
+          -2.37498006,
+          12.40001998
+        ]
+      },
+      "maximumPenetrationMm": 1.10002,
+      "reason": "This exact 0.65 mm square metal pin is the retained insert of this exact moulded connector housing; the source simplifies the preassembled insert interface as overlapping solids. Only its 1.10 mm-deep internal socket region is included; no external pin/wire collision or assembly travel is exempted.",
+      "nominalInsertLengthMm": 1.1,
+      "scope": "Nominal preassembled connector internal insert; does not certify polymer displacement or manufacturing fit."
+    },
+    {
+      "id": "header-insert-07",
+      "pair": [
+        "electronics/esp32-mount.blend::Header pin.176",
+        "electronics/esp32-mount.blend::Pin header.010"
+      ],
+      "regionBlender": {
+        "min": [
+          -6.4850198400000005,
+          -3.0250200400000002,
+          11.29997971
+        ],
+        "max": [
+          -5.83497986,
+          -2.37498006,
+          12.40001998
+        ]
+      },
+      "maximumPenetrationMm": 1.10002,
+      "reason": "This exact 0.65 mm square metal pin is the retained insert of this exact moulded connector housing; the source simplifies the preassembled insert interface as overlapping solids. Only its 1.10 mm-deep internal socket region is included; no external pin/wire collision or assembly travel is exempted.",
+      "nominalInsertLengthMm": 1.1,
+      "scope": "Nominal preassembled connector internal insert; does not certify polymer displacement or manufacturing fit."
+    },
+    {
+      "id": "header-insert-08",
+      "pair": [
+        "electronics/esp32-mount.blend::Header pin.177",
+        "electronics/esp32-mount.blend::Pin header.010"
+      ],
+      "regionBlender": {
+        "min": [
+          -3.9450198700000003,
+          -3.0250200400000002,
+          11.29997971
+        ],
+        "max": [
+          -3.2949799,
+          -2.37498006,
+          12.40001998
+        ]
+      },
+      "maximumPenetrationMm": 1.10002,
+      "reason": "This exact 0.65 mm square metal pin is the retained insert of this exact moulded connector housing; the source simplifies the preassembled insert interface as overlapping solids. Only its 1.10 mm-deep internal socket region is included; no external pin/wire collision or assembly travel is exempted.",
+      "nominalInsertLengthMm": 1.1,
+      "scope": "Nominal preassembled connector internal insert; does not certify polymer displacement or manufacturing fit."
+    },
+    {
+      "id": "header-insert-09",
+      "pair": [
+        "electronics/esp32-mount.blend::Header pin.178",
+        "electronics/esp32-mount.blend::Pin header.010"
+      ],
+      "regionBlender": {
+        "min": [
+          -1.40502003,
+          -3.0250200400000002,
+          11.29997971
+        ],
+        "max": [
+          -0.75498005,
+          -2.37498006,
+          12.40001998
+        ]
+      },
+      "maximumPenetrationMm": 1.10002,
+      "reason": "This exact 0.65 mm square metal pin is the retained insert of this exact moulded connector housing; the source simplifies the preassembled insert interface as overlapping solids. Only its 1.10 mm-deep internal socket region is included; no external pin/wire collision or assembly travel is exempted.",
+      "nominalInsertLengthMm": 1.1,
+      "scope": "Nominal preassembled connector internal insert; does not certify polymer displacement or manufacturing fit."
+    },
+    {
+      "id": "header-insert-10",
+      "pair": [
+        "electronics/esp32-mount.blend::Header pin.179",
+        "electronics/esp32-mount.blend::Pin header.010"
+      ],
+      "regionBlender": {
+        "min": [
+          1.13498005,
+          -3.0250200400000002,
+          11.29997971
+        ],
+        "max": [
+          1.7850200299999999,
+          -2.37498006,
+          12.40001998
+        ]
+      },
+      "maximumPenetrationMm": 1.10002,
+      "reason": "This exact 0.65 mm square metal pin is the retained insert of this exact moulded connector housing; the source simplifies the preassembled insert interface as overlapping solids. Only its 1.10 mm-deep internal socket region is included; no external pin/wire collision or assembly travel is exempted.",
+      "nominalInsertLengthMm": 1.1,
+      "scope": "Nominal preassembled connector internal insert; does not certify polymer displacement or manufacturing fit."
+    },
+    {
+      "id": "header-insert-11",
+      "pair": [
+        "electronics/esp32-mount.blend::Header pin.180",
+        "electronics/esp32-mount.blend::Pin header.010"
+      ],
+      "regionBlender": {
+        "min": [
+          3.67498001,
+          -3.0250200400000002,
+          11.29997971
+        ],
+        "max": [
+          4.32501999,
+          -2.37498006,
+          12.40001998
+        ]
+      },
+      "maximumPenetrationMm": 1.10002,
+      "reason": "This exact 0.65 mm square metal pin is the retained insert of this exact moulded connector housing; the source simplifies the preassembled insert interface as overlapping solids. Only its 1.10 mm-deep internal socket region is included; no external pin/wire collision or assembly travel is exempted.",
+      "nominalInsertLengthMm": 1.1,
+      "scope": "Nominal preassembled connector internal insert; does not certify polymer displacement or manufacturing fit."
+    },
+    {
+      "id": "header-insert-12",
+      "pair": [
+        "electronics/esp32-mount.blend::Header pin.181",
+        "electronics/esp32-mount.blend::Pin header.010"
+      ],
+      "regionBlender": {
+        "min": [
+          6.21497997,
+          -3.0250200400000002,
+          11.29997971
+        ],
+        "max": [
+          6.86501995,
+          -2.37498006,
+          12.40001998
+        ]
+      },
+      "maximumPenetrationMm": 1.10002,
+      "reason": "This exact 0.65 mm square metal pin is the retained insert of this exact moulded connector housing; the source simplifies the preassembled insert interface as overlapping solids. Only its 1.10 mm-deep internal socket region is included; no external pin/wire collision or assembly travel is exempted.",
+      "nominalInsertLengthMm": 1.1,
+      "scope": "Nominal preassembled connector internal insert; does not certify polymer displacement or manufacturing fit."
+    },
+    {
+      "id": "header-insert-13",
+      "pair": [
+        "electronics/esp32-mount.blend::Header pin.182",
+        "electronics/esp32-mount.blend::Pin header.010"
+      ],
+      "regionBlender": {
+        "min": [
+          8.75497994,
+          -3.0250200400000002,
+          11.29997971
+        ],
+        "max": [
+          9.40501991,
+          -2.37498006,
+          12.40001998
+        ]
+      },
+      "maximumPenetrationMm": 1.10002,
+      "reason": "This exact 0.65 mm square metal pin is the retained insert of this exact moulded connector housing; the source simplifies the preassembled insert interface as overlapping solids. Only its 1.10 mm-deep internal socket region is included; no external pin/wire collision or assembly travel is exempted.",
+      "nominalInsertLengthMm": 1.1,
+      "scope": "Nominal preassembled connector internal insert; does not certify polymer displacement or manufacturing fit."
+    },
+    {
+      "id": "header-insert-14",
+      "pair": [
+        "electronics/esp32-mount.blend::Header pin.183",
+        "electronics/esp32-mount.blend::Pin header.010"
+      ],
+      "regionBlender": {
+        "min": [
+          11.294979900000001,
+          -3.0250200400000002,
+          11.29997971
+        ],
+        "max": [
+          11.94501987,
+          -2.37498006,
+          12.40001998
+        ]
+      },
+      "maximumPenetrationMm": 1.10002,
+      "reason": "This exact 0.65 mm square metal pin is the retained insert of this exact moulded connector housing; the source simplifies the preassembled insert interface as overlapping solids. Only its 1.10 mm-deep internal socket region is included; no external pin/wire collision or assembly travel is exempted.",
+      "nominalInsertLengthMm": 1.1,
+      "scope": "Nominal preassembled connector internal insert; does not certify polymer displacement or manufacturing fit."
+    },
+    {
+      "id": "header-insert-15",
+      "pair": [
+        "electronics/esp32-mount.blend::Header pin.184",
+        "electronics/esp32-mount.blend::Pin header.010"
+      ],
+      "regionBlender": {
+        "min": [
+          13.83497986,
+          -3.0250200400000002,
+          11.29997971
+        ],
+        "max": [
+          14.48501984,
+          -2.37498006,
+          12.40001998
+        ]
+      },
+      "maximumPenetrationMm": 1.10002,
+      "reason": "This exact 0.65 mm square metal pin is the retained insert of this exact moulded connector housing; the source simplifies the preassembled insert interface as overlapping solids. Only its 1.10 mm-deep internal socket region is included; no external pin/wire collision or assembly travel is exempted.",
+      "nominalInsertLengthMm": 1.1,
+      "scope": "Nominal preassembled connector internal insert; does not certify polymer displacement or manufacturing fit."
+    },
+    {
+      "id": "header-insert-16",
+      "pair": [
+        "electronics/esp32-mount.blend::Header pin.185",
+        "electronics/esp32-mount.blend::Pin header.010"
+      ],
+      "regionBlender": {
+        "min": [
+          16.37498077,
+          -3.0250200400000002,
+          11.29997971
+        ],
+        "max": [
+          17.02502075,
+          -2.37498006,
+          12.40001998
+        ]
+      },
+      "maximumPenetrationMm": 1.10002,
+      "reason": "This exact 0.65 mm square metal pin is the retained insert of this exact moulded connector housing; the source simplifies the preassembled insert interface as overlapping solids. Only its 1.10 mm-deep internal socket region is included; no external pin/wire collision or assembly travel is exempted.",
+      "nominalInsertLengthMm": 1.1,
+      "scope": "Nominal preassembled connector internal insert; does not certify polymer displacement or manufacturing fit."
+    },
+    {
+      "id": "header-insert-17",
+      "pair": [
+        "electronics/esp32-mount.blend::Header pin.186",
+        "electronics/esp32-mount.blend::Pin header.010"
+      ],
+      "regionBlender": {
+        "min": [
+          18.91497978,
+          -3.0250200400000002,
+          11.29997971
+        ],
+        "max": [
+          19.56501976,
+          -2.37498006,
+          12.40001998
+        ]
+      },
+      "maximumPenetrationMm": 1.10002,
+      "reason": "This exact 0.65 mm square metal pin is the retained insert of this exact moulded connector housing; the source simplifies the preassembled insert interface as overlapping solids. Only its 1.10 mm-deep internal socket region is included; no external pin/wire collision or assembly travel is exempted.",
+      "nominalInsertLengthMm": 1.1,
+      "scope": "Nominal preassembled connector internal insert; does not certify polymer displacement or manufacturing fit."
+    },
+    {
+      "id": "header-insert-18",
+      "pair": [
+        "electronics/esp32-mount.blend::Header pin.187",
+        "electronics/esp32-mount.blend::Pin header.011"
+      ],
+      "regionBlender": {
+        "min": [
+          -21.72501961,
+          19.37498077,
+          11.29997971
+        ],
+        "max": [
+          -21.07497963,
+          20.02502075,
+          12.40001998
+        ]
+      },
+      "maximumPenetrationMm": 1.10002,
+      "reason": "This exact 0.65 mm square metal pin is the retained insert of this exact moulded connector housing; the source simplifies the preassembled insert interface as overlapping solids. Only its 1.10 mm-deep internal socket region is included; no external pin/wire collision or assembly travel is exempted.",
+      "nominalInsertLengthMm": 1.1,
+      "scope": "Nominal preassembled connector internal insert; does not certify polymer displacement or manufacturing fit."
+    },
+    {
+      "id": "header-insert-19",
+      "pair": [
+        "electronics/esp32-mount.blend::Header pin.188",
+        "electronics/esp32-mount.blend::Pin header.011"
+      ],
+      "regionBlender": {
+        "min": [
+          -19.185020599999998,
+          19.37498077,
+          11.29997971
+        ],
+        "max": [
+          -18.534980620000002,
+          20.02502075,
+          12.40001998
+        ]
+      },
+      "maximumPenetrationMm": 1.10002,
+      "reason": "This exact 0.65 mm square metal pin is the retained insert of this exact moulded connector housing; the source simplifies the preassembled insert interface as overlapping solids. Only its 1.10 mm-deep internal socket region is included; no external pin/wire collision or assembly travel is exempted.",
+      "nominalInsertLengthMm": 1.1,
+      "scope": "Nominal preassembled connector internal insert; does not certify polymer displacement or manufacturing fit."
+    },
+    {
+      "id": "header-insert-20",
+      "pair": [
+        "electronics/esp32-mount.blend::Header pin.189",
+        "electronics/esp32-mount.blend::Pin header.011"
+      ],
+      "regionBlender": {
+        "min": [
+          -16.64501968,
+          19.37498077,
+          11.29997971
+        ],
+        "max": [
+          -15.99497971,
+          20.02502075,
+          12.40001998
+        ]
+      },
+      "maximumPenetrationMm": 1.10002,
+      "reason": "This exact 0.65 mm square metal pin is the retained insert of this exact moulded connector housing; the source simplifies the preassembled insert interface as overlapping solids. Only its 1.10 mm-deep internal socket region is included; no external pin/wire collision or assembly travel is exempted.",
+      "nominalInsertLengthMm": 1.1,
+      "scope": "Nominal preassembled connector internal insert; does not certify polymer displacement or manufacturing fit."
+    },
+    {
+      "id": "header-insert-21",
+      "pair": [
+        "electronics/esp32-mount.blend::Header pin.190",
+        "electronics/esp32-mount.blend::Pin header.011"
+      ],
+      "regionBlender": {
+        "min": [
+          -14.10501972,
+          19.37498077,
+          11.29997971
+        ],
+        "max": [
+          -13.45497974,
+          20.02502075,
+          12.40001998
+        ]
+      },
+      "maximumPenetrationMm": 1.10002,
+      "reason": "This exact 0.65 mm square metal pin is the retained insert of this exact moulded connector housing; the source simplifies the preassembled insert interface as overlapping solids. Only its 1.10 mm-deep internal socket region is included; no external pin/wire collision or assembly travel is exempted.",
+      "nominalInsertLengthMm": 1.1,
+      "scope": "Nominal preassembled connector internal insert; does not certify polymer displacement or manufacturing fit."
+    },
+    {
+      "id": "header-insert-22",
+      "pair": [
+        "electronics/esp32-mount.blend::Header pin.191",
+        "electronics/esp32-mount.blend::Pin header.011"
+      ],
+      "regionBlender": {
+        "min": [
+          -11.565019759999998,
+          19.37498077,
+          11.29997971
+        ],
+        "max": [
+          -10.914979780000001,
+          20.02502075,
+          12.40001998
+        ]
+      },
+      "maximumPenetrationMm": 1.10002,
+      "reason": "This exact 0.65 mm square metal pin is the retained insert of this exact moulded connector housing; the source simplifies the preassembled insert interface as overlapping solids. Only its 1.10 mm-deep internal socket region is included; no external pin/wire collision or assembly travel is exempted.",
+      "nominalInsertLengthMm": 1.1,
+      "scope": "Nominal preassembled connector internal insert; does not certify polymer displacement or manufacturing fit."
+    },
+    {
+      "id": "header-insert-23",
+      "pair": [
+        "electronics/esp32-mount.blend::Header pin.192",
+        "electronics/esp32-mount.blend::Pin header.011"
+      ],
+      "regionBlender": {
+        "min": [
+          -9.025019799999999,
+          19.37498077,
+          11.29997971
+        ],
+        "max": [
+          -8.37497982,
+          20.02502075,
+          12.40001998
+        ]
+      },
+      "maximumPenetrationMm": 1.10002,
+      "reason": "This exact 0.65 mm square metal pin is the retained insert of this exact moulded connector housing; the source simplifies the preassembled insert interface as overlapping solids. Only its 1.10 mm-deep internal socket region is included; no external pin/wire collision or assembly travel is exempted.",
+      "nominalInsertLengthMm": 1.1,
+      "scope": "Nominal preassembled connector internal insert; does not certify polymer displacement or manufacturing fit."
+    },
+    {
+      "id": "header-insert-24",
+      "pair": [
+        "electronics/esp32-mount.blend::Header pin.193",
+        "electronics/esp32-mount.blend::Pin header.011"
+      ],
+      "regionBlender": {
+        "min": [
+          -6.4850198400000005,
+          19.37498077,
+          11.29997971
+        ],
+        "max": [
+          -5.83497986,
+          20.02502075,
+          12.40001998
+        ]
+      },
+      "maximumPenetrationMm": 1.10002,
+      "reason": "This exact 0.65 mm square metal pin is the retained insert of this exact moulded connector housing; the source simplifies the preassembled insert interface as overlapping solids. Only its 1.10 mm-deep internal socket region is included; no external pin/wire collision or assembly travel is exempted.",
+      "nominalInsertLengthMm": 1.1,
+      "scope": "Nominal preassembled connector internal insert; does not certify polymer displacement or manufacturing fit."
+    },
+    {
+      "id": "header-insert-25",
+      "pair": [
+        "electronics/esp32-mount.blend::Header pin.194",
+        "electronics/esp32-mount.blend::Pin header.011"
+      ],
+      "regionBlender": {
+        "min": [
+          -3.9450198700000003,
+          19.37498077,
+          11.29997971
+        ],
+        "max": [
+          -3.2949799,
+          20.02502075,
+          12.40001998
+        ]
+      },
+      "maximumPenetrationMm": 1.10002,
+      "reason": "This exact 0.65 mm square metal pin is the retained insert of this exact moulded connector housing; the source simplifies the preassembled insert interface as overlapping solids. Only its 1.10 mm-deep internal socket region is included; no external pin/wire collision or assembly travel is exempted.",
+      "nominalInsertLengthMm": 1.1,
+      "scope": "Nominal preassembled connector internal insert; does not certify polymer displacement or manufacturing fit."
+    },
+    {
+      "id": "header-insert-26",
+      "pair": [
+        "electronics/esp32-mount.blend::Header pin.195",
+        "electronics/esp32-mount.blend::Pin header.011"
+      ],
+      "regionBlender": {
+        "min": [
+          -1.40502003,
+          19.37498077,
+          11.29997971
+        ],
+        "max": [
+          -0.75498005,
+          20.02502075,
+          12.40001998
+        ]
+      },
+      "maximumPenetrationMm": 1.10002,
+      "reason": "This exact 0.65 mm square metal pin is the retained insert of this exact moulded connector housing; the source simplifies the preassembled insert interface as overlapping solids. Only its 1.10 mm-deep internal socket region is included; no external pin/wire collision or assembly travel is exempted.",
+      "nominalInsertLengthMm": 1.1,
+      "scope": "Nominal preassembled connector internal insert; does not certify polymer displacement or manufacturing fit."
+    },
+    {
+      "id": "header-insert-27",
+      "pair": [
+        "electronics/esp32-mount.blend::Header pin.196",
+        "electronics/esp32-mount.blend::Pin header.011"
+      ],
+      "regionBlender": {
+        "min": [
+          1.13498005,
+          19.37498077,
+          11.29997971
+        ],
+        "max": [
+          1.7850200299999999,
+          20.02502075,
+          12.40001998
+        ]
+      },
+      "maximumPenetrationMm": 1.10002,
+      "reason": "This exact 0.65 mm square metal pin is the retained insert of this exact moulded connector housing; the source simplifies the preassembled insert interface as overlapping solids. Only its 1.10 mm-deep internal socket region is included; no external pin/wire collision or assembly travel is exempted.",
+      "nominalInsertLengthMm": 1.1,
+      "scope": "Nominal preassembled connector internal insert; does not certify polymer displacement or manufacturing fit."
+    },
+    {
+      "id": "header-insert-28",
+      "pair": [
+        "electronics/esp32-mount.blend::Header pin.197",
+        "electronics/esp32-mount.blend::Pin header.011"
+      ],
+      "regionBlender": {
+        "min": [
+          3.67498001,
+          19.37498077,
+          11.29997971
+        ],
+        "max": [
+          4.32501999,
+          20.02502075,
+          12.40001998
+        ]
+      },
+      "maximumPenetrationMm": 1.10002,
+      "reason": "This exact 0.65 mm square metal pin is the retained insert of this exact moulded connector housing; the source simplifies the preassembled insert interface as overlapping solids. Only its 1.10 mm-deep internal socket region is included; no external pin/wire collision or assembly travel is exempted.",
+      "nominalInsertLengthMm": 1.1,
+      "scope": "Nominal preassembled connector internal insert; does not certify polymer displacement or manufacturing fit."
+    },
+    {
+      "id": "header-insert-29",
+      "pair": [
+        "electronics/esp32-mount.blend::Header pin.198",
+        "electronics/esp32-mount.blend::Pin header.011"
+      ],
+      "regionBlender": {
+        "min": [
+          6.21497997,
+          19.37498077,
+          11.29997971
+        ],
+        "max": [
+          6.86501995,
+          20.02502075,
+          12.40001998
+        ]
+      },
+      "maximumPenetrationMm": 1.10002,
+      "reason": "This exact 0.65 mm square metal pin is the retained insert of this exact moulded connector housing; the source simplifies the preassembled insert interface as overlapping solids. Only its 1.10 mm-deep internal socket region is included; no external pin/wire collision or assembly travel is exempted.",
+      "nominalInsertLengthMm": 1.1,
+      "scope": "Nominal preassembled connector internal insert; does not certify polymer displacement or manufacturing fit."
+    },
+    {
+      "id": "header-insert-30",
+      "pair": [
+        "electronics/esp32-mount.blend::Header pin.199",
+        "electronics/esp32-mount.blend::Pin header.011"
+      ],
+      "regionBlender": {
+        "min": [
+          8.75497994,
+          19.37498077,
+          11.29997971
+        ],
+        "max": [
+          9.40501991,
+          20.02502075,
+          12.40001998
+        ]
+      },
+      "maximumPenetrationMm": 1.10002,
+      "reason": "This exact 0.65 mm square metal pin is the retained insert of this exact moulded connector housing; the source simplifies the preassembled insert interface as overlapping solids. Only its 1.10 mm-deep internal socket region is included; no external pin/wire collision or assembly travel is exempted.",
+      "nominalInsertLengthMm": 1.1,
+      "scope": "Nominal preassembled connector internal insert; does not certify polymer displacement or manufacturing fit."
+    },
+    {
+      "id": "header-insert-31",
+      "pair": [
+        "electronics/esp32-mount.blend::Header pin.200",
+        "electronics/esp32-mount.blend::Pin header.011"
+      ],
+      "regionBlender": {
+        "min": [
+          11.294979900000001,
+          19.37498077,
+          11.29997971
+        ],
+        "max": [
+          11.94501987,
+          20.02502075,
+          12.40001998
+        ]
+      },
+      "maximumPenetrationMm": 1.10002,
+      "reason": "This exact 0.65 mm square metal pin is the retained insert of this exact moulded connector housing; the source simplifies the preassembled insert interface as overlapping solids. Only its 1.10 mm-deep internal socket region is included; no external pin/wire collision or assembly travel is exempted.",
+      "nominalInsertLengthMm": 1.1,
+      "scope": "Nominal preassembled connector internal insert; does not certify polymer displacement or manufacturing fit."
+    },
+    {
+      "id": "header-insert-32",
+      "pair": [
+        "electronics/esp32-mount.blend::Header pin.201",
+        "electronics/esp32-mount.blend::Pin header.011"
+      ],
+      "regionBlender": {
+        "min": [
+          13.83497986,
+          19.37498077,
+          11.29997971
+        ],
+        "max": [
+          14.48501984,
+          20.02502075,
+          12.40001998
+        ]
+      },
+      "maximumPenetrationMm": 1.10002,
+      "reason": "This exact 0.65 mm square metal pin is the retained insert of this exact moulded connector housing; the source simplifies the preassembled insert interface as overlapping solids. Only its 1.10 mm-deep internal socket region is included; no external pin/wire collision or assembly travel is exempted.",
+      "nominalInsertLengthMm": 1.1,
+      "scope": "Nominal preassembled connector internal insert; does not certify polymer displacement or manufacturing fit."
+    },
+    {
+      "id": "header-insert-33",
+      "pair": [
+        "electronics/esp32-mount.blend::Header pin.202",
+        "electronics/esp32-mount.blend::Pin header.011"
+      ],
+      "regionBlender": {
+        "min": [
+          16.37498077,
+          19.37498077,
+          11.29997971
+        ],
+        "max": [
+          17.02502075,
+          20.02502075,
+          12.40001998
+        ]
+      },
+      "maximumPenetrationMm": 1.10002,
+      "reason": "This exact 0.65 mm square metal pin is the retained insert of this exact moulded connector housing; the source simplifies the preassembled insert interface as overlapping solids. Only its 1.10 mm-deep internal socket region is included; no external pin/wire collision or assembly travel is exempted.",
+      "nominalInsertLengthMm": 1.1,
+      "scope": "Nominal preassembled connector internal insert; does not certify polymer displacement or manufacturing fit."
+    },
+    {
+      "id": "header-insert-34",
+      "pair": [
+        "electronics/esp32-mount.blend::Header pin.203",
+        "electronics/esp32-mount.blend::Pin header.011"
+      ],
+      "regionBlender": {
+        "min": [
+          18.91497978,
+          19.37498077,
+          11.29997971
+        ],
+        "max": [
+          19.56501976,
+          20.02502075,
+          12.40001998
+        ]
+      },
+      "maximumPenetrationMm": 1.10002,
+      "reason": "This exact 0.65 mm square metal pin is the retained insert of this exact moulded connector housing; the source simplifies the preassembled insert interface as overlapping solids. Only its 1.10 mm-deep internal socket region is included; no external pin/wire collision or assembly travel is exempted.",
+      "nominalInsertLengthMm": 1.1,
+      "scope": "Nominal preassembled connector internal insert; does not certify polymer displacement or manufacturing fit."
+    },
+    {
+      "id": "pcb-top-support-1",
+      "pair": [
+        "electronics/esp32-mount.blend::ESP32 · 48.2 × 27.9 PCB.005",
+        "electronics/esp32-mount.blend::ESP32 · RF module.005"
+      ],
+      "regionBlender": {
+        "min": [
+          8.39997962,
+          -0.50002,
+          9.599980140000001
+        ],
+        "max": [
+          22.20002041,
+          17.50002,
+          9.6000202
+        ]
+      },
+      "maximumPenetrationMm": 2e-05,
+      "reason": "Exact named source component/soft pad bottom face rests on the PCB top plane at Z=9.60 mm; only coincident face contact is included."
+    },
+    {
+      "id": "pcb-top-support-2",
+      "pair": [
+        "electronics/esp32-mount.blend::ESP32 · 48.2 × 27.9 PCB.005",
+        "electronics/esp32-mount.blend::Pin header.010"
+      ],
+      "regionBlender": {
+        "min": [
+          -22.85002002,
+          -3.9000201000000003,
+          9.59998002
+        ],
+        "max": [
+          20.65001998,
+          -1.49998,
+          9.6000202
+        ]
+      },
+      "maximumPenetrationMm": 2e-05,
+      "reason": "Exact named source component/soft pad bottom face rests on the PCB top plane at Z=9.60 mm; only coincident face contact is included."
+    },
+    {
+      "id": "pcb-top-support-3",
+      "pair": [
+        "electronics/esp32-mount.blend::ESP32 · 48.2 × 27.9 PCB.005",
+        "electronics/esp32-mount.blend::Pin header.011"
+      ],
+      "regionBlender": {
+        "min": [
+          -22.85002002,
+          18.49998072,
+          9.59998002
+        ],
+        "max": [
+          20.65001998,
+          20.90002081,
+          9.6000202
+        ]
+      },
+      "maximumPenetrationMm": 2e-05,
+      "reason": "Exact named source component/soft pad bottom face rests on the PCB top plane at Z=9.60 mm; only coincident face contact is included."
+    },
+    {
+      "id": "pcb-top-support-4",
+      "pair": [
+        "electronics/esp32-mount.blend::ESP32 · 48.2 × 27.9 PCB.005",
+        "electronics/esp32-mount.blend::PCB · 0.40 mm 软垫（装配压缩至 0.25 mm）.010"
+      ],
+      "regionBlender": {
+        "min": [
+          -12.30001995,
+          6.24998,
+          9.599980380000002
+        ],
+        "max": [
+          -7.69998005,
+          10.75002,
+          9.6000202
+        ]
+      },
+      "maximumPenetrationMm": 2e-05,
+      "reason": "Exact named source component/soft pad bottom face rests on the PCB top plane at Z=9.60 mm; only coincident face contact is included."
+    },
+    {
+      "id": "pad-clamp-foot-1",
+      "pair": [
+        "electronics/esp32-mount.blend::PCB · 0.40 mm 软垫（装配压缩至 0.25 mm）.010",
+        "electronics/esp32-mount.blend::PCB · 长轴压条.005"
+      ],
+      "regionBlender": {
+        "min": [
+          -12.30001995,
+          6.24998,
+          9.849980380000002
+        ],
+        "max": [
+          -7.69998005,
+          10.75002,
+          9.85002038
+        ]
+      },
+      "maximumPenetrationMm": 2e-05,
+      "reason": "Exact 4.6 × 4.5 mm compressed soft pad top face bears against its original clamp foot at Z=9.85 mm; no overlap away from that plane is allowed."
+    },
+    {
+      "id": "pcb-top-support-5",
+      "pair": [
+        "electronics/esp32-mount.blend::ESP32 · 48.2 × 27.9 PCB.005",
+        "electronics/esp32-mount.blend::PCB · 0.40 mm 软垫（装配压缩至 0.25 mm）.011"
+      ],
+      "regionBlender": {
+        "min": [
+          0.69998005,
+          6.24998,
+          9.599980380000002
+        ],
+        "max": [
+          5.30001995,
+          10.75002,
+          9.6000202
+        ]
+      },
+      "maximumPenetrationMm": 2e-05,
+      "reason": "Exact named source component/soft pad bottom face rests on the PCB top plane at Z=9.60 mm; only coincident face contact is included."
+    },
+    {
+      "id": "pad-clamp-foot-2",
+      "pair": [
+        "electronics/esp32-mount.blend::PCB · 0.40 mm 软垫（装配压缩至 0.25 mm）.011",
+        "electronics/esp32-mount.blend::PCB · 长轴压条.005"
+      ],
+      "regionBlender": {
+        "min": [
+          0.69998005,
+          6.24998,
+          9.849980380000002
+        ],
+        "max": [
+          5.30001995,
+          10.75002,
+          9.85002038
+        ]
+      },
+      "maximumPenetrationMm": 2e-05,
+      "reason": "Exact 4.6 × 4.5 mm compressed soft pad top face bears against its original clamp foot at Z=9.85 mm; no overlap away from that plane is allowed."
+    },
+    {
+      "id": "usb-enclosure-seated-on-pcb",
+      "pair": [
+        "electronics/esp32-mount.blend::ESP32 · USB connector.005",
+        "electronics/esp32-mount.blend::ESP32 · 48.2 × 27.9 PCB.005"
+      ],
+      "regionBlender": {
+        "min": [
+          -26.00001036,
+          4.49999,
+          9.5999902
+        ],
+        "max": [
+          -22.8999901,
+          12.50001,
+          9.6000102
+        ]
+      },
+      "maximumPenetrationMm": 1e-05,
+      "reason": "USB exterior enclosure rests on the actual PCB top plane. Only this coincident support face is allowed; no rigid enclosure volume enters the PCB."
+    },
+    {
+      "id": "pcb-bottom-original-support-plane",
+      "pair": [
+        "electronics/esp32-mount.blend::ESP32 · 48.2 × 27.9 PCB.005",
+        "housing/bottom.blend::底壳 · 合壳.007"
+      ],
+      "regionBlender": {
+        "min": [
+          -26.00002036,
+          -5.45001981,
+          7.99998
+        ],
+        "max": [
+          22.20002041,
+          22.45001981,
+          8.00002
+        ]
+      },
+      "maximumPenetrationMm": 2e-05,
+      "reason": "The PCB underside rests on the original bottom-housing support plane at Z=8.00 mm. Only this exact board footprint and coincident underside plane are included; side/upper housing interference is forbidden."
+    },
+    {
+      "id": "pcb-clamp-two-original-mounting-column-faces",
+      "pair": [
+        "electronics/esp32-mount.blend::PCB · 长轴压条.005",
+        "housing/bottom.blend::底壳 · 合壳.007"
+      ],
+      "regionBlender": {
+        "min": [
+          -37.50002,
+          5.24998,
+          14.84998
+        ],
+        "max": [
+          37.50002,
+          11.75002,
+          14.85002
+        ]
+      },
+      "maximumPenetrationMm": 2e-05,
+      "reason": "Only the two original mounting-column end faces meet the clamp underside. The middle span is excluded by the explicit two-region union. All other shell/clamp penetration remains forbidden.",
+      "regionsBlender": [
+        {
+          "min": [
+            -37.50002,
+            5.24998,
+            14.84998
+          ],
+          "max": [
+            -30.49998,
+            11.75002,
+            14.85002
+          ]
+        },
+        {
+          "min": [
+            30.49998,
+            5.24998,
+            14.84998
+          ],
+          "max": [
+            37.50002,
+            11.75002,
+            14.85002
+          ]
+        }
+      ],
+      "evidenceRef": "docs/puretv-geometry-clamp-repair.json"
+    },
+    {
+      "id": "authored-header-wire-tip-01",
+      "pair": [
+        "electronics/harness.blend::确认 · GPIO.005",
+        "electronics/esp32-mount.blend::Header pin.193"
+      ],
+      "regionBlender": {
+        "min": [
+          -6.440019848604202,
+          19.41998076174736,
+          16.899979618530274
+        ],
+        "max": [
+          -5.879979846220016,
+          19.980020764131545,
+          17.00002
+        ]
+      },
+      "maximumPenetrationMm": 0.10002,
+      "reason": "The original source polyline explicitly ends on this single header pin axis at Z=16.90 mm, 0.10 mm below its tip. This bounded joint represents the nominal stripped/soldered endpoint only; neighbouring pin crossings are not connections and are never exempted.",
+      "authoredEndpointBlender": [
+        -6.159999847412109,
+        19.700000762939453,
+        16.899999618530273
+      ],
+      "nominalTipInsertionMm": 0.1,
+      "scope": "Source mechanical endpoint occupancy; actual GPIO marking, stripped length, solder shape and insulation require physical confirmation."
+    },
+    {
+      "id": "authored-header-wire-tip-02",
+      "pair": [
+        "electronics/harness.blend::A · 中央走线 GPIO.002",
+        "electronics/esp32-mount.blend::Header pin.191"
+      ],
+      "regionBlender": {
+        "min": [
+          -11.520019772310256,
+          19.41998076174736,
+          16.899979618530274
+        ],
+        "max": [
+          -10.959979769926072,
+          19.980020764131545,
+          17.00002
+        ]
+      },
+      "maximumPenetrationMm": 0.10002,
+      "reason": "The original source polyline explicitly ends on this single header pin axis at Z=16.90 mm, 0.10 mm below its tip. This bounded joint represents the nominal stripped/soldered endpoint only; neighbouring pin crossings are not connections and are never exempted.",
+      "authoredEndpointBlender": [
+        -11.239999771118164,
+        19.700000762939453,
+        16.899999618530273
+      ],
+      "nominalTipInsertionMm": 0.1,
+      "scope": "Source mechanical endpoint occupancy; actual GPIO marking, stripped length, solder shape and insulation require physical confirmation."
+    },
+    {
+      "id": "authored-header-wire-tip-03",
+      "pair": [
+        "electronics/harness.blend::B · 中央走线 GPIO.002",
+        "electronics/esp32-mount.blend::Header pin.190"
+      ],
+      "regionBlender": {
+        "min": [
+          -14.060019734163284,
+          19.41998076174736,
+          16.899979618530274
+        ],
+        "max": [
+          -13.4999797317791,
+          19.980020764131545,
+          17.00002
+        ]
+      },
+      "maximumPenetrationMm": 0.10002,
+      "reason": "The original source polyline explicitly ends on this single header pin axis at Z=16.90 mm, 0.10 mm below its tip. This bounded joint represents the nominal stripped/soldered endpoint only; neighbouring pin crossings are not connections and are never exempted.",
+      "authoredEndpointBlender": [
+        -13.779999732971191,
+        19.700000762939453,
+        16.899999618530273
+      ],
+      "nominalTipInsertionMm": 0.1,
+      "scope": "Source mechanical endpoint occupancy; actual GPIO marking, stripped length, solder shape and insulation require physical confirmation."
+    },
+    {
+      "id": "authored-header-wire-tip-04",
+      "pair": [
+        "electronics/harness.blend::X · 中央走线 GPIO.002",
+        "electronics/esp32-mount.blend::Header pin.192"
+      ],
+      "regionBlender": {
+        "min": [
+          -8.980019810457229,
+          19.41998076174736,
+          16.899979618530274
+        ],
+        "max": [
+          -8.419979808073045,
+          19.980020764131545,
+          17.00002
+        ]
+      },
+      "maximumPenetrationMm": 0.10002,
+      "reason": "The original source polyline explicitly ends on this single header pin axis at Z=16.90 mm, 0.10 mm below its tip. This bounded joint represents the nominal stripped/soldered endpoint only; neighbouring pin crossings are not connections and are never exempted.",
+      "authoredEndpointBlender": [
+        -8.699999809265137,
+        19.700000762939453,
+        16.899999618530273
+      ],
+      "nominalTipInsertionMm": 0.1,
+      "scope": "Source mechanical endpoint occupancy; actual GPIO marking, stripped length, solder shape and insulation require physical confirmation."
+    },
+    {
+      "id": "authored-header-wire-tip-05",
+      "pair": [
+        "electronics/harness.blend::Y · 中央走线 GPIO.002",
+        "electronics/esp32-mount.blend::Header pin.189"
+      ],
+      "regionBlender": {
+        "min": [
+          -16.60001969601631,
+          19.41998076174736,
+          16.899979618530274
+        ],
+        "max": [
+          -16.039979693632127,
+          19.980020764131545,
+          17.00002
+        ]
+      },
+      "maximumPenetrationMm": 0.10002,
+      "reason": "The original source polyline explicitly ends on this single header pin axis at Z=16.90 mm, 0.10 mm below its tip. This bounded joint represents the nominal stripped/soldered endpoint only; neighbouring pin crossings are not connections and are never exempted.",
+      "authoredEndpointBlender": [
+        -16.31999969482422,
+        19.700000762939453,
+        16.899999618530273
+      ],
+      "nominalTipInsertionMm": 0.1,
+      "scope": "Source mechanical endpoint occupancy; actual GPIO marking, stripped length, solder shape and insulation require physical confirmation."
+    },
+    {
+      "id": "authored-header-wire-tip-06",
+      "pair": [
+        "electronics/harness.blend::左 · 中央走线 GPIO.002",
+        "electronics/esp32-mount.blend::Header pin.188"
+      ],
+      "regionBlender": {
+        "min": [
+          -19.140020611543655,
+          19.41998076174736,
+          16.899979618530274
+        ],
+        "max": [
+          -18.57998060915947,
+          19.980020764131545,
+          17.00002
+        ]
+      },
+      "maximumPenetrationMm": 0.10002,
+      "reason": "The original source polyline explicitly ends on this single header pin axis at Z=16.90 mm, 0.10 mm below its tip. This bounded joint represents the nominal stripped/soldered endpoint only; neighbouring pin crossings are not connections and are never exempted.",
+      "authoredEndpointBlender": [
+        -18.860000610351562,
+        19.700000762939453,
+        16.899999618530273
+      ],
+      "nominalTipInsertionMm": 0.1,
+      "scope": "Source mechanical endpoint occupancy; actual GPIO marking, stripped length, solder shape and insulation require physical confirmation."
+    },
+    {
+      "id": "authored-header-wire-tip-07",
+      "pair": [
+        "electronics/harness.blend::右 · 中央走线 GPIO.002",
+        "electronics/esp32-mount.blend::Header pin.197"
+      ],
+      "regionBlender": {
+        "min": [
+          3.719979998807907,
+          19.41998076174736,
+          16.899979618530274
+        ],
+        "max": [
+          4.280020001192093,
+          19.980020764131545,
+          17.00002
+        ]
+      },
+      "maximumPenetrationMm": 0.10002,
+      "reason": "The original source polyline explicitly ends on this single header pin axis at Z=16.90 mm, 0.10 mm below its tip. This bounded joint represents the nominal stripped/soldered endpoint only; neighbouring pin crossings are not connections and are never exempted.",
+      "authoredEndpointBlender": [
+        4.0,
+        19.700000762939453,
+        16.899999618530273
+      ],
+      "nominalTipInsertionMm": 0.1,
+      "scope": "Source mechanical endpoint occupancy; actual GPIO marking, stripped length, solder shape and insulation require physical confirmation."
+    },
+    {
+      "id": "authored-header-wire-tip-08",
+      "pair": [
+        "electronics/harness.blend::上 · 中央走线 GPIO.002",
+        "electronics/esp32-mount.blend::Header pin.194"
+      ],
+      "regionBlender": {
+        "min": [
+          -3.900019886751175,
+          19.41998076174736,
+          16.899979618530274
+        ],
+        "max": [
+          -3.339979884366989,
+          19.980020764131545,
+          17.00002
+        ]
+      },
+      "maximumPenetrationMm": 0.10002,
+      "reason": "The original source polyline explicitly ends on this single header pin axis at Z=16.90 mm, 0.10 mm below its tip. This bounded joint represents the nominal stripped/soldered endpoint only; neighbouring pin crossings are not connections and are never exempted.",
+      "authoredEndpointBlender": [
+        -3.619999885559082,
+        19.700000762939453,
+        16.899999618530273
+      ],
+      "nominalTipInsertionMm": 0.1,
+      "scope": "Source mechanical endpoint occupancy; actual GPIO marking, stripped length, solder shape and insulation require physical confirmation."
+    },
+    {
+      "id": "authored-header-wire-tip-09",
+      "pair": [
+        "electronics/harness.blend::下 · 中央走线 GPIO.002",
+        "electronics/esp32-mount.blend::Header pin.195"
+      ],
+      "regionBlender": {
+        "min": [
+          -1.360020044107437,
+          19.41998076174736,
+          16.899979618530274
+        ],
+        "max": [
+          -0.7999800417232513,
+          19.980020764131545,
+          17.00002
+        ]
+      },
+      "maximumPenetrationMm": 0.10002,
+      "reason": "The original source polyline explicitly ends on this single header pin axis at Z=16.90 mm, 0.10 mm below its tip. This bounded joint represents the nominal stripped/soldered endpoint only; neighbouring pin crossings are not connections and are never exempted.",
+      "authoredEndpointBlender": [
+        -1.0800000429153442,
+        19.700000762939453,
+        16.899999618530273
+      ],
+      "nominalTipInsertionMm": 0.1,
+      "scope": "Source mechanical endpoint occupancy; actual GPIO marking, stripped length, solder shape and insulation require physical confirmation."
+    },
+    {
+      "id": "authored-header-wire-tip-10",
+      "pair": [
+        "electronics/harness.blend::公共接地 · GND 引线.002",
+        "electronics/esp32-mount.blend::Header pin.170"
+      ],
+      "regionBlender": {
+        "min": [
+          -21.680019619722366,
+          -2.980020048875809,
+          16.899979618530274
+        ],
+        "max": [
+          -21.11997961733818,
+          -2.419980046491623,
+          17.00002
+        ]
+      },
+      "maximumPenetrationMm": 0.10002,
+      "reason": "The original source polyline explicitly ends on this single header pin axis at Z=16.90 mm, 0.10 mm below its tip. This bounded joint represents the nominal stripped/soldered endpoint only; neighbouring pin crossings are not connections and are never exempted.",
+      "authoredEndpointBlender": [
+        -21.399999618530273,
+        -2.700000047683716,
+        16.899999618530273
+      ],
+      "nominalTipInsertionMm": 0.1,
+      "scope": "Source mechanical endpoint occupancy; actual GPIO marking, stripped length, solder shape and insulation require physical confirmation."
+    }
+  ],
+  "scope": [
+    "Exact named source interfaces only, with source hashes and bounded local regions.",
+    "The plastic connector model represents preassembled retained metal inserts. This is a declared nominal internal interface, not a general permission for metal/plastic interpenetration.",
+    "USB shell/PCB overlap is not accepted without an explicit seat/cutout definition.",
+    "Wire endpoint locations come from the original authored polyline and the documented zero-displacement cap repair, not from guessing which pin a crossing touches.",
+    "Nominal geometry does not establish electrical pin identity, solder quality, material strength or insulation clearances."
+  ]
+}

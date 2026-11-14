@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { createHash } from "node:crypto";
+import type { AssemblyEvidenceResult } from "../src/assemblyEvidence";
 import { bayonetDemoProject, makePart } from "../src/catalog";
 import {
   dispatchWorkbenchCommand,
@@ -12,6 +13,8 @@ import type {
   Project,
   Mechanism,
   MechanismStates,
+  Part,
+  Vec3,
 } from "../src/types";
 const context = { revision: 3, components: [], assets: [] };
 function component(triangles = 1): ComponentDefinition {
@@ -129,6 +132,209 @@ function pressFixture(): { project: Project; mechanism: Mechanism } {
   };
 }
 describe("MCP commands share the active workbench rules", () => {
+  it("refuses actuation against matched failed source geometry without changing the current state", async () => {
+    const fixture = pressFixture();
+    const project = { ...fixture.project, mechanisms: [fixture.mechanism] };
+    const states = {
+      [fixture.mechanism.id]: { displacement: 0.2, velocity: 0, force: 0 },
+    };
+    const before = JSON.stringify({ project, states });
+    const evidence: AssemblyEvidenceResult = {
+      status: "fail",
+      matched: true,
+      scope: "Verified source overlap",
+      issues: [
+        {
+          id: "source-collision",
+          severity: "error",
+          category: "geometry",
+          title: "Source overlap",
+          detail: "Striker intersects a fixed wall",
+          partIds: fixture.mechanism.partIds,
+        },
+      ],
+      stateRanges: {},
+      sampled: false,
+    };
+    await expect(
+      dispatchWorkbenchCommand(
+        project,
+        {
+          method: "press_mechanism",
+          args: {
+            expectedRevision: 3,
+            mechanismId: fixture.mechanism.id,
+            held: true,
+            duration: 0.5,
+          },
+        },
+        { ...context, mechanismStates: states, sourceEvidence: evidence },
+      ),
+    ).rejects.toThrow("源几何验证已确认不通过");
+    expect(JSON.stringify({ project, states })).toBe(before);
+  });
+  it("reports trusted source evidence without accepting caller-injected pass claims", async () => {
+    const evidence: AssemblyEvidenceResult = {
+      status: "unknown",
+      matched: false,
+      scope: "Unverified source geometry",
+      issues: [
+        {
+          id: "source-unverified",
+          severity: "warning",
+          category: "geometry",
+          title: "Not certified",
+          detail: "Missing source coverage",
+          partIds: [],
+        },
+      ],
+      stateRanges: {},
+      sampled: true,
+    };
+    const result = await dispatchWorkbenchCommand(
+      bayonetDemoProject(),
+      { method: "validate_project" },
+      { ...context, sourceEvidence: evidence },
+    );
+    expect(result.result.sourceEvidence).toEqual(evidence);
+    expect(result.result.issues).toEqual(
+      expect.arrayContaining([evidence.issues[0]]),
+    );
+    expect(result.result.scope).toContain(evidence.scope);
+    await expect(
+      dispatchWorkbenchCommand(
+        bayonetDemoProject(),
+        {
+          method: "validate_project",
+          args: { sourceEvidence: { status: "pass" } },
+        },
+        context,
+      ),
+    ).rejects.toThrow("不支持");
+    const fixture = pressFixture();
+    const certified: AssemblyEvidenceResult = {
+      status: "pass",
+      matched: true,
+      scope: "Bounded source stroke",
+      issues: [],
+      stateRanges: {
+        [fixture.mechanism.id]: {
+          min: 0,
+          max: 0.5,
+          partIds: fixture.mechanism.partIds,
+        },
+      },
+      sampled: false,
+    };
+    const pressed = await dispatchWorkbenchCommand(
+      { ...fixture.project, mechanisms: [fixture.mechanism] },
+      {
+        method: "press_mechanism",
+        args: {
+          expectedRevision: 3,
+          mechanismId: fixture.mechanism.id,
+          held: true,
+          duration: 0.5,
+        },
+      },
+      { ...context, sourceEvidence: certified },
+    );
+    expect(
+      (pressed.result.sourceEvidence as AssemblyEvidenceResult).status,
+    ).toBe("unknown");
+  });
+  it("hides display geometry without removing its collision protection", async () => {
+    const moving = {
+      ...makePart("base", [0, 1, 0]),
+      size: [2, 2, 2] as [number, number, number],
+      fixed: false,
+    };
+    const obstacle = {
+      ...makePart("base", [10, 1, 0]),
+      size: [2, 2, 2] as [number, number, number],
+    };
+    const project: Project = {
+      version: 1,
+      name: "Hidden obstacle",
+      parts: [moving, obstacle],
+      wires: [],
+    };
+    const hidden = await dispatchWorkbenchCommand(
+      project,
+      {
+        method: "configure_part",
+        args: { expectedRevision: 3, partId: obstacle.id, visible: false },
+      },
+      context,
+    );
+    expect(hidden.project!.parts[1].visible).toBe(false);
+    expect(hidden.project!.parts[1].fixed).toBe(true);
+    await expect(
+      dispatchWorkbenchCommand(
+        hidden.project!,
+        {
+          method: "transform_part",
+          args: {
+            expectedRevision: 4,
+            partId: moving.id,
+            position: [20, 1, 0],
+          },
+        },
+        { ...context, revision: 4 },
+      ),
+    ).rejects.toThrow("受阻");
+  });
+  it("starts an empty active project and imports portable data through the strict parser", async () => {
+    const original = bayonetDemoProject();
+    const before = JSON.stringify(original);
+    const empty = await dispatchWorkbenchCommand(
+      original,
+      {
+        method: "new_project",
+        args: { expectedRevision: 3, name: "pureTV inspection" },
+      },
+      context,
+    );
+    expect(empty.project).toEqual({
+      version: 1,
+      name: "pureTV inspection",
+      parts: [],
+      wires: [],
+    });
+    expect(empty.result.revision).toBe(4);
+    const imported = await dispatchWorkbenchCommand(
+      empty.project!,
+      {
+        method: "import_project",
+        args: { expectedRevision: 4, project: original },
+      },
+      { ...context, revision: 4 },
+    );
+    expect(imported.project).toEqual(original);
+    expect(imported.result.revision).toBe(5);
+    const malformed = {
+      ...original,
+      wires: [
+        {
+          id: "dangling",
+          from: { partId: "missing", terminal: 0 },
+          to: { partId: original.parts[0].id, terminal: 1 },
+          color: "#112233",
+        },
+      ],
+    };
+    await expect(
+      dispatchWorkbenchCommand(
+        original,
+        {
+          method: "import_project",
+          args: { expectedRevision: 3, project: malformed },
+        },
+        context,
+      ),
+    ).rejects.toThrow();
+    expect(JSON.stringify(original)).toBe(before);
+  });
   it("rejects an external edit that would collide when the press simulation resets", async () => {
     const fixture = pressFixture();
     const external = {
@@ -160,16 +366,40 @@ describe("MCP commands share the active workbench rules", () => {
     ).rejects.toThrow("受阻");
     expect(project.parts.at(-1)!.position).toEqual([105, 15.5, 0]);
   });
-  it("wires a declared fixed switch member and validates the live compound circuit", async () => {
+  it("wires the fixed electrical body while MCP actuates its separate contact plunger", async () => {
     const fixture = pressFixture();
+    const targetPartId = fixture.mechanism.switchPartId!;
+    const body = {
+      ...makePart("base", [100, 9, 0]),
+      id: "electrical-switch-body",
+      size: [4, 2, 4] as Vec3,
+      fixed: true,
+    };
+    fixture.project.parts.push(body);
+    fixture.mechanism.partIds.push(body.id);
+    fixture.mechanism.switchPartId = body.id;
+    fixture.mechanism.contact!.targetPartId = targetPartId;
+    fixture.mechanism.contact!.actuatorPartIds = [targetPartId];
+    fixture.mechanism.params.travel = 2.2;
+    fixture.mechanism.fixedProxy.size = [8, 10, 8];
     const battery = makePart("battery", [140, 8, 0]),
       lamp = makePart("lamp", [170, 8, 0]);
     let project: Project = {
       ...fixture.project,
       parts: [...fixture.project.parts, battery, lamp],
-      mechanisms: [fixture.mechanism],
     };
     let revision = 3;
+    const configured = await dispatchWorkbenchCommand(
+      project,
+      {
+        method: "configure_mechanism",
+        args: { expectedRevision: revision, mechanism: fixture.mechanism },
+      },
+      { ...context, revision },
+    );
+    project = configured.project!;
+    revision++;
+    expect(project.mechanisms![0].contact!.targetPartId).toBe(targetPartId);
     const contact = fixture.mechanism.switchPartId!;
     for (const [from, to] of [
       [
@@ -250,6 +480,15 @@ describe("MCP commands share the active workbench rules", () => {
         fixture.mechanism.id
       ].pressed,
     ).toBe(true);
+    expect(
+      (pressed.result.members as Part[]).find((part) => part.id === body.id)!
+        .position,
+    ).toEqual(body.position);
+    expect(
+      (pressed.result.members as Part[]).find(
+        (part) => part.id === targetPartId,
+      )!.position[1],
+    ).toBeCloseTo(11.3);
     const validation = await dispatchWorkbenchCommand(
       project,
       { method: "validate_project" },

@@ -50,6 +50,7 @@ import RepositoryBrowser from "./components/RepositoryBrowser";
 import AssemblyTree from "./components/AssemblyTree";
 import MechanismEditor from "./components/MechanismEditor";
 import MechanismControls from "./components/MechanismControls";
+import PressBench from "./components/PressBench";
 import type { MechanismTransformRequest } from "./components/MechanismControls";
 import {
   mechanismScene,
@@ -62,6 +63,9 @@ import {
   validateMechanismUpdate,
 } from "./mechanisms";
 import { createRepositoryParts } from "./repository";
+import { projectSourceEvidence, withSourceEvidence } from "./projectEvidence";
+import { validateEvidenceState } from "./assemblyEvidence";
+import type { AssemblyEvidenceResult } from "./assemblyEvidence";
 import {
   componentTypeLabel,
   componentPartIssues,
@@ -271,6 +275,7 @@ export default function App() {
   );
   const [grid, setGrid] = useState(true);
   const [xray, setXray] = useState(false);
+  const [inspectInterior, setInspectInterior] = useState(false);
   const [exploded, setExploded] = useState(false);
   const [resetKey, setResetKey] = useState(0);
   const [category, setCategory] = useState<Category>("all");
@@ -283,6 +288,7 @@ export default function App() {
   const [moveStep, setMoveStep] = useState(1);
   const [rotateStep, setRotateStep] = useState(15);
   const [running, setRunning] = useState(false);
+  const [verifying, setVerifying] = useState(false);
   const [heldId, setHeldId] = useState<string | null>(null);
   const [springStates, setSpringStates] = useState<Record<string, SpringState>>(
     {},
@@ -297,6 +303,17 @@ export default function App() {
   const [report, setReport] = useState<{ issues: Issue[]; at: string } | null>(
     null,
   );
+  const [sourceEvidence, setSourceEvidence] = useState<{
+    project: Project;
+    result: AssemblyEvidenceResult | null;
+  } | null>(null);
+  useEffect(() => {
+    let cancelled = false;
+    void projectSourceEvidence(project).then((result) => {
+      if (!cancelled) setSourceEvidence({ project, result });
+    });
+    return () => { cancelled = true; };
+  }, [project]);
   const [bottomOpen, setBottomOpen] = useState(true);
   const [bottomTab, setBottomTab] = useState<"checks" | "wires">("checks");
   const [wireFrom, setWireFrom] = useState("");
@@ -448,6 +465,7 @@ export default function App() {
     if (!readyRef.current && request.method !== "get_runtime_status")
       throw Error("工作台尚未恢复完成，请稍后重试。");
     const originalRevision = revisionRef.current;
+    const requestProject = projectRef.current;
     const canvas = document.querySelector<HTMLCanvasElement>("canvas");
     if (
       request.method === "get_runtime_status" &&
@@ -465,26 +483,45 @@ export default function App() {
       request.method === "get_runtime_status"
         ? await (assetHealth.current ?? Promise.resolve(""))
         : undefined;
+    const evidence = ["validate_project", "get_runtime_status", "press_mechanism"].includes(request.method)
+      ? await projectSourceEvidence(requestProject)
+      : null;
+    if (revisionRef.current !== originalRevision)
+      throw Error(`项目已变化：当前revision=${revisionRef.current}，请重新获取后重试。`);
+    // Animation may advance during static evidence loading without changing the project revision.
+    const requestStates = mechanismSimulationRef.current;
+    const currentEvidence = evidence ? validateEvidenceState(evidence, requestStates) : null;
+    const webglContext = canvas?.getContext("webgl2");
     const runtime = {
       ready: readyRef.current && libraryReadyRef.current,
       modelMagic,
       glbAssetAvailable: modelMagic === "glTF",
       isolated: !("require" in window) && !("process" in window),
-      webgl: Boolean(canvas?.getContext("webgl2")),
+      webgl: Boolean(webglContext && !webglContext.isContextLost()),
       canvasSize: [canvas?.width ?? 0, canvas?.height ?? 0],
       catalogCount: assetsRef.current.length,
       documentTitle: document.title,
       rendererErrors: rendererErrors.current,
       desktop: isDesktop(),
-      mechanismStates: mechanismSimulationRef.current,
+      mechanismStates: requestStates,
+      sourceEvidence: currentEvidence ? {
+        status: currentEvidence.status,
+        matched: currentEvidence.matched,
+        scope: currentEvidence.scope,
+      } : null,
       mechanismContacts: mechanismScene(
-        projectRef.current,
-        mechanismSimulationRef.current,
+        requestProject,
+        requestStates,
       ).contacts,
       renderedPositions: JSON.parse(
         document
           .querySelector('[data-testid="viewport"]')
           ?.getAttribute("data-rendered-positions") ?? "{}",
+      ),
+      renderedDeformations: JSON.parse(
+        document
+          .querySelector('[data-testid="viewport"]')
+          ?.getAttribute("data-rendered-deformations") ?? "{}",
       ),
       loadedAssetCount: Number(
         document
@@ -498,20 +535,18 @@ export default function App() {
       ),
     };
     const outcome = await dispatchWorkbenchCommand(
-      projectRef.current,
+      requestProject,
       request,
       {
         revision: originalRevision,
         components: userComponentsRef.current,
         assets: assetsRef.current,
         runtime,
-        mechanismStates: mechanismSimulationRef.current,
+        mechanismStates: requestStates,
+        sourceEvidence: currentEvidence,
       },
     );
-    if (
-      (outcome.project || outcome.component || outcome.mechanismStates) &&
-      revisionRef.current !== originalRevision
-    )
+    if (revisionRef.current !== originalRevision)
       throw Error(
         `项目已变化：当前revision=${revisionRef.current}，请重新获取后重试。`,
       );
@@ -823,8 +858,14 @@ export default function App() {
     () => solveCircuit(functionalScene.circuitParts, project.wires, pressedIds),
     [functionalScene.circuitParts, project.wires, pressedIds],
   );
+  const liveSourceEvidence = useMemo(
+    () => sourceEvidence?.project === project && sourceEvidence.result
+      ? validateEvidenceState(sourceEvidence.result, mechanismStates)
+      : null,
+    [sourceEvidence, project, mechanismStates],
+  );
   const liveIssues = useMemo(
-    () => [
+    () => withSourceEvidence([
       ...validation.issues,
       ...circuit.issues,
       ...(project.wires.length
@@ -840,8 +881,8 @@ export default function App() {
             },
           ]
         : []),
-    ],
-    [validation, circuit, project.wires.length],
+    ], liveSourceEvidence),
+    [validation, circuit, project.wires.length, liveSourceEvidence],
   );
   const issues = report?.issues ?? liveIssues;
   const errors = issues.filter((i) => i.severity === "error").length;
@@ -1034,6 +1075,24 @@ export default function App() {
       );
     } catch (err) {
       notify((err as Error).message);
+    }
+  }
+  async function loadVerifiedController() {
+    try {
+      const response = await fetch("./models/puretv-verified-assembly.json");
+      if (!response.ok) throw Error("pureTV 试验工程资源不可用。");
+      const next = parseProject(await response.text());
+      commit(next);
+      setSelectedId(null);
+      setSelectedMechanismId(next.mechanisms?.[0]?.id ?? null);
+      setLeftTab("assembly");
+      setInspectInterior(false);
+      setXray(false);
+      setView("perspective");
+      setResetKey((key) => key + 1);
+      notify("已载入 pureTV 九键手柄与指示灯；开始仿真后可在按键试验台按压，内部检视保留所有碰撞检查。");
+    } catch (error) {
+      notify((error as Error).message);
     }
   }
   function splitAsset() {
@@ -1261,139 +1320,156 @@ export default function App() {
     setWireTo("");
     notify("导线已连接，电路已重新计算。");
   }
-  function verify() {
-    const all = [...liveIssues];
-    const triggeredSwitches = new Set<string>();
-    for (const p of project.parts.filter(
-      (p) =>
-        (p.kind === "spring" || p.kind === "button") &&
-        !partMechanism(project, p.id) &&
-        !componentPartIssues(p).some((i) => i.severity === "error"),
-    )) {
-      let state = { displacement: 0, velocity: 0, force: 0 };
-      let peak = 0;
-      const params = {
-        stiffness: Number(p.params.stiffness ?? 0.8),
-        damping: Number(p.params.damping ?? 1.2),
-        mass: Number(p.params.mass ?? 0.03),
-        travel: Number(p.params.travel ?? 1),
-        force: 0,
-      };
-      for (let i = 0; i < 1200; i++) {
-        state = stepSpring(state, 1 / 240, {
-          ...params,
-          force: i < 240 ? params.stiffness * params.travel * 1.1 : 0,
+  async function verify() {
+    if (verifying) return;
+    const originalRevision = revisionRef.current;
+    setVerifying(true);
+    const yieldForInput = async () => {
+      await new Promise<void>((resolve) => setTimeout(resolve, 0));
+      if (revisionRef.current !== originalRevision)
+        throw Error("验证期间工程已修改，请重新运行验证。");
+    };
+    try {
+      await yieldForInput();
+      const all = [...liveIssues];
+      const configurationIssues = mechanismIssues(project);
+      const triggeredSwitches = new Set<string>();
+      for (const p of project.parts.filter(
+        (p) =>
+          (p.kind === "spring" || p.kind === "button") &&
+          !partMechanism(project, p.id) &&
+          !componentPartIssues(p).some((i) => i.severity === "error"),
+      )) {
+        let state = { displacement: 0, velocity: 0, force: 0 };
+        let peak = 0;
+        const params = {
+          stiffness: Number(p.params.stiffness ?? 0.8),
+          damping: Number(p.params.damping ?? 1.2),
+          mass: Number(p.params.mass ?? 0.03),
+          travel: Number(p.params.travel ?? 1),
+          force: 0,
+        };
+        for (let i = 0; i < 1200; i++) {
+          state = stepSpring(state, 1 / 240, {
+            ...params,
+            force: i < 240 ? params.stiffness * params.travel * 1.1 : 0,
+          });
+          peak = Math.max(peak, state.displacement);
+        }
+        const passed =
+          Math.abs(state.displacement) < 0.01 &&
+          Math.abs(state.velocity) < 0.01 &&
+          (p.kind !== "button" || peak >= Number(p.params.trigger ?? 0.6));
+        if (p.kind === "button" && passed) triggeredSwitches.add(p.id);
+        all.push({
+          id: `cycle-${p.id}`,
+          category: "physics",
+          severity: passed ? "pass" : "error",
+          title: `${p.name} · 按压与回弹`,
+          detail: `5 s 数值试验；最大压缩 ${peak.toFixed(3)} mm，释放后残余 ${state.displacement.toFixed(4)} mm。采用名义刚度及阻尼，尚需实测。`,
+          partIds: [p.id],
         });
-        peak = Math.max(peak, state.displacement);
       }
-      const passed =
-        Math.abs(state.displacement) < 0.01 &&
-        Math.abs(state.velocity) < 0.01 &&
-        (p.kind !== "button" || peak >= Number(p.params.trigger ?? 0.6));
-      if (p.kind === "button" && passed) triggeredSwitches.add(p.id);
-      all.push({
-        id: `cycle-${p.id}`,
-        category: "physics",
-        severity: passed ? "pass" : "error",
-        title: `${p.name} · 按压与回弹`,
-        detail: `5 s 数值试验；最大压缩 ${peak.toFixed(3)} mm，释放后残余 ${state.displacement.toFixed(4)} mm。采用名义刚度及阻尼，尚需实测。`,
-        partIds: [p.id],
-      });
-    }
-    for (const mechanism of project.mechanisms ?? []) {
-      if (
-        mechanism.kind !== "press" ||
-        mechanism.status !== "configured" ||
-        mechanismIssues(project).some(
-          (i) =>
-            i.severity === "error" &&
-            i.partIds.some((id) => mechanism.partIds.includes(id)),
-        )
-      )
-        continue;
-      let states: Record<string, SpringState> = {};
-      let peak = 0;
-      let didTrigger = !mechanism.switchPartId;
-      let blocked = false;
-      for (let i = 0; i < 600; i++) {
-        const trial = stepMechanisms(
-          project,
-          states,
-          1 / 120,
-          i < 120 ? [mechanism.id] : [],
-        );
-        states = trial.states;
+      for (const mechanism of project.mechanisms ?? []) {
         if (
-          mechanism.switchPartId &&
-          mechanismScene(project, states).pressedIds.includes(
-            mechanism.switchPartId,
+          mechanism.kind !== "press" ||
+          mechanism.status !== "configured" ||
+          configurationIssues.some(
+            (i) =>
+              i.severity === "error" &&
+              i.partIds.some((id) => mechanism.partIds.includes(id)),
           )
         )
-          didTrigger = true;
-        peak = Math.max(peak, states[mechanism.id]?.displacement ?? 0);
-        if (trial.issues.some((i) => i.severity === "error")) {
-          blocked = true;
-          break;
+          continue;
+        let states: Record<string, SpringState> = {};
+        let peak = 0;
+        let didTrigger = !mechanism.switchPartId;
+        let blocked = false;
+        for (let i = 0; i < 600; i++) {
+          if (i % 30 === 0) await yieldForInput();
+          const trial = stepMechanisms(
+            project,
+            states,
+            1 / 120,
+            i < 120 ? [mechanism.id] : [],
+          );
+          states = trial.states;
+          if (
+            mechanism.switchPartId &&
+            mechanismScene(project, states).pressedIds.includes(
+              mechanism.switchPartId,
+            )
+          )
+            didTrigger = true;
+          peak = Math.max(peak, states[mechanism.id]?.displacement ?? 0);
+          if (trial.issues.some((i) => i.severity === "error")) {
+            blocked = true;
+            break;
+          }
         }
+        const final = states[mechanism.id] ?? {
+          displacement: 0,
+          velocity: 0,
+          force: 0,
+        };
+        const passed =
+          !blocked &&
+          peak > 0 &&
+          didTrigger &&
+          Math.abs(final.displacement) < 0.01 &&
+          Math.abs(final.velocity) < 0.01;
+        if (passed && mechanism.switchPartId)
+          triggeredSwitches.add(mechanism.switchPartId);
+        all.push({
+          id: `mechanism-cycle-${mechanism.id}`,
+          category: "physics",
+          severity: passed ? "pass" : "error",
+          title: `${mechanism.name} · 组件按压与回弹`,
+          detail: `活动子件随声明轴运动；最大压缩 ${peak.toFixed(3)} mm，释放后残余 ${final.displacement.toFixed(4)} mm。${mechanism.switchPartId ? (didTrigger ? "撞针已触及目标并触发开关。" : "撞针未到达有效触发点。") : ""}${blocked ? "行程中发生代理干涉。" : "仍需实物校正刚度、阻尼及接触。"}`,
+          partIds: mechanism.partIds,
+        });
       }
-      const final = states[mechanism.id] ?? {
-        displacement: 0,
-        velocity: 0,
-        force: 0,
-      };
-      const passed =
-        !blocked &&
-        peak > 0 &&
-        didTrigger &&
-        Math.abs(final.displacement) < 0.01 &&
-        Math.abs(final.velocity) < 0.01;
-      if (passed && mechanism.switchPartId)
-        triggeredSwitches.add(mechanism.switchPartId);
-      all.push({
-        id: `mechanism-cycle-${mechanism.id}`,
-        category: "physics",
-        severity: passed ? "pass" : "error",
-        title: `${mechanism.name} · 组件按压与回弹`,
-        detail: `活动子件随声明轴运动；最大压缩 ${peak.toFixed(3)} mm，释放后残余 ${final.displacement.toFixed(4)} mm。${mechanism.switchPartId ? (didTrigger ? "撞针已触及目标并触发开关。" : "撞针未到达有效触发点。") : ""}${blocked ? "行程中发生代理干涉。" : "仍需实物校正刚度、阻尼及接触。"}`,
-        partIds: mechanism.partIds,
-      });
+      const switches = [...triggeredSwitches];
+      if (switches.length) {
+        const closed = solveCircuit(
+          functionalScene.circuitParts,
+          project.wires,
+          switches,
+        );
+        all.push(
+          ...closed.issues
+            .filter((i) => i.severity === "error")
+            .map((i) => ({
+              ...i,
+              id: `closed-${i.id}`,
+              title: `闭合态 · ${i.title}`,
+            })),
+        );
+        all.push({
+          id: "closed-test",
+          category: "circuit",
+          severity: closed.shortCircuit
+            ? "error"
+            : closed.poweredLampIds.length
+              ? "pass"
+              : "warning",
+          title: "按压触发后的电路",
+          detail: closed.shortCircuit
+            ? "开关闭合后存在电源短路。"
+            : `闭合所有按压开关后，${closed.poweredLampIds.length} 个灯获得供电，电流 ${(closed.current * 1000).toFixed(2)} mA。`,
+          partIds: closed.poweredLampIds,
+        });
+      }
+      setReport({ issues: all, at: new Date().toISOString() });
+      setBottomOpen(true);
+      setBottomTab("checks");
+      setNav("仿真验证");
+      notify("验证完成，查看下方逐项结果；报告包含模型精度限制。");
+    } catch (error) {
+      notify(error instanceof Error ? error.message : String(error));
+    } finally {
+      setVerifying(false);
     }
-    const switches = [...triggeredSwitches];
-    if (switches.length) {
-      const closed = solveCircuit(
-        functionalScene.circuitParts,
-        project.wires,
-        switches,
-      );
-      all.push(
-        ...closed.issues
-          .filter((i) => i.severity === "error")
-          .map((i) => ({
-            ...i,
-            id: `closed-${i.id}`,
-            title: `闭合态 · ${i.title}`,
-          })),
-      );
-      all.push({
-        id: "closed-test",
-        category: "circuit",
-        severity: closed.shortCircuit
-          ? "error"
-          : closed.poweredLampIds.length
-            ? "pass"
-            : "warning",
-        title: "按压触发后的电路",
-        detail: closed.shortCircuit
-          ? "开关闭合后存在电源短路。"
-          : `闭合所有按压开关后，${closed.poweredLampIds.length} 个灯获得供电，电流 ${(closed.current * 1000).toFixed(2)} mA。`,
-        partIds: closed.poweredLampIds,
-      });
-    }
-    setReport({ issues: all, at: new Date().toISOString() });
-    setBottomOpen(true);
-    setBottomTab("checks");
-    setNav("仿真验证");
-    notify("验证完成，查看下方逐项结果；报告包含模型精度限制。");
   }
   const electrical = functionalScene.circuitParts.filter((p) =>
     ["battery", "button", "lamp", "resistor"].includes(p.kind),
@@ -1495,9 +1571,9 @@ export default function App() {
             保存项目
           </button>
           <i />
-          <button className="verify-button" onClick={verify}>
+          <button className="verify-button" onClick={() => void verify()} disabled={verifying}>
             <CheckCircle2 size={15} />
-            运行验证
+            {verifying ? "正在验证…" : "运行验证"}
           </button>
           <button
             className={`primary ${running ? "running" : ""}`}
@@ -1564,6 +1640,13 @@ export default function App() {
           >
             <Link2 size={14} />
             组成功能组件<small>按压 / 榫卯</small>
+          </button>
+          <button
+            className="puretv-demo-button"
+            onClick={() => void loadVerifiedController()}
+          >
+            <CircleDot size={15} />
+            pureTV 九键试验<small>手柄 / 指示灯</small>
           </button>
           {leftTab === "library" ? (
             <>
@@ -1756,6 +1839,20 @@ export default function App() {
                 <Layers3 size={15} />
                 <strong>{project.name}</strong>
               </div>
+              <PressBench
+                mechanisms={project.mechanisms ?? []}
+                contacts={functionalScene.contacts}
+                states={mechanismStates}
+                poweredLampIds={circuit.poweredLampIds}
+                heldId={heldMechanismId}
+                disabled={!running || exploded}
+                onPress={setHeldMechanismId}
+                onRelease={() => setHeldMechanismId(null)}
+                onSelect={(id) => {
+                  setSelectedMechanismId(id);
+                  setSelectedId(null);
+                }}
+              />
               <AssemblyTree
                 parts={project.parts}
                 selectedId={selectedId}
@@ -1820,6 +1917,20 @@ export default function App() {
               <Redo2 size={16} />
             </button>
             <div className="toolbar-spacer" />
+            {project.parts.some((part) =>
+              /^\.\/models\/housing-(top|bottom)\.glb$/.test(
+                String(part.params.assetUrl ?? ""),
+              ),
+            ) && (
+              <button
+                title="内部检视：仅隐藏外壳，保留全部碰撞检查"
+                aria-pressed={inspectInterior}
+                className={inspectInterior ? "toggled" : ""}
+                onClick={() => setInspectInterior(!inspectInterior)}
+              >
+                <Box size={16} /> 内部
+              </button>
+            )}
             <button
               title="网格"
               className={grid ? "toggled" : ""}
@@ -1864,7 +1975,15 @@ export default function App() {
           <div className="viewport-wrap">
             <Viewport
               models={project.models}
-              parts={renderedParts}
+              parts={inspectInterior
+                ? renderedParts.map((part) =>
+                    /^\.\/models\/housing-(top|bottom)\.glb$/.test(
+                      String(part.params.assetUrl ?? ""),
+                    )
+                      ? { ...part, visible: false }
+                      : part,
+                  )
+                : renderedParts}
               wires={project.wires}
               selectedId={selectedId}
               onSelect={selectPart}
@@ -1904,6 +2023,24 @@ export default function App() {
               <span className="scene-label-divider" />
               mm
             </div>
+            {liveSourceEvidence && (
+              <button
+                className={`source-evidence-badge ${liveSourceEvidence.status}`}
+                data-testid="source-evidence-status"
+                data-status={liveSourceEvidence.status}
+                title={liveSourceEvidence.scope}
+                onClick={() => {
+                  setBottomTab("checks");
+                  setBottomOpen(true);
+                }}
+              >
+                {liveSourceEvidence.status === "pass"
+                  ? "源尺寸已核对 · 采样行程"
+                  : liveSourceEvidence.status === "fail"
+                    ? "源尺寸检查未通过"
+                    : "源尺寸需重新验证"}
+              </button>
+            )}
             <div className="view-corner">
               <span>Y</span>
               <div className="axis-widget">
@@ -1997,7 +2134,8 @@ export default function App() {
                       generatedAt: report.at,
                       units: "mm, N, s, V, A",
                       method:
-                        "复合体 SAT / 离散路径采样 / 线性弹簧 / 电阻网络；复杂网格仅保守预检，未进行制造认证",
+                        "复合体 SAT / 离散路径采样 / 线性弹簧 / 电阻网络；源网格检查仅适用于所附证据完全匹配的构型和行程，未进行制造认证",
+                      sourceEvidence: liveSourceEvidence,
                       issues: report.issues,
                     })
                   }
@@ -2104,7 +2242,7 @@ export default function App() {
             <MechanismControls
               mechanism={selectedMechanism}
               parts={project.parts}
-              issues={mechanismIssues(project).filter((i) =>
+              issues={withSourceEvidence(mechanismIssues(project), liveSourceEvidence).filter((i) =>
                 i.partIds.some((id) => selectedMechanism.partIds.includes(id)),
               )}
               running={running}

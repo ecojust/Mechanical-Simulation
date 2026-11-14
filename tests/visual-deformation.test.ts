@@ -39,7 +39,9 @@ describe("visual deformation of assembled mechanisms", () => {
     );
   });
   it("compresses an arbitrary axis and leaves both perpendicular directions unchanged", () => {
-    const matrix = deformationMatrix({ axis: [0.6, 0.8, 0], ratio: 0.3 });
+    const actualWrapper = new THREE.Group();
+    applyVisualDeformation(actualWrapper, { axis: [0.6, 0.8, 0], ratio: 0.3 });
+    const matrix = actualWrapper.matrix;
     expectVector(
       new THREE.Vector3(6, 8, 0).applyMatrix4(matrix),
       [1.8, 2.4, 0],

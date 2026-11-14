@@ -151,8 +151,359 @@ function matingProject(): Project {
     mechanisms: [mechanism],
   };
 }
+function actuatorProject(): Project {
+  const project = pressProject();
+  const m = project.mechanisms![0];
+  m.params.travel = 0.85;
+  m.contact!.maxOvertravel = 0.25;
+  m.contact!.actuatorPartIds = ["contact"];
+  return project;
+}
+function separateSwitchProject(): Project {
+  const project = actuatorProject();
+  const body = visual("switch-body", "asset", [0, 17, 0], [6, 2, 6]);
+  body.fixed = true;
+  body.rotation = [0, 0, 90];
+  project.parts.push(body);
+  const mechanism = project.mechanisms![0];
+  mechanism.partIds.push(body.id);
+  mechanism.switchPartId = body.id;
+  mechanism.contact!.targetPartId = "contact";
+  return project;
+}
 
 describe("compound functional mechanisms", () => {
+  it("keeps the wired electrical body fixed while its separate trigger plunger follows contact and returns", () => {
+    const project = separateSwitchProject();
+    const battery = makePart("battery", [30, 10, 0]);
+    const lamp = makePart("lamp", [50, 10, 0]);
+    project.parts.push(battery, lamp);
+    project.wires = [
+      {
+        id: "body-in",
+        from: { partId: battery.id, terminal: 0 },
+        to: { partId: "switch-body", terminal: 0 },
+        color: "#ff0000",
+      },
+      {
+        id: "body-out",
+        from: { partId: "switch-body", terminal: 1 },
+        to: { partId: lamp.id, terminal: 0 },
+        color: "#ff0000",
+      },
+      {
+        id: "body-return",
+        from: { partId: lamp.id, terminal: 1 },
+        to: { partId: battery.id, terminal: 1 },
+        color: "#000000",
+      },
+    ];
+    const original = structuredClone(project);
+    expect(
+      parseProject(JSON.stringify(project)).mechanisms![0].contact!
+        .targetPartId,
+    ).toBe("contact");
+    expect(
+      validateMechanismProject(project).issues.filter(
+        (entry) => entry.severity === "error",
+      ),
+    ).toEqual([]);
+    const open = mechanismScene(project);
+    expect(open.contacts.press.normalWorld).toEqual([0, 1, 0]);
+    expect(open.contacts.press.triggerTravel).toBeCloseTo(0.6);
+    expect(
+      solveCircuit(open.circuitParts, project.wires, open.pressedIds)
+        .poweredLampIds,
+    ).toEqual([]);
+    let states: MechanismStates = {};
+    for (let i = 0; i < 120; i++)
+      states = stepMechanisms(project, states, 1 / 240, ["press"]).states;
+    const closed = mechanismScene(project, states);
+    expect(
+      closed.renderParts.find((part) => part.id === "switch-body")!.position,
+    ).toEqual([0, 17, 0]);
+    expect(
+      closed.renderParts.find((part) => part.id === "contact")!.position[1],
+    ).toBeCloseTo(19.15);
+    expect(closed.contacts.press.surfaceGap).toBeCloseTo(0);
+    expect(closed.pressedIds).toEqual(["switch-body"]);
+    expect(
+      solveCircuit(closed.circuitParts, project.wires, closed.pressedIds)
+        .poweredLampIds,
+    ).toEqual([lamp.id]);
+    for (let i = 0; i < 240; i++)
+      states = stepMechanisms(project, states, 1 / 240, []).states;
+    const released = mechanismScene(project, states);
+    expect(
+      released.renderParts.find((part) => part.id === "switch-body")!.position,
+    ).toEqual([0, 17, 0]);
+    expect(
+      released.renderParts.find((part) => part.id === "contact")!.position,
+    ).toEqual([0, 19.4, 0]);
+    expect(
+      solveCircuit(released.circuitParts, project.wires, released.pressedIds)
+        .poweredLampIds,
+    ).toEqual([]);
+    expect(project).toEqual(original);
+  });
+  it("validates a separate target's fixed role, actuator membership and local contact envelope", () => {
+    for (const targetPartId of ["missing", "stem", "coil", 5, null]) {
+      const project = separateSwitchProject();
+      const mechanism = project.mechanisms![0];
+      expect(() =>
+        parseProject(
+          JSON.stringify({
+            ...project,
+            mechanisms: [
+              { ...mechanism, contact: { ...mechanism.contact, targetPartId } },
+            ],
+          }),
+        ),
+      ).toThrow();
+    }
+    const project = separateSwitchProject();
+    project.mechanisms![0].contact!.actuatorPartIds = ["switch-body"];
+    expect(() => parseProject(JSON.stringify(project))).toThrow("实际触发面");
+    project.mechanisms![0].contact!.actuatorPartIds = ["contact"];
+    project.mechanisms![0].contact!.switchPoint = [2, 0, 0];
+    expect(
+      mechanismDefinitionIssues(project.mechanisms![0], project.parts).some(
+        (entry) => entry.id.endsWith("contact-point"),
+      ),
+    ).toBe(true);
+  });
+  it("keeps an optional plunger still before contact, follows the striker by 0.25 mm and restores its rest pose", () => {
+    const project = actuatorProject();
+    const original = structuredClone(project);
+    expect(
+      mechanismDefinitionIssues(project.mechanisms![0], project.parts).filter(
+        (entry) => entry.severity === "error",
+      ),
+    ).toEqual([]);
+    for (const displacement of [0, 0.5, 0.6]) {
+      const scene = mechanismScene(project, {
+        press: { displacement, velocity: 0, force: 0 },
+      });
+      expect(
+        scene.renderParts.find((part) => part.id === "contact")!.position,
+      ).toEqual([0, 19.4, 0]);
+      expect(scene.contacts.press.actuatorTravel).toBeCloseTo(0);
+    }
+    const scene = mechanismScene(project, {
+      press: { displacement: 0.85, velocity: 0, force: 1 },
+    });
+    expect(
+      scene.renderParts.find((part) => part.id === "contact")!.position[1],
+    ).toBeCloseTo(19.15);
+    expect(
+      scene.renderParts.find((part) => part.id === "housing")!.position,
+    ).toEqual([0, 10, 0]);
+    expect(scene.contacts.press.actuatorTravel).toBeCloseTo(0.25);
+    expect(scene.contacts.press.overtravel).toBeCloseTo(0.25);
+    expect(scene.contacts.press.gap).toBeCloseTo(-0.25);
+    expect(scene.contacts.press.surfaceGap).toBeCloseTo(0);
+    expect(scene.contacts.press.switchWorld[1]).toBeCloseTo(20.15);
+    expect(scene.contacts.press.restSwitchWorld[1]).toBeCloseTo(20.4);
+    expect(scene.contacts.press.strikerWorld[1]).toBeCloseTo(
+      scene.contacts.press.switchWorld[1],
+    );
+    expect(scene.pressedIds).toEqual(["contact"]);
+    let states: MechanismStates = {
+      press: { displacement: 0.85, velocity: 0, force: 1 },
+    };
+    for (let step = 0; step < 120; step++)
+      states = stepMechanisms(project, states, 1 / 240, []).states;
+    expect(states.press.displacement).toBeLessThan(0.001);
+    expect(
+      mechanismScene(project, states).renderParts.find(
+        (part) => part.id === "contact",
+      )!.position,
+    ).toEqual([0, 19.4, 0]);
+    expect(mechanismScene(project, states).pressedIds).toEqual([]);
+    expect(
+      mechanismScene(project).renderParts.find((part) => part.id === "contact")!
+        .position,
+    ).toEqual([0, 19.4, 0]);
+    expect(project).toEqual(original);
+    expect(
+      parseProject(JSON.stringify(project)).mechanisms![0].contact!
+        .actuatorPartIds,
+    ).toEqual(["contact"]);
+  });
+  it("moves every declared plunger member along the rotated world axis without moving its fixed housing", () => {
+    const project = actuatorProject();
+    project.parts.push(
+      visual("plunger-guide", "asset", [1, 19.4, 0], [1, 1, 1]),
+    );
+    project.mechanisms![0].partIds.push("plunger-guide");
+    project.mechanisms![0].contact!.actuatorPartIds!.push("plunger-guide");
+    const moved = transformMechanismFrame(project, "press", {
+      position: [12, 40, 6],
+      rotation: [0, 0, 90],
+    });
+    expect(moved.allowed, JSON.stringify(moved.issues)).toBe(true);
+    const rest = mechanismScene(moved.project);
+    const pressed = mechanismScene(moved.project, {
+      press: { displacement: 0.85, velocity: 0, force: 1 },
+    });
+    for (const id of ["contact", "plunger-guide"]) {
+      const before = rest.renderParts.find((part) => part.id === id)!.position;
+      const after = pressed.renderParts.find(
+        (part) => part.id === id,
+      )!.position;
+      expect(after[0] - before[0]).toBeCloseTo(0.25);
+      expect(after[1] - before[1]).toBeCloseTo(0);
+      expect(after[2] - before[2]).toBeCloseTo(0);
+    }
+    expect(
+      pressed.renderParts.find((part) => part.id === "housing")!.position,
+    ).toEqual(rest.renderParts.find((part) => part.id === "housing")!.position);
+    expect(pressed.contacts.press.surfaceGap).toBeCloseTo(0);
+    expect(pressed.contacts.press.gap).toBeCloseTo(-0.25);
+  });
+  it("does not let the following contact plane hide excessive overtravel", () => {
+    const project = actuatorProject();
+    const contact = mechanismContact(project, project.mechanisms![0], {
+      press: { displacement: 0.9, velocity: 0, force: 1 },
+    })!;
+    expect(contact.overtravel).toBeCloseTo(0.3);
+    expect(contact.actuatorTravel).toBeCloseTo(0.25);
+    expect(contact.gap).toBeCloseTo(-0.3);
+    expect(contact.surfaceGap).toBeCloseTo(-0.05);
+    expect(contact.pressed).toBe(false);
+    const invalidState = mechanismScene(project, {
+      press: { displacement: 0.9, velocity: 0, force: 1 },
+    });
+    expect(
+      invalidState.issues.some(
+        (entry) => entry.id.endsWith("state") && entry.severity === "error",
+      ),
+    ).toBe(true);
+    expect(invalidState.pressedIds).toEqual([]);
+    project.mechanisms![0].params.travel = 0.9;
+    expect(
+      stepMechanisms(project, {}, 1 / 60, ["press"]).issues.some((entry) =>
+        entry.id.endsWith("contact-overtravel"),
+      ),
+    ).toBe(true);
+    expect(
+      mechanismScene(project, {
+        press: { displacement: 0.85, velocity: 0, force: 1 },
+      }).pressedIds,
+    ).toEqual([]);
+  });
+  it("validates plunger membership, uniqueness, switch ownership and fixed locks", () => {
+    for (const actuatorPartIds of [
+      [],
+      ["housing"],
+      ["contact", "stem"],
+      ["contact", "coil"],
+      ["contact", "contact"],
+      ["contact", "missing"],
+    ]) {
+      const project = actuatorProject();
+      project.mechanisms![0].contact!.actuatorPartIds = actuatorPartIds;
+      expect(() => parseProject(JSON.stringify(project))).toThrow();
+    }
+    const project = actuatorProject();
+    project.parts.find((part) => part.id === "contact")!.fixed = true;
+    expect(
+      stepMechanisms(project, {}, 1 / 60, ["press"]).issues.some((entry) =>
+        entry.id.endsWith("actuator-fixed"),
+      ),
+    ).toBe(true);
+  });
+  it("preserves the stationary contact surface when no plunger members are declared", () => {
+    const project = pressProject();
+    const scene = mechanismScene(project, {
+      press: { displacement: 1, velocity: 0, force: 1 },
+    });
+    expect(
+      scene.renderParts.find((part) => part.id === "contact")!.position,
+    ).toEqual([0, 19.4, 0]);
+    expect(scene.contacts.press.actuatorTravel).toBe(0);
+    expect(scene.contacts.press.switchWorld).toEqual(
+      scene.contacts.press.restSwitchWorld,
+    );
+    expect(scene.contacts.press.surfaceGap).toBeCloseTo(
+      scene.contacts.press.gap,
+    );
+    expect(scene.pressedIds).toEqual(["contact"]);
+  });
+  it("steps nine independent keys without driving idle plungers and rechecks mutations on the next call", () => {
+    const project: Project = {
+      version: 1,
+      name: "nine keys",
+      parts: [],
+      wires: [],
+      mechanisms: [],
+    };
+    for (let index = 0; index < 9; index++) {
+      const key = actuatorProject();
+      const id = (value: string) => `${value}-${index}`;
+      project.parts.push(
+        ...key.parts.map((part) => ({
+          ...part,
+          id: id(part.id),
+          position: [
+            part.position[0] + index * 30,
+            part.position[1],
+            part.position[2],
+          ] as Vec3,
+        })),
+      );
+      const m = key.mechanisms![0];
+      project.mechanisms!.push({
+        ...m,
+        id: id(m.id),
+        partIds: m.partIds.map(id),
+        movingPartIds: m.movingPartIds.map(id),
+        springPartIds: m.springPartIds.map(id),
+        switchPartId: id(m.switchPartId!),
+        frame: {
+          ...m.frame,
+          position: [
+            m.frame.position[0] + index * 30,
+            m.frame.position[1],
+            m.frame.position[2],
+          ],
+        },
+        contact: {
+          ...m.contact!,
+          strikerPartId: id(m.contact!.strikerPartId),
+          actuatorPartIds: m.contact!.actuatorPartIds!.map(id),
+        },
+      });
+    }
+    let states: MechanismStates = {};
+    for (let step = 0; step < 90; step++) {
+      const result = stepMechanisms(project, states, 1 / 240, ["press-4"]);
+      expect(result.issues).toEqual([]);
+      states = result.states;
+    }
+    expect(states["press-4"].displacement).toBeCloseTo(0.85);
+    for (let index = 0; index < 9; index++)
+      if (index !== 4) expect(states[`press-${index}`].displacement).toBe(0);
+    const scene = mechanismScene(project, states);
+    expect(
+      scene.renderParts.find((part) => part.id === "contact-4")!.position[1],
+    ).toBeCloseTo(19.15);
+    expect(
+      scene.renderParts.find((part) => part.id === "contact-3")!.position[1],
+    ).toBe(19.4);
+    project.mechanisms![0].params.mass = 0;
+    const afterEdit = stepMechanisms(project, states, 1 / 240, ["press-4"]);
+    expect(
+      afterEdit.issues.some((entry) => entry.id === "mechanism-press-0-mass"),
+    ).toBe(true);
+    project.mechanisms![0].params.mass = 0.02;
+    project.parts.find((part) => part.id === "contact-0")!.fixed = true;
+    expect(
+      stepMechanisms(project, states, 1 / 240, []).issues.some(
+        (entry) => entry.id === "mechanism-press-0-actuator-fixed",
+      ),
+    ).toBe(true);
+  });
   it("persists mechanism roles and permits its declared switch to own circuit terminals", () => {
     const project = pressProject();
     const lamp = makePart("lamp", [30, 10, 0]);

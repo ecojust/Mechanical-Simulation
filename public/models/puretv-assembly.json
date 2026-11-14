@@ -59,7 +59,7 @@
       "kind": "pin",
       "position": [
         -51.228842,
-        51.181902,
+        51.556902,
         -22
       ],
       "rotation": [
@@ -69,7 +69,7 @@
       ],
       "size": [
         12.311832,
-        13.032135,
+        12.282135,
         11.560001
       ],
       "color": "#92a9b6",
@@ -98,7 +98,7 @@
         ],
         "proxySize": [
           12.311832,
-          13.032135,
+          12.282135,
           11.560001
         ]
       }
@@ -205,42 +205,11 @@
     },
     {
       "id": "puretv-buttons-left-5",
-      "name": "左 · PS5 弹簧定位环.004",
-      "kind": "asset",
-      "position": [
-        -51.200001,
-        47.719974,
-        -22
-      ],
-      "rotation": [
-        0,
-        0,
-        0
-      ],
-      "size": [
-        5.166206,
-        1.002852,
-        5.166206
-      ],
-      "color": "#92a9b6",
-      "fixed": false,
-      "visible": true,
-      "params": {
-        "assetUrl": "./models/buttons-left.glb",
-        "assetNode": "左_·_PS5_弹簧定位环004"
-      },
-      "assemblyGroup": {
-        "id": "puretv-buttons-left-spring-seat",
-        "name": "左键 · 弹簧 / 定位环"
-      }
-    },
-    {
-      "id": "puretv-buttons-left-6",
       "name": "左 · PS5 按杆.005",
       "kind": "asset",
       "position": [
         -51.200001,
-        44.23402,
+        44.234018,
         -22
       ],
       "rotation": [
@@ -249,9 +218,9 @@
         0
       ],
       "size": [
-        3.500008,
+        2.849998,
         1.300003,
-        3.500008
+        2.849998
       ],
       "color": "#92a9b6",
       "fixed": false,
@@ -266,7 +235,7 @@
       }
     },
     {
-      "id": "puretv-buttons-left-7",
+      "id": "puretv-buttons-left-6",
       "name": "左 · PS5 焊脚占位.017",
       "kind": "asset",
       "position": [
@@ -297,7 +266,7 @@
       }
     },
     {
-      "id": "puretv-buttons-left-8",
+      "id": "puretv-buttons-left-7",
       "name": "左 · PS5 焊脚占位.018",
       "kind": "asset",
       "position": [
@@ -328,7 +297,7 @@
       }
     },
     {
-      "id": "puretv-buttons-left-9",
+      "id": "puretv-buttons-left-8",
       "name": "左 · PS5 焊脚占位.019",
       "kind": "asset",
       "position": [
@@ -359,7 +328,7 @@
       }
     },
     {
-      "id": "puretv-buttons-left-10",
+      "id": "puretv-buttons-left-9",
       "name": "左 · PS5 焊脚占位.020",
       "kind": "asset",
       "position": [
@@ -390,7 +359,7 @@
       }
     },
     {
-      "id": "puretv-buttons-left-11",
+      "id": "puretv-buttons-left-10",
       "name": "左 · 旋锁弹性垫 0.002",
       "kind": "asset",
       "position": [
@@ -417,7 +386,7 @@
       }
     },
     {
-      "id": "puretv-buttons-left-12",
+      "id": "puretv-buttons-left-11",
       "name": "左 · 旋锁弹性垫 120.002",
       "kind": "asset",
       "position": [
@@ -444,7 +413,7 @@
       }
     },
     {
-      "id": "puretv-buttons-left-13",
+      "id": "puretv-buttons-left-12",
       "name": "左 · 旋锁弹性垫 240.002",
       "kind": "asset",
       "position": [
@@ -526,7 +495,7 @@
       "kind": "pin",
       "position": [
         -32.75567,
-        50.849565,
+        51.224565,
         -22
       ],
       "rotation": [
@@ -536,7 +505,7 @@
       ],
       "size": [
         12.280859,
-        17.158325,
+        16.408325,
         11.560001
       ],
       "color": "#92a9b6",
@@ -565,7 +534,7 @@
         ],
         "proxySize": [
           12.280859,
-          17.158325,
+          16.408325,
           11.560001
         ]
       }
@@ -672,42 +641,11 @@
     },
     {
       "id": "puretv-buttons-right-5",
-      "name": "右 · PS5 弹簧定位环.003",
-      "kind": "asset",
-      "position": [
-        -32.799996,
-        45.324542,
-        -22.000001
-      ],
-      "rotation": [
-        0,
-        0,
-        0
-      ],
-      "size": [
-        5.166204,
-        1.00285,
-        5.166204
-      ],
-      "color": "#92a9b6",
-      "fixed": false,
-      "visible": true,
-      "params": {
-        "assetUrl": "./models/buttons-right.glb",
-        "assetNode": "右_·_PS5_弹簧定位环003"
-      },
-      "assemblyGroup": {
-        "id": "puretv-buttons-right-spring-seat",
-        "name": "右键 · 弹簧 / 定位环"
-      }
-    },
-    {
-      "id": "puretv-buttons-right-6",
       "name": "右 · PS5 按杆.004",
       "kind": "asset",
       "position": [
         -32.799998,
-        41.838589,
+        41.838588,
         -22.000001
       ],
       "rotation": [
@@ -716,9 +654,9 @@
         0
       ],
       "size": [
-        3.50001,
+        2.85,
         1.300003,
-        3.50001
+        2.85
       ],
       "color": "#92a9b6",
       "fixed": false,
@@ -733,7 +671,7 @@
       }
     },
     {
-      "id": "puretv-buttons-right-7",
+      "id": "puretv-buttons-right-6",
       "name": "右 · PS5 焊脚占位.013",
       "kind": "asset",
       "position": [
@@ -764,7 +702,7 @@
       }
     },
     {
-      "id": "puretv-buttons-right-8",
+      "id": "puretv-buttons-right-7",
       "name": "右 · PS5 焊脚占位.014",
       "kind": "asset",
       "position": [
@@ -795,7 +733,7 @@
       }
     },
     {
-      "id": "puretv-buttons-right-9",
+      "id": "puretv-buttons-right-8",
       "name": "右 · PS5 焊脚占位.015",
       "kind": "asset",
       "position": [
@@ -826,7 +764,7 @@
       }
     },
     {
-      "id": "puretv-buttons-right-10",
+      "id": "puretv-buttons-right-9",
       "name": "右 · PS5 焊脚占位.016",
       "kind": "asset",
       "position": [
@@ -857,7 +795,7 @@
       }
     },
     {
-      "id": "puretv-buttons-right-11",
+      "id": "puretv-buttons-right-10",
       "name": "右 · 旋锁弹性垫 0.002",
       "kind": "asset",
       "position": [
@@ -884,7 +822,7 @@
       }
     },
     {
-      "id": "puretv-buttons-right-12",
+      "id": "puretv-buttons-right-11",
       "name": "右 · 旋锁弹性垫 120.002",
       "kind": "asset",
       "position": [
@@ -911,7 +849,7 @@
       }
     },
     {
-      "id": "puretv-buttons-right-13",
+      "id": "puretv-buttons-right-12",
       "name": "右 · 旋锁弹性垫 240.002",
       "kind": "asset",
       "position": [
@@ -993,7 +931,7 @@
       "kind": "pin",
       "position": [
         -42,
-        51.48272,
+        51.85772,
         -12.765555
       ],
       "rotation": [
@@ -1003,7 +941,7 @@
       ],
       "size": [
         11.559998,
-        14.101999,
+        13.351999,
         12.300619
       ],
       "color": "#92a9b6",
@@ -1032,7 +970,7 @@
         ],
         "proxySize": [
           11.559998,
-          14.101999,
+          13.351999,
           12.300619
         ]
       }
@@ -1139,42 +1077,11 @@
     },
     {
       "id": "puretv-buttons-down-5",
-      "name": "下 · PS5 弹簧定位环.003",
-      "kind": "asset",
-      "position": [
-        -42,
-        47.485861,
-        -12.800002
-      ],
-      "rotation": [
-        0,
-        0,
-        0
-      ],
-      "size": [
-        5.166206,
-        1.00285,
-        5.166204
-      ],
-      "color": "#92a9b6",
-      "fixed": false,
-      "visible": true,
-      "params": {
-        "assetUrl": "./models/buttons-down.glb",
-        "assetNode": "下_·_PS5_弹簧定位环003"
-      },
-      "assemblyGroup": {
-        "id": "puretv-buttons-down-spring-seat",
-        "name": "下键 · 弹簧 / 定位环"
-      }
-    },
-    {
-      "id": "puretv-buttons-down-6",
       "name": "下 · PS5 按杆.004",
       "kind": "asset",
       "position": [
         -42,
-        43.999905,
+        43.999906,
         -12.800002
       ],
       "rotation": [
@@ -1183,9 +1090,9 @@
         0
       ],
       "size": [
-        3.500008,
+        2.849998,
         1.300003,
-        3.50001
+        2.85
       ],
       "color": "#92a9b6",
       "fixed": false,
@@ -1200,7 +1107,7 @@
       }
     },
     {
-      "id": "puretv-buttons-down-7",
+      "id": "puretv-buttons-down-6",
       "name": "下 · PS5 焊脚占位.013",
       "kind": "asset",
       "position": [
@@ -1231,7 +1138,7 @@
       }
     },
     {
-      "id": "puretv-buttons-down-8",
+      "id": "puretv-buttons-down-7",
       "name": "下 · PS5 焊脚占位.014",
       "kind": "asset",
       "position": [
@@ -1262,7 +1169,7 @@
       }
     },
     {
-      "id": "puretv-buttons-down-9",
+      "id": "puretv-buttons-down-8",
       "name": "下 · PS5 焊脚占位.015",
       "kind": "asset",
       "position": [
@@ -1293,7 +1200,7 @@
       }
     },
     {
-      "id": "puretv-buttons-down-10",
+      "id": "puretv-buttons-down-9",
       "name": "下 · PS5 焊脚占位.016",
       "kind": "asset",
       "position": [
@@ -1324,7 +1231,7 @@
       }
     },
     {
-      "id": "puretv-buttons-down-11",
+      "id": "puretv-buttons-down-10",
       "name": "下 · 旋锁弹性垫 0.002",
       "kind": "asset",
       "position": [
@@ -1351,7 +1258,7 @@
       }
     },
     {
-      "id": "puretv-buttons-down-12",
+      "id": "puretv-buttons-down-11",
       "name": "下 · 旋锁弹性垫 120.002",
       "kind": "asset",
       "position": [
@@ -1378,7 +1285,7 @@
       }
     },
     {
-      "id": "puretv-buttons-down-13",
+      "id": "puretv-buttons-down-12",
       "name": "下 · 旋锁弹性垫 240.002",
       "kind": "asset",
       "position": [
@@ -1460,7 +1367,7 @@
       "kind": "pin",
       "position": [
         -42,
-        49.932013,
+        50.307013,
         -31.246942
       ],
       "rotation": [
@@ -1470,7 +1377,7 @@
       ],
       "size": [
         11.559998,
-        17.77931,
+        17.02931,
         12.275633
       ],
       "color": "#92a9b6",
@@ -1499,7 +1406,7 @@
         ],
         "proxySize": [
           11.559998,
-          17.77931,
+          17.02931,
           12.275633
         ]
       }
@@ -1606,37 +1513,6 @@
     },
     {
       "id": "puretv-buttons-up-5",
-      "name": "上 · PS5 弹簧定位环.003",
-      "kind": "asset",
-      "position": [
-        -42,
-        44.096498,
-        -31.200001
-      ],
-      "rotation": [
-        0,
-        0,
-        0
-      ],
-      "size": [
-        5.166206,
-        1.00285,
-        5.166206
-      ],
-      "color": "#92a9b6",
-      "fixed": false,
-      "visible": true,
-      "params": {
-        "assetUrl": "./models/buttons-up.glb",
-        "assetNode": "上_·_PS5_弹簧定位环003"
-      },
-      "assemblyGroup": {
-        "id": "puretv-buttons-up-spring-seat",
-        "name": "上键 · 弹簧 / 定位环"
-      }
-    },
-    {
-      "id": "puretv-buttons-up-6",
       "name": "上 · PS5 按杆.004",
       "kind": "asset",
       "position": [
@@ -1650,9 +1526,9 @@
         0
       ],
       "size": [
-        3.500008,
+        2.849998,
         1.300003,
-        3.50001
+        2.85
       ],
       "color": "#92a9b6",
       "fixed": false,
@@ -1667,7 +1543,7 @@
       }
     },
     {
-      "id": "puretv-buttons-up-7",
+      "id": "puretv-buttons-up-6",
       "name": "上 · PS5 焊脚占位.013",
       "kind": "asset",
       "position": [
@@ -1698,7 +1574,7 @@
       }
     },
     {
-      "id": "puretv-buttons-up-8",
+      "id": "puretv-buttons-up-7",
       "name": "上 · PS5 焊脚占位.014",
       "kind": "asset",
       "position": [
@@ -1729,7 +1605,7 @@
       }
     },
     {
-      "id": "puretv-buttons-up-9",
+      "id": "puretv-buttons-up-8",
       "name": "上 · PS5 焊脚占位.015",
       "kind": "asset",
       "position": [
@@ -1760,7 +1636,7 @@
       }
     },
     {
-      "id": "puretv-buttons-up-10",
+      "id": "puretv-buttons-up-9",
       "name": "上 · PS5 焊脚占位.016",
       "kind": "asset",
       "position": [
@@ -1791,7 +1667,7 @@
       }
     },
     {
-      "id": "puretv-buttons-up-11",
+      "id": "puretv-buttons-up-10",
       "name": "上 · 旋锁弹性垫 0.002",
       "kind": "asset",
       "position": [
@@ -1818,7 +1694,7 @@
       }
     },
     {
-      "id": "puretv-buttons-up-12",
+      "id": "puretv-buttons-up-11",
       "name": "上 · 旋锁弹性垫 120.002",
       "kind": "asset",
       "position": [
@@ -1845,7 +1721,7 @@
       }
     },
     {
-      "id": "puretv-buttons-up-13",
+      "id": "puretv-buttons-up-12",
       "name": "上 · 旋锁弹性垫 240.002",
       "kind": "asset",
       "position": [
@@ -2023,37 +1899,6 @@
     },
     {
       "id": "puretv-buttons-a-4",
-      "name": "A · 同款 弹簧定位环.002",
-      "kind": "asset",
-      "position": [
-        40.999996,
-        50.269975,
-        -9.5
-      ],
-      "rotation": [
-        0,
-        0,
-        0
-      ],
-      "size": [
-        5.166206,
-        1.002852,
-        5.166206
-      ],
-      "color": "#92a9b6",
-      "fixed": false,
-      "visible": true,
-      "params": {
-        "assetUrl": "./models/buttons-a.glb",
-        "assetNode": "A_·_同款_弹簧定位环002"
-      },
-      "assemblyGroup": {
-        "id": "puretv-buttons-a-spring-seat",
-        "name": "A 键 · 弹簧 / 定位环"
-      }
-    },
-    {
-      "id": "puretv-buttons-a-5",
       "name": "A · 同款 按杆.002",
       "kind": "asset",
       "position": [
@@ -2067,9 +1912,9 @@
         0
       ],
       "size": [
-        3.500008,
+        2.849998,
         1.300003,
-        3.500008
+        2.849998
       ],
       "color": "#92a9b6",
       "fixed": false,
@@ -2084,7 +1929,7 @@
       }
     },
     {
-      "id": "puretv-buttons-a-6",
+      "id": "puretv-buttons-a-5",
       "name": "A · 同款 焊脚占位.008",
       "kind": "asset",
       "position": [
@@ -2115,7 +1960,7 @@
       }
     },
     {
-      "id": "puretv-buttons-a-7",
+      "id": "puretv-buttons-a-6",
       "name": "A · 同款 焊脚占位.009",
       "kind": "asset",
       "position": [
@@ -2146,7 +1991,7 @@
       }
     },
     {
-      "id": "puretv-buttons-a-8",
+      "id": "puretv-buttons-a-7",
       "name": "A · 同款 焊脚占位.010",
       "kind": "asset",
       "position": [
@@ -2177,7 +2022,7 @@
       }
     },
     {
-      "id": "puretv-buttons-a-9",
+      "id": "puretv-buttons-a-8",
       "name": "A · 同款 焊脚占位.011",
       "kind": "asset",
       "position": [
@@ -2208,12 +2053,12 @@
       }
     },
     {
-      "id": "puretv-buttons-a-10",
+      "id": "puretv-buttons-a-9",
       "name": "A · 同款插销与圆形键帽.002",
       "kind": "pin",
       "position": [
         41.001287,
-        53.482034,
+        53.572406,
         -9.5
       ],
       "rotation": [
@@ -2223,7 +2068,7 @@
       ],
       "size": [
         13.337421,
-        11.733765,
+        11.553024,
         13.338711
       ],
       "color": "#92a9b6",
@@ -2252,13 +2097,13 @@
         ],
         "proxySize": [
           13.337421,
-          11.733765,
+          11.553024,
           13.338711
         ]
       }
     },
     {
-      "id": "puretv-buttons-a-11",
+      "id": "puretv-buttons-a-10",
       "name": "A · 旋锁弹性垫 0.002",
       "kind": "asset",
       "position": [
@@ -2285,7 +2130,7 @@
       }
     },
     {
-      "id": "puretv-buttons-a-12",
+      "id": "puretv-buttons-a-11",
       "name": "A · 旋锁弹性垫 120.002",
       "kind": "asset",
       "position": [
@@ -2312,7 +2157,7 @@
       }
     },
     {
-      "id": "puretv-buttons-a-13",
+      "id": "puretv-buttons-a-12",
       "name": "A · 旋锁弹性垫 240.002",
       "kind": "asset",
       "position": [
@@ -2339,7 +2184,7 @@
       }
     },
     {
-      "id": "puretv-buttons-a-14",
+      "id": "puretv-buttons-a-13",
       "name": "键帽标识 · A.002",
       "kind": "asset",
       "position": [
@@ -2517,37 +2362,6 @@
     },
     {
       "id": "puretv-buttons-b-4",
-      "name": "B · 同款 弹簧定位环.002",
-      "kind": "asset",
-      "position": [
-        52.499996,
-        50.269975,
-        -21
-      ],
-      "rotation": [
-        0,
-        0,
-        0
-      ],
-      "size": [
-        5.166206,
-        1.002852,
-        5.166206
-      ],
-      "color": "#92a9b6",
-      "fixed": false,
-      "visible": true,
-      "params": {
-        "assetUrl": "./models/buttons-b.glb",
-        "assetNode": "B_·_同款_弹簧定位环002"
-      },
-      "assemblyGroup": {
-        "id": "puretv-buttons-b-spring-seat",
-        "name": "B 键 · 弹簧 / 定位环"
-      }
-    },
-    {
-      "id": "puretv-buttons-b-5",
       "name": "B · 同款 按杆.002",
       "kind": "asset",
       "position": [
@@ -2561,9 +2375,9 @@
         0
       ],
       "size": [
-        3.500008,
+        2.849998,
         1.300003,
-        3.500008
+        2.849998
       ],
       "color": "#92a9b6",
       "fixed": false,
@@ -2578,7 +2392,7 @@
       }
     },
     {
-      "id": "puretv-buttons-b-6",
+      "id": "puretv-buttons-b-5",
       "name": "B · 同款 焊脚占位.008",
       "kind": "asset",
       "position": [
@@ -2609,7 +2423,7 @@
       }
     },
     {
-      "id": "puretv-buttons-b-7",
+      "id": "puretv-buttons-b-6",
       "name": "B · 同款 焊脚占位.009",
       "kind": "asset",
       "position": [
@@ -2640,7 +2454,7 @@
       }
     },
     {
-      "id": "puretv-buttons-b-8",
+      "id": "puretv-buttons-b-7",
       "name": "B · 同款 焊脚占位.010",
       "kind": "asset",
       "position": [
@@ -2671,7 +2485,7 @@
       }
     },
     {
-      "id": "puretv-buttons-b-9",
+      "id": "puretv-buttons-b-8",
       "name": "B · 同款 焊脚占位.011",
       "kind": "asset",
       "position": [
@@ -2702,12 +2516,12 @@
       }
     },
     {
-      "id": "puretv-buttons-b-10",
+      "id": "puretv-buttons-b-9",
       "name": "B · 同款插销与圆形键帽.002",
       "kind": "pin",
       "position": [
         52.501287,
-        53.005426,
+        53.095796,
         -21
       ],
       "rotation": [
@@ -2717,7 +2531,7 @@
       ],
       "size": [
         13.337421,
-        10.780548,
+        10.599808,
         13.338711
       ],
       "color": "#92a9b6",
@@ -2746,13 +2560,13 @@
         ],
         "proxySize": [
           13.337421,
-          10.780548,
+          10.599808,
           13.338711
         ]
       }
     },
     {
-      "id": "puretv-buttons-b-11",
+      "id": "puretv-buttons-b-10",
       "name": "B · 旋锁弹性垫 0.002",
       "kind": "asset",
       "position": [
@@ -2779,7 +2593,7 @@
       }
     },
     {
-      "id": "puretv-buttons-b-12",
+      "id": "puretv-buttons-b-11",
       "name": "B · 旋锁弹性垫 120.002",
       "kind": "asset",
       "position": [
@@ -2806,7 +2620,7 @@
       }
     },
     {
-      "id": "puretv-buttons-b-13",
+      "id": "puretv-buttons-b-12",
       "name": "B · 旋锁弹性垫 240.002",
       "kind": "asset",
       "position": [
@@ -2833,7 +2647,7 @@
       }
     },
     {
-      "id": "puretv-buttons-b-14",
+      "id": "puretv-buttons-b-13",
       "name": "键帽标识 · B.002",
       "kind": "asset",
       "position": [
@@ -3011,37 +2825,6 @@
     },
     {
       "id": "puretv-buttons-x-4",
-      "name": "X · 同款 弹簧定位环.002",
-      "kind": "asset",
-      "position": [
-        29.499996,
-        50.269975,
-        -21
-      ],
-      "rotation": [
-        0,
-        0,
-        0
-      ],
-      "size": [
-        5.166206,
-        1.002852,
-        5.166206
-      ],
-      "color": "#92a9b6",
-      "fixed": false,
-      "visible": true,
-      "params": {
-        "assetUrl": "./models/buttons-x.glb",
-        "assetNode": "X_·_同款_弹簧定位环002"
-      },
-      "assemblyGroup": {
-        "id": "puretv-buttons-x-spring-seat",
-        "name": "X 键 · 弹簧 / 定位环"
-      }
-    },
-    {
-      "id": "puretv-buttons-x-5",
       "name": "X · 同款 按杆.002",
       "kind": "asset",
       "position": [
@@ -3055,9 +2838,9 @@
         0
       ],
       "size": [
-        3.500008,
+        2.849998,
         1.300003,
-        3.500008
+        2.849998
       ],
       "color": "#92a9b6",
       "fixed": false,
@@ -3072,7 +2855,7 @@
       }
     },
     {
-      "id": "puretv-buttons-x-6",
+      "id": "puretv-buttons-x-5",
       "name": "X · 同款 焊脚占位.008",
       "kind": "asset",
       "position": [
@@ -3103,7 +2886,7 @@
       }
     },
     {
-      "id": "puretv-buttons-x-7",
+      "id": "puretv-buttons-x-6",
       "name": "X · 同款 焊脚占位.009",
       "kind": "asset",
       "position": [
@@ -3134,7 +2917,7 @@
       }
     },
     {
-      "id": "puretv-buttons-x-8",
+      "id": "puretv-buttons-x-7",
       "name": "X · 同款 焊脚占位.010",
       "kind": "asset",
       "position": [
@@ -3165,7 +2948,7 @@
       }
     },
     {
-      "id": "puretv-buttons-x-9",
+      "id": "puretv-buttons-x-8",
       "name": "X · 同款 焊脚占位.011",
       "kind": "asset",
       "position": [
@@ -3196,12 +2979,12 @@
       }
     },
     {
-      "id": "puretv-buttons-x-10",
+      "id": "puretv-buttons-x-9",
       "name": "X · 同款插销与圆形键帽.002",
       "kind": "pin",
       "position": [
         29.501287,
-        54.101638,
+        54.192008,
         -21
       ],
       "rotation": [
@@ -3211,7 +2994,7 @@
       ],
       "size": [
         13.337421,
-        12.972969,
+        12.792229,
         13.338711
       ],
       "color": "#92a9b6",
@@ -3240,13 +3023,13 @@
         ],
         "proxySize": [
           13.337421,
-          12.972969,
+          12.792229,
           13.338711
         ]
       }
     },
     {
-      "id": "puretv-buttons-x-11",
+      "id": "puretv-buttons-x-10",
       "name": "X · 旋锁弹性垫 0.002",
       "kind": "asset",
       "position": [
@@ -3273,7 +3056,7 @@
       }
     },
     {
-      "id": "puretv-buttons-x-12",
+      "id": "puretv-buttons-x-11",
       "name": "X · 旋锁弹性垫 120.002",
       "kind": "asset",
       "position": [
@@ -3300,7 +3083,7 @@
       }
     },
     {
-      "id": "puretv-buttons-x-13",
+      "id": "puretv-buttons-x-12",
       "name": "X · 旋锁弹性垫 240.002",
       "kind": "asset",
       "position": [
@@ -3327,7 +3110,7 @@
       }
     },
     {
-      "id": "puretv-buttons-x-14",
+      "id": "puretv-buttons-x-13",
       "name": "键帽标识 · X.002",
       "kind": "asset",
       "position": [
@@ -3505,37 +3288,6 @@
     },
     {
       "id": "puretv-buttons-y-4",
-      "name": "Y · 同款 弹簧定位环.002",
-      "kind": "asset",
-      "position": [
-        40.999996,
-        50.269975,
-        -32.5
-      ],
-      "rotation": [
-        0,
-        0,
-        0
-      ],
-      "size": [
-        5.166206,
-        1.002852,
-        5.166206
-      ],
-      "color": "#92a9b6",
-      "fixed": false,
-      "visible": true,
-      "params": {
-        "assetUrl": "./models/buttons-y.glb",
-        "assetNode": "Y_·_同款_弹簧定位环002"
-      },
-      "assemblyGroup": {
-        "id": "puretv-buttons-y-spring-seat",
-        "name": "Y 键 · 弹簧 / 定位环"
-      }
-    },
-    {
-      "id": "puretv-buttons-y-5",
       "name": "Y · 同款 按杆.002",
       "kind": "asset",
       "position": [
@@ -3549,9 +3301,9 @@
         0
       ],
       "size": [
-        3.500008,
+        2.849998,
         1.300003,
-        3.500008
+        2.849998
       ],
       "color": "#92a9b6",
       "fixed": false,
@@ -3566,7 +3318,7 @@
       }
     },
     {
-      "id": "puretv-buttons-y-6",
+      "id": "puretv-buttons-y-5",
       "name": "Y · 同款 焊脚占位.008",
       "kind": "asset",
       "position": [
@@ -3597,7 +3349,7 @@
       }
     },
     {
-      "id": "puretv-buttons-y-7",
+      "id": "puretv-buttons-y-6",
       "name": "Y · 同款 焊脚占位.009",
       "kind": "asset",
       "position": [
@@ -3628,7 +3380,7 @@
       }
     },
     {
-      "id": "puretv-buttons-y-8",
+      "id": "puretv-buttons-y-7",
       "name": "Y · 同款 焊脚占位.010",
       "kind": "asset",
       "position": [
@@ -3659,7 +3411,7 @@
       }
     },
     {
-      "id": "puretv-buttons-y-9",
+      "id": "puretv-buttons-y-8",
       "name": "Y · 同款 焊脚占位.011",
       "kind": "asset",
       "position": [
@@ -3690,12 +3442,12 @@
       }
     },
     {
-      "id": "puretv-buttons-y-10",
+      "id": "puretv-buttons-y-9",
       "name": "Y · 同款插销与圆形键帽.002",
       "kind": "pin",
       "position": [
         41.001287,
-        53.638967,
+        53.729337,
         -32.500001
       ],
       "rotation": [
@@ -3705,7 +3457,7 @@
       ],
       "size": [
         13.337421,
-        12.04763,
+        11.86689,
         13.338713
       ],
       "color": "#92a9b6",
@@ -3734,13 +3486,13 @@
         ],
         "proxySize": [
           13.337421,
-          12.04763,
+          11.86689,
           13.338713
         ]
       }
     },
     {
-      "id": "puretv-buttons-y-11",
+      "id": "puretv-buttons-y-10",
       "name": "Y · 旋锁弹性垫 0.002",
       "kind": "asset",
       "position": [
@@ -3767,7 +3519,7 @@
       }
     },
     {
-      "id": "puretv-buttons-y-12",
+      "id": "puretv-buttons-y-11",
       "name": "Y · 旋锁弹性垫 120.002",
       "kind": "asset",
       "position": [
@@ -3794,7 +3546,7 @@
       }
     },
     {
-      "id": "puretv-buttons-y-13",
+      "id": "puretv-buttons-y-12",
       "name": "Y · 旋锁弹性垫 240.002",
       "kind": "asset",
       "position": [
@@ -3821,7 +3573,7 @@
       }
     },
     {
-      "id": "puretv-buttons-y-14",
+      "id": "puretv-buttons-y-13",
       "name": "键帽标识 · Y.002",
       "kind": "asset",
       "position": [
@@ -3849,6 +3601,68 @@
     },
     {
       "id": "puretv-buttons-confirm-1",
+      "name": "确认 · GND 金属焊脚.005",
+      "kind": "asset",
+      "position": [
+        -2,
+        39.316122,
+        -5.5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.65,
+        1.350424,
+        0.65
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/buttons-confirm.glb",
+        "assetNode": "确认_·_GND_金属焊脚005"
+      },
+      "assemblyGroup": {
+        "id": "puretv-buttons-confirm-switch",
+        "name": "确认键 · 开关 / 触头 / 焊脚"
+      }
+    },
+    {
+      "id": "puretv-buttons-confirm-2",
+      "name": "确认 · GPIO 金属焊脚.005",
+      "kind": "asset",
+      "position": [
+        2,
+        39.316122,
+        -5.5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.65,
+        1.350424,
+        0.65
+      ],
+      "color": "#92a9b6",
+      "fixed": false,
+      "visible": true,
+      "params": {
+        "assetUrl": "./models/buttons-confirm.glb",
+        "assetNode": "确认_·_GPIO_金属焊脚005"
+      },
+      "assemblyGroup": {
+        "id": "puretv-buttons-confirm-switch",
+        "name": "确认键 · 开关 / 触头 / 焊脚"
+      }
+    },
+    {
+      "id": "puretv-buttons-confirm-3",
       "name": "确认 · 回弹压簧.005",
       "kind": "spring",
       "position": [
@@ -3894,7 +3708,7 @@
       }
     },
     {
-      "id": "puretv-buttons-confirm-2",
+      "id": "puretv-buttons-confirm-4",
       "name": "确认 · 常开开关.005",
       "kind": "button",
       "position": [
@@ -3921,7 +3735,7 @@
       },
       "assemblyGroup": {
         "id": "puretv-buttons-confirm-switch",
-        "name": "确认键 · 开关 / 触头"
+        "name": "确认键 · 开关 / 触头 / 焊脚"
       },
       "interaction": {
         "version": 1,
@@ -3944,7 +3758,7 @@
       }
     },
     {
-      "id": "puretv-buttons-confirm-3",
+      "id": "puretv-buttons-confirm-5",
       "name": "确认 · 开关触头.005",
       "kind": "asset",
       "position": [
@@ -3971,16 +3785,16 @@
       },
       "assemblyGroup": {
         "id": "puretv-buttons-confirm-switch",
-        "name": "确认键 · 开关 / 触头"
+        "name": "确认键 · 开关 / 触头 / 焊脚"
       }
     },
     {
-      "id": "puretv-buttons-confirm-4",
+      "id": "puretv-buttons-confirm-6",
       "name": "确认 · 旋锁座.005",
-      "kind": "bayonet-socket",
+      "kind": "sleeve",
       "position": [
-        0.000001,
-        44.09091,
+        0,
+        44.090912,
         -5.499999
       ],
       "rotation": [
@@ -3989,9 +3803,9 @@
         0
       ],
       "size": [
-        14.78447,
+        14.584681,
         6.400001,
-        15.68314
+        15.14255
       ],
       "color": "#92a9b6",
       "fixed": false,
@@ -4001,8 +3815,8 @@
         "assetNode": "确认_·_旋锁座005"
       },
       "assemblyGroup": {
-        "id": "puretv-buttons-confirm-bayonet",
-        "name": "确认键 · 键帽 / 旋锁座"
+        "id": "puretv-buttons-confirm-guide",
+        "name": "确认键 · 键帽 / 按压导向座"
       },
       "interaction": {
         "version": 1,
@@ -4018,19 +3832,19 @@
           0
         ],
         "proxySize": [
-          14.78447,
+          14.584681,
           6.400001,
-          15.68314
+          15.14255
         ]
       }
     },
     {
-      "id": "puretv-buttons-confirm-5",
+      "id": "puretv-buttons-confirm-7",
       "name": "确认 · 键帽.007",
-      "kind": "bayonet-pin",
+      "kind": "pin",
       "position": [
         0,
-        50.320546,
+        50.390759,
         -5.5
       ],
       "rotation": [
@@ -4040,7 +3854,7 @@
       ],
       "size": [
         14.2,
-        9.759272,
+        9.618848,
         7.1
       ],
       "color": "#92a9b6",
@@ -4051,8 +3865,8 @@
         "assetNode": "确认_·_键帽007"
       },
       "assemblyGroup": {
-        "id": "puretv-buttons-confirm-bayonet",
-        "name": "确认键 · 键帽 / 旋锁座"
+        "id": "puretv-buttons-confirm-guide",
+        "name": "确认键 · 键帽 / 按压导向座"
       },
       "interaction": {
         "version": 1,
@@ -4069,7 +3883,7 @@
         ],
         "proxySize": [
           14.2,
-          9.759272,
+          9.618848,
           7.1
         ]
       }
@@ -4390,7 +4204,7 @@
       "kind": "asset",
       "position": [
         0.001202,
-        40.049802,
+        40.052531,
         0.494024
       ],
       "rotation": [
@@ -4400,7 +4214,7 @@
       ],
       "size": [
         147.980476,
-        37.176781,
+        37.18224,
         98.988628
       ],
       "color": "#92a9b6",
@@ -4514,7 +4328,7 @@
       "kind": "asset",
       "position": [
         -25.5,
-        30.640909,
+        30.74091,
         -8.5
       ],
       "rotation": [
@@ -4524,7 +4338,7 @@
       ],
       "size": [
         5.2,
-        3.2,
+        3,
         8
       ],
       "color": "#92a9b6",
@@ -5816,7 +5630,7 @@
       "kind": "asset",
       "position": [
         26.034014,
-        38.303264,
+        37.703265,
         -16.545461
       ],
       "rotation": [
@@ -5826,7 +5640,7 @@
       ],
       "size": [
         28.6096,
-        7.475293,
+        6.275292,
         11.453024
       ],
       "color": "#92a9b6",
@@ -5846,9 +5660,9 @@
       "name": "A · 中央走线 GPIO.002",
       "kind": "asset",
       "position": [
-        15.965924,
+        15.965879,
         37.642324,
-        -15.399424
+        -15.39947
       ],
       "rotation": [
         0,
@@ -5856,9 +5670,9 @@
         0
       ],
       "size": [
-        54.971648,
+        54.971738,
         6.062151,
-        9.160953
+        9.161044
       ],
       "color": "#92a9b6",
       "fixed": false,
@@ -5908,9 +5722,9 @@
       "name": "B · 中央走线 GPIO.002",
       "kind": "asset",
       "position": [
-        18.575341,
+        18.569018,
         37.634349,
-        -21.348068
+        -21.339739
       ],
       "rotation": [
         0,
@@ -5918,9 +5732,9 @@
         0
       ],
       "size": [
-        65.244383,
+        65.257029,
         6.077931,
-        3.821808
+        3.838467
       ],
       "color": "#92a9b6",
       "fixed": false,
@@ -5939,8 +5753,8 @@
       "name": "X · 中央走线 GND.002",
       "kind": "asset",
       "position": [
-        22.370154,
-        38.43161,
+        22.367868,
+        37.768515,
         -22.514194
       ],
       "rotation": [
@@ -5949,8 +5763,8 @@
         0
       ],
       "size": [
-        35.555682,
-        7.741395,
+        35.560254,
+        6.415206,
         1.708384
       ],
       "color": "#92a9b6",
@@ -5970,9 +5784,9 @@
       "name": "X · 中央走线 GPIO.002",
       "kind": "asset",
       "position": [
-        15.166732,
-        37.916913,
-        -21.389969
+        15.187431,
+        37.917513,
+        -21.293989
       ],
       "rotation": [
         0,
@@ -5980,9 +5794,9 @@
         0
       ],
       "size": [
-        48.351114,
-        6.694788,
-        3.939934
+        48.309715,
+        6.69359,
+        4.131893
       ],
       "color": "#92a9b6",
       "fixed": false,
@@ -6001,8 +5815,8 @@
       "name": "Y · 中央走线 GND.002",
       "kind": "asset",
       "position": [
-        22.343969,
-        38.040846,
+        22.344324,
+        37.318677,
         -26.458552
       ],
       "rotation": [
@@ -6011,8 +5825,8 @@
         0
       ],
       "size": [
-        42.215559,
-        8.527494,
+        42.214848,
+        7.083158,
         9.445002
       ],
       "color": "#92a9b6",
@@ -6032,9 +5846,9 @@
       "name": "Y · 中央走线 GPIO.002",
       "kind": "asset",
       "position": [
-        11.879023,
-        37.636234,
-        -25.259386
+        11.873591,
+        37.621564,
+        -25.304711
       ],
       "rotation": [
         0,
@@ -6042,9 +5856,9 @@
         0
       ],
       "size": [
-        56.919582,
-        6.133013,
-        11.843334
+        56.930445,
+        6.103672,
+        11.752684
       ],
       "color": "#92a9b6",
       "fixed": false,
@@ -6063,9 +5877,9 @@
       "name": "上 · 中央走线 GND.002",
       "kind": "asset",
       "position": [
-        -25.104403,
-        37.163146,
-        -25.800493
+        -25.106003,
+        37.645787,
+        -25.800976
       ],
       "rotation": [
         0,
@@ -6073,9 +5887,9 @@
         0
       ],
       "size": [
-        32.746203,
-        10.296164,
-        8.138386
+        32.747474,
+        9.332595,
+        8.137421
       ],
       "color": "#92a9b6",
       "fixed": false,
@@ -6094,9 +5908,9 @@
       "name": "上 · 中央走线 GPIO.002",
       "kind": "asset",
       "position": [
-        -23.845716,
-        35.495958,
-        -24.596977
+        -23.842834,
+        35.1791,
+        -24.565894
       ],
       "rotation": [
         0,
@@ -6104,9 +5918,9 @@
         0
       ],
       "size": [
-        40.999875,
-        6.849231,
-        10.545418
+        41.00564,
+        6.215518,
+        10.607584
       ],
       "color": "#92a9b6",
       "fixed": false,
@@ -6125,8 +5939,8 @@
       "name": "下 · 中央走线 GND.002",
       "kind": "asset",
       "position": [
-        -24.778506,
-        36.840907,
+        -24.778522,
+        36.109386,
         -18.197808
       ],
       "rotation": [
@@ -6135,8 +5949,8 @@
         0
       ],
       "size": [
-        39.091456,
-        10.93444,
+        39.091424,
+        9.471398,
         8.138831
       ],
       "color": "#92a9b6",
@@ -6156,8 +5970,8 @@
       "name": "下 · 中央走线 GPIO.002",
       "kind": "asset",
       "position": [
-        -21.074507,
-        35.969949,
+        -21.065015,
+        35.082921,
         -17.276751
       ],
       "rotation": [
@@ -6166,8 +5980,8 @@
         0
       ],
       "size": [
-        40.509846,
-        7.747294,
+        40.52883,
+        6.358438,
         6.296718
       ],
       "color": "#92a9b6",
@@ -6249,9 +6063,9 @@
       "name": "右 · 中央走线 GND.002",
       "kind": "asset",
       "position": [
-        -26.635247,
-        37.205466,
-        -20.942897
+        -26.685839,
+        36.484423,
+        -20.942742
       ],
       "rotation": [
         0,
@@ -6259,9 +6073,9 @@
         0
       ],
       "size": [
-        28.999496,
-        10.198944,
-        2.643282
+        28.898312,
+        8.756859,
+        2.642973
       ],
       "color": "#92a9b6",
       "fixed": false,
@@ -6280,9 +6094,9 @@
       "name": "右 · 中央走线 GPIO.002",
       "kind": "asset",
       "position": [
-        -18.033591,
-        35.501402,
-        -21.354823
+        -18.029852,
+        35.181097,
+        -21.399637
       ],
       "rotation": [
         0,
@@ -6290,9 +6104,9 @@
         0
       ],
       "size": [
-        44.608728,
-        6.802479,
-        4.045889
+        44.616207,
+        6.161869,
+        3.956261
       ],
       "color": "#92a9b6",
       "fixed": false,
@@ -6312,7 +6126,7 @@
       "kind": "asset",
       "position": [
         -34.698833,
-        37.066457,
+        36.466455,
         -23.045774
       ],
       "rotation": [
@@ -6322,7 +6136,7 @@
       ],
       "size": [
         37.951341,
-        9.94891,
+        8.748909,
         2.645224
       ],
       "color": "#92a9b6",
@@ -6342,9 +6156,9 @@
       "name": "左 · 中央走线 GPIO.002",
       "kind": "asset",
       "position": [
-        -34.22479,
-        35.496986,
-        -21.579396
+        -34.227563,
+        35.173811,
+        -21.47858
       ],
       "rotation": [
         0,
@@ -6352,9 +6166,9 @@
         0
       ],
       "size": [
-        31.28623,
-        6.826679,
-        5.31249
+        31.280684,
+        6.180326,
+        5.514124
       ],
       "color": "#92a9b6",
       "fixed": false,
@@ -6373,9 +6187,9 @@
       "name": "确认 · GND.005",
       "kind": "asset",
       "position": [
-        -2.796029,
-        40.434831,
-        -13.167891
+        -2.805155,
+        39.707377,
+        -13.163075
       ],
       "rotation": [
         0,
@@ -6383,9 +6197,9 @@
         0
       ],
       "size": [
-        2.150002,
-        3.769026,
-        18.209667
+        2.145676,
+        2.37414,
+        18.231593
       ],
       "color": "#92a9b6",
       "fixed": false,
@@ -6404,9 +6218,9 @@
       "name": "确认 · GPIO.005",
       "kind": "asset",
       "position": [
-        -1.338559,
-        38.236691,
-        -12.005711
+        -2.15763,
+        37.849262,
+        -12.612242
       ],
       "rotation": [
         0,
@@ -6414,9 +6228,9 @@
         0
       ],
       "size": [
-        10.198101,
-        3.391565,
-        15.93919
+        8.556469,
+        2.616707,
+        14.729873
       ],
       "color": "#92a9b6",
       "fixed": false,

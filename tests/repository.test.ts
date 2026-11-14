@@ -48,18 +48,26 @@ describe("independent source objects and mating groups", () => {
       ).toBe(true);
     }
   });
-  it("loads all 189 source objects independently at their original relative positions", () => {
+  it("loads every current catalog object independently at its original relative position", () => {
     const project = parseProject(
       readFileSync("public/models/puretv-assembly.json", "utf8"),
     );
-    expect(project.parts).toHaveLength(189);
+    const sourceCount = catalog.reduce(
+      (sum, asset) => sum + (asset.nodes?.length ?? 0),
+      0,
+    );
+    expect(sourceCount).toBe(
+      catalog.reduce((sum, asset) => sum + asset.objects, 0),
+    );
+    expect(sourceCount).toBeGreaterThan(0);
+    expect(project.parts).toHaveLength(sourceCount);
     expect(
       new Set(
         project.parts.map(
           (part) => `${part.params.assetUrl}:${part.params.assetNode}`,
         ),
       ).size,
-    ).toBe(189);
+    ).toBe(sourceCount);
     const groundShift = -Math.min(
       ...catalog.map((asset) => asset.center[1] - asset.size[1] / 2),
     );

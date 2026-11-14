@@ -1,0 +1,392 @@
+{
+  "version": 1,
+  "status": "pass",
+  "applied": true,
+  "sourceFile": "electronics/esp32-mount.blend",
+  "beforeSha256": "81c1e24d812cbb482338e4ad5422b98f3a5e4b2f3d394015cf6276ec77f36e94",
+  "afterSha256": "1f6ad69caa250b89d2b403c904ab37ec21a4e4437df757080f619edf2bd0e64c",
+  "afterBytes": 107616,
+  "objectCount": 44,
+  "target": "ESP32 · USB connector.005",
+  "fixedNeighbor": "ESP32 · 48.2 × 27.9 PCB.005",
+  "before": {
+    "id": "electronics/esp32-mount.blend::ESP32 · USB connector.005",
+    "sourceName": "ESP32 · USB connector.005",
+    "vertices": 8,
+    "triangles": 12,
+    "boundsBlender": {
+      "min": [
+        -28.0999999,
+        4.5,
+        9.39999998
+      ],
+      "max": [
+        -22.9000001,
+        12.5,
+        12.60000002
+      ]
+    },
+    "signedVolumeMm3": 133.11999710083003,
+    "topology": {
+      "boundaryEdges": 0,
+      "nonManifoldEdges": 0,
+      "inconsistentWindingEdges": 0,
+      "closedConsistentlyOriented": true
+    },
+    "componentCount": 1
+  },
+  "after": {
+    "id": "electronics/esp32-mount.blend::ESP32 · USB connector.005",
+    "sourceName": "ESP32 · USB connector.005",
+    "vertices": 8,
+    "triangles": 12,
+    "boundsBlender": {
+      "min": [
+        -28.0999999,
+        4.5,
+        9.5999999
+      ],
+      "max": [
+        -22.9000001,
+        12.5,
+        12.60000002
+      ]
+    },
+    "signedVolumeMm3": 124.80000038146954,
+    "topology": {
+      "boundaryEdges": 0,
+      "nonManifoldEdges": 0,
+      "inconsistentWindingEdges": 0,
+      "closedConsistentlyOriented": true
+    },
+    "componentCount": 1
+  },
+  "pcbTopSourceZ": 9.6000002,
+  "removedBottomThicknessMm": 0.20000021999999973,
+  "maximumProtectedUpperSurfaceDeviationMm": 0.0,
+  "unchangedObjects": {
+    "ESP32 · 48.2 × 27.9 PCB.005": true,
+    "ESP32 · RF module.005": true,
+    "Pin header.010": true,
+    "Header pin.170": true,
+    "Header pin.171": true,
+    "Header pin.172": true,
+    "Header pin.173": true,
+    "Header pin.174": true,
+    "Header pin.175": true,
+    "Header pin.176": true,
+    "Header pin.177": true,
+    "Header pin.178": true,
+    "Header pin.179": true,
+    "Header pin.180": true,
+    "Header pin.181": true,
+    "Header pin.182": true,
+    "Header pin.183": true,
+    "Header pin.184": true,
+    "Header pin.185": true,
+    "Header pin.186": true,
+    "Pin header.011": true,
+    "Header pin.187": true,
+    "Header pin.188": true,
+    "Header pin.189": true,
+    "Header pin.190": true,
+    "Header pin.191": true,
+    "Header pin.192": true,
+    "Header pin.193": true,
+    "Header pin.194": true,
+    "Header pin.195": true,
+    "Header pin.196": true,
+    "Header pin.197": true,
+    "Header pin.198": true,
+    "Header pin.199": true,
+    "Header pin.200": true,
+    "Header pin.201": true,
+    "Header pin.202": true,
+    "Header pin.203": true,
+    "PCB · 长轴压条.005": true,
+    "PCB · 压条螺丝.009": true,
+    "PCB · 0.40 mm 软垫（装配压缩至 0.25 mm）.010": true,
+    "PCB · 0.40 mm 软垫（装配压缩至 0.25 mm）.011": true,
+    "PCB · 右侧沉入式压条螺钉.002": true
+  },
+  "beforeContact": {
+    "status": "penetration-evidence",
+    "surfaceTrianglePairs": 9,
+    "aInsideB": {
+      "testedPoints": 3,
+      "insidePoints": 3,
+      "surfacePoints": 0,
+      "uncertainPoints": 0,
+      "allSourceComponentsRepresented": true,
+      "targetClosedConsistentlyOriented": true,
+      "maximumSampledDepthMm": 0.20000076293945312,
+      "insideExamples": [
+        {
+          "pointBlender": [
+            -22.9000001,
+            4.5,
+            9.39999998
+          ],
+          "pointClient": [
+            -22.90000009536743,
+            9.399999976158142,
+            -4.5
+          ],
+          "nearestSurfaceDistanceMm": 0.20000076293945312,
+          "targetTriangle": 11
+        },
+        {
+          "pointBlender": [
+            -22.9000001,
+            12.5,
+            9.39999998
+          ],
+          "pointClient": [
+            -22.90000009536743,
+            9.399999976158142,
+            -12.5
+          ],
+          "nearestSurfaceDistanceMm": 0.20000076293945312,
+          "targetTriangle": 11
+        },
+        {
+          "pointBlender": [
+            -24.63333337,
+            9.83333333,
+            9.39999998
+          ],
+          "pointClient": [
+            -24.63333336512248,
+            9.399999976158142,
+            -9.833333333333334
+          ],
+          "nearestSurfaceDistanceMm": 0.20000076293945312,
+          "targetTriangle": 11
+        }
+      ],
+      "uncertainExamples": []
+    },
+    "bInsideA": {
+      "testedPoints": 0,
+      "insidePoints": 0,
+      "surfacePoints": 0,
+      "uncertainPoints": 0,
+      "allSourceComponentsRepresented": true,
+      "targetClosedConsistentlyOriented": true,
+      "maximumSampledDepthMm": 0.0,
+      "insideExamples": [],
+      "uncertainExamples": []
+    },
+    "geometrySemantics": {
+      "a": {
+        "kind": "solid-volume-candidate"
+      },
+      "b": {
+        "kind": "solid-volume-candidate"
+      }
+    },
+    "possibleOverlapBoundsBlender": {
+      "min": [
+        -26.00000036,
+        4.5,
+        9.39999998
+      ],
+      "max": [
+        -22.9000001,
+        12.5,
+        9.6000002
+      ]
+    },
+    "maximumSampledPenetrationMm": 0.20000076293945312,
+    "conservativeCrossingRegionBlender": {
+      "min": [
+        -26.00000036,
+        4.5,
+        9.39999998
+      ],
+      "max": [
+        -22.9000001,
+        12.5,
+        9.6000002
+      ]
+    },
+    "sourceTrianglePairExamples": [
+      [
+        6,
+        11
+      ],
+      [
+        6,
+        9
+      ],
+      [
+        0,
+        9
+      ],
+      [
+        1,
+        9
+      ],
+      [
+        4,
+        11
+      ],
+      [
+        5,
+        11
+      ],
+      [
+        7,
+        11
+      ],
+      [
+        2,
+        11
+      ]
+    ]
+  },
+  "afterContact": {
+    "status": "allowed-local-interface",
+    "surfaceTrianglePairs": 5,
+    "aInsideB": {
+      "testedPoints": 2,
+      "insidePoints": 0,
+      "surfacePoints": 2,
+      "uncertainPoints": 0,
+      "allSourceComponentsRepresented": true,
+      "targetClosedConsistentlyOriented": true,
+      "maximumSampledDepthMm": 0.0,
+      "insideExamples": [],
+      "uncertainExamples": []
+    },
+    "bInsideA": {
+      "testedPoints": 0,
+      "insidePoints": 0,
+      "surfacePoints": 0,
+      "uncertainPoints": 0,
+      "allSourceComponentsRepresented": true,
+      "targetClosedConsistentlyOriented": true,
+      "maximumSampledDepthMm": 0.0,
+      "insideExamples": [],
+      "uncertainExamples": []
+    },
+    "geometrySemantics": {
+      "a": {
+        "kind": "solid-volume-candidate"
+      },
+      "b": {
+        "kind": "solid-volume-candidate"
+      }
+    },
+    "possibleOverlapBoundsBlender": {
+      "min": [
+        -26.00000036,
+        4.5,
+        9.5999999
+      ],
+      "max": [
+        -22.9000001,
+        12.5,
+        9.6000002
+      ]
+    },
+    "maximumSampledPenetrationMm": 0.0,
+    "conservativeCrossingRegionBlender": {
+      "min": [
+        -26.00000036,
+        4.5,
+        9.6000002
+      ],
+      "max": [
+        -22.9000001,
+        12.5,
+        9.6000002
+      ]
+    },
+    "sourceTrianglePairExamples": [
+      [
+        2,
+        11
+      ],
+      [
+        3,
+        11
+      ],
+      [
+        5,
+        11
+      ],
+      [
+        1,
+        11
+      ],
+      [
+        0,
+        11
+      ]
+    ],
+    "allowedInterface": {
+      "id": "usb-enclosure-seated-on-pcb",
+      "reason": "USB exterior enclosure rests on the actual PCB top plane. Only this coincident support face is allowed; no rigid enclosure volume enters the PCB.",
+      "regionBlenderAtPose": {
+        "min": [
+          -26.00001036,
+          4.49999,
+          9.5999902
+        ],
+        "max": [
+          -22.8999901,
+          12.50001,
+          9.6000102
+        ]
+      },
+      "regionsBlenderAtPose": [
+        {
+          "min": [
+            -26.00001036,
+            4.49999,
+            9.5999902
+          ],
+          "max": [
+            -22.8999901,
+            12.50001,
+            9.6000102
+          ]
+        }
+      ],
+      "maximumPenetrationMm": 1e-05,
+      "localRegionProof": {
+        "proven": true,
+        "method": "entire possible object-AABB overlap is in the declared local region",
+        "exhaustiveVertices": 0
+      },
+      "scope": "Proven overlap support is inside the explicitly declared local region; not a kind-wide exclusion."
+    }
+  },
+  "interfaces": [
+    {
+      "id": "usb-enclosure-seated-on-pcb",
+      "pair": [
+        "electronics/esp32-mount.blend::ESP32 · USB connector.005",
+        "electronics/esp32-mount.blend::ESP32 · 48.2 × 27.9 PCB.005"
+      ],
+      "regionBlender": {
+        "min": [
+          -26.00001036,
+          4.49999,
+          9.5999902
+        ],
+        "max": [
+          -22.8999901,
+          12.50001,
+          9.6000102
+        ]
+      },
+      "maximumPenetrationMm": 1e-05,
+      "reason": "USB exterior enclosure rests on the actual PCB top plane. Only this coincident support face is allowed; no rigid enclosure volume enters the PCB."
+    }
+  ],
+  "limitations": [
+    "USB is a source exterior envelope; internal socket contacts, shielding construction and solder retention are not modelled. This repair establishes nominal rigid geometry seating, not electrical connector qualification."
+  ]
+}

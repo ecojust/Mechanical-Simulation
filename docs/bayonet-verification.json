@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-14T10:34:55.417Z",
+  "generatedAt": "2026-11-14T12:38:24.959Z",
   "scope": "Parameterized two-lug bayonet only; does not certify the old pureTV controller meshes.",
   "units": {
     "length": "mm",
@@ -101,7 +101,7 @@
         "expectedAllowed": true,
         "allowed": true,
         "passed": true,
-        "elapsedMilliseconds": 57.465,
+        "elapsedMilliseconds": 37.071,
         "from": {
           "position": [
             0,
@@ -133,7 +133,7 @@
         "expectedAllowed": true,
         "allowed": true,
         "passed": true,
-        "elapsedMilliseconds": 18.758,
+        "elapsedMilliseconds": 18.711,
         "from": {
           "position": [
             0,
@@ -165,7 +165,7 @@
         "expectedAllowed": false,
         "allowed": false,
         "passed": true,
-        "elapsedMilliseconds": 1.127,
+        "elapsedMilliseconds": 2.28,
         "from": {
           "position": [
             0,
@@ -209,7 +209,7 @@
         "expectedAllowed": true,
         "allowed": true,
         "passed": true,
-        "elapsedMilliseconds": 20.026,
+        "elapsedMilliseconds": 19.509,
         "from": {
           "position": [
             0,
@@ -241,7 +241,7 @@
         "expectedAllowed": true,
         "allowed": true,
         "passed": true,
-        "elapsedMilliseconds": 15.624,
+        "elapsedMilliseconds": 14.453,
         "from": {
           "position": [
             0,
@@ -273,7 +273,7 @@
         "expectedAllowed": false,
         "allowed": false,
         "passed": true,
-        "elapsedMilliseconds": 1.94,
+        "elapsedMilliseconds": 1.459,
         "from": {
           "position": [
             0,
@@ -317,7 +317,7 @@
         "expectedAllowed": false,
         "allowed": false,
         "passed": true,
-        "elapsedMilliseconds": 3.007,
+        "elapsedMilliseconds": 1.708,
         "from": {
           "position": [
             0,
@@ -361,7 +361,7 @@
         "expectedAllowed": false,
         "allowed": false,
         "passed": true,
-        "elapsedMilliseconds": 7.931,
+        "elapsedMilliseconds": 7.281,
         "from": {
           "position": [
             0,
@@ -405,7 +405,7 @@
         "expectedAllowed": false,
         "allowed": false,
         "passed": true,
-        "elapsedMilliseconds": 3.303,
+        "elapsedMilliseconds": 1.756,
         "from": {
           "position": [
             0,
@@ -475,7 +475,7 @@
       "expectedAllowed": true,
       "allowed": true,
       "passed": true,
-      "elapsedMilliseconds": 24.841,
+      "elapsedMilliseconds": 38.946,
       "from": {
         "position": [
           -18,

@@ -96,11 +96,15 @@ export interface MechanismProxy {
 }
 export interface MechanismContact {
   strikerPartId: string;
+  /** Fixed-role member carrying the physical trigger surface; defaults to switchPartId. */
+  targetPartId?: string;
   strikerPoint: Vec3;
   switchPoint: Vec3;
   switchNormal: Vec3;
   radius: number;
   maxOvertravel: number;
+  /** Fixed-role plunger members that follow the striker only after contact. */
+  actuatorPartIds?: string[];
 }
 export interface Mechanism {
   version: 1;

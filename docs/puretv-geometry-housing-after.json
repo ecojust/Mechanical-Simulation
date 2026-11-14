@@ -1,0 +1,512 @@
+{
+  "scope": "Nine integrated keycap/striker source meshes against the corrected upper shell, at 0, 0.25, 0.5, 0.75 and 1 mm downward strokes. Full final assembly is audited separately after all source component repairs.",
+  "coordinateConvention": "Client mm: Blender (x,y,z) -> (x,z,-y). No workspace ground shift applied.",
+  "source": "assets/puretv-controller/housing/top.blend",
+  "sourceName": "pureTV · 按键区圆滑过渡上壳.002",
+  "sha256": "89ae9a34c42304323c61da06d1cde154d6bd44c288ec2533c162b0bad1d78255",
+  "beforeReport": "docs/puretv-geometry-housing-before.json",
+  "repairReport": "docs/puretv-geometry-housing-relief.json",
+  "vertices": 615906,
+  "triangles": 1231844,
+  "boundaryEdges": 0,
+  "nonManifoldEdges": 0,
+  "invertedSourcePolygons": 0,
+  "collapsedTriangles": 0,
+  "maxAxialCoordinateChangeMm": 0.0,
+  "maxLocalHorizontalDisplacementMm": 0.3137642598251045,
+  "keyChecks": [
+    {
+      "key": "left",
+      "sourceName": "左 · PS5 一体式键帽与蓝色插销.003",
+      "lateralWitness": {
+        "distanceMm": 0.32703569531440735,
+        "strokeMm": 0,
+        "movingClient": [
+          -45.14332580566406,
+          36.24037170410156,
+          -22.192134857177734
+        ],
+        "shellClient": [
+          -44.84701156616211,
+          36.255455017089844,
+          -22.329694747924805
+        ],
+        "shellNormalClient": [
+          -0.9002248644828796,
+          -0.17779214680194855,
+          0.3974734842777252
+        ],
+        "shellTriangle": 839000,
+        "axialDistanceFraction": 0.046121304812859566
+      },
+      "axialStopWitness": {
+        "distanceMm": 0.09446549415588379,
+        "strokeMm": 0,
+        "movingClient": [
+          -52.0,
+          32.59291458129883,
+          -27.780000686645508
+        ],
+        "shellClient": [
+          -52.01127243041992,
+          32.686614990234375,
+          -27.78411102294922
+        ],
+        "shellNormalClient": [
+          0.11934928596019745,
+          -0.9918989539146423,
+          0.04349900782108307
+        ],
+        "shellTriangle": 816737,
+        "axialDistanceFraction": 0.9919009027881186
+      },
+      "surfaceIntersections": []
+    },
+    {
+      "key": "right",
+      "sourceName": "右 · PS5 一体式键帽与蓝色插销.003",
+      "lateralWitness": {
+        "distanceMm": 0.37197205424308777,
+        "strokeMm": 1,
+        "movingClient": [
+          -31.7276611328125,
+          36.289021809895836,
+          -17.256317774454754
+        ],
+        "shellClient": [
+          -31.76241111755371,
+          36.26405715942383,
+          -16.88681411743164
+        ],
+        "shellNormalClient": [
+          0.0934191420674324,
+          0.0671025738120079,
+          -0.9933630228042603
+        ],
+        "shellTriangle": 746413,
+        "axialDistanceFraction": 0.06711431729140842
+      },
+      "axialStopWitness": {
+        "distanceMm": 0.05714071914553642,
+        "strokeMm": 0,
+        "movingClient": [
+          -32.53333282470703,
+          33.856663386027016,
+          -27.365743001302082
+        ],
+        "shellClient": [
+          -32.539344787597656,
+          33.91326141357422,
+          -27.360692977905273
+        ],
+        "shellNormalClient": [
+          0.10527556389570236,
+          -0.9905065894126892,
+          -0.08839588612318039
+        ],
+        "shellTriangle": 676155,
+        "axialDistanceFraction": 0.9905025416822055
+      },
+      "surfaceIntersections": []
+    },
+    {
+      "key": "down",
+      "sourceName": "下 · PS5 一体式键帽与蓝色插销.003",
+      "lateralWitness": {
+        "distanceMm": 0.3118797242641449,
+        "strokeMm": 0.75,
+        "movingClient": [
+          -42.19178771972656,
+          36.50376892089844,
+          -18.845693588256836
+        ],
+        "shellClient": [
+          -42.315406799316406,
+          36.45674133300781,
+          -19.12813949584961
+        ],
+        "shellNormalClient": [
+          0.36323246359825134,
+          -0.06320013850927353,
+          0.9295526146888733
+        ],
+        "shellTriangle": 840695,
+        "axialDistanceFraction": 0.1507875768506042
+      },
+      "axialStopWitness": {
+        "distanceMm": 0.07715467363595963,
+        "strokeMm": 0,
+        "movingClient": [
+          -36.66174189249674,
+          33.529937744140625,
+          -12.533333460489908
+        ],
+        "shellClient": [
+          -36.666351318359375,
+          33.6069221496582,
+          -12.535572052001953
+        ],
+        "shellNormalClient": [
+          0.05969885364174843,
+          -0.9977948665618896,
+          0.029007354751229286
+        ],
+        "shellTriangle": 833977,
+        "axialDistanceFraction": 0.9977931587244491
+      },
+      "surfaceIntersections": []
+    },
+    {
+      "key": "up",
+      "sourceName": "上 · PS5 一体式键帽与蓝色插销.003",
+      "lateralWitness": {
+        "distanceMm": 0.3327324390411377,
+        "strokeMm": 1,
+        "movingClient": [
+          -42.52657699584961,
+          36.64034652709961,
+          -25.19801139831543
+        ],
+        "shellClient": [
+          -42.608463287353516,
+          36.560142517089844,
+          -24.885644912719727
+        ],
+        "shellNormalClient": [
+          0.22174771130084991,
+          -0.04331466183066368,
+          -0.974141538143158
+        ],
+        "shellTriangle": 793265,
+        "axialDistanceFraction": 0.24104656053643608
+      },
+      "axialStopWitness": {
+        "distanceMm": 0.04713311791419983,
+        "strokeMm": 0,
+        "movingClient": [
+          -36.68112818400065,
+          33.60643005371094,
+          -31.135813395182293
+        ],
+        "shellClient": [
+          -36.685420989990234,
+          33.65334701538086,
+          -31.134429931640625
+        ],
+        "shellNormalClient": [
+          0.0910273939371109,
+          -0.9954162240028381,
+          -0.029336178675293922
+        ],
+        "shellTriangle": 790080,
+        "axialDistanceFraction": 0.9954139201087557
+      },
+      "surfaceIntersections": []
+    },
+    {
+      "key": "a",
+      "sourceName": "A · 同款插销与圆形键帽.002",
+      "lateralWitness": {
+        "distanceMm": 0.3555186986923218,
+        "strokeMm": 0,
+        "movingClient": [
+          39.186485290527344,
+          33.5882568359375,
+          -4.022402763366699
+        ],
+        "shellClient": [
+          39.06565856933594,
+          33.58770751953125,
+          -3.688046455383301
+        ],
+        "shellNormalClient": [
+          0.3398619592189789,
+          0.0015418125549331307,
+          -0.9404740929603577
+        ],
+        "shellTriangle": 1228669,
+        "axialDistanceFraction": 0.0015451125588344862
+      },
+      "axialStopWitness": {
+        "distanceMm": 0.1690947711467743,
+        "strokeMm": 0,
+        "movingClient": [
+          34.777512868245445,
+          33.946980794270836,
+          -10.852431933085123
+        ],
+        "shellClient": [
+          34.79651641845703,
+          34.1149787902832,
+          -10.84958553314209
+        ],
+        "shellNormalClient": [
+          -0.1124109998345375,
+          -0.9935191869735718,
+          -0.016833432018756866
+        ],
+        "shellTriangle": 1227902,
+        "axialDistanceFraction": 0.9935138435862404
+      },
+      "surfaceIntersections": []
+    },
+    {
+      "key": "b",
+      "sourceName": "B · 同款插销与圆形键帽.002",
+      "lateralWitness": {
+        "distanceMm": 0.35536158084869385,
+        "strokeMm": 0,
+        "movingClient": [
+          56.37675094604492,
+          31.63704490661621,
+          -25.273603439331055
+        ],
+        "shellClient": [
+          56.62031936645508,
+          31.63651466369629,
+          -25.53236198425293
+        ],
+        "shellNormalClient": [
+          -0.6854145526885986,
+          0.0014895139029249549,
+          0.7281514406204224
+        ],
+        "shellTriangle": 1229606,
+        "axialDistanceFraction": 0.0014921222453353569
+      },
+      "axialStopWitness": {
+        "distanceMm": 0.16920249164104462,
+        "strokeMm": 0,
+        "movingClient": [
+          46.14527384440104,
+          32.434471130371094,
+          -20.592742919921875
+        ],
+        "shellClient": [
+          46.16432189941406,
+          32.60258102416992,
+          -20.590341567993164
+        ],
+        "shellNormalClient": [
+          -0.11256910860538483,
+          -0.993542492389679,
+          -0.014190828427672386
+        ],
+        "shellTriangle": 1228949,
+        "axialDistanceFraction": 0.993542661035191
+      },
+      "surfaceIntersections": []
+    },
+    {
+      "key": "x",
+      "sourceName": "X · 同款插销与圆形键帽.002",
+      "lateralWitness": {
+        "distanceMm": 0.3513147532939911,
+        "strokeMm": 0.75,
+        "movingClient": [
+          35.26702753702799,
+          36.96509806315104,
+          -21.106889088948567
+        ],
+        "shellClient": [
+          35.60153579711914,
+          37.03052520751953,
+          -21.02176284790039
+        ],
+        "shellNormalClient": [
+          -0.9680765867233276,
+          -0.01298360712826252,
+          -0.2503178119659424
+        ],
+        "shellTriangle": 214749,
+        "axialDistanceFraction": 0.1862351175264777
+      },
+      "axialStopWitness": {
+        "distanceMm": 0.16909517347812653,
+        "strokeMm": 0,
+        "movingClient": [
+          23.2775141398112,
+          35.14698028564453,
+          -22.352431615193684
+        ],
+        "shellClient": [
+          23.29652214050293,
+          35.314979553222656,
+          -22.349586486816406
+        ],
+        "shellNormalClient": [
+          -0.11241105198860168,
+          -0.9935191869735718,
+          -0.01683409884572029
+        ],
+        "shellTriangle": 1230027,
+        "axialDistanceFraction": 0.9935189995228144
+      },
+      "surfaceIntersections": []
+    },
+    {
+      "key": "y",
+      "sourceName": "Y · 同款插销与圆形键帽.002",
+      "lateralWitness": {
+        "distanceMm": 0.3556600511074066,
+        "strokeMm": 0,
+        "movingClient": [
+          39.186485290527344,
+          33.88825607299805,
+          -27.022403717041016
+        ],
+        "shellClient": [
+          39.06539535522461,
+          33.88545608520508,
+          -26.688003540039062
+        ],
+        "shellNormalClient": [
+          0.34046345949172974,
+          0.007864916697144508,
+          -0.9402247667312622
+        ],
+        "shellTriangle": 1231774,
+        "axialDistanceFraction": 0.00787265194460419
+      },
+      "axialStopWitness": {
+        "distanceMm": 0.16913866996765137,
+        "strokeMm": 0,
+        "movingClient": [
+          34.862291971842446,
+          34.24323399861654,
+          -34.1961555480957
+        ],
+        "shellClient": [
+          34.88127136230469,
+          34.411277770996094,
+          -34.1932258605957
+        ],
+        "shellNormalClient": [
+          -0.11220422387123108,
+          -0.9935342073440552,
+          -0.01731841079890728
+        ],
+        "shellTriangle": 1231046,
+        "axialDistanceFraction": 0.9935266276582059
+      },
+      "surfaceIntersections": []
+    },
+    {
+      "key": "confirm",
+      "sourceName": "确认 · 键帽.007",
+      "lateralWitness": {
+        "distanceMm": 0.3631369471549988,
+        "strokeMm": 0.25,
+        "movingClient": [
+          5.837249596913655,
+          33.44618275392694,
+          -6.3797098110325825
+        ],
+        "shellClient": [
+          6.1777424812316895,
+          33.4288330078125,
+          -6.5047383308410645
+        ],
+        "shellNormalClient": [
+          -0.9429895877838135,
+          -0.02111167460680008,
+          0.33215171098709106
+        ],
+        "shellTriangle": 295010,
+        "axialDistanceFraction": 0.04777741909868315
+      },
+      "axialStopWitness": {
+        "distanceMm": 0.07999610900878906,
+        "strokeMm": 0,
+        "movingClient": [
+          3.549999952316284,
+          29.9700025920167,
+          -9.049999082735493
+        ],
+        "shellClient": [
+          3.549999952316284,
+          30.049999237060547,
+          -9.049999237060547
+        ],
+        "shellNormalClient": [
+          0.0,
+          -1.0,
+          -0.0
+        ],
+        "shellTriangle": 296414,
+        "axialDistanceFraction": 1.000006700764112
+      },
+      "surfaceIntersections": []
+    }
+  ],
+  "upperStopRayEvidence": [
+    {
+      "key": "left",
+      "restingSourceSamplesWithUpperStopBefore": 6,
+      "retainedUpperStopSamplesAfter": 6,
+      "afterMinAxialRayMm": 0.09522423893213272,
+      "afterMaxAxialRayMm": 0.15922333300113678
+    },
+    {
+      "key": "right",
+      "restingSourceSamplesWithUpperStopBefore": 8,
+      "retainedUpperStopSamplesAfter": 6,
+      "afterMinAxialRayMm": 0.05767256021499634,
+      "afterMaxAxialRayMm": 0.09614400565624237
+    },
+    {
+      "key": "down",
+      "restingSourceSamplesWithUpperStopBefore": 6,
+      "retainedUpperStopSamplesAfter": 6,
+      "afterMinAxialRayMm": 0.07731491327285767,
+      "afterMaxAxialRayMm": 0.16496986150741577
+    },
+    {
+      "key": "up",
+      "restingSourceSamplesWithUpperStopBefore": 10,
+      "retainedUpperStopSamplesAfter": 7,
+      "afterMinAxialRayMm": 0.04733692854642868,
+      "afterMaxAxialRayMm": 0.15857289731502533
+    },
+    {
+      "key": "a",
+      "restingSourceSamplesWithUpperStopBefore": 452,
+      "retainedUpperStopSamplesAfter": 339,
+      "afterMinAxialRayMm": 0.17018775641918182,
+      "afterMaxAxialRayMm": 0.3673398196697235
+    },
+    {
+      "key": "b",
+      "restingSourceSamplesWithUpperStopBefore": 452,
+      "retainedUpperStopSamplesAfter": 339,
+      "afterMinAxialRayMm": 0.17028985917568207,
+      "afterMaxAxialRayMm": 0.3675415515899658
+    },
+    {
+      "key": "x",
+      "restingSourceSamplesWithUpperStopBefore": 452,
+      "retainedUpperStopSamplesAfter": 339,
+      "afterMinAxialRayMm": 0.17018744349479675,
+      "afterMaxAxialRayMm": 0.3673398196697235
+    },
+    {
+      "key": "y",
+      "restingSourceSamplesWithUpperStopBefore": 452,
+      "retainedUpperStopSamplesAfter": 339,
+      "afterMinAxialRayMm": 0.1702294647693634,
+      "afterMaxAxialRayMm": 0.3673360049724579
+    },
+    {
+      "key": "confirm",
+      "restingSourceSamplesWithUpperStopBefore": 225,
+      "retainedUpperStopSamplesAfter": 196,
+      "afterMinAxialRayMm": 0.0799865573644638,
+      "afterMaxAxialRayMm": 0.38665586709976196
+    }
+  ],
+  "limitations": [
+    "Distances are source vertex/triangle-centroid witnesses, not complete triangle-triangle minimum-distance certificates.",
+    "Only five discrete stroke poses are tested; intended axial stops are retained and excluded from the lateral 0.30 mm criterion."
+  ],
+  "subsequentRepairReport": "puretv-geometry-confirm-mount-repair.json"
+}

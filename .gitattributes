@@ -1,0 +1,4 @@
+public/models/*.glb binary
+assets/**/*.blend binary
+public/models/*.json linguist-generated=true
+docs/puretv-*.json linguist-generated=true

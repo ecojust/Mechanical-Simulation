@@ -1,0 +1,2041 @@
+{
+  "version": 1,
+  "id": "puretv-source-verified-assembly-v1",
+  "status": "pass",
+  "geometryFingerprint": "410e065d8c02e3895633c224029b80516f4260cc166ca1ecf558313b899e111e",
+  "sourceHashes": [
+    {
+      "assetUrl": "./models/buttons-left.glb",
+      "sourceFile": "assets/puretv-controller/buttons/left.blend",
+      "sourceSha256": "3101d6492dd00cbd2be772090602374be193f264de2eb092fc5eb76f4e9015fc",
+      "displaySha256": "9e4f31a9ab153e9cac33b6ea2f920872485b58315a0ec4f21625eb7c771a7eff"
+    },
+    {
+      "assetUrl": "./models/buttons-right.glb",
+      "sourceFile": "assets/puretv-controller/buttons/right.blend",
+      "sourceSha256": "84e6de6ba5b1e17301acd0cc4f404cc74fb45bf02185f13d17a1240ae1311144",
+      "displaySha256": "5275c4c080f517360fcb1e635fed106b0579065d5c6ab98ba3d1c9e2aba2ec08"
+    },
+    {
+      "assetUrl": "./models/buttons-down.glb",
+      "sourceFile": "assets/puretv-controller/buttons/down.blend",
+      "sourceSha256": "ee9f528457ae365735ba772f891ee3de180854abbd1afdd155862fed2de22c47",
+      "displaySha256": "f64d7d4ed917a2d20ad362543d3ccf7f2bc89ff3add4e4200cabb39cdc2b027d"
+    },
+    {
+      "assetUrl": "./models/buttons-up.glb",
+      "sourceFile": "assets/puretv-controller/buttons/up.blend",
+      "sourceSha256": "8ecd5118238b99caffe3ad7b58998e6b07ddd6be4eff21f70a85a8d08822b909",
+      "displaySha256": "b87624e0867d1eca0f63662106eee69528dbec884f96a6b574b6ce7b2f808b16"
+    },
+    {
+      "assetUrl": "./models/buttons-a.glb",
+      "sourceFile": "assets/puretv-controller/buttons/a.blend",
+      "sourceSha256": "5e50ca2bc37b022d2a8fb85c983a08d3c66100d3705d23d3e9467316516b4508",
+      "displaySha256": "d3016f68b0376fca22e22e1773084b19752d161d9463f25ffa174ddd78f99f7e"
+    },
+    {
+      "assetUrl": "./models/buttons-b.glb",
+      "sourceFile": "assets/puretv-controller/buttons/b.blend",
+      "sourceSha256": "ec5cbb6447b4a2025d85edae8fb7cd11f97d9c6e2ca4a1a7b93001bef20d083d",
+      "displaySha256": "ecfd5ac56cb46aa4265ecefb3aff17ce1e648062962253f7216ec5e0944315d1"
+    },
+    {
+      "assetUrl": "./models/buttons-x.glb",
+      "sourceFile": "assets/puretv-controller/buttons/x.blend",
+      "sourceSha256": "93c1bc7e9ee279a2f1f3f44808639889c6816e210e6bea1f0b304585b4343cbb",
+      "displaySha256": "3bdce491528cde01e888585e7fdb3c5d92f90ea17d234a451d2fe4fc515bfe79"
+    },
+    {
+      "assetUrl": "./models/buttons-y.glb",
+      "sourceFile": "assets/puretv-controller/buttons/y.blend",
+      "sourceSha256": "16333679918ad7bbd8bbedf74becb50889a95044192ee0a2dcb456a61e85ee01",
+      "displaySha256": "3c46ec708806f4b263ff1399413449d0243569868b4dd0db77892477190640d5"
+    },
+    {
+      "assetUrl": "./models/buttons-confirm.glb",
+      "sourceFile": "assets/puretv-controller/buttons/confirm.blend",
+      "sourceSha256": "6b42811a2e4f6bc66f0a5edcf5fd7de0226795ebdfeca60e4bb6c36ae8751865",
+      "displaySha256": "b4809e89d0129b80f2d3e6c7806f858a2a6a0571ccb83b744d508a71a0df8193"
+    },
+    {
+      "assetUrl": "./models/baseplates-dpad.glb",
+      "sourceFile": "assets/puretv-controller/baseplates/dpad.blend",
+      "sourceSha256": "f15c56ca076c87be9a098ef054db5206c6352c788cada8884806203e255f76a6",
+      "displaySha256": "ac97ec9b3393f9eb08e84ec7a2aa1cbf5e69b2ac8fb6554b2c8c7ae96105b575"
+    },
+    {
+      "assetUrl": "./models/baseplates-abxy.glb",
+      "sourceFile": "assets/puretv-controller/baseplates/abxy.blend",
+      "sourceSha256": "da515976fc39bab26bcb1e1bd3d68e1e7367bc7186245e5028bde98c3d034a78",
+      "displaySha256": "e93d2846e5498bda0eda6d1a4f3a3c805fe49ac4efb4d813ed654d1f572527d4"
+    },
+    {
+      "assetUrl": "./models/housing-top.glb",
+      "sourceFile": "assets/puretv-controller/housing/top.blend",
+      "sourceSha256": "c988fa32f19567f0ed0f913609615723f366a20506386f1e3eed0fdd26b05cce",
+      "displaySha256": "ac471b4d5138f4a2224960b732be982e9448e0a01e4d38953201f43c87c475b2"
+    },
+    {
+      "assetUrl": "./models/housing-bottom.glb",
+      "sourceFile": "assets/puretv-controller/housing/bottom.blend",
+      "sourceSha256": "44bb57f9b1571b7abb70571a5a90344e3d0ea3733c3bac26c680fec62c0e0514",
+      "displaySha256": "0056d4edf5ab39f70a3471911f3c4646ab5ff1ad226105f6bcbfe764078b6485"
+    },
+    {
+      "assetUrl": "./models/electronics-esp32-mount.glb",
+      "sourceFile": "assets/puretv-controller/electronics/esp32-mount.blend",
+      "sourceSha256": "1f6ad69caa250b89d2b403c904ab37ec21a4e4437df757080f619edf2bd0e64c",
+      "displaySha256": "f79134eeaf033283a167eb8fd0aed17cc36f90b33142725ca2f443b52b4270d4"
+    },
+    {
+      "assetUrl": "./models/electronics-harness.glb",
+      "sourceFile": "assets/puretv-controller/electronics/harness.blend",
+      "sourceSha256": "2dbed56630b7a16391a584b98b12e2b756cde3a632bf063bd81d885885d3aa91",
+      "displaySha256": "dfb703993607c840843683f6e17126d04a947eb95a9555d5dded7c7d0bd59319"
+    }
+  ],
+  "scope": {
+    "description": "绑定整机的源网格采样、名义尺寸/触点及真实MCP逐键验证；不适用于任意编辑。",
+    "interfaces": [
+      "source fixed-fixed geometry",
+      "all source moving/spring/actuator paths against the full environment",
+      "source insertion/lock/removal interfaces",
+      "calibrated striker/switch contact",
+      "ten analytic bench entities and nine electrical branches"
+    ],
+    "excluded": [],
+    "limitations": [
+      "Source collision/clearance evidence is limited to recorded discrete poses and bounded containment witnesses, not continuous collision detection or manufacturing certification.",
+      "Spring stiffness, mass, damping and switch overtravel are the declared nominal calibration assumptions, not measured material/fatigue/friction certification.",
+      "Spring collision poses use the declared runtime model's axial scaling of the source mesh; constant-wire-section helix deformation and wire self-contact are not solved.",
+      "Mesh self-intersection checks cover every harness object; other source objects are covered by the recorded inter-object/interface audits, not a general self-intersection or manufacturing-defect certificate.",
+      "Nine lamps and one power source are an external analytic test bench; logical wires do not certify manufactured insulation, solder joints or ESP32 firmware.",
+      "Lock/mount trajectories cover named mating pairs in their reported open-housing assembly sequence; they do not certify inserting assembled modules into a closed shell or all-component maintenance sweeps.",
+      "The declared compliant lock pads undergo substantial nominal compression during insertion. Allowable pad strain, nonlinear stiffness, assembly force and service life have not been measured; rigid path clearance is not a pad material certification."
+    ]
+  },
+  "coverage": {
+    "partCount": 193,
+    "mechanismCount": 9,
+    "staticGeometry": "complete",
+    "movingAgainstEnvironment": "complete",
+    "stateMode": "joint-range",
+    "movingPaths": [
+      {
+        "mechanismKey": "mechanism:99f95fdd33e1d194724654c97796b7068b17ab9c783c89fef6ced396c72e9552",
+        "minDisplacement": 0,
+        "maxDisplacement": 1,
+        "continuous": false,
+        "maxSampleStepMm": 0.25,
+        "sourceChecked": true
+      },
+      {
+        "mechanismKey": "mechanism:4fcbb18a703acbdd64b2514fa706ac86b8cdcb17e79c85668b49d6eabee1bd1c",
+        "minDisplacement": 0,
+        "maxDisplacement": 1,
+        "continuous": false,
+        "maxSampleStepMm": 0.25,
+        "sourceChecked": true
+      },
+      {
+        "mechanismKey": "mechanism:9a77ad2fabd5d12f08f086d1d9fababacb7d8f3d8d47537309561054ef530067",
+        "minDisplacement": 0,
+        "maxDisplacement": 1,
+        "continuous": false,
+        "maxSampleStepMm": 0.25,
+        "sourceChecked": true
+      },
+      {
+        "mechanismKey": "mechanism:58b1ef4176e60a11abac5338bde85c2ad48598782b6b4fe652947e7b644c17f6",
+        "minDisplacement": 0,
+        "maxDisplacement": 1,
+        "continuous": false,
+        "maxSampleStepMm": 0.25,
+        "sourceChecked": true
+      },
+      {
+        "mechanismKey": "mechanism:338f4f1e5059a94d2cb35ecb8aa552208b4a93349a8fefadaccb4b47c3bfe193",
+        "minDisplacement": 0,
+        "maxDisplacement": 1,
+        "continuous": false,
+        "maxSampleStepMm": 0.25,
+        "sourceChecked": true
+      },
+      {
+        "mechanismKey": "mechanism:a59f0ca4ca093dd33941a53802bca9f7c9b88f1276de1bec7a06f7260448ea8a",
+        "minDisplacement": 0,
+        "maxDisplacement": 1,
+        "continuous": false,
+        "maxSampleStepMm": 0.25,
+        "sourceChecked": true
+      },
+      {
+        "mechanismKey": "mechanism:9a78268a81c932e942c86f198c0be4944c707e5d56f3dea95252baff58e26a0f",
+        "minDisplacement": 0,
+        "maxDisplacement": 1,
+        "continuous": false,
+        "maxSampleStepMm": 0.25,
+        "sourceChecked": true
+      },
+      {
+        "mechanismKey": "mechanism:157d93b08045d9e74994556d73b52e92f35364d17a8dcb10413faf8b56c3eac3",
+        "minDisplacement": 0,
+        "maxDisplacement": 1,
+        "continuous": false,
+        "maxSampleStepMm": 0.25,
+        "sourceChecked": true
+      },
+      {
+        "mechanismKey": "mechanism:ba11690375e3096abdd21a3c96c84e1ce5a5bea4681440a3be9198216ced9b28",
+        "minDisplacement": 0,
+        "maxDisplacement": 1,
+        "continuous": false,
+        "maxSampleStepMm": 0.25,
+        "sourceChecked": true
+      }
+    ],
+    "allowedContacts": [
+      {
+        "partKeys": [
+          "part:6ceec1e6f9d964ca312eaaa1cab1b61701910d4c3396253ac56fcd46c14abb89",
+          "part:8e9498bff3651c575a061169e24f0fea71f8702df5fcdcc13648fbcb4a82974a"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[57.04532004760742,20.2122702734375,19.977499204101562],\"max\":[58.1595558984375,21.7877297265625,19.982569204101562]}],\"localRegionProof\":{\"proven\":true,\"method\":\"Every triangle contact bounded by one declared patch; float64 clipping where conservative AABBs exceed a patch; exhaustive bidirectional input-vertex containment\",\"exhaustiveVertices\":1792,\"exactTrianglePairClips\":0,\"regionCount\":1}}",
+        "maxPenetrationMm": 0.00505,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#6bd41acf775430e09a6cb580"
+      },
+      {
+        "partKeys": [
+          "part:6ceec1e6f9d964ca312eaaa1cab1b61701910d4c3396253ac56fcd46c14abb89",
+          "part:22d266cd2f0f3234859fd888cc2a56e31cf86071ee976749563e28160d008181"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[49.01534415649414,24.61696006225586,19.977499204101562],\"max\":[50.78056572509766,26.247869954833984,19.982569204101562]}],\"localRegionProof\":{\"proven\":true,\"method\":\"Every triangle contact bounded by one declared patch; float64 clipping where conservative AABBs exceed a patch; exhaustive bidirectional input-vertex containment\",\"exhaustiveVertices\":2357,\"exactTrianglePairClips\":0,\"regionCount\":1}}",
+        "maxPenetrationMm": 0.00505,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#36679e369573479567db9f92"
+      },
+      {
+        "partKeys": [
+          "part:6ceec1e6f9d964ca312eaaa1cab1b61701910d4c3396253ac56fcd46c14abb89",
+          "part:a050bb22a90c4e822aaffc042032adf47870c863ecfcb537ed3ea809fee86403"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[49.01534415649414,15.7521290914917,19.977499204101562],\"max\":[50.78056572509766,17.38303993774414,19.982569204101562]}],\"localRegionProof\":{\"proven\":true,\"method\":\"Every triangle contact bounded by one declared patch; float64 clipping where conservative AABBs exceed a patch; exhaustive bidirectional input-vertex containment\",\"exhaustiveVertices\":2357,\"exactTrianglePairClips\":0,\"regionCount\":1}}",
+        "maxPenetrationMm": 0.00505,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#eb021e3fee6d4b71e04e11c5"
+      },
+      {
+        "partKeys": [
+          "part:0c226fefb2d99cb38ccb8b39c2d01510be81c3278bda932967d0048298967fb1",
+          "part:f6ee5c764d0d21e31527853413619eae8eab39e3a529afd8ea36cca0c9165f9f"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[45.54532004760742,8.7122702734375,19.977499204101562],\"max\":[46.6595558984375,10.2877297265625,19.982569204101562]}],\"localRegionProof\":{\"proven\":true,\"method\":\"Every triangle contact bounded by one declared patch; float64 clipping where conservative AABBs exceed a patch; exhaustive bidirectional input-vertex containment\",\"exhaustiveVertices\":1792,\"exactTrianglePairClips\":0,\"regionCount\":1}}",
+        "maxPenetrationMm": 0.00505,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#aa6a0601dfa61b1354347a30"
+      },
+      {
+        "partKeys": [
+          "part:0c226fefb2d99cb38ccb8b39c2d01510be81c3278bda932967d0048298967fb1",
+          "part:12d29fe1a3fc501c946d1e1bad7fb8e51367d5b0b2db9375fc59967c1157566f"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[37.51534415649414,13.116959108581543,19.977499204101562],\"max\":[39.28056572509766,14.7478709085083,19.982569204101562]}],\"localRegionProof\":{\"proven\":true,\"method\":\"Every triangle contact bounded by one declared patch; float64 clipping where conservative AABBs exceed a patch; exhaustive bidirectional input-vertex containment\",\"exhaustiveVertices\":2357,\"exactTrianglePairClips\":0,\"regionCount\":1}}",
+        "maxPenetrationMm": 0.00505,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#a4030204e6e263b62c999db9"
+      },
+      {
+        "partKeys": [
+          "part:0c226fefb2d99cb38ccb8b39c2d01510be81c3278bda932967d0048298967fb1",
+          "part:1cd40f7d581c96dd44a58a37c6fe330f1ee4e346cacf003a78bb99d4f1cc4830"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[37.51534415649414,4.252129568328858,19.977499204101562],\"max\":[39.28056572509766,5.8830404145812984,19.982569204101562]}],\"localRegionProof\":{\"proven\":true,\"method\":\"Every triangle contact bounded by one declared patch; float64 clipping where conservative AABBs exceed a patch; exhaustive bidirectional input-vertex containment\",\"exhaustiveVertices\":2357,\"exactTrianglePairClips\":0,\"regionCount\":1}}",
+        "maxPenetrationMm": 0.00505,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#66bd57d752b0ab1ed61a7b65"
+      },
+      {
+        "partKeys": [
+          "part:e32da594de4c2d2b106ae64c6f7db8d225c417a4356a08707c0e826b3826f8f3",
+          "part:6ea17b23e515465e6a6a7f4d992ec399c1b0aa2952ee1880cd0471b346b0ba29"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[34.04532004760742,20.2122702734375,19.977499204101562],\"max\":[35.1595558984375,21.7877297265625,19.982569204101562]}],\"localRegionProof\":{\"proven\":true,\"method\":\"Every triangle contact bounded by one declared patch; float64 clipping where conservative AABBs exceed a patch; exhaustive bidirectional input-vertex containment\",\"exhaustiveVertices\":1792,\"exactTrianglePairClips\":0,\"regionCount\":1}}",
+        "maxPenetrationMm": 0.00505,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#79db08e486b8cff7cfca9a42"
+      },
+      {
+        "partKeys": [
+          "part:e32da594de4c2d2b106ae64c6f7db8d225c417a4356a08707c0e826b3826f8f3",
+          "part:c6265e7ffef39fd2cbb4e9a5a7c7d295455b9681363e8cd61c669a64a69dfee2"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[26.015346063842774,24.61696006225586,19.977499204101562],\"max\":[27.780565725097656,26.247869954833984,19.982569204101562]}],\"localRegionProof\":{\"proven\":true,\"method\":\"Every triangle contact bounded by one declared patch; float64 clipping where conservative AABBs exceed a patch; exhaustive bidirectional input-vertex containment\",\"exhaustiveVertices\":2357,\"exactTrianglePairClips\":0,\"regionCount\":1}}",
+        "maxPenetrationMm": 0.00505,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#162ee3e77314426ab524ad77"
+      },
+      {
+        "partKeys": [
+          "part:e32da594de4c2d2b106ae64c6f7db8d225c417a4356a08707c0e826b3826f8f3",
+          "part:4541158d8f5ae846e3a4af62a461a6d9e8b42ff9ce28c2c468ab112155277b52"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[26.015346063842774,15.7521290914917,19.977499204101562],\"max\":[27.780565725097656,17.38303993774414,19.982569204101562]}],\"localRegionProof\":{\"proven\":true,\"method\":\"Every triangle contact bounded by one declared patch; float64 clipping where conservative AABBs exceed a patch; exhaustive bidirectional input-vertex containment\",\"exhaustiveVertices\":2357,\"exactTrianglePairClips\":0,\"regionCount\":1}}",
+        "maxPenetrationMm": 0.00505,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#e35d465784a628c6a5b40c92"
+      },
+      {
+        "partKeys": [
+          "part:b6f838f942848d63698b866984e0e2c3d15dd63d28a1fce71254e494addbd4dc",
+          "part:08f45cb622030da25ae43452b898683c2221c463242055121ec66d1553679b2c"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[-46.654680715332034,21.209487451782227,15.899943786087036],\"max\":[-45.520448221435544,22.790512548217773,15.905013786087036]}],\"localRegionProof\":{\"proven\":true,\"method\":\"Every triangle contact bounded by one declared patch; float64 clipping where conservative AABBs exceed a patch; exhaustive bidirectional input-vertex containment\",\"exhaustiveVertices\":1792,\"exactTrianglePairClips\":0,\"regionCount\":1}}",
+        "maxPenetrationMm": 0.00505,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#ae67805502421cb0b4034d25"
+      },
+      {
+        "partKeys": [
+          "part:b6f838f942848d63698b866984e0e2c3d15dd63d28a1fce71254e494addbd4dc",
+          "part:69136c71da2f801d1de48cca731920efc81176a32b641896a4dd76d972a39dd8"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[-54.69696663452149,25.61696006225586,15.899943786087036],\"max\":[-52.919435037841794,27.26641510559082,15.905013786087036]}],\"localRegionProof\":{\"proven\":true,\"method\":\"Every triangle contact bounded by one declared patch; float64 clipping where conservative AABBs exceed a patch; exhaustive bidirectional input-vertex containment\",\"exhaustiveVertices\":2359,\"exactTrianglePairClips\":0,\"regionCount\":1}}",
+        "maxPenetrationMm": 0.00505,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#64adfcee48a8562e327ec344"
+      },
+      {
+        "partKeys": [
+          "part:b6f838f942848d63698b866984e0e2c3d15dd63d28a1fce71254e494addbd4dc",
+          "part:ed21ffe8c1c424379bf61dd8291f866266bcb467afe7bf45ab149abd64582943"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[-54.69696663452149,16.73358489440918,15.899943786087036],\"max\":[-52.919435037841794,18.38303993774414,15.905013786087036]}],\"localRegionProof\":{\"proven\":true,\"method\":\"Every triangle contact bounded by one declared patch; float64 clipping where conservative AABBs exceed a patch; exhaustive bidirectional input-vertex containment\",\"exhaustiveVertices\":2359,\"exactTrianglePairClips\":0,\"regionCount\":1}}",
+        "maxPenetrationMm": 0.00505,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#b0498724cfef9ece09cc48f5"
+      },
+      {
+        "partKeys": [
+          "part:3967c2be41e9c687158b72c8c4552790d118c216f11204876ad9ca00f2df7cc6",
+          "part:7518c258bfa2c1bf8797415a573d6edac46ac5df807f6dc9bbebf042aa33c7f4"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[-42.79051445556641,17.345321192016602,15.89994009059906],\"max\":[-41.20948554443359,18.479551778564453,15.90501009059906]}],\"localRegionProof\":{\"proven\":true,\"method\":\"Every triangle contact bounded by one declared patch; float64 clipping where conservative AABBs exceed a patch; exhaustive bidirectional input-vertex containment\",\"exhaustiveVertices\":1792,\"exactTrianglePairClips\":0,\"regionCount\":1}}",
+        "maxPenetrationMm": 0.00505,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#ed16c65b7101cb33625bc8a2"
+      },
+      {
+        "partKeys": [
+          "part:3967c2be41e9c687158b72c8c4552790d118c216f11204876ad9ca00f2df7cc6",
+          "part:5fe2d2187916d7fa12b12dbacf6eeb7e3b9c10c68015412cd6cee77cb381183e"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[-47.26641319824219,9.3030324118042,15.89994009059906],\"max\":[-45.616960062255856,11.08056591583252,15.90501009059906]}],\"localRegionProof\":{\"proven\":true,\"method\":\"Every triangle contact bounded by one declared patch; float64 clipping where conservative AABBs exceed a patch; exhaustive bidirectional input-vertex containment\",\"exhaustiveVertices\":2359,\"exactTrianglePairClips\":0,\"regionCount\":1}}",
+        "maxPenetrationMm": 0.00505,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#b657e16528fbb7dc2202372d"
+      },
+      {
+        "partKeys": [
+          "part:3967c2be41e9c687158b72c8c4552790d118c216f11204876ad9ca00f2df7cc6",
+          "part:6d9d3c9308329c046e592f8250c7795ed1823febaaaf83bc0a4662f21c485443"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[-38.383039937744144,9.3030324118042,15.89994009059906],\"max\":[-36.73358680175781,11.08056591583252,15.90501009059906]}],\"localRegionProof\":{\"proven\":true,\"method\":\"Every triangle contact bounded by one declared patch; float64 clipping where conservative AABBs exceed a patch; exhaustive bidirectional input-vertex containment\",\"exhaustiveVertices\":2359,\"exactTrianglePairClips\":0,\"regionCount\":1}}",
+        "maxPenetrationMm": 0.00505,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#0edc80af05dd2042497d5c03"
+      },
+      {
+        "partKeys": [
+          "part:de3a625f5f6d50d14724db9e0eb441bff68fcc938c22b7cc6273a6ab38f70f7a",
+          "part:cd226dc4817d8001211f41b17a08ebcf92b590676f9b62ca3fbd87d5764c1a40"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[-38.479551778564456,21.209487451782227,15.899943190040588],\"max\":[-37.345319284667966,22.790512548217773,15.905013190040588]}],\"localRegionProof\":{\"proven\":true,\"method\":\"Every triangle contact bounded by one declared patch; float64 clipping where conservative AABBs exceed a patch; exhaustive bidirectional input-vertex containment\",\"exhaustiveVertices\":1792,\"exactTrianglePairClips\":0,\"regionCount\":1}}",
+        "maxPenetrationMm": 0.00505,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#81c0bb3e8b1f7ae3241b886c"
+      },
+      {
+        "partKeys": [
+          "part:de3a625f5f6d50d14724db9e0eb441bff68fcc938c22b7cc6273a6ab38f70f7a",
+          "part:e6c6570c0fb6fbd7b417acf3c2bdb1967b5a885890f21f8a19e115f751867026"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[-31.080564962158203,16.73358489440918,15.899943190040588],\"max\":[-29.303033365478516,18.38303993774414,15.905013190040588]}],\"localRegionProof\":{\"proven\":true,\"method\":\"Every triangle contact bounded by one declared patch; float64 clipping where conservative AABBs exceed a patch; exhaustive bidirectional input-vertex containment\",\"exhaustiveVertices\":2359,\"exactTrianglePairClips\":0,\"regionCount\":1}}",
+        "maxPenetrationMm": 0.00505,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#aab9ec19cfaed120f00bf70b"
+      },
+      {
+        "partKeys": [
+          "part:de3a625f5f6d50d14724db9e0eb441bff68fcc938c22b7cc6273a6ab38f70f7a",
+          "part:2804fa3f5c8eaa4aa797dca3716affdc8004844d2fb82809958cded65ea5acc3"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[-31.080564962158203,25.61696006225586,15.899943190040588],\"max\":[-29.303033365478516,27.26641510559082,15.905013190040588]}],\"localRegionProof\":{\"proven\":true,\"method\":\"Every triangle contact bounded by one declared patch; float64 clipping where conservative AABBs exceed a patch; exhaustive bidirectional input-vertex containment\",\"exhaustiveVertices\":2359,\"exactTrianglePairClips\":0,\"regionCount\":1}}",
+        "maxPenetrationMm": 0.00505,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#57a8c326f050c24688f87b24"
+      },
+      {
+        "partKeys": [
+          "part:48206a0fc3c9be31700fc380eb8a9a65fb53b50c294a2b3fe0d4fd8ec53f3eae",
+          "part:e3c8c6621719b296bb24be6acffaf14d15e01e24368794da914fffe796e8060e"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[-42.79051445556641,25.520448221435547,15.899938779296875],\"max\":[-41.20948554443359,26.654678807983398,15.905008779296875]}],\"localRegionProof\":{\"proven\":true,\"method\":\"Every triangle contact bounded by one declared patch; float64 clipping where conservative AABBs exceed a patch; exhaustive bidirectional input-vertex containment\",\"exhaustiveVertices\":1792,\"exactTrianglePairClips\":0,\"regionCount\":1}}",
+        "maxPenetrationMm": 0.00505,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#ae87d4911a47fb9936e33e5e"
+      },
+      {
+        "partKeys": [
+          "part:48206a0fc3c9be31700fc380eb8a9a65fb53b50c294a2b3fe0d4fd8ec53f3eae",
+          "part:9565f5a9918aaf9967b883e57621853fc97c59b7c1f025c9cf91ea48e1d4a858"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[-38.383039937744144,32.919435037841794,15.899938779296875],\"max\":[-36.73358680175781,34.69696663452149,15.905008779296875]}],\"localRegionProof\":{\"proven\":true,\"method\":\"Every triangle contact bounded by one declared patch; float64 clipping where conservative AABBs exceed a patch; exhaustive bidirectional input-vertex containment\",\"exhaustiveVertices\":2359,\"exactTrianglePairClips\":0,\"regionCount\":1}}",
+        "maxPenetrationMm": 0.00505,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#525cd8f208508c0106e8f8f3"
+      },
+      {
+        "partKeys": [
+          "part:48206a0fc3c9be31700fc380eb8a9a65fb53b50c294a2b3fe0d4fd8ec53f3eae",
+          "part:f054e1abca14d88ed7d64454887a159e4afb2ccacc086f87dfe64cf3a1a3fa38"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[-47.26641319824219,32.919435037841794,15.899938779296875],\"max\":[-45.616960062255856,34.69696663452149,15.905008779296875]}],\"localRegionProof\":{\"proven\":true,\"method\":\"Every triangle contact bounded by one declared patch; float64 clipping where conservative AABBs exceed a patch; exhaustive bidirectional input-vertex containment\",\"exhaustiveVertices\":2359,\"exactTrianglePairClips\":0,\"regionCount\":1}}",
+        "maxPenetrationMm": 0.00505,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#2dcaf4f72714e370d3ddc25a"
+      },
+      {
+        "partKeys": [
+          "part:2349ffb91a5c5893ce82d400ee9465bfb3707927c7732a1faa4df9458da8972d",
+          "part:5f56474a4cf9a71f6837746698a319ea45502454f3ba93f7d021ab07209e8977"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[45.54532004760742,31.7122702734375,19.977499204101562],\"max\":[46.6595558984375,33.2877297265625,19.982569204101562]}],\"localRegionProof\":{\"proven\":true,\"method\":\"Every triangle contact bounded by one declared patch; float64 clipping where conservative AABBs exceed a patch; exhaustive bidirectional input-vertex containment\",\"exhaustiveVertices\":1792,\"exactTrianglePairClips\":0,\"regionCount\":1}}",
+        "maxPenetrationMm": 0.00505,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#67a1bda0e353e6d30d400cc6"
+      },
+      {
+        "partKeys": [
+          "part:2349ffb91a5c5893ce82d400ee9465bfb3707927c7732a1faa4df9458da8972d",
+          "part:0dd837becff3908cc5285fbc0378432a4683eefd2bb5d7c42cf3325dd3b00f53"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[37.51534415649414,36.116960062255856,19.977499204101562],\"max\":[39.28056572509766,37.74786995483399,19.982569204101562]}],\"localRegionProof\":{\"proven\":true,\"method\":\"Every triangle contact bounded by one declared patch; float64 clipping where conservative AABBs exceed a patch; exhaustive bidirectional input-vertex containment\",\"exhaustiveVertices\":2357,\"exactTrianglePairClips\":0,\"regionCount\":1}}",
+        "maxPenetrationMm": 0.00505,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#3f8d0aec41090871d653325b"
+      },
+      {
+        "partKeys": [
+          "part:2349ffb91a5c5893ce82d400ee9465bfb3707927c7732a1faa4df9458da8972d",
+          "part:e9c9b617d5b6b96067c8de44e7f1302c8e98f57c975e359d0bc3c3fa367b217c"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[37.51534415649414,27.252130045166016,19.977499204101562],\"max\":[39.28056572509766,28.88303993774414,19.982569204101562]}],\"localRegionProof\":{\"proven\":true,\"method\":\"Every triangle contact bounded by one declared patch; float64 clipping where conservative AABBs exceed a patch; exhaustive bidirectional input-vertex containment\",\"exhaustiveVertices\":2357,\"exactTrianglePairClips\":0,\"regionCount\":1}}",
+        "maxPenetrationMm": 0.00505,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#46002889554a00397ecac979"
+      },
+      {
+        "partKeys": [
+          "part:5b87dbee3ecdca66f50209020fad3a33095312306a42e2c170a7fe36d674b32b",
+          "part:722ad441515b2159dabf72494accf36b5d33f912a879bd2572f7ff39f348bca5"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[4.5780589763270285,10.71018287943791,25.4499],\"max\":[6.96528845294775,13.071273991642206,25.4501]},{\"min\":[-6.965287277688244,-2.071275758568655,25.4499],\"max\":[-4.557049567800244,0.2899433799547754,25.4501]}],\"localRegionProof\":{\"proven\":true,\"method\":\"Every triangle contact bounded by one declared patch; float64 clipping where conservative AABBs exceed a patch; exhaustive bidirectional input-vertex containment\",\"exhaustiveVertices\":3956,\"exactTrianglePairClips\":15,\"regionCount\":2}}",
+        "maxPenetrationMm": 0.00001,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#3c3705e90746999e005f55f4"
+      },
+      {
+        "partKeys": [
+          "part:9baaeef3cfcdb86573d2a7b66e8eec0331e03c33e692f721c93e7b4131c70090",
+          "part:afaadaeee823d86e2c081e2143597d0a7eafc207c4c85e4bfc5b28641ae74c7f"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[31.579899062231398,11.5798990622314,14.427900000000001],\"max\":[33.440101395532274,13.440101395532272,17.620100839233398]}],\"localRegionProof\":{\"proven\":true,\"method\":\"Every triangle contact bounded by one declared patch; float64 clipping where conservative AABBs exceed a patch; exhaustive bidirectional input-vertex containment\",\"exhaustiveVertices\":421,\"exactTrianglePairClips\":0,\"regionCount\":1},\"annularRegionProof\":{\"proven\":true,\"method\":\"Complete exact intersection extrema fit the outer cylinder/height; one member has no source boundary in the excluded inner cylinder and its cylinder-centre volume test is outside\",\"emptyInnerCylinderSource\":\"housing/bottom.blend::底壳 · 合壳.007\",\"innerCylinderBoundaryTrianglesExamined\":3481,\"exhaustiveVertices\":421,\"exactTrianglePairs\":392,\"annularRegion\":{\"axisCenterSourceXY\":[32.510000228881836,12.510000228881836],\"innerRadiusMm\":0.8488356760606516,\"outerRadiusMm\":0.930101166650437,\"sourceZMin\":14.427900000000001,\"sourceZMax\":17.620100839233398}}}",
+        "maxPenetrationMm": 0.0810754905897854,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#a13db82852ad874add3b52bc"
+      },
+      {
+        "partKeys": [
+          "part:3c866c599b7459434f0615ddf50a7df954746d8ab8189f5b6a781aac5c19bad8",
+          "part:afaadaeee823d86e2c081e2143597d0a7eafc207c4c85e4bfc5b28641ae74c7f"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[48.55989781203121,11.579898269794887,14.427900000000001],\"max\":[50.42010173020512,13.440102187968785,17.620100839233398]}],\"localRegionProof\":{\"proven\":true,\"method\":\"Every triangle contact bounded by one declared patch; float64 clipping where conservative AABBs exceed a patch; exhaustive bidirectional input-vertex containment\",\"exhaustiveVertices\":331,\"exactTrianglePairClips\":0,\"regionCount\":1},\"annularRegionProof\":{\"proven\":true,\"method\":\"Complete exact intersection extrema fit the outer cylinder/height; one member has no source boundary in the excluded inner cylinder and its cylinder-centre volume test is outside\",\"emptyInnerCylinderSource\":\"housing/bottom.blend::底壳 · 合壳.007\",\"innerCylinderBoundaryTrianglesExamined\":443,\"exhaustiveVertices\":331,\"exactTrianglePairs\":333,\"annularRegion\":{\"axisCenterSourceXY\":[49.489999771118164,12.510000228881836],\"innerRadiusMm\":0.8488422622698598,\"outerRadiusMm\":0.9301019590869491,\"sourceZMin\":14.427900000000001,\"sourceZMax\":17.620100839233398}}}",
+        "maxPenetrationMm": 0.08106969681708935,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#bc97a70367987019b06ce3a7"
+      },
+      {
+        "partKeys": [
+          "part:0eef02bda0c10e6a01f5b3ff76c0c7a631482e99e00a5f51656d8aaa5e5aeaaf",
+          "part:afaadaeee823d86e2c081e2143597d0a7eafc207c4c85e4bfc5b28641ae74c7f"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[48.559897718554424,28.559898672228748,14.427900000000001],\"max\":[50.420101823681904,30.420102777356213,17.620100839233398]}],\"localRegionProof\":{\"proven\":true,\"method\":\"Every triangle contact bounded by one declared patch; float64 clipping where conservative AABBs exceed a patch; exhaustive bidirectional input-vertex containment\",\"exhaustiveVertices\":331,\"exactTrianglePairClips\":0,\"regionCount\":1},\"annularRegionProof\":{\"proven\":true,\"method\":\"Complete exact intersection extrema fit the outer cylinder/height; one member has no source boundary in the excluded inner cylinder and its cylinder-centre volume test is outside\",\"emptyInnerCylinderSource\":\"housing/bottom.blend::底壳 · 合壳.007\",\"innerCylinderBoundaryTrianglesExamined\":393,\"exhaustiveVertices\":331,\"exactTrianglePairs\":333,\"annularRegion\":{\"axisCenterSourceXY\":[49.489999771118164,29.49000072479248],\"innerRadiusMm\":0.8488416136038209,\"outerRadiusMm\":0.9301020525637329,\"sourceZMin\":14.427900000000001,\"sourceZMax\":17.620100839233398}}}",
+        "maxPenetrationMm": 0.08107043895991199,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#5fe2f06d922149bd272c03a2"
+      },
+      {
+        "partKeys": [
+          "part:bd5092eb82c7792f58a11d63101970f84cca8ee908ef811ab4ba28405f18a588",
+          "part:afaadaeee823d86e2c081e2143597d0a7eafc207c4c85e4bfc5b28641ae74c7f"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[31.57989865923342,28.559899155144066,14.427900000000001],\"max\":[33.44010179853025,30.420102294440895,17.620100839233398]}],\"localRegionProof\":{\"proven\":true,\"method\":\"Every triangle contact bounded by one declared patch; float64 clipping where conservative AABBs exceed a patch; exhaustive bidirectional input-vertex containment\",\"exhaustiveVertices\":331,\"exactTrianglePairClips\":0,\"regionCount\":1},\"annularRegionProof\":{\"proven\":true,\"method\":\"Complete exact intersection extrema fit the outer cylinder/height; one member has no source boundary in the excluded inner cylinder and its cylinder-centre volume test is outside\",\"emptyInnerCylinderSource\":\"housing/bottom.blend::底壳 · 合壳.007\",\"innerCylinderBoundaryTrianglesExamined\":347,\"exhaustiveVertices\":331,\"exactTrianglePairs\":333,\"annularRegion\":{\"axisCenterSourceXY\":[32.510000228881836,29.49000072479248],\"innerRadiusMm\":0.8488416136038209,\"outerRadiusMm\":0.9301015696484134,\"sourceZMin\":14.427900000000001,\"sourceZMax\":17.620100839233398}}}",
+        "maxPenetrationMm": 0.08106995604459248,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#b0fcc0d6b879d2fd52fe02af"
+      },
+      {
+        "partKeys": [
+          "part:2380f0d5a55fd9962ce52723606d9d8df85638b81a47aa083c12747ba7a7acdb",
+          "part:afaadaeee823d86e2c081e2143597d0a7eafc207c4c85e4bfc5b28641ae74c7f"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[-50.35010208211917,13.649898394717994,11.1979],\"max\":[-48.48989807046872,15.510102406368432,14.220100267028808]}],\"localRegionProof\":{\"proven\":true,\"method\":\"Every triangle contact bounded by one declared patch; float64 clipping where conservative AABBs exceed a patch; exhaustive bidirectional input-vertex containment\",\"exhaustiveVertices\":331,\"exactTrianglePairClips\":0,\"regionCount\":1},\"annularRegionProof\":{\"proven\":true,\"method\":\"Complete exact intersection extrema fit the outer cylinder/height; one member has no source boundary in the excluded inner cylinder and its cylinder-centre volume test is outside\",\"emptyInnerCylinderSource\":\"housing/bottom.blend::底壳 · 合壳.007\",\"innerCylinderBoundaryTrianglesExamined\":461,\"exhaustiveVertices\":331,\"exactTrianglePairs\":333,\"annularRegion\":{\"axisCenterSourceXY\":[-49.420000076293945,14.580000400543213],\"innerRadiusMm\":0.848842262265692,\"outerRadiusMm\":0.93010200582522,\"sourceZMin\":11.1979,\"sourceZMax\":14.220100267028808}}}",
+        "maxPenetrationMm": 0.08106974355952794,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#aa191432eec2c3f331735e90"
+      },
+      {
+        "partKeys": [
+          "part:459f3af09232906be37bb67767b46d153352a996d29b1715f128b74a8786cad2",
+          "part:afaadaeee823d86e2c081e2143597d0a7eafc207c4c85e4bfc5b28641ae74c7f"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[-35.51010192953128,13.649898394717994,11.1979],\"max\":[-33.64989791788083,15.510102406368432,14.220100267028808]}],\"localRegionProof\":{\"proven\":true,\"method\":\"Every triangle contact bounded by one declared patch; float64 clipping where conservative AABBs exceed a patch; exhaustive bidirectional input-vertex containment\",\"exhaustiveVertices\":331,\"exactTrianglePairClips\":0,\"regionCount\":1},\"annularRegionProof\":{\"proven\":true,\"method\":\"Complete exact intersection extrema fit the outer cylinder/height; one member has no source boundary in the excluded inner cylinder and its cylinder-centre volume test is outside\",\"emptyInnerCylinderSource\":\"housing/bottom.blend::底壳 · 合壳.007\",\"innerCylinderBoundaryTrianglesExamined\":575,\"exhaustiveVertices\":331,\"exactTrianglePairs\":335,\"annularRegion\":{\"axisCenterSourceXY\":[-34.579999923706055,14.580000400543213],\"innerRadiusMm\":0.848842262265692,\"outerRadiusMm\":0.93010200582522,\"sourceZMin\":11.1979,\"sourceZMax\":14.220100267028808}}}",
+        "maxPenetrationMm": 0.08106974355952794,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#ef4fcd33ec7485a289f1d912"
+      },
+      {
+        "partKeys": [
+          "part:0552174a5b0732c95af85c47a357e7f1dcfcd0e1015dbf95fface81661e52c66",
+          "part:afaadaeee823d86e2c081e2143597d0a7eafc207c4c85e4bfc5b28641ae74c7f"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[-35.510101976269794,28.489897070055896,11.1979],\"max\":[-33.649897871142315,30.35010117518336,14.220100267028808]}],\"localRegionProof\":{\"proven\":true,\"method\":\"Every triangle contact bounded by one declared patch; float64 clipping where conservative AABBs exceed a patch; exhaustive bidirectional input-vertex containment\",\"exhaustiveVertices\":331,\"exactTrianglePairClips\":0,\"regionCount\":1},\"annularRegionProof\":{\"proven\":true,\"method\":\"Complete exact intersection extrema fit the outer cylinder/height; one member has no source boundary in the excluded inner cylinder and its cylinder-centre volume test is outside\",\"emptyInnerCylinderSource\":\"housing/bottom.blend::底壳 · 合壳.007\",\"innerCylinderBoundaryTrianglesExamined\":388,\"exhaustiveVertices\":331,\"exactTrianglePairs\":334,\"annularRegion\":{\"axisCenterSourceXY\":[-34.579999923706055,29.41999912261963],\"innerRadiusMm\":0.8488416136038209,\"outerRadiusMm\":0.9301020525637329,\"sourceZMin\":11.1979,\"sourceZMax\":14.220100267028808}}}",
+        "maxPenetrationMm": 0.08107043895991199,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#861298aedc2804c015fb3e36"
+      },
+      {
+        "partKeys": [
+          "part:eec3053dcc63040f7b470f7924d4c063b0203e6312714de448a900546fa3b3d2",
+          "part:afaadaeee823d86e2c081e2143597d0a7eafc207c4c85e4bfc5b28641ae74c7f"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[-50.350102128857685,28.489897070055896,11.1979],\"max\":[-48.489898023730206,30.35010117518336,14.220100267028808]}],\"localRegionProof\":{\"proven\":true,\"method\":\"Every triangle contact bounded by one declared patch; float64 clipping where conservative AABBs exceed a patch; exhaustive bidirectional input-vertex containment\",\"exhaustiveVertices\":332,\"exactTrianglePairClips\":0,\"regionCount\":1},\"annularRegionProof\":{\"proven\":true,\"method\":\"Complete exact intersection extrema fit the outer cylinder/height; one member has no source boundary in the excluded inner cylinder and its cylinder-centre volume test is outside\",\"emptyInnerCylinderSource\":\"housing/bottom.blend::底壳 · 合壳.007\",\"innerCylinderBoundaryTrianglesExamined\":583,\"exhaustiveVertices\":332,\"exactTrianglePairs\":337,\"annularRegion\":{\"axisCenterSourceXY\":[-49.420000076293945,29.41999912261963],\"innerRadiusMm\":0.8488416136038209,\"outerRadiusMm\":0.9301020525637329,\"sourceZMin\":11.1979,\"sourceZMax\":14.220100267028808}}}",
+        "maxPenetrationMm": 0.08107043895991199,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#793c7d8265327b1210fe0696"
+      },
+      {
+        "partKeys": [
+          "part:afaadaeee823d86e2c081e2143597d0a7eafc207c4c85e4bfc5b28641ae74c7f",
+          "part:75ef40f2483c572a077d67245dbdbf939cee63cb6ec1910c064d9a5fcb5836f9"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[-26.00002036,-5.45001981,7.99998],\"max\":[22.20002041,22.45001981,8.00002]}],\"localRegionProof\":{\"proven\":true,\"method\":\"Every triangle contact bounded by one declared patch; float64 clipping where conservative AABBs exceed a patch; exhaustive bidirectional input-vertex containment\",\"exhaustiveVertices\":48,\"exactTrianglePairClips\":0,\"regionCount\":1}}",
+        "maxPenetrationMm": 0.00002,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#968c8335527bc3eed8f0515a"
+      },
+      {
+        "partKeys": [
+          "part:afaadaeee823d86e2c081e2143597d0a7eafc207c4c85e4bfc5b28641ae74c7f",
+          "part:6046b08f255c9016c3c2b2d371275be46c23f64d3f7a89a9d50a5f664292daa2"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[-37.50002,5.24998,14.84998],\"max\":[-30.49998,11.75002,14.85002]},{\"min\":[30.49998,5.24998,14.84998],\"max\":[37.50002,11.75002,14.85002]}],\"localRegionProof\":{\"proven\":true,\"method\":\"Every triangle contact bounded by one declared patch; float64 clipping where conservative AABBs exceed a patch; exhaustive bidirectional input-vertex containment\",\"exhaustiveVertices\":5274,\"exactTrianglePairClips\":0,\"regionCount\":2}}",
+        "maxPenetrationMm": 0.00002,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#a7a8ba2e2d37e6a8d7ac8fe0"
+      },
+      {
+        "partKeys": [
+          "part:f6ee5c764d0d21e31527853413619eae8eab39e3a529afd8ea36cca0c9165f9f",
+          "part:1f6ae6430157481b2ea515cf535a7536ebf1448bd676f7f2d1f5c90ace7d9b50"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[45.54532004760742,8.7122702734375,19.47755004333496],\"max\":[46.6595558984375,10.2877297265625,19.47758004333496]}],\"localRegionProof\":{\"proven\":true,\"method\":\"Every triangle contact bounded by one declared patch; float64 clipping where conservative AABBs exceed a patch; exhaustive bidirectional input-vertex containment\",\"exhaustiveVertices\":48,\"exactTrianglePairClips\":0,\"regionCount\":1}}",
+        "maxPenetrationMm": 0.00001,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#e27009820213941369b1654e"
+      },
+      {
+        "partKeys": [
+          "part:12d29fe1a3fc501c946d1e1bad7fb8e51367d5b0b2db9375fc59967c1157566f",
+          "part:1f6ae6430157481b2ea515cf535a7536ebf1448bd676f7f2d1f5c90ace7d9b50"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[37.51534415649414,13.116959108581543,19.47755004333496],\"max\":[39.28056572509766,14.7478709085083,19.47758004333496]}],\"localRegionProof\":{\"proven\":true,\"method\":\"Every triangle contact bounded by one declared patch; float64 clipping where conservative AABBs exceed a patch; exhaustive bidirectional input-vertex containment\",\"exhaustiveVertices\":57,\"exactTrianglePairClips\":0,\"regionCount\":1}}",
+        "maxPenetrationMm": 0.00001,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#8adc28c89e2689a4c174c84b"
+      },
+      {
+        "partKeys": [
+          "part:1cd40f7d581c96dd44a58a37c6fe330f1ee4e346cacf003a78bb99d4f1cc4830",
+          "part:1f6ae6430157481b2ea515cf535a7536ebf1448bd676f7f2d1f5c90ace7d9b50"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[37.51534415649414,4.252129568328858,19.47755004333496],\"max\":[39.28056572509766,5.8830404145812984,19.47758004333496]}],\"localRegionProof\":{\"proven\":true,\"method\":\"Every triangle contact bounded by one declared patch; float64 clipping where conservative AABBs exceed a patch; exhaustive bidirectional input-vertex containment\",\"exhaustiveVertices\":62,\"exactTrianglePairClips\":0,\"regionCount\":1}}",
+        "maxPenetrationMm": 0.00001,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#f6a22bbb67408305df58fbe4"
+      },
+      {
+        "partKeys": [
+          "part:8e9498bff3651c575a061169e24f0fea71f8702df5fcdcc13648fbcb4a82974a",
+          "part:1f6ae6430157481b2ea515cf535a7536ebf1448bd676f7f2d1f5c90ace7d9b50"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[57.04532004760742,20.2122702734375,19.47755004333496],\"max\":[58.1595558984375,21.7877297265625,19.47758004333496]}],\"localRegionProof\":{\"proven\":true,\"method\":\"Every triangle contact bounded by one declared patch; float64 clipping where conservative AABBs exceed a patch; exhaustive bidirectional input-vertex containment\",\"exhaustiveVertices\":48,\"exactTrianglePairClips\":0,\"regionCount\":1}}",
+        "maxPenetrationMm": 0.00001,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#04a3eed1986760d840209f37"
+      },
+      {
+        "partKeys": [
+          "part:22d266cd2f0f3234859fd888cc2a56e31cf86071ee976749563e28160d008181",
+          "part:1f6ae6430157481b2ea515cf535a7536ebf1448bd676f7f2d1f5c90ace7d9b50"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[49.01534415649414,24.61696006225586,19.47755004333496],\"max\":[50.78056572509766,26.247869954833984,19.47758004333496]}],\"localRegionProof\":{\"proven\":true,\"method\":\"Every triangle contact bounded by one declared patch; float64 clipping where conservative AABBs exceed a patch; exhaustive bidirectional input-vertex containment\",\"exhaustiveVertices\":57,\"exactTrianglePairClips\":0,\"regionCount\":1}}",
+        "maxPenetrationMm": 0.00001,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#e243869f03788ff27e013d68"
+      },
+      {
+        "partKeys": [
+          "part:a050bb22a90c4e822aaffc042032adf47870c863ecfcb537ed3ea809fee86403",
+          "part:1f6ae6430157481b2ea515cf535a7536ebf1448bd676f7f2d1f5c90ace7d9b50"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[49.01534415649414,15.7521290914917,19.47755004333496],\"max\":[50.78056572509766,17.38303993774414,19.47758004333496]}],\"localRegionProof\":{\"proven\":true,\"method\":\"Every triangle contact bounded by one declared patch; float64 clipping where conservative AABBs exceed a patch; exhaustive bidirectional input-vertex containment\",\"exhaustiveVertices\":62,\"exactTrianglePairClips\":0,\"regionCount\":1}}",
+        "maxPenetrationMm": 0.00001,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#ded89784a837521f3c6ec02d"
+      },
+      {
+        "partKeys": [
+          "part:6ea17b23e515465e6a6a7f4d992ec399c1b0aa2952ee1880cd0471b346b0ba29",
+          "part:1f6ae6430157481b2ea515cf535a7536ebf1448bd676f7f2d1f5c90ace7d9b50"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[34.04532004760742,20.2122702734375,19.47755004333496],\"max\":[35.1595558984375,21.7877297265625,19.47758004333496]}],\"localRegionProof\":{\"proven\":true,\"method\":\"Every triangle contact bounded by one declared patch; float64 clipping where conservative AABBs exceed a patch; exhaustive bidirectional input-vertex containment\",\"exhaustiveVertices\":48,\"exactTrianglePairClips\":0,\"regionCount\":1}}",
+        "maxPenetrationMm": 0.00001,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#7fe63c803b353907811f84ef"
+      },
+      {
+        "partKeys": [
+          "part:c6265e7ffef39fd2cbb4e9a5a7c7d295455b9681363e8cd61c669a64a69dfee2",
+          "part:1f6ae6430157481b2ea515cf535a7536ebf1448bd676f7f2d1f5c90ace7d9b50"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[26.015346063842774,24.61696006225586,19.47755004333496],\"max\":[27.780565725097656,26.247869954833984,19.47758004333496]}],\"localRegionProof\":{\"proven\":true,\"method\":\"Every triangle contact bounded by one declared patch; float64 clipping where conservative AABBs exceed a patch; exhaustive bidirectional input-vertex containment\",\"exhaustiveVertices\":57,\"exactTrianglePairClips\":0,\"regionCount\":1}}",
+        "maxPenetrationMm": 0.00001,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#819f4194e1fd91b0d017d446"
+      },
+      {
+        "partKeys": [
+          "part:4541158d8f5ae846e3a4af62a461a6d9e8b42ff9ce28c2c468ab112155277b52",
+          "part:1f6ae6430157481b2ea515cf535a7536ebf1448bd676f7f2d1f5c90ace7d9b50"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[26.015346063842774,15.7521290914917,19.47755004333496],\"max\":[27.780565725097656,17.38303993774414,19.47758004333496]}],\"localRegionProof\":{\"proven\":true,\"method\":\"Every triangle contact bounded by one declared patch; float64 clipping where conservative AABBs exceed a patch; exhaustive bidirectional input-vertex containment\",\"exhaustiveVertices\":62,\"exactTrianglePairClips\":0,\"regionCount\":1}}",
+        "maxPenetrationMm": 0.00001,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#27434dca235782bb6a286bc0"
+      },
+      {
+        "partKeys": [
+          "part:5f56474a4cf9a71f6837746698a319ea45502454f3ba93f7d021ab07209e8977",
+          "part:1f6ae6430157481b2ea515cf535a7536ebf1448bd676f7f2d1f5c90ace7d9b50"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[45.54532004760742,31.7122702734375,19.47755004333496],\"max\":[46.6595558984375,33.2877297265625,19.47758004333496]}],\"localRegionProof\":{\"proven\":true,\"method\":\"Every triangle contact bounded by one declared patch; float64 clipping where conservative AABBs exceed a patch; exhaustive bidirectional input-vertex containment\",\"exhaustiveVertices\":48,\"exactTrianglePairClips\":0,\"regionCount\":1}}",
+        "maxPenetrationMm": 0.00001,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#5679aa1082bbcd2e836dba16"
+      },
+      {
+        "partKeys": [
+          "part:0dd837becff3908cc5285fbc0378432a4683eefd2bb5d7c42cf3325dd3b00f53",
+          "part:1f6ae6430157481b2ea515cf535a7536ebf1448bd676f7f2d1f5c90ace7d9b50"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[37.51534415649414,36.116960062255856,19.47755004333496],\"max\":[39.28056572509766,37.74786995483399,19.47758004333496]}],\"localRegionProof\":{\"proven\":true,\"method\":\"Every triangle contact bounded by one declared patch; float64 clipping where conservative AABBs exceed a patch; exhaustive bidirectional input-vertex containment\",\"exhaustiveVertices\":57,\"exactTrianglePairClips\":0,\"regionCount\":1}}",
+        "maxPenetrationMm": 0.00001,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#067281892bc6d57fdc2b5edd"
+      },
+      {
+        "partKeys": [
+          "part:e9c9b617d5b6b96067c8de44e7f1302c8e98f57c975e359d0bc3c3fa367b217c",
+          "part:1f6ae6430157481b2ea515cf535a7536ebf1448bd676f7f2d1f5c90ace7d9b50"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[37.51534415649414,27.252130045166016,19.47755004333496],\"max\":[39.28056572509766,28.88303993774414,19.47758004333496]}],\"localRegionProof\":{\"proven\":true,\"method\":\"Every triangle contact bounded by one declared patch; float64 clipping where conservative AABBs exceed a patch; exhaustive bidirectional input-vertex containment\",\"exhaustiveVertices\":62,\"exactTrianglePairClips\":0,\"regionCount\":1}}",
+        "maxPenetrationMm": 0.00001,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#0c0edc8a13c8ff079a4ef3de"
+      },
+      {
+        "partKeys": [
+          "part:7518c258bfa2c1bf8797415a573d6edac46ac5df807f6dc9bbebf042aa33c7f4",
+          "part:ddf372d6db0c9121eef3357724d6b0cb84debe0acd6110efa105ec58b175ecf5"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[-42.79051445556641,17.345321192016602,15.394991769065857],\"max\":[-41.20948554443359,18.479551778564453,15.400061769065857]}],\"localRegionProof\":{\"proven\":true,\"method\":\"Every triangle contact bounded by one declared patch; float64 clipping where conservative AABBs exceed a patch; exhaustive bidirectional input-vertex containment\",\"exhaustiveVertices\":53,\"exactTrianglePairClips\":0,\"regionCount\":1}}",
+        "maxPenetrationMm": 0.00505,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#8f0c56fc1e597c783b0962b9"
+      },
+      {
+        "partKeys": [
+          "part:5fe2d2187916d7fa12b12dbacf6eeb7e3b9c10c68015412cd6cee77cb381183e",
+          "part:ddf372d6db0c9121eef3357724d6b0cb84debe0acd6110efa105ec58b175ecf5"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[-47.26641319824219,9.3030324118042,15.394991769065857],\"max\":[-45.616960062255856,11.08056591583252,15.400061769065857]}],\"localRegionProof\":{\"proven\":true,\"method\":\"Every triangle contact bounded by one declared patch; float64 clipping where conservative AABBs exceed a patch; exhaustive bidirectional input-vertex containment\",\"exhaustiveVertices\":58,\"exactTrianglePairClips\":0,\"regionCount\":1}}",
+        "maxPenetrationMm": 0.00505,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#068f880047c22d0ae447acbe"
+      },
+      {
+        "partKeys": [
+          "part:6d9d3c9308329c046e592f8250c7795ed1823febaaaf83bc0a4662f21c485443",
+          "part:ddf372d6db0c9121eef3357724d6b0cb84debe0acd6110efa105ec58b175ecf5"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[-38.383039937744144,9.3030324118042,15.394991769065857],\"max\":[-36.73358680175781,11.08056591583252,15.400061769065857]}],\"localRegionProof\":{\"proven\":true,\"method\":\"Every triangle contact bounded by one declared patch; float64 clipping where conservative AABBs exceed a patch; exhaustive bidirectional input-vertex containment\",\"exhaustiveVertices\":65,\"exactTrianglePairClips\":0,\"regionCount\":1}}",
+        "maxPenetrationMm": 0.00505,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#fcecb9e1d334298a22a7dedf"
+      },
+      {
+        "partKeys": [
+          "part:08f45cb622030da25ae43452b898683c2221c463242055121ec66d1553679b2c",
+          "part:ddf372d6db0c9121eef3357724d6b0cb84debe0acd6110efa105ec58b175ecf5"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[-46.654680715332034,21.209487451782227,15.394995464553833],\"max\":[-45.520448221435544,22.790512548217773,15.400065464553833]}],\"localRegionProof\":{\"proven\":true,\"method\":\"Every triangle contact bounded by one declared patch; float64 clipping where conservative AABBs exceed a patch; exhaustive bidirectional input-vertex containment\",\"exhaustiveVertices\":53,\"exactTrianglePairClips\":0,\"regionCount\":1}}",
+        "maxPenetrationMm": 0.00505,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#ede9e08fc7af57983b47806a"
+      },
+      {
+        "partKeys": [
+          "part:69136c71da2f801d1de48cca731920efc81176a32b641896a4dd76d972a39dd8",
+          "part:ddf372d6db0c9121eef3357724d6b0cb84debe0acd6110efa105ec58b175ecf5"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[-54.69696663452149,25.61696006225586,15.394995464553833],\"max\":[-52.919435037841794,27.26641510559082,15.400065464553833]}],\"localRegionProof\":{\"proven\":true,\"method\":\"Every triangle contact bounded by one declared patch; float64 clipping where conservative AABBs exceed a patch; exhaustive bidirectional input-vertex containment\",\"exhaustiveVertices\":58,\"exactTrianglePairClips\":0,\"regionCount\":1}}",
+        "maxPenetrationMm": 0.00505,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#4c9bb90b0bd96e7f0cd83fdd"
+      },
+      {
+        "partKeys": [
+          "part:ed21ffe8c1c424379bf61dd8291f866266bcb467afe7bf45ab149abd64582943",
+          "part:ddf372d6db0c9121eef3357724d6b0cb84debe0acd6110efa105ec58b175ecf5"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[-54.69696663452149,16.73358489440918,15.394995464553833],\"max\":[-52.919435037841794,18.38303993774414,15.400065464553833]}],\"localRegionProof\":{\"proven\":true,\"method\":\"Every triangle contact bounded by one declared patch; float64 clipping where conservative AABBs exceed a patch; exhaustive bidirectional input-vertex containment\",\"exhaustiveVertices\":64,\"exactTrianglePairClips\":0,\"regionCount\":1}}",
+        "maxPenetrationMm": 0.00505,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#c19c9f9b62c0770f257de109"
+      },
+      {
+        "partKeys": [
+          "part:cd226dc4817d8001211f41b17a08ebcf92b590676f9b62ca3fbd87d5764c1a40",
+          "part:ddf372d6db0c9121eef3357724d6b0cb84debe0acd6110efa105ec58b175ecf5"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[-38.479551778564456,21.209487451782227,15.394992961158753],\"max\":[-37.345319284667966,22.790512548217773,15.400062961158753]}],\"localRegionProof\":{\"proven\":true,\"method\":\"Every triangle contact bounded by one declared patch; float64 clipping where conservative AABBs exceed a patch; exhaustive bidirectional input-vertex containment\",\"exhaustiveVertices\":53,\"exactTrianglePairClips\":0,\"regionCount\":1}}",
+        "maxPenetrationMm": 0.00505,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#e0847695abaf102b70c8fb72"
+      },
+      {
+        "partKeys": [
+          "part:e6c6570c0fb6fbd7b417acf3c2bdb1967b5a885890f21f8a19e115f751867026",
+          "part:ddf372d6db0c9121eef3357724d6b0cb84debe0acd6110efa105ec58b175ecf5"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[-31.080564962158203,16.73358489440918,15.394992961158753],\"max\":[-29.303033365478516,18.38303993774414,15.400062961158753]}],\"localRegionProof\":{\"proven\":true,\"method\":\"Every triangle contact bounded by one declared patch; float64 clipping where conservative AABBs exceed a patch; exhaustive bidirectional input-vertex containment\",\"exhaustiveVertices\":58,\"exactTrianglePairClips\":0,\"regionCount\":1}}",
+        "maxPenetrationMm": 0.00505,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#7b7f8678ef9ac7ce236d7ad7"
+      },
+      {
+        "partKeys": [
+          "part:2804fa3f5c8eaa4aa797dca3716affdc8004844d2fb82809958cded65ea5acc3",
+          "part:ddf372d6db0c9121eef3357724d6b0cb84debe0acd6110efa105ec58b175ecf5"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[-31.080564962158203,25.61696006225586,15.394992961158753],\"max\":[-29.303033365478516,27.26641510559082,15.400062961158753]}],\"localRegionProof\":{\"proven\":true,\"method\":\"Every triangle contact bounded by one declared patch; float64 clipping where conservative AABBs exceed a patch; exhaustive bidirectional input-vertex containment\",\"exhaustiveVertices\":64,\"exactTrianglePairClips\":0,\"regionCount\":1}}",
+        "maxPenetrationMm": 0.00505,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#0d15614c3f33f7c457cc29ab"
+      },
+      {
+        "partKeys": [
+          "part:e3c8c6621719b296bb24be6acffaf14d15e01e24368794da914fffe796e8060e",
+          "part:ddf372d6db0c9121eef3357724d6b0cb84debe0acd6110efa105ec58b175ecf5"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[-42.79051445556641,25.520448221435547,15.39498855041504],\"max\":[-41.20948554443359,26.654678807983398,15.40005855041504]}],\"localRegionProof\":{\"proven\":true,\"method\":\"Every triangle contact bounded by one declared patch; float64 clipping where conservative AABBs exceed a patch; exhaustive bidirectional input-vertex containment\",\"exhaustiveVertices\":53,\"exactTrianglePairClips\":0,\"regionCount\":1}}",
+        "maxPenetrationMm": 0.00505,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#9aaabfde4365b11ccc5b5807"
+      },
+      {
+        "partKeys": [
+          "part:9565f5a9918aaf9967b883e57621853fc97c59b7c1f025c9cf91ea48e1d4a858",
+          "part:ddf372d6db0c9121eef3357724d6b0cb84debe0acd6110efa105ec58b175ecf5"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[-38.383039937744144,32.919435037841794,15.39498855041504],\"max\":[-36.73358680175781,34.69696663452149,15.40005855041504]}],\"localRegionProof\":{\"proven\":true,\"method\":\"Every triangle contact bounded by one declared patch; float64 clipping where conservative AABBs exceed a patch; exhaustive bidirectional input-vertex containment\",\"exhaustiveVertices\":59,\"exactTrianglePairClips\":0,\"regionCount\":1}}",
+        "maxPenetrationMm": 0.00505,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#cfbdce501e3b5a5d92235ecf"
+      },
+      {
+        "partKeys": [
+          "part:f054e1abca14d88ed7d64454887a159e4afb2ccacc086f87dfe64cf3a1a3fa38",
+          "part:ddf372d6db0c9121eef3357724d6b0cb84debe0acd6110efa105ec58b175ecf5"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[-47.26641319824219,32.919435037841794,15.39498855041504],\"max\":[-45.616960062255856,34.69696663452149,15.40005855041504]}],\"localRegionProof\":{\"proven\":true,\"method\":\"Every triangle contact bounded by one declared patch; float64 clipping where conservative AABBs exceed a patch; exhaustive bidirectional input-vertex containment\",\"exhaustiveVertices\":64,\"exactTrianglePairClips\":0,\"regionCount\":1}}",
+        "maxPenetrationMm": 0.00505,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#4b5c6ed615dfdf513ee84318"
+      },
+      {
+        "partKeys": [
+          "part:cb6696f2dcac751f536cf47408bde50690fc210710829f74d1f1c6128837dcdb",
+          "part:b76580b9064454c929f60229d871956e7bea9bab4ff94c517ace2e1fd0019013"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[49.82498932,22.77500534,20.49304533],\"max\":[50.47499084,23.42500687,23.49305248]}],\"localRegionProof\":{\"proven\":true,\"method\":\"entire possible object-AABB overlap is in the declared local region\",\"exhaustiveVertices\":0}}",
+        "maxPenetrationMm": 0.32505,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#f70a955cbe7ff3a9aeac17ce"
+      },
+      {
+        "partKeys": [
+          "part:41d928347c1b9890aae90bf433d8ca31da263864ee0568efecd4d112ee08ee32",
+          "part:b76580b9064454c929f60229d871956e7bea9bab4ff94c517ace2e1fd0019013"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[-14.060019734163284,19.41998076174736,16.899979618530274],\"max\":[-13.4999797317791,19.980020764131545,17.00002]}],\"localRegionProof\":{\"proven\":true,\"method\":\"Every triangle contact bounded by one declared patch; float64 clipping where conservative AABBs exceed a patch; exhaustive bidirectional input-vertex containment\",\"exhaustiveVertices\":9,\"exactTrianglePairClips\":0,\"regionCount\":1}}",
+        "maxPenetrationMm": 0.10002,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#91ff31032e2e5315dd098ccc"
+      },
+      {
+        "partKeys": [
+          "part:7bab250453fa12ad3cb3b6b9f87ae8bad6221c5509af39cb5623c9a462353912",
+          "part:a365eff9692b35f15fd4cdc07677db26618a2c8fdd52e6482cc809231c1daa1a"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[-35.47500229,19.57499313,15.5476141],\"max\":[-34.82500076,20.22499466,18.54762077]}],\"localRegionProof\":{\"proven\":true,\"method\":\"entire possible object-AABB overlap is in the declared local region\",\"exhaustiveVertices\":0}}",
+        "maxPenetrationMm": 0.32505,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#a97b8f48aabfb8f1d79a67b6"
+      },
+      {
+        "partKeys": [
+          "part:902aaab9489f3dba18d4adb51644c93267461ab7639bb5fc10cfbda283f74048",
+          "part:a365eff9692b35f15fd4cdc07677db26618a2c8fdd52e6482cc809231c1daa1a"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[3.719979998807907,19.41998076174736,16.899979618530274],\"max\":[4.280020001192093,19.980020764131545,17.00002]}],\"localRegionProof\":{\"proven\":true,\"method\":\"Every triangle contact bounded by one declared patch; float64 clipping where conservative AABBs exceed a patch; exhaustive bidirectional input-vertex containment\",\"exhaustiveVertices\":9,\"exactTrianglePairClips\":0,\"regionCount\":1}}",
+        "maxPenetrationMm": 0.10002,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#b160b209490058b9cdefe21c"
+      },
+      {
+        "partKeys": [
+          "part:b371c21b110b922859b6651ea60a7774f36320e905c83ae6dab6bf4be18f40a5",
+          "part:da99d02e4ea23a8514103759f2a2b2c8f3ecf7ad70a5432668439e41431ee5fe"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[31.52499771,22.77500534,20.49304533],\"max\":[32.17499924,23.42500687,23.49305248]}],\"localRegionProof\":{\"proven\":true,\"method\":\"entire possible object-AABB overlap is in the declared local region\",\"exhaustiveVertices\":0}}",
+        "maxPenetrationMm": 0.32505,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#f188863e55581fd971d6a175"
+      },
+      {
+        "partKeys": [
+          "part:24e5f0e9bf58dc2b988707be71daf45cbbfdc2a3a4052f7a06eb3d3d9f9bfa76",
+          "part:da99d02e4ea23a8514103759f2a2b2c8f3ecf7ad70a5432668439e41431ee5fe"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[-8.980019810457229,19.41998076174736,16.899979618530274],\"max\":[-8.419979808073045,19.980020764131545,17.00002]}],\"localRegionProof\":{\"proven\":true,\"method\":\"Every triangle contact bounded by one declared patch; float64 clipping where conservative AABBs exceed a patch; exhaustive bidirectional input-vertex containment\",\"exhaustiveVertices\":10,\"exactTrianglePairClips\":0,\"regionCount\":1}}",
+        "maxPenetrationMm": 0.10002,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#dbd52f5803249a2e9aaaf334"
+      },
+      {
+        "partKeys": [
+          "part:2149b7826e8f01d628e7017b627bb591613b87a47a877929d045c356ca8055ab",
+          "part:3d6f0454b8d5cf6955a1850fa89a6f37c9772a79e986ffe637418917ee6da274"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[38.32498932,30.07499504,20.49304533],\"max\":[38.97499084,30.72499657,23.49305248]}],\"localRegionProof\":{\"proven\":true,\"method\":\"entire possible object-AABB overlap is in the declared local region\",\"exhaustiveVertices\":0}}",
+        "maxPenetrationMm": 0.32505,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#04714e7aa63b29dba09f94ea"
+      },
+      {
+        "partKeys": [
+          "part:510c06bf065010e81a1126143e8c03a2a2126f9ab89de59fdfde88b420bf6cd9",
+          "part:3d6f0454b8d5cf6955a1850fa89a6f37c9772a79e986ffe637418917ee6da274"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[-16.60001969601631,19.41998076174736,16.899979618530274],\"max\":[-16.039979693632127,19.980020764131545,17.00002]}],\"localRegionProof\":{\"proven\":true,\"method\":\"Every triangle contact bounded by one declared patch; float64 clipping where conservative AABBs exceed a patch; exhaustive bidirectional input-vertex containment\",\"exhaustiveVertices\":9,\"exactTrianglePairClips\":0,\"regionCount\":1}}",
+        "maxPenetrationMm": 0.10002,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#1e723548fcc60517e48a58ed"
+      },
+      {
+        "partKeys": [
+          "part:0d57603794a7b204f9f03b9e862e99fba6aa40bf00b2886176a04e1dd45bd767",
+          "part:d0d64d57f6c802aed8bd3564f05890b6e58140706d41e4896e3cacdd137b2c6c"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[-44.42500305,28.52499771,14.31957006],\"max\":[-43.77500153,29.17499924,17.31957674]}],\"localRegionProof\":{\"proven\":true,\"method\":\"entire possible object-AABB overlap is in the declared local region\",\"exhaustiveVertices\":0}}",
+        "maxPenetrationMm": 0.32505,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#71106ddc6e462b9a09fec890"
+      },
+      {
+        "partKeys": [
+          "part:29837e6aaf99f3ac80d5d7677d043679acbcebd6dddb9da8c17b819db9737bda",
+          "part:d0d64d57f6c802aed8bd3564f05890b6e58140706d41e4896e3cacdd137b2c6c"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[-3.900019886751175,19.41998076174736,16.899979618530274],\"max\":[-3.339979884366989,19.980020764131545,17.00002]}],\"localRegionProof\":{\"proven\":true,\"method\":\"Every triangle contact bounded by one declared patch; float64 clipping where conservative AABBs exceed a patch; exhaustive bidirectional input-vertex containment\",\"exhaustiveVertices\":10,\"exactTrianglePairClips\":0,\"regionCount\":1}}",
+        "maxPenetrationMm": 0.10002,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#b18971b61c5331c07b474983"
+      },
+      {
+        "partKeys": [
+          "part:1fb4f9c8c56f20b0e8a27af1fd5f74d60c43b00ea1eabbeb5aa9440339e8dc1e",
+          "part:cc07ec37881dd7e1ca8e71e11d21b33fff5b1b709438f063780c5746a24938f1"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[-40.22499847,14.82500267,17.70893145],\"max\":[-39.57499695,15.4750042,20.7089386]}],\"localRegionProof\":{\"proven\":true,\"method\":\"entire possible object-AABB overlap is in the declared local region\",\"exhaustiveVertices\":0}}",
+        "maxPenetrationMm": 0.32505,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#f61fe659814d04b232a3b7b2"
+      },
+      {
+        "partKeys": [
+          "part:a0e1f91ee778075f920d34d7134ba1da2f14dea1bdbef071e9064265948e3bd2",
+          "part:cc07ec37881dd7e1ca8e71e11d21b33fff5b1b709438f063780c5746a24938f1"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[-1.360020044107437,19.41998076174736,16.899979618530274],\"max\":[-0.7999800417232513,19.980020764131545,17.00002]}],\"localRegionProof\":{\"proven\":true,\"method\":\"Every triangle contact bounded by one declared patch; float64 clipping where conservative AABBs exceed a patch; exhaustive bidirectional input-vertex containment\",\"exhaustiveVertices\":10,\"exactTrianglePairClips\":0,\"regionCount\":1}}",
+        "maxPenetrationMm": 0.10002,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#80b389f4c1f62a497cb45f18"
+      },
+      {
+        "partKeys": [
+          "part:f2f39ad491b9945f74fa6af41f11d50ddc4d3fc9becf92b7661b847c0ecf7370",
+          "part:fdcea68678483f120db7d14802f679e83216733c220a42d2833e03b20a1a25ac"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[-49.17499924,23.77500534,17.94304514],\"max\":[-48.52499771,24.42500687,20.94305229]}],\"localRegionProof\":{\"proven\":true,\"method\":\"entire possible object-AABB overlap is in the declared local region\",\"exhaustiveVertices\":0}}",
+        "maxPenetrationMm": 0.32505,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#bc6e66b633f181305ba2b365"
+      },
+      {
+        "partKeys": [
+          "part:d8b27fa13a18055e1aeaf440bcd36396fdad584ac5357fc632370a4565de7463",
+          "part:fdcea68678483f120db7d14802f679e83216733c220a42d2833e03b20a1a25ac"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[-19.140020611543655,19.41998076174736,16.899979618530274],\"max\":[-18.57998060915947,19.980020764131545,17.00002]}],\"localRegionProof\":{\"proven\":true,\"method\":\"Every triangle contact bounded by one declared patch; float64 clipping where conservative AABBs exceed a patch; exhaustive bidirectional input-vertex containment\",\"exhaustiveVertices\":10,\"exactTrianglePairClips\":0,\"regionCount\":1}}",
+        "maxPenetrationMm": 0.10002,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#b0da5c2428f31473d7a74d6c"
+      },
+      {
+        "partKeys": [
+          "part:0b87b098e313fe90ee346a8649f6d4f4b10090cdafbc4b32468029a0fa3522c0",
+          "part:5ada531fcabdf34ce450c62527a5293418f18bc364ce19ce8a6947bfd28cb124"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[43.02499771,11.27500534,20.49304533],\"max\":[43.67499924,11.92500687,23.49305248]}],\"localRegionProof\":{\"proven\":true,\"method\":\"entire possible object-AABB overlap is in the declared local region\",\"exhaustiveVertices\":0}}",
+        "maxPenetrationMm": 0.32505,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#55b2b248e525bcbe5ac9f7c5"
+      },
+      {
+        "partKeys": [
+          "part:bc072593ee8e5472be0cc0507599d5b5c7a2aded0b3b40b48579a811d17d5a7c",
+          "part:5ada531fcabdf34ce450c62527a5293418f18bc364ce19ce8a6947bfd28cb124"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[-11.520019772310256,19.41998076174736,16.899979618530274],\"max\":[-10.959979769926072,19.980020764131545,17.00002]}],\"localRegionProof\":{\"proven\":true,\"method\":\"Every triangle contact bounded by one declared patch; float64 clipping where conservative AABBs exceed a patch; exhaustive bidirectional input-vertex containment\",\"exhaustiveVertices\":9,\"exactTrianglePairClips\":0,\"regionCount\":1}}",
+        "maxPenetrationMm": 0.10002,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#198a49a724c9177b1fa670c2"
+      },
+      {
+        "partKeys": [
+          "part:4114275f24ab81f4e25d0ecb87569a4fd35d1d0901854ea7694f7f06b5f32af0",
+          "part:2a54d506a86ab6fabe276b4c4834e1c8262c7a3bb8fea18285b85555ebe99c15"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[54.52499771,22.77500534,20.49304533],\"max\":[55.17499924,23.42500687,23.49305248]}],\"localRegionProof\":{\"proven\":true,\"method\":\"entire possible object-AABB overlap is in the declared local region\",\"exhaustiveVertices\":0}}",
+        "maxPenetrationMm": 0.32505,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#0a81f96672ac0c878b093ad2"
+      },
+      {
+        "partKeys": [
+          "part:2a54d506a86ab6fabe276b4c4834e1c8262c7a3bb8fea18285b85555ebe99c15",
+          "part:4fbd3c611321d8e9368d004bc7dcce15c85473a031401553570d8d8a0ab42b2b"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[7.5,21.6,20.8],\"max\":[9.5,22.4,21.6]}],\"localRegionProof\":{\"proven\":true,\"method\":\"Every triangle contact bounded by one declared patch; float64 clipping where conservative AABBs exceed a patch; exhaustive bidirectional input-vertex containment\",\"exhaustiveVertices\":18,\"exactTrianglePairClips\":0,\"regionCount\":1}}",
+        "maxPenetrationMm": 0.38005,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#f337dbf84c3ce8a1f5f70c0c"
+      },
+      {
+        "partKeys": [
+          "part:eaa1f35cc333f1f0f665c1a84f784d407a0837f16e7d2ea6fa2ddabdc91900e2",
+          "part:7054b615de245e8d36ae0a07aa4852c91a29203ee773af3601c36ccd42a31f5a"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[-40.22499466,28.5249958,14.31957006],\"max\":[-39.57499313,29.17499733,17.31957674]}],\"localRegionProof\":{\"proven\":true,\"method\":\"entire possible object-AABB overlap is in the declared local region\",\"exhaustiveVertices\":0}}",
+        "maxPenetrationMm": 0.32505,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#969ea892d5a3ed5d2089d651"
+      },
+      {
+        "partKeys": [
+          "part:7054b615de245e8d36ae0a07aa4852c91a29203ee773af3601c36ccd42a31f5a",
+          "part:4fbd3c611321d8e9368d004bc7dcce15c85473a031401553570d8d8a0ab42b2b"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[-10,21.6,20.8],\"max\":[-8,22.4,21.6]}],\"localRegionProof\":{\"proven\":true,\"method\":\"Every triangle contact bounded by one declared patch; float64 clipping where conservative AABBs exceed a patch; exhaustive bidirectional input-vertex containment\",\"exhaustiveVertices\":15,\"exactTrianglePairClips\":0,\"regionCount\":1}}",
+        "maxPenetrationMm": 0.38005,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#6f7a0c655ee43a3a1fb5b7ae"
+      },
+      {
+        "partKeys": [
+          "part:404f017b5a837655d567ffc82974c6e99859a523af46ab1f086ec73eab4b6423",
+          "part:1b50ae49769a394935a8f681796ba4ee218446e7acd7f3d2e824bbbd9fe5c08e"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[-30.77499199,19.57499313,15.5476141],\"max\":[-30.12499046,20.22499466,18.54762077]}],\"localRegionProof\":{\"proven\":true,\"method\":\"entire possible object-AABB overlap is in the declared local region\",\"exhaustiveVertices\":0}}",
+        "maxPenetrationMm": 0.32505,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#3a5bce9ac2c32beb7d91c637"
+      },
+      {
+        "partKeys": [
+          "part:4fbd3c611321d8e9368d004bc7dcce15c85473a031401553570d8d8a0ab42b2b",
+          "part:1b50ae49769a394935a8f681796ba4ee218446e7acd7f3d2e824bbbd9fe5c08e"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[-13.5,21.6,20.8],\"max\":[-11.5,22.4,21.6]}],\"localRegionProof\":{\"proven\":true,\"method\":\"Every triangle contact bounded by one declared patch; float64 clipping where conservative AABBs exceed a patch; exhaustive bidirectional input-vertex containment\",\"exhaustiveVertices\":12,\"exactTrianglePairClips\":0,\"regionCount\":1}}",
+        "maxPenetrationMm": 0.38005,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#05fa582053db34123419da11"
+      },
+      {
+        "partKeys": [
+          "part:2f4fea0634d47ffe3dafedfdf3ad16f472b4aa444521019954153f66e15db261",
+          "part:9453c8b93a69556fc3866f9be43bc6fbc994434e18fec41fc3d95306d6a34f7f"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[26.82498932,22.77500534,20.49304533],\"max\":[27.47499084,23.42500687,23.49305248]}],\"localRegionProof\":{\"proven\":true,\"method\":\"entire possible object-AABB overlap is in the declared local region\",\"exhaustiveVertices\":0}}",
+        "maxPenetrationMm": 0.32505,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#51c5150f01563e02ded3c634"
+      },
+      {
+        "partKeys": [
+          "part:9453c8b93a69556fc3866f9be43bc6fbc994434e18fec41fc3d95306d6a34f7f",
+          "part:4fbd3c611321d8e9368d004bc7dcce15c85473a031401553570d8d8a0ab42b2b"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[4,21.6,20.8],\"max\":[6,22.4,21.6]}],\"localRegionProof\":{\"proven\":true,\"method\":\"Every triangle contact bounded by one declared patch; float64 clipping where conservative AABBs exceed a patch; exhaustive bidirectional input-vertex containment\",\"exhaustiveVertices\":13,\"exactTrianglePairClips\":0,\"regionCount\":1}}",
+        "maxPenetrationMm": 0.38005,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#d82e835cf40ba405f78a3834"
+      },
+      {
+        "partKeys": [
+          "part:893b5d22c30be782b86a2f9bf5570ad14ddec27adc10cd6e3d5ad8ca07bb6dc0",
+          "part:4f54f864f2cd725f06a452c816219cf5df49bdc9526a6874830d74f2c116d4a1"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[43.02499771,30.07499504,20.49304533],\"max\":[43.67499924,30.72499657,23.49305248]}],\"localRegionProof\":{\"proven\":true,\"method\":\"entire possible object-AABB overlap is in the declared local region\",\"exhaustiveVertices\":0}}",
+        "maxPenetrationMm": 0.32505,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#f22e3f4a50c8681e6b965ba8"
+      },
+      {
+        "partKeys": [
+          "part:4f54f864f2cd725f06a452c816219cf5df49bdc9526a6874830d74f2c116d4a1",
+          "part:4fbd3c611321d8e9368d004bc7dcce15c85473a031401553570d8d8a0ab42b2b"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[0.5,21.6,20.8],\"max\":[2.5,22.4,21.6]}],\"localRegionProof\":{\"proven\":true,\"method\":\"Every triangle contact bounded by one declared patch; float64 clipping where conservative AABBs exceed a patch; exhaustive bidirectional input-vertex containment\",\"exhaustiveVertices\":12,\"exactTrianglePairClips\":0,\"regionCount\":1}}",
+        "maxPenetrationMm": 0.38005,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#509f620b4047ade9cc523be1"
+      },
+      {
+        "partKeys": [
+          "part:5193976ca1c442e85051920ec5218940dbc02927f41ef2b7c4215871ba1be0b0",
+          "part:88a401cab13ba7139dbbd1b64bd4fa892d73e0af0e2d502e1173e386c3bbae8d"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[-44.42500687,14.82500362,17.70893145],\"max\":[-43.77500534,15.47500515,20.7089386]}],\"localRegionProof\":{\"proven\":true,\"method\":\"entire possible object-AABB overlap is in the declared local region\",\"exhaustiveVertices\":0}}",
+        "maxPenetrationMm": 0.32505,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#8050a5618e8d74dc3fe5d44d"
+      },
+      {
+        "partKeys": [
+          "part:88a401cab13ba7139dbbd1b64bd4fa892d73e0af0e2d502e1173e386c3bbae8d",
+          "part:4fbd3c611321d8e9368d004bc7dcce15c85473a031401553570d8d8a0ab42b2b"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[-6.5,21.6,20.8],\"max\":[-4.5,22.4,21.6]}],\"localRegionProof\":{\"proven\":true,\"method\":\"Every triangle contact bounded by one declared patch; float64 clipping where conservative AABBs exceed a patch; exhaustive bidirectional input-vertex containment\",\"exhaustiveVertices\":12,\"exactTrianglePairClips\":0,\"regionCount\":1}}",
+        "maxPenetrationMm": 0.38005,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#1929277d93df029acd24d447"
+      },
+      {
+        "partKeys": [
+          "part:41b4b50612ba9206976e50e159821fe9735c21c68f98151fdef6a0f8013729c8",
+          "part:0dd78ccd9873ee9c66fb91c6da5f4c99a5246e79a8858cb2bdeb3d14dc1ceed6"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[38.32498932,11.27500534,20.49304533],\"max\":[38.97499084,11.92500687,23.49305248]}],\"localRegionProof\":{\"proven\":true,\"method\":\"entire possible object-AABB overlap is in the declared local region\",\"exhaustiveVertices\":0}}",
+        "maxPenetrationMm": 0.32505,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#a2ff5ac1a9638a5cc263ee60"
+      },
+      {
+        "partKeys": [
+          "part:0dd78ccd9873ee9c66fb91c6da5f4c99a5246e79a8858cb2bdeb3d14dc1ceed6",
+          "part:4fbd3c611321d8e9368d004bc7dcce15c85473a031401553570d8d8a0ab42b2b"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[11,21.6,20.8],\"max\":[13,22.4,21.6]}],\"localRegionProof\":{\"proven\":true,\"method\":\"Every triangle contact bounded by one declared patch; float64 clipping where conservative AABBs exceed a patch; exhaustive bidirectional input-vertex containment\",\"exhaustiveVertices\":12,\"exactTrianglePairClips\":0,\"regionCount\":1}}",
+        "maxPenetrationMm": 0.38005,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#83f3202bce652b677db061f5"
+      },
+      {
+        "partKeys": [
+          "part:65647e05c0971a0ee2d8f6e477a2f0af92f941620b783ae9c2b4ecbd8646cfaf",
+          "part:1b5de75e27d85aa136e1c5ec85a20085db070e45e193825f42b91f1802687321"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[-53.87500763,23.77500534,17.94304514],\"max\":[-53.2250061,24.42500687,20.94305229]}],\"localRegionProof\":{\"proven\":true,\"method\":\"entire possible object-AABB overlap is in the declared local region\",\"exhaustiveVertices\":0}}",
+        "maxPenetrationMm": 0.32505,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#8bef250ddb859b62baa847a1"
+      },
+      {
+        "partKeys": [
+          "part:4fbd3c611321d8e9368d004bc7dcce15c85473a031401553570d8d8a0ab42b2b",
+          "part:1b5de75e27d85aa136e1c5ec85a20085db070e45e193825f42b91f1802687321"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[-17,21.6,20.8],\"max\":[-15,22.4,21.6]}],\"localRegionProof\":{\"proven\":true,\"method\":\"Every triangle contact bounded by one declared patch; float64 clipping where conservative AABBs exceed a patch; exhaustive bidirectional input-vertex containment\",\"exhaustiveVertices\":12,\"exactTrianglePairClips\":0,\"regionCount\":1}}",
+        "maxPenetrationMm": 0.38005,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#b67196a506c011d500ebed15"
+      },
+      {
+        "partKeys": [
+          "part:67e41aaa5213a6a0cd786d4f8875e8fff8fc480314527ff697ce4063724e0681",
+          "part:20c6231a04549ce3b3ef530852f7af5d2588fc863f194fae8a9b4dd3530dfb85"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[1.67500001,5.17500001,19.00000083],\"max\":[2.32499999,5.82499999,19.55]}],\"localRegionProof\":{\"proven\":true,\"method\":\"entire possible object-AABB overlap is in the declared local region\",\"exhaustiveVertices\":0}}",
+        "maxPenetrationMm": 0.32505,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#5ecc924bbedfc2b7fc3ff90a"
+      },
+      {
+        "partKeys": [
+          "part:b5d3e1f756a4a2d63a697a4e2c19e01e9ce6b973e844b56dda83e4a3e6d40299",
+          "part:20c6231a04549ce3b3ef530852f7af5d2588fc863f194fae8a9b4dd3530dfb85"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[-6.440019848604202,19.41998076174736,16.899979618530274],\"max\":[-5.879979846220016,19.980020764131545,17.00002]}],\"localRegionProof\":{\"proven\":true,\"method\":\"Every triangle contact bounded by one declared patch; float64 clipping where conservative AABBs exceed a patch; exhaustive bidirectional input-vertex containment\",\"exhaustiveVertices\":11,\"exactTrianglePairClips\":0,\"regionCount\":1}}",
+        "maxPenetrationMm": 0.10002,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#7b1f98db6cd01061f224cc32"
+      },
+      {
+        "partKeys": [
+          "part:9b8017708a0d33deb72d8b5241b711c2da7617a27359f17dc4ae7a3a4e8e4734",
+          "part:6334922d71d6e8178a44796bd9d4daaa71919f58d8172155424db17e2142b7fd"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[-21.680019619722366,-2.980020048875809,16.899979618530274],\"max\":[-21.11997961733818,-2.419980046491623,17.00002]}],\"localRegionProof\":{\"proven\":true,\"method\":\"Every triangle contact bounded by one declared patch; float64 clipping where conservative AABBs exceed a patch; exhaustive bidirectional input-vertex containment\",\"exhaustiveVertices\":11,\"exactTrianglePairClips\":0,\"regionCount\":1}}",
+        "maxPenetrationMm": 0.10002,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#9f4252a6e229680bd7ae6eef"
+      },
+      {
+        "partKeys": [
+          "part:6334922d71d6e8178a44796bd9d4daaa71919f58d8172155424db17e2142b7fd",
+          "part:4fbd3c611321d8e9368d004bc7dcce15c85473a031401553570d8d8a0ab42b2b"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[-18.5,21.6,20.8],\"max\":[-16.5,22.4,21.6]}],\"localRegionProof\":{\"proven\":true,\"method\":\"entire possible object-AABB overlap is in the declared local region\",\"exhaustiveVertices\":0}}",
+        "maxPenetrationMm": 0.38005,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#07084d692caea9b300a26889"
+      },
+      {
+        "partKeys": [
+          "part:9bacb0cebbbcd21dbc71cd4b8f790447998b3e910c5f43851126baa70ffa8121",
+          "part:d27844e5416534386243592de9547d0d9210941bbaad1099d3e8417f9b04132b"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[-2.32499999,5.17500001,19.00000083],\"max\":[-1.67500001,5.82499999,19.55]}],\"localRegionProof\":{\"proven\":true,\"method\":\"Every triangle contact bounded by one declared patch; float64 clipping where conservative AABBs exceed a patch; exhaustive bidirectional input-vertex containment\",\"exhaustiveVertices\":12,\"exactTrianglePairClips\":0,\"regionCount\":1}}",
+        "maxPenetrationMm": 0.32505,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#461be5c8ea2b6052205ba004"
+      },
+      {
+        "partKeys": [
+          "part:4fbd3c611321d8e9368d004bc7dcce15c85473a031401553570d8d8a0ab42b2b",
+          "part:d27844e5416534386243592de9547d0d9210941bbaad1099d3e8417f9b04132b"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[-3,21.6,20.8],\"max\":[-1,22.4,21.6]}],\"localRegionProof\":{\"proven\":true,\"method\":\"Every triangle contact bounded by one declared patch; float64 clipping where conservative AABBs exceed a patch; exhaustive bidirectional input-vertex containment\",\"exhaustiveVertices\":10,\"exactTrianglePairClips\":0,\"regionCount\":1}}",
+        "maxPenetrationMm": 0.38005,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#50fbd4c5df7e1a8d3382ef2b"
+      },
+      {
+        "partKeys": [
+          "part:9bacb0cebbbcd21dbc71cd4b8f790447998b3e910c5f43851126baa70ffa8121",
+          "part:f9ec489a9bd04a7bcda8d98677c51aa2d82b775a4cdca4bf37b46f969fe3b0cc"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[-2.32500999,5.17499001,20.0504141],\"max\":[-1.67499001,5.82500999,20.35043489]}],\"localRegionProof\":{\"proven\":true,\"method\":\"entire possible object-AABB overlap is in the declared local region\",\"exhaustiveVertices\":0}}",
+        "maxPenetrationMm": 0.00001,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#82f22b4ba8cae2ece96ff16f"
+      },
+      {
+        "partKeys": [
+          "part:103e5a9cb63318a84e71af38103c804a3af877e16f5285b790e3118d01ec31e3",
+          "part:0b87b098e313fe90ee346a8649f6d4f4b10090cdafbc4b32468029a0fa3522c0"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[43.02499771,11.27500534,23.49304296],\"max\":[43.67499924,11.92500687,23.49306296]}],\"localRegionProof\":{\"proven\":true,\"method\":\"entire possible object-AABB overlap is in the declared local region\",\"exhaustiveVertices\":0}}",
+        "maxPenetrationMm": 0.00001,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#20f4833b1140ae2c4b0bd9e1"
+      },
+      {
+        "partKeys": [
+          "part:103e5a9cb63318a84e71af38103c804a3af877e16f5285b790e3118d01ec31e3",
+          "part:61caeca343d3a292dc327fcced5fed88f51144abd98fa9de627105115ca90178"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[43.02499771,7.07499504,23.49304296],\"max\":[43.67499924,7.72499657,23.49306296]}],\"localRegionProof\":{\"proven\":true,\"method\":\"entire possible object-AABB overlap is in the declared local region\",\"exhaustiveVertices\":0}}",
+        "maxPenetrationMm": 0.00001,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#eddcec067d0333a31f9480e4"
+      },
+      {
+        "partKeys": [
+          "part:103e5a9cb63318a84e71af38103c804a3af877e16f5285b790e3118d01ec31e3",
+          "part:41b4b50612ba9206976e50e159821fe9735c21c68f98151fdef6a0f8013729c8"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[38.32498932,11.27500534,23.49304296],\"max\":[38.97499084,11.92500687,23.49306296]}],\"localRegionProof\":{\"proven\":true,\"method\":\"entire possible object-AABB overlap is in the declared local region\",\"exhaustiveVertices\":0}}",
+        "maxPenetrationMm": 0.00001,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#e6cad97eb63d75b890e8303e"
+      },
+      {
+        "partKeys": [
+          "part:103e5a9cb63318a84e71af38103c804a3af877e16f5285b790e3118d01ec31e3",
+          "part:8ae11958000c4b480dbcfd35366c433263fb4224c1e6beb272837f7e91910a57"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[38.32498932,7.07499504,23.49304296],\"max\":[38.97499084,7.72499657,23.49306296]}],\"localRegionProof\":{\"proven\":true,\"method\":\"entire possible object-AABB overlap is in the declared local region\",\"exhaustiveVertices\":0}}",
+        "maxPenetrationMm": 0.00001,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#ecef16a1c955dfb80bc0a626"
+      },
+      {
+        "partKeys": [
+          "part:e06df87cb9ebf7fd73e2f72ab9ad40b0e169d321fb246f203c78ffe588d59a38",
+          "part:4114275f24ab81f4e25d0ecb87569a4fd35d1d0901854ea7694f7f06b5f32af0"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[54.52499771,22.77500534,23.49304296],\"max\":[55.17499924,23.42500687,23.49306296]}],\"localRegionProof\":{\"proven\":true,\"method\":\"entire possible object-AABB overlap is in the declared local region\",\"exhaustiveVertices\":0}}",
+        "maxPenetrationMm": 0.00001,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#5536a1e2ca119b9f4cd6692e"
+      },
+      {
+        "partKeys": [
+          "part:e06df87cb9ebf7fd73e2f72ab9ad40b0e169d321fb246f203c78ffe588d59a38",
+          "part:2ebc185e7d079e76779d76b4e548946ffb416e6ccf6b431b3e39423796a5311a"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[54.52499771,18.57499504,23.49304296],\"max\":[55.17499924,19.22499657,23.49306296]}],\"localRegionProof\":{\"proven\":true,\"method\":\"entire possible object-AABB overlap is in the declared local region\",\"exhaustiveVertices\":0}}",
+        "maxPenetrationMm": 0.00001,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#5ae63eb9b936aee5f1465d99"
+      },
+      {
+        "partKeys": [
+          "part:e06df87cb9ebf7fd73e2f72ab9ad40b0e169d321fb246f203c78ffe588d59a38",
+          "part:cb6696f2dcac751f536cf47408bde50690fc210710829f74d1f1c6128837dcdb"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[49.82498932,22.77500534,23.49304296],\"max\":[50.47499084,23.42500687,23.49306296]}],\"localRegionProof\":{\"proven\":true,\"method\":\"entire possible object-AABB overlap is in the declared local region\",\"exhaustiveVertices\":0}}",
+        "maxPenetrationMm": 0.00001,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#4e907ddd0c12abc1dff3cdbc"
+      },
+      {
+        "partKeys": [
+          "part:e06df87cb9ebf7fd73e2f72ab9ad40b0e169d321fb246f203c78ffe588d59a38",
+          "part:d57e08d0c371eebce768c5998098ed4fa51c3ee8457c92956b73c4d6898bdc52"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[49.82498932,18.57499504,23.49304296],\"max\":[50.47499084,19.22499657,23.49306296]}],\"localRegionProof\":{\"proven\":true,\"method\":\"entire possible object-AABB overlap is in the declared local region\",\"exhaustiveVertices\":0}}",
+        "maxPenetrationMm": 0.00001,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#b588d6a807cdd00a222804af"
+      },
+      {
+        "partKeys": [
+          "part:1bd5ed79d15dbd699d935b7f1424187e611a500ac65cc2f708ef363fda62fc7f",
+          "part:5193976ca1c442e85051920ec5218940dbc02927f41ef2b7c4215871ba1be0b0"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[-44.42500687,14.82500362,20.708929075],\"max\":[-43.77500534,15.47500515,20.708949075]}],\"localRegionProof\":{\"proven\":true,\"method\":\"entire possible object-AABB overlap is in the declared local region\",\"exhaustiveVertices\":0}}",
+        "maxPenetrationMm": 0.00001,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#b943542a675ea140a42140b7"
+      },
+      {
+        "partKeys": [
+          "part:1bd5ed79d15dbd699d935b7f1424187e611a500ac65cc2f708ef363fda62fc7f",
+          "part:1fb4f9c8c56f20b0e8a27af1fd5f74d60c43b00ea1eabbeb5aa9440339e8dc1e"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[-40.22499847,14.82500267,20.708929075],\"max\":[-39.57499695,15.4750042,20.708949075]}],\"localRegionProof\":{\"proven\":true,\"method\":\"entire possible object-AABB overlap is in the declared local region\",\"exhaustiveVertices\":0}}",
+        "maxPenetrationMm": 0.00001,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#8b07acbe9338f331117972b8"
+      },
+      {
+        "partKeys": [
+          "part:1bd5ed79d15dbd699d935b7f1424187e611a500ac65cc2f708ef363fda62fc7f",
+          "part:c741fef57140bc12b4bf15d5dc8ee052dfe3a2437e441352c9789b7518237a7c"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[-44.42500687,10.12499523,20.708929075],\"max\":[-43.77500534,10.77499676,20.708949075]}],\"localRegionProof\":{\"proven\":true,\"method\":\"entire possible object-AABB overlap is in the declared local region\",\"exhaustiveVertices\":0}}",
+        "maxPenetrationMm": 0.00001,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#53b9335b18a7b710009c1be5"
+      },
+      {
+        "partKeys": [
+          "part:1bd5ed79d15dbd699d935b7f1424187e611a500ac65cc2f708ef363fda62fc7f",
+          "part:dc70b5acc22de4754183ba8246143bbc40241163fbdea3a30a6c48f70e227236"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[-40.22499847,10.12499428,20.708929075],\"max\":[-39.57499695,10.7749958,20.708949075]}],\"localRegionProof\":{\"proven\":true,\"method\":\"entire possible object-AABB overlap is in the declared local region\",\"exhaustiveVertices\":0}}",
+        "maxPenetrationMm": 0.00001,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#6a4037b10df29e4e7ed37a19"
+      },
+      {
+        "partKeys": [
+          "part:a9776466f7f01f24a342e2e5f7363bb8a8515a724493072058d88a4daaffac5a",
+          "part:f2f39ad491b9945f74fa6af41f11d50ddc4d3fc9becf92b7661b847c0ecf7370"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[-49.17499924,23.77500534,20.94304277],\"max\":[-48.52499771,24.42500687,20.94306277]}],\"localRegionProof\":{\"proven\":true,\"method\":\"entire possible object-AABB overlap is in the declared local region\",\"exhaustiveVertices\":0}}",
+        "maxPenetrationMm": 0.00001,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#4048df69424c1c03bf36a95e"
+      },
+      {
+        "partKeys": [
+          "part:a9776466f7f01f24a342e2e5f7363bb8a8515a724493072058d88a4daaffac5a",
+          "part:3160cdc2ba54ef092cb9e8024fbed053e6bdeba066549904ea27866b2af4f83e"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[-49.17499924,19.57499504,20.94304277],\"max\":[-48.52499771,20.22499657,20.94306277]}],\"localRegionProof\":{\"proven\":true,\"method\":\"entire possible object-AABB overlap is in the declared local region\",\"exhaustiveVertices\":0}}",
+        "maxPenetrationMm": 0.00001,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#0286e9ab8e4943e0893c8106"
+      },
+      {
+        "partKeys": [
+          "part:a9776466f7f01f24a342e2e5f7363bb8a8515a724493072058d88a4daaffac5a",
+          "part:65647e05c0971a0ee2d8f6e477a2f0af92f941620b783ae9c2b4ecbd8646cfaf"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[-53.87500763,23.77500534,20.94304277],\"max\":[-53.2250061,24.42500687,20.94306277]}],\"localRegionProof\":{\"proven\":true,\"method\":\"entire possible object-AABB overlap is in the declared local region\",\"exhaustiveVertices\":0}}",
+        "maxPenetrationMm": 0.00001,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#a8656462eb8f77347bca2343"
+      },
+      {
+        "partKeys": [
+          "part:a9776466f7f01f24a342e2e5f7363bb8a8515a724493072058d88a4daaffac5a",
+          "part:2d8c18b8b2fea8ffe68d497d8a31111f55ca298c0d9c8c199b056999501a1787"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[-53.87500763,19.57499504,20.94304277],\"max\":[-53.2250061,20.22499657,20.94306277]}],\"localRegionProof\":{\"proven\":true,\"method\":\"entire possible object-AABB overlap is in the declared local region\",\"exhaustiveVertices\":0}}",
+        "maxPenetrationMm": 0.00001,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#9ad89664b91caa123ad3eb16"
+      },
+      {
+        "partKeys": [
+          "part:93b3282e1d1246eeb08a718e76c3c5492e113d26db7b5d07281670f69ab2058b",
+          "part:7bab250453fa12ad3cb3b6b9f87ae8bad6221c5509af39cb5623c9a462353912"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[-35.47500229,19.57499313,18.54761125],\"max\":[-34.82500076,20.22499466,18.54763125]}],\"localRegionProof\":{\"proven\":true,\"method\":\"entire possible object-AABB overlap is in the declared local region\",\"exhaustiveVertices\":0}}",
+        "maxPenetrationMm": 0.00001,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#791e1b3f4f7fb022803b3292"
+      },
+      {
+        "partKeys": [
+          "part:93b3282e1d1246eeb08a718e76c3c5492e113d26db7b5d07281670f69ab2058b",
+          "part:073dbd0d35570ff5cfc2e3355892af47f86a02c7da60722e6303221014076a1e"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[-35.47499847,23.77500534,18.54761125],\"max\":[-34.82499695,24.42500687,18.54763125]}],\"localRegionProof\":{\"proven\":true,\"method\":\"entire possible object-AABB overlap is in the declared local region\",\"exhaustiveVertices\":0}}",
+        "maxPenetrationMm": 0.00001,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#6c3ed889eca9f5bc3d0daead"
+      },
+      {
+        "partKeys": [
+          "part:93b3282e1d1246eeb08a718e76c3c5492e113d26db7b5d07281670f69ab2058b",
+          "part:404f017b5a837655d567ffc82974c6e99859a523af46ab1f086ec73eab4b6423"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[-30.77499199,19.57499313,18.54761125],\"max\":[-30.12499046,20.22499466,18.54763125]}],\"localRegionProof\":{\"proven\":true,\"method\":\"entire possible object-AABB overlap is in the declared local region\",\"exhaustiveVertices\":0}}",
+        "maxPenetrationMm": 0.00001,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#ba93b527198cad5546df31be"
+      },
+      {
+        "partKeys": [
+          "part:93b3282e1d1246eeb08a718e76c3c5492e113d26db7b5d07281670f69ab2058b",
+          "part:2008c5379419a6812c0ba82c60bffdc6b05cad5b68329f83dda3ee135424abc6"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[-30.77499199,23.77500343,18.54761125],\"max\":[-30.12499046,24.42500496,18.54763125]}],\"localRegionProof\":{\"proven\":true,\"method\":\"entire possible object-AABB overlap is in the declared local region\",\"exhaustiveVertices\":0}}",
+        "maxPenetrationMm": 0.00001,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#5a36cae83740dbdaab244ee9"
+      },
+      {
+        "partKeys": [
+          "part:e8776432afa164ee7ce02719120ed11effd21bbea90b88c5b92389ffb152ef0b",
+          "part:eaa1f35cc333f1f0f665c1a84f784d407a0837f16e7d2ea6fa2ddabdc91900e2"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[-40.22499466,28.5249958,17.319567215],\"max\":[-39.57499313,29.17499733,17.319587215]}],\"localRegionProof\":{\"proven\":true,\"method\":\"entire possible object-AABB overlap is in the declared local region\",\"exhaustiveVertices\":0}}",
+        "maxPenetrationMm": 0.00001,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#60024c922cd5213b00b5f3c5"
+      },
+      {
+        "partKeys": [
+          "part:e8776432afa164ee7ce02719120ed11effd21bbea90b88c5b92389ffb152ef0b",
+          "part:0d57603794a7b204f9f03b9e862e99fba6aa40bf00b2886176a04e1dd45bd767"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[-44.42500305,28.52499771,17.319567215],\"max\":[-43.77500153,29.17499924,17.319587215]}],\"localRegionProof\":{\"proven\":true,\"method\":\"entire possible object-AABB overlap is in the declared local region\",\"exhaustiveVertices\":0}}",
+        "maxPenetrationMm": 0.00001,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#f8836548eb84f3f3383fabde"
+      },
+      {
+        "partKeys": [
+          "part:e8776432afa164ee7ce02719120ed11effd21bbea90b88c5b92389ffb152ef0b",
+          "part:2e03534500e6d6376d03556905c60d9ed4cd5213ede3241cc90320e015c18d1a"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[-40.22499466,33.2250061,17.319567215],\"max\":[-39.57499313,33.87500763,17.319587215]}],\"localRegionProof\":{\"proven\":true,\"method\":\"entire possible object-AABB overlap is in the declared local region\",\"exhaustiveVertices\":0}}",
+        "maxPenetrationMm": 0.00001,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#cd6094efb62494fa855ca9f6"
+      },
+      {
+        "partKeys": [
+          "part:e8776432afa164ee7ce02719120ed11effd21bbea90b88c5b92389ffb152ef0b",
+          "part:8d07341c23754c2d2f9a638a456acbfff932c0f37a4489873678d310cd73f19f"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[-44.42500305,33.2250061,17.319567215],\"max\":[-43.77500153,33.87500763,17.319587215]}],\"localRegionProof\":{\"proven\":true,\"method\":\"entire possible object-AABB overlap is in the declared local region\",\"exhaustiveVertices\":0}}",
+        "maxPenetrationMm": 0.00001,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#3279a3463e25c9f8c630315a"
+      },
+      {
+        "partKeys": [
+          "part:240410db8dbcf5dfcef9813e792c8d50d4128b466c86e91538c5e4fc06c5915c",
+          "part:b371c21b110b922859b6651ea60a7774f36320e905c83ae6dab6bf4be18f40a5"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[31.52499771,22.77500534,23.49304296],\"max\":[32.17499924,23.42500687,23.49306296]}],\"localRegionProof\":{\"proven\":true,\"method\":\"entire possible object-AABB overlap is in the declared local region\",\"exhaustiveVertices\":0}}",
+        "maxPenetrationMm": 0.00001,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#962fde549c1b2aee476d9039"
+      },
+      {
+        "partKeys": [
+          "part:240410db8dbcf5dfcef9813e792c8d50d4128b466c86e91538c5e4fc06c5915c",
+          "part:d0928d124e01216c2b731d42365097bb97a32c45c5efab572cd5cc67cd131d3d"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[31.52499771,18.57499504,23.49304296],\"max\":[32.17499924,19.22499657,23.49306296]}],\"localRegionProof\":{\"proven\":true,\"method\":\"entire possible object-AABB overlap is in the declared local region\",\"exhaustiveVertices\":0}}",
+        "maxPenetrationMm": 0.00001,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#48522a1e4de40391f3d8b3d4"
+      },
+      {
+        "partKeys": [
+          "part:240410db8dbcf5dfcef9813e792c8d50d4128b466c86e91538c5e4fc06c5915c",
+          "part:2f4fea0634d47ffe3dafedfdf3ad16f472b4aa444521019954153f66e15db261"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[26.82498932,22.77500534,23.49304296],\"max\":[27.47499084,23.42500687,23.49306296]}],\"localRegionProof\":{\"proven\":true,\"method\":\"entire possible object-AABB overlap is in the declared local region\",\"exhaustiveVertices\":0}}",
+        "maxPenetrationMm": 0.00001,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#740789462aed6bc83fdfbbf8"
+      },
+      {
+        "partKeys": [
+          "part:240410db8dbcf5dfcef9813e792c8d50d4128b466c86e91538c5e4fc06c5915c",
+          "part:1d5220ac9c02ebc898d3c9504d02e2fc7d83ea4199632adf021ebe007e49669e"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[26.82498932,18.57499504,23.49304296],\"max\":[27.47499084,19.22499657,23.49306296]}],\"localRegionProof\":{\"proven\":true,\"method\":\"entire possible object-AABB overlap is in the declared local region\",\"exhaustiveVertices\":0}}",
+        "maxPenetrationMm": 0.00001,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#0e6dd65d12f56e2379589d6a"
+      },
+      {
+        "partKeys": [
+          "part:24494c7f4c15c3bba562142854959d4859608c301d8344bd82768c7501360c14",
+          "part:e4cd0d5450679268a27b434d0b96993d463618ad95d0a7028d810d7530db1b24"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[43.02499771,34.27500534,23.49304296],\"max\":[43.67499924,34.92500687,23.49306296]}],\"localRegionProof\":{\"proven\":true,\"method\":\"entire possible object-AABB overlap is in the declared local region\",\"exhaustiveVertices\":0}}",
+        "maxPenetrationMm": 0.00001,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#ff5b5e1c510fc932c569a390"
+      },
+      {
+        "partKeys": [
+          "part:24494c7f4c15c3bba562142854959d4859608c301d8344bd82768c7501360c14",
+          "part:893b5d22c30be782b86a2f9bf5570ad14ddec27adc10cd6e3d5ad8ca07bb6dc0"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[43.02499771,30.07499504,23.49304296],\"max\":[43.67499924,30.72499657,23.49306296]}],\"localRegionProof\":{\"proven\":true,\"method\":\"entire possible object-AABB overlap is in the declared local region\",\"exhaustiveVertices\":0}}",
+        "maxPenetrationMm": 0.00001,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#3d173aa67ee63285e6a18c78"
+      },
+      {
+        "partKeys": [
+          "part:24494c7f4c15c3bba562142854959d4859608c301d8344bd82768c7501360c14",
+          "part:ded24b8c64feea42683bd2e3712fd782425ec983131d35c973a5a5533201748f"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[38.32498932,34.27500534,23.49304296],\"max\":[38.97499084,34.92500687,23.49306296]}],\"localRegionProof\":{\"proven\":true,\"method\":\"entire possible object-AABB overlap is in the declared local region\",\"exhaustiveVertices\":0}}",
+        "maxPenetrationMm": 0.00001,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#585bab0b671c23f48298d635"
+      },
+      {
+        "partKeys": [
+          "part:24494c7f4c15c3bba562142854959d4859608c301d8344bd82768c7501360c14",
+          "part:2149b7826e8f01d628e7017b627bb591613b87a47a877929d045c356ca8055ab"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[38.32498932,30.07499504,23.49304296],\"max\":[38.97499084,30.72499657,23.49306296]}],\"localRegionProof\":{\"proven\":true,\"method\":\"entire possible object-AABB overlap is in the declared local region\",\"exhaustiveVertices\":0}}",
+        "maxPenetrationMm": 0.00001,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#dacce59089145afadaac5ab9"
+      },
+      {
+        "partKeys": [
+          "part:75ef40f2483c572a077d67245dbdbf939cee63cb6ec1910c064d9a5fcb5836f9",
+          "part:2ab1471e940f830445f9aed0fd5f8ad9ff1d4383bbecf4b39da9a4f713c4bb66"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[8.39997962,-0.50002,9.599980140000001],\"max\":[22.20002041,17.50002,9.6000202]}],\"localRegionProof\":{\"proven\":true,\"method\":\"entire possible object-AABB overlap is in the declared local region\",\"exhaustiveVertices\":0}}",
+        "maxPenetrationMm": 0.00002,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#58416ecde629a19d1bd8174a"
+      },
+      {
+        "partKeys": [
+          "part:75ef40f2483c572a077d67245dbdbf939cee63cb6ec1910c064d9a5fcb5836f9",
+          "part:e054c7b3e8c2a1b47f2b74cd003f87fcf70c3dafd234ee835718fbfaa71c6b15"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[-26.00001036,4.49999,9.5999902],\"max\":[-22.8999901,12.50001,9.6000102]}],\"localRegionProof\":{\"proven\":true,\"method\":\"entire possible object-AABB overlap is in the declared local region\",\"exhaustiveVertices\":0}}",
+        "maxPenetrationMm": 0.00001,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#e5791a5b2ea7dff84302212f"
+      },
+      {
+        "partKeys": [
+          "part:75ef40f2483c572a077d67245dbdbf939cee63cb6ec1910c064d9a5fcb5836f9",
+          "part:f941a40cf92d42f25a6feea6256d01e02d53f25ce0dee2cfc97ace4dced341d9"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[-12.30001995,6.24998,9.599980380000002],\"max\":[-7.69998005,10.75002,9.6000202]}],\"localRegionProof\":{\"proven\":true,\"method\":\"entire possible object-AABB overlap is in the declared local region\",\"exhaustiveVertices\":0}}",
+        "maxPenetrationMm": 0.00002,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#9569da75690530a0db6c3b99"
+      },
+      {
+        "partKeys": [
+          "part:75ef40f2483c572a077d67245dbdbf939cee63cb6ec1910c064d9a5fcb5836f9",
+          "part:5870cb1af000ee0c1528fee567fbb14036043a7943541ac436b3ab36fa212041"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[0.69998005,6.24998,9.599980380000002],\"max\":[5.30001995,10.75002,9.6000202]}],\"localRegionProof\":{\"proven\":true,\"method\":\"entire possible object-AABB overlap is in the declared local region\",\"exhaustiveVertices\":0}}",
+        "maxPenetrationMm": 0.00002,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#671d8e6ba7a188d9483cc62d"
+      },
+      {
+        "partKeys": [
+          "part:75ef40f2483c572a077d67245dbdbf939cee63cb6ec1910c064d9a5fcb5836f9",
+          "part:c2cde797cbfeeb3caeb4b9445406164f5ce5419fc6a27516d68c0fa6add7b752"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[-22.85002002,-3.9000201000000003,9.59998002],\"max\":[20.65001998,-1.49998,9.6000202]}],\"localRegionProof\":{\"proven\":true,\"method\":\"entire possible object-AABB overlap is in the declared local region\",\"exhaustiveVertices\":0}}",
+        "maxPenetrationMm": 0.00002,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#0048a790fc229502195caf78"
+      },
+      {
+        "partKeys": [
+          "part:9b8017708a0d33deb72d8b5241b711c2da7617a27359f17dc4ae7a3a4e8e4734",
+          "part:c2cde797cbfeeb3caeb4b9445406164f5ce5419fc6a27516d68c0fa6add7b752"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[-21.72501961,-3.0250200400000002,11.29997971],\"max\":[-21.07497963,-2.37498006,12.40001998]}],\"localRegionProof\":{\"proven\":true,\"method\":\"entire possible object-AABB overlap is in the declared local region\",\"exhaustiveVertices\":0}}",
+        "maxPenetrationMm": 1.10002,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#0b13a0541a2fdf7fd2a19e66"
+      },
+      {
+        "partKeys": [
+          "part:cce996e76cc5f9627771ce7b23dd8576fca9536ec1875fa1b966d34aabbf18c4",
+          "part:c2cde797cbfeeb3caeb4b9445406164f5ce5419fc6a27516d68c0fa6add7b752"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[-19.185020599999998,-3.0250200400000002,11.29997971],\"max\":[-18.534980620000002,-2.37498006,12.40001998]}],\"localRegionProof\":{\"proven\":true,\"method\":\"entire possible object-AABB overlap is in the declared local region\",\"exhaustiveVertices\":0}}",
+        "maxPenetrationMm": 1.10002,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#1104a9134ae4aaf777c52405"
+      },
+      {
+        "partKeys": [
+          "part:5c10effe182aaab7e1373237591a586fc99409ad3d57b4fab0232dffeb7c9aca",
+          "part:c2cde797cbfeeb3caeb4b9445406164f5ce5419fc6a27516d68c0fa6add7b752"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[-16.64501968,-3.0250200400000002,11.29997971],\"max\":[-15.99497971,-2.37498006,12.40001998]}],\"localRegionProof\":{\"proven\":true,\"method\":\"entire possible object-AABB overlap is in the declared local region\",\"exhaustiveVertices\":0}}",
+        "maxPenetrationMm": 1.10002,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#1b139b0205b18c4b84c4a226"
+      },
+      {
+        "partKeys": [
+          "part:8e7c72399f9d581bb5a0742631a63e53333dd145f66cd77c1cc6abe420b83444",
+          "part:c2cde797cbfeeb3caeb4b9445406164f5ce5419fc6a27516d68c0fa6add7b752"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[-14.10501972,-3.0250200400000002,11.29997971],\"max\":[-13.45497974,-2.37498006,12.40001998]}],\"localRegionProof\":{\"proven\":true,\"method\":\"entire possible object-AABB overlap is in the declared local region\",\"exhaustiveVertices\":0}}",
+        "maxPenetrationMm": 1.10002,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#d6f5c058eb206c5141ae6d87"
+      },
+      {
+        "partKeys": [
+          "part:310b1c244271a9d05269f67a7bfb7ca2f41dcd9544bfad313f9d303d404780b1",
+          "part:c2cde797cbfeeb3caeb4b9445406164f5ce5419fc6a27516d68c0fa6add7b752"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[-11.565019759999998,-3.0250200400000002,11.29997971],\"max\":[-10.914979780000001,-2.37498006,12.40001998]}],\"localRegionProof\":{\"proven\":true,\"method\":\"entire possible object-AABB overlap is in the declared local region\",\"exhaustiveVertices\":0}}",
+        "maxPenetrationMm": 1.10002,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#fafc1e8226336729c87ae2ea"
+      },
+      {
+        "partKeys": [
+          "part:bf3f9c8a5aa306da5c394cd30dcb8665d73ba345970098b5e1c949d4643694f0",
+          "part:c2cde797cbfeeb3caeb4b9445406164f5ce5419fc6a27516d68c0fa6add7b752"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[-9.025019799999999,-3.0250200400000002,11.29997971],\"max\":[-8.37497982,-2.37498006,12.40001998]}],\"localRegionProof\":{\"proven\":true,\"method\":\"entire possible object-AABB overlap is in the declared local region\",\"exhaustiveVertices\":0}}",
+        "maxPenetrationMm": 1.10002,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#9d76d2036604b93eef05259c"
+      },
+      {
+        "partKeys": [
+          "part:55ca30c097b748da0c65532131ae64168ccfa1a0fbf14bf5842e00028cb119f3",
+          "part:c2cde797cbfeeb3caeb4b9445406164f5ce5419fc6a27516d68c0fa6add7b752"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[-6.4850198400000005,-3.0250200400000002,11.29997971],\"max\":[-5.83497986,-2.37498006,12.40001998]}],\"localRegionProof\":{\"proven\":true,\"method\":\"entire possible object-AABB overlap is in the declared local region\",\"exhaustiveVertices\":0}}",
+        "maxPenetrationMm": 1.10002,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#40997c983516aa3f7664ee07"
+      },
+      {
+        "partKeys": [
+          "part:256cfdeb98d0f1227086beff5169630acd777e3ee3d4068819ecddbbc6735c2c",
+          "part:c2cde797cbfeeb3caeb4b9445406164f5ce5419fc6a27516d68c0fa6add7b752"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[-3.9450198700000003,-3.0250200400000002,11.29997971],\"max\":[-3.2949799,-2.37498006,12.40001998]}],\"localRegionProof\":{\"proven\":true,\"method\":\"entire possible object-AABB overlap is in the declared local region\",\"exhaustiveVertices\":0}}",
+        "maxPenetrationMm": 1.10002,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#2df72fbd98de8cc89776f341"
+      },
+      {
+        "partKeys": [
+          "part:7604a4ac550d52845b263ce99cf802dbd8707e601eff6570e4c3c9e4f6ca76dd",
+          "part:c2cde797cbfeeb3caeb4b9445406164f5ce5419fc6a27516d68c0fa6add7b752"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[-1.40502003,-3.0250200400000002,11.29997971],\"max\":[-0.75498005,-2.37498006,12.40001998]}],\"localRegionProof\":{\"proven\":true,\"method\":\"entire possible object-AABB overlap is in the declared local region\",\"exhaustiveVertices\":0}}",
+        "maxPenetrationMm": 1.10002,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#379ce5a5570067d62a584d2f"
+      },
+      {
+        "partKeys": [
+          "part:9dcad5ce5399f75a44d14021fcae4cee1795aaa6a5db64ad7e1fc2f79eb5a5fa",
+          "part:c2cde797cbfeeb3caeb4b9445406164f5ce5419fc6a27516d68c0fa6add7b752"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[1.13498005,-3.0250200400000002,11.29997971],\"max\":[1.7850200299999999,-2.37498006,12.40001998]}],\"localRegionProof\":{\"proven\":true,\"method\":\"entire possible object-AABB overlap is in the declared local region\",\"exhaustiveVertices\":0}}",
+        "maxPenetrationMm": 1.10002,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#24dddd0ef2bf2e24b0eb164e"
+      },
+      {
+        "partKeys": [
+          "part:e8cf031b207ee01ea28fc061776e50a15d7c66d321ce407e13a85b52a16136f7",
+          "part:c2cde797cbfeeb3caeb4b9445406164f5ce5419fc6a27516d68c0fa6add7b752"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[3.67498001,-3.0250200400000002,11.29997971],\"max\":[4.32501999,-2.37498006,12.40001998]}],\"localRegionProof\":{\"proven\":true,\"method\":\"entire possible object-AABB overlap is in the declared local region\",\"exhaustiveVertices\":0}}",
+        "maxPenetrationMm": 1.10002,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#1f7bf9e28600a5093516a803"
+      },
+      {
+        "partKeys": [
+          "part:ff7398a6ccfc0d6590ade951010b1d4d5f83732bd71fef1093d512b74875586a",
+          "part:c2cde797cbfeeb3caeb4b9445406164f5ce5419fc6a27516d68c0fa6add7b752"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[6.21497997,-3.0250200400000002,11.29997971],\"max\":[6.86501995,-2.37498006,12.40001998]}],\"localRegionProof\":{\"proven\":true,\"method\":\"entire possible object-AABB overlap is in the declared local region\",\"exhaustiveVertices\":0}}",
+        "maxPenetrationMm": 1.10002,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#2c1d29518151db2063f90fab"
+      },
+      {
+        "partKeys": [
+          "part:5dd19f667d2dae7011485399c5f03d5bb14ff6662d67d1f7ce5a7a6c4d2f1cf9",
+          "part:c2cde797cbfeeb3caeb4b9445406164f5ce5419fc6a27516d68c0fa6add7b752"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[8.75497994,-3.0250200400000002,11.29997971],\"max\":[9.40501991,-2.37498006,12.40001998]}],\"localRegionProof\":{\"proven\":true,\"method\":\"entire possible object-AABB overlap is in the declared local region\",\"exhaustiveVertices\":0}}",
+        "maxPenetrationMm": 1.10002,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#41e88e89a735421570f76dc6"
+      },
+      {
+        "partKeys": [
+          "part:653304c7a7e936fd05ae96ac53b0349893493672f8ed44e5aae344d94c16924e",
+          "part:c2cde797cbfeeb3caeb4b9445406164f5ce5419fc6a27516d68c0fa6add7b752"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[11.294979900000001,-3.0250200400000002,11.29997971],\"max\":[11.94501987,-2.37498006,12.40001998]}],\"localRegionProof\":{\"proven\":true,\"method\":\"entire possible object-AABB overlap is in the declared local region\",\"exhaustiveVertices\":0}}",
+        "maxPenetrationMm": 1.10002,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#0b545e1f4502aadd75cd047d"
+      },
+      {
+        "partKeys": [
+          "part:8f74dcf4cccd6e8f8897aac52b83be83e029b22b29977ccae7f5f846b14bb3de",
+          "part:c2cde797cbfeeb3caeb4b9445406164f5ce5419fc6a27516d68c0fa6add7b752"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[13.83497986,-3.0250200400000002,11.29997971],\"max\":[14.48501984,-2.37498006,12.40001998]}],\"localRegionProof\":{\"proven\":true,\"method\":\"entire possible object-AABB overlap is in the declared local region\",\"exhaustiveVertices\":0}}",
+        "maxPenetrationMm": 1.10002,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#86f9f294b7c327da1d4faea9"
+      },
+      {
+        "partKeys": [
+          "part:b2acc515d5f9aef1797be855fe31fb96b5f4873292e27de182337a700f33c4f1",
+          "part:c2cde797cbfeeb3caeb4b9445406164f5ce5419fc6a27516d68c0fa6add7b752"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[16.37498077,-3.0250200400000002,11.29997971],\"max\":[17.02502075,-2.37498006,12.40001998]}],\"localRegionProof\":{\"proven\":true,\"method\":\"entire possible object-AABB overlap is in the declared local region\",\"exhaustiveVertices\":0}}",
+        "maxPenetrationMm": 1.10002,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#8cb106e9f67d6cd55aa2106a"
+      },
+      {
+        "partKeys": [
+          "part:d87341ae1a4332c5decfff4db044b64d74062ae182ceda931f16e4f1e00a5fa6",
+          "part:c2cde797cbfeeb3caeb4b9445406164f5ce5419fc6a27516d68c0fa6add7b752"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[18.91497978,-3.0250200400000002,11.29997971],\"max\":[19.56501976,-2.37498006,12.40001998]}],\"localRegionProof\":{\"proven\":true,\"method\":\"entire possible object-AABB overlap is in the declared local region\",\"exhaustiveVertices\":0}}",
+        "maxPenetrationMm": 1.10002,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#85efa55ae6f8110ee074136e"
+      },
+      {
+        "partKeys": [
+          "part:75ef40f2483c572a077d67245dbdbf939cee63cb6ec1910c064d9a5fcb5836f9",
+          "part:e9503c4c5880544e86701c7805a9d77ce9e291f4c77b57d0c8ad65aefade6144"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[-22.85002002,18.49998072,9.59998002],\"max\":[20.65001998,20.90002081,9.6000202]}],\"localRegionProof\":{\"proven\":true,\"method\":\"entire possible object-AABB overlap is in the declared local region\",\"exhaustiveVertices\":0}}",
+        "maxPenetrationMm": 0.00002,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#59ed40f4f25794df9c5d7ad3"
+      },
+      {
+        "partKeys": [
+          "part:12df64b8199b6eb456954665152954ac4140cb67108068b6564c2f89aed8d8e2",
+          "part:e9503c4c5880544e86701c7805a9d77ce9e291f4c77b57d0c8ad65aefade6144"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[-21.72501961,19.37498077,11.29997971],\"max\":[-21.07497963,20.02502075,12.40001998]}],\"localRegionProof\":{\"proven\":true,\"method\":\"entire possible object-AABB overlap is in the declared local region\",\"exhaustiveVertices\":0}}",
+        "maxPenetrationMm": 1.10002,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#479ef107826e2dc55c8d07a2"
+      },
+      {
+        "partKeys": [
+          "part:d8b27fa13a18055e1aeaf440bcd36396fdad584ac5357fc632370a4565de7463",
+          "part:e9503c4c5880544e86701c7805a9d77ce9e291f4c77b57d0c8ad65aefade6144"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[-19.185020599999998,19.37498077,11.29997971],\"max\":[-18.534980620000002,20.02502075,12.40001998]}],\"localRegionProof\":{\"proven\":true,\"method\":\"entire possible object-AABB overlap is in the declared local region\",\"exhaustiveVertices\":0}}",
+        "maxPenetrationMm": 1.10002,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#62d9d71e07d29dc38bf04164"
+      },
+      {
+        "partKeys": [
+          "part:510c06bf065010e81a1126143e8c03a2a2126f9ab89de59fdfde88b420bf6cd9",
+          "part:e9503c4c5880544e86701c7805a9d77ce9e291f4c77b57d0c8ad65aefade6144"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[-16.64501968,19.37498077,11.29997971],\"max\":[-15.99497971,20.02502075,12.40001998]}],\"localRegionProof\":{\"proven\":true,\"method\":\"entire possible object-AABB overlap is in the declared local region\",\"exhaustiveVertices\":0}}",
+        "maxPenetrationMm": 1.10002,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#b6263bf4f08625e2174e1951"
+      },
+      {
+        "partKeys": [
+          "part:41d928347c1b9890aae90bf433d8ca31da263864ee0568efecd4d112ee08ee32",
+          "part:e9503c4c5880544e86701c7805a9d77ce9e291f4c77b57d0c8ad65aefade6144"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[-14.10501972,19.37498077,11.29997971],\"max\":[-13.45497974,20.02502075,12.40001998]}],\"localRegionProof\":{\"proven\":true,\"method\":\"entire possible object-AABB overlap is in the declared local region\",\"exhaustiveVertices\":0}}",
+        "maxPenetrationMm": 1.10002,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#e5be68395a63fc8cd5f96a25"
+      },
+      {
+        "partKeys": [
+          "part:bc072593ee8e5472be0cc0507599d5b5c7a2aded0b3b40b48579a811d17d5a7c",
+          "part:e9503c4c5880544e86701c7805a9d77ce9e291f4c77b57d0c8ad65aefade6144"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[-11.565019759999998,19.37498077,11.29997971],\"max\":[-10.914979780000001,20.02502075,12.40001998]}],\"localRegionProof\":{\"proven\":true,\"method\":\"entire possible object-AABB overlap is in the declared local region\",\"exhaustiveVertices\":0}}",
+        "maxPenetrationMm": 1.10002,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#e85b14851d263b01b2af1cee"
+      },
+      {
+        "partKeys": [
+          "part:24e5f0e9bf58dc2b988707be71daf45cbbfdc2a3a4052f7a06eb3d3d9f9bfa76",
+          "part:e9503c4c5880544e86701c7805a9d77ce9e291f4c77b57d0c8ad65aefade6144"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[-9.025019799999999,19.37498077,11.29997971],\"max\":[-8.37497982,20.02502075,12.40001998]}],\"localRegionProof\":{\"proven\":true,\"method\":\"entire possible object-AABB overlap is in the declared local region\",\"exhaustiveVertices\":0}}",
+        "maxPenetrationMm": 1.10002,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#765319fb9d546dfd2c0bb5f3"
+      },
+      {
+        "partKeys": [
+          "part:b5d3e1f756a4a2d63a697a4e2c19e01e9ce6b973e844b56dda83e4a3e6d40299",
+          "part:e9503c4c5880544e86701c7805a9d77ce9e291f4c77b57d0c8ad65aefade6144"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[-6.4850198400000005,19.37498077,11.29997971],\"max\":[-5.83497986,20.02502075,12.40001998]}],\"localRegionProof\":{\"proven\":true,\"method\":\"entire possible object-AABB overlap is in the declared local region\",\"exhaustiveVertices\":0}}",
+        "maxPenetrationMm": 1.10002,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#795c65d97e957070cf7837cc"
+      },
+      {
+        "partKeys": [
+          "part:29837e6aaf99f3ac80d5d7677d043679acbcebd6dddb9da8c17b819db9737bda",
+          "part:e9503c4c5880544e86701c7805a9d77ce9e291f4c77b57d0c8ad65aefade6144"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[-3.9450198700000003,19.37498077,11.29997971],\"max\":[-3.2949799,20.02502075,12.40001998]}],\"localRegionProof\":{\"proven\":true,\"method\":\"entire possible object-AABB overlap is in the declared local region\",\"exhaustiveVertices\":0}}",
+        "maxPenetrationMm": 1.10002,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#69d2292214f2fae1c2c873b6"
+      },
+      {
+        "partKeys": [
+          "part:a0e1f91ee778075f920d34d7134ba1da2f14dea1bdbef071e9064265948e3bd2",
+          "part:e9503c4c5880544e86701c7805a9d77ce9e291f4c77b57d0c8ad65aefade6144"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[-1.40502003,19.37498077,11.29997971],\"max\":[-0.75498005,20.02502075,12.40001998]}],\"localRegionProof\":{\"proven\":true,\"method\":\"entire possible object-AABB overlap is in the declared local region\",\"exhaustiveVertices\":0}}",
+        "maxPenetrationMm": 1.10002,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#b765292bdc537ea7c2db8a40"
+      },
+      {
+        "partKeys": [
+          "part:1603e2f25097d3a685aa918746f06d28fb41fb1fac8f46a4e0943bcf00b0918f",
+          "part:e9503c4c5880544e86701c7805a9d77ce9e291f4c77b57d0c8ad65aefade6144"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[1.13498005,19.37498077,11.29997971],\"max\":[1.7850200299999999,20.02502075,12.40001998]}],\"localRegionProof\":{\"proven\":true,\"method\":\"entire possible object-AABB overlap is in the declared local region\",\"exhaustiveVertices\":0}}",
+        "maxPenetrationMm": 1.10002,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#de4dd7d9c0f22d410301a990"
+      },
+      {
+        "partKeys": [
+          "part:902aaab9489f3dba18d4adb51644c93267461ab7639bb5fc10cfbda283f74048",
+          "part:e9503c4c5880544e86701c7805a9d77ce9e291f4c77b57d0c8ad65aefade6144"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[3.67498001,19.37498077,11.29997971],\"max\":[4.32501999,20.02502075,12.40001998]}],\"localRegionProof\":{\"proven\":true,\"method\":\"entire possible object-AABB overlap is in the declared local region\",\"exhaustiveVertices\":0}}",
+        "maxPenetrationMm": 1.10002,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#90d500f309c59d1bddb9cd7d"
+      },
+      {
+        "partKeys": [
+          "part:df5f8d4fa0c9e82c1808a08e7612f10ad1350184b2bb0160091f915400a26cbe",
+          "part:e9503c4c5880544e86701c7805a9d77ce9e291f4c77b57d0c8ad65aefade6144"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[6.21497997,19.37498077,11.29997971],\"max\":[6.86501995,20.02502075,12.40001998]}],\"localRegionProof\":{\"proven\":true,\"method\":\"entire possible object-AABB overlap is in the declared local region\",\"exhaustiveVertices\":0}}",
+        "maxPenetrationMm": 1.10002,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#2386871752372f07db08045a"
+      },
+      {
+        "partKeys": [
+          "part:2691f2cb67261c04d27fd0c83bb2a58508c1d0525d7dd611ecad400ab9352a6c",
+          "part:e9503c4c5880544e86701c7805a9d77ce9e291f4c77b57d0c8ad65aefade6144"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[8.75497994,19.37498077,11.29997971],\"max\":[9.40501991,20.02502075,12.40001998]}],\"localRegionProof\":{\"proven\":true,\"method\":\"entire possible object-AABB overlap is in the declared local region\",\"exhaustiveVertices\":0}}",
+        "maxPenetrationMm": 1.10002,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#bfda50b65427eaed25b9ff2e"
+      },
+      {
+        "partKeys": [
+          "part:50b3fd6df7408b7cd7dcad0cb8c6e2806be77c0df30f0923406b95d0089920cd",
+          "part:e9503c4c5880544e86701c7805a9d77ce9e291f4c77b57d0c8ad65aefade6144"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[11.294979900000001,19.37498077,11.29997971],\"max\":[11.94501987,20.02502075,12.40001998]}],\"localRegionProof\":{\"proven\":true,\"method\":\"entire possible object-AABB overlap is in the declared local region\",\"exhaustiveVertices\":0}}",
+        "maxPenetrationMm": 1.10002,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#13bd92c0a3b0152c5d5387b0"
+      },
+      {
+        "partKeys": [
+          "part:3e37cf244f47f79efc2fbead718a92dfce5978bd28d9037673d9bea4e75c7e36",
+          "part:e9503c4c5880544e86701c7805a9d77ce9e291f4c77b57d0c8ad65aefade6144"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[13.83497986,19.37498077,11.29997971],\"max\":[14.48501984,20.02502075,12.40001998]}],\"localRegionProof\":{\"proven\":true,\"method\":\"entire possible object-AABB overlap is in the declared local region\",\"exhaustiveVertices\":0}}",
+        "maxPenetrationMm": 1.10002,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#22f569b70333ddedfde72adc"
+      },
+      {
+        "partKeys": [
+          "part:550e802c5bd9c3d33c3ce81e29841f0a70d5c684dbb43e9d6224862d56d4ac9b",
+          "part:e9503c4c5880544e86701c7805a9d77ce9e291f4c77b57d0c8ad65aefade6144"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[16.37498077,19.37498077,11.29997971],\"max\":[17.02502075,20.02502075,12.40001998]}],\"localRegionProof\":{\"proven\":true,\"method\":\"entire possible object-AABB overlap is in the declared local region\",\"exhaustiveVertices\":0}}",
+        "maxPenetrationMm": 1.10002,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#da845824aa1b2523c383ae8e"
+      },
+      {
+        "partKeys": [
+          "part:0ef601be80a67d3d6c6137d10f413ff6bd79789fa61371df6d7add006d0044f2",
+          "part:e9503c4c5880544e86701c7805a9d77ce9e291f4c77b57d0c8ad65aefade6144"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[18.91497978,19.37498077,11.29997971],\"max\":[19.56501976,20.02502075,12.40001998]}],\"localRegionProof\":{\"proven\":true,\"method\":\"entire possible object-AABB overlap is in the declared local region\",\"exhaustiveVertices\":0}}",
+        "maxPenetrationMm": 1.10002,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#f022f0e7d998c861937123ed"
+      },
+      {
+        "partKeys": [
+          "part:f150a77d7fe8ec7391d356cb922e88634bbadf954c9596e9f5890ce8cf3d7c3e",
+          "part:4e07b8293740b60f9fb4b0c2d60bb36ec65a19c3133167892c2a82b9a8c35c88"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[-52.62501,20.574990760000002,25.243060659999998],\"max\":[-49.774991529999994,23.425009239999998,25.24316066]}],\"localRegionProof\":{\"proven\":true,\"method\":\"Every triangle contact bounded by one declared patch; float64 clipping where conservative AABBs exceed a patch; exhaustive bidirectional input-vertex containment\",\"exhaustiveVertices\":192,\"exactTrianglePairClips\":0,\"regionCount\":1}}",
+        "maxPenetrationMm": 0.00005,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#fc4b976335915890ff83d804"
+      },
+      {
+        "partKeys": [
+          "part:f150a77d7fe8ec7391d356cb922e88634bbadf954c9596e9f5890ce8cf3d7c3e",
+          "part:4e07b8293740b60f9fb4b0c2d60bb36ec65a19c3133167892c2a82b9a8c35c88"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[-52.62501,20.574990760000002,24.993060659999998],\"max\":[-49.774991529999994,23.425009239999998,24.99316066]}],\"localRegionProof\":{\"proven\":true,\"method\":\"Every triangle contact bounded by one declared patch; float64 clipping where conservative AABBs exceed a patch; exhaustive bidirectional input-vertex containment\",\"exhaustiveVertices\":192,\"exactTrianglePairClips\":0,\"regionCount\":1}}",
+        "maxPenetrationMm": 0.00005,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#2d3b944e3724a5b87125282c"
+      },
+      {
+        "partKeys": [
+          "part:477f3c7d728e9db5d9f1bf8c51fe30e7b5085fad8e29b8e9f84b709608dc4a24",
+          "part:d29e5cb42e52515384b90360c4e9607be81d221cdc9737b3f039c784df6d1e2a"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[-43.42500924,11.37499191,25.008948869999998],\"max\":[-40.57499076,14.22501229,25.00904887]}],\"localRegionProof\":{\"proven\":true,\"method\":\"Every triangle contact bounded by one declared patch; float64 clipping where conservative AABBs exceed a patch; exhaustive bidirectional input-vertex containment\",\"exhaustiveVertices\":192,\"exactTrianglePairClips\":0,\"regionCount\":1}}",
+        "maxPenetrationMm": 0.00005,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#93b6013271b2434298831167"
+      },
+      {
+        "partKeys": [
+          "part:477f3c7d728e9db5d9f1bf8c51fe30e7b5085fad8e29b8e9f84b709608dc4a24",
+          "part:d29e5cb42e52515384b90360c4e9607be81d221cdc9737b3f039c784df6d1e2a"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[-43.42500924,11.37499191,24.758948869999998],\"max\":[-40.57499076,14.22501229,24.75904887]}],\"localRegionProof\":{\"proven\":true,\"method\":\"Every triangle contact bounded by one declared patch; float64 clipping where conservative AABBs exceed a patch; exhaustive bidirectional input-vertex containment\",\"exhaustiveVertices\":192,\"exactTrianglePairClips\":0,\"regionCount\":1}}",
+        "maxPenetrationMm": 0.00005,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#0e2e1630759c01e087224e1f"
+      },
+      {
+        "partKeys": [
+          "part:2b78384fcb219dbc2b2cfdf28c8c5bd874f49e635fb2f9a0bd25551851ff12a8",
+          "part:f260e3b5b34bfaaccdbe8ba926e7f13bb10d342ab5395c0212200b2ac18e028d"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[-43.42500924,29.77498962,21.61958606],\"max\":[-40.57499076,32.62501,21.619686060000003]}],\"localRegionProof\":{\"proven\":true,\"method\":\"Every triangle contact bounded by one declared patch; float64 clipping where conservative AABBs exceed a patch; exhaustive bidirectional input-vertex containment\",\"exhaustiveVertices\":192,\"exactTrianglePairClips\":0,\"regionCount\":1}}",
+        "maxPenetrationMm": 0.00005,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#146f60e22ed4681084a4c599"
+      },
+      {
+        "partKeys": [
+          "part:2b78384fcb219dbc2b2cfdf28c8c5bd874f49e635fb2f9a0bd25551851ff12a8",
+          "part:f260e3b5b34bfaaccdbe8ba926e7f13bb10d342ab5395c0212200b2ac18e028d"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[-43.42500924,29.77498962,21.36958606],\"max\":[-40.57499076,32.62501,21.369686060000003]}],\"localRegionProof\":{\"proven\":true,\"method\":\"Every triangle contact bounded by one declared patch; float64 clipping where conservative AABBs exceed a patch; exhaustive bidirectional input-vertex containment\",\"exhaustiveVertices\":192,\"exactTrianglePairClips\":0,\"regionCount\":1}}",
+        "maxPenetrationMm": 0.00005,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#41e79e92ec5593f964ba16ea"
+      },
+      {
+        "partKeys": [
+          "part:7bec36a43cf1391f2205c433dfcfeda527feb31864fd2280dbb4289f7f86e175",
+          "part:486fa9a44f8e60b11059d3da2f9cd090441cc3c018e5e29532add42719e2f555"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[-34.225008470000006,20.574990760000002,22.84762914],\"max\":[-31.37498809,23.42501114,22.847729140000002]}],\"localRegionProof\":{\"proven\":true,\"method\":\"Every triangle contact bounded by one declared patch; float64 clipping where conservative AABBs exceed a patch; exhaustive bidirectional input-vertex containment\",\"exhaustiveVertices\":192,\"exactTrianglePairClips\":0,\"regionCount\":1}}",
+        "maxPenetrationMm": 0.00005,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#c970e003e008077dd1e35429"
+      },
+      {
+        "partKeys": [
+          "part:7bec36a43cf1391f2205c433dfcfeda527feb31864fd2280dbb4289f7f86e175",
+          "part:486fa9a44f8e60b11059d3da2f9cd090441cc3c018e5e29532add42719e2f555"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[-34.225008470000006,20.574990760000002,22.59762914],\"max\":[-31.37498809,23.42501114,22.597729140000002]}],\"localRegionProof\":{\"proven\":true,\"method\":\"Every triangle contact bounded by one declared patch; float64 clipping where conservative AABBs exceed a patch; exhaustive bidirectional input-vertex containment\",\"exhaustiveVertices\":192,\"exactTrianglePairClips\":0,\"regionCount\":1}}",
+        "maxPenetrationMm": 0.00005,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#a8df0003c52beb0a2a607715"
+      },
+      {
+        "partKeys": [
+          "part:2bda88f897a377a24cfd7d80dcb1a2c3716f9c6dd0d3232191ae4fe0843b3bcd",
+          "part:c59c5521f5d85f807673f38ca28c879c0acac3941904df86fbb5769f3bb3657e"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[51.074986949999996,19.574990760000002,27.793061799999997],\"max\":[53.925005420000005,22.425009239999998,27.7931618]}],\"localRegionProof\":{\"proven\":true,\"method\":\"Every triangle contact bounded by one declared patch; float64 clipping where conservative AABBs exceed a patch; exhaustive bidirectional input-vertex containment\",\"exhaustiveVertices\":192,\"exactTrianglePairClips\":0,\"regionCount\":1}}",
+        "maxPenetrationMm": 0.00005,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#988a986f7438ff40f74eed42"
+      },
+      {
+        "partKeys": [
+          "part:2bda88f897a377a24cfd7d80dcb1a2c3716f9c6dd0d3232191ae4fe0843b3bcd",
+          "part:c59c5521f5d85f807673f38ca28c879c0acac3941904df86fbb5769f3bb3657e"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[51.074986949999996,19.574990760000002,27.543061799999997],\"max\":[53.925005420000005,22.425009239999998,27.5431618]}],\"localRegionProof\":{\"proven\":true,\"method\":\"Every triangle contact bounded by one declared patch; float64 clipping where conservative AABBs exceed a patch; exhaustive bidirectional input-vertex containment\",\"exhaustiveVertices\":192,\"exactTrianglePairClips\":0,\"regionCount\":1}}",
+        "maxPenetrationMm": 0.00005,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#9feab638f0ce191e9149bcd0"
+      },
+      {
+        "partKeys": [
+          "part:a64596b2b341f1bdbad47d42cdf318ee97b04b64684300fd8c3a152462c5e57b",
+          "part:2429a2b1eab7a227d08eb04671c52c30a3131009b0c7634954433bf1a2c8ae03"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[39.574986949999996,8.07499076,27.793061799999997],\"max\":[42.425005420000005,10.92500924,27.7931618]}],\"localRegionProof\":{\"proven\":true,\"method\":\"Every triangle contact bounded by one declared patch; float64 clipping where conservative AABBs exceed a patch; exhaustive bidirectional input-vertex containment\",\"exhaustiveVertices\":192,\"exactTrianglePairClips\":0,\"regionCount\":1}}",
+        "maxPenetrationMm": 0.00005,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#177a6b22741278192dcef38a"
+      },
+      {
+        "partKeys": [
+          "part:a64596b2b341f1bdbad47d42cdf318ee97b04b64684300fd8c3a152462c5e57b",
+          "part:2429a2b1eab7a227d08eb04671c52c30a3131009b0c7634954433bf1a2c8ae03"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[39.574986949999996,8.07499076,27.543061799999997],\"max\":[42.425005420000005,10.92500924,27.5431618]}],\"localRegionProof\":{\"proven\":true,\"method\":\"Every triangle contact bounded by one declared patch; float64 clipping where conservative AABBs exceed a patch; exhaustive bidirectional input-vertex containment\",\"exhaustiveVertices\":192,\"exactTrianglePairClips\":0,\"regionCount\":1}}",
+        "maxPenetrationMm": 0.00005,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#0dbe7d5dc8b0ba2dfe9591ce"
+      },
+      {
+        "partKeys": [
+          "part:aa6a19e40881d0959180cf4a333167cc21f4574026254d4ad2655b171c360691",
+          "part:47cf8db03ee04aa920133936238544c3b87b7578539998c186607f6a4678872e"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[28.07498695,19.574990760000002,27.793061799999997],\"max\":[30.925005419999998,22.425009239999998,27.7931618]}],\"localRegionProof\":{\"proven\":true,\"method\":\"Every triangle contact bounded by one declared patch; float64 clipping where conservative AABBs exceed a patch; exhaustive bidirectional input-vertex containment\",\"exhaustiveVertices\":192,\"exactTrianglePairClips\":0,\"regionCount\":1}}",
+        "maxPenetrationMm": 0.00005,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#ee2c4161a1fcb43030c49db6"
+      },
+      {
+        "partKeys": [
+          "part:aa6a19e40881d0959180cf4a333167cc21f4574026254d4ad2655b171c360691",
+          "part:47cf8db03ee04aa920133936238544c3b87b7578539998c186607f6a4678872e"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[28.07498695,19.574990760000002,27.543061799999997],\"max\":[30.925005419999998,22.425009239999998,27.5431618]}],\"localRegionProof\":{\"proven\":true,\"method\":\"Every triangle contact bounded by one declared patch; float64 clipping where conservative AABBs exceed a patch; exhaustive bidirectional input-vertex containment\",\"exhaustiveVertices\":192,\"exactTrianglePairClips\":0,\"regionCount\":1}}",
+        "maxPenetrationMm": 0.00005,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#97a3b5b3086c5e4a0578bdff"
+      },
+      {
+        "partKeys": [
+          "part:9f716850a09d4bb949d0f7106ebc4d469d9cb75feae292eec4ef10eee9ec5592",
+          "part:15449ae001df111db9c3465d75515af2245569c626b60d70d5ce5b0d1c371380"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[39.574986949999996,31.074990760000002,27.793061799999997],\"max\":[42.425005420000005,33.92500924,27.7931618]}],\"localRegionProof\":{\"proven\":true,\"method\":\"Every triangle contact bounded by one declared patch; float64 clipping where conservative AABBs exceed a patch; exhaustive bidirectional input-vertex containment\",\"exhaustiveVertices\":192,\"exactTrianglePairClips\":0,\"regionCount\":1}}",
+        "maxPenetrationMm": 0.00005,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#76c4acb0583c44dc2d8ad3fc"
+      },
+      {
+        "partKeys": [
+          "part:9f716850a09d4bb949d0f7106ebc4d469d9cb75feae292eec4ef10eee9ec5592",
+          "part:15449ae001df111db9c3465d75515af2245569c626b60d70d5ce5b0d1c371380"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[39.574986949999996,31.074990760000002,27.543061799999997],\"max\":[42.425005420000005,33.92500924,27.5431618]}],\"localRegionProof\":{\"proven\":true,\"method\":\"Every triangle contact bounded by one declared patch; float64 clipping where conservative AABBs exceed a patch; exhaustive bidirectional input-vertex containment\",\"exhaustiveVertices\":192,\"exactTrianglePairClips\":0,\"regionCount\":1}}",
+        "maxPenetrationMm": 0.00005,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#8800653337ede8a8f2097b3b"
+      },
+      {
+        "partKeys": [
+          "part:2e0cbba6332e126e6bdea4c970274867afe03757aef800c1f76ef0f996fbeeec",
+          "part:366eb8aa1148445cd24c5ecdc83dad768501dd55b7589db2283d4ba321bc6633"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[-1.30000995,4.19999005,25.19037388],\"max\":[1.30000995,6.80000995,25.190473880000003]}],\"localRegionProof\":{\"proven\":true,\"method\":\"entire possible object-AABB overlap is in the declared local region\",\"exhaustiveVertices\":0}}",
+        "maxPenetrationMm": 0.00005,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#c363f57552be9634465aeb75"
+      },
+      {
+        "partKeys": [
+          "part:2e0cbba6332e126e6bdea4c970274867afe03757aef800c1f76ef0f996fbeeec",
+          "part:366eb8aa1148445cd24c5ecdc83dad768501dd55b7589db2283d4ba321bc6633"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[-1.30000995,4.19999005,24.94037388],\"max\":[1.30000995,6.80000995,24.940473880000003]}],\"localRegionProof\":{\"proven\":true,\"method\":\"entire possible object-AABB overlap is in the declared local region\",\"exhaustiveVertices\":0}}",
+        "maxPenetrationMm": 0.00005,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#d64a015ceb705b96432906ae"
+      },
+      {
+        "partKeys": [
+          "part:103e5a9cb63318a84e71af38103c804a3af877e16f5285b790e3118d01ec31e3",
+          "part:a64596b2b341f1bdbad47d42cdf318ee97b04b64684300fd8c3a152462c5e57b"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[39.574986949999996,8.07499076,26.24305107],\"max\":[42.425005420000005,10.92500924,26.49307107]}],\"localRegionProof\":{\"proven\":true,\"method\":\"entire possible object-AABB overlap is in the declared local region\",\"exhaustiveVertices\":0}}",
+        "maxPenetrationMm": 0.25001,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#0ca4c958ae785568f44f8997"
+      },
+      {
+        "partKeys": [
+          "part:e06df87cb9ebf7fd73e2f72ab9ad40b0e169d321fb246f203c78ffe588d59a38",
+          "part:2bda88f897a377a24cfd7d80dcb1a2c3716f9c6dd0d3232191ae4fe0843b3bcd"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[51.074986949999996,19.574990760000002,26.24305107],\"max\":[53.925005420000005,22.425009239999998,26.49307107]}],\"localRegionProof\":{\"proven\":true,\"method\":\"entire possible object-AABB overlap is in the declared local region\",\"exhaustiveVertices\":0}}",
+        "maxPenetrationMm": 0.25001,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#85735265e1831ac9420fdc0b"
+      },
+      {
+        "partKeys": [
+          "part:1bd5ed79d15dbd699d935b7f1424187e611a500ac65cc2f708ef363fda62fc7f",
+          "part:d29e5cb42e52515384b90360c4e9607be81d221cdc9737b3f039c784df6d1e2a"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[-43.42500924,11.37499191,23.45893718],\"max\":[-40.57499076,14.22501229,23.70895718]}],\"localRegionProof\":{\"proven\":true,\"method\":\"entire possible object-AABB overlap is in the declared local region\",\"exhaustiveVertices\":0}}",
+        "maxPenetrationMm": 0.25001,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#e9570d1b742b638736535ba1"
+      },
+      {
+        "partKeys": [
+          "part:a9776466f7f01f24a342e2e5f7363bb8a8515a724493072058d88a4daaffac5a",
+          "part:4e07b8293740b60f9fb4b0c2d60bb36ec65a19c3133167892c2a82b9a8c35c88"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[-52.62501,20.574990760000002,23.69305087],\"max\":[-49.774991529999994,23.425009239999998,23.94307087]}],\"localRegionProof\":{\"proven\":true,\"method\":\"entire possible object-AABB overlap is in the declared local region\",\"exhaustiveVertices\":0}}",
+        "maxPenetrationMm": 0.25001,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#4e0a6fc3bde3e58897bdf8cb"
+      },
+      {
+        "partKeys": [
+          "part:93b3282e1d1246eeb08a718e76c3c5492e113d26db7b5d07281670f69ab2058b",
+          "part:486fa9a44f8e60b11059d3da2f9cd090441cc3c018e5e29532add42719e2f555"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[-34.225008470000006,20.574990760000002,21.29761936],\"max\":[-31.37498809,23.42501114,21.547639359999998]}],\"localRegionProof\":{\"proven\":true,\"method\":\"entire possible object-AABB overlap is in the declared local region\",\"exhaustiveVertices\":0}}",
+        "maxPenetrationMm": 0.25001,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#cbc5e24299a88cfdb8f5444d"
+      },
+      {
+        "partKeys": [
+          "part:e8776432afa164ee7ce02719120ed11effd21bbea90b88c5b92389ffb152ef0b",
+          "part:f260e3b5b34bfaaccdbe8ba926e7f13bb10d342ab5395c0212200b2ac18e028d"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[-43.42500924,29.77498962,20.069575320000002],\"max\":[-40.57499076,32.62501,20.31959532]}],\"localRegionProof\":{\"proven\":true,\"method\":\"entire possible object-AABB overlap is in the declared local region\",\"exhaustiveVertices\":0}}",
+        "maxPenetrationMm": 0.25001,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#ee64cdf03b77a5c2db4d344d"
+      },
+      {
+        "partKeys": [
+          "part:240410db8dbcf5dfcef9813e792c8d50d4128b466c86e91538c5e4fc06c5915c",
+          "part:aa6a19e40881d0959180cf4a333167cc21f4574026254d4ad2655b171c360691"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[28.07498695,19.574990760000002,26.24305107],\"max\":[30.925005419999998,22.425009239999998,26.49307107]}],\"localRegionProof\":{\"proven\":true,\"method\":\"entire possible object-AABB overlap is in the declared local region\",\"exhaustiveVertices\":0}}",
+        "maxPenetrationMm": 0.25001,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#ddbb28febcf90830ac815de5"
+      },
+      {
+        "partKeys": [
+          "part:24494c7f4c15c3bba562142854959d4859608c301d8344bd82768c7501360c14",
+          "part:9f716850a09d4bb949d0f7106ebc4d469d9cb75feae292eec4ef10eee9ec5592"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[39.574986949999996,31.074990760000002,26.24305107],\"max\":[42.425005420000005,33.92500924,26.49307107]}],\"localRegionProof\":{\"proven\":true,\"method\":\"entire possible object-AABB overlap is in the declared local region\",\"exhaustiveVertices\":0}}",
+        "maxPenetrationMm": 0.25001,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#111b971718d917d037b59102"
+      },
+      {
+        "partKeys": [
+          "part:f9ec489a9bd04a7bcda8d98677c51aa2d82b775a4cdca4bf37b46f969fe3b0cc",
+          "part:2e0cbba6332e126e6bdea4c970274867afe03757aef800c1f76ef0f996fbeeec"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[-1.30000995,4.19999005,24.10041429],\"max\":[1.30000995,6.80000995,24.35043429]}],\"localRegionProof\":{\"proven\":true,\"method\":\"entire possible object-AABB overlap is in the declared local region\",\"exhaustiveVertices\":0}}",
+        "maxPenetrationMm": 0.25001,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#0bee92990e2c9b1ba140d529"
+      },
+      {
+        "partKeys": [
+          "part:f9ec489a9bd04a7bcda8d98677c51aa2d82b775a4cdca4bf37b46f969fe3b0cc",
+          "part:2e0cbba6332e126e6bdea4c970274867afe03757aef800c1f76ef0f996fbeeec"
+        ],
+        "region": "{\"sourceCoordinates\":\"Blender XYZ/Z-up mm\",\"regionsAtCheckedPose\":[{\"min\":[-1.30000995,4.19999005,24.10041429],\"max\":[1.30000995,6.80000995,24.35043429]}],\"localRegionProof\":{\"proven\":true,\"method\":\"entire possible object-AABB overlap is in the declared local region\",\"exhaustiveVertices\":0}}",
+        "maxPenetrationMm": 0.25001,
+        "evidenceRef": "docs/puretv-geometry-assembly.json#5918fb7c51c5da39b47de260"
+      }
+    ],
+    "unknown": []
+  },
+  "checks": [
+    {
+      "id": "final-source-binding",
+      "status": "pass",
+      "category": "geometry",
+      "detail": "Every final source, display hash and source object matches the complete exported workbench assembly.",
+      "evidenceRef": "source-verification:sourceHashes"
+    },
+    {
+      "id": "puretv-display-consistency",
+      "status": "pass",
+      "category": "geometry",
+      "detail": "All nine actual GLBs preserve measured spring endpoints and physical contact surfaces within 0.001 mm; this is separate from collision coverage.",
+      "evidenceRef": "docs/puretv-display-consistency.json#display"
+    },
+    {
+      "id": "puretv-geometry-assembly",
+      "status": "pass",
+      "category": "geometry",
+      "detail": "All recorded rest and sampled source-motion candidates are accounted for, including explicit local contact interfaces.",
+      "evidenceRef": "docs/puretv-geometry-assembly.json#assembly"
+    },
+    {
+      "id": "puretv-geometry-internals-after",
+      "status": "pass",
+      "category": "geometry",
+      "detail": "Nine source internal moving/elastic groups checked along the calibrated stroke.",
+      "evidenceRef": "docs/puretv-geometry-internals-after.json#internals"
+    },
+    {
+      "id": "puretv-geometry-locks",
+      "status": "pass",
+      "category": "fit",
+      "detail": "Eight sleeve locks and the confirmation key's actual mounting/guide/retention interfaces have checked source evidence.",
+      "evidenceRef": "docs/puretv-geometry-locks.json#locks"
+    },
+    {
+      "id": "actual-mcp-nine-keys",
+      "status": "pass",
+      "category": "circuit",
+      "detail": "Actual workbench MCP exercised all nine approach/contact/release branches, real renderer motion and the ten analytic bench entities.",
+      "evidenceRef": "docs/puretv-mcp-verification.json"
+    },
+    {
+      "id": "analytic-bench-environment",
+      "status": "pass",
+      "category": "geometry",
+      "detail": "Ten analytic bench geometries passed actual MCP proxy checks and are strictly AABB-separated from every unsimplified source object's complete axial swept bounds.",
+      "evidenceRef": "source-verification:analyticBench"
+    }
+  ],
+  "provenance": {
+    "generator": "scripts/build-puretv-evidence.ts",
+    "version": "1",
+    "reportUrl": "./models/puretv-source-verification.json",
+    "reportSha256": "9f5a4ea56c52b017811b7dc001f0e8aea6e0e3b38c71dfeec829940c27c0d667"
+  }
+}

@@ -1,0 +1,4967 @@
+{
+  "schemaVersion": 1,
+  "recordedAt": "2026-11-14T11:23:10.182Z",
+  "startedAt": "2026-11-14T11:21:20.661Z",
+  "execution": {
+    "protocol": "Native executable --mcp, official MCP SDK client",
+    "transport": "Authenticated development adapter forwarding into the actual browser App handler",
+    "renderer": "Chromium with real App, IndexedDB and WebGL",
+    "nativeDesktop": false,
+    "fixture": false,
+    "macOSVerification": "Required in the packaged WKWebView release smoke; this local run is not a macOS claim"
+  },
+  "operations": [
+    "get_runtime_status",
+    "list_components",
+    "get_project",
+    "new_project",
+    "add_repository_parts (one actual MCP call per source collection)",
+    "validate_project"
+  ],
+  "collections": [
+    {
+      "id": "buttons-left",
+      "name": "方向键 · 左",
+      "sourceNodes": 13,
+      "addedParts": 13,
+      "revision": 2,
+      "issues": {
+        "error": 27,
+        "warning": 21
+      }
+    },
+    {
+      "id": "buttons-right",
+      "name": "方向键 · 右",
+      "sourceNodes": 13,
+      "addedParts": 13,
+      "revision": 3,
+      "issues": {
+        "error": 26,
+        "warning": 21
+      }
+    },
+    {
+      "id": "buttons-down",
+      "name": "方向键 · 下",
+      "sourceNodes": 13,
+      "addedParts": 13,
+      "revision": 4,
+      "issues": {
+        "error": 27,
+        "warning": 29
+      }
+    },
+    {
+      "id": "buttons-up",
+      "name": "方向键 · 上",
+      "sourceNodes": 13,
+      "addedParts": 13,
+      "revision": 5,
+      "issues": {
+        "error": 27,
+        "warning": 28
+      }
+    },
+    {
+      "id": "buttons-a",
+      "name": "A 键 · 插销回弹总成",
+      "sourceNodes": 14,
+      "addedParts": 14,
+      "revision": 6,
+      "issues": {
+        "error": 27,
+        "warning": 21
+      }
+    },
+    {
+      "id": "buttons-b",
+      "name": "B 键 · 插销回弹总成",
+      "sourceNodes": 14,
+      "addedParts": 14,
+      "revision": 7,
+      "issues": {
+        "error": 27,
+        "warning": 24
+      }
+    },
+    {
+      "id": "buttons-x",
+      "name": "X 键 · 插销回弹总成",
+      "sourceNodes": 14,
+      "addedParts": 14,
+      "revision": 8,
+      "issues": {
+        "error": 27,
+        "warning": 24
+      }
+    },
+    {
+      "id": "buttons-y",
+      "name": "Y 键 · 插销回弹总成",
+      "sourceNodes": 14,
+      "addedParts": 14,
+      "revision": 9,
+      "issues": {
+        "error": 27,
+        "warning": 27
+      }
+    },
+    {
+      "id": "buttons-confirm",
+      "name": "确认键 · 旋锁总成",
+      "sourceNodes": 5,
+      "addedParts": 5,
+      "revision": 10,
+      "issues": {
+        "error": 28,
+        "warning": 10
+      }
+    },
+    {
+      "id": "baseplates-dpad",
+      "name": "方向键 · 四键底座",
+      "sourceNodes": 5,
+      "addedParts": 5,
+      "revision": 11,
+      "issues": {
+        "warning": 29
+      }
+    },
+    {
+      "id": "baseplates-abxy",
+      "name": "ABXY · 四键底座",
+      "sourceNodes": 5,
+      "addedParts": 5,
+      "revision": 12,
+      "issues": {
+        "warning": 37
+      }
+    },
+    {
+      "id": "housing-top",
+      "name": "手柄 · 上盖",
+      "sourceNodes": 1,
+      "addedParts": 1,
+      "revision": 13,
+      "issues": {
+        "warning": 121
+      }
+    },
+    {
+      "id": "housing-bottom",
+      "name": "手柄 · 底壳",
+      "sourceNodes": 1,
+      "addedParts": 1,
+      "revision": 14,
+      "issues": {
+        "error": 1,
+        "warning": 117
+      }
+    },
+    {
+      "id": "electronics-esp32-mount",
+      "name": "ESP32 · 固定总成",
+      "sourceNodes": 44,
+      "addedParts": 44,
+      "revision": 15,
+      "issues": {
+        "warning": 131
+      }
+    },
+    {
+      "id": "electronics-harness",
+      "name": "手柄 · 九组线束",
+      "sourceNodes": 20,
+      "addedParts": 20,
+      "revision": 16,
+      "issues": {
+        "warning": 439
+      }
+    }
+  ],
+  "summary": {
+    "collectionCount": 15,
+    "partCount": 189,
+    "wireCount": 0,
+    "mechanismCount": 0,
+    "revision": 16,
+    "issueCounts": {
+      "error": 298,
+      "warning": 1065
+    }
+  },
+  "runtime": {
+    "ready": true,
+    "webgl": true,
+    "catalogCount": 15,
+    "loadedAssetCount": 189,
+    "rendererErrors": []
+  },
+  "parts": [
+    {
+      "id": "50141502-965b-421b-a7b7-8e7687ec2210",
+      "name": "左 · PS5 6×6 开关.005",
+      "kind": "button",
+      "source": "./models/buttons-left.glb",
+      "node": "左_·_PS5_6×6_开关005",
+      "size": [
+        6.000015,
+        3.000008,
+        6.000015
+      ],
+      "position": [
+        -51.200001,
+        22.443057,
+        -22
+      ],
+      "group": {
+        "id": "1005ff1b-6e33-4e5c-bca2-16bb9bdd97da-buttons-left-switch",
+        "name": "左键 · 开关 / 按杆 / 焊脚"
+      },
+      "interactionStatus": "unconfigured"
+    },
+    {
+      "id": "2862442c-419a-4509-bafb-10b5b807ba41",
+      "name": "左 · PS5 一体式键帽与蓝色插销.003",
+      "kind": "pin",
+      "source": "./models/buttons-left.glb",
+      "node": "左_·_PS5_一体式键帽与蓝色插销003",
+      "size": [
+        12.311832,
+        13.032135,
+        11.560001
+      ],
+      "position": [
+        -51.228842,
+        31.540993,
+        -22
+      ],
+      "group": {
+        "id": "1005ff1b-6e33-4e5c-bca2-16bb9bdd97da-buttons-left-pin-sleeve",
+        "name": "左键 · 键帽插销 / 下套筒"
+      },
+      "interactionStatus": "unconfigured"
+    },
+    {
+      "id": "97e97021-a61c-4bb8-91aa-cacb07e9626e",
+      "name": "左 · PS5 下环一体式开关套筒.003",
+      "kind": "sleeve",
+      "source": "./models/buttons-left.glb",
+      "node": "左_·_PS5_下环一体式开关套筒003",
+      "size": [
+        11.183365,
+        12.955192,
+        11.183237
+      ],
+      "position": [
+        -51.199966,
+        20.7576,
+        -21.999986
+      ],
+      "group": {
+        "id": "1005ff1b-6e33-4e5c-bca2-16bb9bdd97da-buttons-left-pin-sleeve",
+        "name": "左键 · 键帽插销 / 下套筒"
+      },
+      "interactionStatus": "unconfigured"
+    },
+    {
+      "id": "a003e38b-e08f-40b1-b927-6c8f0698c019",
+      "name": "左 · PS5 回位弹簧.003",
+      "kind": "spring",
+      "source": "./models/buttons-left.glb",
+      "node": "左_·_PS5_回位弹簧003",
+      "size": [
+        6.074041,
+        4.04082,
+        6.075855
+      ],
+      "position": [
+        -51.198585,
+        26.43837,
+        -21.999252
+      ],
+      "group": {
+        "id": "1005ff1b-6e33-4e5c-bca2-16bb9bdd97da-buttons-left-spring-seat",
+        "name": "左键 · 弹簧 / 定位环"
+      },
+      "interactionStatus": "unconfigured"
+    },
+    {
+      "id": "39ed5395-42a5-42fc-8eca-637ea8d74dd1",
+      "name": "左 · PS5 弹簧定位环.004",
+      "kind": "asset",
+      "source": "./models/buttons-left.glb",
+      "node": "左_·_PS5_弹簧定位环004",
+      "size": [
+        5.166206,
+        1.002852,
+        5.166206
+      ],
+      "position": [
+        -51.200001,
+        28.079065,
+        -22
+      ],
+      "group": {
+        "id": "1005ff1b-6e33-4e5c-bca2-16bb9bdd97da-buttons-left-spring-seat",
+        "name": "左键 · 弹簧 / 定位环"
+      }
+    },
+    {
+      "id": "e11eb325-9f05-49c3-9636-947e88f3afbc",
+      "name": "左 · PS5 按杆.005",
+      "kind": "asset",
+      "source": "./models/buttons-left.glb",
+      "node": "左_·_PS5_按杆005",
+      "size": [
+        3.500008,
+        1.300003,
+        3.500008
+      ],
+      "position": [
+        -51.200001,
+        24.59311,
+        -22
+      ],
+      "group": {
+        "id": "1005ff1b-6e33-4e5c-bca2-16bb9bdd97da-buttons-left-switch",
+        "name": "左键 · 开关 / 按杆 / 焊脚"
+      }
+    },
+    {
+      "id": "28ae72f8-5c41-4ed4-b083-318e88412f2a",
+      "name": "左 · PS5 焊脚占位.017",
+      "kind": "asset",
+      "source": "./models/buttons-left.glb",
+      "node": "左_·_PS5_焊脚占位017",
+      "size": [
+        0.650002,
+        3.000007,
+        0.650002
+      ],
+      "position": [
+        -48.849998,
+        19.443049,
+        -24.100006
+      ],
+      "group": {
+        "id": "1005ff1b-6e33-4e5c-bca2-16bb9bdd97da-buttons-left-switch",
+        "name": "左键 · 开关 / 按杆 / 焊脚"
+      }
+    },
+    {
+      "id": "d459dc1d-f6e4-4a95-a163-187744d8ecff",
+      "name": "左 · PS5 焊脚占位.018",
+      "kind": "asset",
+      "source": "./models/buttons-left.glb",
+      "node": "左_·_PS5_焊脚占位018",
+      "size": [
+        0.650002,
+        3.000007,
+        0.650002
+      ],
+      "position": [
+        -48.849998,
+        19.443049,
+        -19.899996
+      ],
+      "group": {
+        "id": "1005ff1b-6e33-4e5c-bca2-16bb9bdd97da-buttons-left-switch",
+        "name": "左键 · 开关 / 按杆 / 焊脚"
+      }
+    },
+    {
+      "id": "250341d9-9759-4c70-9a5d-905478b0508f",
+      "name": "左 · PS5 焊脚占位.019",
+      "kind": "asset",
+      "source": "./models/buttons-left.glb",
+      "node": "左_·_PS5_焊脚占位019",
+      "size": [
+        0.650002,
+        3.000007,
+        0.650002
+      ],
+      "position": [
+        -53.550007,
+        19.443049,
+        -24.100006
+      ],
+      "group": {
+        "id": "1005ff1b-6e33-4e5c-bca2-16bb9bdd97da-buttons-left-switch",
+        "name": "左键 · 开关 / 按杆 / 焊脚"
+      }
+    },
+    {
+      "id": "6092c9e5-1428-4d47-8248-164fee7d892f",
+      "name": "左 · PS5 焊脚占位.020",
+      "kind": "asset",
+      "source": "./models/buttons-left.glb",
+      "node": "左_·_PS5_焊脚占位020",
+      "size": [
+        0.650002,
+        3.000007,
+        0.650002
+      ],
+      "position": [
+        -53.550007,
+        19.443049,
+        -19.899996
+      ],
+      "group": {
+        "id": "1005ff1b-6e33-4e5c-bca2-16bb9bdd97da-buttons-left-switch",
+        "name": "左键 · 开关 / 按杆 / 焊脚"
+      }
+    },
+    {
+      "id": "0ceab49f-aad8-4d74-b7a3-cf8941db5422",
+      "name": "左 · 旋锁弹性垫 0.002",
+      "kind": "asset",
+      "source": "./models/buttons-left.glb",
+      "node": "左_·_旋锁弹性垫_0002",
+      "size": [
+        1.134212,
+        0.509998,
+        1.581005
+      ],
+      "position": [
+        -46.087564,
+        15.650005,
+        -22
+      ]
+    },
+    {
+      "id": "3c137ce7-9bac-4d4e-b285-56e5225f861c",
+      "name": "左 · 旋锁弹性垫 120.002",
+      "kind": "asset",
+      "source": "./models/buttons-left.glb",
+      "node": "左_·_旋锁弹性垫_120002",
+      "size": [
+        1.777512,
+        0.509998,
+        1.649435
+      ],
+      "position": [
+        -53.808201,
+        15.650005,
+        -26.441688
+      ]
+    },
+    {
+      "id": "089a0cd1-3e6e-4105-9f4c-e9e6119776a7",
+      "name": "左 · 旋锁弹性垫 240.002",
+      "kind": "asset",
+      "source": "./models/buttons-left.glb",
+      "node": "左_·_旋锁弹性垫_240002",
+      "size": [
+        1.777512,
+        0.509998,
+        1.649435
+      ],
+      "position": [
+        -53.808201,
+        15.650005,
+        -17.558312
+      ]
+    },
+    {
+      "id": "6b46c82f-a1b1-4c93-a079-445668a745b5",
+      "name": "右 · PS5 6×6 开关.004",
+      "kind": "button",
+      "source": "./models/buttons-right.glb",
+      "node": "右_·_PS5_6×6_开关004",
+      "size": [
+        6.000013,
+        3.000008,
+        6.000015
+      ],
+      "position": [
+        -32.799996,
+        20.047626,
+        -22
+      ],
+      "group": {
+        "id": "51e7cf01-a379-47bd-baed-17bba39ea9da-buttons-right-switch",
+        "name": "右键 · 开关 / 按杆 / 焊脚"
+      },
+      "interactionStatus": "unconfigured"
+    },
+    {
+      "id": "3b68e366-fe46-4d5d-8033-6306c9d787a3",
+      "name": "右 · PS5 一体式键帽与蓝色插销.003",
+      "kind": "pin",
+      "source": "./models/buttons-right.glb",
+      "node": "右_·_PS5_一体式键帽与蓝色插销003",
+      "size": [
+        12.280859,
+        17.158325,
+        11.560001
+      ],
+      "position": [
+        -32.75567,
+        31.208656,
+        -22
+      ],
+      "group": {
+        "id": "51e7cf01-a379-47bd-baed-17bba39ea9da-buttons-right-pin-sleeve",
+        "name": "右键 · 键帽插销 / 下套筒"
+      },
+      "interactionStatus": "unconfigured"
+    },
+    {
+      "id": "6e407f49-cc2e-46c4-8ff0-ea5129a9a633",
+      "name": "右 · PS5 下环一体式开关套筒.003",
+      "kind": "sleeve",
+      "source": "./models/buttons-right.glb",
+      "node": "右_·_PS5_下环一体式开关套筒003",
+      "size": [
+        11.183308,
+        10.559992,
+        11.183308
+      ],
+      "position": [
+        -32.799826,
+        19.559999,
+        -22.000025
+      ],
+      "group": {
+        "id": "51e7cf01-a379-47bd-baed-17bba39ea9da-buttons-right-pin-sleeve",
+        "name": "右键 · 键帽插销 / 下套筒"
+      },
+      "interactionStatus": "unconfigured"
+    },
+    {
+      "id": "cab9472c-3a9f-477f-854c-c57cf3e43351",
+      "name": "右 · PS5 回位弹簧.003",
+      "kind": "spring",
+      "source": "./models/buttons-right.glb",
+      "node": "右_·_PS5_回位弹簧003",
+      "size": [
+        6.074042,
+        4.04082,
+        6.075854
+      ],
+      "position": [
+        -32.801415,
+        24.042941,
+        -22.000747
+      ],
+      "group": {
+        "id": "51e7cf01-a379-47bd-baed-17bba39ea9da-buttons-right-spring-seat",
+        "name": "右键 · 弹簧 / 定位环"
+      },
+      "interactionStatus": "unconfigured"
+    },
+    {
+      "id": "fe42dde9-b393-4d5c-8135-4af5357a21d5",
+      "name": "右 · PS5 弹簧定位环.003",
+      "kind": "asset",
+      "source": "./models/buttons-right.glb",
+      "node": "右_·_PS5_弹簧定位环003",
+      "size": [
+        5.166204,
+        1.00285,
+        5.166204
+      ],
+      "position": [
+        -32.799996,
+        25.683633,
+        -22.000001
+      ],
+      "group": {
+        "id": "51e7cf01-a379-47bd-baed-17bba39ea9da-buttons-right-spring-seat",
+        "name": "右键 · 弹簧 / 定位环"
+      }
+    },
+    {
+      "id": "805292fb-c7f9-48df-b6a4-41f2e9551b88",
+      "name": "右 · PS5 按杆.004",
+      "kind": "asset",
+      "source": "./models/buttons-right.glb",
+      "node": "右_·_PS5_按杆004",
+      "size": [
+        3.50001,
+        1.300003,
+        3.50001
+      ],
+      "position": [
+        -32.799998,
+        22.197679,
+        -22.000001
+      ],
+      "group": {
+        "id": "51e7cf01-a379-47bd-baed-17bba39ea9da-buttons-right-switch",
+        "name": "右键 · 开关 / 按杆 / 焊脚"
+      }
+    },
+    {
+      "id": "27bf1d97-bf6e-4a14-8021-469dba7a1d9c",
+      "name": "右 · PS5 焊脚占位.013",
+      "kind": "asset",
+      "source": "./models/buttons-right.glb",
+      "node": "右_·_PS5_焊脚占位013",
+      "size": [
+        0.650002,
+        3.000007,
+        0.650002
+      ],
+      "position": [
+        -35.150002,
+        17.047617,
+        -19.899994
+      ],
+      "group": {
+        "id": "51e7cf01-a379-47bd-baed-17bba39ea9da-buttons-right-switch",
+        "name": "右键 · 开关 / 按杆 / 焊脚"
+      }
+    },
+    {
+      "id": "a882983f-a9a4-4f59-b890-180c576c0934",
+      "name": "右 · PS5 焊脚占位.014",
+      "kind": "asset",
+      "source": "./models/buttons-right.glb",
+      "node": "右_·_PS5_焊脚占位014",
+      "size": [
+        0.650002,
+        3.000007,
+        0.650002
+      ],
+      "position": [
+        -35.149998,
+        17.047617,
+        -24.100006
+      ],
+      "group": {
+        "id": "51e7cf01-a379-47bd-baed-17bba39ea9da-buttons-right-switch",
+        "name": "右键 · 开关 / 按杆 / 焊脚"
+      }
+    },
+    {
+      "id": "224cfc8f-1c5d-48d9-9310-812126c46bc1",
+      "name": "右 · PS5 焊脚占位.015",
+      "kind": "asset",
+      "source": "./models/buttons-right.glb",
+      "node": "右_·_PS5_焊脚占位015",
+      "size": [
+        0.650002,
+        3.000007,
+        0.650002
+      ],
+      "position": [
+        -30.449991,
+        17.047617,
+        -19.899994
+      ],
+      "group": {
+        "id": "51e7cf01-a379-47bd-baed-17bba39ea9da-buttons-right-switch",
+        "name": "右键 · 开关 / 按杆 / 焊脚"
+      }
+    },
+    {
+      "id": "ce852e16-6bda-4107-9f33-d2e5934b33a0",
+      "name": "右 · PS5 焊脚占位.016",
+      "kind": "asset",
+      "source": "./models/buttons-right.glb",
+      "node": "右_·_PS5_焊脚占位016",
+      "size": [
+        0.650002,
+        3.000007,
+        0.650002
+      ],
+      "position": [
+        -30.449991,
+        17.047617,
+        -24.100004
+      ],
+      "group": {
+        "id": "51e7cf01-a379-47bd-baed-17bba39ea9da-buttons-right-switch",
+        "name": "右键 · 开关 / 按杆 / 焊脚"
+      }
+    },
+    {
+      "id": "199c863a-0501-4ef1-94d7-e72398c3dbdf",
+      "name": "右 · 旋锁弹性垫 0.002",
+      "kind": "asset",
+      "source": "./models/buttons-right.glb",
+      "node": "右_·_旋锁弹性垫_0002",
+      "size": [
+        1.134212,
+        0.51,
+        1.581005
+      ],
+      "position": [
+        -37.912436,
+        15.650003,
+        -22
+      ]
+    },
+    {
+      "id": "32ff8d3e-ec22-4210-af78-d5bbd046defe",
+      "name": "右 · 旋锁弹性垫 120.002",
+      "kind": "asset",
+      "source": "./models/buttons-right.glb",
+      "node": "右_·_旋锁弹性垫_120002",
+      "size": [
+        1.777512,
+        0.51,
+        1.649435
+      ],
+      "position": [
+        -30.191799,
+        15.650003,
+        -17.558312
+      ]
+    },
+    {
+      "id": "a0db2deb-0167-4296-9a38-b30f1872cd34",
+      "name": "右 · 旋锁弹性垫 240.002",
+      "kind": "asset",
+      "source": "./models/buttons-right.glb",
+      "node": "右_·_旋锁弹性垫_240002",
+      "size": [
+        1.777512,
+        0.51,
+        1.649435
+      ],
+      "position": [
+        -30.191799,
+        15.650003,
+        -26.441688
+      ]
+    },
+    {
+      "id": "473f4e0a-098c-4148-b81f-90f5c8ce7372",
+      "name": "下 · PS5 6×6 开关.004",
+      "kind": "button",
+      "source": "./models/buttons-down.glb",
+      "node": "下_·_PS5_6×6_开关004",
+      "size": [
+        6.000015,
+        3.000008,
+        6.000015
+      ],
+      "position": [
+        -42,
+        22.208943,
+        -12.800002
+      ],
+      "group": {
+        "id": "29fa575e-0b12-4be2-9a6a-14f092c7ff75-buttons-down-switch",
+        "name": "下键 · 开关 / 按杆 / 焊脚"
+      },
+      "interactionStatus": "unconfigured"
+    },
+    {
+      "id": "c0f587ee-c4f1-4d95-ab0f-6a613385b9c8",
+      "name": "下 · PS5 一体式键帽与蓝色插销.003",
+      "kind": "pin",
+      "source": "./models/buttons-down.glb",
+      "node": "下_·_PS5_一体式键帽与蓝色插销003",
+      "size": [
+        11.559998,
+        14.101999,
+        12.300619
+      ],
+      "position": [
+        -42,
+        31.841811,
+        -12.765555
+      ],
+      "group": {
+        "id": "29fa575e-0b12-4be2-9a6a-14f092c7ff75-buttons-down-pin-sleeve",
+        "name": "下键 · 键帽插销 / 下套筒"
+      },
+      "interactionStatus": "unconfigured"
+    },
+    {
+      "id": "727bb4c4-019d-4f14-b51e-dab06e9619a5",
+      "name": "下 · PS5 下环一体式开关套筒.003",
+      "kind": "sleeve",
+      "source": "./models/buttons-down.glb",
+      "node": "下_·_PS5_下环一体式开关套筒003",
+      "size": [
+        11.183197,
+        12.721312,
+        11.183412
+      ],
+      "position": [
+        -41.999973,
+        20.640657,
+        -12.800012
+      ],
+      "group": {
+        "id": "29fa575e-0b12-4be2-9a6a-14f092c7ff75-buttons-down-pin-sleeve",
+        "name": "下键 · 键帽插销 / 下套筒"
+      },
+      "interactionStatus": "unconfigured"
+    },
+    {
+      "id": "dc012fb9-fe6f-467e-a200-6551bb270ecb",
+      "name": "下 · PS5 回位弹簧.003",
+      "kind": "spring",
+      "source": "./models/buttons-down.glb",
+      "node": "下_·_PS5_回位弹簧003",
+      "size": [
+        6.075854,
+        4.04082,
+        6.074041
+      ],
+      "position": [
+        -41.999252,
+        26.204256,
+        -12.801421
+      ],
+      "group": {
+        "id": "29fa575e-0b12-4be2-9a6a-14f092c7ff75-buttons-down-spring-seat",
+        "name": "下键 · 弹簧 / 定位环"
+      },
+      "interactionStatus": "unconfigured"
+    },
+    {
+      "id": "2fb69b29-532d-4540-ac80-48406987d4b5",
+      "name": "下 · PS5 弹簧定位环.003",
+      "kind": "asset",
+      "source": "./models/buttons-down.glb",
+      "node": "下_·_PS5_弹簧定位环003",
+      "size": [
+        5.166206,
+        1.00285,
+        5.166204
+      ],
+      "position": [
+        -42,
+        27.844951,
+        -12.800002
+      ],
+      "group": {
+        "id": "29fa575e-0b12-4be2-9a6a-14f092c7ff75-buttons-down-spring-seat",
+        "name": "下键 · 弹簧 / 定位环"
+      }
+    },
+    {
+      "id": "6e022ff2-b72d-4fad-80c5-36a1f78a191e",
+      "name": "下 · PS5 按杆.004",
+      "kind": "asset",
+      "source": "./models/buttons-down.glb",
+      "node": "下_·_PS5_按杆004",
+      "size": [
+        3.500008,
+        1.300003,
+        3.50001
+      ],
+      "position": [
+        -42,
+        24.358996,
+        -12.800002
+      ],
+      "group": {
+        "id": "29fa575e-0b12-4be2-9a6a-14f092c7ff75-buttons-down-switch",
+        "name": "下键 · 开关 / 按杆 / 焊脚"
+      }
+    },
+    {
+      "id": "40537e8a-de26-4fea-9e3e-d6cb5ba56f1a",
+      "name": "下 · PS5 焊脚占位.013",
+      "kind": "asset",
+      "source": "./models/buttons-down.glb",
+      "node": "下_·_PS5_焊脚占位013",
+      "size": [
+        0.650002,
+        3.000007,
+        0.650002
+      ],
+      "position": [
+        -44.100006,
+        19.208935,
+        -15.150004
+      ],
+      "group": {
+        "id": "29fa575e-0b12-4be2-9a6a-14f092c7ff75-buttons-down-switch",
+        "name": "下键 · 开关 / 按杆 / 焊脚"
+      }
+    },
+    {
+      "id": "526a0f70-b249-4fa0-8d1e-4171166e076a",
+      "name": "下 · PS5 焊脚占位.014",
+      "kind": "asset",
+      "source": "./models/buttons-down.glb",
+      "node": "下_·_PS5_焊脚占位014",
+      "size": [
+        0.650002,
+        3.000007,
+        0.650002
+      ],
+      "position": [
+        -39.899998,
+        19.208935,
+        -15.150003
+      ],
+      "group": {
+        "id": "29fa575e-0b12-4be2-9a6a-14f092c7ff75-buttons-down-switch",
+        "name": "下键 · 开关 / 按杆 / 焊脚"
+      }
+    },
+    {
+      "id": "3b9fb5d2-34b7-401d-a802-b9dddd497255",
+      "name": "下 · PS5 焊脚占位.015",
+      "kind": "asset",
+      "source": "./models/buttons-down.glb",
+      "node": "下_·_PS5_焊脚占位015",
+      "size": [
+        0.650002,
+        3.000007,
+        0.650002
+      ],
+      "position": [
+        -44.100006,
+        19.208935,
+        -10.449996
+      ],
+      "group": {
+        "id": "29fa575e-0b12-4be2-9a6a-14f092c7ff75-buttons-down-switch",
+        "name": "下键 · 开关 / 按杆 / 焊脚"
+      }
+    },
+    {
+      "id": "361dc69a-83b4-4c2c-904a-09661aabbf01",
+      "name": "下 · PS5 焊脚占位.016",
+      "kind": "asset",
+      "source": "./models/buttons-down.glb",
+      "node": "下_·_PS5_焊脚占位016",
+      "size": [
+        0.650002,
+        3.000007,
+        0.650002
+      ],
+      "position": [
+        -39.899998,
+        19.208935,
+        -10.449995
+      ],
+      "group": {
+        "id": "29fa575e-0b12-4be2-9a6a-14f092c7ff75-buttons-down-switch",
+        "name": "下键 · 开关 / 按杆 / 焊脚"
+      }
+    },
+    {
+      "id": "f85b5e73-6734-44cd-9f76-092d858480c9",
+      "name": "下 · 旋锁弹性垫 0.002",
+      "kind": "asset",
+      "source": "./models/buttons-down.glb",
+      "node": "下_·_旋锁弹性垫_0002",
+      "size": [
+        1.581009,
+        0.509998,
+        1.134211
+      ],
+      "position": [
+        -42,
+        15.650001,
+        -17.912436
+      ]
+    },
+    {
+      "id": "393c8c5b-dd95-4d65-a62d-baf8ef2d1fad",
+      "name": "下 · 旋锁弹性垫 120.002",
+      "kind": "asset",
+      "source": "./models/buttons-down.glb",
+      "node": "下_·_旋锁弹性垫_120002",
+      "size": [
+        1.649433,
+        0.509998,
+        1.777514
+      ],
+      "position": [
+        -46.441687,
+        15.650001,
+        -10.191799
+      ]
+    },
+    {
+      "id": "b82fae84-0833-457b-bacb-bf148a1fb85c",
+      "name": "下 · 旋锁弹性垫 240.002",
+      "kind": "asset",
+      "source": "./models/buttons-down.glb",
+      "node": "下_·_旋锁弹性垫_240002",
+      "size": [
+        1.649433,
+        0.509998,
+        1.777514
+      ],
+      "position": [
+        -37.558313,
+        15.650001,
+        -10.191799
+      ]
+    },
+    {
+      "id": "b766bee1-977f-4e53-8c3e-32cf27e57d65",
+      "name": "上 · PS5 6×6 开关.004",
+      "kind": "button",
+      "source": "./models/buttons-up.glb",
+      "node": "上_·_PS5_6×6_开关004",
+      "size": [
+        6.000015,
+        3.000008,
+        6.000015
+      ],
+      "position": [
+        -42,
+        18.819582,
+        -31.200001
+      ],
+      "group": {
+        "id": "f80d4d14-d3ff-4c99-8f34-d59eacc4f2cf-buttons-up-switch",
+        "name": "上键 · 开关 / 按杆 / 焊脚"
+      },
+      "interactionStatus": "unconfigured"
+    },
+    {
+      "id": "3f6c16ca-772f-4625-a8fe-8f046a4a114c",
+      "name": "上 · PS5 一体式键帽与蓝色插销.003",
+      "kind": "pin",
+      "source": "./models/buttons-up.glb",
+      "node": "上_·_PS5_一体式键帽与蓝色插销003",
+      "size": [
+        11.559998,
+        17.77931,
+        12.275633
+      ],
+      "position": [
+        -42,
+        30.291104,
+        -31.246942
+      ],
+      "group": {
+        "id": "f80d4d14-d3ff-4c99-8f34-d59eacc4f2cf-buttons-up-pin-sleeve",
+        "name": "上键 · 键帽插销 / 下套筒"
+      },
+      "interactionStatus": "unconfigured"
+    },
+    {
+      "id": "683cb953-d1d6-4156-b444-fcf7fc90556a",
+      "name": "上 · PS5 下环一体式开关套筒.003",
+      "kind": "sleeve",
+      "source": "./models/buttons-up.glb",
+      "node": "上_·_PS5_下环一体式开关套筒003",
+      "size": [
+        11.18325,
+        9.331749,
+        11.183395
+      ],
+      "position": [
+        -41.999958,
+        18.945873,
+        -31.200001
+      ],
+      "group": {
+        "id": "f80d4d14-d3ff-4c99-8f34-d59eacc4f2cf-buttons-up-pin-sleeve",
+        "name": "上键 · 键帽插销 / 下套筒"
+      },
+      "interactionStatus": "unconfigured"
+    },
+    {
+      "id": "a9f39c68-d664-44d9-a25a-8666c4a1e6e5",
+      "name": "上 · PS5 回位弹簧.003",
+      "kind": "spring",
+      "source": "./models/buttons-up.glb",
+      "node": "上_·_PS5_回位弹簧003",
+      "size": [
+        6.075854,
+        4.04082,
+        6.074041
+      ],
+      "position": [
+        -42.000748,
+        22.814896,
+        -31.198583
+      ],
+      "group": {
+        "id": "f80d4d14-d3ff-4c99-8f34-d59eacc4f2cf-buttons-up-spring-seat",
+        "name": "上键 · 弹簧 / 定位环"
+      },
+      "interactionStatus": "unconfigured"
+    },
+    {
+      "id": "25fb809a-af5a-41cd-8550-60670bea11d0",
+      "name": "上 · PS5 弹簧定位环.003",
+      "kind": "asset",
+      "source": "./models/buttons-up.glb",
+      "node": "上_·_PS5_弹簧定位环003",
+      "size": [
+        5.166206,
+        1.00285,
+        5.166206
+      ],
+      "position": [
+        -42,
+        24.455589,
+        -31.200001
+      ],
+      "group": {
+        "id": "f80d4d14-d3ff-4c99-8f34-d59eacc4f2cf-buttons-up-spring-seat",
+        "name": "上键 · 弹簧 / 定位环"
+      }
+    },
+    {
+      "id": "0303f1b6-36b1-4d08-b8cb-e639f7b6d5e1",
+      "name": "上 · PS5 按杆.004",
+      "kind": "asset",
+      "source": "./models/buttons-up.glb",
+      "node": "上_·_PS5_按杆004",
+      "size": [
+        3.500008,
+        1.300003,
+        3.50001
+      ],
+      "position": [
+        -42,
+        20.969635,
+        -31.2
+      ],
+      "group": {
+        "id": "f80d4d14-d3ff-4c99-8f34-d59eacc4f2cf-buttons-up-switch",
+        "name": "上键 · 开关 / 按杆 / 焊脚"
+      }
+    },
+    {
+      "id": "5cc1aa23-a589-4f34-922f-31ae01beaaaa",
+      "name": "上 · PS5 焊脚占位.013",
+      "kind": "asset",
+      "source": "./models/buttons-up.glb",
+      "node": "上_·_PS5_焊脚占位013",
+      "size": [
+        0.650002,
+        3.000007,
+        0.650002
+      ],
+      "position": [
+        -39.899994,
+        15.819573,
+        -28.849997
+      ],
+      "group": {
+        "id": "f80d4d14-d3ff-4c99-8f34-d59eacc4f2cf-buttons-up-switch",
+        "name": "上键 · 开关 / 按杆 / 焊脚"
+      }
+    },
+    {
+      "id": "f88ed5ae-33ee-4741-b3d0-0412d68e5785",
+      "name": "上 · PS5 焊脚占位.014",
+      "kind": "asset",
+      "source": "./models/buttons-up.glb",
+      "node": "上_·_PS5_焊脚占位014",
+      "size": [
+        0.650002,
+        3.000007,
+        0.650002
+      ],
+      "position": [
+        -44.100002,
+        15.819573,
+        -28.849998
+      ],
+      "group": {
+        "id": "f80d4d14-d3ff-4c99-8f34-d59eacc4f2cf-buttons-up-switch",
+        "name": "上键 · 开关 / 按杆 / 焊脚"
+      }
+    },
+    {
+      "id": "1f97ddb7-f4e4-45db-b1da-b281fff49a90",
+      "name": "上 · PS5 焊脚占位.015",
+      "kind": "asset",
+      "source": "./models/buttons-up.glb",
+      "node": "上_·_PS5_焊脚占位015",
+      "size": [
+        0.650002,
+        3.000007,
+        0.650002
+      ],
+      "position": [
+        -39.899994,
+        15.819573,
+        -33.550007
+      ],
+      "group": {
+        "id": "f80d4d14-d3ff-4c99-8f34-d59eacc4f2cf-buttons-up-switch",
+        "name": "上键 · 开关 / 按杆 / 焊脚"
+      }
+    },
+    {
+      "id": "c8f0f665-50f6-4676-af64-feda7ebafbc5",
+      "name": "上 · PS5 焊脚占位.016",
+      "kind": "asset",
+      "source": "./models/buttons-up.glb",
+      "node": "上_·_PS5_焊脚占位016",
+      "size": [
+        0.650002,
+        3.000007,
+        0.650002
+      ],
+      "position": [
+        -44.100002,
+        15.819573,
+        -33.550007
+      ],
+      "group": {
+        "id": "f80d4d14-d3ff-4c99-8f34-d59eacc4f2cf-buttons-up-switch",
+        "name": "上键 · 开关 / 按杆 / 焊脚"
+      }
+    },
+    {
+      "id": "eafdb93d-7e7f-4010-876d-06e556f804b2",
+      "name": "上 · 旋锁弹性垫 0.002",
+      "kind": "asset",
+      "source": "./models/buttons-up.glb",
+      "node": "上_·_旋锁弹性垫_0002",
+      "size": [
+        1.581009,
+        0.51,
+        1.134211
+      ],
+      "position": [
+        -42,
+        15.649999,
+        -26.087564
+      ]
+    },
+    {
+      "id": "1bc53f75-aa9f-49e3-8f7c-4a70a04d2cc5",
+      "name": "上 · 旋锁弹性垫 120.002",
+      "kind": "asset",
+      "source": "./models/buttons-up.glb",
+      "node": "上_·_旋锁弹性垫_120002",
+      "size": [
+        1.649433,
+        0.51,
+        1.777512
+      ],
+      "position": [
+        -37.558313,
+        15.649999,
+        -33.808201
+      ]
+    },
+    {
+      "id": "aa131383-8edd-4658-9ca8-34864e5b28f6",
+      "name": "上 · 旋锁弹性垫 240.002",
+      "kind": "asset",
+      "source": "./models/buttons-up.glb",
+      "node": "上_·_旋锁弹性垫_240002",
+      "size": [
+        1.649433,
+        0.51,
+        1.777512
+      ],
+      "position": [
+        -46.441687,
+        15.649999,
+        -33.808201
+      ]
+    },
+    {
+      "id": "89d775c4-c856-4050-8986-00f416a190e2",
+      "name": "A · 同款 6×6 开关.002",
+      "kind": "button",
+      "source": "./models/buttons-a.glb",
+      "node": "A_·_同款_6×6_开关002",
+      "size": [
+        6.000015,
+        3.000008,
+        6.000015
+      ],
+      "position": [
+        40.999996,
+        24.993057,
+        -9.5
+      ],
+      "group": {
+        "id": "379d5445-00bd-42ba-be16-db86cf5e6909-buttons-a-switch",
+        "name": "A 键 · 开关 / 按杆 / 焊脚"
+      },
+      "interactionStatus": "unconfigured"
+    },
+    {
+      "id": "e8e4f5ca-d71b-4e5b-ba3e-800012ad90e8",
+      "name": "A · 同款 下环一体式开关套筒.002",
+      "kind": "sleeve",
+      "source": "./models/buttons-a.glb",
+      "node": "A_·_同款_下环一体式开关套筒002",
+      "size": [
+        11.183384,
+        11.427597,
+        11.183235
+      ],
+      "position": [
+        40.999971,
+        24.071358,
+        -9.499987
+      ],
+      "group": {
+        "id": "379d5445-00bd-42ba-be16-db86cf5e6909-buttons-a-pin-sleeve",
+        "name": "A 键 · 键帽插销 / 下套筒"
+      },
+      "interactionStatus": "unconfigured"
+    },
+    {
+      "id": "6b7fcfda-d739-43b3-a3b3-c375c61b2f02",
+      "name": "A · 同款 回位弹簧.002",
+      "kind": "spring",
+      "source": "./models/buttons-a.glb",
+      "node": "A_·_同款_回位弹簧002",
+      "size": [
+        6.074041,
+        4.04082,
+        6.075855
+      ],
+      "position": [
+        41.001412,
+        28.988369,
+        -9.499252
+      ],
+      "group": {
+        "id": "379d5445-00bd-42ba-be16-db86cf5e6909-buttons-a-spring-seat",
+        "name": "A 键 · 弹簧 / 定位环"
+      },
+      "interactionStatus": "unconfigured"
+    },
+    {
+      "id": "606aa1fd-46d1-495b-948a-83e36e0201bf",
+      "name": "A · 同款 弹簧定位环.002",
+      "kind": "asset",
+      "source": "./models/buttons-a.glb",
+      "node": "A_·_同款_弹簧定位环002",
+      "size": [
+        5.166206,
+        1.002852,
+        5.166206
+      ],
+      "position": [
+        40.999996,
+        30.629065,
+        -9.5
+      ],
+      "group": {
+        "id": "379d5445-00bd-42ba-be16-db86cf5e6909-buttons-a-spring-seat",
+        "name": "A 键 · 弹簧 / 定位环"
+      }
+    },
+    {
+      "id": "3507489f-5917-4a9e-9f4c-d563b23ba5e2",
+      "name": "A · 同款 按杆.002",
+      "kind": "asset",
+      "source": "./models/buttons-a.glb",
+      "node": "A_·_同款_按杆002",
+      "size": [
+        3.500008,
+        1.300003,
+        3.500008
+      ],
+      "position": [
+        40.999996,
+        27.14311,
+        -9.5
+      ],
+      "group": {
+        "id": "379d5445-00bd-42ba-be16-db86cf5e6909-buttons-a-switch",
+        "name": "A 键 · 开关 / 按杆 / 焊脚"
+      }
+    },
+    {
+      "id": "7fac0b1b-10fb-4ced-80cb-f4c38b534bb8",
+      "name": "A · 同款 焊脚占位.008",
+      "kind": "asset",
+      "source": "./models/buttons-a.glb",
+      "node": "A_·_同款_焊脚占位008",
+      "size": [
+        0.650002,
+        3.000007,
+        0.650002
+      ],
+      "position": [
+        43.349998,
+        21.993049,
+        -11.600006
+      ],
+      "group": {
+        "id": "379d5445-00bd-42ba-be16-db86cf5e6909-buttons-a-switch",
+        "name": "A 键 · 开关 / 按杆 / 焊脚"
+      }
+    },
+    {
+      "id": "473ec032-d4d2-41ff-81b2-a88c1af46248",
+      "name": "A · 同款 焊脚占位.009",
+      "kind": "asset",
+      "source": "./models/buttons-a.glb",
+      "node": "A_·_同款_焊脚占位009",
+      "size": [
+        0.650002,
+        3.000007,
+        0.650002
+      ],
+      "position": [
+        43.349998,
+        21.993049,
+        -7.399996
+      ],
+      "group": {
+        "id": "379d5445-00bd-42ba-be16-db86cf5e6909-buttons-a-switch",
+        "name": "A 键 · 开关 / 按杆 / 焊脚"
+      }
+    },
+    {
+      "id": "e5a3d123-c461-47e8-8bf7-112991a13fc4",
+      "name": "A · 同款 焊脚占位.010",
+      "kind": "asset",
+      "source": "./models/buttons-a.glb",
+      "node": "A_·_同款_焊脚占位010",
+      "size": [
+        0.650002,
+        3.000007,
+        0.650002
+      ],
+      "position": [
+        38.64999,
+        21.993049,
+        -11.600006
+      ],
+      "group": {
+        "id": "379d5445-00bd-42ba-be16-db86cf5e6909-buttons-a-switch",
+        "name": "A 键 · 开关 / 按杆 / 焊脚"
+      }
+    },
+    {
+      "id": "4124ccd6-a28a-4e04-908a-1248d1642a30",
+      "name": "A · 同款 焊脚占位.011",
+      "kind": "asset",
+      "source": "./models/buttons-a.glb",
+      "node": "A_·_同款_焊脚占位011",
+      "size": [
+        0.650002,
+        3.000007,
+        0.650002
+      ],
+      "position": [
+        38.64999,
+        21.993049,
+        -7.399996
+      ],
+      "group": {
+        "id": "379d5445-00bd-42ba-be16-db86cf5e6909-buttons-a-switch",
+        "name": "A 键 · 开关 / 按杆 / 焊脚"
+      }
+    },
+    {
+      "id": "b1b8476f-6319-4b9f-82b3-6fe556543de2",
+      "name": "A · 同款插销与圆形键帽.002",
+      "kind": "pin",
+      "source": "./models/buttons-a.glb",
+      "node": "A_·_同款插销与圆形键帽002",
+      "size": [
+        13.337421,
+        11.733765,
+        13.338711
+      ],
+      "position": [
+        41.001287,
+        33.841125,
+        -9.5
+      ],
+      "group": {
+        "id": "379d5445-00bd-42ba-be16-db86cf5e6909-buttons-a-pin-sleeve",
+        "name": "A 键 · 键帽插销 / 下套筒"
+      },
+      "interactionStatus": "unconfigured"
+    },
+    {
+      "id": "8d7b6393-26dd-4624-abac-6e854ab7ec92",
+      "name": "A · 旋锁弹性垫 0.002",
+      "kind": "asset",
+      "source": "./models/buttons-a.glb",
+      "node": "A_·_旋锁弹性垫_0002",
+      "size": [
+        1.114216,
+        0.504999,
+        1.575439
+      ],
+      "position": [
+        46.102438,
+        19.73006,
+        -9.5
+      ]
+    },
+    {
+      "id": "9e604ec3-039c-498d-904c-35c1041c4663",
+      "name": "A · 旋锁弹性垫 120.002",
+      "kind": "asset",
+      "source": "./models/buttons-a.glb",
+      "node": "A_·_旋锁弹性垫_120002",
+      "size": [
+        1.765202,
+        0.504999,
+        1.630892
+      ],
+      "position": [
+        38.397955,
+        19.73006,
+        -13.932415
+      ]
+    },
+    {
+      "id": "a3dcc405-0e45-4893-b490-375f4adfbbbf",
+      "name": "A · 旋锁弹性垫 240.002",
+      "kind": "asset",
+      "source": "./models/buttons-a.glb",
+      "node": "A_·_旋锁弹性垫_240002",
+      "size": [
+        1.765202,
+        0.504999,
+        1.630891
+      ],
+      "position": [
+        38.397955,
+        19.73006,
+        -5.067585
+      ]
+    },
+    {
+      "id": "c609e1f9-31c2-400b-a058-720c9e7e3a02",
+      "name": "键帽标识 · A.002",
+      "kind": "asset",
+      "source": "./models/buttons-a.glb",
+      "node": "键帽标识_·_A002",
+      "size": [
+        2.656043,
+        0.252309,
+        2.744587
+      ],
+      "position": [
+        40.999377,
+        39.152994,
+        -9.671672
+      ]
+    },
+    {
+      "id": "b2e93891-d47b-4eb6-b585-be393387b089",
+      "name": "B · 同款 6×6 开关.002",
+      "kind": "button",
+      "source": "./models/buttons-b.glb",
+      "node": "B_·_同款_6×6_开关002",
+      "size": [
+        6.000015,
+        3.000008,
+        6.000015
+      ],
+      "position": [
+        52.499996,
+        24.993057,
+        -21
+      ],
+      "group": {
+        "id": "59005e4c-c036-4ac2-8b41-2d796683eb96-buttons-b-switch",
+        "name": "B 键 · 开关 / 按杆 / 焊脚"
+      },
+      "interactionStatus": "unconfigured"
+    },
+    {
+      "id": "02a94387-d72f-4b04-b121-5aa728b53ba8",
+      "name": "B · 同款 下环一体式开关套筒.002",
+      "kind": "sleeve",
+      "source": "./models/buttons-b.glb",
+      "node": "B_·_同款_下环一体式开关套筒002",
+      "size": [
+        11.18335,
+        11.42787,
+        11.183233
+      ],
+      "position": [
+        52.499996,
+        24.071494,
+        -21.000003
+      ],
+      "group": {
+        "id": "59005e4c-c036-4ac2-8b41-2d796683eb96-buttons-b-pin-sleeve",
+        "name": "B 键 · 键帽插销 / 下套筒"
+      },
+      "interactionStatus": "unconfigured"
+    },
+    {
+      "id": "a5ab8e9e-5d94-4f20-8cd9-5d4a8ae86760",
+      "name": "B · 同款 回位弹簧.002",
+      "kind": "spring",
+      "source": "./models/buttons-b.glb",
+      "node": "B_·_同款_回位弹簧002",
+      "size": [
+        6.074041,
+        4.04082,
+        6.075855
+      ],
+      "position": [
+        52.501412,
+        28.988369,
+        -20.999252
+      ],
+      "group": {
+        "id": "59005e4c-c036-4ac2-8b41-2d796683eb96-buttons-b-spring-seat",
+        "name": "B 键 · 弹簧 / 定位环"
+      },
+      "interactionStatus": "unconfigured"
+    },
+    {
+      "id": "cf4c711c-6f75-4526-bf49-15f83ac3b47c",
+      "name": "B · 同款 弹簧定位环.002",
+      "kind": "asset",
+      "source": "./models/buttons-b.glb",
+      "node": "B_·_同款_弹簧定位环002",
+      "size": [
+        5.166206,
+        1.002852,
+        5.166206
+      ],
+      "position": [
+        52.499996,
+        30.629065,
+        -21
+      ],
+      "group": {
+        "id": "59005e4c-c036-4ac2-8b41-2d796683eb96-buttons-b-spring-seat",
+        "name": "B 键 · 弹簧 / 定位环"
+      }
+    },
+    {
+      "id": "576daa65-0cf3-42c6-b193-90eed3267c4e",
+      "name": "B · 同款 按杆.002",
+      "kind": "asset",
+      "source": "./models/buttons-b.glb",
+      "node": "B_·_同款_按杆002",
+      "size": [
+        3.500008,
+        1.300003,
+        3.500008
+      ],
+      "position": [
+        52.499996,
+        27.14311,
+        -21
+      ],
+      "group": {
+        "id": "59005e4c-c036-4ac2-8b41-2d796683eb96-buttons-b-switch",
+        "name": "B 键 · 开关 / 按杆 / 焊脚"
+      }
+    },
+    {
+      "id": "b3ea001c-5477-48fa-a9bd-e6af4b8985a3",
+      "name": "B · 同款 焊脚占位.008",
+      "kind": "asset",
+      "source": "./models/buttons-b.glb",
+      "node": "B_·_同款_焊脚占位008",
+      "size": [
+        0.650002,
+        3.000007,
+        0.650002
+      ],
+      "position": [
+        54.849998,
+        21.993049,
+        -23.100006
+      ],
+      "group": {
+        "id": "59005e4c-c036-4ac2-8b41-2d796683eb96-buttons-b-switch",
+        "name": "B 键 · 开关 / 按杆 / 焊脚"
+      }
+    },
+    {
+      "id": "c560f306-6330-4137-bfd4-6374e9b55645",
+      "name": "B · 同款 焊脚占位.009",
+      "kind": "asset",
+      "source": "./models/buttons-b.glb",
+      "node": "B_·_同款_焊脚占位009",
+      "size": [
+        0.650002,
+        3.000007,
+        0.650002
+      ],
+      "position": [
+        54.849998,
+        21.993049,
+        -18.899996
+      ],
+      "group": {
+        "id": "59005e4c-c036-4ac2-8b41-2d796683eb96-buttons-b-switch",
+        "name": "B 键 · 开关 / 按杆 / 焊脚"
+      }
+    },
+    {
+      "id": "001f6666-d21a-4a39-be54-c2fd9fee1da5",
+      "name": "B · 同款 焊脚占位.010",
+      "kind": "asset",
+      "source": "./models/buttons-b.glb",
+      "node": "B_·_同款_焊脚占位010",
+      "size": [
+        0.650002,
+        3.000007,
+        0.650002
+      ],
+      "position": [
+        50.14999,
+        21.993049,
+        -23.100006
+      ],
+      "group": {
+        "id": "59005e4c-c036-4ac2-8b41-2d796683eb96-buttons-b-switch",
+        "name": "B 键 · 开关 / 按杆 / 焊脚"
+      }
+    },
+    {
+      "id": "2f20b841-c296-44c8-8765-2196c2974060",
+      "name": "B · 同款 焊脚占位.011",
+      "kind": "asset",
+      "source": "./models/buttons-b.glb",
+      "node": "B_·_同款_焊脚占位011",
+      "size": [
+        0.650002,
+        3.000007,
+        0.650002
+      ],
+      "position": [
+        50.14999,
+        21.993049,
+        -18.899996
+      ],
+      "group": {
+        "id": "59005e4c-c036-4ac2-8b41-2d796683eb96-buttons-b-switch",
+        "name": "B 键 · 开关 / 按杆 / 焊脚"
+      }
+    },
+    {
+      "id": "c28a072e-d49a-4ca1-b11d-edb432a25df3",
+      "name": "B · 同款插销与圆形键帽.002",
+      "kind": "pin",
+      "source": "./models/buttons-b.glb",
+      "node": "B_·_同款插销与圆形键帽002",
+      "size": [
+        13.337421,
+        10.780548,
+        13.338711
+      ],
+      "position": [
+        52.501287,
+        33.364517,
+        -21
+      ],
+      "group": {
+        "id": "59005e4c-c036-4ac2-8b41-2d796683eb96-buttons-b-pin-sleeve",
+        "name": "B 键 · 键帽插销 / 下套筒"
+      },
+      "interactionStatus": "unconfigured"
+    },
+    {
+      "id": "ed01b6cf-dd39-4fba-9173-07abbbc8161c",
+      "name": "B · 旋锁弹性垫 0.002",
+      "kind": "asset",
+      "source": "./models/buttons-b.glb",
+      "node": "B_·_旋锁弹性垫_0002",
+      "size": [
+        1.114216,
+        0.504999,
+        1.575439
+      ],
+      "position": [
+        57.602438,
+        19.73006,
+        -21
+      ]
+    },
+    {
+      "id": "861da01a-4a9b-433c-8a18-0b9da6b3fffd",
+      "name": "B · 旋锁弹性垫 120.002",
+      "kind": "asset",
+      "source": "./models/buttons-b.glb",
+      "node": "B_·_旋锁弹性垫_120002",
+      "size": [
+        1.765202,
+        0.504999,
+        1.63089
+      ],
+      "position": [
+        49.897955,
+        19.73006,
+        -25.432415
+      ]
+    },
+    {
+      "id": "b9ac3a5e-5077-4bd1-81e8-a68edec5ed20",
+      "name": "B · 旋锁弹性垫 240.002",
+      "kind": "asset",
+      "source": "./models/buttons-b.glb",
+      "node": "B_·_旋锁弹性垫_240002",
+      "size": [
+        1.765202,
+        0.504999,
+        1.630891
+      ],
+      "position": [
+        49.897955,
+        19.73006,
+        -16.567585
+      ]
+    },
+    {
+      "id": "c38b1ecb-54a4-4ad5-a154-3d0f492fa006",
+      "name": "键帽标识 · B.002",
+      "kind": "asset",
+      "source": "./models/buttons-b.glb",
+      "node": "键帽标识_·_B002",
+      "size": [
+        1.863747,
+        0.209251,
+        2.728269
+      ],
+      "position": [
+        52.608923,
+        38.211336,
+        -21.163694
+      ]
+    },
+    {
+      "id": "8346cfbd-9182-4932-b3f8-7e85aa730e78",
+      "name": "X · 同款 6×6 开关.002",
+      "kind": "button",
+      "source": "./models/buttons-x.glb",
+      "node": "X_·_同款_6×6_开关002",
+      "size": [
+        6.000015,
+        3.000008,
+        6.000015
+      ],
+      "position": [
+        29.499996,
+        24.993057,
+        -21
+      ],
+      "group": {
+        "id": "9f5df57f-9cf1-46e0-8a2b-e2cacddaa5ea-buttons-x-switch",
+        "name": "X 键 · 开关 / 按杆 / 焊脚"
+      },
+      "interactionStatus": "unconfigured"
+    },
+    {
+      "id": "e539b865-78d7-45b7-a07c-8a520b015fb9",
+      "name": "X · 同款 下环一体式开关套筒.002",
+      "kind": "sleeve",
+      "source": "./models/buttons-x.glb",
+      "node": "X_·_同款_下环一体式开关套筒002",
+      "size": [
+        11.183327,
+        11.427567,
+        11.183285
+      ],
+      "position": [
+        29.500008,
+        24.071343,
+        -21.000015
+      ],
+      "group": {
+        "id": "9f5df57f-9cf1-46e0-8a2b-e2cacddaa5ea-buttons-x-pin-sleeve",
+        "name": "X 键 · 键帽插销 / 下套筒"
+      },
+      "interactionStatus": "unconfigured"
+    },
+    {
+      "id": "161ceb2b-2079-4371-9895-7b0c7f6f68d7",
+      "name": "X · 同款 回位弹簧.002",
+      "kind": "spring",
+      "source": "./models/buttons-x.glb",
+      "node": "X_·_同款_回位弹簧002",
+      "size": [
+        6.074041,
+        4.04082,
+        6.075855
+      ],
+      "position": [
+        29.501412,
+        28.988369,
+        -20.999252
+      ],
+      "group": {
+        "id": "9f5df57f-9cf1-46e0-8a2b-e2cacddaa5ea-buttons-x-spring-seat",
+        "name": "X 键 · 弹簧 / 定位环"
+      },
+      "interactionStatus": "unconfigured"
+    },
+    {
+      "id": "82fed8b2-4cef-43c1-9560-eb75d8466cdb",
+      "name": "X · 同款 弹簧定位环.002",
+      "kind": "asset",
+      "source": "./models/buttons-x.glb",
+      "node": "X_·_同款_弹簧定位环002",
+      "size": [
+        5.166206,
+        1.002852,
+        5.166206
+      ],
+      "position": [
+        29.499996,
+        30.629065,
+        -21
+      ],
+      "group": {
+        "id": "9f5df57f-9cf1-46e0-8a2b-e2cacddaa5ea-buttons-x-spring-seat",
+        "name": "X 键 · 弹簧 / 定位环"
+      }
+    },
+    {
+      "id": "65c3e03b-6319-45f7-8adf-a2398531f4ec",
+      "name": "X · 同款 按杆.002",
+      "kind": "asset",
+      "source": "./models/buttons-x.glb",
+      "node": "X_·_同款_按杆002",
+      "size": [
+        3.500008,
+        1.300003,
+        3.500008
+      ],
+      "position": [
+        29.499996,
+        27.14311,
+        -21
+      ],
+      "group": {
+        "id": "9f5df57f-9cf1-46e0-8a2b-e2cacddaa5ea-buttons-x-switch",
+        "name": "X 键 · 开关 / 按杆 / 焊脚"
+      }
+    },
+    {
+      "id": "5da36514-3a4d-4880-bc32-f74471e45830",
+      "name": "X · 同款 焊脚占位.008",
+      "kind": "asset",
+      "source": "./models/buttons-x.glb",
+      "node": "X_·_同款_焊脚占位008",
+      "size": [
+        0.650002,
+        3.000007,
+        0.650002
+      ],
+      "position": [
+        31.849998,
+        21.993049,
+        -23.100006
+      ],
+      "group": {
+        "id": "9f5df57f-9cf1-46e0-8a2b-e2cacddaa5ea-buttons-x-switch",
+        "name": "X 键 · 开关 / 按杆 / 焊脚"
+      }
+    },
+    {
+      "id": "f918c1e4-7297-4d26-9e37-bbdb1295856d",
+      "name": "X · 同款 焊脚占位.009",
+      "kind": "asset",
+      "source": "./models/buttons-x.glb",
+      "node": "X_·_同款_焊脚占位009",
+      "size": [
+        0.650002,
+        3.000007,
+        0.650002
+      ],
+      "position": [
+        31.849998,
+        21.993049,
+        -18.899996
+      ],
+      "group": {
+        "id": "9f5df57f-9cf1-46e0-8a2b-e2cacddaa5ea-buttons-x-switch",
+        "name": "X 键 · 开关 / 按杆 / 焊脚"
+      }
+    },
+    {
+      "id": "d185b325-f585-461f-89ea-e9fe475305e2",
+      "name": "X · 同款 焊脚占位.010",
+      "kind": "asset",
+      "source": "./models/buttons-x.glb",
+      "node": "X_·_同款_焊脚占位010",
+      "size": [
+        0.650002,
+        3.000007,
+        0.650002
+      ],
+      "position": [
+        27.14999,
+        21.993049,
+        -23.100006
+      ],
+      "group": {
+        "id": "9f5df57f-9cf1-46e0-8a2b-e2cacddaa5ea-buttons-x-switch",
+        "name": "X 键 · 开关 / 按杆 / 焊脚"
+      }
+    },
+    {
+      "id": "15d9d3d9-7cfe-41d5-a419-e50210237368",
+      "name": "X · 同款 焊脚占位.011",
+      "kind": "asset",
+      "source": "./models/buttons-x.glb",
+      "node": "X_·_同款_焊脚占位011",
+      "size": [
+        0.650002,
+        3.000007,
+        0.650002
+      ],
+      "position": [
+        27.14999,
+        21.993049,
+        -18.899996
+      ],
+      "group": {
+        "id": "9f5df57f-9cf1-46e0-8a2b-e2cacddaa5ea-buttons-x-switch",
+        "name": "X 键 · 开关 / 按杆 / 焊脚"
+      }
+    },
+    {
+      "id": "946ff48c-df8f-419b-86e7-8d53926f8f05",
+      "name": "X · 同款插销与圆形键帽.002",
+      "kind": "pin",
+      "source": "./models/buttons-x.glb",
+      "node": "X_·_同款插销与圆形键帽002",
+      "size": [
+        13.337421,
+        12.972969,
+        13.338711
+      ],
+      "position": [
+        29.501287,
+        34.460728,
+        -21
+      ],
+      "group": {
+        "id": "9f5df57f-9cf1-46e0-8a2b-e2cacddaa5ea-buttons-x-pin-sleeve",
+        "name": "X 键 · 键帽插销 / 下套筒"
+      },
+      "interactionStatus": "unconfigured"
+    },
+    {
+      "id": "c1d603c9-df76-4bec-9ba2-b81f96d9b832",
+      "name": "X · 旋锁弹性垫 0.002",
+      "kind": "asset",
+      "source": "./models/buttons-x.glb",
+      "node": "X_·_旋锁弹性垫_0002",
+      "size": [
+        1.114216,
+        0.504999,
+        1.575439
+      ],
+      "position": [
+        34.602438,
+        19.73006,
+        -21
+      ]
+    },
+    {
+      "id": "6332846c-bd5d-4e7c-8682-7e7e9a8fd2ae",
+      "name": "X · 旋锁弹性垫 120.002",
+      "kind": "asset",
+      "source": "./models/buttons-x.glb",
+      "node": "X_·_旋锁弹性垫_120002",
+      "size": [
+        1.7652,
+        0.504999,
+        1.63089
+      ],
+      "position": [
+        26.897956,
+        19.73006,
+        -25.432415
+      ]
+    },
+    {
+      "id": "e9634870-af62-4a0d-af77-fdde370a50aa",
+      "name": "X · 旋锁弹性垫 240.002",
+      "kind": "asset",
+      "source": "./models/buttons-x.glb",
+      "node": "X_·_旋锁弹性垫_240002",
+      "size": [
+        1.7652,
+        0.504999,
+        1.630891
+      ],
+      "position": [
+        26.897956,
+        19.73006,
+        -16.567585
+      ]
+    },
+    {
+      "id": "1734bc5a-5245-47d7-a9d5-53d5c96b9dcd",
+      "name": "键帽标识 · X.002",
+      "kind": "asset",
+      "source": "./models/buttons-x.glb",
+      "node": "键帽标识_·_X002",
+      "size": [
+        2.802847,
+        0.299039,
+        2.729487
+      ],
+      "position": [
+        29.499249,
+        40.388791,
+        -21.163962
+      ]
+    },
+    {
+      "id": "68a6f74a-4ef4-4cec-a0fe-edf028be519d",
+      "name": "Y · 同款 6×6 开关.002",
+      "kind": "button",
+      "source": "./models/buttons-y.glb",
+      "node": "Y_·_同款_6×6_开关002",
+      "size": [
+        6.000015,
+        3.000008,
+        6.000015
+      ],
+      "position": [
+        40.999996,
+        24.993057,
+        -32.5
+      ],
+      "group": {
+        "id": "42bfc332-6d92-492a-b3a2-91a7503f50f2-buttons-y-switch",
+        "name": "Y 键 · 开关 / 按杆 / 焊脚"
+      },
+      "interactionStatus": "unconfigured"
+    },
+    {
+      "id": "ba5998e8-41ac-4b1b-a619-cfb581384d56",
+      "name": "Y · 同款 下环一体式开关套筒.002",
+      "kind": "sleeve",
+      "source": "./models/buttons-y.glb",
+      "node": "Y_·_同款_下环一体式开关套筒002",
+      "size": [
+        11.183315,
+        11.42787,
+        11.18326
+      ],
+      "position": [
+        40.99999,
+        24.071494,
+        -32.499991
+      ],
+      "group": {
+        "id": "42bfc332-6d92-492a-b3a2-91a7503f50f2-buttons-y-pin-sleeve",
+        "name": "Y 键 · 键帽插销 / 下套筒"
+      },
+      "interactionStatus": "unconfigured"
+    },
+    {
+      "id": "cd42749e-44d3-4dec-9ee0-749c174037d5",
+      "name": "Y · 同款 回位弹簧.002",
+      "kind": "spring",
+      "source": "./models/buttons-y.glb",
+      "node": "Y_·_同款_回位弹簧002",
+      "size": [
+        6.074041,
+        4.04082,
+        6.075855
+      ],
+      "position": [
+        41.001412,
+        28.988369,
+        -32.499252
+      ],
+      "group": {
+        "id": "42bfc332-6d92-492a-b3a2-91a7503f50f2-buttons-y-spring-seat",
+        "name": "Y 键 · 弹簧 / 定位环"
+      },
+      "interactionStatus": "unconfigured"
+    },
+    {
+      "id": "bd7c32ec-ae9d-49a4-92b0-e9f54fb2da12",
+      "name": "Y · 同款 弹簧定位环.002",
+      "kind": "asset",
+      "source": "./models/buttons-y.glb",
+      "node": "Y_·_同款_弹簧定位环002",
+      "size": [
+        5.166206,
+        1.002852,
+        5.166206
+      ],
+      "position": [
+        40.999996,
+        30.629065,
+        -32.5
+      ],
+      "group": {
+        "id": "42bfc332-6d92-492a-b3a2-91a7503f50f2-buttons-y-spring-seat",
+        "name": "Y 键 · 弹簧 / 定位环"
+      }
+    },
+    {
+      "id": "4a180192-f2a5-4195-8b72-5c83545c723b",
+      "name": "Y · 同款 按杆.002",
+      "kind": "asset",
+      "source": "./models/buttons-y.glb",
+      "node": "Y_·_同款_按杆002",
+      "size": [
+        3.500008,
+        1.300003,
+        3.500008
+      ],
+      "position": [
+        40.999996,
+        27.14311,
+        -32.5
+      ],
+      "group": {
+        "id": "42bfc332-6d92-492a-b3a2-91a7503f50f2-buttons-y-switch",
+        "name": "Y 键 · 开关 / 按杆 / 焊脚"
+      }
+    },
+    {
+      "id": "87b4bc69-1599-4dad-8dcb-15801510fc0a",
+      "name": "Y · 同款 焊脚占位.008",
+      "kind": "asset",
+      "source": "./models/buttons-y.glb",
+      "node": "Y_·_同款_焊脚占位008",
+      "size": [
+        0.650002,
+        3.000007,
+        0.650002
+      ],
+      "position": [
+        43.349998,
+        21.993049,
+        -34.600006
+      ],
+      "group": {
+        "id": "42bfc332-6d92-492a-b3a2-91a7503f50f2-buttons-y-switch",
+        "name": "Y 键 · 开关 / 按杆 / 焊脚"
+      }
+    },
+    {
+      "id": "6bdfe0f2-ef0c-4976-a828-393c4f3592bc",
+      "name": "Y · 同款 焊脚占位.009",
+      "kind": "asset",
+      "source": "./models/buttons-y.glb",
+      "node": "Y_·_同款_焊脚占位009",
+      "size": [
+        0.650002,
+        3.000007,
+        0.650002
+      ],
+      "position": [
+        43.349998,
+        21.993049,
+        -30.399996
+      ],
+      "group": {
+        "id": "42bfc332-6d92-492a-b3a2-91a7503f50f2-buttons-y-switch",
+        "name": "Y 键 · 开关 / 按杆 / 焊脚"
+      }
+    },
+    {
+      "id": "74d811b3-2ba8-42d0-913f-00ff6c9cdf27",
+      "name": "Y · 同款 焊脚占位.010",
+      "kind": "asset",
+      "source": "./models/buttons-y.glb",
+      "node": "Y_·_同款_焊脚占位010",
+      "size": [
+        0.650002,
+        3.000007,
+        0.650002
+      ],
+      "position": [
+        38.64999,
+        21.993049,
+        -34.600006
+      ],
+      "group": {
+        "id": "42bfc332-6d92-492a-b3a2-91a7503f50f2-buttons-y-switch",
+        "name": "Y 键 · 开关 / 按杆 / 焊脚"
+      }
+    },
+    {
+      "id": "04fc4088-c870-41c4-b51a-ebf50aa21d9d",
+      "name": "Y · 同款 焊脚占位.011",
+      "kind": "asset",
+      "source": "./models/buttons-y.glb",
+      "node": "Y_·_同款_焊脚占位011",
+      "size": [
+        0.650002,
+        3.000007,
+        0.650002
+      ],
+      "position": [
+        38.64999,
+        21.993049,
+        -30.399996
+      ],
+      "group": {
+        "id": "42bfc332-6d92-492a-b3a2-91a7503f50f2-buttons-y-switch",
+        "name": "Y 键 · 开关 / 按杆 / 焊脚"
+      }
+    },
+    {
+      "id": "16066c33-9fb0-4c9f-b786-a076403edd9f",
+      "name": "Y · 同款插销与圆形键帽.002",
+      "kind": "pin",
+      "source": "./models/buttons-y.glb",
+      "node": "Y_·_同款插销与圆形键帽002",
+      "size": [
+        13.337421,
+        12.04763,
+        13.338713
+      ],
+      "position": [
+        41.001287,
+        33.998058,
+        -32.500001
+      ],
+      "group": {
+        "id": "42bfc332-6d92-492a-b3a2-91a7503f50f2-buttons-y-pin-sleeve",
+        "name": "Y 键 · 键帽插销 / 下套筒"
+      },
+      "interactionStatus": "unconfigured"
+    },
+    {
+      "id": "a8d915b2-eab2-4db5-9581-31560cb9ba21",
+      "name": "Y · 旋锁弹性垫 0.002",
+      "kind": "asset",
+      "source": "./models/buttons-y.glb",
+      "node": "Y_·_旋锁弹性垫_0002",
+      "size": [
+        1.114216,
+        0.504999,
+        1.575439
+      ],
+      "position": [
+        46.102438,
+        19.73006,
+        -32.5
+      ]
+    },
+    {
+      "id": "2bc3694e-e1c2-4e33-8dba-0f8507189bb8",
+      "name": "Y · 旋锁弹性垫 120.002",
+      "kind": "asset",
+      "source": "./models/buttons-y.glb",
+      "node": "Y_·_旋锁弹性垫_120002",
+      "size": [
+        1.765202,
+        0.504999,
+        1.63089
+      ],
+      "position": [
+        38.397955,
+        19.73006,
+        -36.932415
+      ]
+    },
+    {
+      "id": "213cb9d5-b503-406a-b4da-88ffc5fa0537",
+      "name": "Y · 旋锁弹性垫 240.002",
+      "kind": "asset",
+      "source": "./models/buttons-y.glb",
+      "node": "Y_·_旋锁弹性垫_240002",
+      "size": [
+        1.765202,
+        0.504999,
+        1.63089
+      ],
+      "position": [
+        38.397955,
+        19.73006,
+        -28.067585
+      ]
+    },
+    {
+      "id": "c5d1be14-727d-440c-b723-daf6683c8cf7",
+      "name": "键帽标识 · Y.002",
+      "kind": "asset",
+      "source": "./models/buttons-y.glb",
+      "node": "键帽标识_·_Y002",
+      "size": [
+        2.405398,
+        0.226079,
+        2.728702
+      ],
+      "position": [
+        41.001141,
+        39.498661,
+        -32.664357
+      ]
+    },
+    {
+      "id": "d9f78bd3-5601-4254-adef-d2f416161565",
+      "name": "确认 · 回弹压簧.005",
+      "kind": "spring",
+      "source": "./models/buttons-confirm.glb",
+      "node": "确认_·_回弹压簧005",
+      "size": [
+        5.799072,
+        3.239796,
+        5.767181
+      ],
+      "position": [
+        -0.000331,
+        27.428614,
+        -5.500456
+      ],
+      "interactionStatus": "unconfigured"
+    },
+    {
+      "id": "9e5e62cb-bbf4-42c1-8e84-fa481eb7596d",
+      "name": "确认 · 常开开关.005",
+      "kind": "button",
+      "source": "./models/buttons-confirm.glb",
+      "node": "确认_·_常开开关005",
+      "size": [
+        6,
+        4.3,
+        6
+      ],
+      "position": [
+        0,
+        22.200424,
+        -5.5
+      ],
+      "group": {
+        "id": "ae92b35b-98ea-451f-850f-554448bf3e47-buttons-confirm-switch",
+        "name": "确认键 · 开关 / 触头"
+      },
+      "interactionStatus": "unconfigured"
+    },
+    {
+      "id": "eb9710f7-5141-4379-a577-3fba6d5404d6",
+      "name": "确认 · 开关触头.005",
+      "kind": "asset",
+      "source": "./models/buttons-confirm.glb",
+      "node": "确认_·_开关触头005",
+      "size": [
+        2.6,
+        0.84,
+        2.6
+      ],
+      "position": [
+        0,
+        24.770424,
+        -5.5
+      ],
+      "group": {
+        "id": "ae92b35b-98ea-451f-850f-554448bf3e47-buttons-confirm-switch",
+        "name": "确认键 · 开关 / 触头"
+      }
+    },
+    {
+      "id": "b613578a-c288-4b3f-9dfa-dec83f20e685",
+      "name": "确认 · 旋锁座.005",
+      "kind": "bayonet-socket",
+      "source": "./models/buttons-confirm.glb",
+      "node": "确认_·_旋锁座005",
+      "size": [
+        14.78447,
+        6.400001,
+        15.68314
+      ],
+      "position": [
+        0.000001,
+        24.450001,
+        -5.499999
+      ],
+      "group": {
+        "id": "ae92b35b-98ea-451f-850f-554448bf3e47-buttons-confirm-bayonet",
+        "name": "确认键 · 键帽 / 旋锁座"
+      },
+      "interactionStatus": "unconfigured"
+    },
+    {
+      "id": "70b97057-cb3b-4b8c-bd89-49c806778268",
+      "name": "确认 · 键帽.007",
+      "kind": "bayonet-pin",
+      "source": "./models/buttons-confirm.glb",
+      "node": "确认_·_键帽007",
+      "size": [
+        14.2,
+        9.759272,
+        7.1
+      ],
+      "position": [
+        0,
+        30.679637,
+        -5.5
+      ],
+      "group": {
+        "id": "ae92b35b-98ea-451f-850f-554448bf3e47-buttons-confirm-bayonet",
+        "name": "确认键 · 键帽 / 旋锁座"
+      },
+      "interactionStatus": "unconfigured"
+    },
+    {
+      "id": "7e8f2e3e-2074-4c65-8eb0-03762b30905d",
+      "name": "方向键 · 中央走线方形底座.002",
+      "kind": "asset",
+      "source": "./models/baseplates-dpad.glb",
+      "node": "方向键_·_中央走线方形底座002",
+      "size": [
+        34.417471,
+        2.539999,
+        34.417471
+      ],
+      "position": [
+        -42.000001,
+        15.69,
+        -22.000001
+      ],
+      "group": {
+        "id": "d05e2305-b9cf-4cf0-a722-9d4035f6c620-baseplates-dpad-fasteners",
+        "name": "方向键 · 底座 / M2 固定件"
+      }
+    },
+    {
+      "id": "c8fa1765-b767-4772-a300-8ab8afa065e5",
+      "name": "方向键 · 边中点 M2 固定螺钉 1.002",
+      "kind": "asset",
+      "source": "./models/baseplates-dpad.glb",
+      "node": "方向键_·_边中点_M2_固定螺钉_1002",
+      "size": [
+        2.920002,
+        5,
+        2.920001
+      ],
+      "position": [
+        -49.42,
+        13.698,
+        -14.58
+      ],
+      "group": {
+        "id": "d05e2305-b9cf-4cf0-a722-9d4035f6c620-baseplates-dpad-fasteners",
+        "name": "方向键 · 底座 / M2 固定件"
+      }
+    },
+    {
+      "id": "fcff54ee-421f-40ec-8b28-814d45ab04c2",
+      "name": "方向键 · 边中点 M2 固定螺钉 2.002",
+      "kind": "asset",
+      "source": "./models/baseplates-dpad.glb",
+      "node": "方向键_·_边中点_M2_固定螺钉_2002",
+      "size": [
+        2.920002,
+        5,
+        2.920001
+      ],
+      "position": [
+        -34.58,
+        13.698,
+        -14.58
+      ],
+      "group": {
+        "id": "d05e2305-b9cf-4cf0-a722-9d4035f6c620-baseplates-dpad-fasteners",
+        "name": "方向键 · 底座 / M2 固定件"
+      }
+    },
+    {
+      "id": "d0434cec-a290-47eb-8613-cde9c38335ea",
+      "name": "方向键 · 边中点 M2 固定螺钉 3.002",
+      "kind": "asset",
+      "source": "./models/baseplates-dpad.glb",
+      "node": "方向键_·_边中点_M2_固定螺钉_3002",
+      "size": [
+        2.920002,
+        5,
+        2.92
+      ],
+      "position": [
+        -34.58,
+        13.698,
+        -29.419999
+      ],
+      "group": {
+        "id": "d05e2305-b9cf-4cf0-a722-9d4035f6c620-baseplates-dpad-fasteners",
+        "name": "方向键 · 底座 / M2 固定件"
+      }
+    },
+    {
+      "id": "f5eff09c-0581-4e2e-b29b-d0ad2a5dc5c2",
+      "name": "方向键 · 边中点 M2 固定螺钉 4.002",
+      "kind": "asset",
+      "source": "./models/baseplates-dpad.glb",
+      "node": "方向键_·_边中点_M2_固定螺钉_4002",
+      "size": [
+        2.920002,
+        5,
+        2.92
+      ],
+      "position": [
+        -49.42,
+        13.698,
+        -29.419999
+      ],
+      "group": {
+        "id": "d05e2305-b9cf-4cf0-a722-9d4035f6c620-baseplates-dpad-fasteners",
+        "name": "方向键 · 底座 / M2 固定件"
+      }
+    },
+    {
+      "id": "85255f7c-4222-40bd-8a9b-0f670a2063a7",
+      "name": "ABXY · 中央走线方形底座.002",
+      "kind": "asset",
+      "source": "./models/baseplates-abxy.glb",
+      "node": "ABXY_·_中央走线方形底座002",
+      "size": [
+        38.161409,
+        3.38756,
+        38.161409
+      ],
+      "position": [
+        40.999999,
+        19.34378,
+        -20.999999
+      ],
+      "group": {
+        "id": "5b72c064-b6f6-4662-9036-098d05c8cfb4-baseplates-abxy-fasteners",
+        "name": "ABXY · 底座 / M2 固定件"
+      }
+    },
+    {
+      "id": "af9af33a-54f9-4d42-b8f6-80a81df37bbb",
+      "name": "ABXY · 边中点 M2 固定螺钉 1.002",
+      "kind": "asset",
+      "source": "./models/baseplates-abxy.glb",
+      "node": "ABXY_·_边中点_M2_固定螺钉_1002",
+      "size": [
+        2.920002,
+        5.847561,
+        2.92
+      ],
+      "position": [
+        32.51,
+        17.35178,
+        -12.51
+      ],
+      "group": {
+        "id": "5b72c064-b6f6-4662-9036-098d05c8cfb4-baseplates-abxy-fasteners",
+        "name": "ABXY · 底座 / M2 固定件"
+      }
+    },
+    {
+      "id": "8b29d2f7-cea0-4c23-bdb6-9a4167f9561e",
+      "name": "ABXY · 边中点 M2 固定螺钉 2.002",
+      "kind": "asset",
+      "source": "./models/baseplates-abxy.glb",
+      "node": "ABXY_·_边中点_M2_固定螺钉_2002",
+      "size": [
+        2.920002,
+        5.847561,
+        2.92
+      ],
+      "position": [
+        49.49,
+        17.35178,
+        -12.51
+      ],
+      "group": {
+        "id": "5b72c064-b6f6-4662-9036-098d05c8cfb4-baseplates-abxy-fasteners",
+        "name": "ABXY · 底座 / M2 固定件"
+      }
+    },
+    {
+      "id": "a01de073-0e22-4d3e-bb49-992eee60e171",
+      "name": "ABXY · 边中点 M2 固定螺钉 3.002",
+      "kind": "asset",
+      "source": "./models/baseplates-abxy.glb",
+      "node": "ABXY_·_边中点_M2_固定螺钉_3002",
+      "size": [
+        2.920002,
+        5.847561,
+        2.92
+      ],
+      "position": [
+        49.49,
+        17.35178,
+        -29.490001
+      ],
+      "group": {
+        "id": "5b72c064-b6f6-4662-9036-098d05c8cfb4-baseplates-abxy-fasteners",
+        "name": "ABXY · 底座 / M2 固定件"
+      }
+    },
+    {
+      "id": "adb7801b-f4bc-453f-b111-201907407dbb",
+      "name": "ABXY · 边中点 M2 固定螺钉 4.002",
+      "kind": "asset",
+      "source": "./models/baseplates-abxy.glb",
+      "node": "ABXY_·_边中点_M2_固定螺钉_4002",
+      "size": [
+        2.920002,
+        5.847561,
+        2.92
+      ],
+      "position": [
+        32.51,
+        17.35178,
+        -29.490001
+      ],
+      "group": {
+        "id": "5b72c064-b6f6-4662-9036-098d05c8cfb4-baseplates-abxy-fasteners",
+        "name": "ABXY · 底座 / M2 固定件"
+      }
+    },
+    {
+      "id": "b275f4f2-6663-4002-b850-895e59b8e69a",
+      "name": "pureTV · 按键区圆滑过渡上壳.002",
+      "kind": "asset",
+      "source": "./models/housing-top.glb",
+      "node": "pureTV_·_按键区圆滑过渡上壳002",
+      "size": [
+        147.980476,
+        37.176781,
+        98.988628
+      ],
+      "position": [
+        0.001202,
+        20.408892,
+        0.494024
+      ],
+      "group": {
+        "id": "bee3ee93-dda8-41ba-a449-312f35a0bc10-housing-shell",
+        "name": "手柄 · 上盖 / 底壳"
+      }
+    },
+    {
+      "id": "400c34f3-53f3-4b01-b14a-898effbfad77",
+      "name": "底壳 · 合壳.007",
+      "kind": "asset",
+      "source": "./models/housing-bottom.glb",
+      "node": "底壳_·_合壳007",
+      "size": [
+        148.000259,
+        49.04232,
+        98.999962
+      ],
+      "position": [
+        0,
+        4.879023,
+        0.499977
+      ],
+      "group": {
+        "id": "0af24ab9-3e77-4dda-a67c-4f82a8f2942a-housing-shell",
+        "name": "手柄 · 上盖 / 底壳"
+      }
+    },
+    {
+      "id": "840a3cc6-f9c7-4017-840e-a95f96af4942",
+      "name": "ESP32 · 48.2 × 27.9 PCB.005",
+      "kind": "asset",
+      "source": "./models/electronics-esp32-mount.glb",
+      "node": "ESP32_·_482_×_279_PCB005",
+      "size": [
+        48.200001,
+        1.6,
+        27.9
+      ],
+      "position": [
+        -1.9,
+        8.8,
+        -8.5
+      ],
+      "group": {
+        "id": "cffd5d09-1ea4-4cc6-970b-63da7a6a1681-electronics-esp32-mount-board",
+        "name": "ESP32 · PCB / 板载模块"
+      }
+    },
+    {
+      "id": "9abee77c-024b-4f6f-84c8-2d7b71849aaa",
+      "name": "ESP32 · RF module.005",
+      "kind": "asset",
+      "source": "./models/electronics-esp32-mount.glb",
+      "node": "ESP32_·_RF_module005",
+      "size": [
+        19.799999,
+        3.4,
+        18
+      ],
+      "position": [
+        18.299999,
+        11.3,
+        -8.5
+      ],
+      "group": {
+        "id": "cffd5d09-1ea4-4cc6-970b-63da7a6a1681-electronics-esp32-mount-board",
+        "name": "ESP32 · PCB / 板载模块"
+      }
+    },
+    {
+      "id": "80c47e44-3fc1-4891-b704-d9d4398449e7",
+      "name": "ESP32 · USB connector.005",
+      "kind": "asset",
+      "source": "./models/electronics-esp32-mount.glb",
+      "node": "ESP32_·_USB_connector005",
+      "size": [
+        5.2,
+        3.2,
+        8
+      ],
+      "position": [
+        -25.5,
+        11,
+        -8.5
+      ],
+      "group": {
+        "id": "cffd5d09-1ea4-4cc6-970b-63da7a6a1681-electronics-esp32-mount-board",
+        "name": "ESP32 · PCB / 板载模块"
+      }
+    },
+    {
+      "id": "04ee5608-e6cc-4660-b060-f76d894dbb65",
+      "name": "Header pin.170",
+      "kind": "asset",
+      "source": "./models/electronics-esp32-mount.glb",
+      "node": "Header_pin170",
+      "size": [
+        0.65,
+        5.7,
+        0.65
+      ],
+      "position": [
+        -21.4,
+        14.15,
+        2.7
+      ],
+      "group": {
+        "id": "cffd5d09-1ea4-4cc6-970b-63da7a6a1681-electronics-esp32-mount-header-front",
+        "name": "ESP32 · 前排针座 / 排针"
+      }
+    },
+    {
+      "id": "764a403d-d4ec-45c6-9f87-1cf820361cfb",
+      "name": "Header pin.171",
+      "kind": "asset",
+      "source": "./models/electronics-esp32-mount.glb",
+      "node": "Header_pin171",
+      "size": [
+        0.65,
+        5.7,
+        0.65
+      ],
+      "position": [
+        -18.860001,
+        14.15,
+        2.7
+      ],
+      "group": {
+        "id": "cffd5d09-1ea4-4cc6-970b-63da7a6a1681-electronics-esp32-mount-header-front",
+        "name": "ESP32 · 前排针座 / 排针"
+      }
+    },
+    {
+      "id": "76465c7c-aead-4ca3-b563-e1f58035cf59",
+      "name": "Header pin.172",
+      "kind": "asset",
+      "source": "./models/electronics-esp32-mount.glb",
+      "node": "Header_pin172",
+      "size": [
+        0.65,
+        5.7,
+        0.65
+      ],
+      "position": [
+        -16.32,
+        14.15,
+        2.7
+      ],
+      "group": {
+        "id": "cffd5d09-1ea4-4cc6-970b-63da7a6a1681-electronics-esp32-mount-header-front",
+        "name": "ESP32 · 前排针座 / 排针"
+      }
+    },
+    {
+      "id": "026511c3-9b5d-43c7-9eb3-4f3c26175de4",
+      "name": "Header pin.173",
+      "kind": "asset",
+      "source": "./models/electronics-esp32-mount.glb",
+      "node": "Header_pin173",
+      "size": [
+        0.65,
+        5.7,
+        0.65
+      ],
+      "position": [
+        -13.78,
+        14.15,
+        2.7
+      ],
+      "group": {
+        "id": "cffd5d09-1ea4-4cc6-970b-63da7a6a1681-electronics-esp32-mount-header-front",
+        "name": "ESP32 · 前排针座 / 排针"
+      }
+    },
+    {
+      "id": "287f0678-f9ba-4742-b7ba-9915f8916d03",
+      "name": "Header pin.174",
+      "kind": "asset",
+      "source": "./models/electronics-esp32-mount.glb",
+      "node": "Header_pin174",
+      "size": [
+        0.65,
+        5.7,
+        0.65
+      ],
+      "position": [
+        -11.24,
+        14.15,
+        2.7
+      ],
+      "group": {
+        "id": "cffd5d09-1ea4-4cc6-970b-63da7a6a1681-electronics-esp32-mount-header-front",
+        "name": "ESP32 · 前排针座 / 排针"
+      }
+    },
+    {
+      "id": "f1113ac2-75bf-4df3-b03e-10550d1b14c6",
+      "name": "Header pin.175",
+      "kind": "asset",
+      "source": "./models/electronics-esp32-mount.glb",
+      "node": "Header_pin175",
+      "size": [
+        0.65,
+        5.7,
+        0.65
+      ],
+      "position": [
+        -8.7,
+        14.15,
+        2.7
+      ],
+      "group": {
+        "id": "cffd5d09-1ea4-4cc6-970b-63da7a6a1681-electronics-esp32-mount-header-front",
+        "name": "ESP32 · 前排针座 / 排针"
+      }
+    },
+    {
+      "id": "cb2b4591-431e-4d1f-aa51-4702b87ab3a4",
+      "name": "Header pin.176",
+      "kind": "asset",
+      "source": "./models/electronics-esp32-mount.glb",
+      "node": "Header_pin176",
+      "size": [
+        0.65,
+        5.7,
+        0.65
+      ],
+      "position": [
+        -6.16,
+        14.15,
+        2.7
+      ],
+      "group": {
+        "id": "cffd5d09-1ea4-4cc6-970b-63da7a6a1681-electronics-esp32-mount-header-front",
+        "name": "ESP32 · 前排针座 / 排针"
+      }
+    },
+    {
+      "id": "e378ad2a-0071-43c5-9833-164eb0dea612",
+      "name": "Header pin.177",
+      "kind": "asset",
+      "source": "./models/electronics-esp32-mount.glb",
+      "node": "Header_pin177",
+      "size": [
+        0.65,
+        5.7,
+        0.65
+      ],
+      "position": [
+        -3.62,
+        14.15,
+        2.7
+      ],
+      "group": {
+        "id": "cffd5d09-1ea4-4cc6-970b-63da7a6a1681-electronics-esp32-mount-header-front",
+        "name": "ESP32 · 前排针座 / 排针"
+      }
+    },
+    {
+      "id": "de897261-2726-4402-a636-f8692c73bcbb",
+      "name": "Header pin.178",
+      "kind": "asset",
+      "source": "./models/electronics-esp32-mount.glb",
+      "node": "Header_pin178",
+      "size": [
+        0.65,
+        5.7,
+        0.65
+      ],
+      "position": [
+        -1.08,
+        14.15,
+        2.7
+      ],
+      "group": {
+        "id": "cffd5d09-1ea4-4cc6-970b-63da7a6a1681-electronics-esp32-mount-header-front",
+        "name": "ESP32 · 前排针座 / 排针"
+      }
+    },
+    {
+      "id": "e7197bab-bb0a-4145-9563-58ed827ab53e",
+      "name": "Header pin.179",
+      "kind": "asset",
+      "source": "./models/electronics-esp32-mount.glb",
+      "node": "Header_pin179",
+      "size": [
+        0.65,
+        5.7,
+        0.65
+      ],
+      "position": [
+        1.46,
+        14.15,
+        2.7
+      ],
+      "group": {
+        "id": "cffd5d09-1ea4-4cc6-970b-63da7a6a1681-electronics-esp32-mount-header-front",
+        "name": "ESP32 · 前排针座 / 排针"
+      }
+    },
+    {
+      "id": "acc66cd9-6b2a-4925-ae42-5e5bc0871007",
+      "name": "Header pin.180",
+      "kind": "asset",
+      "source": "./models/electronics-esp32-mount.glb",
+      "node": "Header_pin180",
+      "size": [
+        0.65,
+        5.7,
+        0.65
+      ],
+      "position": [
+        4,
+        14.15,
+        2.7
+      ],
+      "group": {
+        "id": "cffd5d09-1ea4-4cc6-970b-63da7a6a1681-electronics-esp32-mount-header-front",
+        "name": "ESP32 · 前排针座 / 排针"
+      }
+    },
+    {
+      "id": "a5be0cb6-6cdb-4113-96f9-5a716aded635",
+      "name": "Header pin.181",
+      "kind": "asset",
+      "source": "./models/electronics-esp32-mount.glb",
+      "node": "Header_pin181",
+      "size": [
+        0.65,
+        5.7,
+        0.65
+      ],
+      "position": [
+        6.54,
+        14.15,
+        2.7
+      ],
+      "group": {
+        "id": "cffd5d09-1ea4-4cc6-970b-63da7a6a1681-electronics-esp32-mount-header-front",
+        "name": "ESP32 · 前排针座 / 排针"
+      }
+    },
+    {
+      "id": "08b3e102-6c08-4889-aa49-c02b25968522",
+      "name": "Header pin.182",
+      "kind": "asset",
+      "source": "./models/electronics-esp32-mount.glb",
+      "node": "Header_pin182",
+      "size": [
+        0.65,
+        5.7,
+        0.65
+      ],
+      "position": [
+        9.08,
+        14.15,
+        2.7
+      ],
+      "group": {
+        "id": "cffd5d09-1ea4-4cc6-970b-63da7a6a1681-electronics-esp32-mount-header-front",
+        "name": "ESP32 · 前排针座 / 排针"
+      }
+    },
+    {
+      "id": "5f8a5220-b647-43ed-81f1-854268e4e718",
+      "name": "Header pin.183",
+      "kind": "asset",
+      "source": "./models/electronics-esp32-mount.glb",
+      "node": "Header_pin183",
+      "size": [
+        0.65,
+        5.7,
+        0.65
+      ],
+      "position": [
+        11.62,
+        14.15,
+        2.7
+      ],
+      "group": {
+        "id": "cffd5d09-1ea4-4cc6-970b-63da7a6a1681-electronics-esp32-mount-header-front",
+        "name": "ESP32 · 前排针座 / 排针"
+      }
+    },
+    {
+      "id": "00ce16f6-a616-413e-b19b-e6b8d0d42dc1",
+      "name": "Header pin.184",
+      "kind": "asset",
+      "source": "./models/electronics-esp32-mount.glb",
+      "node": "Header_pin184",
+      "size": [
+        0.65,
+        5.7,
+        0.65
+      ],
+      "position": [
+        14.16,
+        14.15,
+        2.7
+      ],
+      "group": {
+        "id": "cffd5d09-1ea4-4cc6-970b-63da7a6a1681-electronics-esp32-mount-header-front",
+        "name": "ESP32 · 前排针座 / 排针"
+      }
+    },
+    {
+      "id": "c10ee745-f0e9-4c95-9051-5a308d75cfc2",
+      "name": "Header pin.185",
+      "kind": "asset",
+      "source": "./models/electronics-esp32-mount.glb",
+      "node": "Header_pin185",
+      "size": [
+        0.65,
+        5.7,
+        0.65
+      ],
+      "position": [
+        16.700001,
+        14.15,
+        2.7
+      ],
+      "group": {
+        "id": "cffd5d09-1ea4-4cc6-970b-63da7a6a1681-electronics-esp32-mount-header-front",
+        "name": "ESP32 · 前排针座 / 排针"
+      }
+    },
+    {
+      "id": "ff015109-2d54-4eaf-8dcd-d31884901f2c",
+      "name": "Header pin.186",
+      "kind": "asset",
+      "source": "./models/electronics-esp32-mount.glb",
+      "node": "Header_pin186",
+      "size": [
+        0.65,
+        5.7,
+        0.65
+      ],
+      "position": [
+        19.24,
+        14.15,
+        2.7
+      ],
+      "group": {
+        "id": "cffd5d09-1ea4-4cc6-970b-63da7a6a1681-electronics-esp32-mount-header-front",
+        "name": "ESP32 · 前排针座 / 排针"
+      }
+    },
+    {
+      "id": "f6de3a8e-87b3-4abb-ad89-00c1fe32d762",
+      "name": "Header pin.187",
+      "kind": "asset",
+      "source": "./models/electronics-esp32-mount.glb",
+      "node": "Header_pin187",
+      "size": [
+        0.65,
+        5.7,
+        0.65
+      ],
+      "position": [
+        -21.4,
+        14.15,
+        -19.700001
+      ],
+      "group": {
+        "id": "cffd5d09-1ea4-4cc6-970b-63da7a6a1681-electronics-esp32-mount-header-back",
+        "name": "ESP32 · 后排针座 / 排针"
+      }
+    },
+    {
+      "id": "0ad55451-1b85-4952-b8ec-471bb0f091f6",
+      "name": "Header pin.188",
+      "kind": "asset",
+      "source": "./models/electronics-esp32-mount.glb",
+      "node": "Header_pin188",
+      "size": [
+        0.65,
+        5.7,
+        0.65
+      ],
+      "position": [
+        -18.860001,
+        14.15,
+        -19.700001
+      ],
+      "group": {
+        "id": "cffd5d09-1ea4-4cc6-970b-63da7a6a1681-electronics-esp32-mount-header-back",
+        "name": "ESP32 · 后排针座 / 排针"
+      }
+    },
+    {
+      "id": "de6ef319-28fe-43d2-965d-41d4c3807076",
+      "name": "Header pin.189",
+      "kind": "asset",
+      "source": "./models/electronics-esp32-mount.glb",
+      "node": "Header_pin189",
+      "size": [
+        0.65,
+        5.7,
+        0.65
+      ],
+      "position": [
+        -16.32,
+        14.15,
+        -19.700001
+      ],
+      "group": {
+        "id": "cffd5d09-1ea4-4cc6-970b-63da7a6a1681-electronics-esp32-mount-header-back",
+        "name": "ESP32 · 后排针座 / 排针"
+      }
+    },
+    {
+      "id": "92d239b5-a72e-4331-b3c2-4dbfa60451b8",
+      "name": "Header pin.190",
+      "kind": "asset",
+      "source": "./models/electronics-esp32-mount.glb",
+      "node": "Header_pin190",
+      "size": [
+        0.65,
+        5.7,
+        0.65
+      ],
+      "position": [
+        -13.78,
+        14.15,
+        -19.700001
+      ],
+      "group": {
+        "id": "cffd5d09-1ea4-4cc6-970b-63da7a6a1681-electronics-esp32-mount-header-back",
+        "name": "ESP32 · 后排针座 / 排针"
+      }
+    },
+    {
+      "id": "5e56d2c7-98fd-491c-b4d2-88ca0a6ebb8f",
+      "name": "Header pin.191",
+      "kind": "asset",
+      "source": "./models/electronics-esp32-mount.glb",
+      "node": "Header_pin191",
+      "size": [
+        0.65,
+        5.7,
+        0.65
+      ],
+      "position": [
+        -11.24,
+        14.15,
+        -19.700001
+      ],
+      "group": {
+        "id": "cffd5d09-1ea4-4cc6-970b-63da7a6a1681-electronics-esp32-mount-header-back",
+        "name": "ESP32 · 后排针座 / 排针"
+      }
+    },
+    {
+      "id": "bc7bcebf-61a6-4fc6-8094-9678e94a2f23",
+      "name": "Header pin.192",
+      "kind": "asset",
+      "source": "./models/electronics-esp32-mount.glb",
+      "node": "Header_pin192",
+      "size": [
+        0.65,
+        5.7,
+        0.65
+      ],
+      "position": [
+        -8.7,
+        14.15,
+        -19.700001
+      ],
+      "group": {
+        "id": "cffd5d09-1ea4-4cc6-970b-63da7a6a1681-electronics-esp32-mount-header-back",
+        "name": "ESP32 · 后排针座 / 排针"
+      }
+    },
+    {
+      "id": "8c72a966-2d27-48a4-956e-5f4fdd6dc6a4",
+      "name": "Header pin.193",
+      "kind": "asset",
+      "source": "./models/electronics-esp32-mount.glb",
+      "node": "Header_pin193",
+      "size": [
+        0.65,
+        5.7,
+        0.65
+      ],
+      "position": [
+        -6.16,
+        14.15,
+        -19.700001
+      ],
+      "group": {
+        "id": "cffd5d09-1ea4-4cc6-970b-63da7a6a1681-electronics-esp32-mount-header-back",
+        "name": "ESP32 · 后排针座 / 排针"
+      }
+    },
+    {
+      "id": "73872ea6-1ed6-4509-bb4c-abbd3f4ec281",
+      "name": "Header pin.194",
+      "kind": "asset",
+      "source": "./models/electronics-esp32-mount.glb",
+      "node": "Header_pin194",
+      "size": [
+        0.65,
+        5.7,
+        0.65
+      ],
+      "position": [
+        -3.62,
+        14.15,
+        -19.700001
+      ],
+      "group": {
+        "id": "cffd5d09-1ea4-4cc6-970b-63da7a6a1681-electronics-esp32-mount-header-back",
+        "name": "ESP32 · 后排针座 / 排针"
+      }
+    },
+    {
+      "id": "254fee60-1f70-4cae-bf2d-3e644aec9742",
+      "name": "Header pin.195",
+      "kind": "asset",
+      "source": "./models/electronics-esp32-mount.glb",
+      "node": "Header_pin195",
+      "size": [
+        0.65,
+        5.7,
+        0.65
+      ],
+      "position": [
+        -1.08,
+        14.15,
+        -19.700001
+      ],
+      "group": {
+        "id": "cffd5d09-1ea4-4cc6-970b-63da7a6a1681-electronics-esp32-mount-header-back",
+        "name": "ESP32 · 后排针座 / 排针"
+      }
+    },
+    {
+      "id": "ab9e570d-0d8f-4b55-8382-12412c5898ee",
+      "name": "Header pin.196",
+      "kind": "asset",
+      "source": "./models/electronics-esp32-mount.glb",
+      "node": "Header_pin196",
+      "size": [
+        0.65,
+        5.7,
+        0.65
+      ],
+      "position": [
+        1.46,
+        14.15,
+        -19.700001
+      ],
+      "group": {
+        "id": "cffd5d09-1ea4-4cc6-970b-63da7a6a1681-electronics-esp32-mount-header-back",
+        "name": "ESP32 · 后排针座 / 排针"
+      }
+    },
+    {
+      "id": "8d30e43b-e1e3-464d-9be1-847ba7511250",
+      "name": "Header pin.197",
+      "kind": "asset",
+      "source": "./models/electronics-esp32-mount.glb",
+      "node": "Header_pin197",
+      "size": [
+        0.65,
+        5.7,
+        0.65
+      ],
+      "position": [
+        4,
+        14.15,
+        -19.700001
+      ],
+      "group": {
+        "id": "cffd5d09-1ea4-4cc6-970b-63da7a6a1681-electronics-esp32-mount-header-back",
+        "name": "ESP32 · 后排针座 / 排针"
+      }
+    },
+    {
+      "id": "3a18c93a-926c-4dda-8cb5-e8d01eaf795a",
+      "name": "Header pin.198",
+      "kind": "asset",
+      "source": "./models/electronics-esp32-mount.glb",
+      "node": "Header_pin198",
+      "size": [
+        0.65,
+        5.7,
+        0.65
+      ],
+      "position": [
+        6.54,
+        14.15,
+        -19.700001
+      ],
+      "group": {
+        "id": "cffd5d09-1ea4-4cc6-970b-63da7a6a1681-electronics-esp32-mount-header-back",
+        "name": "ESP32 · 后排针座 / 排针"
+      }
+    },
+    {
+      "id": "925e4e83-1311-4c00-87f1-fb4b8561cf87",
+      "name": "Header pin.199",
+      "kind": "asset",
+      "source": "./models/electronics-esp32-mount.glb",
+      "node": "Header_pin199",
+      "size": [
+        0.65,
+        5.7,
+        0.65
+      ],
+      "position": [
+        9.08,
+        14.15,
+        -19.700001
+      ],
+      "group": {
+        "id": "cffd5d09-1ea4-4cc6-970b-63da7a6a1681-electronics-esp32-mount-header-back",
+        "name": "ESP32 · 后排针座 / 排针"
+      }
+    },
+    {
+      "id": "7aa280eb-01b7-4c3c-a2ab-653b72baba88",
+      "name": "Header pin.200",
+      "kind": "asset",
+      "source": "./models/electronics-esp32-mount.glb",
+      "node": "Header_pin200",
+      "size": [
+        0.65,
+        5.7,
+        0.65
+      ],
+      "position": [
+        11.62,
+        14.15,
+        -19.700001
+      ],
+      "group": {
+        "id": "cffd5d09-1ea4-4cc6-970b-63da7a6a1681-electronics-esp32-mount-header-back",
+        "name": "ESP32 · 后排针座 / 排针"
+      }
+    },
+    {
+      "id": "2eb1afad-9ed7-4805-b73a-b38ad15975e6",
+      "name": "Header pin.201",
+      "kind": "asset",
+      "source": "./models/electronics-esp32-mount.glb",
+      "node": "Header_pin201",
+      "size": [
+        0.65,
+        5.7,
+        0.65
+      ],
+      "position": [
+        14.16,
+        14.15,
+        -19.700001
+      ],
+      "group": {
+        "id": "cffd5d09-1ea4-4cc6-970b-63da7a6a1681-electronics-esp32-mount-header-back",
+        "name": "ESP32 · 后排针座 / 排针"
+      }
+    },
+    {
+      "id": "b19231d6-db66-4e67-bea5-2650cf2e3740",
+      "name": "Header pin.202",
+      "kind": "asset",
+      "source": "./models/electronics-esp32-mount.glb",
+      "node": "Header_pin202",
+      "size": [
+        0.65,
+        5.7,
+        0.65
+      ],
+      "position": [
+        16.700001,
+        14.15,
+        -19.700001
+      ],
+      "group": {
+        "id": "cffd5d09-1ea4-4cc6-970b-63da7a6a1681-electronics-esp32-mount-header-back",
+        "name": "ESP32 · 后排针座 / 排针"
+      }
+    },
+    {
+      "id": "95a8e275-2bf7-49e1-9e8d-de9b8236612d",
+      "name": "Header pin.203",
+      "kind": "asset",
+      "source": "./models/electronics-esp32-mount.glb",
+      "node": "Header_pin203",
+      "size": [
+        0.65,
+        5.7,
+        0.65
+      ],
+      "position": [
+        19.24,
+        14.15,
+        -19.700001
+      ],
+      "group": {
+        "id": "cffd5d09-1ea4-4cc6-970b-63da7a6a1681-electronics-esp32-mount-header-back",
+        "name": "ESP32 · 后排针座 / 排针"
+      }
+    },
+    {
+      "id": "fc6747ed-8515-4e96-8f61-a3f57b805c45",
+      "name": "PCB · 0.40 mm 软垫（装配压缩至 0.25 mm）.010",
+      "kind": "asset",
+      "source": "./models/electronics-esp32-mount.glb",
+      "node": "PCB_·_040_mm_软垫（装配压缩至_025_mm）010",
+      "size": [
+        4.6,
+        0.25,
+        4.5
+      ],
+      "position": [
+        -10,
+        9.725,
+        -8.5
+      ],
+      "group": {
+        "id": "cffd5d09-1ea4-4cc6-970b-63da7a6a1681-electronics-esp32-mount-retainer",
+        "name": "ESP32 · 压条 / 软垫 / 螺钉"
+      }
+    },
+    {
+      "id": "e495e042-5ef3-48d5-9784-2e6a8c0da230",
+      "name": "PCB · 0.40 mm 软垫（装配压缩至 0.25 mm）.011",
+      "kind": "asset",
+      "source": "./models/electronics-esp32-mount.glb",
+      "node": "PCB_·_040_mm_软垫（装配压缩至_025_mm）011",
+      "size": [
+        4.6,
+        0.25,
+        4.5
+      ],
+      "position": [
+        3,
+        9.725,
+        -8.5
+      ],
+      "group": {
+        "id": "cffd5d09-1ea4-4cc6-970b-63da7a6a1681-electronics-esp32-mount-retainer",
+        "name": "ESP32 · 压条 / 软垫 / 螺钉"
+      }
+    },
+    {
+      "id": "c27464ca-2b96-4ee5-8eea-18cdc5357435",
+      "name": "PCB · 压条螺丝.009",
+      "kind": "asset",
+      "source": "./models/electronics-esp32-mount.glb",
+      "node": "PCB_·_压条螺丝009",
+      "size": [
+        4.5,
+        1.7,
+        4.5
+      ],
+      "position": [
+        -34,
+        18.15,
+        -8.5
+      ],
+      "group": {
+        "id": "cffd5d09-1ea4-4cc6-970b-63da7a6a1681-electronics-esp32-mount-retainer",
+        "name": "ESP32 · 压条 / 软垫 / 螺钉"
+      }
+    },
+    {
+      "id": "e593be12-3ebb-4912-9340-4ad4703a81bb",
+      "name": "PCB · 右侧沉入式压条螺钉.002",
+      "kind": "asset",
+      "source": "./models/electronics-esp32-mount.glb",
+      "node": "PCB_·_右侧沉入式压条螺钉002",
+      "size": [
+        4.059999,
+        4.26,
+        4.06
+      ],
+      "position": [
+        33.999999,
+        14.95,
+        -8.5
+      ],
+      "group": {
+        "id": "cffd5d09-1ea4-4cc6-970b-63da7a6a1681-electronics-esp32-mount-retainer",
+        "name": "ESP32 · 压条 / 软垫 / 螺钉"
+      }
+    },
+    {
+      "id": "0b141d19-ebb9-4359-a1d7-a008ab1c238d",
+      "name": "PCB · 长轴压条.005",
+      "kind": "asset",
+      "source": "./models/electronics-esp32-mount.glb",
+      "node": "PCB_·_长轴压条005",
+      "size": [
+        75,
+        7.4,
+        6.5
+      ],
+      "position": [
+        0,
+        13.55,
+        -8.5
+      ],
+      "group": {
+        "id": "cffd5d09-1ea4-4cc6-970b-63da7a6a1681-electronics-esp32-mount-retainer",
+        "name": "ESP32 · 压条 / 软垫 / 螺钉"
+      }
+    },
+    {
+      "id": "991a7e79-04b2-4270-8516-45ca63530685",
+      "name": "Pin header.010",
+      "kind": "asset",
+      "source": "./models/electronics-esp32-mount.glb",
+      "node": "Pin_header010",
+      "size": [
+        43.5,
+        2.8,
+        2.4
+      ],
+      "position": [
+        -1.1,
+        11,
+        2.7
+      ],
+      "group": {
+        "id": "cffd5d09-1ea4-4cc6-970b-63da7a6a1681-electronics-esp32-mount-header-front",
+        "name": "ESP32 · 前排针座 / 排针"
+      }
+    },
+    {
+      "id": "84394555-3342-477c-b920-ccc33a48ffea",
+      "name": "Pin header.011",
+      "kind": "asset",
+      "source": "./models/electronics-esp32-mount.glb",
+      "node": "Pin_header011",
+      "size": [
+        43.5,
+        2.8,
+        2.4
+      ],
+      "position": [
+        -1.1,
+        11,
+        -19.700001
+      ],
+      "group": {
+        "id": "cffd5d09-1ea4-4cc6-970b-63da7a6a1681-electronics-esp32-mount-header-back",
+        "name": "ESP32 · 后排针座 / 排针"
+      }
+    },
+    {
+      "id": "57b64db1-8f21-46fa-90ae-a716e0d30285",
+      "name": "A · 中央走线 GND.002",
+      "kind": "asset",
+      "source": "./models/electronics-harness.glb",
+      "node": "A_·_中央走线_GND002",
+      "size": [
+        28.6096,
+        7.475293,
+        11.453024
+      ],
+      "position": [
+        26.034014,
+        18.662355,
+        -16.545461
+      ],
+      "group": {
+        "id": "a5ee7355-5422-4b52-ac3d-12ac20c4b3dd-electronics-harness-a",
+        "name": "A · GPIO / GND 线对"
+      }
+    },
+    {
+      "id": "bc4d21d2-a0f2-4d19-bb23-9de03aa2fa5c",
+      "name": "A · 中央走线 GPIO.002",
+      "kind": "asset",
+      "source": "./models/electronics-harness.glb",
+      "node": "A_·_中央走线_GPIO002",
+      "size": [
+        54.971648,
+        6.062151,
+        9.160953
+      ],
+      "position": [
+        15.965924,
+        18.001414,
+        -15.399424
+      ],
+      "group": {
+        "id": "a5ee7355-5422-4b52-ac3d-12ac20c4b3dd-electronics-harness-a",
+        "name": "A · GPIO / GND 线对"
+      }
+    },
+    {
+      "id": "69a0d045-c2ea-489d-87d0-5570b55ab721",
+      "name": "B · 中央走线 GND.002",
+      "kind": "asset",
+      "source": "./models/electronics-harness.glb",
+      "node": "B_·_中央走线_GND002",
+      "size": [
+        46.790094,
+        7.696541,
+        3.540834
+      ],
+      "position": [
+        31.627086,
+        18.822502,
+        -21.550424
+      ],
+      "group": {
+        "id": "a5ee7355-5422-4b52-ac3d-12ac20c4b3dd-electronics-harness-b",
+        "name": "B · GPIO / GND 线对"
+      }
+    },
+    {
+      "id": "27c783fe-cb58-4079-b39d-92cce62a91e6",
+      "name": "B · 中央走线 GPIO.002",
+      "kind": "asset",
+      "source": "./models/electronics-harness.glb",
+      "node": "B_·_中央走线_GPIO002",
+      "size": [
+        65.244383,
+        6.077931,
+        3.821808
+      ],
+      "position": [
+        18.575341,
+        17.99344,
+        -21.348068
+      ],
+      "group": {
+        "id": "a5ee7355-5422-4b52-ac3d-12ac20c4b3dd-electronics-harness-b",
+        "name": "B · GPIO / GND 线对"
+      }
+    },
+    {
+      "id": "c3022f83-d6e0-4180-9d63-117f96e9576f",
+      "name": "X · 中央走线 GND.002",
+      "kind": "asset",
+      "source": "./models/electronics-harness.glb",
+      "node": "X_·_中央走线_GND002",
+      "size": [
+        35.555682,
+        7.741395,
+        1.708384
+      ],
+      "position": [
+        22.370154,
+        18.7907,
+        -22.514194
+      ],
+      "group": {
+        "id": "a5ee7355-5422-4b52-ac3d-12ac20c4b3dd-electronics-harness-x",
+        "name": "X · GPIO / GND 线对"
+      }
+    },
+    {
+      "id": "7b473356-2ea3-4bd6-a47d-469e9152ea7b",
+      "name": "X · 中央走线 GPIO.002",
+      "kind": "asset",
+      "source": "./models/electronics-harness.glb",
+      "node": "X_·_中央走线_GPIO002",
+      "size": [
+        48.351114,
+        6.694788,
+        3.939934
+      ],
+      "position": [
+        15.166732,
+        18.276004,
+        -21.389969
+      ],
+      "group": {
+        "id": "a5ee7355-5422-4b52-ac3d-12ac20c4b3dd-electronics-harness-x",
+        "name": "X · GPIO / GND 线对"
+      }
+    },
+    {
+      "id": "a26b6cd8-696c-4922-b2b2-cdbec3f9756b",
+      "name": "Y · 中央走线 GND.002",
+      "kind": "asset",
+      "source": "./models/electronics-harness.glb",
+      "node": "Y_·_中央走线_GND002",
+      "size": [
+        42.215559,
+        8.527494,
+        9.445002
+      ],
+      "position": [
+        22.343969,
+        18.399936,
+        -26.458552
+      ],
+      "group": {
+        "id": "a5ee7355-5422-4b52-ac3d-12ac20c4b3dd-electronics-harness-y",
+        "name": "Y · GPIO / GND 线对"
+      }
+    },
+    {
+      "id": "e298f801-4b18-4f8b-aae2-bdd6e05e81b3",
+      "name": "Y · 中央走线 GPIO.002",
+      "kind": "asset",
+      "source": "./models/electronics-harness.glb",
+      "node": "Y_·_中央走线_GPIO002",
+      "size": [
+        56.919582,
+        6.133013,
+        11.843334
+      ],
+      "position": [
+        11.879023,
+        17.995324,
+        -25.259386
+      ],
+      "group": {
+        "id": "a5ee7355-5422-4b52-ac3d-12ac20c4b3dd-electronics-harness-y",
+        "name": "Y · GPIO / GND 线对"
+      }
+    },
+    {
+      "id": "79d1b55c-3ba8-4420-b5ba-08f0d551cf50",
+      "name": "上 · 中央走线 GND.002",
+      "kind": "asset",
+      "source": "./models/electronics-harness.glb",
+      "node": "上_·_中央走线_GND002",
+      "size": [
+        32.746203,
+        10.296164,
+        8.138386
+      ],
+      "position": [
+        -25.104403,
+        17.522237,
+        -25.800493
+      ],
+      "group": {
+        "id": "a5ee7355-5422-4b52-ac3d-12ac20c4b3dd-electronics-harness-up",
+        "name": "上 · GPIO / GND 线对"
+      }
+    },
+    {
+      "id": "8480e4e6-c762-4a62-a749-7f43200e3c0f",
+      "name": "上 · 中央走线 GPIO.002",
+      "kind": "asset",
+      "source": "./models/electronics-harness.glb",
+      "node": "上_·_中央走线_GPIO002",
+      "size": [
+        40.999875,
+        6.849231,
+        10.545418
+      ],
+      "position": [
+        -23.845716,
+        15.855048,
+        -24.596977
+      ],
+      "group": {
+        "id": "a5ee7355-5422-4b52-ac3d-12ac20c4b3dd-electronics-harness-up",
+        "name": "上 · GPIO / GND 线对"
+      }
+    },
+    {
+      "id": "7dfcf292-e667-4020-ac47-f446b1bf3347",
+      "name": "下 · 中央走线 GND.002",
+      "kind": "asset",
+      "source": "./models/electronics-harness.glb",
+      "node": "下_·_中央走线_GND002",
+      "size": [
+        39.091456,
+        10.93444,
+        8.138831
+      ],
+      "position": [
+        -24.778506,
+        17.199997,
+        -18.197808
+      ],
+      "group": {
+        "id": "a5ee7355-5422-4b52-ac3d-12ac20c4b3dd-electronics-harness-down",
+        "name": "下 · GPIO / GND 线对"
+      }
+    },
+    {
+      "id": "64784bd2-6a86-4085-870f-c749a7d3b66e",
+      "name": "下 · 中央走线 GPIO.002",
+      "kind": "asset",
+      "source": "./models/electronics-harness.glb",
+      "node": "下_·_中央走线_GPIO002",
+      "size": [
+        40.509846,
+        7.747294,
+        6.296718
+      ],
+      "position": [
+        -21.074507,
+        16.329039,
+        -17.276751
+      ],
+      "group": {
+        "id": "a5ee7355-5422-4b52-ac3d-12ac20c4b3dd-electronics-harness-down",
+        "name": "下 · GPIO / GND 线对"
+      }
+    },
+    {
+      "id": "5e55ed84-e572-43f4-a2dd-c0c24c142ad8",
+      "name": "公共接地 · GND 引线.002",
+      "kind": "asset",
+      "source": "./models/electronics-harness.glb",
+      "node": "公共接地_·_GND_引线002",
+      "size": [
+        4.307688,
+        4.566462,
+        25.224873
+      ],
+      "position": [
+        -19.521096,
+        19.18323,
+        -9.634096
+      ],
+      "group": {
+        "id": "a5ee7355-5422-4b52-ac3d-12ac20c4b3dd-electronics-harness-common-ground",
+        "name": "公共接地 · 公共地线 / 汇流排"
+      }
+    },
+    {
+      "id": "7b472500-e1f9-4459-a590-80c818f9db18",
+      "name": "公共接地 · GND 汇流排.002",
+      "kind": "asset",
+      "source": "./models/electronics-harness.glb",
+      "node": "公共接地_·_GND_汇流排002",
+      "size": [
+        31,
+        0.722801,
+        0.759998
+      ],
+      "position": [
+        -2,
+        21.200001,
+        -22
+      ],
+      "group": {
+        "id": "a5ee7355-5422-4b52-ac3d-12ac20c4b3dd-electronics-harness-common-ground",
+        "name": "公共接地 · 公共地线 / 汇流排"
+      }
+    },
+    {
+      "id": "4fd79eea-c80e-491c-9516-c9e3d37cf48a",
+      "name": "右 · 中央走线 GND.002",
+      "kind": "asset",
+      "source": "./models/electronics-harness.glb",
+      "node": "右_·_中央走线_GND002",
+      "size": [
+        28.999496,
+        10.198944,
+        2.643282
+      ],
+      "position": [
+        -26.635247,
+        17.564556,
+        -20.942897
+      ],
+      "group": {
+        "id": "a5ee7355-5422-4b52-ac3d-12ac20c4b3dd-electronics-harness-right",
+        "name": "右 · GPIO / GND 线对"
+      }
+    },
+    {
+      "id": "9d841374-43df-4d23-aead-749addd354da",
+      "name": "右 · 中央走线 GPIO.002",
+      "kind": "asset",
+      "source": "./models/electronics-harness.glb",
+      "node": "右_·_中央走线_GPIO002",
+      "size": [
+        44.608728,
+        6.802479,
+        4.045889
+      ],
+      "position": [
+        -18.033591,
+        15.860493,
+        -21.354823
+      ],
+      "group": {
+        "id": "a5ee7355-5422-4b52-ac3d-12ac20c4b3dd-electronics-harness-right",
+        "name": "右 · GPIO / GND 线对"
+      }
+    },
+    {
+      "id": "450244fd-2ec5-4eb3-a7d0-e2123bd094f7",
+      "name": "左 · 中央走线 GND.002",
+      "kind": "asset",
+      "source": "./models/electronics-harness.glb",
+      "node": "左_·_中央走线_GND002",
+      "size": [
+        37.951341,
+        9.94891,
+        2.645224
+      ],
+      "position": [
+        -34.698833,
+        17.425547,
+        -23.045774
+      ],
+      "group": {
+        "id": "a5ee7355-5422-4b52-ac3d-12ac20c4b3dd-electronics-harness-left",
+        "name": "左 · GPIO / GND 线对"
+      }
+    },
+    {
+      "id": "e3a4afc1-9706-4d6d-abf2-2230f3794b70",
+      "name": "左 · 中央走线 GPIO.002",
+      "kind": "asset",
+      "source": "./models/electronics-harness.glb",
+      "node": "左_·_中央走线_GPIO002",
+      "size": [
+        31.28623,
+        6.826679,
+        5.31249
+      ],
+      "position": [
+        -34.22479,
+        15.856077,
+        -21.579396
+      ],
+      "group": {
+        "id": "a5ee7355-5422-4b52-ac3d-12ac20c4b3dd-electronics-harness-left",
+        "name": "左 · GPIO / GND 线对"
+      }
+    },
+    {
+      "id": "d17c9089-f70d-4851-961c-10521d8f4c51",
+      "name": "确认 · GND.005",
+      "kind": "asset",
+      "source": "./models/electronics-harness.glb",
+      "node": "确认_·_GND005",
+      "size": [
+        2.150002,
+        3.769026,
+        18.209667
+      ],
+      "position": [
+        -2.796029,
+        20.793921,
+        -13.167891
+      ],
+      "group": {
+        "id": "a5ee7355-5422-4b52-ac3d-12ac20c4b3dd-electronics-harness-confirm",
+        "name": "确认 · GPIO / GND 线对"
+      }
+    },
+    {
+      "id": "fd20d52b-9c70-41ac-b4ca-bfd28751d263",
+      "name": "确认 · GPIO.005",
+      "kind": "asset",
+      "source": "./models/electronics-harness.glb",
+      "node": "确认_·_GPIO005",
+      "size": [
+        10.198101,
+        3.391565,
+        15.93919
+      ],
+      "position": [
+        -1.338559,
+        18.595782,
+        -12.005711
+      ],
+      "group": {
+        "id": "a5ee7355-5422-4b52-ac3d-12ac20c4b3dd-electronics-harness-confirm",
+        "name": "确认 · GPIO / GND 线对"
+      }
+    }
+  ],
+  "validation": {
+    "scope": "参数化/用户代理几何和名义物理参数；不等于网格或制造认证。",
+    "fullReportTool": "validate_project",
+    "issueCount": 1363,
+    "issueGroups": [
+      {
+        "category": "physics",
+        "severity": "error",
+        "title": "组件交互参数未完成",
+        "count": 297,
+        "examples": [
+          "左 · PS5 6×6 开关.005：当前仅供预览，请填写该类型的全部参数后标记配置完成。",
+          "左 · PS5 6×6 开关.005：请填写有效的弹簧刚度（N/mm）。"
+        ],
+        "partNames": [
+          "左 · PS5 6×6 开关.005",
+          "左 · PS5 一体式键帽与蓝色插销.003",
+          "左 · PS5 下环一体式开关套筒.003",
+          "左 · PS5 回位弹簧.003",
+          "右 · PS5 6×6 开关.004",
+          "右 · PS5 一体式键帽与蓝色插销.003",
+          "右 · PS5 下环一体式开关套筒.003",
+          "右 · PS5 回位弹簧.003"
+        ],
+        "affectedPartCount": 36
+      },
+      {
+        "category": "geometry",
+        "severity": "warning",
+        "title": "功能代理待标定",
+        "count": 36,
+        "examples": [
+          "当前模型仅供预览与外观包围盒预检；代理参数完成前，不据此确认实体接触或配合。",
+          "当前模型仅供预览与外观包围盒预检；代理参数完成前，不据此确认实体接触或配合。"
+        ],
+        "partNames": [
+          "左 · PS5 6×6 开关.005",
+          "左 · PS5 一体式键帽与蓝色插销.003",
+          "左 · PS5 下环一体式开关套筒.003",
+          "左 · PS5 回位弹簧.003",
+          "右 · PS5 6×6 开关.004",
+          "右 · PS5 一体式键帽与蓝色插销.003",
+          "右 · PS5 下环一体式开关套筒.003",
+          "右 · PS5 回位弹簧.003"
+        ],
+        "affectedPartCount": 36
+      },
+      {
+        "category": "geometry",
+        "severity": "error",
+        "title": "穿入工作台",
+        "count": 1,
+        "examples": [
+          "底壳 · 合壳.007 低于工作台 19.642 mm。"
+        ],
+        "partNames": [
+          "底壳 · 合壳.007"
+        ],
+        "affectedPartCount": 1
+      },
+      {
+        "category": "geometry",
+        "severity": "warning",
+        "title": "待标定模型外观包围盒相交",
+        "count": 293,
+        "examples": [
+          "左 · PS5 6×6 开关.005 / 左 · PS5 下环一体式开关套筒.003：仅作保守预检，可能为正常嵌套；交互代理未完成，不能据此确认实体干涉或配合。",
+          "左 · PS5 6×6 开关.005 / pureTV · 按键区圆滑过渡上壳.002：仅作保守预检，可能为正常嵌套；交互代理未完成，不能据此确认实体干涉或配合。"
+        ],
+        "partNames": [
+          "左 · PS5 6×6 开关.005",
+          "左 · PS5 下环一体式开关套筒.003",
+          "pureTV · 按键区圆滑过渡上壳.002",
+          "底壳 · 合壳.007",
+          "左 · 中央走线 GND.002",
+          "左 · PS5 一体式键帽与蓝色插销.003",
+          "左 · PS5 回位弹簧.003",
+          "左 · PS5 弹簧定位环.004"
+        ],
+        "affectedPartCount": 136
+      },
+      {
+        "category": "geometry",
+        "severity": "warning",
+        "title": "原始模型包围盒相交",
+        "count": 735,
+        "examples": [
+          "左 · PS5 弹簧定位环.004 / pureTV · 按键区圆滑过渡上壳.002：可能为正常嵌套；需网格精检，不能据此判为实体干涉。",
+          "左 · PS5 弹簧定位环.004 / 底壳 · 合壳.007：可能为正常嵌套；需网格精检，不能据此判为实体干涉。"
+        ],
+        "partNames": [
+          "左 · PS5 弹簧定位环.004",
+          "pureTV · 按键区圆滑过渡上壳.002",
+          "底壳 · 合壳.007",
+          "左 · PS5 按杆.005",
+          "左 · PS5 焊脚占位.017",
+          "左 · 中央走线 GND.002",
+          "左 · 中央走线 GPIO.002",
+          "左 · PS5 焊脚占位.018"
+        ],
+        "affectedPartCount": 150
+      },
+      {
+        "category": "geometry",
+        "severity": "warning",
+        "title": "原始资产仅作包围盒预检",
+        "count": 1,
+        "examples": [
+          "导入模型未经过精确网格碰撞、材料与关节标定；当前结果不能作为制造通过结论。"
+        ],
+        "partNames": [
+          "左 · PS5 弹簧定位环.004",
+          "左 · PS5 按杆.005",
+          "左 · PS5 焊脚占位.017",
+          "左 · PS5 焊脚占位.018",
+          "左 · PS5 焊脚占位.019",
+          "左 · PS5 焊脚占位.020",
+          "左 · 旋锁弹性垫 0.002",
+          "左 · 旋锁弹性垫 120.002"
+        ],
+        "affectedPartCount": 153
+      }
+    ],
+    "geometry": {
+      "minClearance": null,
+      "collisionPairCount": 0,
+      "errors": [
+        {
+          "category": "geometry",
+          "detail": "底壳 · 合壳.007 低于工作台 19.642 mm。",
+          "id": "floor-400c34f3-53f3-4b01-b14a-898effbfad77",
+          "partIds": [
+            "400c34f3-53f3-4b01-b14a-898effbfad77"
+          ],
+          "severity": "error",
+          "title": "穿入工作台"
+        }
+      ]
+    },
+    "circuit": {
+      "current": 0,
+      "issues": [
+        {
+          "category": "physics",
+          "detail": "左 · PS5 6×6 开关.005：当前仅供预览，请填写该类型的全部参数后标记配置完成。",
+          "id": "component-50141502-965b-421b-a7b7-8e7687ec2210-status",
+          "partIds": [
+            "50141502-965b-421b-a7b7-8e7687ec2210"
+          ],
+          "severity": "error",
+          "title": "组件交互参数未完成"
+        },
+        {
+          "category": "physics",
+          "detail": "左 · PS5 6×6 开关.005：请填写有效的弹簧刚度（N/mm）。",
+          "id": "component-50141502-965b-421b-a7b7-8e7687ec2210-stiffness",
+          "partIds": [
+            "50141502-965b-421b-a7b7-8e7687ec2210"
+          ],
+          "severity": "error",
+          "title": "组件交互参数未完成"
+        },
+        {
+          "category": "physics",
+          "detail": "左 · PS5 6×6 开关.005：请填写有效的运动质量（kg）。",
+          "id": "component-50141502-965b-421b-a7b7-8e7687ec2210-mass",
+          "partIds": [
+            "50141502-965b-421b-a7b7-8e7687ec2210"
+          ],
+          "severity": "error",
+          "title": "组件交互参数未完成"
+        },
+        {
+          "category": "physics",
+          "detail": "左 · PS5 6×6 开关.005：请填写有效的阻尼系数（N·s/m）。",
+          "id": "component-50141502-965b-421b-a7b7-8e7687ec2210-damping",
+          "partIds": [
+            "50141502-965b-421b-a7b7-8e7687ec2210"
+          ],
+          "severity": "error",
+          "title": "组件交互参数未完成"
+        },
+        {
+          "category": "physics",
+          "detail": "左 · PS5 6×6 开关.005：请填写有效的最大行程（mm）。",
+          "id": "component-50141502-965b-421b-a7b7-8e7687ec2210-travel",
+          "partIds": [
+            "50141502-965b-421b-a7b7-8e7687ec2210"
+          ],
+          "severity": "error",
+          "title": "组件交互参数未完成"
+        },
+        {
+          "category": "physics",
+          "detail": "左 · PS5 6×6 开关.005：请填写有效的触发行程（mm）。",
+          "id": "component-50141502-965b-421b-a7b7-8e7687ec2210-trigger",
+          "partIds": [
+            "50141502-965b-421b-a7b7-8e7687ec2210"
+          ],
+          "severity": "error",
+          "title": "组件交互参数未完成"
+        },
+        {
+          "category": "physics",
+          "detail": "右 · PS5 6×6 开关.004：当前仅供预览，请填写该类型的全部参数后标记配置完成。",
+          "id": "component-6b46c82f-a1b1-4c93-a079-445668a745b5-status",
+          "partIds": [
+            "6b46c82f-a1b1-4c93-a079-445668a745b5"
+          ],
+          "severity": "error",
+          "title": "组件交互参数未完成"
+        },
+        {
+          "category": "physics",
+          "detail": "右 · PS5 6×6 开关.004：请填写有效的弹簧刚度（N/mm）。",
+          "id": "component-6b46c82f-a1b1-4c93-a079-445668a745b5-stiffness",
+          "partIds": [
+            "6b46c82f-a1b1-4c93-a079-445668a745b5"
+          ],
+          "severity": "error",
+          "title": "组件交互参数未完成"
+        },
+        {
+          "category": "physics",
+          "detail": "右 · PS5 6×6 开关.004：请填写有效的运动质量（kg）。",
+          "id": "component-6b46c82f-a1b1-4c93-a079-445668a745b5-mass",
+          "partIds": [
+            "6b46c82f-a1b1-4c93-a079-445668a745b5"
+          ],
+          "severity": "error",
+          "title": "组件交互参数未完成"
+        },
+        {
+          "category": "physics",
+          "detail": "右 · PS5 6×6 开关.004：请填写有效的阻尼系数（N·s/m）。",
+          "id": "component-6b46c82f-a1b1-4c93-a079-445668a745b5-damping",
+          "partIds": [
+            "6b46c82f-a1b1-4c93-a079-445668a745b5"
+          ],
+          "severity": "error",
+          "title": "组件交互参数未完成"
+        },
+        {
+          "category": "physics",
+          "detail": "右 · PS5 6×6 开关.004：请填写有效的最大行程（mm）。",
+          "id": "component-6b46c82f-a1b1-4c93-a079-445668a745b5-travel",
+          "partIds": [
+            "6b46c82f-a1b1-4c93-a079-445668a745b5"
+          ],
+          "severity": "error",
+          "title": "组件交互参数未完成"
+        },
+        {
+          "category": "physics",
+          "detail": "右 · PS5 6×6 开关.004：请填写有效的触发行程（mm）。",
+          "id": "component-6b46c82f-a1b1-4c93-a079-445668a745b5-trigger",
+          "partIds": [
+            "6b46c82f-a1b1-4c93-a079-445668a745b5"
+          ],
+          "severity": "error",
+          "title": "组件交互参数未完成"
+        },
+        {
+          "category": "physics",
+          "detail": "下 · PS5 6×6 开关.004：当前仅供预览，请填写该类型的全部参数后标记配置完成。",
+          "id": "component-473f4e0a-098c-4148-b81f-90f5c8ce7372-status",
+          "partIds": [
+            "473f4e0a-098c-4148-b81f-90f5c8ce7372"
+          ],
+          "severity": "error",
+          "title": "组件交互参数未完成"
+        },
+        {
+          "category": "physics",
+          "detail": "下 · PS5 6×6 开关.004：请填写有效的弹簧刚度（N/mm）。",
+          "id": "component-473f4e0a-098c-4148-b81f-90f5c8ce7372-stiffness",
+          "partIds": [
+            "473f4e0a-098c-4148-b81f-90f5c8ce7372"
+          ],
+          "severity": "error",
+          "title": "组件交互参数未完成"
+        },
+        {
+          "category": "physics",
+          "detail": "下 · PS5 6×6 开关.004：请填写有效的运动质量（kg）。",
+          "id": "component-473f4e0a-098c-4148-b81f-90f5c8ce7372-mass",
+          "partIds": [
+            "473f4e0a-098c-4148-b81f-90f5c8ce7372"
+          ],
+          "severity": "error",
+          "title": "组件交互参数未完成"
+        },
+        {
+          "category": "physics",
+          "detail": "下 · PS5 6×6 开关.004：请填写有效的阻尼系数（N·s/m）。",
+          "id": "component-473f4e0a-098c-4148-b81f-90f5c8ce7372-damping",
+          "partIds": [
+            "473f4e0a-098c-4148-b81f-90f5c8ce7372"
+          ],
+          "severity": "error",
+          "title": "组件交互参数未完成"
+        },
+        {
+          "category": "physics",
+          "detail": "下 · PS5 6×6 开关.004：请填写有效的最大行程（mm）。",
+          "id": "component-473f4e0a-098c-4148-b81f-90f5c8ce7372-travel",
+          "partIds": [
+            "473f4e0a-098c-4148-b81f-90f5c8ce7372"
+          ],
+          "severity": "error",
+          "title": "组件交互参数未完成"
+        },
+        {
+          "category": "physics",
+          "detail": "下 · PS5 6×6 开关.004：请填写有效的触发行程（mm）。",
+          "id": "component-473f4e0a-098c-4148-b81f-90f5c8ce7372-trigger",
+          "partIds": [
+            "473f4e0a-098c-4148-b81f-90f5c8ce7372"
+          ],
+          "severity": "error",
+          "title": "组件交互参数未完成"
+        },
+        {
+          "category": "physics",
+          "detail": "上 · PS5 6×6 开关.004：当前仅供预览，请填写该类型的全部参数后标记配置完成。",
+          "id": "component-b766bee1-977f-4e53-8c3e-32cf27e57d65-status",
+          "partIds": [
+            "b766bee1-977f-4e53-8c3e-32cf27e57d65"
+          ],
+          "severity": "error",
+          "title": "组件交互参数未完成"
+        },
+        {
+          "category": "physics",
+          "detail": "上 · PS5 6×6 开关.004：请填写有效的弹簧刚度（N/mm）。",
+          "id": "component-b766bee1-977f-4e53-8c3e-32cf27e57d65-stiffness",
+          "partIds": [
+            "b766bee1-977f-4e53-8c3e-32cf27e57d65"
+          ],
+          "severity": "error",
+          "title": "组件交互参数未完成"
+        },
+        {
+          "category": "physics",
+          "detail": "上 · PS5 6×6 开关.004：请填写有效的运动质量（kg）。",
+          "id": "component-b766bee1-977f-4e53-8c3e-32cf27e57d65-mass",
+          "partIds": [
+            "b766bee1-977f-4e53-8c3e-32cf27e57d65"
+          ],
+          "severity": "error",
+          "title": "组件交互参数未完成"
+        },
+        {
+          "category": "physics",
+          "detail": "上 · PS5 6×6 开关.004：请填写有效的阻尼系数（N·s/m）。",
+          "id": "component-b766bee1-977f-4e53-8c3e-32cf27e57d65-damping",
+          "partIds": [
+            "b766bee1-977f-4e53-8c3e-32cf27e57d65"
+          ],
+          "severity": "error",
+          "title": "组件交互参数未完成"
+        },
+        {
+          "category": "physics",
+          "detail": "上 · PS5 6×6 开关.004：请填写有效的最大行程（mm）。",
+          "id": "component-b766bee1-977f-4e53-8c3e-32cf27e57d65-travel",
+          "partIds": [
+            "b766bee1-977f-4e53-8c3e-32cf27e57d65"
+          ],
+          "severity": "error",
+          "title": "组件交互参数未完成"
+        },
+        {
+          "category": "physics",
+          "detail": "上 · PS5 6×6 开关.004：请填写有效的触发行程（mm）。",
+          "id": "component-b766bee1-977f-4e53-8c3e-32cf27e57d65-trigger",
+          "partIds": [
+            "b766bee1-977f-4e53-8c3e-32cf27e57d65"
+          ],
+          "severity": "error",
+          "title": "组件交互参数未完成"
+        },
+        {
+          "category": "physics",
+          "detail": "A · 同款 6×6 开关.002：当前仅供预览，请填写该类型的全部参数后标记配置完成。",
+          "id": "component-89d775c4-c856-4050-8986-00f416a190e2-status",
+          "partIds": [
+            "89d775c4-c856-4050-8986-00f416a190e2"
+          ],
+          "severity": "error",
+          "title": "组件交互参数未完成"
+        },
+        {
+          "category": "physics",
+          "detail": "A · 同款 6×6 开关.002：请填写有效的弹簧刚度（N/mm）。",
+          "id": "component-89d775c4-c856-4050-8986-00f416a190e2-stiffness",
+          "partIds": [
+            "89d775c4-c856-4050-8986-00f416a190e2"
+          ],
+          "severity": "error",
+          "title": "组件交互参数未完成"
+        },
+        {
+          "category": "physics",
+          "detail": "A · 同款 6×6 开关.002：请填写有效的运动质量（kg）。",
+          "id": "component-89d775c4-c856-4050-8986-00f416a190e2-mass",
+          "partIds": [
+            "89d775c4-c856-4050-8986-00f416a190e2"
+          ],
+          "severity": "error",
+          "title": "组件交互参数未完成"
+        },
+        {
+          "category": "physics",
+          "detail": "A · 同款 6×6 开关.002：请填写有效的阻尼系数（N·s/m）。",
+          "id": "component-89d775c4-c856-4050-8986-00f416a190e2-damping",
+          "partIds": [
+            "89d775c4-c856-4050-8986-00f416a190e2"
+          ],
+          "severity": "error",
+          "title": "组件交互参数未完成"
+        },
+        {
+          "category": "physics",
+          "detail": "A · 同款 6×6 开关.002：请填写有效的最大行程（mm）。",
+          "id": "component-89d775c4-c856-4050-8986-00f416a190e2-travel",
+          "partIds": [
+            "89d775c4-c856-4050-8986-00f416a190e2"
+          ],
+          "severity": "error",
+          "title": "组件交互参数未完成"
+        },
+        {
+          "category": "physics",
+          "detail": "A · 同款 6×6 开关.002：请填写有效的触发行程（mm）。",
+          "id": "component-89d775c4-c856-4050-8986-00f416a190e2-trigger",
+          "partIds": [
+            "89d775c4-c856-4050-8986-00f416a190e2"
+          ],
+          "severity": "error",
+          "title": "组件交互参数未完成"
+        },
+        {
+          "category": "physics",
+          "detail": "B · 同款 6×6 开关.002：当前仅供预览，请填写该类型的全部参数后标记配置完成。",
+          "id": "component-b2e93891-d47b-4eb6-b585-be393387b089-status",
+          "partIds": [
+            "b2e93891-d47b-4eb6-b585-be393387b089"
+          ],
+          "severity": "error",
+          "title": "组件交互参数未完成"
+        },
+        {
+          "category": "physics",
+          "detail": "B · 同款 6×6 开关.002：请填写有效的弹簧刚度（N/mm）。",
+          "id": "component-b2e93891-d47b-4eb6-b585-be393387b089-stiffness",
+          "partIds": [
+            "b2e93891-d47b-4eb6-b585-be393387b089"
+          ],
+          "severity": "error",
+          "title": "组件交互参数未完成"
+        },
+        {
+          "category": "physics",
+          "detail": "B · 同款 6×6 开关.002：请填写有效的运动质量（kg）。",
+          "id": "component-b2e93891-d47b-4eb6-b585-be393387b089-mass",
+          "partIds": [
+            "b2e93891-d47b-4eb6-b585-be393387b089"
+          ],
+          "severity": "error",
+          "title": "组件交互参数未完成"
+        },
+        {
+          "category": "physics",
+          "detail": "B · 同款 6×6 开关.002：请填写有效的阻尼系数（N·s/m）。",
+          "id": "component-b2e93891-d47b-4eb6-b585-be393387b089-damping",
+          "partIds": [
+            "b2e93891-d47b-4eb6-b585-be393387b089"
+          ],
+          "severity": "error",
+          "title": "组件交互参数未完成"
+        },
+        {
+          "category": "physics",
+          "detail": "B · 同款 6×6 开关.002：请填写有效的最大行程（mm）。",
+          "id": "component-b2e93891-d47b-4eb6-b585-be393387b089-travel",
+          "partIds": [
+            "b2e93891-d47b-4eb6-b585-be393387b089"
+          ],
+          "severity": "error",
+          "title": "组件交互参数未完成"
+        },
+        {
+          "category": "physics",
+          "detail": "B · 同款 6×6 开关.002：请填写有效的触发行程（mm）。",
+          "id": "component-b2e93891-d47b-4eb6-b585-be393387b089-trigger",
+          "partIds": [
+            "b2e93891-d47b-4eb6-b585-be393387b089"
+          ],
+          "severity": "error",
+          "title": "组件交互参数未完成"
+        },
+        {
+          "category": "physics",
+          "detail": "X · 同款 6×6 开关.002：当前仅供预览，请填写该类型的全部参数后标记配置完成。",
+          "id": "component-8346cfbd-9182-4932-b3f8-7e85aa730e78-status",
+          "partIds": [
+            "8346cfbd-9182-4932-b3f8-7e85aa730e78"
+          ],
+          "severity": "error",
+          "title": "组件交互参数未完成"
+        },
+        {
+          "category": "physics",
+          "detail": "X · 同款 6×6 开关.002：请填写有效的弹簧刚度（N/mm）。",
+          "id": "component-8346cfbd-9182-4932-b3f8-7e85aa730e78-stiffness",
+          "partIds": [
+            "8346cfbd-9182-4932-b3f8-7e85aa730e78"
+          ],
+          "severity": "error",
+          "title": "组件交互参数未完成"
+        },
+        {
+          "category": "physics",
+          "detail": "X · 同款 6×6 开关.002：请填写有效的运动质量（kg）。",
+          "id": "component-8346cfbd-9182-4932-b3f8-7e85aa730e78-mass",
+          "partIds": [
+            "8346cfbd-9182-4932-b3f8-7e85aa730e78"
+          ],
+          "severity": "error",
+          "title": "组件交互参数未完成"
+        },
+        {
+          "category": "physics",
+          "detail": "X · 同款 6×6 开关.002：请填写有效的阻尼系数（N·s/m）。",
+          "id": "component-8346cfbd-9182-4932-b3f8-7e85aa730e78-damping",
+          "partIds": [
+            "8346cfbd-9182-4932-b3f8-7e85aa730e78"
+          ],
+          "severity": "error",
+          "title": "组件交互参数未完成"
+        },
+        {
+          "category": "physics",
+          "detail": "X · 同款 6×6 开关.002：请填写有效的最大行程（mm）。",
+          "id": "component-8346cfbd-9182-4932-b3f8-7e85aa730e78-travel",
+          "partIds": [
+            "8346cfbd-9182-4932-b3f8-7e85aa730e78"
+          ],
+          "severity": "error",
+          "title": "组件交互参数未完成"
+        },
+        {
+          "category": "physics",
+          "detail": "X · 同款 6×6 开关.002：请填写有效的触发行程（mm）。",
+          "id": "component-8346cfbd-9182-4932-b3f8-7e85aa730e78-trigger",
+          "partIds": [
+            "8346cfbd-9182-4932-b3f8-7e85aa730e78"
+          ],
+          "severity": "error",
+          "title": "组件交互参数未完成"
+        },
+        {
+          "category": "physics",
+          "detail": "Y · 同款 6×6 开关.002：当前仅供预览，请填写该类型的全部参数后标记配置完成。",
+          "id": "component-68a6f74a-4ef4-4cec-a0fe-edf028be519d-status",
+          "partIds": [
+            "68a6f74a-4ef4-4cec-a0fe-edf028be519d"
+          ],
+          "severity": "error",
+          "title": "组件交互参数未完成"
+        },
+        {
+          "category": "physics",
+          "detail": "Y · 同款 6×6 开关.002：请填写有效的弹簧刚度（N/mm）。",
+          "id": "component-68a6f74a-4ef4-4cec-a0fe-edf028be519d-stiffness",
+          "partIds": [
+            "68a6f74a-4ef4-4cec-a0fe-edf028be519d"
+          ],
+          "severity": "error",
+          "title": "组件交互参数未完成"
+        },
+        {
+          "category": "physics",
+          "detail": "Y · 同款 6×6 开关.002：请填写有效的运动质量（kg）。",
+          "id": "component-68a6f74a-4ef4-4cec-a0fe-edf028be519d-mass",
+          "partIds": [
+            "68a6f74a-4ef4-4cec-a0fe-edf028be519d"
+          ],
+          "severity": "error",
+          "title": "组件交互参数未完成"
+        },
+        {
+          "category": "physics",
+          "detail": "Y · 同款 6×6 开关.002：请填写有效的阻尼系数（N·s/m）。",
+          "id": "component-68a6f74a-4ef4-4cec-a0fe-edf028be519d-damping",
+          "partIds": [
+            "68a6f74a-4ef4-4cec-a0fe-edf028be519d"
+          ],
+          "severity": "error",
+          "title": "组件交互参数未完成"
+        },
+        {
+          "category": "physics",
+          "detail": "Y · 同款 6×6 开关.002：请填写有效的最大行程（mm）。",
+          "id": "component-68a6f74a-4ef4-4cec-a0fe-edf028be519d-travel",
+          "partIds": [
+            "68a6f74a-4ef4-4cec-a0fe-edf028be519d"
+          ],
+          "severity": "error",
+          "title": "组件交互参数未完成"
+        },
+        {
+          "category": "physics",
+          "detail": "Y · 同款 6×6 开关.002：请填写有效的触发行程（mm）。",
+          "id": "component-68a6f74a-4ef4-4cec-a0fe-edf028be519d-trigger",
+          "partIds": [
+            "68a6f74a-4ef4-4cec-a0fe-edf028be519d"
+          ],
+          "severity": "error",
+          "title": "组件交互参数未完成"
+        },
+        {
+          "category": "physics",
+          "detail": "确认 · 常开开关.005：当前仅供预览，请填写该类型的全部参数后标记配置完成。",
+          "id": "component-9e5e62cb-bbf4-42c1-8e84-fa481eb7596d-status",
+          "partIds": [
+            "9e5e62cb-bbf4-42c1-8e84-fa481eb7596d"
+          ],
+          "severity": "error",
+          "title": "组件交互参数未完成"
+        },
+        {
+          "category": "physics",
+          "detail": "确认 · 常开开关.005：请填写有效的弹簧刚度（N/mm）。",
+          "id": "component-9e5e62cb-bbf4-42c1-8e84-fa481eb7596d-stiffness",
+          "partIds": [
+            "9e5e62cb-bbf4-42c1-8e84-fa481eb7596d"
+          ],
+          "severity": "error",
+          "title": "组件交互参数未完成"
+        },
+        {
+          "category": "physics",
+          "detail": "确认 · 常开开关.005：请填写有效的运动质量（kg）。",
+          "id": "component-9e5e62cb-bbf4-42c1-8e84-fa481eb7596d-mass",
+          "partIds": [
+            "9e5e62cb-bbf4-42c1-8e84-fa481eb7596d"
+          ],
+          "severity": "error",
+          "title": "组件交互参数未完成"
+        },
+        {
+          "category": "physics",
+          "detail": "确认 · 常开开关.005：请填写有效的阻尼系数（N·s/m）。",
+          "id": "component-9e5e62cb-bbf4-42c1-8e84-fa481eb7596d-damping",
+          "partIds": [
+            "9e5e62cb-bbf4-42c1-8e84-fa481eb7596d"
+          ],
+          "severity": "error",
+          "title": "组件交互参数未完成"
+        },
+        {
+          "category": "physics",
+          "detail": "确认 · 常开开关.005：请填写有效的最大行程（mm）。",
+          "id": "component-9e5e62cb-bbf4-42c1-8e84-fa481eb7596d-travel",
+          "partIds": [
+            "9e5e62cb-bbf4-42c1-8e84-fa481eb7596d"
+          ],
+          "severity": "error",
+          "title": "组件交互参数未完成"
+        },
+        {
+          "category": "physics",
+          "detail": "确认 · 常开开关.005：请填写有效的触发行程（mm）。",
+          "id": "component-9e5e62cb-bbf4-42c1-8e84-fa481eb7596d-trigger",
+          "partIds": [
+            "9e5e62cb-bbf4-42c1-8e84-fa481eb7596d"
+          ],
+          "severity": "error",
+          "title": "组件交互参数未完成"
+        }
+      ],
+      "poweredLampIds": [],
+      "shortCircuit": false,
+      "voltage": 0
+    },
+    "contacts": {},
+    "samples": {
+      "errors": [
+        {
+          "category": "physics",
+          "detail": "左 · PS5 6×6 开关.005：当前仅供预览，请填写该类型的全部参数后标记配置完成。",
+          "id": "component-50141502-965b-421b-a7b7-8e7687ec2210-status",
+          "partIds": [
+            "50141502-965b-421b-a7b7-8e7687ec2210"
+          ],
+          "severity": "error",
+          "title": "组件交互参数未完成"
+        },
+        {
+          "category": "physics",
+          "detail": "左 · PS5 6×6 开关.005：请填写有效的弹簧刚度（N/mm）。",
+          "id": "component-50141502-965b-421b-a7b7-8e7687ec2210-stiffness",
+          "partIds": [
+            "50141502-965b-421b-a7b7-8e7687ec2210"
+          ],
+          "severity": "error",
+          "title": "组件交互参数未完成"
+        },
+        {
+          "category": "physics",
+          "detail": "左 · PS5 6×6 开关.005：请填写有效的运动质量（kg）。",
+          "id": "component-50141502-965b-421b-a7b7-8e7687ec2210-mass",
+          "partIds": [
+            "50141502-965b-421b-a7b7-8e7687ec2210"
+          ],
+          "severity": "error",
+          "title": "组件交互参数未完成"
+        },
+        {
+          "category": "physics",
+          "detail": "左 · PS5 6×6 开关.005：请填写有效的阻尼系数（N·s/m）。",
+          "id": "component-50141502-965b-421b-a7b7-8e7687ec2210-damping",
+          "partIds": [
+            "50141502-965b-421b-a7b7-8e7687ec2210"
+          ],
+          "severity": "error",
+          "title": "组件交互参数未完成"
+        },
+        {
+          "category": "physics",
+          "detail": "左 · PS5 6×6 开关.005：请填写有效的最大行程（mm）。",
+          "id": "component-50141502-965b-421b-a7b7-8e7687ec2210-travel",
+          "partIds": [
+            "50141502-965b-421b-a7b7-8e7687ec2210"
+          ],
+          "severity": "error",
+          "title": "组件交互参数未完成"
+        },
+        {
+          "category": "physics",
+          "detail": "左 · PS5 6×6 开关.005：请填写有效的触发行程（mm）。",
+          "id": "component-50141502-965b-421b-a7b7-8e7687ec2210-trigger",
+          "partIds": [
+            "50141502-965b-421b-a7b7-8e7687ec2210"
+          ],
+          "severity": "error",
+          "title": "组件交互参数未完成"
+        },
+        {
+          "category": "physics",
+          "detail": "左 · PS5 一体式键帽与蓝色插销.003：当前仅供预览，请填写该类型的全部参数后标记配置完成。",
+          "id": "component-2862442c-419a-4509-bafb-10b5b807ba41-status",
+          "partIds": [
+            "2862442c-419a-4509-bafb-10b5b807ba41"
+          ],
+          "severity": "error",
+          "title": "组件交互参数未完成"
+        },
+        {
+          "category": "physics",
+          "detail": "左 · PS5 一体式键帽与蓝色插销.003：请填写配合族，只与同族的公母组件配对。",
+          "id": "component-2862442c-419a-4509-bafb-10b5b807ba41-family",
+          "partIds": [
+            "2862442c-419a-4509-bafb-10b5b807ba41"
+          ],
+          "severity": "error",
+          "title": "组件交互参数未完成"
+        },
+        {
+          "category": "physics",
+          "detail": "左 · PS5 一体式键帽与蓝色插销.003：请填写有效的尺寸公差 ±（mm）。",
+          "id": "component-2862442c-419a-4509-bafb-10b5b807ba41-tolerance",
+          "partIds": [
+            "2862442c-419a-4509-bafb-10b5b807ba41"
+          ],
+          "severity": "error",
+          "title": "组件交互参数未完成"
+        },
+        {
+          "category": "physics",
+          "detail": "左 · PS5 一体式键帽与蓝色插销.003：请填写有效的允许插入深度（mm）。",
+          "id": "component-2862442c-419a-4509-bafb-10b5b807ba41-insertionDepth",
+          "partIds": [
+            "2862442c-419a-4509-bafb-10b5b807ba41"
+          ],
+          "severity": "error",
+          "title": "组件交互参数未完成"
+        },
+        {
+          "category": "physics",
+          "detail": "左 · PS5 一体式键帽与蓝色插销.003：请填写有效的要求的最小单侧余隙（mm）。",
+          "id": "component-2862442c-419a-4509-bafb-10b5b807ba41-minClearance",
+          "partIds": [
+            "2862442c-419a-4509-bafb-10b5b807ba41"
+          ],
+          "severity": "error",
+          "title": "组件交互参数未完成"
+        },
+        {
+          "category": "physics",
+          "detail": "左 · PS5 一体式键帽与蓝色插销.003：请填写有效的插销直径（mm）。",
+          "id": "component-2862442c-419a-4509-bafb-10b5b807ba41-pinDiameter",
+          "partIds": [
+            "2862442c-419a-4509-bafb-10b5b807ba41"
+          ],
+          "severity": "error",
+          "title": "组件交互参数未完成"
+        }
+      ],
+      "warnings": [
+        {
+          "category": "geometry",
+          "detail": "当前模型仅供预览与外观包围盒预检；代理参数完成前，不据此确认实体接触或配合。",
+          "id": "component-proxy-50141502-965b-421b-a7b7-8e7687ec2210",
+          "partIds": [
+            "50141502-965b-421b-a7b7-8e7687ec2210"
+          ],
+          "severity": "warning",
+          "title": "功能代理待标定"
+        },
+        {
+          "category": "geometry",
+          "detail": "当前模型仅供预览与外观包围盒预检；代理参数完成前，不据此确认实体接触或配合。",
+          "id": "component-proxy-2862442c-419a-4509-bafb-10b5b807ba41",
+          "partIds": [
+            "2862442c-419a-4509-bafb-10b5b807ba41"
+          ],
+          "severity": "warning",
+          "title": "功能代理待标定"
+        },
+        {
+          "category": "geometry",
+          "detail": "当前模型仅供预览与外观包围盒预检；代理参数完成前，不据此确认实体接触或配合。",
+          "id": "component-proxy-97e97021-a61c-4bb8-91aa-cacb07e9626e",
+          "partIds": [
+            "97e97021-a61c-4bb8-91aa-cacb07e9626e"
+          ],
+          "severity": "warning",
+          "title": "功能代理待标定"
+        },
+        {
+          "category": "geometry",
+          "detail": "当前模型仅供预览与外观包围盒预检；代理参数完成前，不据此确认实体接触或配合。",
+          "id": "component-proxy-a003e38b-e08f-40b1-b927-6c8f0698c019",
+          "partIds": [
+            "a003e38b-e08f-40b1-b927-6c8f0698c019"
+          ],
+          "severity": "warning",
+          "title": "功能代理待标定"
+        },
+        {
+          "category": "geometry",
+          "detail": "当前模型仅供预览与外观包围盒预检；代理参数完成前，不据此确认实体接触或配合。",
+          "id": "component-proxy-6b46c82f-a1b1-4c93-a079-445668a745b5",
+          "partIds": [
+            "6b46c82f-a1b1-4c93-a079-445668a745b5"
+          ],
+          "severity": "warning",
+          "title": "功能代理待标定"
+        },
+        {
+          "category": "geometry",
+          "detail": "当前模型仅供预览与外观包围盒预检；代理参数完成前，不据此确认实体接触或配合。",
+          "id": "component-proxy-3b68e366-fe46-4d5d-8033-6306c9d787a3",
+          "partIds": [
+            "3b68e366-fe46-4d5d-8033-6306c9d787a3"
+          ],
+          "severity": "warning",
+          "title": "功能代理待标定"
+        }
+      ]
+    }
+  }
+}

@@ -1,6 +1,6 @@
 {
   "name": "mechanical-simulation",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "private": true,
   "type": "module",
   "description": "Mechanical assembly and verification workbench",
@@ -21,7 +21,10 @@
     "release:mac:smoke": "node scripts/smoke-macos.mjs",
     "tauri": "tauri",
     "native:check": "cargo check --manifest-path src-tauri/Cargo.toml",
-    "mcp:test-protocol": "node scripts/test-mcp-protocol.mjs"
+    "mcp:test-protocol": "node scripts/test-mcp-protocol.mjs",
+    "mcp:drive-puretv": "node scripts/drive-puretv.mjs",
+    "verify:puretv-evidence": "vite-node --script scripts/build-puretv-evidence.ts --audit docs/puretv-geometry-assembly.json --audit docs/puretv-geometry-internals-after.json --audit docs/puretv-geometry-locks.json --audit docs/puretv-display-consistency.json --require-pass --check",
+    "verify:puretv-calibration": "node scripts/verify-puretv-calibration.mjs"
   },
   "dependencies": {
     "@tauri-apps/api": "^2.9.0",
@@ -34,6 +37,7 @@
     "@modelcontextprotocol/sdk": "^1.32.2",
     "@playwright/test": "^1.52.0",
     "@tauri-apps/cli": "^2.9.0",
+    "@types/node": "^22.20.5",
     "@types/react": "^19.1.0",
     "@types/react-dom": "^19.1.0",
     "@types/three": "^0.180.0",

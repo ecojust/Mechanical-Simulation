@@ -575,7 +575,8 @@ function fitIssues(parts: Part[]): {
   return { issues, clearance };
 }
 
-export function validateAssembly(parts: Part[]): Validation {
+/** A motion endpoint needs the moved part's checks, not every unrelated pair's report. */
+function validateAssemblyScope(parts: Part[], focusPartId?: string): Validation {
   const issues: Issue[] = [],
     collisionPairs: [string, string][] = [];
   const componentIssues = new Map(
@@ -595,6 +596,7 @@ export function validateAssembly(parts: Part[]): Validation {
     .filter((p) => !invalid(p) && !unconfigured.has(p.id))
     .map(functionalPart);
   for (const original of parts) {
+    if (focusPartId && original.id !== focusPartId) continue;
     issues.push(...componentIssues.get(original.id)!);
     if (unconfigured.has(original.id)) continue;
     const p = functionalPart(original);
@@ -722,6 +724,7 @@ export function validateAssembly(parts: Part[]): Validation {
     for (let j = i + 1; j < previewable.length; j++) {
       const a = previewable[i],
         b = previewable[j];
+      if (focusPartId && a.id !== focusPartId && b.id !== focusPartId) continue;
       if (!(unconfigured.has(a.id) || unconfigured.has(b.id))) continue;
       if (separatingGap(box(a), box(b)) < -EPS)
         issues.push(
@@ -739,6 +742,7 @@ export function validateAssembly(parts: Part[]): Validation {
     for (let j = i + 1; j < valid.length; j++) {
       const a = valid[i],
         b = valid[j];
+      if (focusPartId && a.id !== focusPartId && b.id !== focusPartId) continue;
       if (a.kind === "asset" || b.kind === "asset") {
         if (separatingGap(box(a), box(b)) < -EPS)
           issues.push(
@@ -787,6 +791,10 @@ export function validateAssembly(parts: Part[]): Validation {
       ),
     );
   return { issues, collisionPairs, minClearance: fit.clearance };
+}
+
+export function validateAssembly(parts: Part[]): Validation {
+  return validateAssemblyScope(parts);
 }
 
 /** Samples the full edit path at <=0.25 mm maximum vertex travel; this is not continuous CCD. */
@@ -862,11 +870,14 @@ export function validateMotion(
       ],
     };
   const others = parts.filter((p) => p.id !== id && !invalid(p));
-  const othersSolids = new Map(others.map((p) => [p.id, solids(p)]));
+  const othersSolids = new Map(others.map((p) => [p.id,
+    p.kind === "asset" || p.kind === "spring" ? [] : solids(p),
+  ]));
+  const currentSolids = solids(current);
   const initialCollisions = new Set(
     others
       .filter((p) =>
-        collision(current, p, solids(current), othersSolids.get(p.id)!),
+        collision(current, p, currentSolids, othersSolids.get(p.id)!),
       )
       .map((p) => p.id),
   );
@@ -928,7 +939,7 @@ export function validateMotion(
         };
     }
   }
-  const final = validateAssembly(parts.map((p) => (p.id === id ? next : p)));
+  const final = validateAssemblyScope(parts.map((p) => (p.id === id ? next : p)), id);
   const blocking = final.issues.filter(
     (i) => i.severity === "error" && i.partIds.includes(id),
   );

@@ -20,6 +20,11 @@ import {
 } from "../componentRegistry";
 import { createRepositoryParts } from "../repository";
 import {
+  validateEvidenceState,
+  type AssemblyEvidenceResult,
+} from "../assemblyEvidence";
+import { withSourceEvidence } from "../projectEvidence";
+import {
   validateMechanismUpdate,
   validateMechanismProject,
   moveMechanism,
@@ -40,6 +45,7 @@ export interface WorkbenchContext {
   assets: AssetEntry[];
   runtime?: Record<string, unknown>;
   mechanismStates?: MechanismStates;
+  sourceEvidence?: AssemblyEvidenceResult | null;
 }
 export interface WorkbenchOutcome {
   result: Record<string, unknown>;
@@ -221,6 +227,25 @@ export async function dispatchWorkbenchCommand(
     return part;
   };
   switch (request.method) {
+    case "new_project": {
+      const next = safeProject({
+        version: 1,
+        name: args.name === undefined ? "未命名装配" : (args.name as string),
+        parts: [],
+        wires: [],
+      });
+      return result({ project: withoutBytes(next) }, next);
+    }
+    case "import_project": {
+      const next = parseProject(JSON.stringify(args.project));
+      return result(
+        {
+          project: withoutBytes(next),
+          issues: validateMechanismProject(next).issues,
+        },
+        next,
+      );
+    }
     case "list_component_types":
       return result({ types: getComponentTypeSchemas() });
     case "list_components":
@@ -413,6 +438,11 @@ export async function dispatchWorkbenchCommand(
           throw Error("fixed必须为boolean。");
         nextPart.fixed = args.fixed;
       }
+      if (args.visible !== undefined) {
+        if (typeof args.visible !== "boolean")
+          throw Error("visible必须为boolean。");
+        nextPart.visible = args.visible;
+      }
       if (args.material !== undefined)
         nextPart.material = validatePartMaterial(args.material);
       if (args.color !== undefined) {
@@ -576,13 +606,20 @@ export async function dispatchWorkbenchCommand(
         circuit = solveCircuit(scene.circuitParts, project.wires, [
           ...new Set([...scene.pressedIds, ...(pressed as string[])]),
         ]);
+      const sourceEvidence = context.sourceEvidence
+        ? validateEvidenceState(context.sourceEvidence, context.mechanismStates)
+        : null;
       return result({
         geometry,
         circuit,
         mechanismStates: context.mechanismStates ?? {},
         contacts: scene.contacts,
-        issues: [...geometry.issues, ...circuit.issues],
-        scope: "参数化/用户代理几何和名义物理参数；不等于网格或制造认证。",
+        sourceEvidence,
+        issues: withSourceEvidence(
+          [...geometry.issues, ...circuit.issues],
+          sourceEvidence,
+        ),
+        scope: `${sourceEvidence ? `${sourceEvidence.scope}；` : ""}运行时参数代理/名义物理参数检查；不等于任意网格或制造认证。`,
       });
     }
     case "configure_mechanism": {
@@ -669,6 +706,18 @@ export async function dispatchWorkbenchCommand(
       );
       if (!mechanism || mechanism.kind !== "press")
         throw Error("请选择按压功能组件。");
+      if (
+        context.sourceEvidence?.matched &&
+        context.sourceEvidence.status === "fail"
+      )
+        throw Error(
+          `源几何验证已确认不通过，禁止继续按压：${
+            context.sourceEvidence.issues
+              .filter((issue) => issue.severity === "error")
+              .map((issue) => issue.detail)
+              .join("；") || context.sourceEvidence.scope
+          }`,
+        );
       const held = args.held as boolean,
         duration = args.duration as number;
       let states = structuredClone(context.mechanismStates ?? {});
@@ -695,6 +744,9 @@ export async function dispatchWorkbenchCommand(
         issues = next.issues;
       }
       const scene = mechanismScene(project, states);
+      const sourceEvidence = context.sourceEvidence
+        ? validateEvidenceState(context.sourceEvidence, states)
+        : null;
       return {
         mechanismStates: states,
         actuation: { mechanismId: mechanism.id, held },
@@ -710,12 +762,16 @@ export async function dispatchWorkbenchCommand(
           ),
           pressedIds: scene.pressedIds,
           contacts: scene.contacts,
+          sourceEvidence,
           circuit: solveCircuit(
             scene.circuitParts,
             project.wires,
             scene.pressedIds,
           ),
-          issues: [...scene.issues, ...issues],
+          issues: withSourceEvidence(
+            [...scene.issues, ...issues],
+            sourceEvidence,
+          ),
         },
       };
     }

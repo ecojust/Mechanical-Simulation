@@ -1,0 +1,236 @@
+{
+  "version": 1,
+  "applied": true,
+  "nominalDiameterMm": 2.85,
+  "nominalHoleDiameterMm": 3.46362,
+  "nominalRadialClearanceMm": 0.30681,
+  "diametralTolerancePerPartMm": 0.1,
+  "worstCaseNominalRadialClearanceMm": 0.20681,
+  "specification": "Nominal round-plunger 6x6/H4.3 switch, D2.85 mm, original 1.30 mm visible height and 0.25 mm allowed travel; procurement must match. Force and rated travel are assumed, not source-mesh measurements.",
+  "buttons": [
+    {
+      "key": "left",
+      "sourceFile": "buttons/left.blend",
+      "beforeSha256": "448dac9cfe24bfd23165a2d78c49e547e48ff15d9e930815291187ce00bd5a7c",
+      "intermediateD330Sha256": "1983362f2e6ee7f0bd18a7b16389c70356f29050e66e46e02fe6399469279182",
+      "afterSha256": "3101d6492dd00cbd2be772090602374be193f264de2eb092fc5eb76f4e9015fc",
+      "actuatorName": "左 · PS5 按杆.005",
+      "oldSourceMin": [
+        -52.95000457763672,
+        20.249996185302734,
+        23.94310760498047
+      ],
+      "oldSourceMax": [
+        -49.44999694824219,
+        23.750003814697266,
+        25.24311065673828
+      ],
+      "centerSourceXY": [
+        -51.20000076293945,
+        22.0
+      ],
+      "bottomSourceZ": 23.94310760498047,
+      "topSourceZ": 25.24311065673828,
+      "newDiameterMm": 2.85,
+      "segments": 128,
+      "boundaryEdges": 0,
+      "nonManifoldEdges": 0
+    },
+    {
+      "key": "right",
+      "sourceFile": "buttons/right.blend",
+      "beforeSha256": "24175396fa942e46a4640f711883447d84d17026146b24a5fbc35cc6f258c0a4",
+      "intermediateD330Sha256": "9be620042f1b646b5de1e61bb27dc74f70e9b424a10fd267577a740c255a7a6a",
+      "afterSha256": "84e6de6ba5b1e17301acd0cc4f404cc74fb45bf02185f13d17a1240ae1311144",
+      "actuatorName": "右 · PS5 按杆.004",
+      "oldSourceMin": [
+        -34.55000305175781,
+        20.249996185302734,
+        21.54767608642578
+      ],
+      "oldSourceMax": [
+        -31.04999351501465,
+        23.7500057220459,
+        22.847679138183594
+      ],
+      "centerSourceXY": [
+        -32.799997329711914,
+        22.000000953674316
+      ],
+      "bottomSourceZ": 21.54767608642578,
+      "topSourceZ": 22.847679138183594,
+      "newDiameterMm": 2.85,
+      "segments": 128,
+      "boundaryEdges": 0,
+      "nonManifoldEdges": 0
+    },
+    {
+      "key": "down",
+      "sourceFile": "buttons/down.blend",
+      "beforeSha256": "d4522c45614e5b99a56b5b304e0339f33155916a26dc53c26a827ed445c82d3d",
+      "intermediateD330Sha256": "3270a3872bb7774c3d47c3350bdda7c80934518ccce261f304921f958d09b6a5",
+      "afterSha256": "ee9f528457ae365735ba772f891ee3de180854abbd1afdd155862fed2de22c47",
+      "actuatorName": "下 · PS5 按杆.004",
+      "oldSourceMin": [
+        -43.750003814697266,
+        11.049997329711914,
+        23.708995819091797
+      ],
+      "oldSourceMax": [
+        -40.249996185302734,
+        14.550006866455078,
+        25.00899887084961
+      ],
+      "centerSourceXY": [
+        -42.0,
+        12.800002098083496
+      ],
+      "bottomSourceZ": 23.708995819091797,
+      "topSourceZ": 25.00899887084961,
+      "newDiameterMm": 2.85,
+      "segments": 128,
+      "boundaryEdges": 0,
+      "nonManifoldEdges": 0
+    },
+    {
+      "key": "up",
+      "sourceFile": "buttons/up.blend",
+      "beforeSha256": "57f33d4303ffa13458e57ce3c828b0fc9ac57a928912890ae902d2404e090e82",
+      "intermediateD330Sha256": "c2de8f8937f884dd11e7126af3da3b99c785151445fd209f1738ef69b9714e9f",
+      "afterSha256": "8ecd5118238b99caffe3ad7b58998e6b07ddd6be4eff21f70a85a8d08822b909",
+      "actuatorName": "上 · PS5 按杆.004",
+      "oldSourceMin": [
+        -43.750003814697266,
+        29.449995040893555,
+        20.31963348388672
+      ],
+      "oldSourceMax": [
+        -40.249996185302734,
+        32.95000457763672,
+        21.61963653564453
+      ],
+      "centerSourceXY": [
+        -42.0,
+        31.19999885559082
+      ],
+      "bottomSourceZ": 20.31963348388672,
+      "topSourceZ": 21.61963653564453,
+      "newDiameterMm": 2.85,
+      "segments": 128,
+      "boundaryEdges": 0,
+      "nonManifoldEdges": 0
+    },
+    {
+      "key": "a",
+      "sourceFile": "buttons/a.blend",
+      "beforeSha256": "725da7ab7d58aef776fd870f45cda2bc399eef677c2112a3aeb3546a98500627",
+      "intermediateD330Sha256": "50c04a0561a39c4e9e0a8262388b71bef1159d0b90d51911abfc3bdc376d5893",
+      "afterSha256": "5e50ca2bc37b022d2a8fb85c983a08d3c66100d3705d23d3e9467316516b4508",
+      "actuatorName": "A · 同款 按杆.002",
+      "oldSourceMin": [
+        39.24999237060547,
+        7.749996185302734,
+        26.49310874938965
+      ],
+      "oldSourceMax": [
+        42.75,
+        11.250003814697266,
+        27.79311180114746
+      ],
+      "centerSourceXY": [
+        40.999996185302734,
+        9.5
+      ],
+      "bottomSourceZ": 26.49310874938965,
+      "topSourceZ": 27.79311180114746,
+      "newDiameterMm": 2.85,
+      "segments": 128,
+      "boundaryEdges": 0,
+      "nonManifoldEdges": 0
+    },
+    {
+      "key": "b",
+      "sourceFile": "buttons/b.blend",
+      "beforeSha256": "919434b12efd1179c2952ed530e3a779c890cf97600f05354483f2360ae4422c",
+      "intermediateD330Sha256": "d909c339d7fa9f5de4d60fcaa2be7b863729ba29268d363d8d207d967b37ee18",
+      "afterSha256": "ec5cbb6447b4a2025d85edae8fb7cd11f97d9c6e2ca4a1a7b93001bef20d083d",
+      "actuatorName": "B · 同款 按杆.002",
+      "oldSourceMin": [
+        50.74999237060547,
+        19.249996185302734,
+        26.49310874938965
+      ],
+      "oldSourceMax": [
+        54.25,
+        22.750003814697266,
+        27.79311180114746
+      ],
+      "centerSourceXY": [
+        52.499996185302734,
+        21.0
+      ],
+      "bottomSourceZ": 26.49310874938965,
+      "topSourceZ": 27.79311180114746,
+      "newDiameterMm": 2.85,
+      "segments": 128,
+      "boundaryEdges": 0,
+      "nonManifoldEdges": 0
+    },
+    {
+      "key": "x",
+      "sourceFile": "buttons/x.blend",
+      "beforeSha256": "b39325cffa78c53da65aa8137887947a7926d10ea260973b4bead00a0605e375",
+      "intermediateD330Sha256": "e9733a2d4847bade28af1a398df4c67578b50b4a82c7c62bcc05d221e68cfcc5",
+      "afterSha256": "93c1bc7e9ee279a2f1f3f44808639889c6816e210e6bea1f0b304585b4343cbb",
+      "actuatorName": "X · 同款 按杆.002",
+      "oldSourceMin": [
+        27.74999237060547,
+        19.249996185302734,
+        26.49310874938965
+      ],
+      "oldSourceMax": [
+        31.25,
+        22.750003814697266,
+        27.79311180114746
+      ],
+      "centerSourceXY": [
+        29.499996185302734,
+        21.0
+      ],
+      "bottomSourceZ": 26.49310874938965,
+      "topSourceZ": 27.79311180114746,
+      "newDiameterMm": 2.85,
+      "segments": 128,
+      "boundaryEdges": 0,
+      "nonManifoldEdges": 0
+    },
+    {
+      "key": "y",
+      "sourceFile": "buttons/y.blend",
+      "beforeSha256": "6ba390d388f641bfdb42f0ab01c5a0ebfa8851b7408de5995b26f48915d890c9",
+      "intermediateD330Sha256": "a328d9ebef7bf1f47dcda26eef98bf1f7c94070b92e5a2aa8660e934793ae65c",
+      "afterSha256": "16333679918ad7bbd8bbedf74becb50889a95044192ee0a2dcb456a61e85ee01",
+      "actuatorName": "Y · 同款 按杆.002",
+      "oldSourceMin": [
+        39.24999237060547,
+        30.749996185302734,
+        26.49310874938965
+      ],
+      "oldSourceMax": [
+        42.75,
+        34.250003814697266,
+        27.79311180114746
+      ],
+      "centerSourceXY": [
+        40.999996185302734,
+        32.500000953674316
+      ],
+      "bottomSourceZ": 26.49310874938965,
+      "topSourceZ": 27.79311180114746,
+      "newDiameterMm": 2.85,
+      "segments": 128,
+      "boundaryEdges": 0,
+      "nonManifoldEdges": 0
+    }
+  ]
+}

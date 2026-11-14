@@ -1,0 +1,1056 @@
+{
+  "schemaVersion": 1,
+  "sourceFile": "assets/puretv-controller/electronics/harness.blend",
+  "blenderVersion": "5.2.2 LTS",
+  "applied": true,
+  "beforeSha256": "dd1bad29b6697aaa51c6cef62e17597b46dc2d717cfc394146f3d1458e7a4e48",
+  "afterSha256": "1a67334af389d8787c23999a0547f60f0470df4dab692e2341eb16c2b1327df0",
+  "method": "Evaluate original curves, weld only coincident boundary-ring vertices (1e-6 mm), fill only remaining planar endpoint loops, orient closed faces; do not move route/diameter/assembly vertices.",
+  "scope": "Topological endpoint closure only; full assembly intersections and electrical interfaces require separate source-mesh audit.",
+  "objects": [
+    {
+      "sourceName": "A · 中央走线 GND.002",
+      "beforeType": "CURVE",
+      "afterType": "MESH",
+      "before": {
+        "vertices": 104,
+        "edges": 194,
+        "faces": 92,
+        "boundaryEdges": 32,
+        "nonManifoldEdges": 32,
+        "components": 3
+      },
+      "after": {
+        "vertices": 88,
+        "edges": 178,
+        "faces": 92,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "components": 1
+      },
+      "filledEndFaces": 0,
+      "weldedBoundaryVertices": 16,
+      "remainingOpeningsAfterWeld": [],
+      "maximumBidirectionalOriginalVertexDistanceMm": 0.0,
+      "maximumWorldBoundsChangeMm": 0.0,
+      "worldBoundsBefore": {
+        "min": [
+          11.72921371459961,
+          10.818948745727539,
+          14.924708366394043
+        ],
+        "max": [
+          40.33881378173828,
+          22.27197265625,
+          22.400001525878906
+        ]
+      },
+      "worldBoundsAfter": {
+        "min": [
+          11.72921371459961,
+          10.818948745727539,
+          14.924708366394043
+        ],
+        "max": [
+          40.33881378173828,
+          22.27197265625,
+          22.400001525878906
+        ]
+      },
+      "closedVolumeMm3": 9.665653913890123
+    },
+    {
+      "sourceName": "A · 中央走线 GPIO.002",
+      "beforeType": "CURVE",
+      "afterType": "MESH",
+      "before": {
+        "vertices": 136,
+        "edges": 258,
+        "faces": 124,
+        "boundaryEdges": 32,
+        "nonManifoldEdges": 32,
+        "components": 3
+      },
+      "after": {
+        "vertices": 120,
+        "edges": 242,
+        "faces": 124,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "components": 1
+      },
+      "filledEndFaces": 0,
+      "weldedBoundaryVertices": 16,
+      "remainingOpeningsAfterWeld": [],
+      "maximumBidirectionalOriginalVertexDistanceMm": 0.0,
+      "maximumWorldBoundsChangeMm": 0.0,
+      "worldBoundsBefore": {
+        "min": [
+          -11.51990032196045,
+          10.818947792053223,
+          14.970338821411133
+        ],
+        "max": [
+          43.45174789428711,
+          19.979900360107422,
+          21.032489776611328
+        ]
+      },
+      "worldBoundsAfter": {
+        "min": [
+          -11.51990032196045,
+          10.818947792053223,
+          14.970338821411133
+        ],
+        "max": [
+          43.45174789428711,
+          19.979900360107422,
+          21.032489776611328
+        ]
+      },
+      "closedVolumeMm3": 14.554109814186857
+    },
+    {
+      "sourceName": "B · 中央走线 GND.002",
+      "beforeType": "CURVE",
+      "afterType": "MESH",
+      "before": {
+        "vertices": 136,
+        "edges": 258,
+        "faces": 124,
+        "boundaryEdges": 32,
+        "nonManifoldEdges": 32,
+        "components": 3
+      },
+      "after": {
+        "vertices": 120,
+        "edges": 242,
+        "faces": 124,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "components": 1
+      },
+      "filledEndFaces": 0,
+      "weldedBoundaryVertices": 16,
+      "remainingOpeningsAfterWeld": [],
+      "maximumBidirectionalOriginalVertexDistanceMm": 0.0,
+      "maximumWorldBoundsChangeMm": 0.0,
+      "worldBoundsBefore": {
+        "min": [
+          8.232038497924805,
+          19.780006408691406,
+          14.974231719970703
+        ],
+        "max": [
+          55.022132873535156,
+          23.32084083557129,
+          22.670772552490234
+        ]
+      },
+      "worldBoundsAfter": {
+        "min": [
+          8.232038497924805,
+          19.780006408691406,
+          14.974231719970703
+        ],
+        "max": [
+          55.022132873535156,
+          23.32084083557129,
+          22.670772552490234
+        ]
+      },
+      "closedVolumeMm3": 11.607811426255456
+    },
+    {
+      "sourceName": "B · 中央走线 GPIO.002",
+      "beforeType": "CURVE",
+      "afterType": "MESH",
+      "before": {
+        "vertices": 168,
+        "edges": 322,
+        "faces": 156,
+        "boundaryEdges": 32,
+        "nonManifoldEdges": 32,
+        "components": 3
+      },
+      "after": {
+        "vertices": 152,
+        "edges": 306,
+        "faces": 156,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "components": 1
+      },
+      "filledEndFaces": 0,
+      "weldedBoundaryVertices": 16,
+      "remainingOpeningsAfterWeld": [],
+      "maximumBidirectionalOriginalVertexDistanceMm": 0.0,
+      "maximumWorldBoundsChangeMm": 0.0,
+      "worldBoundsBefore": {
+        "min": [
+          -14.046850204467773,
+          19.437164306640625,
+          14.954474449157715
+        ],
+        "max": [
+          51.197532653808594,
+          23.25897216796875,
+          21.032405853271484
+        ]
+      },
+      "worldBoundsAfter": {
+        "min": [
+          -14.046850204467773,
+          19.437164306640625,
+          14.954474449157715
+        ],
+        "max": [
+          51.197532653808594,
+          23.25897216796875,
+          21.032405853271484
+        ]
+      },
+      "closedVolumeMm3": 15.408115928585481
+    },
+    {
+      "sourceName": "X · 中央走线 GND.002",
+      "beforeType": "CURVE",
+      "afterType": "MESH",
+      "before": {
+        "vertices": 120,
+        "edges": 226,
+        "faces": 108,
+        "boundaryEdges": 32,
+        "nonManifoldEdges": 32,
+        "components": 3
+      },
+      "after": {
+        "vertices": 104,
+        "edges": 210,
+        "faces": 108,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "components": 1
+      },
+      "filledEndFaces": 0,
+      "weldedBoundaryVertices": 16,
+      "remainingOpeningsAfterWeld": [],
+      "maximumBidirectionalOriginalVertexDistanceMm": 0.0,
+      "maximumWorldBoundsChangeMm": 0.0,
+      "worldBoundsBefore": {
+        "min": [
+          4.592313289642334,
+          21.660001754760742,
+          14.920002937316895
+        ],
+        "max": [
+          40.14799499511719,
+          23.368385314941406,
+          22.66139793395996
+        ]
+      },
+      "worldBoundsAfter": {
+        "min": [
+          4.592313289642334,
+          21.660001754760742,
+          14.920002937316895
+        ],
+        "max": [
+          40.14799499511719,
+          23.368385314941406,
+          22.66139793395996
+        ]
+      },
+      "closedVolumeMm3": 11.305409381426674
+    },
+    {
+      "sourceName": "X · 中央走线 GPIO.002",
+      "beforeType": "CURVE",
+      "afterType": "MESH",
+      "before": {
+        "vertices": 144,
+        "edges": 274,
+        "faces": 132,
+        "boundaryEdges": 32,
+        "nonManifoldEdges": 32,
+        "components": 3
+      },
+      "after": {
+        "vertices": 128,
+        "edges": 258,
+        "faces": 132,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "components": 1
+      },
+      "filledEndFaces": 0,
+      "weldedBoundaryVertices": 16,
+      "remainingOpeningsAfterWeld": [],
+      "maximumBidirectionalOriginalVertexDistanceMm": 0.0,
+      "maximumWorldBoundsChangeMm": 0.0,
+      "worldBoundsBefore": {
+        "min": [
+          -9.008825302124023,
+          19.420001983642578,
+          14.928609848022461
+        ],
+        "max": [
+          39.342288970947266,
+          23.359935760498047,
+          21.623397827148438
+        ]
+      },
+      "worldBoundsAfter": {
+        "min": [
+          -9.008825302124023,
+          19.420001983642578,
+          14.928609848022461
+        ],
+        "max": [
+          39.342288970947266,
+          23.359935760498047,
+          21.623397827148438
+        ]
+      },
+      "closedVolumeMm3": 14.01361777801283
+    },
+    {
+      "sourceName": "Y · 中央走线 GND.002",
+      "beforeType": "CURVE",
+      "afterType": "MESH",
+      "before": {
+        "vertices": 112,
+        "edges": 210,
+        "faces": 100,
+        "boundaryEdges": 32,
+        "nonManifoldEdges": 32,
+        "components": 3
+      },
+      "after": {
+        "vertices": 96,
+        "edges": 194,
+        "faces": 100,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "components": 1
+      },
+      "filledEndFaces": 0,
+      "weldedBoundaryVertices": 16,
+      "remainingOpeningsAfterWeld": [],
+      "maximumBidirectionalOriginalVertexDistanceMm": 0.0,
+      "maximumWorldBoundsChangeMm": 0.0,
+      "worldBoundsBefore": {
+        "min": [
+          1.2361892461776733,
+          21.736051559448242,
+          14.136188507080078
+        ],
+        "max": [
+          43.45174789428711,
+          31.181053161621094,
+          22.66368293762207
+        ]
+      },
+      "worldBoundsAfter": {
+        "min": [
+          1.2361892461776733,
+          21.736051559448242,
+          14.136188507080078
+        ],
+        "max": [
+          43.45174789428711,
+          31.181053161621094,
+          22.66368293762207
+        ]
+      },
+      "closedVolumeMm3": 12.146440087155325
+    },
+    {
+      "sourceName": "Y · 中央走线 GPIO.002",
+      "beforeType": "CURVE",
+      "afterType": "MESH",
+      "before": {
+        "vertices": 152,
+        "edges": 290,
+        "faces": 140,
+        "boundaryEdges": 32,
+        "nonManifoldEdges": 32,
+        "components": 3
+      },
+      "after": {
+        "vertices": 136,
+        "edges": 274,
+        "faces": 140,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "components": 1
+      },
+      "filledEndFaces": 0,
+      "weldedBoundaryVertices": 16,
+      "remainingOpeningsAfterWeld": [],
+      "maximumBidirectionalOriginalVertexDistanceMm": 0.0,
+      "maximumWorldBoundsChangeMm": 0.0,
+      "worldBoundsBefore": {
+        "min": [
+          -16.580768585205078,
+          19.337718963623047,
+          14.928817749023438
+        ],
+        "max": [
+          40.33881378173828,
+          31.181053161621094,
+          21.061830520629883
+        ]
+      },
+      "worldBoundsAfter": {
+        "min": [
+          -16.580768585205078,
+          19.337718963623047,
+          14.928817749023438
+        ],
+        "max": [
+          40.33881378173828,
+          31.181053161621094,
+          21.061830520629883
+        ]
+      },
+      "closedVolumeMm3": 15.168981495409234
+    },
+    {
+      "sourceName": "上 · 中央走线 GND.002",
+      "beforeType": "CURVE",
+      "afterType": "MESH",
+      "before": {
+        "vertices": 144,
+        "edges": 274,
+        "faces": 132,
+        "boundaryEdges": 32,
+        "nonManifoldEdges": 32,
+        "components": 3
+      },
+      "after": {
+        "vertices": 128,
+        "edges": 258,
+        "faces": 132,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "components": 1
+      },
+      "filledEndFaces": 0,
+      "weldedBoundaryVertices": 16,
+      "remainingOpeningsAfterWeld": [],
+      "maximumBidirectionalOriginalVertexDistanceMm": 0.0,
+      "maximumWorldBoundsChangeMm": 0.0,
+      "worldBoundsBefore": {
+        "min": [
+          -41.47750473022461,
+          21.731300354003906,
+          12.374155044555664
+        ],
+        "max": [
+          -8.731301307678223,
+          29.869686126708984,
+          22.670318603515625
+        ]
+      },
+      "worldBoundsAfter": {
+        "min": [
+          -41.47750473022461,
+          21.731300354003906,
+          12.374155044555664
+        ],
+        "max": [
+          -8.731301307678223,
+          29.869686126708984,
+          22.670318603515625
+        ]
+      },
+      "closedVolumeMm3": 10.087008903132144
+    },
+    {
+      "sourceName": "上 · 中央走线 GPIO.002",
+      "beforeType": "CURVE",
+      "afterType": "MESH",
+      "before": {
+        "vertices": 152,
+        "edges": 290,
+        "faces": 140,
+        "boundaryEdges": 32,
+        "nonManifoldEdges": 32,
+        "components": 3
+      },
+      "after": {
+        "vertices": 136,
+        "edges": 274,
+        "faces": 140,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "components": 1
+      },
+      "filledEndFaces": 0,
+      "weldedBoundaryVertices": 16,
+      "remainingOpeningsAfterWeld": [],
+      "maximumBidirectionalOriginalVertexDistanceMm": 0.0,
+      "maximumWorldBoundsChangeMm": 0.0,
+      "worldBoundsBefore": {
+        "min": [
+          -44.34565353393555,
+          19.324268341064453,
+          12.430432319641113
+        ],
+        "max": [
+          -3.3457789421081543,
+          29.869686126708984,
+          19.2796630859375
+        ]
+      },
+      "worldBoundsAfter": {
+        "min": [
+          -44.34565353393555,
+          19.324268341064453,
+          12.430432319641113
+        ],
+        "max": [
+          -3.3457789421081543,
+          29.869686126708984,
+          19.2796630859375
+        ]
+      },
+      "closedVolumeMm3": 11.533061114437956
+    },
+    {
+      "sourceName": "下 · 中央走线 GND.002",
+      "beforeType": "CURVE",
+      "afterType": "MESH",
+      "before": {
+        "vertices": 112,
+        "edges": 210,
+        "faces": 100,
+        "boundaryEdges": 32,
+        "nonManifoldEdges": 32,
+        "components": 3
+      },
+      "after": {
+        "vertices": 96,
+        "edges": 194,
+        "faces": 100,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "components": 1
+      },
+      "filledEndFaces": 0,
+      "weldedBoundaryVertices": 16,
+      "remainingOpeningsAfterWeld": [],
+      "maximumBidirectionalOriginalVertexDistanceMm": 0.0,
+      "maximumWorldBoundsChangeMm": 0.0,
+      "worldBoundsBefore": {
+        "min": [
+          -44.32423400878906,
+          14.128392219543457,
+          11.73277759552002
+        ],
+        "max": [
+          -5.2327775955200195,
+          22.267223358154297,
+          22.667217254638672
+        ]
+      },
+      "worldBoundsAfter": {
+        "min": [
+          -44.32423400878906,
+          14.128392219543457,
+          11.73277759552002
+        ],
+        "max": [
+          -5.2327775955200195,
+          22.267223358154297,
+          22.667217254638672
+        ]
+      },
+      "closedVolumeMm3": 11.201473356942405
+    },
+    {
+      "sourceName": "下 · 中央走线 GPIO.002",
+      "beforeType": "CURVE",
+      "afterType": "MESH",
+      "before": {
+        "vertices": 136,
+        "edges": 258,
+        "faces": 124,
+        "boundaryEdges": 32,
+        "nonManifoldEdges": 32,
+        "components": 3
+      },
+      "after": {
+        "vertices": 120,
+        "edges": 242,
+        "faces": 124,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "components": 1
+      },
+      "filledEndFaces": 0,
+      "weldedBoundaryVertices": 16,
+      "remainingOpeningsAfterWeld": [],
+      "maximumBidirectionalOriginalVertexDistanceMm": 0.0,
+      "maximumWorldBoundsChangeMm": 0.0,
+      "worldBoundsBefore": {
+        "min": [
+          -41.329429626464844,
+          14.128392219543457,
+          12.455391883850098
+        ],
+        "max": [
+          -0.8195834755897522,
+          20.42510986328125,
+          20.202686309814453
+        ]
+      },
+      "worldBoundsAfter": {
+        "min": [
+          -41.329429626464844,
+          14.128392219543457,
+          12.455391883850098
+        ],
+        "max": [
+          -0.8195834755897522,
+          20.42510986328125,
+          20.202686309814453
+        ]
+      },
+      "closedVolumeMm3": 11.442238604280927
+    },
+    {
+      "sourceName": "公共接地 · GND 引线.002",
+      "beforeType": "CURVE",
+      "afterType": "MESH",
+      "before": {
+        "vertices": 70,
+        "edges": 124,
+        "faces": 56,
+        "boundaryEdges": 40,
+        "nonManifoldEdges": 40,
+        "components": 3
+      },
+      "after": {
+        "vertices": 50,
+        "edges": 104,
+        "faces": 56,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "components": 1
+      },
+      "filledEndFaces": 0,
+      "weldedBoundaryVertices": 20,
+      "remainingOpeningsAfterWeld": [],
+      "maximumBidirectionalOriginalVertexDistanceMm": 0.0,
+      "maximumWorldBoundsChangeMm": 0.0,
+      "worldBoundsBefore": {
+        "min": [
+          -21.67494010925293,
+          -2.9783401489257812,
+          16.899999618530273
+        ],
+        "max": [
+          -17.367252349853516,
+          22.246532440185547,
+          21.466461181640625
+        ]
+      },
+      "worldBoundsAfter": {
+        "min": [
+          -21.67494010925293,
+          -2.9783401489257812,
+          16.899999618530273
+        ],
+        "max": [
+          -17.367252349853516,
+          22.246532440185547,
+          21.466461181640625
+        ]
+      },
+      "closedVolumeMm3": 5.677275603621654
+    },
+    {
+      "sourceName": "公共接地 · GND 汇流排.002",
+      "beforeType": "CURVE",
+      "afterType": "MESH",
+      "before": {
+        "vertices": 40,
+        "edges": 64,
+        "faces": 26,
+        "boundaryEdges": 40,
+        "nonManifoldEdges": 40,
+        "components": 3
+      },
+      "after": {
+        "vertices": 20,
+        "edges": 44,
+        "faces": 26,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "components": 1
+      },
+      "filledEndFaces": 0,
+      "weldedBoundaryVertices": 20,
+      "remainingOpeningsAfterWeld": [],
+      "maximumBidirectionalOriginalVertexDistanceMm": 0.0,
+      "maximumWorldBoundsChangeMm": 0.0,
+      "worldBoundsBefore": {
+        "min": [
+          -17.5,
+          21.6200008392334,
+          20.838600158691406
+        ],
+        "max": [
+          13.5,
+          22.3799991607666,
+          21.5614013671875
+        ]
+      },
+      "worldBoundsAfter": {
+        "min": [
+          -17.5,
+          21.6200008392334,
+          20.838600158691406
+        ],
+        "max": [
+          13.5,
+          22.3799991607666,
+          21.5614013671875
+        ]
+      },
+      "closedVolumeMm3": 13.155766261814282
+    },
+    {
+      "sourceName": "右 · 中央走线 GND.002",
+      "beforeType": "CURVE",
+      "afterType": "MESH",
+      "before": {
+        "vertices": 136,
+        "edges": 258,
+        "faces": 124,
+        "boundaryEdges": 32,
+        "nonManifoldEdges": 32,
+        "components": 3
+      },
+      "after": {
+        "vertices": 120,
+        "edges": 242,
+        "faces": 124,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "components": 1
+      },
+      "filledEndFaces": 0,
+      "weldedBoundaryVertices": 16,
+      "remainingOpeningsAfterWeld": [],
+      "maximumBidirectionalOriginalVertexDistanceMm": 0.0,
+      "maximumWorldBoundsChangeMm": 0.0,
+      "worldBoundsBefore": {
+        "min": [
+          -41.13499450683594,
+          19.62125587463379,
+          12.465084075927734
+        ],
+        "max": [
+          -12.135499000549316,
+          22.264537811279297,
+          22.66402816772461
+        ]
+      },
+      "worldBoundsAfter": {
+        "min": [
+          -41.13499450683594,
+          19.62125587463379,
+          12.465084075927734
+        ],
+        "max": [
+          -12.135499000549316,
+          22.264537811279297,
+          22.66402816772461
+        ]
+      },
+      "closedVolumeMm3": 10.234500205454246
+    },
+    {
+      "sourceName": "右 · 中央走线 GPIO.002",
+      "beforeType": "CURVE",
+      "afterType": "MESH",
+      "before": {
+        "vertices": 136,
+        "edges": 258,
+        "faces": 124,
+        "boundaryEdges": 32,
+        "nonManifoldEdges": 32,
+        "components": 3
+      },
+      "after": {
+        "vertices": 120,
+        "edges": 242,
+        "faces": 124,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "components": 1
+      },
+      "filledEndFaces": 0,
+      "weldedBoundaryVertices": 16,
+      "remainingOpeningsAfterWeld": [],
+      "maximumBidirectionalOriginalVertexDistanceMm": 0.0,
+      "maximumWorldBoundsChangeMm": 0.0,
+      "worldBoundsBefore": {
+        "min": [
+          -40.337955474853516,
+          19.331878662109375,
+          12.459253311157227
+        ],
+        "max": [
+          4.270772933959961,
+          23.37776756286621,
+          19.26173210144043
+        ]
+      },
+      "worldBoundsAfter": {
+        "min": [
+          -40.337955474853516,
+          19.331878662109375,
+          12.459253311157227
+        ],
+        "max": [
+          4.270772933959961,
+          23.37776756286621,
+          19.26173210144043
+        ]
+      },
+      "closedVolumeMm3": 12.254905393978632
+    },
+    {
+      "sourceName": "左 · 中央走线 GND.002",
+      "beforeType": "CURVE",
+      "afterType": "MESH",
+      "before": {
+        "vertices": 104,
+        "edges": 194,
+        "faces": 92,
+        "boundaryEdges": 32,
+        "nonManifoldEdges": 32,
+        "components": 3
+      },
+      "after": {
+        "vertices": 88,
+        "edges": 178,
+        "faces": 92,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "components": 1
+      },
+      "filledEndFaces": 0,
+      "weldedBoundaryVertices": 16,
+      "remainingOpeningsAfterWeld": [],
+      "maximumBidirectionalOriginalVertexDistanceMm": 0.0,
+      "maximumWorldBoundsChangeMm": 0.0,
+      "worldBoundsBefore": {
+        "min": [
+          -53.674503326416016,
+          21.723161697387695,
+          12.451091766357422
+        ],
+        "max": [
+          -15.723162651062012,
+          24.368385314941406,
+          22.400001525878906
+        ]
+      },
+      "worldBoundsAfter": {
+        "min": [
+          -53.674503326416016,
+          21.723161697387695,
+          12.451091766357422
+        ],
+        "max": [
+          -15.723162651062012,
+          24.368385314941406,
+          22.400001525878906
+        ]
+      },
+      "closedVolumeMm3": 9.892387554953093
+    },
+    {
+      "sourceName": "左 · 中央走线 GPIO.002",
+      "beforeType": "CURVE",
+      "afterType": "MESH",
+      "before": {
+        "vertices": 104,
+        "edges": 194,
+        "faces": 92,
+        "boundaryEdges": 32,
+        "nonManifoldEdges": 32,
+        "components": 3
+      },
+      "after": {
+        "vertices": 88,
+        "edges": 178,
+        "faces": 92,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "components": 1
+      },
+      "filledEndFaces": 0,
+      "weldedBoundaryVertices": 16,
+      "remainingOpeningsAfterWeld": [],
+      "maximumBidirectionalOriginalVertexDistanceMm": 0.0,
+      "maximumWorldBoundsChangeMm": 0.0,
+      "worldBoundsBefore": {
+        "min": [
+          -49.86790466308594,
+          18.92315101623535,
+          12.442737579345703
+        ],
+        "max": [
+          -18.581674575805664,
+          24.235641479492188,
+          19.26941680908203
+        ]
+      },
+      "worldBoundsAfter": {
+        "min": [
+          -49.86790466308594,
+          18.92315101623535,
+          12.442737579345703
+        ],
+        "max": [
+          -18.581674575805664,
+          24.235641479492188,
+          19.26941680908203
+        ]
+      },
+      "closedVolumeMm3": 8.190438522970336
+    },
+    {
+      "sourceName": "确认 · GND.005",
+      "beforeType": "CURVE",
+      "afterType": "MESH",
+      "before": {
+        "vertices": 60,
+        "edges": 110,
+        "faces": 50,
+        "boundaryEdges": 20,
+        "nonManifoldEdges": 20,
+        "components": 1
+      },
+      "after": {
+        "vertices": 60,
+        "edges": 110,
+        "faces": 52,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "components": 1
+      },
+      "filledEndFaces": 2,
+      "weldedBoundaryVertices": 0,
+      "remainingOpeningsAfterWeld": [
+        {
+          "vertices": 10,
+          "planeErrorMm": 0.0
+        },
+        {
+          "vertices": 10,
+          "planeErrorMm": 2.611172744970691e-07
+        }
+      ],
+      "maximumBidirectionalOriginalVertexDistanceMm": 0.0,
+      "maximumWorldBoundsChangeMm": 0.0,
+      "worldBoundsBefore": {
+        "min": [
+          -3.871030330657959,
+          4.0630574226379395,
+          18.909408569335938
+        ],
+        "max": [
+          -1.7210278511047363,
+          22.272724151611328,
+          22.678434371948242
+        ]
+      },
+      "worldBoundsAfter": {
+        "min": [
+          -3.871030330657959,
+          4.0630574226379395,
+          18.909408569335938
+        ],
+        "max": [
+          -1.7210278511047363,
+          22.272724151611328,
+          22.678434371948242
+        ]
+      },
+      "closedVolumeMm3": 4.062612035464119
+    },
+    {
+      "sourceName": "确认 · GPIO.005",
+      "beforeType": "CURVE",
+      "afterType": "MESH",
+      "before": {
+        "vertices": 70,
+        "edges": 130,
+        "faces": 60,
+        "boundaryEdges": 20,
+        "nonManifoldEdges": 20,
+        "components": 1
+      },
+      "after": {
+        "vertices": 70,
+        "edges": 130,
+        "faces": 62,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "components": 1
+      },
+      "filledEndFaces": 2,
+      "weldedBoundaryVertices": 0,
+      "remainingOpeningsAfterWeld": [
+        {
+          "vertices": 10,
+          "planeErrorMm": 1.3136024985815897e-07
+        },
+        {
+          "vertices": 10,
+          "planeErrorMm": 0.0
+        }
+      ],
+      "maximumBidirectionalOriginalVertexDistanceMm": 0.0,
+      "maximumWorldBoundsChangeMm": 0.0,
+      "worldBoundsBefore": {
+        "min": [
+          -6.4376091957092285,
+          4.036115646362305,
+          16.899999618530273
+        ],
+        "max": [
+          3.7604918479919434,
+          19.975305557250977,
+          20.29156494140625
+        ]
+      },
+      "worldBoundsAfter": {
+        "min": [
+          -6.4376091957092285,
+          4.036115646362305,
+          16.899999618530273
+        ],
+        "max": [
+          3.7604918479919434,
+          19.975305557250977,
+          20.29156494140625
+        ]
+      },
+      "closedVolumeMm3": 4.387354019909217
+    }
+  ],
+  "summary": {
+    "objects": 20,
+    "closedSingleComponentObjects": 20,
+    "maximumVertexChangeMm": 0.0,
+    "maximumEnvelopeChangeMm": 0.0
+  }
+}

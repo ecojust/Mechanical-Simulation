@@ -21,6 +21,9 @@ export type MechanismTransformRequest =
 /** Derived from the scene contact solver; never inferred from a stroke threshold. */
 export interface MechanismContactReadout {
   gap: number;
+  surfaceGap?: number;
+  overtravel?: number;
+  actuatorTravel?: number;
   radial: number;
   triggerTravel: number;
   axisAlignment: number;
@@ -248,11 +251,16 @@ export default function MechanismControls({
       : 0;
   const members = new Map(parts.map((part) => [part.id, part]));
   const role = (id: string) => {
-    const labels = [
-      mechanism.movingPartIds.includes(id) ? "活动子组" : "固定子组",
-    ];
-    if (mechanism.springPartIds.includes(id)) labels.push("弹簧");
-    if (mechanism.switchPartId === id) labels.push("触点");
+    const labels = [mechanism.movingPartIds.includes(id)
+      ? "活动子组"
+      : mechanism.springPartIds.includes(id)
+        ? "弹簧"
+        : mechanism.contact?.actuatorPartIds?.includes(id)
+          ? "随动触头"
+          : "固定子组"];
+    if (mechanism.switchPartId === id) labels.push("电气开关");
+    if ((mechanism.contact?.targetPartId ?? mechanism.switchPartId) === id)
+      labels.push("触发面");
     return labels.join(" · ");
   };
   return (
@@ -423,7 +431,7 @@ export default function MechanismControls({
                   : "等待按压；压缩量与作用力由仿真计算。")}
             </p>
             <div className="mc-contact" aria-label="撞针触点状态">
-              <h5>撞针与固定触点</h5>
+              <h5>撞针与开关触点</h5>
               {contact ? (
                 <>
                   <div className="mc-contact-state" aria-live="polite">
@@ -431,7 +439,12 @@ export default function MechanismControls({
                       {contact.radial > contact.radius + 1e-6
                         ? "横向偏离触点"
                         : contact.touching
-                          ? contact.gap < -contact.maxOvertravel - 1e-6
+                          ? contact.gap < -contact.maxOvertravel - 1e-6 ||
+                            (Boolean(
+                              mechanism.contact?.actuatorPartIds?.length,
+                            ) &&
+                              (contact.overtravel ?? 0) >
+                                contact.maxOvertravel + 1e-6)
                             ? "撞针压入超限"
                             : "撞针已接触触点"
                           : "撞针与触点分离"}
@@ -442,11 +455,34 @@ export default function MechanismControls({
                   </div>
                   <dl className="mc-contact-metrics">
                     <div>
-                      <dt>法向间隙</dt>
+                      <dt>当前表面间隙</dt>
+                      <dd>
+                        {display(contact.surfaceGap ?? contact.gap, 3)}{" "}
+                        <span>mm</span>
+                      </dd>
+                    </div>
+                    <div>
+                      <dt>静止面参考间隙</dt>
                       <dd>
                         {display(contact.gap, 3)} <span>mm</span>
                       </dd>
                     </div>
+                    {contact.overtravel !== undefined && (
+                      <div>
+                        <dt>轴向过行程</dt>
+                        <dd>
+                          {display(contact.overtravel, 3)} <span>mm</span>
+                        </dd>
+                      </div>
+                    )}
+                    {Boolean(mechanism.contact?.actuatorPartIds?.length) && (
+                      <div>
+                        <dt>触头随动位移</dt>
+                        <dd>
+                          {display(contact.actuatorTravel, 3)} <span>mm</span>
+                        </dd>
+                      </div>
+                    )}
                     <div>
                       <dt>横向偏差</dt>
                       <dd>
@@ -467,7 +503,7 @@ export default function MechanismControls({
                     </div>
                   </dl>
                   <p>
-                    间隙为正时分离，为负时压入。通断由撞针与固定触点的实际几何接触决定。
+                    静止面参考间隙为负时表示压入，当前表面间隙包含触头随动。通断与过行程限制始终按原始触发面判定。
                   </p>
                 </>
               ) : (

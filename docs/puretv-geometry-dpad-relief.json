@@ -1,0 +1,195 @@
+{
+  "version": 1,
+  "applied": true,
+  "method": "Monotone axial relief of hidden guide ends only, radius 2.8..3.5 mm feather, lower 2.2 mm height taper; centre striker and upper cap remain unchanged.",
+  "design": {
+    "maxReliefMm": 0.75,
+    "nominalStrokeMm": 1,
+    "originalAxialRoomMm": 0.5774,
+    "nominalFinalAxialRoomMm": 0.3274,
+    "tolerancePerPartMm": 0.1,
+    "nominalWorstCaseRoomMm": 0.1274
+  },
+  "buttons": [
+    {
+      "key": "left",
+      "sourceFile": "buttons/left.blend",
+      "beforeSha256": "521bb2c812b0dff09b38fca3c41b297cc2df6fa89574fd4a2e3ee10381792a35",
+      "afterSha256": "448dac9cfe24bfd23165a2d78c49e547e48ff15d9e930815291187ce00bd5a7c",
+      "capName": "左 · PS5 一体式键帽与蓝色插销.003",
+      "modifiedVertices": 104,
+      "maxReliefMm": 0.7499999999999997,
+      "before": {
+        "vertices": 3569,
+        "triangles": 7134,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "volumeMm3": 843.9156548555105,
+        "sourceMin": [
+          -57.38475799560547,
+          16.219999313354492,
+          25.024925231933594
+        ],
+        "sourceMax": [
+          -45.07292556762695,
+          27.780000686645508,
+          38.05706024169922
+        ]
+      },
+      "after": {
+        "vertices": 3434,
+        "triangles": 6864,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "volumeMm3": 830.1293441082594,
+        "sourceMin": [
+          -57.38475799560547,
+          16.219999313354492,
+          25.774925231933594
+        ],
+        "sourceMax": [
+          -45.07292556762695,
+          27.780000686645508,
+          38.05706024169922
+        ]
+      },
+      "flippedTriangles": 0,
+      "measuredCenterGapMm": 0.75
+    },
+    {
+      "key": "right",
+      "sourceFile": "buttons/right.blend",
+      "beforeSha256": "c9b0466255fab1b8a4330e55c768e0be5bb00042097da5c98d5fa64d66dd32d5",
+      "afterSha256": "24175396fa942e46a4640f711883447d84d17026146b24a5fbc35cc6f258c0a4",
+      "capName": "右 · PS5 一体式键帽与蓝色插销.003",
+      "modifiedVertices": 104,
+      "maxReliefMm": 0.7499999999999997,
+      "before": {
+        "vertices": 3430,
+        "triangles": 6856,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "volumeMm3": 1150.2419878292,
+        "sourceMin": [
+          -38.89609909057617,
+          16.219999313354492,
+          22.629493713378906
+        ],
+        "sourceMax": [
+          -26.6152400970459,
+          27.780000686645508,
+          39.787818908691406
+        ]
+      },
+      "after": {
+        "vertices": 3423,
+        "triangles": 6842,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "volumeMm3": 1136.4918890698366,
+        "sourceMin": [
+          -38.89609909057617,
+          16.219999313354492,
+          23.379493713378906
+        ],
+        "sourceMax": [
+          -26.6152400970459,
+          27.780000686645508,
+          39.787818908691406
+        ]
+      },
+      "flippedTriangles": 0,
+      "measuredCenterGapMm": 0.75
+    },
+    {
+      "key": "down",
+      "sourceFile": "buttons/down.blend",
+      "beforeSha256": "f88c5eab75490b892c62225a38fee9ad65eae163c3fcb86cfc1809b12feccf88",
+      "afterSha256": "d4522c45614e5b99a56b5b304e0339f33155916a26dc53c26a827ed445c82d3d",
+      "capName": "下 · PS5 一体式键帽与蓝色插销.003",
+      "modifiedVertices": 104,
+      "maxReliefMm": 0.7499999999999997,
+      "before": {
+        "vertices": 3433,
+        "triangles": 6862,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "volumeMm3": 912.8009591269574,
+        "sourceMin": [
+          -47.779998779296875,
+          6.615245819091797,
+          24.79081153869629
+        ],
+        "sourceMax": [
+          -36.220001220703125,
+          18.915864944458008,
+          38.8928108215332
+        ]
+      },
+      "after": {
+        "vertices": 3433,
+        "triangles": 6862,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "volumeMm3": 898.9947880079493,
+        "sourceMin": [
+          -47.779998779296875,
+          6.615245819091797,
+          25.54081153869629
+        ],
+        "sourceMax": [
+          -36.220001220703125,
+          18.915864944458008,
+          38.8928108215332
+        ]
+      },
+      "flippedTriangles": 0,
+      "measuredCenterGapMm": 0.75
+    },
+    {
+      "key": "up",
+      "sourceFile": "buttons/up.blend",
+      "beforeSha256": "31bea7e76ff3f1a689fea23deafb0a5167044f0b2015f9ba72c3d244fa471dbe",
+      "afterSha256": "57f33d4303ffa13458e57ce3c828b0fc9ac57a928912890ae902d2404e090e82",
+      "capName": "上 · PS5 一体式键帽与蓝色插销.003",
+      "modifiedVertices": 104,
+      "maxReliefMm": 0.7499999999999997,
+      "before": {
+        "vertices": 3433,
+        "triangles": 6862,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "volumeMm3": 1200.9549410561713,
+        "sourceMin": [
+          -47.779998779296875,
+          25.1091251373291,
+          21.40144920349121
+        ],
+        "sourceMax": [
+          -36.220001220703125,
+          37.38475799560547,
+          39.18075942993164
+        ]
+      },
+      "after": {
+        "vertices": 3433,
+        "triangles": 6862,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "volumeMm3": 1187.1237957341784,
+        "sourceMin": [
+          -47.779998779296875,
+          25.1091251373291,
+          22.15144920349121
+        ],
+        "sourceMax": [
+          -36.220001220703125,
+          37.38475799560547,
+          39.18075942993164
+        ]
+      },
+      "flippedTriangles": 0,
+      "measuredCenterGapMm": 0.75
+    }
+  ]
+}
