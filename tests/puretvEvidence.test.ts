@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { createHash } from "node:crypto";
+import { fileURLToPath } from "node:url";
 import {
   normalizePuretvAudit,
   publicValue,
@@ -548,7 +549,7 @@ describe("pureTV source evidence generation", () => {
     const output = publicValue({
       token: "private",
       path: "/home/agent/private/file",
-      source: "/workspace/Mechanical-Simulation/docs/check.json",
+      source: fileURLToPath(new URL("../docs/check.json", import.meta.url)),
       message: "Bearer private-token http://127.0.0.1:9876/private",
       nested: { environment: { secret: "a" } },
     }) as Record<string, unknown>;
