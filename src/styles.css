@@ -748,8 +748,10 @@ input[type="color"] {
   white-space: nowrap;
   font-weight: 500;
 }
-.tree-list {
+.assembly-scroll {
   flex: 1;
+  min-height: 0;
+  min-width: 0;
   overflow: auto;
 }
 .tree-row {

@@ -10,26 +10,49 @@
   gap: 8px;
   margin-bottom: 13px;
 }
-.press-bench-heading > svg {
-  color: #598494;
-  flex: 0 0 auto;
-}
-.press-bench-heading > div {
+.press-bench-heading h3 {
   flex: 1;
   min-width: 0;
-}
-.press-bench-heading h3 {
+  margin: 0;
   font-size: 12px;
   line-height: 1.4;
   font-weight: 600;
-  margin: 0 0 4px;
   color: #3b6073;
 }
-.press-bench-heading > div > small {
+.press-bench .press-bench-toggle {
+  display: flex;
+  width: 100%;
+  gap: 8px;
+  padding: 4px 0;
+  text-align: left;
+}
+.press-bench-toggle > svg {
+  color: #598494;
+  flex: 0 0 auto;
+}
+.press-bench-toggle > span {
+  flex: 1;
+  min-width: 0;
+}
+.press-bench-toggle small {
   display: block;
+  margin-top: 4px;
   color: #839ba8;
   font-size: 9px;
+  font-weight: 400;
   line-height: 1.5;
+}
+.press-bench.collapsed {
+  padding-block: 10px;
+}
+.press-bench.collapsed .press-bench-heading {
+  margin-bottom: 0;
+}
+.press-bench.collapsed .press-bench-toggle small {
+  display: none;
+}
+.press-bench.collapsed .press-bench-chevron {
+  transform: rotate(-90deg);
 }
 .press-bench-lamps {
   display: grid;
@@ -54,6 +77,12 @@
 .press-bench-lamps.lit {
   color: #a27925;
   background: #fbf1d6;
+}
+.press-bench.collapsed .press-bench-lamps {
+  display: flex;
+}
+.press-bench.collapsed .press-bench-lamps small {
+  margin-top: 0;
 }
 .press-bench-paused {
   margin: -2px 0 10px;

@@ -1,5 +1,5 @@
-import { useEffect, useRef } from "react";
-import { CircleDot, Lightbulb } from "lucide-react";
+import { useEffect, useId, useRef, useState } from "react";
+import { ChevronDown, CircleDot, Lightbulb } from "lucide-react";
 import type { Mechanism, MechanismStates } from "../types";
 import type { MechanismContactState } from "../mechanisms";
 import "./PressBench.css";
@@ -35,6 +35,8 @@ export default function PressBench({
   onSelect,
   disabled = false,
 }: PressBenchProps) {
+  const [expanded, setExpanded] = useState(true);
+  const controlsId = useId();
   const presses = mechanisms.filter((mechanism) => mechanism.kind === "press");
   const holding = useRef<Holding | null>(null);
   const callbacks = useRef({ onPress, onRelease, onSelect });
@@ -97,6 +99,7 @@ export default function PressBench({
 
   function begin(mechanism: Mechanism, input: Holding) {
     if (
+      !expanded ||
       disabled ||
       mechanism.status !== "configured" ||
       holding.current?.id === mechanism.id
@@ -111,16 +114,35 @@ export default function PressBench({
   const litCount = new Set(poweredLampIds).size;
   return (
     <section
-      className="press-bench"
+      className={`press-bench${expanded ? "" : " collapsed"}`}
       aria-label="按键试验台"
       data-testid="press-bench"
     >
       <header className="press-bench-heading">
-        <CircleDot size={16} aria-hidden="true" />
-        <div>
-          <h3>按键试验台</h3>
-          <small>{presses.length} 个按键 · 按住试验，松手回弹</small>
-        </div>
+        <h3>
+          <button
+            type="button"
+            className="press-bench-toggle"
+            aria-expanded={expanded}
+            aria-controls={controlsId}
+            aria-label={`${expanded ? "收起" : "展开"}按键试验台`}
+            onClick={() => {
+              if (expanded) release();
+              setExpanded(!expanded);
+            }}
+          >
+            <CircleDot size={16} aria-hidden="true" />
+            <span>
+              按键试验台
+              <small>{presses.length} 个按键 · 按住试验，松手回弹</small>
+            </span>
+            <ChevronDown
+              size={15}
+              className="press-bench-chevron"
+              aria-hidden="true"
+            />
+          </button>
+        </h3>
         <span
           className={`press-bench-lamps ${litCount ? "lit" : ""}`}
           role="status"
@@ -131,96 +153,98 @@ export default function PressBench({
           <small>亮灯</small>
         </span>
       </header>
-      {disabled && <p className="press-bench-paused">启用仿真后可按压试验。</p>}
-      <div className="press-bench-grid">
-        {presses.map((mechanism) => {
-          const contact = contacts[mechanism.id];
-          const held = heldId === mechanism.id;
-          const displacement = states[mechanism.id]?.displacement ?? 0;
-          const status =
-            mechanism.status !== "configured"
-              ? "参数待配置"
-              : contact?.pressed
-                ? "接触导通"
-                : contact?.touching
-                  ? "接触未触发"
-                  : contact
-                    ? "分离"
-                    : "触点未配置";
-          return (
-            <button
-              key={mechanism.id}
-              type="button"
-              className={`press-bench-key ${held ? "held" : ""} ${contact?.pressed ? "conducting" : ""}`}
-              data-mechanism-id={mechanism.id}
-              data-contact={contact?.pressed ? "closed" : "open"}
-              aria-label={`按住 ${mechanism.name}`}
-              aria-pressed={held}
-              title={`${mechanism.name}；按住鼠标、空格或 Enter，松手释放`}
-              disabled={disabled || mechanism.status !== "configured"}
-              onPointerDown={(event) => {
-                if (event.button !== 0) return;
-                event.preventDefault();
-                event.currentTarget.focus({ preventScroll: true });
-                begin(mechanism, {
-                  id: mechanism.id,
-                  button: event.currentTarget,
-                  pointerId: event.pointerId,
-                });
-                if (holding.current?.pointerId === event.pointerId)
-                  try {
-                    event.currentTarget.setPointerCapture(event.pointerId);
-                  } catch {
-                    /* Window pointerup remains the fallback. */
-                  }
-              }}
-              onPointerUp={(event) => {
-                if (holding.current?.pointerId === event.pointerId) release();
-              }}
-              onPointerCancel={(event) => {
-                if (holding.current?.pointerId === event.pointerId) release();
-              }}
-              onLostPointerCapture={(event) => {
-                if (holding.current?.pointerId === event.pointerId) release();
-              }}
-              onKeyDown={(event) => {
-                if (!pressKey(event.key)) return;
-                event.preventDefault();
-                event.stopPropagation();
-                if (!event.repeat)
+      <div id={controlsId} hidden={!expanded}>
+        {disabled && <p className="press-bench-paused">启用仿真后可按压试验。</p>}
+        <div className="press-bench-grid">
+          {presses.map((mechanism) => {
+            const contact = contacts[mechanism.id];
+            const held = heldId === mechanism.id;
+            const displacement = states[mechanism.id]?.displacement ?? 0;
+            const status =
+              mechanism.status !== "configured"
+                ? "参数待配置"
+                : contact?.pressed
+                  ? "接触导通"
+                  : contact?.touching
+                    ? "接触未触发"
+                    : contact
+                      ? "分离"
+                      : "触点未配置";
+            return (
+              <button
+                key={mechanism.id}
+                type="button"
+                className={`press-bench-key ${held ? "held" : ""} ${contact?.pressed ? "conducting" : ""}`}
+                data-mechanism-id={mechanism.id}
+                data-contact={contact?.pressed ? "closed" : "open"}
+                aria-label={`按住 ${mechanism.name}`}
+                aria-pressed={held}
+                title={`${mechanism.name}；按住鼠标、空格或 Enter，松手释放`}
+                disabled={disabled || mechanism.status !== "configured"}
+                onPointerDown={(event) => {
+                  if (event.button !== 0) return;
+                  event.preventDefault();
+                  event.currentTarget.focus({ preventScroll: true });
                   begin(mechanism, {
                     id: mechanism.id,
                     button: event.currentTarget,
-                    key: event.key,
+                    pointerId: event.pointerId,
                   });
-              }}
-              onKeyUp={(event) => {
-                if (!pressKey(event.key)) return;
-                event.preventDefault();
-                event.stopPropagation();
-                if (holding.current?.key === event.key) release();
-              }}
-              onBlur={() => {
-                if (holding.current?.id === mechanism.id) release();
-              }}
-              onClick={() => callbacks.current.onSelect(mechanism.id)}
-            >
-              <strong>{mechanism.name}</strong>
-              <span className="press-bench-contact">
-                <i aria-hidden="true" />
-                {status}
-              </span>
-              <span className="press-bench-stroke">
-                {Number.isFinite(displacement) ? displacement.toFixed(2) : "—"}
-                <small> mm</small>
-              </span>
-            </button>
-          );
-        })}
+                  if (holding.current?.pointerId === event.pointerId)
+                    try {
+                      event.currentTarget.setPointerCapture(event.pointerId);
+                    } catch {
+                      /* Window pointerup remains the fallback. */
+                    }
+                }}
+                onPointerUp={(event) => {
+                  if (holding.current?.pointerId === event.pointerId) release();
+                }}
+                onPointerCancel={(event) => {
+                  if (holding.current?.pointerId === event.pointerId) release();
+                }}
+                onLostPointerCapture={(event) => {
+                  if (holding.current?.pointerId === event.pointerId) release();
+                }}
+                onKeyDown={(event) => {
+                  if (!pressKey(event.key)) return;
+                  event.preventDefault();
+                  event.stopPropagation();
+                  if (!event.repeat)
+                    begin(mechanism, {
+                      id: mechanism.id,
+                      button: event.currentTarget,
+                      key: event.key,
+                    });
+                }}
+                onKeyUp={(event) => {
+                  if (!pressKey(event.key)) return;
+                  event.preventDefault();
+                  event.stopPropagation();
+                  if (holding.current?.key === event.key) release();
+                }}
+                onBlur={() => {
+                  if (holding.current?.id === mechanism.id) release();
+                }}
+                onClick={() => callbacks.current.onSelect(mechanism.id)}
+              >
+                <strong>{mechanism.name}</strong>
+                <span className="press-bench-contact">
+                  <i aria-hidden="true" />
+                  {status}
+                </span>
+                <span className="press-bench-stroke">
+                  {Number.isFinite(displacement) ? displacement.toFixed(2) : "—"}
+                  <small> mm</small>
+                </span>
+              </button>
+            );
+          })}
+        </div>
+        <p className="press-bench-hint">
+          <kbd>Space</kbd> / <kbd>Enter</kbd> 按住 · 松开释放
+        </p>
       </div>
-      <p className="press-bench-hint">
-        <kbd>Space</kbd> / <kbd>Enter</kbd> 按住 · 松开释放
-      </p>
     </section>
   );
 }

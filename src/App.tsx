@@ -1834,42 +1834,44 @@ export default function App() {
             </>
           ) : (
             <>
-              <div className="tree-root">
-                <ChevronDown size={14} />
-                <Layers3 size={15} />
-                <strong>{project.name}</strong>
+              <div className="assembly-scroll">
+                <div className="tree-root">
+                  <ChevronDown size={14} />
+                  <Layers3 size={15} />
+                  <strong>{project.name}</strong>
+                </div>
+                <PressBench
+                  mechanisms={project.mechanisms ?? []}
+                  contacts={functionalScene.contacts}
+                  states={mechanismStates}
+                  poweredLampIds={circuit.poweredLampIds}
+                  heldId={heldMechanismId}
+                  disabled={!running || exploded}
+                  onPress={setHeldMechanismId}
+                  onRelease={() => setHeldMechanismId(null)}
+                  onSelect={(id) => {
+                    setSelectedMechanismId(id);
+                    setSelectedId(null);
+                  }}
+                />
+                <AssemblyTree
+                  parts={project.parts}
+                  selectedId={selectedId}
+                  onSelect={selectPart}
+                  mechanisms={project.mechanisms}
+                  selectedMechanismId={selectedMechanismId}
+                  onSelectMechanism={(id) => {
+                    setSelectedMechanismId(id);
+                    setSelectedId(null);
+                  }}
+                  onEditMechanism={(id) =>
+                    composeMechanism(
+                      project.mechanisms!.find((m) => m.id === id)!,
+                    )
+                  }
+                  onUpdate={updatePart}
+                />
               </div>
-              <PressBench
-                mechanisms={project.mechanisms ?? []}
-                contacts={functionalScene.contacts}
-                states={mechanismStates}
-                poweredLampIds={circuit.poweredLampIds}
-                heldId={heldMechanismId}
-                disabled={!running || exploded}
-                onPress={setHeldMechanismId}
-                onRelease={() => setHeldMechanismId(null)}
-                onSelect={(id) => {
-                  setSelectedMechanismId(id);
-                  setSelectedId(null);
-                }}
-              />
-              <AssemblyTree
-                parts={project.parts}
-                selectedId={selectedId}
-                onSelect={selectPart}
-                mechanisms={project.mechanisms}
-                selectedMechanismId={selectedMechanismId}
-                onSelectMechanism={(id) => {
-                  setSelectedMechanismId(id);
-                  setSelectedId(null);
-                }}
-                onEditMechanism={(id) =>
-                  composeMechanism(
-                    project.mechanisms!.find((m) => m.id === id)!,
-                  )
-                }
-                onUpdate={updatePart}
-              />
               <div className="library-footer">
                 <Layers3 size={14} /> {project.parts.length} 个零件 ·{" "}
                 {project.wires.length} 根导线

@@ -1,6 +1,6 @@
 [package]
 name = "mechanical-studio"
-version = "0.4.1"
+version = "0.4.2"
 description = "Mechanical component assembly and verification workbench"
 authors = ["ecojust"]
 edition = "2021"
