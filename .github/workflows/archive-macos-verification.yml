@@ -1,0 +1,115 @@
+name: Archive packaged macOS verification
+
+on:
+  workflow_dispatch:
+    inputs:
+      release_tag:
+        description: Published version tag, for example v0.4.1
+        required: true
+        type: string
+      run_id:
+        description: Successful Release macOS Apple Silicon run ID
+        required: true
+        type: string
+
+permissions:
+  contents: write
+  actions: read
+
+concurrency:
+  group: archive-macos-verification
+  cancel-in-progress: false
+
+jobs:
+  archive:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
+        with:
+          ref: master
+          fetch-depth: 0
+
+      - name: Retrieve and verify the original native execution report
+        env:
+          GH_TOKEN: ${{ github.token }}
+          VERIFY_TAG: ${{ inputs.release_tag }}
+          VERIFY_RUN: ${{ inputs.run_id }}
+        run: |
+          set -euo pipefail
+          [[ "$VERIFY_TAG" =~ ^v[0-9]+\.[0-9]+\.[0-9]+$ ]]
+          [[ "$VERIFY_RUN" =~ ^[0-9]+$ ]]
+          gh api "repos/$GITHUB_REPOSITORY/actions/runs/$VERIFY_RUN" > "$RUNNER_TEMP/verification-run.json"
+          export VERIFY_COMMIT="$(git rev-parse "$VERIFY_TAG^{commit}")"
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          import assert from 'node:assert/strict';
+          const run = JSON.parse(fs.readFileSync(`${process.env.RUNNER_TEMP}/verification-run.json`));
+          assert.equal(run.repository.full_name, process.env.GITHUB_REPOSITORY);
+          assert.equal(run.path, '.github/workflows/release.yml');
+          assert.equal(run.conclusion, 'success');
+          assert.equal(run.head_sha, process.env.VERIFY_COMMIT);
+          NODE
+          gh release view "$VERIFY_TAG" --json isDraft,isPrerelease --jq '(.isDraft == false) and (.isPrerelease == false)' | grep -qx true
+          gh run download "$VERIFY_RUN" -n "puretv-macos-mcp-verification-${VERIFY_TAG#v}" -D "$RUNNER_TEMP/native-verification"
+          git show "$VERIFY_TAG:docs/puretv-calibration.json" > "$RUNNER_TEMP/native-calibration.json"
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          import assert from 'node:assert/strict';
+          import { createHash } from 'node:crypto';
+          const file = `${process.env.RUNNER_TEMP}/native-verification/puretv-macos-mcp-verification.json`;
+          assert.ok(fs.statSync(file).size < 2 * 1024 * 1024);
+          const bytes = fs.readFileSync(file), report = JSON.parse(bytes);
+          const calibration = JSON.parse(fs.readFileSync(`${process.env.RUNNER_TEMP}/native-calibration.json`));
+          const sha = value => createHash('sha256').update(value).digest('hex');
+          assert.equal(report.status, 'pass');
+          assert.equal(report.execution.nativeDesktop, true);
+          assert.equal(report.execution.fixture, false);
+          assert.equal(report.calibrationSha256, sha(JSON.stringify(calibration)));
+          assert.deepEqual(report.tests.map(test => test.key).sort(), calibration.buttons.map(button => button.key).sort());
+          for (const phase of [report.before, report.after]) {
+            assert.equal(phase.sourceEvidenceStatus, 'pass');
+            assert.equal(phase.issues.error, 0);
+            assert.equal(phase.lampsOn, 0);
+          }
+          for (const test of report.tests) {
+            assert.equal(test.status, 'pass');
+            assert.equal(test.actualRendererChecked, true);
+            assert.ok(test.precontact.gap > 0);
+            assert.equal(test.precontact.litLamps, 0);
+            assert.equal(test.pressed.contact.touching, true);
+            assert.equal(test.pressed.litLamps, 1);
+            assert.equal(test.released.contact.touching, false);
+            assert.equal(test.released.litLamps, 0);
+            assert.ok(test.springTransforms.pressed.length > 0);
+            assert.equal(test.springTransforms.released.length, test.springTransforms.pressed.length);
+          }
+          const directory = `docs/releases/${process.env.VERIFY_TAG}`;
+          fs.mkdirSync(directory, { recursive: true });
+          const target = `${directory}/puretv-macos-mcp-verification.json`;
+          if (fs.existsSync(target)) assert.equal(sha(fs.readFileSync(target)), sha(bytes), 'Never replace archived evidence');
+          else fs.writeFileSync(target, bytes);
+          const provenance = {
+            version: 1, release: process.env.VERIFY_TAG, commit: process.env.VERIFY_COMMIT,
+            runId: process.env.VERIFY_RUN,
+            runUrl: `https://github.com/${process.env.GITHUB_REPOSITORY}/actions/runs/${process.env.VERIFY_RUN}`,
+            reportSha256: sha(bytes),
+            scope: 'Original report retrieved from the successful packaged application run; the report is not an exported project.'
+          };
+          const provenanceTarget = `${directory}/provenance.json`;
+          const provenanceText = JSON.stringify(provenance, null, 2) + '\n';
+          if (fs.existsSync(provenanceTarget)) assert.equal(fs.readFileSync(provenanceTarget, 'utf8'), provenanceText);
+          else fs.writeFileSync(provenanceTarget, provenanceText);
+          console.log(`Archived ${report.tests.length} native button tests, report SHA-256 ${sha(bytes)}`);
+          NODE
+
+      - name: Commit the unchanged original report and its provenance
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add docs/releases
+          if ! git diff --cached --quiet; then
+            git commit -m 'Archive verified native macOS MCP execution report'
+            git push origin HEAD:master
+          fi
