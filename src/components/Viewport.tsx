@@ -182,7 +182,7 @@ export default function Viewport(props: ViewportProps) {
     renderer.shadowMap.type = THREE.PCFSoftShadowMap;
     renderer.outputColorSpace = THREE.SRGBColorSpace;
     renderer.toneMapping = THREE.ACESFilmicToneMapping;
-    renderer.toneMappingExposure = 1.25;
+    renderer.toneMappingExposure = 1;
     renderer.domElement.style.width = "100%";
     renderer.domElement.style.height = "100%";
     renderer.domElement.style.display = "block";
@@ -193,8 +193,8 @@ export default function Viewport(props: ViewportProps) {
     renderer.domElement.setAttribute("data-testid", "viewport-canvas");
     host.appendChild(renderer.domElement);
     const scene = new THREE.Scene();
-    scene.background = new THREE.Color("#e9eef2");
-    scene.fog = new THREE.Fog("#e9eef2", 380, 1200);
+    scene.background = new THREE.Color("#8b99a6");
+    scene.fog = new THREE.Fog("#8b99a6", 700, 2200);
     const camera = new THREE.PerspectiveCamera(38, 1, 0.2, 2500);
     camera.position.set(108, 94, 125);
     const controls = new OrbitControls(camera, renderer.domElement);
@@ -204,10 +204,10 @@ export default function Viewport(props: ViewportProps) {
     controls.minDistance = 8;
     controls.maxDistance = 900;
     controls.maxPolarAngle = Math.PI * 0.495;
-    const ambient = new THREE.HemisphereLight("#eef7ff", "#8c9eaa", 2.4);
+    const ambient = new THREE.HemisphereLight("#eef4ff", "#596673", 1);
     scene.add(ambient);
-    const key = new THREE.DirectionalLight("#fff5e9", 3.4);
-    key.position.set(-60, 150, 70);
+    const key = new THREE.DirectionalLight("#fffaf5", 2.5);
+    key.position.set(-100, 160, 95);
     key.castShadow = true;
     key.shadow.mapSize.set(2048, 2048);
     key.shadow.camera.left = -155;
@@ -220,13 +220,13 @@ export default function Viewport(props: ViewportProps) {
     key.shadow.bias = -0.0002;
     key.shadow.radius = 3;
     scene.add(key);
-    const fill = new THREE.DirectionalLight("#d7e9ff", 1.3);
-    fill.position.set(100, 50, -80);
+    const fill = new THREE.DirectionalLight("#dbe7f3", 0.7);
+    fill.position.set(100, 65, -110);
     scene.add(fill);
     const ground = new THREE.Mesh(
       new THREE.PlaneGeometry(4000, 4000),
       new THREE.MeshStandardMaterial({
-        color: "#e8eef2",
+        color: "#69798a",
         roughness: 0.95,
         metalness: 0,
       }),
@@ -235,10 +235,10 @@ export default function Viewport(props: ViewportProps) {
     ground.position.y = -0.06;
     ground.receiveShadow = true;
     scene.add(ground);
-    const grid = new THREE.GridHelper(600, 60, "#b0c0c9", "#d2dde3");
+    const grid = new THREE.GridHelper(600, 60, "#536574", "#768896");
     grid.position.y = 0.01;
     (grid.material as THREE.Material).transparent = true;
-    (grid.material as THREE.Material).opacity = 0.7;
+    (grid.material as THREE.Material).opacity = 0.45;
     scene.add(grid);
     const origin = new THREE.Group();
     for (const [points, color] of [

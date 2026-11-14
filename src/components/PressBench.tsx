@@ -1,10 +1,12 @@
-import { useEffect, useId, useRef, useState } from "react";
+import { useEffect, useId, useRef } from "react";
 import { ChevronDown, CircleDot, Lightbulb } from "lucide-react";
 import type { Mechanism, MechanismStates } from "../types";
 import type { MechanismContactState } from "../mechanisms";
 import "./PressBench.css";
 
 export interface PressBenchProps {
+  expanded: boolean;
+  onExpandedChange: (expanded: boolean) => void;
   mechanisms: Mechanism[];
   contacts: Record<string, MechanismContactState>;
   states: MechanismStates;
@@ -25,6 +27,8 @@ const pressKey = (key: string) => key === " " || key === "Enter";
 
 /** A hold-to-test surface. Contact/lamp states always come from the shared simulation. */
 export default function PressBench({
+  expanded,
+  onExpandedChange,
   mechanisms,
   contacts,
   states,
@@ -35,7 +39,6 @@ export default function PressBench({
   onSelect,
   disabled = false,
 }: PressBenchProps) {
-  const [expanded, setExpanded] = useState(true);
   const controlsId = useId();
   const presses = mechanisms.filter((mechanism) => mechanism.kind === "press");
   const holding = useRef<Holding | null>(null);
@@ -128,7 +131,7 @@ export default function PressBench({
             aria-label={`${expanded ? "收起" : "展开"}按键试验台`}
             onClick={() => {
               if (expanded) release();
-              setExpanded(!expanded);
+              onExpandedChange(!expanded);
             }}
           >
             <CircleDot size={16} aria-hidden="true" />

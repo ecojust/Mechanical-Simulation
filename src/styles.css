@@ -832,7 +832,7 @@ input[type="color"] {
   position: relative;
   flex: 1;
   min-height: 180px;
-  background: #edf1f4;
+  background: #8b99a6;
   overflow: hidden;
 }
 .viewport-wrap > div:first-child {
@@ -853,7 +853,10 @@ input[type="color"] {
   align-items: center;
   gap: 7px;
   font-size: 10px;
-  color: #7c8b98;
+  color: #3c5362;
+  background: #f8fbfde8;
+  padding: 4px 6px;
+  border-radius: 4px;
   pointer-events: none;
 }
 .status-dot {
@@ -882,6 +885,9 @@ input[type="color"] {
     9px "DM Sans",
     sans-serif;
   color: #748695;
+  background: #f8fbfde0;
+  box-shadow: 0 0 0 8px #f8fbfde0;
+  border-radius: 3px;
   pointer-events: none;
 }
 .view-corner > span {
@@ -933,7 +939,8 @@ input[type="color"] {
   display: flex;
   justify-content: space-between;
   pointer-events: none;
-  color: #91a0ac;
+  color: #354e60;
+  text-shadow: 0 1px 2px #ffffffb3;
   font-size: 9px;
 }
 .canvas-footer span {
@@ -1175,6 +1182,7 @@ input[type="color"] {
   color: #a3adb6;
 }
 .selected-part {
+  flex-shrink: 0;
   padding: 16px 15px;
   display: flex;
   align-items: center;
@@ -1254,7 +1262,21 @@ input[type="color"] {
 }
 .properties-scroll {
   flex: 1;
-  overflow: auto;
+  min-height: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  scrollbar-gutter: stable;
+}
+.right-panel :is(.properties-scroll, .mc-panel)::-webkit-scrollbar {
+  width: 8px;
+}
+.right-panel :is(.properties-scroll, .mc-panel)::-webkit-scrollbar-track {
+  background: #eff3f6;
+}
+.right-panel :is(.properties-scroll, .mc-panel)::-webkit-scrollbar-thumb {
+  background: #91a4b3;
+  border: 2px solid #eff3f6;
+  border-radius: 5px;
 }
 .property-section {
   padding: 16px 17px;

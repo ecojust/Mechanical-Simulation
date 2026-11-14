@@ -280,6 +280,15 @@ export default function App() {
   const [resetKey, setResetKey] = useState(0);
   const [category, setCategory] = useState<Category>("all");
   const [leftTab, setLeftTab] = useState<"library" | "assembly">("library");
+  const [pressBenchExpanded, setPressBenchExpanded] = useState(true);
+  const [treeRevealRequest, setTreeRevealRequest] = useState(0);
+  const selectScenePart = useCallback((id: string | null) => {
+    selectPart(id);
+    if (id) {
+      setLeftTab("assembly");
+      setTreeRevealRequest((request) => request + 1);
+    }
+  }, [selectPart]);
   const [search, setSearch] = useState("");
   const [nav, setNav] = useState("装配工作台");
   const [panelTab, setPanelTab] = useState<"properties" | "circuit">(
@@ -1841,6 +1850,8 @@ export default function App() {
                   <strong>{project.name}</strong>
                 </div>
                 <PressBench
+                  expanded={pressBenchExpanded}
+                  onExpandedChange={setPressBenchExpanded}
                   mechanisms={project.mechanisms ?? []}
                   contacts={functionalScene.contacts}
                   states={mechanismStates}
@@ -1857,6 +1868,7 @@ export default function App() {
                 <AssemblyTree
                   parts={project.parts}
                   selectedId={selectedId}
+                  revealRequest={treeRevealRequest}
                   onSelect={selectPart}
                   mechanisms={project.mechanisms}
                   selectedMechanismId={selectedMechanismId}
@@ -1988,7 +2000,7 @@ export default function App() {
                 : renderedParts}
               wires={project.wires}
               selectedId={selectedId}
-              onSelect={selectPart}
+              onSelect={selectScenePart}
               deformations={functionalScene.deformations}
               trackedPartIds={project.mechanisms?.flatMap((m) => m.partIds)}
               contactMarkers={

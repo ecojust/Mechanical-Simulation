@@ -6,7 +6,7 @@
 
 ## 自动发布
 
-[release.yml](../.github/workflows/release.yml) 使用原生 `macos-15` ARM64 runner。更新 package.json、package-lock.json、src-tauri/Cargo.toml 和 src-tauri/tauri.conf.json 中的版本，重新生成 Cargo.lock，提交后推送同版本标签，例如 `v0.4.2`。
+[release.yml](../.github/workflows/release.yml) 使用原生 `macos-15` ARM64 runner。更新 package.json、package-lock.json、src-tauri/Cargo.toml 和 src-tauri/tauri.conf.json 中的版本，重新生成 Cargo.lock，提交后推送同版本标签，例如 `v0.4.3`。
 
 也可在 Actions 的 **Release macOS Apple Silicon → Run workflow** 中指定已经存在的版本标签。工作流检出该标签，核对版本及提交，不能将当前分支冒充为旧版本。
 
@@ -47,7 +47,7 @@ npm run release:mac:verify
 npm run release:mac:smoke
 ```
 
-APP 位于 `src-tauri/target/aarch64-apple-darwin/release/bundle/macos/`；发布文件位于 `release/Mechanical-Studio-0.4.2-macos-arm64.dmg` 和同名 ZIP。构建使用已提交的 GLB，不需要 Blender。
+APP 位于 `src-tauri/target/aarch64-apple-darwin/release/bundle/macos/`；发布文件位于 `release/Mechanical-Studio-0.4.3-macos-arm64.dmg` 和同名 ZIP。构建使用已提交的 GLB，不需要 Blender。
 
 打包应用冒烟测试设置独立的 `MECHANICAL_STUDIO_DATA_DIR`。该变量同时启用不持久化的 WebView 存储并隔离单实例检查；测试不会读取或修改正常客户端中保存的工程。日常启动不要设置此测试变量，应用默认继续保存本地工程和组件库。
 

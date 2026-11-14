@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { useLayoutEffect, useMemo, useRef, useState } from "react";
 import {
   Box,
   ChevronDown,
@@ -20,6 +20,7 @@ import "./AssemblyTree.css";
 interface Props {
   parts: Part[];
   selectedId: string | null;
+  revealRequest?: number;
   onSelect: (id: string) => void;
   onUpdate: (part: Part) => void;
   mechanisms?: Mechanism[];
@@ -47,6 +48,7 @@ const iconFor = (kind: Part["kind"]) =>
 export default function AssemblyTree({
   parts,
   selectedId,
+  revealRequest = 0,
   onSelect,
   onUpdate,
   mechanisms,
@@ -55,6 +57,8 @@ export default function AssemblyTree({
   onEditMechanism,
 }: Props) {
   const [collapsed, setCollapsed] = useState(() => new Set<string>());
+  const treeRef = useRef<HTMLDivElement>(null);
+  const pendingReveal = useRef<string | null>(null);
   const mechanismEntries = useMemo(() => {
     const byId = new Map(parts.map((part) => [part.id, part]));
     const claimed = new Set<string>();
@@ -74,26 +78,45 @@ export default function AssemblyTree({
   )?.mechanism.id;
   const selectedGroup = parts.find((part) => part.id === selectedId)
     ?.assemblyGroup?.id;
-  useEffect(() => {
-    if (selectedGroup)
-      setCollapsed((previous) => {
-        if (!previous.has(selectedGroup)) return previous;
-        const next = new Set(previous);
-        next.delete(selectedGroup);
-        return next;
-      });
-  }, [selectedGroup, selectedId]);
-  useEffect(() => {
+  useLayoutEffect(() => {
+    // A repeated viewport click can reveal the same part after a manual collapse.
+    // Ordinary simulation renders must preserve the user's scroll/collapse state.
+    pendingReveal.current = selectedMechanismId ? null : selectedId;
     const id = selectedMechanismId ?? selectedParent;
-    if (!id) return;
+    const key = id ? `mechanism:${id}` : selectedGroup;
+    if (!key) return;
     setCollapsed((previous) => {
-      const key = `mechanism:${id}`;
       if (!previous.has(key)) return previous;
       const next = new Set(previous);
       next.delete(key);
       return next;
     });
-  }, [selectedParent, selectedId, selectedMechanismId]);
+  }, [
+    selectedParent,
+    selectedGroup,
+    selectedId,
+    selectedMechanismId,
+    revealRequest,
+  ]);
+  useLayoutEffect(() => {
+    if (!pendingReveal.current) return;
+    const row = treeRef.current?.querySelector<HTMLElement>(".tree-row.selected");
+    // A collapsed parent is expanded in the preceding effect; wait for its row.
+    if (!row || row.dataset.partId !== pendingReveal.current) return;
+    pendingReveal.current = null;
+    const scroller = treeRef.current?.closest<HTMLElement>(".assembly-scroll");
+    if (!scroller) return;
+    const bounds = scroller.getBoundingClientRect();
+    const top = bounds.top + scroller.clientTop;
+    const bottom = top + scroller.clientHeight;
+    const rowBounds = row.getBoundingClientRect();
+    const margin = 8;
+    // Scroll only this sidebar, without moving the page or stealing keyboard focus.
+    if (rowBounds.top < top + margin)
+      scroller.scrollTop += rowBounds.top - top - margin;
+    else if (rowBounds.bottom > bottom - margin)
+      scroller.scrollTop += rowBounds.bottom - bottom + margin;
+  });
   const entries = useMemo(() => {
     const result: TreeEntry[] = [];
     const groups = new Map<string, TreeEntry>();
@@ -119,14 +142,16 @@ export default function AssemblyTree({
   }, [parts, mechanismEntries]);
   const row = (part: Part) => {
     const Icon = iconFor(part.kind);
+    const selected = !selectedMechanismId && selectedId === part.id;
     return (
       <div
         key={part.id}
-        className={`tree-row ${!selectedMechanismId && selectedId === part.id ? "selected" : ""}`}
+        className={`tree-row ${selected ? "selected" : ""}`}
         data-part-id={part.id}
       >
         <button
           className="tree-select"
+          aria-pressed={selected}
           onClick={() => onSelect(part.id)}
           title={part.name}
         >
@@ -149,7 +174,7 @@ export default function AssemblyTree({
     );
   };
   return (
-    <div className="tree-list assembly-tree">
+    <div className="tree-list assembly-tree" ref={treeRef}>
       {mechanismEntries.entries.map(({ mechanism, parts: members }) => {
         const collapseKey = `mechanism:${mechanism.id}`;
         const open = !collapsed.has(collapseKey);
