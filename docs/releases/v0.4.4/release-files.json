@@ -1,0 +1,24 @@
+{
+  "release": "v0.4.4",
+  "runId": 43604547116,
+  "commit": "30bf22fd0e9abef63afd4baa5f6e1c2f060902b9",
+  "checksumsIndependentlyVerified": true,
+  "scope": "Public GitHub Release attachments downloaded independently after publication and checked against SHA256SUMS.txt.",
+  "files": [
+    {
+      "name": "Mechanical-Studio-0.4.4-macos-arm64.dmg",
+      "bytes": 8321959,
+      "sha256": "ae85a87bca34a598268604b7f9002f74bbb31e9b5d6e781a670220a671684626"
+    },
+    {
+      "name": "Mechanical-Studio-0.4.4-macos-arm64.zip",
+      "bytes": 8247836,
+      "sha256": "4129c1ace3d580331ceca0936de41b4baa1f44e25f34092bb61cc05843466b6c"
+    },
+    {
+      "name": "SHA256SUMS.txt",
+      "bytes": 212,
+      "sha256": "2eb84d4c3bc89fbc61476cdb4452c2f3df3d9d812aedd1270cc4e1c6672911e2"
+    }
+  ]
+}
