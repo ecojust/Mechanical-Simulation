@@ -1,4 +1,5 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useImperativeHandle, useRef, useState } from "react";
+import type { Ref } from "react";
 import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
 import { TransformControls } from "three/examples/jsm/controls/TransformControls.js";
@@ -18,8 +19,12 @@ import { applyVisualDeformation } from "../visualDeformation";
 import type { VisualDeformations } from "../visualDeformation";
 import { ContactMarkerLayer } from "../contactMarkers";
 import type { ContactMarker } from "../contactMarkers";
+import { exportVisibleModel } from "../modelExport";
+import type { ViewportExportHandle } from "../modelExport";
 
 export interface ViewportProps {
+  exportRef?: Ref<ViewportExportHandle>;
+  testId?: string;
   parts: Part[];
   models?: UploadedModel[];
   deformations?: VisualDeformations;
@@ -168,6 +173,38 @@ export default function Viewport(props: ViewportProps) {
   const [motionHint, setMotionHint] = useState("");
   const [loadedAssets, setLoadedAssets] = useState<string[]>([]);
 
+  useImperativeHandle(
+    props.exportRef,
+    () => ({
+      async exportModel(format) {
+        const runtime = runtimeRef.current;
+        if (!runtime) throw new Error("三维视图尚未就绪，无法导出模型。");
+        if (runtime.dragging)
+          throw new Error("请先结束零件拖动，再导出当前模型。");
+        if (runtime.renderer.getContext().isContextLost())
+          throw new Error("三维视图已丢失图形上下文，请恢复视图后重试导出。");
+        runtime.sync();
+        return exportVisibleModel(
+          {
+            parts: latest.current.parts.map((part) => {
+              const entry = runtime.models.get(part.id);
+              return {
+                id: part.id,
+                name: part.name,
+                visible: part.visible,
+                loaded: Boolean(entry?.loaded),
+                object: entry?.object,
+              };
+            }),
+            wires: runtime.wires,
+          },
+          format,
+        );
+      },
+    }),
+    [],
+  );
+
   useEffect(() => {
     const host = hostRef.current!;
     let renderer: THREE.WebGLRenderer;
@@ -190,7 +227,10 @@ export default function Viewport(props: ViewportProps) {
       "aria-label",
       "三维装配视图，拖动旋转，滚轮缩放，点击选择零件",
     );
-    renderer.domElement.setAttribute("data-testid", "viewport-canvas");
+    renderer.domElement.setAttribute(
+      "data-testid",
+      `${latest.current.testId ?? "viewport"}-canvas`,
+    );
     host.appendChild(renderer.domElement);
     const scene = new THREE.Scene();
     scene.background = new THREE.Color("#8b99a6");
@@ -647,6 +687,8 @@ export default function Viewport(props: ViewportProps) {
               metalness: 0.15,
             }),
           );
+          mesh.name = `wire-${wire.id}`;
+          mesh.userData.wireId = wire.id;
           mesh.castShadow = true;
           wires.add(mesh);
         });
@@ -937,7 +979,7 @@ export default function Viewport(props: ViewportProps) {
         minHeight: 300,
         overflow: "hidden",
       }}
-      data-testid="viewport"
+      data-testid={props.testId ?? "viewport"}
       data-rendered-positions="{}"
       data-rendered-rotations="{}"
       data-rendered-deformations="{}"

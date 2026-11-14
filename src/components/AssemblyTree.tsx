@@ -27,6 +27,7 @@ interface Props {
   selectedMechanismId?: string | null;
   onSelectMechanism?: (id: string) => void;
   onEditMechanism?: (id: string) => void;
+  onViewMechanism?: (id: string) => void;
 }
 interface TreeEntry {
   id: string;
@@ -55,6 +56,7 @@ export default function AssemblyTree({
   selectedMechanismId,
   onSelectMechanism,
   onEditMechanism,
+  onViewMechanism,
 }: Props) {
   const [collapsed, setCollapsed] = useState(() => new Set<string>());
   const treeRef = useRef<HTMLDivElement>(null);
@@ -218,6 +220,15 @@ export default function AssemblyTree({
                   </small>
                 </span>
               </button>
+              {onViewMechanism && (
+                <button
+                  className="mechanism-tree-edit"
+                  onClick={() => onViewMechanism(mechanism.id)}
+                  title={`查看组件分层：${mechanism.name}`}
+                >
+                  <Layers3 size={13} />
+                </button>
+              )}
               {onEditMechanism && (
                 <button
                   className="mechanism-tree-edit"

@@ -160,6 +160,9 @@ jobs:
 
           - Button test bench and assembly tree share one scroll area; the bench can collapse without leaving a held key pressed.
           - 3D selection reveals and highlights its tree row; both property panels scroll fully, with clearer white models against a gray floor.
+          - One-click wire visibility, including source harnesses, without changing electrical connections or validation.
+          - Read-only component dialog with top-to-bottom layered and assembled views of individual members.
+          - Export the current visible assembly as PBR GLB (meters) or binary STL (millimeters), including current spring deformation and excluding editor helpers.
           - Lightweight Tauri 2 desktop application using the system WKWebView; no bundled Chromium or Node.js.
           - Typed components, self-contained GLB/STL uploads, required mechanical interaction parameters, and MCP access.
           - Independently editable source parts, mating groups, and per-part PBR color, metalness and roughness.

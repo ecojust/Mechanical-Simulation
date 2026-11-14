@@ -1,4 +1,6 @@
 pub mod mcp;
+#[cfg(any(feature = "desktop", test))]
+mod model_export;
 
 #[cfg(feature = "desktop")]
 use tauri::Manager;
@@ -71,6 +73,7 @@ pub fn run() {
         .plugin(tauri_plugin_dialog::init())
         .invoke_handler(tauri::generate_handler![
             save_export,
+            model_export::save_model_export,
             mcp::desktop::mcp_reply,
             mcp::desktop::mcp_status,
             mcp::desktop::mcp_set_enabled

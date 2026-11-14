@@ -44,6 +44,7 @@ export interface MechanismControlsProps {
   contact?: MechanismContactReadout;
   busy?: boolean;
   onEdit: (mechanism: Mechanism) => void;
+  onView?: (mechanism: Mechanism) => void;
   onRemove: (mechanismId: string) => void | Promise<void>;
   onTransform: (request: MechanismTransformRequest) => void | Promise<void>;
   onHeld: (held: boolean) => void;
@@ -120,6 +121,7 @@ export default function MechanismControls({
   contact,
   busy = false,
   onEdit,
+  onView,
   onRemove,
   onTransform,
   onHeld,
@@ -303,6 +305,12 @@ export default function MechanismControls({
           ))}
         </ul>
       </details>
+      {onView && (
+        <button type="button" className="mc-edit" onClick={() => onView(mechanism)}>
+          <Layers3 size={13} />
+          查看组件分层
+        </button>
+      )}
       <button
         type="button"
         className="mc-edit"

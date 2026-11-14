@@ -51,6 +51,10 @@ import AssemblyTree from "./components/AssemblyTree";
 import MechanismEditor from "./components/MechanismEditor";
 import MechanismControls from "./components/MechanismControls";
 import PressBench from "./components/PressBench";
+import MechanismViewer from "./components/MechanismViewer";
+import ModelExportDialog from "./components/ModelExportDialog";
+import { saveModelFile } from "./fileExport";
+import type { ModelExportFormat, ViewportExportHandle } from "./modelExport";
 import type { MechanismTransformRequest } from "./components/MechanismControls";
 import {
   mechanismScene,
@@ -248,6 +252,9 @@ export default function App() {
     null,
   );
   const [mechanismEditorOpen, setMechanismEditorOpen] = useState(false);
+  const [mechanismViewerId, setMechanismViewerId] = useState<string | null>(null);
+  const [modelExportOpen, setModelExportOpen] = useState(false);
+  const viewportExportRef = useRef<ViewportExportHandle>(null);
   const [editingMechanism, setEditingMechanism] = useState<
     Mechanism | undefined
   >();
@@ -260,6 +267,9 @@ export default function App() {
   heldMechanismRef.current = heldMechanismId;
   const selectedMechanism = project.mechanisms?.find(
     (m) => m.id === selectedMechanismId,
+  );
+  const viewedMechanism = project.mechanisms?.find(
+    (mechanism) => mechanism.id === mechanismViewerId,
   );
   const selectPart = useCallback((id: string | null) => {
     setSelectedMechanismId(null);
@@ -276,6 +286,7 @@ export default function App() {
   const [grid, setGrid] = useState(true);
   const [xray, setXray] = useState(false);
   const [inspectInterior, setInspectInterior] = useState(false);
+  const [showWires, setShowWires] = useState(true);
   const [exploded, setExploded] = useState(false);
   const [resetKey, setResetKey] = useState(0);
   const [category, setCategory] = useState<Category>("all");
@@ -699,6 +710,18 @@ export default function App() {
     if (await download(`${project.name}.mechanical.json`, project))
       notify("项目已导出，包含模型、类型、交互参数与导线。");
   }, [project, notify]);
+  const exportVisibleModel = async (format: ModelExportFormat) => {
+    if (!viewportExportRef.current)
+      throw new Error("三维视图尚未就绪，请稍后再试。");
+    const result = await viewportExportRef.current.exportModel(format);
+    const base = Array.from(
+      project.name.replace(/[\\/<>:"|?*\u0000-\u001f]/g, "_").trim() || "Mechanical-Studio",
+    ).slice(0, 60).join("");
+    const saved = await saveModelFile(`${base}.visible.${result.extension}`, result.data, format);
+    if (saved)
+      notify(`已导出 ${result.partCount} 个可见零件、${result.wireCount} 根导线（${format.toUpperCase()}）。`);
+    return saved;
+  };
   const removeSelected = useCallback(() => {
     if (!selected) return;
     if (partMechanism(project, selected.id)) {
@@ -842,6 +865,20 @@ export default function App() {
       ),
     [functionalScene.renderParts, springStates],
   );
+  const displayedParts = useMemo(
+    () => renderedParts.map((part) => {
+      const source = String(part.params.assetUrl ?? "");
+      const hiddenHousing = inspectInterior && /^\.\/models\/housing-(top|bottom)\.glb$/.test(source);
+      const hiddenHarness = !showWires && source === "./models/electronics-harness.glb";
+      return hiddenHousing || hiddenHarness ? { ...part, visible: false } : part;
+    }),
+    [renderedParts, inspectInterior, showWires],
+  );
+  const visibleWires = useMemo(() => {
+    if (!showWires) return [];
+    const visibleIds = new Set(displayedParts.filter((part) => part.visible).map((part) => part.id));
+    return project.wires.filter((wire) => visibleIds.has(wire.from.partId) && visibleIds.has(wire.to.partId));
+  }, [showWires, displayedParts, project.wires]);
   const pressedIds = useMemo(
     () => [
       ...new Set([
@@ -1579,6 +1616,14 @@ export default function App() {
             <Download size={15} />
             保存项目
           </button>
+          <button
+            onClick={() => setModelExportOpen(true)}
+            disabled={!displayedParts.some((part) => part.visible)}
+            title="导出当前可见模型：GLB / STL"
+          >
+            <Box size={15} />
+            导出模型
+          </button>
           <i />
           <button className="verify-button" onClick={() => void verify()} disabled={verifying}>
             <CheckCircle2 size={15} />
@@ -1881,6 +1926,7 @@ export default function App() {
                       project.mechanisms!.find((m) => m.id === id)!,
                     )
                   }
+                  onViewMechanism={setMechanismViewerId}
                   onUpdate={updatePart}
                 />
               </div>
@@ -1939,12 +1985,21 @@ export default function App() {
               <button
                 title="内部检视：仅隐藏外壳，保留全部碰撞检查"
                 aria-pressed={inspectInterior}
-                className={inspectInterior ? "toggled" : ""}
+                className={`view-toggle ${inspectInterior ? "toggled" : ""}`}
                 onClick={() => setInspectInterior(!inspectInterior)}
               >
                 <Box size={16} /> 内部
               </button>
             )}
+            <button
+              className={`view-toggle ${!showWires ? "toggled" : ""}`}
+              aria-label={showWires ? "隐藏导线" : "显示导线"}
+              aria-pressed={!showWires}
+              title="切换连接线与原始线束显示，保留电气连接和碰撞检查"
+              onClick={() => setShowWires((shown) => !shown)}
+            >
+              <Cable size={16} /> {showWires ? "隐藏导线" : "显示导线"}
+            </button>
             <button
               title="网格"
               className={grid ? "toggled" : ""}
@@ -1988,17 +2043,10 @@ export default function App() {
           </div>
           <div className="viewport-wrap">
             <Viewport
+              exportRef={viewportExportRef}
               models={project.models}
-              parts={inspectInterior
-                ? renderedParts.map((part) =>
-                    /^\.\/models\/housing-(top|bottom)\.glb$/.test(
-                      String(part.params.assetUrl ?? ""),
-                    )
-                      ? { ...part, visible: false }
-                      : part,
-                  )
-                : renderedParts}
-              wires={project.wires}
+              parts={displayedParts}
+              wires={visibleWires}
               selectedId={selectedId}
               onSelect={selectScenePart}
               deformations={functionalScene.deformations}
@@ -2267,6 +2315,7 @@ export default function App() {
               }
               force={mechanismStates[selectedMechanism.id]?.force ?? 0}
               onEdit={composeMechanism}
+              onView={(mechanism) => setMechanismViewerId(mechanism.id)}
               onRemove={detachMechanism}
               onHeld={(held) => {
                 if (running)
@@ -3058,6 +3107,22 @@ export default function App() {
         }}
         onSave={saveMechanism}
       />
+      {viewedMechanism && (
+        <MechanismViewer
+          mechanism={viewedMechanism}
+          parts={project.parts}
+          models={project.models}
+          onClose={() => setMechanismViewerId(null)}
+        />
+      )}
+      {modelExportOpen && (
+        <ModelExportDialog
+          partCount={displayedParts.filter((part) => part.visible).length}
+          wireCount={visibleWires.length}
+          onClose={() => setModelExportOpen(false)}
+          onExport={exportVisibleModel}
+        />
+      )}
       <ComponentImportDialog
         open={importOpen}
         initial={editingComponent}

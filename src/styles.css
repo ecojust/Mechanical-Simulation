@@ -799,11 +799,19 @@ input[type="color"] {
   padding: 0 14px;
   gap: 4px;
   border-bottom: 1px solid var(--line);
+  overflow-x: auto;
 }
 .viewport-toolbar button {
   width: 29px;
   height: 29px;
   color: #748190;
+  flex-shrink: 0;
+}
+.viewport-toolbar button.view-toggle {
+  width: auto;
+  padding: 0 7px;
+  gap: 4px;
+  white-space: nowrap;
 }
 .viewport-toolbar button.active {
   color: #307489;
@@ -816,6 +824,7 @@ input[type="color"] {
 .tool-group {
   display: flex;
   gap: 3px;
+  flex-shrink: 0;
 }
 .toolbar-spacer {
   flex: 1;
